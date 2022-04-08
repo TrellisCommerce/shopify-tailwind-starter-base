@@ -15,7 +15,7 @@ The starter theme includes an integration of:
 
 ## Steps to Start Using this Starter Theme
 
-1. Make a clone of this repository.
+1. Make a clone of this repository and run `npm install`.
 
 2. In the theme section of your Shopify admin you can connect to a GitHub repository via “Add theme” button.
 
