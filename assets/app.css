@@ -512,3 +512,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .twcss-block {
   display: block;
 }
+
+.twcss-py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
