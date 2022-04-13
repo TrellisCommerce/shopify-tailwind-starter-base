@@ -45,7 +45,7 @@ You can add users in the store Settings:
 
 :bangbang: | This repo does not have the following secrets configured, which is why the Lighthouse action is failing.
 :---: | :---
-
+  
 First, make sure your `Workflow permissions` are set like below in order for the actions to run:
 
 <img width="500" alt="Workflow permissions settings" src="https://user-images.githubusercontent.com/75811975/167029308-3b05be7b-bae0-4cb9-8234-7da07b4f715e.png">
