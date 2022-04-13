@@ -509,6 +509,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.twcss-absolute {
+  position: absolute;
+}
+
+.twcss-relative {
+  position: relative;
+}
+
+.twcss-left-0 {
+  left: 0px;
+}
+
+.twcss-top-0 {
+  top: 0px;
+}
+
+.twcss-right-0 {
+  right: 0px;
+}
+
 .twcss-block {
   display: block;
 }
@@ -526,4 +546,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .twcss-py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+@media (min-width: 750px) {
+  .md\:twcss-grid-cols-\[10vw_10vw_10vw_10vw_10vw_10vw\] {
+    grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw;
+  }
 }
