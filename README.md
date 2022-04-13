@@ -23,8 +23,8 @@ The starter theme includes an integration of:
 
 1. Fork this repository & enable actions in the repo's Actions tab.
 
-:bangbang: | When forking this repo, make sure to change the settings in the forked repo under Settings > Actions > General > Workflow permissions to be `Read and write permissions` and check `Allow GitHub Actions to create and approve pull requests` for the Theme Check & Lighthouse actions to run
-:---: | :---
+| :bangbang: | When forking this repo, make sure to change the settings in the forked repo under Settings > Actions > General > Workflow permissions to be `Read and write permissions` and check `Allow GitHub Actions to create and approve pull requests` for the Theme Check & Lighthouse actions to run |
+| :--------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 2. Clone the forked repo, navigate to the directory in your terminal, & run `npm install`.
 
@@ -34,8 +34,8 @@ The starter theme includes an integration of:
 
 4. In your terminal, navigate to the cloned repo directory, and use the Shopify CLI to login to your store with `shopify login --store=mystore.myshopify.com` and launch the development server with `shopify theme serve`.
 
-:bangbang: | If you are working on a development store and are signed in via your partner dashboard, you must add a separate user in that Shopify store with admin rights and sign in with this new user when logging in using the Shopify CLI
-:---: | :---
+| :bangbang: | If you are working on a development store and are signed in via your partner dashboard, you must add a separate user in that Shopify store with admin rights and sign in with this new user when logging in using the Shopify CLI |
+| :--------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 You can add users in the store Settings:
 
@@ -43,13 +43,12 @@ You can add users in the store Settings:
 
 ## Add Github secrets for Lighthouse CI Performance Evaluation Actions
 
-:bangbang: | This repo does not have the following secrets configured, which is why the Lighthouse action is failing.
-:---: | :---
-  
+| :bangbang: | This repo does not have the following secrets configured, which is why the Lighthouse action is failing. |
+| :--------: | :------------------------------------------------------------------------------------------------------- |
+
 First, make sure your `Workflow permissions` are set like below in order for the actions to run:
 
 <img width="500" alt="Workflow permissions settings" src="https://user-images.githubusercontent.com/75811975/167029308-3b05be7b-bae0-4cb9-8234-7da07b4f715e.png">
-
 
 In your github repo, navigate to Settings > Secrets > Actions and add the following repository secrets:
 
@@ -57,6 +56,7 @@ In your github repo, navigate to Settings > Secrets > Actions and add the follow
 
 - Get values by navigating to https://mystore.myshopify.com/admin/apps/development, select the theme kit app, and copy the API key value for `SHOP_APP_ID` & Admin API access token value for `SHOP_APP_PASSWORD` (value starts with shpat)
 - Notes on how to get these values:
+
 1. Navigate to the Apps section in your Shopify admin and click the Develop apps button in the top right
 2. Then Allow custom app development
 3. You should be able to click the Create an app button
