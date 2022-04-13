@@ -522,3 +522,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+
+.twcss-py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
