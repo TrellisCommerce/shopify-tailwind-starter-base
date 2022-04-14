@@ -39,6 +39,12 @@ In your github repo, navigate to Settings > Secrets > Actions and add the follow
 
 - Get value by navigating to https://mystore.myshopify.com/admin/apps/development, select the theme kit app, and copy the Admin API Password value
 - For new development apps, add the shpat... token value
+- Notes on how to get this value:
+--Navigate to the Apps section in your Shopify admin and click the Develop apps button in the top right
+--Then Allow custom app development
+--You should be able to click the Create an app button
+--In the configuration tab of your app, go ahead and check all the boxes for the Admin and Storefront API permissions
+--The API secret key will be in the API credentials tab (should be a value that starts with shpat)
 
 `SHOP_STORE`
 
