@@ -6,7 +6,7 @@ The starter theme includes an integration of:
 
 ## [TailwindCSS](https://tailwindcss.com/)
 
-- [Configured](https://markustripp.medium.com/extend-shopify-dawn-theme-with-a-custom-tailwind-css-carousel-section-e3efe3ecf18e) to use prefix: ‘twcss-' in order to not clash with Dawn’s existing styles
+- [Configured](https://markustripp.medium.com/extend-shopify-dawn-theme-with-a-custom-tailwind-css-carousel-section-e3efe3ecf18e) to use `prefix: twcss-` in order to not clash with Dawn’s existing styles
 
 ## [Trellis' Prettier config](https://www.npmjs.com/package/@trelliscommerce/prettier-config) with Husky pre-commit hooks
 
@@ -39,6 +39,13 @@ In your github repo, navigate to Settings > Secrets > Actions and add the follow
 
 - Get value by navigating to https://mystore.myshopify.com/admin/apps/development, select the theme kit app, and copy the Admin API Password value
 - For new development apps, add the shpat... token value
+- Notes on how to get this value:
+
+1. Navigate to the Apps section in your Shopify admin and click the Develop apps button in the top right
+2. Then Allow custom app development
+3. You should be able to click the Create an app button
+4. In the configuration tab of your app, go ahead and check all the boxes for the Admin and Storefront API permissions
+5. The API secret key will be in the API credentials tab (should be a value that starts with shpat)
 
 `SHOP_STORE`
 
