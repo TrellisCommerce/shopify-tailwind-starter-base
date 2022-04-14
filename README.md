@@ -6,7 +6,7 @@ The starter theme includes an integration of:
 
 ## [TailwindCSS](https://tailwindcss.com/)
 
-- [Configured](https://markustripp.medium.com/extend-shopify-dawn-theme-with-a-custom-tailwind-css-carousel-section-e3efe3ecf18e) to use prefix: ‘twcss-' in order to not clash with Dawn’s existing styles
+- [Configured](https://markustripp.medium.com/extend-shopify-dawn-theme-with-a-custom-tailwind-css-carousel-section-e3efe3ecf18e) to use prefix: `twcss-` in order to not clash with Dawn’s existing styles
 
 ## [Trellis' Prettier config](https://www.npmjs.com/package/@trelliscommerce/prettier-config) with Husky pre-commit hooks
 
