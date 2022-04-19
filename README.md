@@ -1,3 +1,5 @@
+Brought to you and maintained by [Trellis Commerce](https://trellis.co/) - A full-service eCommerce agency based in Boston, MA
+
 # Dawn + TailWindCSS + Prettier Shopify Starter Theme
 
 Shopify Dawn theme with TailWindCSS &amp; Prettier integrations
