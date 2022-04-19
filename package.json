@@ -18,15 +18,15 @@
   },
   "homepage": "https://github.com/cmegalo/dawn-tailwind-starter#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.4",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.3",
+    "postcss": "^8.4.12",
     "prettier": "^2.5.1",
-    "tailwindcss": "^3.0.18"
+    "tailwindcss": "^3.0.24"
   },
   "dependencies": {
-    "@trelliscommerce/prettier-config": "^1.0.0",
-    "autoprefixer": "^10.4.2",
-    "postcss": "^8.4.6"
+    "@trelliscommerce/prettier-config": "^1.0.0"
   },
   "prettier": "@trelliscommerce/prettier-config",
   "lint-staged": {
