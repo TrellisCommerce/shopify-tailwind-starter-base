@@ -139,10 +139,10 @@
       {
         "type": "range",
         "id": "page_width",
-        "min": 1000,
+        "min": 1200,
         "max": 1600,
-        "step": 100,
-        "default": 1200,
+        "step": 10,
+        "default": 1440,
         "unit": "px",
         "label": "t:settings_schema.layout.settings.page_width.label"
       },
