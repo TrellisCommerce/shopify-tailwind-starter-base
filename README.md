@@ -15,6 +15,10 @@ The starter theme includes an integration of:
 - Formats JS & CSS whenever a git commit is made
 - Setup your own VSCode to apply Prettier formatting when a file is saved (optional)
 
+## Other Noted Modifications
+
+- Set the default page width to 1440px and tweaked the desktop page width range to be 1200px to 1600px with a step adjustment of 10px (standard desktop width used at Trellis and allows for more finetuning)
+
 ## Steps to Start Using this Starter Theme
 
 1. Fork this repository, navigate to the directory, run `npm install`.
@@ -25,11 +29,17 @@ The starter theme includes an integration of:
 
 3. In your terminal, navigate to the cloned repo directory, and use the Shopify CLI to login to your store with `shopify login --store=mystore.myshopify.com` and launch the development server with `shopify theme serve`.
 
-**IMPORTANT!** If you signed in via your partner dashboard, you must create a separate user in that Shopify store with admin rights and sign in with this new user. You can add users in the store Settings:
+:bangbang: | If you signed in via your partner dashboard, you must create a separate user in that Shopify store with admin rights and sign in with this new user
+:---: | :---
+
+You can add users in the store Settings:
 
 ![Where to add users in the store settings](https://user-images.githubusercontent.com/75811975/162517914-6fe20ef6-7b58-4337-b488-75966694ef92.png)
 
 ## Add Github secrets for Lighthouse CI Performance Evaluation Actions
+
+:bangbang: | This repo does not have the following secrets configured, which is why the Lighthouse action is failing.
+:---: | :---
 
 In your github repo, navigate to Settings > Secrets > Actions and add the following repository secrets:
 
