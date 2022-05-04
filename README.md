@@ -29,7 +29,7 @@ The starter theme includes an integration of:
 
 3. In your terminal, navigate to the cloned repo directory, and use the Shopify CLI to login to your store with `shopify login --store=mystore.myshopify.com` and launch the development server with `shopify theme serve`.
 
-:bangbang: | If you signed in via your partner dashboard, you must create a separate user in that Shopify store with admin rights and sign in with this new user
+:bangbang: | If you signed in via your partner dashboard, you must add a separate user in that Shopify store with admin rights and sign in with this new user when logging in using the Shopify CLI
 :---: | :---
 
 You can add users in the store Settings:
