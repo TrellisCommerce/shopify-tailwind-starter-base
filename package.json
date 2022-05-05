@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cmegalo/dawn-tailwind-starter.git"
+    "url": "git+https://github.com/TrellisCommerce/shopify-dawn-tailwind-starter-base.git"
   },
   "author": "Trellis",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cmegalo/dawn-tailwind-starter/issues"
+    "url": "https://github.com/TrellisCommerce/shopify-dawn-tailwind-starter-base/issues"
   },
-  "homepage": "https://github.com/cmegalo/dawn-tailwind-starter#readme",
+  "homepage": "https://github.com/TrellisCommerce/shopify-dawn-tailwind-starter-base#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.4",
     "husky": "^7.0.4",
