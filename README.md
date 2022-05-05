@@ -25,7 +25,7 @@ The starter theme includes an integration of:
 
 2. In the theme section of your Shopify admin you can connect to a GitHub repository via “Add theme” button.
 
-![Add a theme and connect it to your github repo](https://user-images.githubusercontent.com/75811975/162517993-31a22954-6600-45f9-ab6e-2b9735c9efba.png)
+<img width="500" alt="Add a theme and connect it to your github repo" src="https://user-images.githubusercontent.com/75811975/162517993-31a22954-6600-45f9-ab6e-2b9735c9efba.png">
 
 3. In your terminal, navigate to the cloned repo directory, and use the Shopify CLI to login to your store with `shopify login --store=mystore.myshopify.com` and launch the development server with `shopify theme serve`.
 
@@ -34,12 +34,17 @@ The starter theme includes an integration of:
 
 You can add users in the store Settings:
 
-![Where to add users in the store settings](https://user-images.githubusercontent.com/75811975/162517914-6fe20ef6-7b58-4337-b488-75966694ef92.png)
+<img width="500" alt="Where to add users in the store settings" src="https://user-images.githubusercontent.com/75811975/162517914-6fe20ef6-7b58-4337-b488-75966694ef92.png">
 
 ## Add Github secrets for Lighthouse CI Performance Evaluation Actions
 
 :bangbang: | This repo does not have the following secrets configured, which is why the Lighthouse action is failing.
 :---: | :---
+
+First, make sure your `Workflow permissions` are set like below in order for the actions to run:
+
+<img width="500" alt="Workflow permissions settings" src="https://user-images.githubusercontent.com/75811975/167029308-3b05be7b-bae0-4cb9-8234-7da07b4f715e.png">
+
 
 In your github repo, navigate to Settings > Secrets > Actions and add the following repository secrets:
 
@@ -81,7 +86,8 @@ In your github repo, navigate to Settings > Secrets > Actions and add the follow
 - To enable GitHub status checks via the official GitHub app, [install and authorize the app](https://github.com/apps/lighthouse-ci) with the owner of the target repo. If the repo is within an organization, organization approval might be necessary. Copy the app token provided on the authorization confirmation page and add it to your build environment as `LHCI_GITHUB_APP_TOKEN`
 
 These secret values are used in the `ci.yml` github workflow:
-![Secrets shown in the workflow file](https://user-images.githubusercontent.com/75811975/162518733-c1744910-85b2-44e3-91d0-08acfc018ba1.png)
+
+<img width="500" alt="Secrets shown in the workflow file" src="https://user-images.githubusercontent.com/75811975/162518733-c1744910-85b2-44e3-91d0-08acfc018ba1.png">
 
 ## Install [Shopify Liquid VSCode extension](https://marketplace.visualstudio.com/items?itemName=Shopify.theme-check-vscode)
 
