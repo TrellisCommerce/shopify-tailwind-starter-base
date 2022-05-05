@@ -50,6 +50,10 @@ First, make sure your `Workflow permissions` are set like below in order for the
 
 <img width="500" alt="Workflow permissions settings" src="https://user-images.githubusercontent.com/75811975/167029308-3b05be7b-bae0-4cb9-8234-7da07b4f715e.png">
 
+First, make sure your `Workflow permissions` are set like below in order for the actions to run:
+
+<img width="500" alt="Workflow permissions settings" src="https://user-images.githubusercontent.com/75811975/167029308-3b05be7b-bae0-4cb9-8234-7da07b4f715e.png">
+
 In your github repo, navigate to Settings > Secrets > Actions and add the following repository secrets:
 
 `SHOP_APP_ID` & `SHOP_APP_PASSWORD`
