@@ -100,7 +100,7 @@ These secret values are used in the `ci.yml` github workflow:
    `git pull upstream main`
 
 2. Add upstream link if you get the error `fatal: 'upstream' does not appear to be a git repository` run:
-   `git remote add upstream https://github.com/Shopify/dawn.git`
+   `git remote add upstream https://github.com/Shopify/dawn.git` or `git remote add upstream https://github.com/TrellisCommerce/shopify-dawn-tailwind-starter-base` depending on which repository you want to pull updates from
 
 3. Pull down changes from the theme editor:
    `shopify theme pull -d`
