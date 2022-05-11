@@ -48,16 +48,11 @@ First, make sure your `Workflow permissions` are set like below in order for the
 
 In your github repo, navigate to Settings > Secrets > Actions and add the following repository secrets:
 
-`SHOP_APP_ID`
+`SHOP_APP_ID` & `SHOP_APP_PASSWORD`
 
-- Get value by navigating to https://mystore.myshopify.com/admin/apps/development, select the theme kit app, and copy the Admin API Shared Secret value
-
-`SHOP_APP_PASSWORD`
-
-- Get value by navigating to https://mystore.myshopify.com/admin/apps/development, select the theme kit app, and copy the Admin API Password value
-- For new development apps, add the shpat... token value
-- Notes on how to get this value:
-
+- Get values by navigating to https://mystore.myshopify.com/admin/apps/development, select the theme kit app, and copy the Admin API Shared Secret value for `SHOP_APP_ID` & Admin API Password value for `SHOP_APP_PASSWORD`
+- For new development apps, add the shpat... token value for `SHOP_APP_PASSWORD`
+- Notes on how to get these values:
 1. Navigate to the Apps section in your Shopify admin and click the Develop apps button in the top right
 2. Then Allow custom app development
 3. You should be able to click the Create an app button
