@@ -23,6 +23,9 @@ The starter theme includes an integration of:
 
 1. Fork this repository, navigate to the directory, run `npm install`.
 
+:bangbang: | When forking this repo, make sure to change the settings in the forked repo under Settings > Actions > General > Workflow permissions to be `Read and write permissions` and check `Allow GitHub Actions to create and approve pull requests` for the Theme Check & Lighthouse actions to run
+:---: | :---
+
 2. In the theme section of your Shopify admin you can connect to a GitHub repository via “Add theme” button.
 
 <img width="500" alt="Add a theme and connect it to your github repo" src="https://user-images.githubusercontent.com/75811975/162517993-31a22954-6600-45f9-ab6e-2b9735c9efba.png">
