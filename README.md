@@ -58,8 +58,7 @@ In your github repo, navigate to Settings > Secrets > Actions and add the follow
 
 `SHOP_APP_ID` & `SHOP_APP_PASSWORD`
 
-- Get values by navigating to https://mystore.myshopify.com/admin/apps/development, select the theme kit app, and copy the Admin API Shared Secret value for `SHOP_APP_ID` & Admin API Password value for `SHOP_APP_PASSWORD`
-- For new development apps, add the shpat... token value for `SHOP_APP_PASSWORD`
+- Get values by navigating to https://mystore.myshopify.com/admin/apps/development, select the theme kit app, and copy the API key value for `SHOP_APP_ID` & Admin API access token value for `SHOP_APP_PASSWORD` (value starts with shpat)
 - Notes on how to get these values:
 
 1. Navigate to the Apps section in your Shopify admin and click the Develop apps button in the top right
