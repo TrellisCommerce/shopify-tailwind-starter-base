@@ -2908,3 +2908,7 @@ details-disclosure > details {
 .font-body-bold {
   font-weight: var(--font-body-weight-bold);
 }
+
+.announcement-bar__message {
+  background-color: red;
+}
