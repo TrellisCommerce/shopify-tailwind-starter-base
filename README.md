@@ -21,16 +21,18 @@ The starter theme includes an integration of:
 
 ## Steps to Start Using this Starter Theme
 
-1. Fork this repository, navigate to the directory, run `npm install`.
+1. Fork this repository & enable actions in the repo's Actions tab.
 
 :bangbang: | When forking this repo, make sure to change the settings in the forked repo under Settings > Actions > General > Workflow permissions to be `Read and write permissions` and check `Allow GitHub Actions to create and approve pull requests` for the Theme Check & Lighthouse actions to run
 :---: | :---
 
-2. In the theme section of your Shopify admin you can connect to a GitHub repository via “Add theme” button.
+2. Clone the forked repo, navigate to the directory in your terminal, & run `npm install`.
+
+3. In the theme section of your Shopify admin you can connect to a GitHub repository via “Add theme” button.
 
 <img width="500" alt="Add a theme and connect it to your github repo" src="https://user-images.githubusercontent.com/75811975/162517993-31a22954-6600-45f9-ab6e-2b9735c9efba.png">
 
-3. In your terminal, navigate to the cloned repo directory, and use the Shopify CLI to login to your store with `shopify login --store=mystore.myshopify.com` and launch the development server with `shopify theme serve`.
+4. In your terminal, navigate to the cloned repo directory, and use the Shopify CLI to login to your store with `shopify login --store=mystore.myshopify.com` and launch the development server with `shopify theme serve`.
 
 :bangbang: | If you signed in via your partner dashboard, you must add a separate user in that Shopify store with admin rights and sign in with this new user when logging in using the Shopify CLI
 :---: | :---
@@ -53,14 +55,13 @@ In your github repo, navigate to Settings > Secrets > Actions and add the follow
 
 `SHOP_APP_ID` & `SHOP_APP_PASSWORD`
 
-- Get values by navigating to https://mystore.myshopify.com/admin/apps/development, select the theme kit app, and copy the Admin API Shared Secret value for `SHOP_APP_ID` & Admin API Password value for `SHOP_APP_PASSWORD`
-- For new development apps, add the shpat... token value for `SHOP_APP_PASSWORD`
+- Get values by navigating to https://mystore.myshopify.com/admin/apps/development, select the theme kit app, and copy the API key value for `SHOP_APP_ID` & Admin API access token value for `SHOP_APP_PASSWORD` (value starts with shpat)
 - Notes on how to get these values:
 1. Navigate to the Apps section in your Shopify admin and click the Develop apps button in the top right
 2. Then Allow custom app development
 3. You should be able to click the Create an app button
 4. In the configuration tab of your app, go ahead and check all the boxes for the Admin and Storefront API permissions
-5. The API secret key will be in the API credentials tab (should be a value that starts with shpat)
+5. The API key & Admin API access token will be in the API credentials tab
 
 `SHOP_STORE`
 
