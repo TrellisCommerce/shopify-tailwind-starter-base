@@ -121,7 +121,7 @@
           "color_scheme": "background-1",
           "logo_width": 90,
           "logo_position": "middle-left",
-          "menu": "main-menu",
+          "menu": "fed-main-menu-mobile",
           "menu_type_desktop": "mega",
           "show_line_separator": true,
           "enable_sticky_header": true,
