@@ -105,7 +105,7 @@
             "settings": {
               "text": "Welcome to our store",
               "color_scheme": "background-1",
-              "link": "#"
+              "link": ""
             }
           }
         },
@@ -122,7 +122,7 @@
           "logo_width": 90,
           "logo_position": "middle-left",
           "menu": "main-menu",
-          "menu_type_desktop": "dropdown",
+          "menu_type_desktop": "mega",
           "show_line_separator": true,
           "enable_sticky_header": true,
           "margin_bottom": 0
