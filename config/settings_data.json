@@ -122,7 +122,7 @@
           "logo_width": 90,
           "logo_position": "middle-left",
           "menu": "fed-main-menu-mobile",
-          "menu_type_desktop": "mega",
+          "menu_type_desktop": "dropdown",
           "show_line_separator": true,
           "enable_sticky_header": true,
           "margin_bottom": 0
