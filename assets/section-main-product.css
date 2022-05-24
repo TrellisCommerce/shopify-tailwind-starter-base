@@ -516,11 +516,15 @@ a.product__text {
 @media screen and (min-width: 750px) {
   .product--thumbnail .product__media-list,
   .product--thumbnail_slider .product__media-list {
-    padding-bottom: calc(var(--media-shadow-vertical-offset) * var(--media-shadow-visible));
+    padding-bottom: calc(
+      var(--media-shadow-vertical-offset) * var(--media-shadow-visible)
+    );
   }
 
   .product__media-list {
-    padding-right: calc(var(--media-shadow-horizontal-offset) * var(--media-shadow-visible));
+    padding-right: calc(
+      var(--media-shadow-horizontal-offset) * var(--media-shadow-visible)
+    );
   }
 
   .product--thumbnail .product__media-item:not(.is-active),
@@ -669,16 +673,12 @@ a.product__text {
 .product__media-toggle:focus-visible:after {
   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0rem 0.5rem rgba(var(--color-foreground), 0.5);
-  border-radius: var(--media-radius) - var(--media-border-width);
+  border-radius: var(--media-radius);
 }
 
 .product__media-toggle.focused:after {
   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
     0 0 0rem 0.5rem rgba(var(--color-foreground), 0.5);
-  border-radius: var(--media-radius);
-}
-
-.product__media-toggle:focus-visible:after {
   border-radius: var(--media-radius);
 }
 
