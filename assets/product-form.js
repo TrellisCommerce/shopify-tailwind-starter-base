@@ -29,13 +29,9 @@ if (!customElements.get('product-form')) {
         config.headers['X-Requested-With'] = 'XMLHttpRequest';
         delete config.headers['Content-Type'];
 
-        const formData = new FormData(this.form);
-        formData.append(
-          'sections',
-          this.cartNotification
-            .getSectionsToRender()
-            .map((section) => section.id),
-        );
+      const formData = new FormData(this.form);
+      if (this.cart) {
+        formData.append('sections', this.cart.getSectionsToRender().map((section) => section.id));
         formData.append('sections_url', window.location.pathname);
         config.body = formData;
 
@@ -45,15 +41,17 @@ if (!customElements.get('product-form')) {
             if (response.status) {
               this.handleErrorMessage(response.description);
 
-              const soldOutMessage =
-                this.submitButton.querySelector('.sold-out-message');
-              if (!soldOutMessage) return;
-              this.submitButton.setAttribute('aria-disabled', true);
-              this.submitButton.querySelector('span').classList.add('hidden');
-              soldOutMessage.classList.remove('hidden');
-              this.error = true;
-              return;
-            }
+            const soldOutMessage = this.submitButton.querySelector('.sold-out-message');
+            if (!soldOutMessage) return;
+            this.submitButton.setAttribute('aria-disabled', true);
+            this.submitButton.querySelector('span').classList.add('hidden');
+            soldOutMessage.classList.remove('hidden');
+            this.error = true;
+            return;
+          } else if (!this.cart) {
+            window.location = window.routes.cart_url;
+            return;
+          }
 
             this.error = false;
             const quickAddModal = this.closest('quick-add-modal');
