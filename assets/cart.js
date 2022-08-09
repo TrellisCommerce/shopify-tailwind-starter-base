@@ -95,7 +95,7 @@ class CartItems extends HTMLElement {
         }));
 
         this.updateLiveRegions(line, parsedState.item_count);
-        const lineItem =  document.getElementById(`CartItem-${line}`) || document.getElementById(`CartDrawer-Item-${line}`);
+        const lineItem = document.getElementById(`CartItem-${line}`) || document.getElementById(`CartDrawer-Item-${line}`);
         if (lineItem && lineItem.querySelector(`[name="${name}"]`)) {
           cartDrawerWrapper ? trapFocus(cartDrawerWrapper, lineItem.querySelector(`[name="${name}"]`)) : lineItem.querySelector(`[name="${name}"]`).focus();
         } else if (parsedState.item_count === 0 && cartDrawerWrapper) {
@@ -116,7 +116,6 @@ class CartItems extends HTMLElement {
     if (this.currentItemCount === itemCount) {
       const lineItemError = document.getElementById(`Line-item-error-${line}`) || document.getElementById(`CartDrawer-LineItemError-${line}`);
       const quantityElement = document.getElementById(`Quantity-${line}`) || document.getElementById(`Drawer-quantity-${line}`);
-
       lineItemError
         .querySelector('.cart-item__error-text')
         .innerHTML = window.cartStrings.quantityError.replace(
@@ -170,7 +169,7 @@ if (!customElements.get('cart-note')) {
 
       this.addEventListener('change', debounce((event) => {
         const body = JSON.stringify({ note: event.target.value });
-        fetch(`${routes.cart_update_url}`, {...fetchConfig(), ...{ body }});
+        fetch(`${routes.cart_update_url}`, { ...fetchConfig(), ...{ body } });
       }, 300))
     }
   });
