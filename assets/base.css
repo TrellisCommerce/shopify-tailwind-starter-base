@@ -2885,6 +2885,7 @@ details-disclosure > details {
     var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
     rgba(var(--color-shadow), var(--media-shadow-opacity));
   z-index: -1;
+  pointer-events: none;
 }
 
 .global-media-settings--no-shadow {
