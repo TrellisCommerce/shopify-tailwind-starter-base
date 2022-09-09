@@ -331,12 +331,6 @@ class MenuDrawer extends HTMLElement {
 
     this.mainDetailsToggle = this.querySelector('details');
 
-    if (navigator.platform === 'iPhone')
-      document.documentElement.style.setProperty(
-        '--viewport-height',
-        `${window.innerHeight}px`,
-      );
-
     this.addEventListener('keyup', this.onKeyUp.bind(this));
     this.addEventListener('focusout', this.onFocusOut.bind(this));
     this.bindEvents();
@@ -384,10 +378,19 @@ class MenuDrawer extends HTMLElement {
     }
 
     if (detailsElement === this.mainDetailsToggle) {
+<<<<<<< HEAD
       if (isOpen) event.preventDefault();
       isOpen
         ? this.closeMenuDrawer(event, summaryElement)
         : this.openMenuDrawer(summaryElement);
+=======
+      if(isOpen) event.preventDefault();
+      isOpen ? this.closeMenuDrawer(event, summaryElement) : this.openMenuDrawer(summaryElement);
+
+      if (window.matchMedia('(max-width: 990px)')) {
+        document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
+      }
+>>>>>>> 8d2b34d (Android menu drawer account fix (#1945))
     } else {
       setTimeout(() => {
         detailsElement.classList.add('menu-opening');
