@@ -378,19 +378,12 @@ class MenuDrawer extends HTMLElement {
     }
 
     if (detailsElement === this.mainDetailsToggle) {
-<<<<<<< HEAD
-      if (isOpen) event.preventDefault();
-      isOpen
-        ? this.closeMenuDrawer(event, summaryElement)
-        : this.openMenuDrawer(summaryElement);
-=======
       if(isOpen) event.preventDefault();
       isOpen ? this.closeMenuDrawer(event, summaryElement) : this.openMenuDrawer(summaryElement);
 
       if (window.matchMedia('(max-width: 990px)')) {
         document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
       }
->>>>>>> 8d2b34d (Android menu drawer account fix (#1945))
     } else {
       setTimeout(() => {
         detailsElement.classList.add('menu-opening');
@@ -1032,6 +1025,7 @@ class VariantSelects extends HTMLElement {
 
   renderProductInfo() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     fetch(
       `${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${
         this.dataset.originalSection
@@ -1053,10 +1047,16 @@ class VariantSelects extends HTMLElement {
           }`,
         );
 =======
+=======
+    const requestedVariantId = this.currentVariant.id;
+>>>>>>> 147c21e (Prevent ui changes from variant selection queues (#2030))
     const activeElementId = document.activeElement.id;
-    fetch(`${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`)
+    fetch(`${this.dataset.url}?variant=${requestedVariantId}&section_id=${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`)
       .then((response) => response.text())
       .then((responseText) => {
+        // prevent unnecessary ui changes from abandoned selections
+        if (this.currentVariant.id !== requestedVariantId) return;
+
         const html = new DOMParser().parseFromString(responseText, 'text/html')
         const destination = document.getElementById(`price-${this.dataset.section}`);
         const source = html.getElementById(`price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
@@ -1077,7 +1077,7 @@ class VariantSelects extends HTMLElement {
         );
 =======
         this.toggleAddButton(!this.currentVariant.available, window.variantStrings.soldOut);
-        
+
         document.querySelector('variant-radios') ? this.querySelector(`[for="${activeElementId}"]`).focus() : this.querySelector(`#${activeElementId}`).focus();
 >>>>>>> 6aa8e6c (Add variant picker sold out UI [temporary solution] (#1407))
       });
