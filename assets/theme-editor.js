@@ -21,3 +21,13 @@ document.addEventListener('shopify:block:deselect', function (event) {
   if (parentSlideshowComponent.autoplayButtonIsSetToPlay)
     parentSlideshowComponent.play();
 });
+
+document.addEventListener('shopify:section:load', () => {
+  const zoomOnHoverScript = document.querySelector('[id^=EnableZoomOnHover]');
+  if (!zoomOnHoverScript) return;
+  if (zoomOnHoverScript) {
+    const newScriptTag = document.createElement('script');
+    newScriptTag.src = zoomOnHoverScript.src;
+    zoomOnHoverScript.parentNode.replaceChild(newScriptTag, zoomOnHoverScript);
+  }
+});
