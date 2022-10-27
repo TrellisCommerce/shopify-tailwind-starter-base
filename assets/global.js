@@ -74,6 +74,14 @@ function trapFocus(container, elementToFocus = container) {
   document.addEventListener('focusin', trapFocusHandlers.focusin);
 
   elementToFocus.focus();
+
+  if (
+    elementToFocus.tagName === 'INPUT' &&
+    ['search', 'text', 'email', 'url'].includes(elementToFocus.type) &&
+    elementToFocus.value
+  ) {
+    elementToFocus.setSelectionRange(0, elementToFocus.value.length);
+  }
 }
 
 // Here run the querySelector to figure out if the browser supports :focus-visible or not and run code based on it.
@@ -168,9 +176,30 @@ class QuantityInput extends HTMLElement {
     this.input = this.querySelector('input');
     this.changeEvent = new Event('change', { bubbles: true });
 
+    this.input.addEventListener('change', this.onInputChange.bind(this));
     this.querySelectorAll('button').forEach((button) =>
       button.addEventListener('click', this.onButtonClick.bind(this)),
     );
+  }
+
+  quantityUpdateUnsubscriber = undefined;
+
+  connectedCallback() {
+    this.validateQtyRules();
+    this.quantityUpdateUnsubscriber = subscribe(
+      PUB_SUB_EVENTS.quantityUpdate,
+      this.validateQtyRules.bind(this),
+    );
+  }
+
+  disconnectedCallback() {
+    if (this.quantityUpdateUnsubscriber) {
+      this.quantityUpdateUnsubscriber();
+    }
+  }
+
+  onInputChange(event) {
+    this.validateQtyRules();
   }
 
   onButtonClick(event) {
@@ -180,6 +209,20 @@ class QuantityInput extends HTMLElement {
     event.target.name === 'plus' ? this.input.stepUp() : this.input.stepDown();
     if (previousValue !== this.input.value)
       this.input.dispatchEvent(this.changeEvent);
+  }
+
+  validateQtyRules() {
+    const value = parseInt(this.input.value);
+    if (this.input.min) {
+      const min = parseInt(this.input.min);
+      const buttonMinus = this.querySelector(".quantity__button[name='minus']");
+      buttonMinus.classList.toggle('disabled', value <= min);
+    }
+    if (this.input.max) {
+      const max = parseInt(this.input.max);
+      const buttonPlus = this.querySelector(".quantity__button[name='plus']");
+      buttonPlus.classList.toggle('disabled', value >= max);
+    }
   }
 }
 
@@ -378,11 +421,16 @@ class MenuDrawer extends HTMLElement {
     }
 
     if (detailsElement === this.mainDetailsToggle) {
-      if(isOpen) event.preventDefault();
-      isOpen ? this.closeMenuDrawer(event, summaryElement) : this.openMenuDrawer(summaryElement);
+      if (isOpen) event.preventDefault();
+      isOpen
+        ? this.closeMenuDrawer(event, summaryElement)
+        : this.openMenuDrawer(summaryElement);
 
       if (window.matchMedia('(max-width: 990px)')) {
-        document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
+        document.documentElement.style.setProperty(
+          '--viewport-height',
+          `${window.innerHeight}px`,
+        );
       }
     } else {
       setTimeout(() => {
@@ -489,8 +537,7 @@ class HeaderDrawer extends MenuDrawer {
   }
 
   openMenuDrawer(summaryElement) {
-    this.header =
-      this.header || document.getElementById('shopify-section-header');
+    this.header = this.header || document.querySelector('.section-header');
     this.borderOffset =
       this.borderOffset ||
       this.closest('.header-wrapper').classList.contains(
@@ -612,6 +659,13 @@ class DeferredMedia extends HTMLElement {
         content.querySelector('video, model-viewer, iframe'),
       );
       if (focus) deferredElement.focus();
+      if (
+        deferredElement.nodeName == 'VIDEO' &&
+        deferredElement.getAttribute('autoplay')
+      ) {
+        // force autoplay for safari
+        deferredElement.play();
+      }
     }
   }
 }
@@ -882,15 +936,17 @@ class SlideshowComponent extends SliderComponent {
     this.sliderItemsToShow.forEach((item, index) => {
       const linkElements = item.querySelectorAll('a');
       if (index === this.currentPage - 1) {
-        if (linkElements.length) linkElements.forEach(button => {
-          button.removeAttribute('tabindex');
-        });
+        if (linkElements.length)
+          linkElements.forEach((button) => {
+            button.removeAttribute('tabindex');
+          });
         item.setAttribute('aria-hidden', 'false');
         item.removeAttribute('tabindex');
       } else {
-        if (linkElements.length) linkElements.forEach(button => {
-          button.setAttribute('tabindex', '-1');
-        });
+        if (linkElements.length)
+          linkElements.forEach((button) => {
+            button.setAttribute('tabindex', '-1');
+          });
         item.setAttribute('aria-hidden', 'true');
         item.setAttribute('tabindex', '-1');
       }
@@ -925,6 +981,7 @@ class VariantSelects extends HTMLElement {
     this.toggleAddButton(true, '', false);
     this.updatePickupAvailability();
     this.removeErrorMessage();
+    this.updateVariantStatuses();
 
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
@@ -959,12 +1016,14 @@ class VariantSelects extends HTMLElement {
     if (!this.currentVariant) return;
     if (!this.currentVariant.featured_media) return;
 
-    const mediaGallery = document.getElementById(
-      `MediaGallery-${this.dataset.section}`,
+    const mediaGalleries = document.querySelectorAll(
+      `[id^="MediaGallery-${this.dataset.section}"]`,
     );
-    mediaGallery.setActiveMedia(
-      `${this.dataset.section}-${this.currentVariant.featured_media.id}`,
-      true,
+    mediaGalleries.forEach((mediaGallery) =>
+      mediaGallery.setActiveMedia(
+        `${this.dataset.section}-${this.currentVariant.featured_media.id}`,
+        true,
+      ),
     );
 
     const modalContent = document.querySelector(
@@ -1007,6 +1066,42 @@ class VariantSelects extends HTMLElement {
     });
   }
 
+  updateVariantStatuses() {
+    const selectedOptionOneVariants = this.variantData.filter(
+      (variant) => this.querySelector(':checked').value === variant.option1,
+    );
+    const inputWrappers = [...this.querySelectorAll('.product-form__input')];
+    inputWrappers.forEach((option, index) => {
+      if (index === 0) return;
+      const optionInputs = [
+        ...option.querySelectorAll('input[type="radio"], option'),
+      ];
+      const previousOptionSelected =
+        inputWrappers[index - 1].querySelector(':checked').value;
+      const availableOptionInputsValue = selectedOptionOneVariants
+        .filter(
+          (variant) =>
+            variant.available &&
+            variant[`option${index}`] === previousOptionSelected,
+        )
+        .map((variantOption) => variantOption[`option${index + 1}`]);
+      this.setInputAvailability(optionInputs, availableOptionInputsValue);
+    });
+  }
+
+  setInputAvailability(listOfOptions, listOfAvailableOptions) {
+    listOfOptions.forEach((input) => {
+      if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
+        input.innerText = input.getAttribute('value');
+      } else {
+        input.innerText = window.variantStrings.unavailable_with_option.replace(
+          '[value]',
+          input.getAttribute('value'),
+        );
+      }
+    });
+  }
+
   updatePickupAvailability() {
     const pickUpAvailability = document.querySelector('pickup-availability');
     if (!pickUpAvailability) return;
@@ -1028,10 +1123,13 @@ class VariantSelects extends HTMLElement {
   }
 
   renderProductInfo() {
-<<<<<<< HEAD
-<<<<<<< HEAD
+    const requestedVariantId = this.currentVariant.id;
+    const sectionId = this.dataset.originalSection
+      ? this.dataset.originalSection
+      : this.dataset.section;
+
     fetch(
-      `${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${
+      `${this.dataset.url}?variant=${requestedVariantId}&section_id=${
         this.dataset.originalSection
           ? this.dataset.originalSection
           : this.dataset.section
@@ -1039,6 +1137,9 @@ class VariantSelects extends HTMLElement {
     )
       .then((response) => response.text())
       .then((responseText) => {
+        // prevent unnecessary ui changes from abandoned selections
+        if (this.currentVariant.id !== requestedVariantId) return;
+
         const html = new DOMParser().parseFromString(responseText, 'text/html');
         const destination = document.getElementById(
           `price-${this.dataset.section}`,
@@ -1050,58 +1151,63 @@ class VariantSelects extends HTMLElement {
               : this.dataset.section
           }`,
         );
-=======
-=======
-    const requestedVariantId = this.currentVariant.id;
->>>>>>> 147c21e (Prevent ui changes from variant selection queues (#2030))
-    const activeElementId = document.activeElement.id;
-    fetch(`${this.dataset.url}?variant=${requestedVariantId}&section_id=${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`)
-      .then((response) => response.text())
-      .then((responseText) => {
-        // prevent unnecessary ui changes from abandoned selections
-        if (this.currentVariant.id !== requestedVariantId) return;
+        const skuSource = html.getElementById(
+          `Sku-${
+            this.dataset.originalSection
+              ? this.dataset.originalSection
+              : this.dataset.section
+          }`,
+        );
+        const skuDestination = document.getElementById(
+          `Sku-${this.dataset.section}`,
+        );
+        const inventorySource = html.getElementById(
+          `Inventory-${
+            this.dataset.originalSection
+              ? this.dataset.originalSection
+              : this.dataset.section
+          }`,
+        );
+        const inventoryDestination = document.getElementById(
+          `Inventory-${this.dataset.section}`,
+        );
 
-        const html = new DOMParser().parseFromString(responseText, 'text/html')
-        const destination = document.getElementById(`price-${this.dataset.section}`);
-        const source = html.getElementById(`price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
-        const skuSource = html.getElementById(`Sku-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
-        const skuDestination = document.getElementById(`Sku-${this.dataset.section}`);
-        const variantPickerDestination = document.getElementById(`variant-radios-${this.dataset.section}`) || document.getElementById(`variant-selects-${this.dataset.section}`);
-        const variantPickerSource = html.getElementById(`variant-radios-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`) || html.getElementById(`variant-selects-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
-        const inventorySource = html.getElementById(`Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
-        const inventoryDestination = document.getElementById(`Inventory-${this.dataset.section}`);
-
->>>>>>> 6aa8e6c (Add variant picker sold out UI [temporary solution] (#1407))
         if (source && destination) destination.innerHTML = source.innerHTML;
-        if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
-        if (variantPickerSource && variantPickerDestination) variantPickerDestination.innerHTML = variantPickerSource.innerHTML;
+        if (inventorySource && inventoryDestination)
+          inventoryDestination.innerHTML = inventorySource.innerHTML;
         if (skuSource && skuDestination) {
           skuDestination.innerHTML = skuSource.innerHTML;
-          skuDestination.classList.toggle('visibility-hidden', skuSource.classList.contains('visibility-hidden'));
+          skuDestination.classList.toggle(
+            'visibility-hidden',
+            skuSource.classList.contains('visibility-hidden'),
+          );
         }
 
         const price = document.getElementById(`price-${this.dataset.section}`);
 
         if (price) price.classList.remove('visibility-hidden');
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+        if (inventoryDestination)
+          inventoryDestination.classList.toggle(
+            'visibility-hidden',
+            inventorySource.innerText === '',
+          );
+
+        const addButtonUpdated = html.getElementById(
+          `ProductSubmitButton-${sectionId}`,
+        );
         this.toggleAddButton(
-          !this.currentVariant.available,
+          addButtonUpdated ? addButtonUpdated.hasAttribute('disabled') : true,
           window.variantStrings.soldOut,
         );
-=======
-=======
 
-<<<<<<< HEAD
->>>>>>> 0643730 ([PDP] Add SKU block (#1987))
-=======
-        if (inventoryDestination) inventoryDestination.classList.toggle('visibility-hidden', inventorySource.innerText === '');
-
->>>>>>> 57b689e (Add Inventory status block (#1979))
-        this.toggleAddButton(!this.currentVariant.available, window.variantStrings.soldOut);
-
-        document.querySelector('variant-radios') ? this.querySelector(`[for="${activeElementId}"]`).focus() : this.querySelector(`#${activeElementId}`).focus();
->>>>>>> 6aa8e6c (Add variant picker sold out UI [temporary solution] (#1407))
+        publish(PUB_SUB_EVENTS.variantChange, {
+          data: {
+            sectionId,
+            html,
+            variant: this.currentVariant,
+          },
+        });
       });
   }
 
@@ -1132,7 +1238,9 @@ class VariantSelects extends HTMLElement {
     const addButton = button.querySelector('[name="add"]');
     const addButtonText = button.querySelector('[name="add"] > span');
     const price = document.getElementById(`price-${this.dataset.section}`);
-    const inventory = document.getElementById(`Inventory-${this.dataset.section}`);
+    const inventory = document.getElementById(
+      `Inventory-${this.dataset.section}`,
+    );
     const sku = document.getElementById(`Sku-${this.dataset.section}`);
 
     if (!addButton) return;
@@ -1155,6 +1263,16 @@ customElements.define('variant-selects', VariantSelects);
 class VariantRadios extends VariantSelects {
   constructor() {
     super();
+  }
+
+  setInputAvailability(listOfOptions, listOfAvailableOptions) {
+    listOfOptions.forEach((input) => {
+      if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
+        input.classList.remove('disabled');
+      } else {
+        input.classList.add('disabled');
+      }
+    });
   }
 
   updateOptions() {
@@ -1180,8 +1298,8 @@ class ProductRecommendations extends HTMLElement {
       observer.unobserve(this);
 
       fetch(this.dataset.url)
-        .then(response => response.text())
-        .then(text => {
+        .then((response) => response.text())
+        .then((text) => {
           const html = document.createElement('div');
           html.innerHTML = text;
           const recommendations = html.querySelector('product-recommendations');
@@ -1190,7 +1308,10 @@ class ProductRecommendations extends HTMLElement {
             this.innerHTML = recommendations.innerHTML;
           }
 
-          if (!this.querySelector('slideshow-component') && this.classList.contains('complementary-products')) {
+          if (
+            !this.querySelector('slideshow-component') &&
+            this.classList.contains('complementary-products')
+          ) {
             this.remove();
           }
 
@@ -1198,12 +1319,14 @@ class ProductRecommendations extends HTMLElement {
             this.classList.add('product-recommendations--loaded');
           }
         })
-        .catch(e => {
+        .catch((e) => {
           console.error(e);
         });
-    }
+    };
 
-    new IntersectionObserver(handleIntersection.bind(this), {rootMargin: '0px 0px 400px 0px'}).observe(this);
+    new IntersectionObserver(handleIntersection.bind(this), {
+      rootMargin: '0px 0px 400px 0px',
+    }).observe(this);
   }
 }
 
