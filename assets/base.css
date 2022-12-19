@@ -2266,7 +2266,6 @@ input[type='checkbox'] {
   display: block;
   position: relative;
   background-color: rgb(var(--color-background));
-  z-index: 1;
 }
 
 .header-wrapper--border-bottom {
@@ -2307,7 +2306,8 @@ input[type='checkbox'] {
       'navigation navigation navigation';
   }
 
-  .header:not(.header--middle-left, .header--middle-center) .header__inline-menu {
+  .header:not(.header--middle-left, .header--middle-center)
+    .header__inline-menu {
     margin-top: 1.05rem;
   }
 }
@@ -2714,6 +2714,7 @@ details[open] > .header__menu-item .icon-caret {
   box-shadow: var(--popup-shadow-horizontal-offset)
     var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)
     rgba(var(--color-shadow), var(--popup-shadow-opacity));
+  z-index: -1;
 }
 
 .header__submenu.list-menu {
