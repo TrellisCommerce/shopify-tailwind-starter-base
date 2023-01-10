@@ -2,7 +2,9 @@ class PredictiveSearch extends SearchForm {
   constructor() {
     super();
     this.cachedResults = {};
-    this.predictiveSearchResults = this.querySelector('[data-predictive-search]');
+    this.predictiveSearchResults = this.querySelector(
+      '[data-predictive-search]',
+    );
     this.allPredictiveSearchInstances =
       document.querySelectorAll('predictive-search');
     this.isOpen = false;
@@ -147,16 +149,12 @@ class PredictiveSearch extends SearchForm {
     }
 
     fetch(
-<<<<<<< HEAD
       `${routes.predictive_search_url}?q=${encodeURIComponent(
         searchTerm,
       )}&${encodeURIComponent('resources[type]')}=product&${encodeURIComponent(
         'resources[limit]',
       )}=4&section_id=predictive-search`,
-=======
-      `${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&${encodeURIComponent('resources[type]')}=product&${encodeURIComponent('resources[limit]')}=4&section_id=predictive-search`,
-      {signal: this.abortController.signal}
->>>>>>> 22bbe46 (Search ux improvements (#2127))
+      { signal: this.abortController.signal },
     )
       .then((response) => {
         if (!response.ok) {
@@ -168,20 +166,15 @@ class PredictiveSearch extends SearchForm {
         return response.text();
       })
       .then((text) => {
-<<<<<<< HEAD
         const resultsMarkup = new DOMParser()
           .parseFromString(text, 'text/html')
           .querySelector('#shopify-section-predictive-search').innerHTML;
-        this.cachedResults[queryKey] = resultsMarkup;
-=======
-        const resultsMarkup = new DOMParser().parseFromString(text, 'text/html').querySelector('#shopify-section-predictive-search').innerHTML;
         // Save bandwidth keeping the cache in all instances synced
         this.allPredictiveSearchInstances.forEach(
           (predictiveSearchInstance) => {
             predictiveSearchInstance.cachedResults[queryKey] = resultsMarkup;
-          }
+          },
         );
->>>>>>> 22bbe46 (Search ux improvements (#2127))
         this.renderSearchResults(resultsMarkup);
       })
       .catch((error) => {
@@ -232,8 +225,7 @@ class PredictiveSearch extends SearchForm {
   getResultsMaxHeight() {
     this.resultsMaxHeight =
       window.innerHeight -
-      document.getElementById('shopify-section-header').getBoundingClientRect()
-        .bottom;
+      document.querySelector('.section-header').getBoundingClientRect().bottom;
     return this.resultsMaxHeight;
   }
 
