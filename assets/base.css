@@ -2929,9 +2929,9 @@ details-disclosure > details {
   .button:focus,
   .button.focused,
   .shopify-payment-button__button--unbranded:focus-visible,
-  .shopify-payment-button [role="button"]:focus-visible,
+  .shopify-payment-button [role='button']:focus-visible,
   .shopify-payment-button__button--unbranded:focus,
-  .shopify-payment-button [role="button"]:focus {
+  .shopify-payment-button [role='button']:focus {
     outline: solid transparent 1px;
   }
 
