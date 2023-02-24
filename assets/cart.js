@@ -68,19 +68,6 @@ class CartItems extends HTMLElement {
       });
   }
 
-  onCartUpdate() {
-    fetch('/cart?section_id=main-cart-items')
-      .then((response) => response.text())
-      .then((responseText) => {
-        const html = new DOMParser().parseFromString(responseText, 'text/html');
-        const sourceQty = html.querySelector('cart-items');
-        this.innerHTML = sourceQty.innerHTML;
-      })
-      .catch((e) => {
-        console.error(e);
-      });
-  }
-
   getSectionsToRender() {
     return [
       {

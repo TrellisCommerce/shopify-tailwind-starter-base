@@ -67,16 +67,6 @@ class PredictiveSearch extends SearchForm {
     }
   }
 
-  onFormReset(event) {
-    super.onFormReset(event);
-    if (super.shouldResetForm()) {
-      this.searchTerm = '';
-      this.abortController.abort();
-      this.abortController = new AbortController();
-      this.closeResults(true);
-    }
-  }
-
   onFocus() {
     const currentSearchTerm = this.getQuery();
 
