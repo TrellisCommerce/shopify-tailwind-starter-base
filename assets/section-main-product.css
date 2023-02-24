@@ -239,7 +239,10 @@ fieldset.product-form__input .form__label {
   color: rgb(var(--color-background));
 }
 
-.product-form__input input[type='radio']:not(.disabled) + label > .visually-hidden {
+.product-form__input
+  input[type='radio']:not(.disabled)
+  + label
+  > .visually-hidden {
   display: none;
 }
 
@@ -1367,7 +1370,7 @@ a.product__text {
 }
 
 .product__inventory.visibility-hidden:empty::after {
-  content: "#";
+  content: '#';
 }
 
 /* Icon with text */
@@ -1459,7 +1462,10 @@ a.product__text {
   /* arbitrary offset value based on average theme spacing and header height */
   --viewport-offset: 400px;
   --constrained-min-height: 300px;
-  --constrained-height: max(var(--constrained-min-height), calc(100vh - var(--viewport-offset)));
+  --constrained-height: max(
+    var(--constrained-min-height),
+    calc(100vh - var(--viewport-offset))
+  );
   margin-right: auto;
   margin-left: auto;
 }

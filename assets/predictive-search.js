@@ -33,7 +33,7 @@ class PredictiveSearch extends SearchForm {
     if (!this.searchTerm || !newSearchTerm.startsWith(this.searchTerm)) {
       // Remove the results when they are no longer relevant for the new search term
       // so they don't show up when the dropdown opens again
-      this.querySelector("#predictive-search-results-groups-wrapper")?.remove();
+      this.querySelector('#predictive-search-results-groups-wrapper')?.remove();
     }
 
     // Update the term asap, don't wait for the predictive search query to finish loading
@@ -55,6 +55,16 @@ class PredictiveSearch extends SearchForm {
       this.querySelector('[aria-selected="true"] a')
     )
       event.preventDefault();
+  }
+
+  onFormReset(event) {
+    super.onFormReset(event);
+    if (super.shouldResetForm()) {
+      this.searchTerm = '';
+      this.abortController.abort();
+      this.abortController = new AbortController();
+      this.closeResults(true);
+    }
   }
 
   onFormReset(event) {
@@ -114,11 +124,11 @@ class PredictiveSearch extends SearchForm {
 
   updateSearchForTerm(previousTerm, newTerm) {
     const searchForTextElement = this.querySelector(
-      "[data-predictive-search-search-for-text]"
+      '[data-predictive-search-search-for-text]',
     );
     const currentButtonText = searchForTextElement?.innerText;
     if (currentButtonText) {
-      if (currentButtonText.match(new RegExp(previousTerm, "g")).length > 1) {
+      if (currentButtonText.match(new RegExp(previousTerm, 'g')).length > 1) {
         // The new term matches part of the button text and not just the search term, do not replace to avoid mistakes
         return;
       }
