@@ -1,0 +1,137 @@
+
+  {% assign slideIndex = 1 %}
+
+  <div class="custom-slider">
+    <div class="slider-container">
+      {% for block in section.blocks %}
+        <div class="slide">
+          <a href="{{ block.settings.product_link }}" class="product-link">{{ block.settings.text }}</a>
+          <img src="{{ block.settings.product_image.src | img_url: '300x' }}" width="{{ block.settings.product_image.width }}" height="{{block.settings.product_image.height}}" alt="{{ block.settings.product_image.alt }}" class="product-image">
+          <p class="product-price">{{ block.settings.product_price | times: 100 | money_without_trailing_zeros }}</p>
+          <span>{{ slideIndex }}</span>
+        </div>
+        {% assign slideIndex = slideIndex | plus: 1 %}
+      {% endfor %}
+    </div>
+    <button class="prev-button">&laquo;</button>
+    <button class="next-button">&raquo;</button>
+  </div>
+
+
+{% style %}
+  .custom-slider {
+    position: relative;
+    overflow: hidden;
+  }
+  .slider-container {
+    display: flex;
+    transition: transform 0.3s;
+  }
+  .slide {
+    flex-shrink: 0;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  .slide-image,
+  .product-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .product-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  .prev-button {
+    left: 0;
+  }
+  .next-button {
+    right: 0;
+  }
+{% endstyle %}
+
+{% javascript %}
+  document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.custom-slider .slider-container');
+    const prevButton = document.querySelector('.custom-slider .prev-button');
+    const nextButton = document.querySelector('.custom-slider .next-button');
+    let slideIndex = 0;
+
+    function showSlide(index) {
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+      slideIndex = (slideIndex + 1) % slider.children.length;
+      showSlide(slideIndex);
+    }
+
+    function prevSlide() {
+      slideIndex = (slideIndex - 1 + slider.children.length) % slider.children.length;
+      showSlide(slideIndex);
+    }
+
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+  });
+{% endjavascript %}
+{% schema %}
+{
+  "name": "Custom Slider",
+  "tag": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "url",
+          "id": "product_link",
+          "label": "Product Link"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "product_image",
+          "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "product_price",
+          "label": "Product Price",
+          "default": "0"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Slider",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
