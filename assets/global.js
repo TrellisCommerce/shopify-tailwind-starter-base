@@ -383,8 +383,9 @@ class MenuDrawer extends HTMLElement {
     this.querySelectorAll('summary').forEach((summary) =>
       summary.addEventListener('click', this.onSummaryClick.bind(this)),
     );
-    this.querySelectorAll('button').forEach((button) =>
-      button.addEventListener('click', this.onCloseButtonClick.bind(this)),
+    this.querySelectorAll('button:not(.localization-selector)').forEach(
+      (button) =>
+        button.addEventListener('click', this.onCloseButtonClick.bind(this)),
     );
   }
 
@@ -476,7 +477,7 @@ class MenuDrawer extends HTMLElement {
     this.closeAnimation(this.mainDetailsToggle);
   }
 
-  onFocusOut(event) {
+  onFocusOut() {
     setTimeout(() => {
       if (
         this.mainDetailsToggle.hasAttribute('open') &&
@@ -558,14 +559,31 @@ class HeaderDrawer extends MenuDrawer {
     });
 
     summaryElement.setAttribute('aria-expanded', true);
+    window.addEventListener('resize', this.onResize);
     trapFocus(this.mainDetailsToggle, summaryElement);
     document.body.classList.add(`overflow-hidden-${this.dataset.breakpoint}`);
   }
 
   closeMenuDrawer(event, elementToFocus) {
+    if (!elementToFocus) return;
     super.closeMenuDrawer(event, elementToFocus);
     this.header.classList.remove('menu-open');
+    window.removeEventListener('resize', this.onResize);
   }
+
+  onResize = () => {
+    this.header &&
+      document.documentElement.style.setProperty(
+        '--header-bottom-position',
+        `${parseInt(
+          this.header.getBoundingClientRect().bottom - this.borderOffset,
+        )}px`,
+      );
+    document.documentElement.style.setProperty(
+      '--viewport-height',
+      `${window.innerHeight}px`,
+    );
+  };
 }
 
 customElements.define('header-drawer', HeaderDrawer);
@@ -806,25 +824,34 @@ class SlideshowComponent extends SliderComponent {
     this.slider.addEventListener('scroll', this.setSlideVisibility.bind(this));
     this.setSlideVisibility();
 
+    this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    this.reducedMotion.addEventListener('change', () => {
+      if (this.slider.getAttribute('data-autoplay') === 'true')
+        this.setAutoPlay();
+    });
+
     if (this.slider.getAttribute('data-autoplay') === 'true')
       this.setAutoPlay();
   }
 
   setAutoPlay() {
-    this.sliderAutoplayButton = this.querySelector('.slideshow__autoplay');
     this.autoplaySpeed = this.slider.dataset.speed * 1000;
-
-    this.sliderAutoplayButton.addEventListener(
-      'click',
-      this.autoPlayToggle.bind(this),
-    );
     this.addEventListener('mouseover', this.focusInHandling.bind(this));
     this.addEventListener('mouseleave', this.focusOutHandling.bind(this));
     this.addEventListener('focusin', this.focusInHandling.bind(this));
     this.addEventListener('focusout', this.focusOutHandling.bind(this));
 
-    this.play();
-    this.autoplayButtonIsSetToPlay = true;
+    if (this.querySelector('.slideshow__autoplay')) {
+      this.sliderAutoplayButton = this.querySelector('.slideshow__autoplay');
+      this.sliderAutoplayButton.addEventListener(
+        'click',
+        this.autoPlayToggle.bind(this),
+      );
+      this.autoplayButtonIsSetToPlay = true;
+      this.play();
+    } else {
+      this.reducedMotion.matches ? this.pause() : this.play();
+    }
   }
 
   onButtonClick(event) {
@@ -873,20 +900,30 @@ class SlideshowComponent extends SliderComponent {
   }
 
   focusOutHandling(event) {
-    const focusedOnAutoplayButton =
-      event.target === this.sliderAutoplayButton ||
-      this.sliderAutoplayButton.contains(event.target);
-    if (!this.autoplayButtonIsSetToPlay || focusedOnAutoplayButton) return;
-    this.play();
+    if (this.sliderAutoplayButton) {
+      const focusedOnAutoplayButton =
+        event.target === this.sliderAutoplayButton ||
+        this.sliderAutoplayButton.contains(event.target);
+      if (!this.autoplayButtonIsSetToPlay || focusedOnAutoplayButton) return;
+      this.play();
+    } else if (!this.reducedMotion.matches) {
+      this.play();
+    }
   }
 
   focusInHandling(event) {
-    const focusedOnAutoplayButton =
-      event.target === this.sliderAutoplayButton ||
-      this.sliderAutoplayButton.contains(event.target);
-    if (focusedOnAutoplayButton && this.autoplayButtonIsSetToPlay) {
-      this.play();
-    } else if (this.autoplayButtonIsSetToPlay) {
+    if (this.sliderAutoplayButton) {
+      const focusedOnAutoplayButton =
+        event.target === this.sliderAutoplayButton ||
+        this.sliderAutoplayButton.contains(event.target);
+      if (focusedOnAutoplayButton && this.autoplayButtonIsSetToPlay) {
+        this.play();
+      } else if (this.autoplayButtonIsSetToPlay) {
+        this.pause();
+      }
+    } else if (
+      this.querySelector('.announcement-bar-slider').contains(event.target)
+    ) {
       this.pause();
     }
   }

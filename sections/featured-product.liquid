@@ -2,8 +2,8 @@
 {{ 'section-featured-product.css' | asset_url | stylesheet_tag }}
 {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
-{{ 'component-rte.css' | asset_url | stylesheet_tag }}
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -20,8 +20,6 @@
 {%- endstyle -%}
 
 <script src='{{ 'product-info.js' | asset_url }}' defer='defer'></script>
-
-<link rel='stylesheet' href='{{ 'component-deferred-media.css' | asset_url }}' media='print' onload="this.media='all'">
 
 {%- liquid
   assign product = section.settings.product
