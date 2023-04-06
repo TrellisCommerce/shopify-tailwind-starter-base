@@ -211,12 +211,24 @@
         font-weight: var(--font-body-weight);
       }
 
+      @font-face {
+        font-family: 'Gilroy-Bold';
+        src: url('{{ 'Gilroy-Bold.woff2' | asset_url }}') format('woff2'),
+            url('{{ 'Gilroy-Bold.woff' | asset_url }}') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
       @media screen and (min-width: 750px) {
         body {
           font-size: 1.6rem;
         }
       }
     {% endstyle %}
+
+    <link rel="preload" href="{{ 'YourCustomFont.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
+
 
     {{ 'app.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}

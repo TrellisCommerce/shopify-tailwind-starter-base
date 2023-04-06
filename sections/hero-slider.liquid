@@ -1,123 +1,112 @@
 
-  {% assign slideIndex = 1 %}
+{{ 'hero-slider-styles.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'hero-slider-scripts.js' | asset_url }}" defer></script>
 
+{% assign slideIndex = 0 %}
+{% assign lifestyle = 'lifestyle.jpg' %}
+<div class="custom-hero twcss-relative twcss-overflow-hidden twcss-pt-[175px]">
   <div class="custom-slider">
+    <span class="twcss-block twcss-uppercase twcss-text-black twcss-text-[11px] twcss-tracking-[1.1px]">As seen on foxtel network</span>
+    <h1>{{ section.settings.hero_text }}</h1>
     <div class="slider-container">
       {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.product] %}
+        {% assign first_tag = product.tags | first %}
         <div class="slide">
-          <a href="{{ block.settings.product_link }}" class="product-link">{{ block.settings.text }}</a>
-          <img src="{{ block.settings.product_image.src | img_url: '300x' }}" width="{{ block.settings.product_image.width }}" height="{{block.settings.product_image.height}}" alt="{{ block.settings.product_image.alt }}" class="product-image">
-          <p class="product-price">{{ block.settings.product_price | times: 100 | money_without_trailing_zeros }}</p>
-          <span>{{ slideIndex }}</span>
+          {% assign product = all_products[block.settings.product] %}
+          
+          <img src="{{ product.featured_image.src | img_url: '300x' }}" width="{{ product.featured_image.width }}" height="{{ product.featured_image.height }}"alt="{{ product.featured_image.alt }}" class="product-image">
+
+          
+          <div class="product-info twcss-text-white">
+            <span class="twcss-text-[13px]">{{ first_tag }}</span>
+            <h2 class="twcss-text-white twcss-text-[25px] twcss-max-w-[179px] twcss-leading-[22px] twcss-mt-[5px]">{{ product.title }}</h2>
+            {% if block.settings.as_seen != blank %}
+              <span class="twcss-uppercase twcss-tracking-[1.1px] twcss-text-[9px] twcss-mt-[10px]">As seen on {{ block.settings.as_seen }}</span>
+            {% endif %}
+            
+            <div class="twcss-flex twcss-mt-[35px] twcss-justify-between twcss-items-center">
+              <span class="twcss-text-white twcss-text-[19px]">{{ product.price | money_without_trailing_zeros }}</span>
+              <a href="{{ product.url }}" class="twcss-text[13px] twcss-flex twcss-items-center twcss-mr-[35px]">View Product <svg class="twcss-relative twcss-left-[12px] twcss-top-[-1px]" xmlns="http://www.w3.org/2000/svg" width="13.588" height="9.062" viewBox="0 0 13.588 9.062">
+              <path id="Icon_ionic-ios-arrow-round-back" data-name="Icon ionic-ios-arrow-round-back" d="M16.547,11.425a.617.617,0,0,0,0,.868l2.865,2.874H8.491a.614.614,0,0,0,0,1.227H19.407l-2.869,2.874a.621.621,0,0,0,0,.868.611.611,0,0,0,.864,0l3.889-3.917h0a.689.689,0,0,0,.127-.194.586.586,0,0,0,.047-.236.615.615,0,0,0-.175-.429l-3.889-3.917A.6.6,0,0,0,16.547,11.425Z" transform="translate(-7.882 -11.252)" fill="#fff"/>
+            </svg>
+            </a>
+            </div>
+          </div>
+  
         </div>
         {% assign slideIndex = slideIndex | plus: 1 %}
       {% endfor %}
+    
+      
     </div>
-    <button class="prev-button">&laquo;</button>
-    <button class="next-button">&raquo;</button>
+    <div class="prev-next twcss-flex twcss-flex-col">
+      <button class="next-button"><span class="btn-text">Next</span><span class="circle-btn">{% render 'icon-next-black' %} </span></button>
+      <button class="prev-button"><span class="circle-btn">{% render 'icon-prev-black' %}</span><span class="btn-text">Prev</span> </button>
+      
+    </div>
+    
+    <a href="{{ section.settings.explore_products_link }}" class="explore-link">Explore <br /> products {% render 'icon-arrow-right' %}</a>
+    
+    
+    <nav class="slider-nav">
+      {% for block in section.blocks %}
+        <button class="nav-button" data-index="{{ forloop.index0 }}"></button>
+      {% endfor %}
+    </nav>
+    
+    
   </div>
+  
+  {% render 'icon-circles-mobiles' %}
+  
+</div>
 
+<div class="hero-foxtel twcss-flex twcss-translate-y-[-37px]">
+  <img src="{{ lifestyle | asset_url }}" alt="Lifestyle" loading="lazy" width="89" height="89">
+  <div class="foxtel-number twcss-w-full">
+      <div class="foxtel twcss-text-white twcss-max-h-[89px] twcss-flex twcss-items-center twcss-justify-between">
+        <div>
+          {% render 'icon-foxtel' %}
+          <p class="twcss-uppercase twcss-text-[10px] twcss-tracking-[1.1px] twcss-mt-[10px] twcss-max-w-[136px]">Latest product as seen on the show</p>
+        </div>
+        
+        <div class="slide-number twcss-text-[11px] twcss-tracking-[1.1px]"></div>
+      </div>
+  </div>
+</div>
 
-{% style %}
-  .custom-slider {
-    position: relative;
-    overflow: hidden;
-  }
-  .slider-container {
-    display: flex;
-    transition: transform 0.3s;
-  }
-  .slide {
-    flex-shrink: 0;
-    width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
-  }
-  .slide-image,
-  .product-image {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  .product-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-  }
-  .prev-button,
-  .next-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    font-size: 2rem;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-  }
-  .prev-button {
-    left: 0;
-  }
-  .next-button {
-    right: 0;
-  }
-{% endstyle %}
-
-{% javascript %}
-  document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.querySelector('.custom-slider .slider-container');
-    const prevButton = document.querySelector('.custom-slider .prev-button');
-    const nextButton = document.querySelector('.custom-slider .next-button');
-    let slideIndex = 0;
-
-    function showSlide(index) {
-      slider.style.transform = `translateX(-${index * 100}%)`;
-    }
-
-    function nextSlide() {
-      slideIndex = (slideIndex + 1) % slider.children.length;
-      showSlide(slideIndex);
-    }
-
-    function prevSlide() {
-      slideIndex = (slideIndex - 1 + slider.children.length) % slider.children.length;
-      showSlide(slideIndex);
-    }
-
-    prevButton.addEventListener('click', prevSlide);
-    nextButton.addEventListener('click', nextSlide);
-  });
-{% endjavascript %}
 {% schema %}
 {
   "name": "Custom Slider",
   "tag": "section",
-  "settings": [],
+  "settings": [
+    {
+      "type": "url",
+      "id": "explore_products_link",
+      "label": "Explore Products Link"
+    },
+    {
+      "type": "text",
+      "id": "hero_text",
+      "label": "Hero Text",
+      "default": "Make your space look amazing"
+    }
+  ],
   "blocks": [
     {
       "type": "slide",
       "name": "Slide",
       "settings": [
         {
-          "type": "url",
-          "id": "product_link",
-          "label": "Product Link"
-        },
-        {
           "type": "text",
-          "id": "text",
-          "label": "Text"
+          "id": "as_seen",
+          "label": "Episode Number"
         },
         {
-          "type": "image_picker",
-          "id": "product_image",
-          "label": "Product Image"
-        },
-        {
-          "type": "text",
-          "id": "product_price",
-          "label": "Product Price",
-          "default": "0"
+          "type": "product",
+          "id": "product",
+          "label": "Select Product"
         }
       ]
     }

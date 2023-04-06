@@ -1,0 +1,181 @@
+.custom-hero {
+  padding-left: 37px;
+}
+.custom-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.slider-container {
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  flex-shrink: 0;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  max-width: 320px
+}
+
+.slider-nav {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.nav-button {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 50%;
+  margin: 0 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.nav-button.active {
+  background-color: #333;
+}
+
+.custom-slider h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.275px;
+  line-height: 40px;
+  margin-top: 15px;
+}
+
+.icon-circles-mobiles {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.explore-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: var(--teal);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  text-align: center;
+  flex-direction: column;
+  position: absolute;
+  right: 10px;
+  z-index: 3;
+  bottom: 249px;
+}
+
+.explore-link svg {
+  transition: all 0.3s ease;
+  margin-top: 10px
+}
+
+.explore-link:hover svg {
+  margin-left: 10px
+}
+
+.explore-link:hover:before {
+  animation: backgroundChange 1s forwards;
+}
+
+.explore-link::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.explore-link:hover::before {
+  transform: scale(20);
+  opacity: 1;
+  z-index: -1;
+}
+
+.product-info {
+  background: var(--teal);
+  padding: 30px;
+  transform: translate(51px, -37px);
+  width: 342px;
+  height: 207px;
+}
+
+.product-info span {
+  display: block;
+}
+
+.prev-next {
+  position: absolute;
+  bottom: 60px;
+  left: -22px;
+}
+
+.prev-next .circle-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev-next button {
+  display: flex;
+  flex-direction: column;
+}
+
+.prev-next .btn-text {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 8px;
+  letter-spacing: 1.1px;
+}
+
+.prev-next .next-button {
+  margin-bottom: 12px;
+}
+
+.prev-next .next-button .btn-text {
+  margin-bottom: 10px;
+}
+
+.prev-next .prev-button .btn-text {
+  margin-top: 10px;
+}
+
+.foxtel svg {
+  width: 96px;
+  height: 20px;
+}
+
+.foxtel {
+  padding: 18px 20px 18px 35px;
+  background-color: var(--black)
+}

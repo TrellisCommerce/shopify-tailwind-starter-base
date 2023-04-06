@@ -21,8 +21,10 @@ module.exports = {
         heading: 'var(--font-heading-family)',
       },
     },
-    color: {
-      black: '#000000',
+    colors: {
+      black: '#2a2a2a',
+      main: '#5EB8C1',
+      white: '#fff'
     },
   },
   plugins: [],
