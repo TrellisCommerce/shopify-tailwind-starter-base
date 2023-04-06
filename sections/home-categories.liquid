@@ -1,0 +1,84 @@
+{% comment %}
+  Custom section with dynamic inputs, CSS grid, and hover effects
+{% endcomment %}
+{{ 'home-categories-styles.css' | asset_url | stylesheet_tag }}
+
+<section class="custom-section">
+  <h2>{{ section.settings.title }}</h2>
+  <p>{{ section.settings.paragraph_1 }}</p>
+  <p>{{ section.settings.paragraph_2 }}</p>
+  <h3>{{ section.settings.subtitle }}</h3>
+
+  {% for block in section.blocks %}
+    <a href="{{ block.settings.link_to_category }}" class="category-box">
+      <span>{{ block.settings.number }}</span>
+      <h4>{{ block.settings.category_title }}</h4>
+      <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.category_title }}" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}">
+    </a>
+    <div class="category-box-content">{{ block.settings.content }}</div>
+  {% endfor %}
+</section>
+
+{% schema %}
+  {
+    "name": "Home Categories",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Browse Products"
+      },
+      {
+        "type": "text",
+        "id": "paragraph_1",
+        "label": "Paragraph 1"
+      },
+      {
+        "type": "text",
+        "id": "paragraph_2",
+        "label": "Paragraph 2"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "category",
+        "name": "Category",
+        "settings": [
+          {
+            "type": "text",
+            "id": "number",
+            "label": "Number"
+          },
+          {
+            "type": "text",
+            "id": "category_title",
+            "label": "Category Title"
+          },
+          {
+            "type": "url",
+            "id": "link_to_category",
+            "label": "Link to Category"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+         
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content"
+          }
+        ],
+        "limit": 5
+      }
+    ]
+  }
+{% endschema %}

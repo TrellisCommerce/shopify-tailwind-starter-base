@@ -1,0 +1,38 @@
+.custom-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  gap: 20px;
+}
+
+.category-box {
+  position: relative;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.category-box:hover {
+  background-color: transparent;
+}
+
+.category-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.category-box:hover img {
+  opacity: 1;
+}
+
+.category-box-content {
+  padding: 20px;
+}
