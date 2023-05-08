@@ -1,5 +1,12 @@
 module.exports = {
   prefix: 'twcss-',
+  // safelist is added to provide all styles for design to add through the admin
+  safelist: [
+    {
+      pattern: /.*/,
+    },
+  ],
+  important: true,
   content: [
     './layout/*.liquid',
     './templates/*.liquid',

@@ -6,14 +6,14 @@
   {{ block.shopify_attributes }}
 >
   {%- if section.blocks.size == 1 -%}
-    <div class="announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
+    <div class="announcement-bar {{ section.settings.twcss_container }}" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
       {%- if section.blocks.first.settings.text != blank -%}
         {%- if section.blocks.first.settings.link != blank -%}
           <a href="{{ section.blocks.first.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
         {%- endif -%}
           <div class="page-width">
             <p class="announcement-bar__message h5">
-              <span>{{ section.blocks.first.settings.text | escape }}</span>
+              <span class="{{ section.settings.twcss_text }}">{{ section.blocks.first.settings.text | escape }}</span>
               {%- if section.blocks.first.settings.link != blank -%}
                 {% render 'icon-arrow' %}
               {%- endif -%}
@@ -147,6 +147,16 @@
       "unit": "s",
       "label": "t:sections.announcement-bar.settings.change_slides_speed.label",
       "default": 5
+    },
+    {
+      "type": "text",
+      "id": "twcss_container",
+      "label": "TailwindCSS for the Container"
+    },
+    {
+      "type": "text",
+      "id": "twcss_text",
+      "label": "TailwindCSS for the Text"
     }
   ],
   "blocks": [
