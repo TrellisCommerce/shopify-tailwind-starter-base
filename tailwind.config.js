@@ -6,6 +6,7 @@ module.exports = {
       pattern: /.*/,
     },
   ],
+  // !important is added to override core Dawn styles for design
   important: true,
   content: [
     './layout/*.liquid',
