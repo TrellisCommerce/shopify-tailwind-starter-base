@@ -49,7 +49,7 @@
       style='--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;'
     >
       <div
-        class='card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}'
+        class='card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %} {{ twcss_card_image }}'
         style='--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;'
       >
         {%- if card_product.featured_media -%}
@@ -112,7 +112,7 @@
               <a
                 href='{{ card_product.url }}'
                 id='StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}'
-                class='full-unstyled-link'
+                class='full-unstyled-link {{ twcss_card_heading }}'
                 aria-labelledby='StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}'
               >
                 {{ card_product.title | escape }}
@@ -123,14 +123,14 @@
             {%- if card_product.available == false -%}
               <span
                 id='NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}'
-                class='badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}'
+                class='badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }} {{ twcss_card_badge }}'
               >
                 {{- 'products.product.sold_out' | t -}}
               </span>
             {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
               <span
                 id='NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}'
-                class='badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}'
+                class='badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }} {{ twcss_card_badge }}'
               >
                 {{- 'products.product.on_sale' | t -}}
               </span>
@@ -149,7 +149,7 @@
             <a
               href='{{ card_product.url }}'
               id='CardLink-{{ section_id }}-{{ card_product.id }}'
-              class='full-unstyled-link'
+              class='full-unstyled-link {{ twcss_card_heading }}'
               aria-labelledby='CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}'
             >
               {{ card_product.title | escape }}
@@ -161,7 +161,7 @@
               <div class='caption-with-letter-spacing light'>{{ card_product.vendor }}</div>
             {%- endif -%}
 
-            <span class='caption-large light'>{{ block.settings.description | escape }}</span>
+            <span class='caption-large light {{ twcss_card_caption }}'>{{ block.settings.description | escape }}</span>
 
             {%- if show_rating and card_product.metafields.reviews.rating.value != blank -%}
               {% liquid
@@ -199,7 +199,11 @@
               </p>
             {%- endif -%}
 
-            {% render 'price', product: card_product, price_class: '' %}
+            {% render 'price',
+              product: card_product,
+              price_class: twcss_card_price,
+              price_sale: twcss_card_price_sale
+            %}
           </div>
         </div>
         {%- if show_quick_add -%}
@@ -320,14 +324,14 @@
           {%- if card_product.available == false -%}
             <span
               id='Badge-{{ section_id }}-{{ card_product.id }}'
-              class='badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}'
+              class='badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }} {{ twcss_card_badge }}'
             >
               {{- 'products.product.sold_out' | t -}}
             </span>
           {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
             <span
               id='Badge-{{ section_id }}-{{ card_product.id }}'
-              class='badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}'
+              class='badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }} {{ twcss_card_badge }}'
             >
               {{- 'products.product.on_sale' | t -}}
             </span>
@@ -357,7 +361,7 @@
         <div class='card__content'>
           <div class='card__information'>
             <h3 class='card__heading'>
-              <a role='link' aria-disabled='true' class='full-unstyled-link'>
+              <a role='link' aria-disabled='true' class='full-unstyled-link {{ twcss_card_heading }}'>
                 {{ 'onboarding.product_title' | t }}
               </a>
             </h3>
@@ -367,7 +371,7 @@
       <div class='card__content'>
         <div class='card__information'>
           <h3 class='card__heading{% if settings.card_style == 'standard' %} h5{% endif %}'>
-            <a role='link' aria-disabled='true' class='full-unstyled-link'>
+            <a role='link' aria-disabled='true' class='full-unstyled-link {{ twcss_card_heading }}'>
               {{ 'onboarding.product_title' | t }}
             </a>
           </h3>
@@ -376,7 +380,7 @@
               <span class='visually-hidden'>{{ 'accessibility.vendor' | t }}</span>
               <div class='caption-with-letter-spacing light'>{{ 'products.product.vendor' | t }}</div>
             {%- endif -%}
-            {% render 'price' %}
+            {% render 'price', price_class: twcss_card_price, price_sale: twcss_card_price_sale %}
           </div>
         </div>
       </div>

@@ -1576,6 +1576,36 @@
         "type": "text",
         "id": "twcss_card_container",
         "label": "TailwindCSS for Card Container"
+      },
+      {
+        "type": "text",
+        "id": "twcss_card_image",
+        "label": "TailwindCSS for Card Image"
+      },
+      {
+        "type": "text",
+        "id": "twcss_card_heading",
+        "label": "TailwindCSS for Card Heading"
+      },
+      {
+        "type": "text",
+        "id": "twcss_card_price",
+        "label": "TailwindCSS for Card Price"
+      },
+      {
+        "type": "text",
+        "id": "twcss_card_price_sale",
+        "label": "TailwindCSS for Card Sale Price"
+      },
+      {
+        "type": "text",
+        "id": "twcss_card_caption",
+        "label": "TailwindCSS for Card Caption"
+      },
+      {
+        "type": "text",
+        "id": "twcss_card_badge",
+        "label": "TailwindCSS for Card Badge"
       }
     ]
   }
