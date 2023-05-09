@@ -1568,5 +1568,15 @@
         "info": "t:settings_schema.cart.settings.cart_drawer.collection.info"
       }
     ]
+  },
+  {
+    "name": "TailwindCSS",
+    "settings": [
+      {
+        "type": "text",
+        "id": "twcss_card_container",
+        "label": "TailwindCSS for Card Container"
+      }
+    ]
   }
 ]

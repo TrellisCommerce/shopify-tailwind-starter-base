@@ -1051,7 +1051,7 @@
         "margin_top": {
           "label": "Top margin"
         },
-         "header__9": {
+        "header__9": {
           "content": "Follow on Shop",
           "info": "To allow customers to follow your store on the Shop app from your storefront, Shop Pay must be enabled. [Learn more](https://help.shopify.com/manual/online-store/themes/customizing-themes/follow-on-shop)"
         },
