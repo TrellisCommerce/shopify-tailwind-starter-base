@@ -1,8 +1,8 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
 
-<div class="page-width">
-  <h1 class="title title--primary inline-richtext">{{ section.settings.title }}</h1>
+<div class='page-width'>
+  <h1 class='title title--primary inline-richtext'>{{ section.settings.title }}</h1>
   {%- liquid
     case section.settings.sort
       when 'products_high', 'products_low'
@@ -23,15 +23,19 @@
   -%}
   {%- paginate collections by paginate_by -%}
     <ul
-      class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
-      role="list"
+      class='collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down'
+      role='list'
     >
       {%- for collection in collections -%}
-        <li class="collection-list__item grid__item">
+        <li class='collection-list__item grid__item'>
           {% render 'card-collection',
             card_collection: collection,
             media_aspect_ratio: section.settings.image_ratio,
-            columns: 3
+            columns: 3,
+            twcss_collection_card_container: settings.twcss_collection_card_container,
+            twcss_collection_card_image: settings.twcss_collection_card_image,
+            twcss_collection_card_heading: settings.twcss_collection_card_heading,
+            twcss_collection_card_caption: settings.twcss_collection_card_caption
           %}
         </li>
       {%- endfor -%}

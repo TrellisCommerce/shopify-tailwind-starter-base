@@ -92,13 +92,13 @@
               show_rating: section.settings.show_rating,
               show_quick_add: section.settings.enable_quick_add,
               section_id: section.id,
-              twcss_card_container: settings.twcss_card_container,
-              twcss_card_image: settings.twcss_card_image,
-              twcss_card_heading: settings.twcss_card_heading,
-              twcss_card_price: settings.twcss_card_price,
-              twcss_card_price_sale: settings.twcss_card_price_sale,
-              twcss_card_caption: settings.twcss_card_caption,
-              twcss_card_badge: settings.twcss_card_badge
+              twcss_product_card_container: settings.twcss_product_card_container,
+              twcss_product_card_image: settings.twcss_product_card_image,
+              twcss_product_card_heading: settings.twcss_product_card_heading,
+              twcss_product_card_price: settings.twcss_product_card_price,
+              twcss_product_card_price_sale: settings.twcss_product_card_price_sale,
+              twcss_product_card_caption: settings.twcss_product_card_caption,
+              twcss_product_card_badge: settings.twcss_product_card_badge
             %}
           </li>
         {%- else -%}
@@ -107,7 +107,16 @@
               class='grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
               data-cascade
             >
-              {% render 'card-product', show_vendor: section.settings.show_vendor %}
+              {% render 'card-product',
+                show_vendor: section.settings.show_vendor,
+                twcss_product_card_container: settings.twcss_product_card_container,
+                twcss_product_card_image: settings.twcss_product_card_image,
+                twcss_product_card_heading: settings.twcss_product_card_heading,
+                twcss_product_card_price: settings.twcss_product_card_price,
+                twcss_product_card_price_sale: settings.twcss_product_card_price_sale,
+                twcss_product_card_caption: settings.twcss_product_card_caption,
+                twcss_product_card_badge: settings.twcss_product_card_badge
+              %}
             </li>
           {%- endfor -%}
         {%- endfor -%}

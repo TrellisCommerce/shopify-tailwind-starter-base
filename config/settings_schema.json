@@ -1574,38 +1574,58 @@
     "settings": [
       {
         "type": "text",
-        "id": "twcss_card_container",
-        "label": "TailwindCSS for Card Container"
+        "id": "twcss_product_card_container",
+        "label": "TailwindCSS for Product Card Container"
       },
       {
         "type": "text",
-        "id": "twcss_card_image",
-        "label": "TailwindCSS for Card Image"
+        "id": "twcss_product_card_image",
+        "label": "TailwindCSS for Product Card Image"
       },
       {
         "type": "text",
-        "id": "twcss_card_heading",
-        "label": "TailwindCSS for Card Heading"
+        "id": "twcss_product_card_heading",
+        "label": "TailwindCSS for Product Card Heading"
       },
       {
         "type": "text",
-        "id": "twcss_card_price",
-        "label": "TailwindCSS for Card Price"
+        "id": "twcss_product_card_price",
+        "label": "TailwindCSS for Product Card Price"
       },
       {
         "type": "text",
-        "id": "twcss_card_price_sale",
-        "label": "TailwindCSS for Card Sale Price"
+        "id": "twcss_product_card_price_sale",
+        "label": "TailwindCSS for Product Card Sale Price"
       },
       {
         "type": "text",
-        "id": "twcss_card_caption",
-        "label": "TailwindCSS for Card Caption"
+        "id": "twcss_product_card_caption",
+        "label": "TailwindCSS for Product Card Caption"
       },
       {
         "type": "text",
-        "id": "twcss_card_badge",
-        "label": "TailwindCSS for Card Badge"
+        "id": "twcss_product_card_badge",
+        "label": "TailwindCSS for Product Card Badge"
+      },
+      {
+        "type": "text",
+        "id": "twcss_collection_card_container",
+        "label": "TailwindCSS for Collection Card Container"
+      },
+      {
+        "type": "text",
+        "id": "twcss_collection_card_image",
+        "label": "TailwindCSS for Collection Card Image"
+      },
+      {
+        "type": "text",
+        "id": "twcss_collection_card_heading",
+        "label": "TailwindCSS for Collection Card Heading"
+      },
+      {
+        "type": "text",
+        "id": "twcss_collection_card_caption",
+        "label": "TailwindCSS for Collection Card Caption"
       }
     ]
   }

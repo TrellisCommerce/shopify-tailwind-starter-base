@@ -20,28 +20,35 @@
   }
 {%- endstyle -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient no-js-hidden{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+<div class='color-{{ section.settings.color_scheme }} gradient no-js-hidden{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'>
   <product-recommendations
-    class="related-products page-width section-{{ section.id }}-padding isolate"
-    data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}"
+    class='related-products page-width section-{{ section.id }}-padding isolate'
+    data-url='{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.products_to_show }}'
   >
     {% if recommendations.performed and recommendations.products_count > 0 %}
-      <h2 class="related-products__heading {{ section.settings.heading_size }}">
+      <h2 class='related-products__heading {{ section.settings.heading_size }}'>
         {{ section.settings.heading }}
       </h2>
       <ul
-        class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
-        role="list"
+        class='grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down'
+        role='list'
       >
         {% for recommendation in recommendations.products %}
-          <li class="grid__item">
+          <li class='grid__item'>
             {% render 'card-product',
               card_product: recommendation,
               media_aspect_ratio: section.settings.image_ratio,
               image_shape: section.settings.image_shape,
               show_secondary_image: section.settings.show_secondary_image,
               show_vendor: section.settings.show_vendor,
-              show_rating: section.settings.show_rating
+              show_rating: section.settings.show_rating,
+              twcss_product_card_container: settings.twcss_product_card_container,
+              twcss_product_card_image: settings.twcss_product_card_image,
+              twcss_product_card_heading: settings.twcss_product_card_heading,
+              twcss_product_card_price: settings.twcss_product_card_price,
+              twcss_product_card_price_sale: settings.twcss_product_card_price_sale,
+              twcss_product_card_caption: settings.twcss_product_card_caption,
+              twcss_product_card_badge: settings.twcss_product_card_badge
             %}
           </li>
         {% endfor %}
