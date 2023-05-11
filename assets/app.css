@@ -12701,6 +12701,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   animation: twcss-bounce 1s infinite !important;
 }
 
+@keyframes twcss-fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.twcss-animate-fadeIn {
+  animation: twcss-fadeIn 2s ease-in forwards !important;
+}
+
 .twcss-cursor-auto {
   cursor: auto !important;
 }
