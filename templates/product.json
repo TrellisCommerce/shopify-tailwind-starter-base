@@ -213,6 +213,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -232,18 +233,48 @@
     "bba395bf-f1a3-4207-898b-18b60b4e8a9e": {
       "type": "video",
       "settings": {
-        "heading": "Video",
+        "heading": "",
         "heading_size": "h1",
         "enable_video_looping": true,
         "video_url": "https:\/\/youtu.be\/jdk_31Z5bzA",
         "cover_image": "shopify:\/\/shop_images\/Screen_Shot_2023-06-06_at_7.21.27_PM.png",
         "description": "",
-        "full_width": false,
+        "full_width": true,
         "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 0,
+        "padding_bottom": 0,
         "twcss_video_button": "",
         "twcss_heading": ""
+      }
+    },
+    "2651d9de-30f5-4585-9b75-419c79bbfc52": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "death-wish",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "twcss_heading": "",
+        "twcss_description": ""
       }
     }
   },
@@ -252,6 +283,7 @@
     "image-with-text",
     "multicolumn",
     "related-products",
-    "bba395bf-f1a3-4207-898b-18b60b4e8a9e"
+    "bba395bf-f1a3-4207-898b-18b60b4e8a9e",
+    "2651d9de-30f5-4585-9b75-419c79bbfc52"
   ]
 }
