@@ -13,8 +13,8 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
+            "text": "Death Wish Coffee delivers a bold, full-bodied yet smooth and flavorful brew that will awaken your taste buds, with an extra kick of caffeine to ignite your attitude. We use the highest quality Fair Trade and organic arabica and robusta beans and roast them to never-bitter perfection.",
+            "text_style": "subtitle"
           }
         },
         "button": {
@@ -22,7 +22,7 @@
           "settings": {
             "button_label_1": "Shop all",
             "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
+            "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -35,12 +35,12 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Screen_Shot_2023-06-06_at_6.17.30_PM.png",
-        "image_overlay_opacity": 40,
+        "image": "shopify:\/\/shop_images\/Screen-Shot-2023-06-06-at-6.17.30-PM.png",
+        "image_overlay_opacity": 0,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "bottom-left",
         "show_text_box": false,
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "color_scheme": "background-1",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
