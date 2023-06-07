@@ -13,12 +13,13 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "Death Wish Coffee delivers a bold, full-bodied yet smooth and flavorful brew that will awaken your taste buds, with an extra kick of caffeine to ignite your attitude. We use the highest quality Fair Trade and organic arabica and robusta beans and roast them to never-bitter perfection.",
+            "text": "Death Wish Coffee delivers a bold, full-bodied yet smooth and flavorful brew that will awaken your taste buds, with an extra kick of caffeine to ignite your attitude.",
             "text_style": "subtitle"
           }
         },
         "button": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_label_1": "Shop all",
             "button_link_1": "shopify:\/\/collections\/all",
@@ -46,7 +47,7 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false,
-        "twcss_heading": "uppercase",
+        "twcss_heading": "uppercase twcss-text-9xl",
         "twcss_body": "",
         "twcss_button": ""
       }

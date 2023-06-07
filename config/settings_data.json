@@ -127,6 +127,7 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "twcss_product_card_container": "",
+    "twcss_product_card_image": "",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
