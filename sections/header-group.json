@@ -50,7 +50,7 @@
         "padding_bottom": 20,
         "twcss_container": "",
         "twcss_text_logo": "",
-        "twcss_toplevel_nav_link": "font-bold",
+        "twcss_toplevel_nav_link": "font-bold twcss-text-gray-100",
         "twcss_megamenu_container": "",
         "twcss_megamenu_childlink": "",
         "twcss_dropdown_container": "",
