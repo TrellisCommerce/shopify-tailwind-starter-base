@@ -42,21 +42,21 @@
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "SHOP",
             "menu": "main-menu"
           }
         },
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
+            "heading": "LEARN",
             "menu": "main-menu"
           }
         },
         "footer-2": {
           "type": "text",
           "settings": {
-            "heading": "Our mission",
+            "heading": "FUELED BY DEATH",
             "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
           }
         },
