@@ -5,24 +5,24 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement-bar-0": {
-          "type": "announcement",
-          "settings": {
-            "text": "DEATH WISH COFFEE CO",
-            "link": ""
-          }
-        },
         "e6f742a2-0574-4349-832b-e8d90d72469d": {
           "type": "announcement",
           "settings": {
             "text": "BURY YOURSELF IN SAVINGS",
             "link": ""
           }
+        },
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "DEATH WISH COFFEE CO",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "announcement-bar-0",
-        "e6f742a2-0574-4349-832b-e8d90d72469d"
+        "e6f742a2-0574-4349-832b-e8d90d72469d",
+        "announcement-bar-0"
       ],
       "settings": {
         "color_scheme": "accent-2",
