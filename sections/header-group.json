@@ -8,20 +8,28 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "DEATH WISH COFFEE CO",
+            "link": ""
+          }
+        },
+        "e6f742a2-0574-4349-832b-e8d90d72469d": {
+          "type": "announcement",
+          "settings": {
+            "text": "BURY YOURSELF IN SAVINGS",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "e6f742a2-0574-4349-832b-e8d90d72469d"
       ],
       "settings": {
         "color_scheme": "accent-1",
-        "show_line_separator": true,
-        "auto_rotate": false,
+        "show_line_separator": false,
+        "auto_rotate": true,
         "change_slides_speed": 5,
-        "twcss_container": "twcss-bg-red-900",
+        "twcss_container": "",
         "twcss_text": ""
       }
     },
