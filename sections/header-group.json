@@ -42,7 +42,7 @@
         "padding_bottom": 20,
         "twcss_container": "twcss-bg-gray-900",
         "twcss_text_logo": "",
-        "twcss_toplevel_nav_link": "twcss-text-gray-100",
+        "twcss_toplevel_nav_link": "twcss-text-gray-100 uppercase",
         "twcss_megamenu_container": "",
         "twcss_megamenu_childlink": "",
         "twcss_dropdown_container": "",
