@@ -5,6 +5,7 @@
       "blocks": {
         "vendor": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "{{ product.vendor }}",
             "text_style": "uppercase"
@@ -129,7 +130,7 @@
         "image-with-text-0": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "REAP WHAT YOU SOW",
             "heading_size": "h1"
           }
         },
@@ -146,13 +147,14 @@
         "image-with-text-1"
       ],
       "settings": {
-        "height": "small",
-        "desktop_image_width": "medium",
+        "image": "shopify:\/\/shop_images\/Screen_Shot_2023-06-06_at_8.33.50_PM.png",
+        "height": "medium",
+        "desktop_image_width": "large",
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
+        "content_layout": "overlap",
+        "color_scheme": "accent-1",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
