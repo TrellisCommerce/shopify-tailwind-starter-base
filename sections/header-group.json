@@ -38,7 +38,7 @@
       "settings": {
         "logo_position": "middle-center",
         "menu": "main-menu",
-        "menu_type_desktop": "dropdown",
+        "menu_type_desktop": "mega",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "color_scheme": "background-2",
@@ -50,7 +50,7 @@
         "padding_bottom": 20,
         "twcss_container": "",
         "twcss_text_logo": "",
-        "twcss_toplevel_nav_link": "font-bold uppercase",
+        "twcss_toplevel_nav_link": "font-bold",
         "twcss_megamenu_container": "",
         "twcss_megamenu_childlink": "",
         "twcss_dropdown_container": "",

@@ -6,7 +6,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "COFFEE THAT SLAPS",
+            "heading": "REBELIOUS BY NATURE",
             "heading_size": "h0"
           }
         },
@@ -79,7 +79,7 @@
         "full_width": true,
         "padding_top": 60,
         "padding_bottom": 0,
-        "twcss_heading": "",
+        "twcss_heading": "twcss-text-red-600",
         "twcss_body": "",
         "twcss_caption": "",
         "twcss_button": ""
