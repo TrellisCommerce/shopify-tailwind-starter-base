@@ -46,9 +46,9 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false,
-        "twcss_heading": "uppercase twcss-text-red-600",
+        "twcss_heading": "uppercase",
         "twcss_body": "",
-        "twcss_button": ""
+        "twcss_button": "twcss-bg-red-600"
       }
     },
     "rich_text": {
