@@ -37,7 +37,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/Screen-Shot-2023-06-06-at-6.17.30-PM.png",
         "image_overlay_opacity": 0,
-        "image_height": "large",
+        "image_height": "medium",
         "desktop_content_position": "bottom-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
@@ -77,8 +77,8 @@
         "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "twcss_heading": "",
         "twcss_body": "",
         "twcss_caption": "",
@@ -99,8 +99,8 @@
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
+        "enable_desktop_slider": true,
+        "color_scheme": "inverse",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -121,7 +121,7 @@
         "collection-0": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "hydrogen"
           }
         },
         "product": {
