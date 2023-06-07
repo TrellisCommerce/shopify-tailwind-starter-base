@@ -312,6 +312,52 @@
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
       }
+    },
+    "0773942e-f19a-4329-a441-7b977444a812": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--19007942951221__0773942e-f19a-4329-a441-7b977444a812-1686105091e3b5aaf2-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Safe and sustainable farming methods",
+            "heading_size": "h1"
+          }
+        },
+        "template--19007942951221__0773942e-f19a-4329-a441-7b977444a812-1686105091e3b5aaf2-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--19007942951221__0773942e-f19a-4329-a441-7b977444a812-1686105091e3b5aaf2-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19007942951221__0773942e-f19a-4329-a441-7b977444a812-1686105091e3b5aaf2-0",
+        "template--19007942951221__0773942e-f19a-4329-a441-7b977444a812-1686105091e3b5aaf2-1",
+        "template--19007942951221__0773942e-f19a-4329-a441-7b977444a812-1686105091e3b5aaf2-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Screen_Shot_2023-06-06_at_8.33.50_PM.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "color_scheme": "accent-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -321,6 +367,7 @@
     "multicolumn",
     "collage",
     "video",
-    "b574d486-e026-4f0a-94a9-bf96ed3a80d0"
+    "b574d486-e026-4f0a-94a9-bf96ed3a80d0",
+    "0773942e-f19a-4329-a441-7b977444a812"
   ]
 }
