@@ -35,7 +35,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Screen-Shot-2023-06-06-at-6.17.30-PM.png",
+        "image": "shopify:\/\/shop_images\/Screen_Shot_2023-06-06_at_6.17.30_PM.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "bottom-left",
@@ -116,48 +116,6 @@
         "twcss_description": ""
       }
     },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "dark-roast-coffee",
-            "second_image": false
-          }
-        },
-        "6eab88e0-2982-4dd6-87e3-cd5f30d8bb06": {
-          "type": "product",
-          "settings": {
-            "product": "medium-roast-coffee",
-            "second_image": false
-          }
-        },
-        "12e8503c-38cc-479f-9360-3c39e82f96bd": {
-          "type": "product",
-          "settings": {
-            "product": "espresso-roast-coffee",
-            "second_image": false
-          }
-        }
-      },
-      "block_order": [
-        "product",
-        "6eab88e0-2982-4dd6-87e3-cd5f30d8bb06",
-        "12e8503c-38cc-479f-9360-3c39e82f96bd"
-      ],
-      "settings": {
-        "heading": "",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "none",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "twcss_heading": ""
-      }
-    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -219,6 +177,48 @@
         "twcss_column_heading": "",
         "twcss_column_description": "",
         "twcss_column_link": ""
+      }
+    },
+    "collage": {
+      "type": "collage",
+      "blocks": {
+        "product": {
+          "type": "product",
+          "settings": {
+            "product": "dark-roast-coffee",
+            "second_image": false
+          }
+        },
+        "6eab88e0-2982-4dd6-87e3-cd5f30d8bb06": {
+          "type": "product",
+          "settings": {
+            "product": "medium-roast-coffee",
+            "second_image": false
+          }
+        },
+        "12e8503c-38cc-479f-9360-3c39e82f96bd": {
+          "type": "product",
+          "settings": {
+            "product": "espresso-roast-coffee",
+            "second_image": false
+          }
+        }
+      },
+      "block_order": [
+        "product",
+        "6eab88e0-2982-4dd6-87e3-cd5f30d8bb06",
+        "12e8503c-38cc-479f-9360-3c39e82f96bd"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "none",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "twcss_heading": ""
       }
     },
     "video": {
@@ -317,8 +317,8 @@
     "image_banner",
     "rich_text",
     "featured_collection",
-    "collage",
     "multicolumn",
+    "collage",
     "video",
     "b574d486-e026-4f0a-94a9-bf96ed3a80d0"
   ]
