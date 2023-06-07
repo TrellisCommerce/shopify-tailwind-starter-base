@@ -232,8 +232,8 @@
         "description": "",
         "full_width": true,
         "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 0,
+        "padding_bottom": 0,
         "twcss_video_button": "",
         "twcss_heading": ""
       }
@@ -245,14 +245,14 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Screen_Shot_2023-06-06_at_6.17.30_PM.png",
-            "heading": "Image slide",
-            "heading_size": "h1",
+            "heading": "Coffee that Slaps",
+            "heading_size": "h0",
             "subheading": "Tell your brand's story through images",
             "button_label": "Button label",
             "link": "",
             "button_style_secondary": true,
             "box_align": "bottom-left",
-            "show_text_box": true,
+            "show_text_box": false,
             "text_alignment": "left",
             "image_overlay_opacity": 0,
             "color_scheme": "accent-1",
@@ -262,7 +262,8 @@
         "template--19007942951221__b574d486-e026-4f0a-94a9-bf96ed3a80d0-1686100960b35fe112-1": {
           "type": "slide",
           "settings": {
-            "heading": "Image slide",
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-06-06_at_6.17.30_PM.png",
+            "heading": "Embody the Brew",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
             "button_label": "Button label",
@@ -284,10 +285,10 @@
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
-        "slider_visual": "counter",
-        "auto_rotate": false,
+        "slider_visual": "dots",
+        "auto_rotate": true,
         "change_slides_speed": 5,
-        "image_behavior": "none",
+        "image_behavior": "ambient",
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
       }
