@@ -118,12 +118,6 @@
     "collage": {
       "type": "collage",
       "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": "death-wish"
-          }
-        },
         "product": {
           "type": "product",
           "settings": {
@@ -131,17 +125,25 @@
             "second_image": false
           }
         },
-        "collection-1": {
-          "type": "collection",
+        "6eab88e0-2982-4dd6-87e3-cd5f30d8bb06": {
+          "type": "product",
           "settings": {
-            "collection": ""
+            "product": "medium-roast-coffee",
+            "second_image": false
+          }
+        },
+        "12e8503c-38cc-479f-9360-3c39e82f96bd": {
+          "type": "product",
+          "settings": {
+            "product": "espresso-roast-coffee",
+            "second_image": false
           }
         }
       },
       "block_order": [
-        "collection-0",
         "product",
-        "collection-1"
+        "6eab88e0-2982-4dd6-87e3-cd5f30d8bb06",
+        "12e8503c-38cc-479f-9360-3c39e82f96bd"
       ],
       "settings": {
         "heading": "Multimedia collage",
