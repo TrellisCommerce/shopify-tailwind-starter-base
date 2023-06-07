@@ -41,14 +41,14 @@
         "desktop_content_position": "bottom-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
-        "color_scheme": "background-1",
-        "image_behavior": "none",
+        "color_scheme": "inverse",
+        "image_behavior": "ambient",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false,
         "twcss_heading": "uppercase",
         "twcss_body": "",
-        "twcss_button": "twcss-bg-red-600"
+        "twcss_button": "twcss-bg-red-600 twcss-border-none"
       }
     },
     "rich_text": {
