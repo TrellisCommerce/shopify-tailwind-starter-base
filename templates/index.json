@@ -276,11 +276,30 @@
             "color_scheme": "background-1",
             "text_alignment_mobile": "center"
           }
+        },
+        "d6d5af43-fb04-4759-8bf9-7cbd69fdff5f": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-06-06_at_6.17.30_PM.png",
+            "heading": "Handle Our Beans",
+            "heading_size": "h0",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": true,
+            "box_align": "top-right",
+            "show_text_box": false,
+            "text_alignment": "right",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
         "template--19007942951221__b574d486-e026-4f0a-94a9-bf96ed3a80d0-1686100960b35fe112-0",
-        "template--19007942951221__b574d486-e026-4f0a-94a9-bf96ed3a80d0-1686100960b35fe112-1"
+        "template--19007942951221__b574d486-e026-4f0a-94a9-bf96ed3a80d0-1686100960b35fe112-1",
+        "d6d5af43-fb04-4759-8bf9-7cbd69fdff5f"
       ],
       "settings": {
         "layout": "full_bleed",
