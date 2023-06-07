@@ -407,6 +407,7 @@
         "template--19007942951221__77073af4-5a81-40fb-acce-0493e9fce2c4-1686152552fe8c02c0-1": {
           "type": "row",
           "settings": {
+            "image": "shopify:\/\/shop_images\/fb.png",
             "caption": "Caption",
             "heading": "Row",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
