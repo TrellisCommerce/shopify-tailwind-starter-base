@@ -78,7 +78,7 @@
         "color_scheme": "background-1",
         "full_width": true,
         "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_bottom": 0,
         "twcss_heading": "",
         "twcss_body": "",
         "twcss_caption": "",
@@ -87,6 +87,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
@@ -146,11 +147,11 @@
         "12e8503c-38cc-479f-9360-3c39e82f96bd"
       ],
       "settings": {
-        "heading": "Multimedia collage",
+        "heading": "",
         "heading_size": "h2",
         "desktop_layout": "left",
         "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
+        "card_styles": "none",
         "color_scheme": "background-1",
         "padding_top": 36,
         "padding_bottom": 36,
@@ -179,6 +180,7 @@
         "column1": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-06-06_at_6.57.23_PM.png",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
@@ -188,6 +190,7 @@
         "column2": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-06-06_at_6.57.32_PM.png",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
@@ -197,6 +200,7 @@
         "column3": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2023-06-06_at_6.57.51_PM.png",
             "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
