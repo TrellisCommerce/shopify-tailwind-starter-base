@@ -6,7 +6,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "COFFEE THAT SLAPS",
             "heading_size": "h0"
           }
         },
@@ -46,7 +46,7 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false,
-        "twcss_heading": "",
+        "twcss_heading": "uppercase",
         "twcss_body": "",
         "twcss_button": ""
       }
