@@ -173,7 +173,7 @@
         "twcss_container": "",
         "twcss_heading": "",
         "twcss_column_container": "twcss-group",
-        "twcss_column_image": "twcss-group-hover:stroke-white",
+        "twcss_column_image": "twcss-group-hover:twcss-animate-spin",
         "twcss_column_heading": "",
         "twcss_column_description": "",
         "twcss_column_link": ""
