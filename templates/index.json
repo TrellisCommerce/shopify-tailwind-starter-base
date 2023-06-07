@@ -47,7 +47,7 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": true,
-        "twcss_heading": "uppercase twcss-text-9xl",
+        "twcss_heading": "uppercase twcss-text-9xl twcss-leading-none",
         "twcss_body": "",
         "twcss_button": ""
       }
