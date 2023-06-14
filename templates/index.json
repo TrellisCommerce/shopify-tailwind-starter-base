@@ -174,7 +174,7 @@
         "twcss_container": "",
         "twcss_heading": "",
         "twcss_column_container": "",
-        "twcss_column_image": "show-on-scroll twcss-animate-pulse",
+        "twcss_column_image": "twcss-animate-pulse",
         "twcss_column_heading": "twcss-text-6xl",
         "twcss_column_description": "",
         "twcss_column_link": ""
