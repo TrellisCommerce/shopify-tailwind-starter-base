@@ -7,7 +7,7 @@ function onIntersection(elements, observer) {
       const elementTarget = element.target;
       elementTarget.classList.add(SCROLL_ANIMATION_ACTIVE_CLASSNAME);
       if (elementTarget.hasAttribute('data-cascade'))
-        elementTarget.setAttribute('style', `--animation-order: ${index};`);
+        elementTarget.style.setProperty('--animation-order', index);
       observer.unobserve(elementTarget);
     }
   });

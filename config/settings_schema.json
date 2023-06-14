@@ -220,6 +220,16 @@
         "id": "animations_reveal_on_scroll",
         "label": "t:settings_schema.animations.settings.animations_reveal_on_scroll.label",
         "default": false
+      },
+      {
+        "type": "text",
+        "id": "animation_duration",
+        "label": "Global Animation Duration (in ms)"
+      },
+      {
+        "type": "text",
+        "id": "animation_easing",
+        "label": "Global Animation Easing (cubic-bezier property)"
       }
     ]
   },
