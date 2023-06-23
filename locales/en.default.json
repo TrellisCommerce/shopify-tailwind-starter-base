@@ -466,6 +466,8 @@
   "recipient": {
     "form": {
       "checkbox": "I want to send this as a gift",
+      "expanded": "Gift card recipient form expanded",
+      "collapsed": "Gift card recipient form collapsed",
       "email_label": "Recipient email",
       "email_label_optional_for_no_js_behavior": "Recipient email (optional)",
       "email": "Email",
@@ -473,7 +475,9 @@
       "name": "Name",
       "message_label": "Message (optional)",
       "message": "Message",
-      "max_characters": "{{ max_chars }} characters max"
+      "max_characters": "{{ max_chars }} characters max",
+      "send_on": "YYYY-MM-DD",
+      "send_on_label": "Send on (optional)"
     }
   }
 }

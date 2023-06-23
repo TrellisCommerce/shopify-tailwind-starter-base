@@ -3,48 +3,27 @@
     "colors": {
       "name": "Colores",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "Etiqueta de botón sólido",
-          "info": "Se utiliza como color de primer plano sobre los colores de acento."
+        "background": {
+          "label": "Fondo"
         },
-        "colors_accent_1": {
-          "label": "Acento 1",
-          "info": "Se utiliza para el fondo de botón sólido"
+        "background_gradient": {
+          "label": "Degradado de fondo",
+          "info": "El degradado de fondo reemplaza el fondo donde es posible."
         },
-        "colors_accent_2": {
-          "label": "Acento 2"
+        "text": {
+          "label": "Texto"
         },
-        "header__1": {
-          "content": "Colores primarios"
+        "button_background": {
+          "label": "Fondo de botón sólido"
         },
-        "header__2": {
-          "content": "Colores secundarios"
+        "button_label": {
+          "label": "Etiqueta de botón sólido"
         },
-        "colors_text": {
-          "label": "Texto",
-          "info": "Se utiliza como color de primer plano sobre los colores de fondo."
+        "secondary_button_label": {
+          "label": "Botón de contorno"
         },
-        "colors_outline_button_labels": {
-          "label": "Botón con contorno",
-          "info": "También se utiliza para enlaces de texto."
-        },
-        "colors_background_1": {
-          "label": "Fondo 1"
-        },
-        "colors_background_2": {
-          "label": "Fondo 2"
-        },
-        "gradient_accent_1": {
-          "label": "Degradado resaltado 1"
-        },
-        "gradient_accent_2": {
-          "label": "Degradado resaltado 2"
-        },
-        "gradient_background_1": {
-          "label": "Degradado de fondo 1"
-        },
-        "gradient_background_2": {
-          "label": "Degradado de fondo 2"
+        "shadow": {
+          "label": "Sombra"
         }
       }
     },
@@ -70,20 +49,6 @@
         },
         "body_scale": {
           "label": "Escala de tamaño de fuente"
-        }
-      }
-    },
-    "styles": {
-      "name": "Íconos",
-      "settings": {
-        "accent_icons": {
-          "options__3": {
-            "label": "Botón con contorno"
-          },
-          "options__4": {
-            "label": "Texto"
-          },
-          "label": "Color"
         }
       }
     },
@@ -388,6 +353,19 @@
       "settings": {
         "animations_reveal_on_scroll": {
           "label": "Revelar secciones al desplazarse"
+        },
+        "animations_hover_elements": {
+          "options__1": {
+            "label": "Ninguna"
+          },
+          "options__2": {
+            "label": "Elevación vertical"
+          },
+          "label": "Efecto hover",
+          "info": "Afecta a tarjetas y botones.",
+          "options__3": {
+            "label": "3D Lift"
+          }
         }
       }
     }
@@ -401,21 +379,6 @@
       },
       "spacing": "Espaciado",
       "colors": {
-        "accent_1": {
-          "label": "Acento 1"
-        },
-        "accent_2": {
-          "label": "Acento 2"
-        },
-        "background_1": {
-          "label": "Fondo 1"
-        },
-        "background_2": {
-          "label": "Fondo 2"
-        },
-        "inverse": {
-          "label": "Invertir"
-        },
         "label": "Esquema de colores",
         "has_cards_info": "Para cambiar el esquema de color de la tarjeta, actualiza la configuración del tema."
       },
@@ -471,7 +434,13 @@
           "options__2": {
             "label": "Movimiento de ambiente"
           },
-          "label": "Comportamiento de la imagen"
+          "label": "Comportamiento de la imagen",
+          "options__3": {
+            "label": "Posición del fondo fija"
+          },
+          "options__4": {
+            "label": "Ampliar al desplazarse"
+          }
         }
       }
     },
@@ -504,11 +473,24 @@
       },
       "settings": {
         "auto_rotate": {
-          "label": "Girar las diapositivas automáticamente"
+          "label": "Rotar anuncios automáticamente"
         },
         "change_slides_speed": {
           "label": "Cambiar de diapositiva cada"
+        },
+        "header__1": {
+          "content": "Íconos de redes sociales",
+          "info": "Para mostrar tus cuentas de redes sociales, vincúlalas en la [configuración del tema](/editor?context=theme&category=social%20media)."
+        },
+        "header__2": {
+          "content": "Anuncios"
+        },
+        "show_social": {
+          "label": "Mostrar íconos en el escritorio"
         }
+      },
+      "presets": {
+        "name": "Barra de anuncios"
       }
     },
     "collage": {
@@ -998,6 +980,12 @@
         },
         "enable_language_selector": {
           "label": "Activar selector de idioma"
+        },
+        "header__1": {
+          "content": "Color"
+        },
+        "menu_color_scheme": {
+          "label": "Esquema de colores del menú"
         }
       }
     },
@@ -1015,10 +1003,6 @@
         },
         "stack_images_on_mobile": {
           "label": "Apilar imágenes en móviles"
-        },
-        "adapt_height_first_image": {
-          "label": "Adaptar altura de sección a tamaño de primera imagen",
-          "info": "Sobrescribe la configuración de altura del banner de imagen cuando está seleccionada."
         },
         "show_text_box": {
           "label": "Mostrar contenedor en la computadora"
@@ -1661,7 +1645,7 @@
             },
             "show_gift_card_recipient": {
               "label": "Mostrar el formulario de información de la persona destinataria para las tarjetas de regalo",
-              "info": "Opcionalmente, las tarjetas de regalo se pueden enviar directamente a una persona destinataria junto con un mensaje personal. [Más información](https://help.shopify.com/manual/online-store/themes/customizing-themes/add-gift-card-recipient-fields)"
+              "info": "Permite que los compradores envíen tarjetas de regalo en una fecha programada junto con un mensaje personal. [Más información](https://help.shopify.com/manual/online-store/themes/customizing-themes/add-gift-card-recipient-fields)"
             }
           }
         },
@@ -2613,9 +2597,6 @@
         "image_overlay_opacity": {
           "label": "Opacidad de la sobreposición de imagen"
         },
-        "color_scheme": {
-          "info": "Visible cuando se muestre el contenedor."
-        },
         "show_text_below": {
           "label": "Mostrar el contenido debajo de la imagen en el móvil",
           "info": "Para mejores resultados, utiliza una imagen con una relación de aspecto 16:9. [Más información](https://help.shopify.com/manual/shopify-admin/productivity-tools/image-editor#understanding-image-aspect-ratio)"
@@ -2856,9 +2837,6 @@
             },
             "image_overlay_opacity": {
               "label": "Opacidad de la sobreposición de imagen"
-            },
-            "color_scheme": {
-              "info": "Visible cuando se muestre el contenedor."
             },
             "text_alignment_mobile": {
               "label": "Alineación del contenido en dispositivos móviles",

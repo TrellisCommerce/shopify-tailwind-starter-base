@@ -3,48 +3,27 @@
     "colors": {
       "name": "Renkler",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "Sabit düğme etiketi",
-          "info": "Vurgu renklerinde ön plan rengi olarak kullanılır."
+        "background": {
+          "label": "Arka plan"
         },
-        "colors_accent_1": {
-          "label": "1. Vurgu",
-          "info": "Sabit düğme arka planı için kullanılır."
+        "background_gradient": {
+          "label": "Arka plan gradyanı",
+          "info": "Arka plan gradyanı, mümkün olduğunda arka planın yerine geçer."
         },
-        "colors_accent_2": {
-          "label": "2. Vurgu"
+        "text": {
+          "label": "Metin"
         },
-        "header__1": {
-          "content": "Birincil renkler"
+        "button_background": {
+          "label": "Sabit düğme arka planı"
         },
-        "header__2": {
-          "content": "İkincil renkler"
+        "button_label": {
+          "label": "Sabit düğme etiketi"
         },
-        "colors_text": {
-          "label": "Metin",
-          "info": "Arka plan renklerinde ön plan rengi olarak kullanılır."
+        "secondary_button_label": {
+          "label": "Dış çizgi düğmesi"
         },
-        "colors_outline_button_labels": {
-          "label": "Dış çizgi düğmesi",
-          "info": "Metin bağlantıları için de kullanılır."
-        },
-        "colors_background_1": {
-          "label": "1. Arka plan"
-        },
-        "colors_background_2": {
-          "label": "2. Arka plan"
-        },
-        "gradient_accent_1": {
-          "label": "1. Vurgu gradyanı"
-        },
-        "gradient_accent_2": {
-          "label": "2. Vurgu gradyanı"
-        },
-        "gradient_background_1": {
-          "label": "1. Arka plan gradyanı"
-        },
-        "gradient_background_2": {
-          "label": "2. Arka plan gradyanı"
+        "shadow": {
+          "label": "Gölge"
         }
       }
     },
@@ -70,20 +49,6 @@
         },
         "body_scale": {
           "label": "Yazı boyutu ölçeği"
-        }
-      }
-    },
-    "styles": {
-      "name": "Simgeler",
-      "settings": {
-        "accent_icons": {
-          "options__3": {
-            "label": "Dış çizgi düğmesi"
-          },
-          "options__4": {
-            "label": "Metin rengi"
-          },
-          "label": "Renk"
         }
       }
     },
@@ -388,6 +353,19 @@
       "settings": {
         "animations_reveal_on_scroll": {
           "label": "Kaydırırken bölümleri göster"
+        },
+        "animations_hover_elements": {
+          "options__1": {
+            "label": "Yok"
+          },
+          "options__2": {
+            "label": "Dikey lift"
+          },
+          "label": "Üzerine gelme efekti",
+          "info": "Kartları ve düğmeleri etkiler.",
+          "options__3": {
+            "label": "3D lift"
+          }
         }
       }
     }
@@ -401,21 +379,6 @@
       },
       "spacing": "Boşluk",
       "colors": {
-        "accent_1": {
-          "label": "1. Vurgu"
-        },
-        "accent_2": {
-          "label": "2. Vurgu"
-        },
-        "background_1": {
-          "label": "1. Arka plan"
-        },
-        "background_2": {
-          "label": "2. Arka plan"
-        },
-        "inverse": {
-          "label": "Ters"
-        },
         "label": "Renk şeması",
         "has_cards_info": "Kart renk şemasını değiştirmek için tema ayarlarınızı güncelleyin."
       },
@@ -471,7 +434,13 @@
           "options__2": {
             "label": "Ortam içinde hareket"
           },
-          "label": "Görsel davranışı"
+          "label": "Görsel davranışı",
+          "options__3": {
+            "label": "Sabit arka plan konumu"
+          },
+          "options__4": {
+            "label": "Kaydırarak yakınlaştır"
+          }
         }
       }
     },
@@ -504,11 +473,24 @@
       },
       "settings": {
         "auto_rotate": {
-          "label": "Slaytları otomatik olarak döndür"
+          "label": "Duyuruları otomatik olarak döndür"
         },
         "change_slides_speed": {
           "label": "Slaytları şu zaman aralığında değiştir:"
+        },
+        "header__1": {
+          "content": "Sosyal medya simgeleri",
+          "info": "Sosyal medya hesaplarınızın görüntülenmesi için bu hesapları [tema ayarlarınızda](/editor?context=theme&category=social%20media) bağlayın."
+        },
+        "header__2": {
+          "content": "Duyurular"
+        },
+        "show_social": {
+          "label": "Simgeleri masaüstünde göster"
         }
+      },
+      "presets": {
+        "name": "Duyuru çubuğu"
       }
     },
     "collage": {
@@ -998,6 +980,12 @@
         },
         "enable_language_selector": {
           "label": "Dil seçiciyi etkinleştir"
+        },
+        "header__1": {
+          "content": "Renk"
+        },
+        "menu_color_scheme": {
+          "label": "Menü renk şeması"
         }
       }
     },
@@ -1015,10 +1003,6 @@
         },
         "stack_images_on_mobile": {
           "label": "Mobilde görselleri üst üste ekle"
-        },
-        "adapt_height_first_image": {
-          "label": "Bölüm yüksekliğini ilk görselin boyutuna uyarla",
-          "info": "İşaretlendiğinde görüntü banner'ı yükseklik ayarının üzerine yazar."
         },
         "show_text_box": {
           "label": "Masaüstünde kapsayıcıyı göster"
@@ -1659,8 +1643,8 @@
               "info": "Müşteriler, mağazanızda bulunan ödeme yöntemlerini kullanarak PayPal veya Apple Pay gibi tercih ettikleri seçeneği görür. [Daha fazla bilgi edinin](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
             },
             "show_gift_card_recipient": {
-              "label": "Hediye kartı ürünleri için alıcı bilgi formunu göster",
-              "info": "Hediye kartı ürünleri, isteğe bağlı olarak kişisel bir mesajla birlikte doğrudan bir alıcıya gönderilebilir. [Daha fazla bilgi edinin](https://help.shopify.com/manual/online-store/themes/customizing-themes/add-gift-card-recipient-fields)"
+              "label": "Hediye kartları için alıcı bilgi formunu göster",
+              "info": "Alıcıların, planlanmış bir tarihte kişisel bir mesajla birlikte hediye kartları göndermesine olanak sağlar. [Daha fazla bilgi edinin](https://help.shopify.com/manual/online-store/themes/customizing-themes/add-gift-card-recipient-fields)"
             }
           }
         },
@@ -2613,9 +2597,6 @@
         "image_overlay_opacity": {
           "label": "Görsel yer paylaşımı opaklığı"
         },
-        "color_scheme": {
-          "info": "Kapsayıcı gösterildiğinde görünür."
-        },
         "show_text_below": {
           "label": "Mobil cihaz üzerinde görselin altındaki içeriği göster",
           "info": "En iyi sonuçlar için 16:9 en-boy oranına sahip bir görsel kullanın. [Daha fazla bilgi edinin](https://help.shopify.com/manual/shopify-admin/productivity-tools/image-editor#understanding-image-aspect-ratio)"
@@ -2856,9 +2837,6 @@
             },
             "image_overlay_opacity": {
               "label": "Görsel yer paylaşımı opaklığı"
-            },
-            "color_scheme": {
-              "info": "Kapsayıcı gösterildiğinde görünür."
             },
             "text_alignment_mobile": {
               "label": "Mobil içerik hizalaması",

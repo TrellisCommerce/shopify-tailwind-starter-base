@@ -34,7 +34,10 @@ if (!customElements.get('localization-form')) {
       onContainerKeyUp(event) {
         if (event.code.toUpperCase() !== 'ESCAPE') return;
 
+        if (this.elements.button.getAttribute('aria-expanded') == 'false')
+          return;
         this.hidePanel();
+        event.stopPropagation();
         this.elements.button.focus();
       }
 

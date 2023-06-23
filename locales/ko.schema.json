@@ -3,48 +3,27 @@
     "colors": {
       "name": "색상",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "단색 버튼 레이블",
-          "info": "강조 색상의 전경색으로 사용됩니다."
+        "background": {
+          "label": "배경"
         },
-        "colors_accent_1": {
-          "label": "강조 1",
-          "info": "단색 버튼의 배경에 사용됩니다."
+        "background_gradient": {
+          "label": "배경 그라데이션",
+          "info": "가능한 경우 배경이 배경 그라데이션으로 대체됩니다."
         },
-        "colors_accent_2": {
-          "label": "강조 2"
+        "text": {
+          "label": "텍스트"
         },
-        "header__1": {
-          "content": "기본 색상"
+        "button_background": {
+          "label": "단색 버튼 배경"
         },
-        "header__2": {
-          "content": "보조 색상"
+        "button_label": {
+          "label": "단색 버튼 레이블"
         },
-        "colors_text": {
-          "label": "텍스트",
-          "info": "배경색 위에 전경색으로 사용됩니다."
+        "secondary_button_label": {
+          "label": "윤곽선 버튼"
         },
-        "colors_outline_button_labels": {
-          "label": "윤곽 버튼",
-          "info": "또한 텍스트 링크에도 사용됩니다."
-        },
-        "colors_background_1": {
-          "label": "배경 1"
-        },
-        "colors_background_2": {
-          "label": "배경 2"
-        },
-        "gradient_accent_1": {
-          "label": "강조 1 그라데이션"
-        },
-        "gradient_accent_2": {
-          "label": "강조 2 그라데이션"
-        },
-        "gradient_background_1": {
-          "label": "배경 1 그라데이션"
-        },
-        "gradient_background_2": {
-          "label": "배경 2 그라데이션"
+        "shadow": {
+          "label": "그림자"
         }
       }
     },
@@ -70,20 +49,6 @@
         },
         "body_scale": {
           "label": "글꼴 크기 배율"
-        }
-      }
-    },
-    "styles": {
-      "name": "아이콘",
-      "settings": {
-        "accent_icons": {
-          "options__3": {
-            "label": "윤곽 버튼"
-          },
-          "options__4": {
-            "label": "텍스트"
-          },
-          "label": "색상"
         }
       }
     },
@@ -388,6 +353,19 @@
       "settings": {
         "animations_reveal_on_scroll": {
           "label": "스크롤 시 섹션 표시"
+        },
+        "animations_hover_elements": {
+          "options__1": {
+            "label": "없음"
+          },
+          "options__2": {
+            "label": "수직 리프트"
+          },
+          "label": "호버 효과",
+          "info": "카드 및 버튼에 영향을 미칩니다.",
+          "options__3": {
+            "label": "3D 리프트"
+          }
         }
       }
     }
@@ -401,21 +379,6 @@
       },
       "spacing": "간격",
       "colors": {
-        "accent_1": {
-          "label": "강조 1"
-        },
-        "accent_2": {
-          "label": "강조 2"
-        },
-        "background_1": {
-          "label": "배경 1"
-        },
-        "background_2": {
-          "label": "배경 2"
-        },
-        "inverse": {
-          "label": "서로 바꾸기"
-        },
         "label": "색상 배합",
         "has_cards_info": "카드 색상 배합을 변경하려면 테마 설정을 업데이트하십시오."
       },
@@ -471,7 +434,13 @@
           "options__2": {
             "label": "잔잔한 움직임"
           },
-          "label": "이미지 동작"
+          "label": "이미지 동작",
+          "options__3": {
+            "label": "고정 배경 위치"
+          },
+          "options__4": {
+            "label": "스크롤 시 확대"
+          }
         }
       }
     },
@@ -504,11 +473,24 @@
       },
       "settings": {
         "auto_rotate": {
-          "label": "슬라이드 자동 회전"
+          "label": "공지 사항 자동 회전"
         },
         "change_slides_speed": {
           "label": "슬라이드 변경 간격"
+        },
+        "header__1": {
+          "content": "소셜 미디어 아이콘",
+          "info": "소셜 미디어 계정을 표시하려면 [테마 설정](/editor?context=theme&category=social%20media)에서 계정을 연결하십시오."
+        },
+        "header__2": {
+          "content": "공지 사항"
+        },
+        "show_social": {
+          "label": "데스크톱에서 아이콘 표시"
         }
+      },
+      "presets": {
+        "name": "공지 표시줄"
       }
     },
     "collage": {
@@ -998,6 +980,12 @@
         },
         "enable_language_selector": {
           "label": "언어 선택기 사용"
+        },
+        "header__1": {
+          "content": "색상"
+        },
+        "menu_color_scheme": {
+          "label": "메뉴 색상 구성표"
         }
       }
     },
@@ -1015,10 +1003,6 @@
         },
         "stack_images_on_mobile": {
           "label": "모바일 스택 이미지"
-        },
-        "adapt_height_first_image": {
-          "label": "첫 번째 이미지에 섹션 높이 맞추기",
-          "info": "확인란을 선택하면 이미지 배너 높이 설정을 덮어씁니다."
         },
         "show_text_box": {
           "label": "데스크톱에 컨테이너 표시"
@@ -1650,8 +1634,8 @@
               "info": "스토어에서 사용 가능한 결제 방법을 사용하면 고객이 PayPal 또는 ApplePay처럼 원하는 옵션을 볼 수 있습니다. [자세히 알아보기](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
             },
             "show_gift_card_recipient": {
-              "label": "기프트 카드 제품의 수취인 정보 양식 표시",
-              "info": "기프트 카드 제품을 개인 메시지와 함께 선택적으로 수신자에게 직접 전송할 수 있습니다. [자세히 알아보기](https://help.shopify.com/manual/online-store/themes/customizing-themes/add-gift-card-recipient-fields)"
+              "label": "기프트 카드의 수취인 정보 양식 표시",
+              "info": "구매자가 개인 메시지와 함께 예약된 날짜에 기프트 카드를 보낼 수 있도록 허용합니다. [자세히 알아보기](https://help.shopify.com/manual/online-store/themes/customizing-themes/add-gift-card-recipient-fields)"
             }
           },
           "name": "구매 버튼"
@@ -2613,9 +2597,6 @@
         "image_overlay_opacity": {
           "label": "이미지 오버레이 투명도"
         },
-        "color_scheme": {
-          "info": "컨테이너가 표시될 때 볼 수 있습니다."
-        },
         "show_text_below": {
           "label": "모바일에서 이미지 아래에 콘텐츠 표시",
           "info": "최고의 결과를 얻으려면 이미지의 가로 세로 비율을 16:9로 사용하십시오. [자세히 알아보기](https://help.shopify.com/manual/shopify-admin/productivity-tools/image-editor#understanding-image-aspect-ratio)"
@@ -2856,9 +2837,6 @@
             },
             "image_overlay_opacity": {
               "label": "이미지 오버레이 투명도"
-            },
-            "color_scheme": {
-              "info": "컨테이너가 표시될 때 볼 수 있습니다."
             },
             "text_alignment_mobile": {
               "label": "모바일 콘텐츠 정렬",
