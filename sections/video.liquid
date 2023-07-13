@@ -89,7 +89,7 @@
     </noscript>
     <deferred-media
       class='video-section__media deferred-media no-js-hidden gradient global-media-settings{% if section.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}'
-      data-media-id='{{ video_id }}'
+      data-media-id='{{ video_id }}' {% if section.settings.enable_video_autoplay %}data-autoplay="true"{% endif %}
       {% if poster != null %}
         style='--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;'
       {% endif %}
@@ -114,16 +114,24 @@
         </span>
       </button>
       <template>
+        {% comment %}
+          If autoplay is set in the section, I turn off autoplay in the player so that the video only plays when it appears in the viewport.
+        {% endcomment %}
         {%- if section.settings.video == null and section.settings.video_url != null -%}
           {%- liquid
             assign loop = ''
             if section.settings.enable_video_looping
               assign loop = '&loop=1&playlist=' | append: video_id
             endif
+            if section.settings.enable_video_autoplay
+              assign autoplay = '&autoplay=0&mute=1'
+            else
+              assign autoplay = '&autoplay=1&mute=0'
+            endif
           -%}
           {%- if section.settings.video_url.type == 'youtube' -%}
             <iframe
-              src='https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=1{{ loop }}'
+              src='https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1{{ loop }}{{ autoplay }}'
               class='js-youtube'
               allow='autoplay; encrypted-media'
               allowfullscreen
@@ -131,7 +139,7 @@
             ></iframe>
           {%- else -%}
             <iframe
-              src='https://player.vimeo.com/video/{{ video_id }}?autoplay=1{{ loop }}'
+              src='https://player.vimeo.com/video/{{ video_id }}?controls=1{{ loop }}{{ autoplay }}'
               class='js-vimeo'
               allow='autoplay; encrypted-media'
               allowfullscreen
@@ -139,20 +147,32 @@
             ></iframe>
           {%- endif -%}
         {%- else -%}
+          {% liquid
+            assign videoAutoplay = true
+            assign videoMute = false
+            if section.settings.enable_video_autoplay
+              assign videoAutoplay = false
+              assign videoMute = true
+            endif
+          %}
           {{
             section.settings.video
             | video_tag:
               image_size: '1100x',
-              autoplay: true,
+              autoplay: videoAutoplay,
               loop: section.settings.enable_video_looping,
               controls: true,
-              muted: false
+              muted: videoMute
           }}
         {%- endif -%}
       </template>
     </deferred-media>
   </div>
 </div>
+
+<script>
+
+</script>
 
 {% schema %}
 {
@@ -193,6 +213,13 @@
       "type": "checkbox",
       "id": "enable_video_looping",
       "label": "t:sections.video.settings.enable_video_looping.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_video_autoplay",
+      "label": "Enable Autoplay",
+      "info": "The video will autoplay in the background (only when it is visible on the viewport and muted)",
       "default": false
     },
     {
