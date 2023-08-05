@@ -491,8 +491,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0.25rem;
 }
 
+.\!xblock {
+  display: block !important;
+}
+
 .xflex {
   display: flex;
+}
+
+.\!xflex {
+  display: flex !important;
 }
 
 .xhidden {
@@ -507,6 +515,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100%;
 }
 
+.xh-6 {
+  height: 1.5rem;
+}
+
 .xw-32 {
   width: 8rem;
 }
@@ -519,12 +531,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 5rem;
 }
 
-.xmax-w-md {
-  max-width: 28rem;
-}
-
-.xmax-w-lg {
-  max-width: 32rem;
+.xw-6 {
+  width: 1.5rem;
 }
 
 .xmax-w-2xl {
@@ -543,12 +551,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
+.xjustify-center {
+  justify-content: center;
+}
+
 .xgap-4 {
   gap: 1rem;
 }
 
 .xrounded-lg {
   border-radius: 0.5rem;
+}
+
+.xrounded-full {
+  border-radius: 9999px;
 }
 
 .xrounded-l {
@@ -565,6 +581,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 1px;
 }
 
+.xborder-2 {
+  border-width: 2px;
+}
+
+.xborder-t {
+  border-top-width: 1px;
+}
+
+.xborder-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
 .xbg-transparent {
   background-color: transparent;
 }
@@ -574,8 +603,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
+.xbg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .xp-4 {
   padding: 1rem;
+}
+
+.xp-1 {
+  padding: 0.25rem;
 }
 
 .xtext-center {
@@ -673,6 +711,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.plan-selector-btn .select-indicator {
+  display: none !important;
+}
+
+.plan-selector-btn.active .select-indicator {
+  display: block !important;
 }
 
 .hover\:xbg-gray-400:hover {

@@ -13,3 +13,11 @@
 .ur-button {
   @apply xmt-8 xmr-4 xborder-gray-900 xborder xrounded-full hover:xbg-gray-900 xtext-gray-900  hover:xtext-white xpx-8 xpy-4 xtransition-all xfont-bold xtext-2xl;
 }
+
+.plan-selector-btn .select-indicator {
+  display: none !important;
+}
+
+.plan-selector-btn.active .select-indicator {
+  display: block !important;
+}

@@ -1,6 +1,24 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Select all buttons
   var optionButtons = document.getElementsByClassName('option-btn');
+  var planButtons = document.getElementsByClassName('plan-selector-btn');
+
+  var currentPlan = 689522049319;
+
+  for (var i = 0; i < planButtons.length; i++) {
+    planButtons[i].addEventListener('click', function (event) {
+      console.log('PLAn Clicked');
+      currentPlan = this.getAttribute('data-plan');
+      console.log(currentPlan);
+      // Remove 'active' class from all buttons
+      for (var j = 0; j < planButtons.length; j++) {
+        planButtons[j].classList.remove('active');
+      }
+
+      // Add 'active' class to clicked button
+      this.classList.add('active');
+    });
+  }
 
   for (var i = 0; i < optionButtons.length; i++) {
     optionButtons[i].addEventListener('click', function (event) {
@@ -60,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
         itemsToAdd.push({
           id: variantId,
           quantity: quantity,
-          selling_plan: 689522049319, // add the selected selling plan ID to the AJAX request data
+          selling_plan: currentPlan, // add the selected selling plan ID to the AJAX request data
         });
       }
 
