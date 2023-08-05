@@ -475,40 +475,227 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia: ;
 }
 
-.twcss-container {
+.xrelative {
+  position: relative;
+}
+
+.xm-auto {
+  margin: auto;
+}
+
+.xmt-8 {
+  margin-top: 2rem;
+}
+
+.xmt-1 {
+  margin-top: 0.25rem;
+}
+
+.xflex {
+  display: flex;
+}
+
+.xhidden {
+  display: none;
+}
+
+.xh-10 {
+  height: 2.5rem;
+}
+
+.xh-full {
+  height: 100%;
+}
+
+.xw-32 {
+  width: 8rem;
+}
+
+.xw-full {
   width: 100%;
 }
 
-@media (min-width: 320px) {
-  .twcss-container {
-    max-width: 320px;
-  }
+.xw-20 {
+  width: 5rem;
 }
 
-@media (min-width: 750px) {
-  .twcss-container {
-    max-width: 750px;
-  }
+.xmax-w-md {
+  max-width: 28rem;
 }
 
-@media (min-width: 990px) {
-  .twcss-container {
-    max-width: 990px;
-  }
+.xmax-w-lg {
+  max-width: 32rem;
 }
 
-@media (min-width: 1440px) {
-  .twcss-container {
-    max-width: 1440px;
-  }
+.xmax-w-2xl {
+  max-width: 42rem;
 }
 
-@media (min-width: 1920px) {
-  .twcss-container {
-    max-width: 1920px;
-  }
+.xcursor-pointer {
+  cursor: pointer;
 }
 
-.twcss-block {
-  display: block;
+.xflex-row {
+  flex-direction: row;
+}
+
+.xitems-center {
+  align-items: center;
+}
+
+.xgap-4 {
+  gap: 1rem;
+}
+
+.xrounded-lg {
+  border-radius: 0.5rem;
+}
+
+.xrounded-l {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.xrounded-r {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.xborder {
+  border-width: 1px;
+}
+
+.xbg-transparent {
+  background-color: transparent;
+}
+
+.xbg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.xp-4 {
+  padding: 1rem;
+}
+
+.xtext-center {
+  text-align: center;
+}
+
+.xtext-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.xfont-bold {
+  font-weight: 700;
+}
+
+.xfont-thin {
+  font-weight: 100;
+}
+
+.xfont-semibold {
+  font-weight: 600;
+}
+
+.xtext-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+.xtext-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.xoutline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.option-btn {
+  margin-top: 2rem;
+  margin-right: 1rem;
+  border-radius: 9999px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(17 24 39 / var(--tw-border-opacity));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.option-btn:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.option-btn.active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.ur-button {
+  margin-top: 2rem;
+  margin-right: 1rem;
+  border-radius: 9999px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(17 24 39 / var(--tw-border-opacity));
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.ur-button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:xbg-gray-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+
+.hover\:xtext-gray-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.hover\:xtext-black:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.focus\:xtext-black:focus {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.focus\:xoutline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }

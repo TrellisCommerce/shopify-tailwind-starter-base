@@ -1,0 +1,159 @@
+<script src='{{ 'build-a-box.js' | asset_url }}' defer></script>
+<div class='page-width page-width-desktop scroll-trigger animate--slide-in xmt-8'>
+  <form id='add-box-to-cart-form' class=' xmax-w-2xl'>
+    {% assign collection = collections[section.settings.collection] %}
+    <script>
+      window.ur_subscription_variants = [];
+    </script>
+
+    <style>
+      .custom-number-input input[type='number']::-webkit-inner-spin-button,
+      .custom-number-input input[type='number']::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      .custom-number-input input:focus {
+        outline: none !important;
+      }
+
+      .custom-number-input button:focus {
+        outline: none !important;
+      }
+    </style>
+
+    <div class='variant-selector'>
+      <button type='button' class='option-btn' data-option='400g'>400g</button>
+      <button type='button' class='option-btn active' data-option='800g'>800g</button>
+    </div>
+
+    {% for product in collection.products %}
+      <div class='product-item xmt-8 xp-4  xborder xrounded-lg '>
+        {% for variant in product.variants %}
+          {% assign custom_classes = '' %}
+          {% if variant.option1 == '400g' %}
+            {% assign custom_classes = custom_classes | append: 'xhidden ' %}
+          {% endif %}
+
+          <div
+            class='variant ur-variant {{ custom_classes }} xflex xgap-4 xitems-center'
+            data-option='{{ variant.option1 }}'
+          >
+            <div class='variant-img'>
+              {% if variant.image != null %}
+                <img
+                  style='max-height: 120px;'
+                  height='100'
+                  width='auto'
+                  loading='lazy'
+                  src='{{ variant.image.src | img_url: 'medium' }}'
+                  alt='{{ variant.image.alt | escape }}'
+                >
+              {% else %}
+                <img
+                  style='max-height: 120px;'
+                  height='100'
+                  width='auto'
+                  loading='lazy'
+                  src='{{ product.featured_image | img_url: 'medium' }}'
+                  alt='{{ product.title | escape }}'
+                >
+              {% endif %}
+            </div>
+            <div class='variant-info'>
+              <h2 class=' xfont-bold'>{{ product.title }}</h2>
+              <span>{{ variant.title }}</span>
+              <br>
+              <span>
+                {{ variant.price | money }}
+              </span>
+
+              <input type='hidden' class='variant-id' value='{{ variant.id }}'>
+
+              <div class='custom-number-input xh-10 xw-32'>
+                <div class='xflex xflex-row xh-10 xw-full xrounded-lg xrelative xbg-transparent xmt-1'>
+                  <button
+                    type='button'
+                    data-action='decrement'
+                    class=' xbg-gray-300 xtext-gray-600 hover:xtext-gray-700 hover:xbg-gray-400 xh-full xw-20 xrounded-l xcursor-pointer xoutline-none'
+                  >
+                    <span class='xm-auto xtext-2xl xfont-thin'>−</span>
+                  </button>
+                  <input
+                    id='quantity_{{ variant.id }}'
+                    type='number'
+                    class='variant-quantity xoutline-none focus:xoutline-none xtext-center xw-full xbg-gray-300 xfont-semibold xtext-md hover:xtext-black focus:xtext-black  md:xtext-basecursor-default xflex xitems-center xtext-gray-700  xoutline-none'
+                    name='custom-input-number'
+                    value='0'
+                  >
+                  <button
+                    type='button'
+                    data-action='increment'
+                    class='xbg-gray-300 xtext-gray-600 hover:xtext-gray-700 hover:xbg-gray-400 xh-full xw-20 xrounded-r xcursor-pointer'
+                  >
+                    <span class='xm-auto xtext-2xl xfont-thin'>+</span>
+                  </button>
+                </div>
+              </div>
+
+              <script>
+                window.ur_subscription_variants['{{ variant.id }}'] = {{ variant | json }};
+              </script>
+              {% if variant.selling_plan_allocations.size > 0 %}
+                {% for allocation in variant.selling_plan_allocations %}
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+
+    <button type='submit' id='add-box-to-cart' class='ur-button'>Add All to Cart</button>
+  </form>
+
+  <script>
+    function decrement(e) {
+      const btn = e.target.parentNode.parentElement.querySelector('button[data-action="decrement"]');
+      const target = btn.nextElementSibling;
+      let value = Number(target.value);
+      value--;
+      target.value = value;
+    }
+
+    function increment(e) {
+      const btn = e.target.parentNode.parentElement.querySelector('button[data-action="decrement"]');
+      const target = btn.nextElementSibling;
+      let value = Number(target.value);
+      value++;
+      target.value = value;
+    }
+
+    const decrementButtons = document.querySelectorAll(`button[data-action="decrement"]`);
+
+    const incrementButtons = document.querySelectorAll(`button[data-action="increment"]`);
+
+    decrementButtons.forEach((btn) => {
+      btn.addEventListener('click', decrement);
+    });
+
+    incrementButtons.forEach((btn) => {
+      btn.addEventListener('click', increment);
+    });
+  </script>
+</div>
+
+{% schema %}
+{
+  "name": "Uncle Rustys Build a Box",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }
+  ]
+}
+{% endschema %}
