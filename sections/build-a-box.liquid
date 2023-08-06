@@ -6,22 +6,6 @@
       window.ur_subscription_variants = [];
     </script>
 
-    <style>
-      .custom-number-input input[type='number']::-webkit-inner-spin-button,
-      .custom-number-input input[type='number']::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-      }
-
-      .custom-number-input input:focus {
-        outline: none !important;
-      }
-
-      .custom-number-input button:focus {
-        outline: none !important;
-      }
-    </style>
-
     <div class='variant-selector'>
       <button type='button' class='option-btn' data-option='400g'>400g</button>
       <button type='button' class='option-btn active' data-option='800g'>800g</button>
@@ -126,39 +110,11 @@
         <span> Monthly </span>
       </div>
     </div>
-
-    <button type='submit' id='add-box-to-cart' class='ur-button'>Add All to Cart</button>
+    <div class='ur-form-footer xflex xgap-4 xitems-center xjustify-between'>
+      <div class='price-display xtext-4xl xfont-black '><span class='price-total'>0,00</span><span>€</span></div>
+      <button type='submit' id='add-box-to-cart' class='ur-button'>Add All to Cart</button>
+    </div>
   </form>
-
-  <script>
-    function decrement(e) {
-      const btn = e.target.parentNode.parentElement.querySelector('button[data-action="decrement"]');
-      const target = btn.nextElementSibling;
-      let value = Number(target.value);
-      value--;
-      target.value = value;
-    }
-
-    function increment(e) {
-      const btn = e.target.parentNode.parentElement.querySelector('button[data-action="decrement"]');
-      const target = btn.nextElementSibling;
-      let value = Number(target.value);
-      value++;
-      target.value = value;
-    }
-
-    const decrementButtons = document.querySelectorAll(`button[data-action="decrement"]`);
-
-    const incrementButtons = document.querySelectorAll(`button[data-action="increment"]`);
-
-    decrementButtons.forEach((btn) => {
-      btn.addEventListener('click', decrement);
-    });
-
-    incrementButtons.forEach((btn) => {
-      btn.addEventListener('click', increment);
-    });
-  </script>
 </div>
 
 {% schema %}

@@ -21,3 +21,17 @@
 .plan-selector-btn.active .select-indicator {
   display: block !important;
 }
+
+.custom-number-input input[type='number']::-webkit-inner-spin-button,
+.custom-number-input input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.custom-number-input input:focus {
+  outline: none !important;
+}
+
+.custom-number-input button:focus {
+  outline: none !important;
+}

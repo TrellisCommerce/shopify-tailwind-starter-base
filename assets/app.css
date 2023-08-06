@@ -491,10 +491,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0.25rem;
 }
 
-.\!xblock {
-  display: block !important;
-}
-
 .xflex {
   display: flex;
 }
@@ -553,6 +549,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xjustify-center {
   justify-content: center;
+}
+
+.xjustify-between {
+  justify-content: space-between;
 }
 
 .xgap-4 {
@@ -625,6 +625,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2rem;
 }
 
+.xtext-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .xfont-bold {
   font-weight: 700;
 }
@@ -635,6 +640,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xfont-semibold {
   font-weight: 600;
+}
+
+.xfont-black {
+  font-weight: 900;
 }
 
 .xtext-gray-600 {
@@ -719,6 +728,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .plan-selector-btn.active .select-indicator {
   display: block !important;
+}
+
+.custom-number-input input[type='number']::-webkit-inner-spin-button,
+.custom-number-input input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.custom-number-input input:focus {
+  outline: none !important;
+}
+
+.custom-number-input button:focus {
+  outline: none !important;
 }
 
 .hover\:xbg-gray-400:hover {
