@@ -1,0 +1,94 @@
+<section
+  class='tw-p tw-m-auto tw-max-w-[1920px] tw-bg-cover tw-py-[60px] lg:tw-py-[90px]'
+  style='background-image: url({{ section.settings.background | image_url }}); margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;'
+>
+  <div class='tw-grid-system'>
+    <div class='tw-hidden md:tw-col-span-1 md:tw-col-start-2 md:tw-block lg:tw-col-span-2 lg:tw-col-start-2'>
+      <img
+        src='{{ section.settings.icon | image_url }}'
+        loading='lazy'
+        width='auto'
+        height='auto'
+        class='tw-w-full'
+      >
+    </div>
+    <div class='tw-col-span-full tw-text-center md:tw-col-span-4 md:tw-col-start-3 md:tw-ml-4 md:tw-text-start lg:tw-col-span-7 lg:tw-col-start-5'>
+      <h2 class='tw-typ-h1-title tw-mb-[30px] tw-uppercase tw-text-primary lg:tw-mb-[45px]'>
+        {{ section.settings.text }}
+      </h2>
+      <a
+        href='{{ section.settings.url }}'
+        class='tw-p-2 tw-font-bold tw-uppercase hover:tw-border-b hover:tw-border-primary lg:tw-ml-4'
+      >
+        {{ section.settings.url_text -}}
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Banner image button text",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 36
+    },
+    {
+      "type": "image_picker",
+      "id": "icon",
+      "label": "Image next to text"
+    },
+    {
+      "type": "image_picker",
+      "id": "background",
+      "label": "Background"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Find a store near you"
+    },
+    {
+      "type": "header",
+      "content": "Url"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "Url"
+    },
+    {
+      "type": "text",
+      "id": "url_text",
+      "label": "Url text",
+      "default": "Find your store"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Banner image button text"
+    }
+  ]
+}
+{% endschema %}

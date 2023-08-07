@@ -1,0 +1,75 @@
+<style>
+   /* width */
+   .container-scroll::-webkit-scrollbar {
+      height: 4px;
+  }
+
+  /* Track */
+  .container-scroll::-webkit-scrollbar-track {
+      background: #e3e3e3;
+      border-radius: 3px;
+  }
+
+  /* Handle */
+  .container-scroll::-webkit-scrollbar-thumb {
+      background: #000;
+      border-radius: 3px;
+  }
+  #{{ section.id }} svg {
+      max-width: 100%;
+  }
+</style>
+<section
+  id='{{ section.id }}'
+  class='tw-flex tw-py-8 tw-px-4 tw-bg-primary md:tw-px-7 lg:tw-py-[100px] lg:tw-px-[120px]'
+>
+  <div class='container-scroll tw-flex tw-w-full tw-gap-4 tw-overflow-x-auto tw-py-5'>
+    {% for block in section.blocks %}
+      <div class='tw-flex tw-justify-center tw-w-[350px] tw-min-w-[250px] tw-flex-col tw-px-[25px]'>
+        {% if block.settings.logo != blank %}
+          <a href='{{ block.settings.link }}'>
+            <img
+              src='{{ block.settings.logo | image_url }}'
+              alt='logo'
+              loading='lazy'
+              width='auto'
+              height='auto'
+            >
+          </a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Image list",
+  "tag": "section",
+  "class": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "Image list",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "url"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "collaborators"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,104 @@
+<section class="tw-grid-system tw-gap-y-10 tw-my-[50px]">
+  <div class="tw-col-span-full tw-flex tw-flex-col tw-justify-around md:tw-col-span-2 lg:tw-col-span-3">
+    {%- for block in section.blocks -%}
+      {%- if forloop.index <= 2 -%}
+        <div class="tw-flex tw-flex-col tw-items-end tw-mb-[65px]">
+          <img
+            class="tw-w-12"
+            src="{{ block.settings.image | image_url }}"
+            alt=""
+            width="auto"
+            height="auto"
+            loading="lazy"
+            s
+          >
+          <h4 class="tw-typ-h4-subtopic-2 tw-mb-[10px] tw-text-primary">
+            {{ block.settings.title }}
+          </h4>
+          <p class="tw-text-tertiary tw-typ-body-2 tw-text-end">
+            {{ block.settings.descripcion }}
+          </p>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  <div class="tw-col-span-full tw-m-auto md:tw-col-span-4 lg:tw-col-span-6">
+    <img
+      src="{{ section.settings.backogrund | image_url }}"
+      class="tw-object-cover tw-max-h-[700px]"
+      width="auto"
+      height="auto"
+      loading="lazy"
+    >
+  </div>
+
+  <div class="tw-col-span-full tw-flex tw-flex-col tw-justify-around md:tw-col-span-2 lg:tw-col-span-3">
+    {%- for block in section.blocks -%}
+      {%- if forloop.index >= 3 -%}
+        <div class="tw-flex tw-flex-col tw-items-start tw-mb-[65px]">
+          <img
+            class="tw-w-12"
+            src="{{ block.settings.image | image_url }}"
+            alt=""
+            width="auto"
+            height="auto"
+            loading="lazy"
+          >
+          <h4 class="tw-typ-h4-subtopic-2 tw-mb-[10px] tw-text-primary">
+            {{ block.settings.title }}
+          </h4>
+          <p class="tw-text-tertiary tw-typ-body-2">
+            {{ block.settings.descripcion }}
+          </p>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Texts with image center",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "backogrund",
+      "label": "Background"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "list_element",
+      "name": "List",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Title text"
+        },
+        {
+          "type": "textarea",
+          "id": "descripcion",
+          "label": "descripcion",
+          "default": "Descripcion text"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Texts with image center"
+    }
+  ]
+}
+{% endschema %}

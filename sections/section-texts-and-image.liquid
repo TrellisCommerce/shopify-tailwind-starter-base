@@ -1,0 +1,190 @@
+<div class='{{ section.settings.container_size }} tw-flex'>
+  <div
+    class='tw-mx-auto tw-flex tw-max-w-[1920px] tw-flex-wrap-reverse tw-justify-center {% if section.settings.reverse_content == true %} md:tw-flex-row-reverse {% endif %}'
+    style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;'
+  >
+    <div class='tw-flex tw-w-full tw-flex-col tw-justify-center {% if section.settings.reverse_color == 'dark' %} tw-bg-primary tw-text-box-background {% else %} tw-bg-box-background tw-text-primary {% endif %} tw-py-[60px]  tw-px-4 md:tw-w-1/2 md:tw-pl-8 md:tw-pr-4 lg:tw-py-[130px] lg:tw-px-[100px]'>
+      <img
+        src='{{ section.settings.small_image | image_url }}'
+        class='tw-mb-3 tw-w-8 tw-h-8 tw-rounded-full lg:tw-hidden'
+        alt='logo'
+        loading='lazy'
+        width='auto'
+        height='auto'
+      >
+      <h2 class='tw-mb-3 tw-typ-h2-subheading-b lg:tw-mb-5'>
+        {{ section.settings.title }}
+      </h2>
+      <p class='tw-mb-7 tw-typ-body-2 lg:tw-mb-5'>
+        {{ section.settings.descripcion }}
+      </p>
+      <div class='tw-flex tw-w-full tw-flex-col tw-gap-4 md:tw-flex-row'>
+        {%- if section.settings.show_button_1 == true -%}
+          <a
+            href='{{ section.settings.link_button_1 }}'
+            class='tw-button {% if section.settings.reverse_color == 'light' %} tw-button-primary {% else %} tw-button-primary-dark {% endif %}'
+          >
+            {{ section.settings.text_button_1 }}
+          </a>
+        {%- endif -%}
+
+        {%- if section.settings.show_button_2 == true -%}
+          <a
+            href='{{ section.settings.link_button_2 }}'
+            class='tw-button {% if section.settings.reverse_color == 'light' %} tw-button-secondary {% else %} tw-button-secondary-dark {% endif %}'
+          >
+            {{ section.settings.text_button_2 }}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class='tw-w-full md:tw-w-1/2'>
+      <img
+        src='{{ section.settings.big_image | image_url }}'
+        class='tw-h-full tw-w-full tw-object-cover'
+        alt='product-image'
+        loading='lazy'
+        width='auto'
+        height='auto'
+      >
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Texts and image",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 36
+    },
+    {
+      "type": "select",
+      "id": "container_size",
+      "options": [
+        {
+          "value": "tw-w-full",
+          "label": "Full width"
+        },
+        {
+          "value": "tw-grid-system",
+          "label": "Container"
+        }
+      ],
+      "default": "tw-grid-system",
+      "label": "Container size"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title",
+      "default": "Title text"
+    },
+    {
+      "type": "textarea",
+      "id": "descripcion",
+      "label": "descripcion",
+      "default": "Descripcion text"
+    },
+    {
+      "type": "select",
+      "id": "reverse_color",
+      "options": [
+        {
+          "value": "dark",
+          "label": "Style 1"
+        },
+        {
+          "value": "light",
+          "label": "Style 2"
+        }
+      ],
+      "default": "light",
+      "label": "Style"
+    },
+    {
+      "type": "checkbox",
+      "id": "reverse_content",
+      "default": false,
+      "label": "Reverse content"
+    },
+    {
+      "type": "image_picker",
+      "id": "big_image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "small_image",
+      "label": "Small image"
+    },
+    {
+      "type": "header",
+      "content": "Button 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button_1",
+      "default": true,
+      "label": "Show button"
+    },
+    {
+      "type": "text",
+      "id": "text_button_1",
+      "label": "Content button",
+      "default": "lorem"
+    },
+    {
+      "type": "url",
+      "id": "link_button_1",
+      "label": "Link",
+      "default": "/"
+    },
+    {
+      "type": "header",
+      "content": "Button 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button_2",
+      "default": true,
+      "label": "Show button"
+    },
+    {
+      "type": "text",
+      "id": "text_button_2",
+      "label": "Content button",
+      "default": "lorem"
+    },
+    {
+      "type": "url",
+      "id": "link_button_2",
+      "label": "Link",
+      "default": "/"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Texts and image"
+    }
+  ]
+}
+{% endschema %}
