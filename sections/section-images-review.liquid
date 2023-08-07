@@ -1,0 +1,251 @@
+{% case section.settings.layout_type %}
+  {% when 'primary' %}
+    <section
+      class='tw-grid-system tw-mt-4 tw-gap-5 tw-pb-[58px] lg:tw-mt-[50px]'
+    >
+      <div class='tw-col-span-full md:tw-col-span-4 lg:tw-col-span-6'>
+        {% if section.settings.main_image %}
+          <img
+            src='{{ section.settings.main_image | image_url }}'
+            class='tw-w-full tw-object-cover md:tw-h-[684px] lg:tw-h-[1040px]'
+            alt='product-image'
+            loading='lazy'
+            width='auto'
+            height='auto'
+          >
+        {% else %}
+          <img src='https://dummyimage.com/100x600' width='auto' height='auto' loading='lazy'>
+        {% endif %}
+        <div class='tw-mt-[10px] tw-flex tw-items-center tw-gap-2 [&>.icon-caret]:tw-w-3 [&>.icon-caret]:-tw-rotate-90'>
+          <h4 class='tw-typ-h4-subtopic-2 tw-text-primary'>
+            {{ section.settings.first_title | link_to: section.settings.first_link }}
+          </h4>
+          {% render 'icon-caret' %}
+        </div>
+      </div>
+      <div class='tw-col-span-full md:tw-col-span-4 lg:tw-col-span-6'>
+        <div class='tw-flex tw-flex-col tw-gap-5'>
+          <div class='tw-h-[400px] tw-bg-primary md:tw-h-[332px] lg:tw-h-[510px]'>
+            {% liquid
+              for block in section.blocks
+                case block.type
+                  when 'comment'
+                    render 'snippet-comment', comment: block.settings.comment, author: block.settings.author, charge: block.settings.charge
+                  when 'center-comment'
+                    render 'snippet-center-comment', eyebrow: block.settings.eyebrow, title: block.settings.title, comment: block.settings.comment
+                endcase
+              endfor
+            %}
+          </div>
+
+          {% if section.settings.second_image %}
+            <img
+              src='{{ section.settings.second_image | image_url }}'
+              class='tw-h-full tw-w-full tw-object-cover md:tw-h-[332px] lg:tw-h-[510px]'
+              alt='product-image'
+              loading='lazy'
+              width='auto'
+              height='auto'
+            >
+          {% else %}
+            <img src='https://dummyimage.com/600x1000' width='auto' height='auto' loading='lazy'>
+          {% endif %}
+        </div>
+        <div class='tw-mt-[10px] tw-flex tw-items-center tw-gap-2 [&>.icon-caret]:tw-w-3 [&>.icon-caret]:-tw-rotate-90'>
+          <h4 class='tw-typ-h4-subtopic-2 tw-text-primary'>
+            {{ section.settings.second_title | link_to: section.settings.second_link }}
+          </h4>
+          {% render 'icon-caret' %}
+        </div>
+      </div>
+    </section>
+  {% when 'secondary' %}
+    <section
+      class='tw-grid-system tw-mt-4 tw-gap-5 tw-pb-[58px] lg:tw-mt-[50px]'
+    >
+      <div class='tw-col-span-full'>
+        {% if section.settings.main_image %}
+          <div class='tw-hidden lg:tw-block'>
+            {% if section.settings.first_link %}
+              <a href='{{ section.settings.first_link }}'>
+                <img
+                  src='{{ section.settings.main_image | image_url }}'
+                  class='tw-w-full tw-object-cover'
+                  style='max-height: 500px;'
+                  alt='product-image'
+                  loading='lazy'
+                  width='auto'
+                  height='auto'
+                >
+              </a>
+            {% else %}
+              <img
+                src='{{ section.settings.main_image | image_url }}'
+                class='tw-w-full tw-object-cover'
+                style='max-height: 500px;'
+                alt='product-image'
+                loading='lazy'
+                width='auto'
+                height='auto'
+              >
+            {% endif %}
+          </div>
+        {% else %}
+          <img src='https://dummyimage.com/720x600' width='auto' height='auto' loading='lazy'>
+        {% endif %}
+      </div>
+      <div class='tw-col-span-full'>
+        <div class='tw-gap-5 tw-grid-system !tw-m-0'>
+          {% if section.settings.second_image %}
+            <div class='tw-col-span-full lg:tw-col-span-6'>
+              {% if section.settings.second_link %}
+                <a href='{{ section.settings.second_link }}'>
+                  <img
+                    src='{{ section.settings.second_image | image_url }}'
+                    class='tw-h-full tw-w-full tw-object-cover md:tw-h-[332px] lg:tw-h-[510px]'
+                    alt='product-image'
+                    loading='lazy'
+                    width='auto'
+                    height='auto'
+                  >
+                </a>
+              {% else %}
+                <img
+                  src='{{ section.settings.second_image | image_url }}'
+                  class='tw-h-full tw-w-full tw-object-cover md:tw-h-[332px] lg:tw-h-[510px]'
+                  alt='product-image'
+                  loading='lazy'
+                  width='auto'
+                  height='auto'
+                >
+              {% endif %}
+            </div>
+          {% else %}
+            <div class='tw-col-span-full lg:tw-col-span-6'>
+              <img src='https://dummyimage.com/600x600' width='auto' height='auto' loading='lazy'>
+            </div>
+          {% endif %}
+          <div
+            class='tw-col-span-full lg:tw-col-span-6 tw-relative tw-h-[400px] tw-bg-primary md:tw-h-[332px] lg:tw-h-[510px]'
+          >
+            {% liquid
+              for block in section.blocks
+                case block.type
+                  when 'comment'
+                    render 'snippet-comment', comment: block.settings.comment, author: block.settings.author, charge: block.settings.charge
+                  when 'center-comment'
+                    render 'snippet-center-comment', eyebrow: block.settings.eyebrow, title: block.settings.title, comment: block.settings.comment
+                endcase
+              endfor
+            %}
+          </div>
+        </div>
+      </div>
+    </section>
+{% endcase %}
+
+{% schema %}
+{
+  "name": "Images review",
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout_type",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        }
+      ],
+      "default": "primary",
+      "label": "Layout"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Image"
+    },
+    {
+      "type": "text",
+      "id": "first_title",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "first_link",
+      "label": "Link",
+      "info": "Attached to title when primary layout or to main banner when secondary layout."
+    },
+    {
+      "type": "image_picker",
+      "id": "second_image",
+      "label": "Second Image"
+    },
+    {
+      "type": "text",
+      "id": "second_title",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "second_link",
+      "label": "Link",
+      "info": "Attached to title when primary layout or to small banner when secondary layout."
+    }
+  ],
+  "max_blocks": 1,
+  "blocks": [
+    {
+      "type": "comment",
+      "name": "Comment",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "comment",
+          "label": "Comment"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author"
+        },
+        {
+          "type": "text",
+          "id": "charge",
+          "label": "Charge"
+        }
+      ]
+    },
+    {
+      "type": "center-comment",
+      "name": "Center comment",
+      "settings": [
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Eyebrow"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "comment",
+          "label": "comment"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Images review"
+    }
+  ]
+}
+{% endschema %}
