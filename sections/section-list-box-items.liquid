@@ -1,0 +1,350 @@
+<style>
+  @media only screen and (max-width: 1023px){
+    /* Track */
+    .container-{{ section.id }} .tw-custom-scrollbar::-webkit-scrollbar-track {
+        background: #e3e3e3;
+        border-radius: 3px;
+        display: none !important;
+    }
+
+    /* Handle */
+    .container-{{ section.id }} .tw-custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #1c1d1d;
+        border-radius: 3px;
+        display: none !important;
+    }
+  }
+</style>
+
+{% liquid
+  assign eyebrow_color = section.settings.eyebrow_color
+  assign title_color = section.settings.title_color
+  assign description_color = section.settings.description_color
+  for block in section.blocks
+    if block.type == 'card_section'
+      assign flag = true
+    endif
+  endfor
+%}
+
+<section
+  class='container-{{ section.id }} tw-w-full tw-bg-[#] tw-py-10'
+  style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px; background: {{ section.settings.background }};'
+>
+  <div class='tw-grid-system'>
+    <div class='tw-col-span-full tw-text-center'>
+      {%- if section.settings.title == blank or section.settings.descripcion != blank -%}
+        <div class='tw-mb-10 tw-text-center md:tw-mb-16'>
+          {%- if section.settings.eyebrow != blank -%}
+            <h5 class='tw-mx-auto tw-typ-h5-subtopic-3-a tw-uppercase tw-mb-2 tw-text-{{ eyebrow_color }}'>
+              {{ section.settings.eyebrow }}
+            </h5>
+          {%- endif -%}
+          {%- if section.settings.title != blank -%}
+            <h2 class='tw-mx-auto {{ section.settings.heading_size }} tw-capitalize tw-text-{{ title_color }}'>
+              {{ section.settings.title }}
+            </h2>
+          {%- endif -%}
+          {%- if section.settings.descripcion != blank -%}
+            <p class='tw-typ-body-2 tw-mt-[18px] tw-max-w-[{{ section.settings.max_width }}px] md:tw-mt-3 tw-mx-auto tw-text-{{ description_color }}'>
+              {{ section.settings.descripcion }}
+            </p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div class='tw-col-span-full'>
+      <div class='tw-flex lg:tw-justify-center tw-w-full tw-flex-row tw-gap-4 tw-overflow-x-scroll tw-pb-4 {% if section.blocks.size < 3 %} sm:tw-justify-center {% endif %} md:tw-overflow-x-auto tw-custom-scrollbar md:tw-items-baseline {% if flag %}tw-flex-col lg:tw-flex-row{% endif %}'>
+        {%- liquid
+
+        -%}
+        {%- for block in section['blocks-'] %}
+          {%- liquid
+            assign value = block.settings
+            assign index = forloop.index
+          -%}
+          {%- case block.type -%}
+            {%- when 'card_section' -%}
+              <div class='tw-flex tw-w-full lg:tw-w-[300px] tw-flex-col tw-items-center tw-border tw-border-brand-secondary tw-px-[25px] tw-py-[35px] md:tw-border-transparent'>
+                {% if value.image != blank %}
+                  <img
+                    src='{{ value.image | image_url }}'
+                    class='tw-w-14 tw-rounded-md'
+                    alt='logo'
+                    width='auto'
+                    height='auto'
+                    loading='lazy'
+                  >
+                {% endif %}
+                <h4 class='tw-mt-3.5 tw-typ-body-2 tw-text-primary tw-text-center'>
+                  {{ value.title }}
+                </h4>
+                <span class='tw-typ-body-2 tw-text-tertiary tw-text-center'>
+                  {{- value.description -}}
+                </span>
+              </div>
+
+            {%- when 'box_section' -%}
+              {% liquid
+                assign image_exist = false
+                if value.image != blank
+                  assign image_exist = true
+                endif
+              %}
+
+              <div
+                class='tw-min-h-[166px] tw-w-[166px] tw-p-5 tw-pt-[30px] tw-bg-cover md:tw-min-h-[184px] md:tw-w-[178px]'
+                style='{% if image_exist %} background-image: url({{ value.image | image_url }}); background-color: {{ value.background_box }}60; {% else %} background-color: {{ value.background_box }}; {% endif %} color: {{ value.text_color_box }}'
+              >
+                <h2 class='tw-typ-h2-subheading-b tw-mb-[33px]'>
+                  {{ index }}
+                </h2>
+                <span
+                  class='tw-mb-[10px] tw-h-[1px] tw-w-5 empty:tw-block'
+                  style='background-color: {{ value.text_color_box }};'
+                ></span>
+                <p
+                  class='tw-typ-body-2 tw-w-[125px] hover:!tw-block'
+                  onmouseout="this.style.display='-webkit-box'"
+                  onmouseover="this.style.display='block'"
+                  style='
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                  '
+                >
+                  {{ value.title }}
+                </p>
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "List box items",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 36
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#E3E3E3"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "eyebrow",
+      "default": "Eyebrow text"
+    },
+    {
+      "type": "select",
+      "id": "eyebrow_color",
+      "options": [
+        {
+          "value": "primary",
+          "label": "t:sections.all.text_color.options__1.label"
+        },
+        {
+          "value": "secondary",
+          "label": "t:sections.all.text_color.options__2.label"
+        },
+        {
+          "value": "tertiary",
+          "label": "t:sections.all.text_color.options__3.label"
+        },
+        {
+          "value": "brand-secondary",
+          "label": "t:sections.all.text_color.options__4.label"
+        }
+      ],
+      "default": "primary",
+      "label": "t:sections.all.eyebrow_color.label"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title",
+      "default": "Title text"
+    },
+    {
+      "type": "select",
+      "id": "title_color",
+      "options": [
+        {
+          "value": "primary",
+          "label": "t:sections.all.text_color.options__1.label"
+        },
+        {
+          "value": "secondary",
+          "label": "t:sections.all.text_color.options__2.label"
+        },
+        {
+          "value": "tertiary",
+          "label": "t:sections.all.text_color.options__3.label"
+        },
+        {
+          "value": "brand-secondary",
+          "label": "t:sections.all.text_color.options__4.label"
+        }
+      ],
+      "default": "primary",
+      "label": "t:sections.all.title_color.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "tw-typ-h3-subtopic-1-a",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "tw-typ-h2-subheading-b",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "tw-typ-h2-subheading-a",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "tw-typ-h1-title",
+          "label": "t:sections.all.heading_size.options__4.label"
+        }
+      ],
+      "default": "tw-typ-h2-subheading-b",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "textarea",
+      "id": "descripcion",
+      "label": "descripcion",
+      "default": "Descripcion text"
+    },
+    {
+      "type": "select",
+      "id": "description_color",
+      "options": [
+        {
+          "value": "primary",
+          "label": "t:sections.all.text_color.options__1.label"
+        },
+        {
+          "value": "secondary",
+          "label": "t:sections.all.text_color.options__2.label"
+        },
+        {
+          "value": "tertiary",
+          "label": "t:sections.all.text_color.options__3.label"
+        },
+        {
+          "value": "brand-secondary",
+          "label": "t:sections.all.text_color.options__4.label"
+        }
+      ],
+      "default": "primary",
+      "label": "t:sections.all.description_color.label"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 300,
+      "max": 900,
+      "step": 50,
+      "unit": "px",
+      "label": "Description box width",
+      "default": 550
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card_section",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title",
+          "default": "Title text"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "lorem"
+        }
+      ]
+    },
+    {
+      "type": "box_section",
+      "name": "Box",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title",
+          "default": "Title text"
+        },
+        {
+          "type": "color",
+          "id": "background_box",
+          "label": "Background",
+          "default": "#000"
+        },
+        {
+          "type": "color",
+          "id": "text_color_box",
+          "label": "Text color",
+          "default": "#fff"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "List box items",
+      "blocks": [
+        {
+          "type": "Item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
