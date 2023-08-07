@@ -1,0 +1,123 @@
+<section
+  class='tw-custom-scrollbar tw-m-auto tw-my-16 tw-flex tw-max-w-[1920px] tw-overflow-x-auto tw-bg-scroll tw-pb-8'
+  style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;'
+>
+  {%- for block in section.blocks -%}
+    <div
+      class='tw-w-1/4 tw-min-w-[300px] tw-bg-cover tw-bg-center tw-relative tw-min-h-[700px]'
+      style='background-image: url({{ block.settings.backogrund_image | image_url }});'
+    >
+      <div
+        class='tw-t-0 tw-absolute tw-h-full tw-w-full empty:tw-block tw-z-0'
+        style='background: linear-gradient(transparent, {{ section.settings.gradient_color }});'
+      ></div>
+      <div class='tw-top-0 tw-flex tw-h-full tw-w-full tw-flex-col tw-justify-between tw-px-[39px] tw-py-[50px] tw-text-center md:tw-px-[47px] md:tw-py-[65px] lg:tw-px-[75px] lg:tw-py-[110px] tw-z-[1] tw-relative'>
+        <h2 class='tw-typ-h2-subheading-a tw-uppercase tw-text-background'>
+          {{ block.settings.title }}
+        </h2>
+
+        <div>
+          <p class='tw-typ-body-2 tw-mb-6 tw-text-background'>
+            {{ block.settings.description }}
+          </p>
+          <a
+            href='{{ block.settings.url_button }}'
+            class='tw-button tw-hidden tw-border-none lg:tw-block'
+            style='background-color: {{ section.settings.background_button }}; color: {{ section.settings.text_button_color }};'
+          >
+            {{ block.settings.button_title }}
+          </a>
+        </div>
+      </div>
+    </div>
+  {%- endfor -%}
+</section>
+
+{% schema %}
+{
+  "name": "List images gradient",
+  "tag": "section",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 36
+    },
+    {
+      "type": "color",
+      "id": "background_button",
+      "label": "Background buttons",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "text_button_color",
+      "label": "Texts color buttons",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "gradient_color",
+      "label": "Gradient color",
+      "default": "#000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item_gradient",
+      "name": "Item gradient",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "backogrund_image",
+          "label": "Background iamge"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "LOREM IPSUM"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget sollicitudin odio. Pellentesque ullamcorper, libero vehicula lacinia luctus, magna justo pharetra mi, non iaculis odio orci eget nisl."
+        },
+        {
+          "type": "text",
+          "id": "button_title",
+          "label": "Button title",
+          "default": "LOREM IPSUM"
+        },
+        {
+          "type": "url",
+          "id": "url_button",
+          "label": "url"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "List images gradient"
+    }
+  ]
+}
+{% endschema %}
