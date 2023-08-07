@@ -1,15 +1,15 @@
 <section
-  class="tw-w-full tw-bg-[#] tw-py-10"
-  style="margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;"
+  class='tw-w-full tw-bg-[#] tw-py-10'
+  style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;'
 >
-  <div class="tw-grid-system">
-    <div class="tw-col-span-full tw-flex tw-flex-wrap tw-items-center tw-justify-center tw-border-b tw-border-border">
+  <div class='tw-grid-system'>
+    <div class='tw-col-span-full tw-flex tw-flex-wrap tw-items-center tw-justify-center tw-border-b tw-border-border'>
       {% for link in section.settings.menu.links %}
         <a
-          href="{{ link.url }}"
-          class="tw-border-b-[2px] {% if link.current %} tw-border-primary {% else %} tw-border-transparent {% endif %} tw-p-[19px] tw-text-center"
+          href='{{ link.url }}'
+          class='tw-border-b-[2px] {% if link.current %} tw-border-primary {% else %} tw-border-transparent {% endif %} tw-p-[19px] tw-text-center'
         >
-          <h5 class="tw-typ-h5-subtopic-3 tw-text-primary">
+          <h5 class='tw-typ-h5-subtopic-3 tw-text-primary'>
             {{- link.title -}}
           </h5>
         </a>
@@ -20,7 +20,7 @@
 
 {% schema %}
 {
-  "name": "Tabs with content",
+  "name": "Tabs",
   "tag": "section",
   "settings": [
     {
@@ -72,7 +72,7 @@
   ],
   "presets": [
     {
-      "name": "Tabs with content"
+      "name": "Tabs"
     }
   ]
 }
