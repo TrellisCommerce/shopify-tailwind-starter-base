@@ -1,0 +1,152 @@
+<section
+  class='tw-grid-system'
+  style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px; background: {{ section.settings.background }}'
+>
+  <h2 class='tw-col-span-full tw-mb-[20px] tw-text-brand-primary tw-text-center tw-typ-h2-subheading-a tw-uppercase lg:tw-mb-[74px]'>
+    {{ section.settings.title }}
+  </h2>
+  <div class='tw-custom-scrollbar tw-col-span-full tw-flex tw-items-start tw-gap-4 tw-overflow-x-scroll tw-bg-scroll tw-pt-[22px] tw-pb-6 tw-px-4'>
+    {%- for block in section.blocks -%}
+      <div class='tw-group tw-w-[253px] tw-min-w-[253px] tw-border tw-border-border tw-border-opacity-50 tw-bg-background tw-p-4 md:tw-min-w-[279px] lg:tw-min-w-[400px] lg:tw-p-5 lg:hover:tw-border-transparent lg:hover:tw-shadow-lg hover:lg:tw-mb-0 lg:tw-mb-[46px]'>
+        <div class='tw-relative tw-mb-[10px] lg:tw-mb-5'>
+          <img
+            src='{{ block.settings.image | image_url }}'
+            class='tw-h-[300px] tw-w-full tw-object-cover'
+            alt='logo'
+            loading='lazy'
+            width='auto'
+            height='auto'
+          >
+          {%- if block.settings.show_content_image == true -%}
+            <div class='tw-absolute tw-top-1/2 tw-left-1/2 tw-flex tw-w-full tw--translate-y-1/2 tw--translate-x-1/2 tw-flex-col tw-items-center tw-justify-center tw-bg-black/30 tw-h-full'>
+              <img
+                src='{{ block.settings.logo | image_url }}'
+                class='tw-max-w-[54px] tw-object-cover'
+                alt='image'
+                loading='lazy'
+                width='auto'
+                height='auto'
+              >
+              <p class='tw-typ-h2-subheading-a tw-uppercase tw-text-background'>
+                {{ block.settings.text_image }}
+              </p>
+            </div>
+          {%- endif -%}
+        </div>
+        <h5 class='tw-mb-1 tw-uppercase tw-text-primary tw-typ-h5-subtopic-3-a lg:tw-mb-2'>
+          {{ block.settings.title }}
+        </h5>
+        <p class='tw-mb-[20px] tw-typ-body-2 tw-text-tertiary'>
+          {{ block.settings.description }}
+        </p>
+        <a
+          href='{{ block.settings.url }}'
+          class='tw-button tw-button-primary tw-mt-2 tw-hidden lg:group-hover:tw-block tw-py-[10px]'
+        >
+          {{ block.settings.button }}
+        </a>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Card list 2",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title",
+      "default": "Caracteristicas"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card_section",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title",
+          "default": "Title text"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "lorem"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "url"
+        },
+        {
+          "type": "text",
+          "id": "button",
+          "label": "Button text",
+          "default": "Lorem"
+        },
+        {
+          "type": "header",
+          "content": "Content in the image"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_content_image",
+          "default": true,
+          "label": "Show content image"
+        },
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
+        {
+          "type": "text",
+          "id": "text_image",
+          "label": "Text image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Card list 2",
+      "blocks": [
+        {
+          "type": "Card"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

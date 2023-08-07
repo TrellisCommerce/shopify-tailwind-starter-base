@@ -1,0 +1,110 @@
+<style>
+  /* width */
+  .container-scroll::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  /* Track */
+  .container-scroll::-webkit-scrollbar-track {
+    background: #e3e3e3;
+    border-radius: 3px;
+  }
+
+  /* Handle */
+  .container-scroll::-webkit-scrollbar-thumb {
+    background: #1c1d1d;
+    border-radius: 3px;
+  }
+</style>
+<section class='tw-grid-system tw-mt-4 tw-pb-[58px] lg:tw-mt-[50px]'>
+  <div
+    class='container-scroll tw-col-span-full tw-flex tw-items-start tw-gap-4 tw-overflow-x-scroll tw-bg-scroll tw-pb-6'
+  >
+    {% for block in section.blocks %}
+      <div
+        class='tw-group tw-w-[269px] tw-min-w-[269px] tw-bg-background md:tw-min-w-[216px] lg:tw-mb-[46px] lg:tw-min-w-[245px] hover:lg:tw-mb-0'
+      >
+        <div class='tw-mb-[16px] lg:tw-mb-3'>
+          <img
+            src='{{ block.settings.image | image_url }}'
+            class='tw-h-[269px] tw-w-full tw-object-cover md:tw-h-[216px] lg:tw-h-[245px]'
+            alt='logo'
+            loading='lazy'
+            width='auto'
+            height='auto'
+          >
+        </div>
+        <h4 class='tw-typ-h4-subtopic-2 tw-mb-2 tw-uppercase tw-text-primary'>
+          {{ block.settings.title }}
+        </h4>
+        <p class='tw-typ-body-2 tw-text-tertiary tw-mb-[20px]'>
+          {{ block.settings.description }}
+        </p>
+        {% if block.settings.show_button %}
+          <a
+            href='{{ block.settings.url_link }}'
+            class='tw-button tw-button-primary tw-mt-2 tw-hidden tw-py-[10px] lg:group-hover:tw-block'
+          >
+            {{ block.settings.button_text }}
+          </a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Card list 1",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "Slider",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "url_link",
+          "label": "Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_button",
+          "label": "Show button",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Card list 1",
+      "blocks": [
+        {
+          "type": "Card"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

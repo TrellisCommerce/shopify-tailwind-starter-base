@@ -1,0 +1,483 @@
+{% liquid
+  assign bg_color = section.settings.bg_color
+  assign title_color = section.settings.title_color
+  assign description_color = section.settings.description_color
+  assign title_align = section.settings.title_align
+  assign description_align = section.settings.description_align
+  assign title_case = section.settings.title_case
+  assign button_style = section.settings.button_style
+
+  for block in section.blocks
+    if block.type == 'popup'
+      assign popup_bg_color = block.settings.bg_color
+
+      if block.settings.popup_text_color == 'tw-text-primary'
+        assign popup_text_color = 'tw-text-primary'
+      endif
+      if block.settings.popup_text_color == 'tw-text-secondary'
+        assign popup_text_color = 'tw-text-secondary'
+      endif
+      if block.settings.popup_text_color == 'tw-text-tertiary'
+        assign popup_text_color = 'tw-text-tertiary'
+      endif
+    endif
+  endfor
+%}
+<style>
+  #close_popup svg {
+    width: 20px;
+  }
+  {% if section.settings.show_image == false %}
+    @media only screen and (max-width: 1023px) {
+      .ays_image-{{ section.id }} {
+        display: none;
+      }
+    }
+  {% endif %}
+</style>
+<section
+  class='tw-relative {{ bg_color }}'
+  style='padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;'
+>
+  <div
+    id='popup-{{ section.id }}'
+    class='tw-hidden tw-fixed tw-top-0 tw-w-full tw-h-full tw-items-center tw-justify-center tw-z-10'
+    style='background: {{ popup_bg_color }};'
+  >
+    <div class='popup_wrapper tw-relative tw-max-w-[860px] tw-p-[34px] tw-bg-brand-secondary tw-mx-5'>
+      <div
+        id='close_popup'
+        class='tw-absolute tw-top-5 tw-right-5 tw-cursor-pointer'
+        onclick='closePopup()'
+      >
+        {% render 'icon-close' %}
+      </div>
+      {% for block in section.blocks %}
+        {% if block.type == 'popup' %}
+          <h1 class='{{ popup_text_color }} tw-text-left tw-typ-h2-subheading-b tw-mb-10'>
+            {{ block.settings.title }}
+          </h1>
+          <p class='{{ popup_text_color }} tw-text-left'>
+            {{ block.settings.description }}
+          </p>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class='tw-grid-system tw-mt-4 tw-mb-[58px] tw-gap-y-[50px] lg:tw-mt-[50px]'>
+    <div class='ays_image-{{ section.id }} tw-col-span-full lg:tw-col-span-6 {% if section.settings.toggle_image %} lg:tw-col-start-7 {% endif %}'>
+      {% if section.settings.main_image %}
+        <img
+          class='tw-h-[262px] tw-w-full tw-object-cover md:tw-h-[429px] lg:tw-h-[754px]'
+          src='{{ section.settings.main_image | image_url }}'
+          alt='icon'
+          loading='lazy'
+          width='auto'
+          height='auto'
+        >
+      {% else %}
+        <img src='https://dummyimage.com/720x600' width='auto' height='auto' loading='lazy'>
+      {% endif %}
+    </div>
+    <div class='tw-col-span-full tw-row-start-1 tw-col-start-1 {% if section.settings.toggle_image %} lg:tw-col-start-2 {% else %} lg:tw-col-start-8 {% endif %} tw-mb-16 tw-flex tw-flex-col tw-items-center tw-justify-center lg:tw-col-span-4'>
+      <h2
+        class='tw-w-full tw-typ-h2-subheading-b tw-mb-[18px] {{ title_case }} {{ title_color }} {{ title_align }}'
+      >
+        {{ section.settings.title }}
+      </h2>
+      <p
+        class='tw-typ-body-2 tw-w-full {{ description_color }} tw-mb-[40px] {{ description_align }}'
+      >
+        {{ section.settings.description }}
+      </p>
+
+      <div
+        class='tw-flex tw-w-full tw-flex-col tw-justify-between tw-divide-y tw-px-3'
+      >
+        {% for block in section.blocks %}
+          {% if block.type == 'text' %}
+            <div class='tw-flex tw-items-center tw-justify-between tw-py-7'>
+              <div class='tw-flex tw-items-center'>
+                {% if block.settings.icon %}
+                  <div
+                    class='tw-w-12 tw-h-12 tw-bg-box-background tw-overflow-hidden'
+                    style='border-radius: 50%;'
+                  >
+                    <img
+                      src='{{ block.settings.icon | image_url }}'
+                      class='tw-w-full tw-h-full tw-object-contain'
+                      alt='icon'
+                      loading='lazy'
+                      width='auto'
+                      height='auto'
+                    >
+                  </div>
+                {% endif %}
+                <div class='tw-ml-[15px]'>
+                  <h2 class='tw-typ-body-2 tw-text-primary'>
+                    {{ block.settings.title }}
+                  </h2>
+                  <p class='tw-typ-body-2 tw-text-tertiary'>
+                    {{ block.settings.description }}
+                  </p>
+                </div>
+              </div>
+              {% if block.settings.link %}
+                <a href='{{ block.settings.link }}'>
+                  {% render 'icon-arrow' %}
+                </a>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% if section.settings.show_button %}
+        <button
+          class='tw-button tw-button-primary tw-mt-6 tw-py-[14px] tw-px-[25px] {{ button_style }}'
+          {% if section.settings.link == blank %}
+            onclick='popupHandler()'
+          {% endif %}
+        >
+          {% if section.settings.link %}
+            {{ section.settings.button_title | link_to: section.settings.link }}
+          {% else %}
+            {{ section.settings.button_title }}
+          {% endif %}
+        </button>
+      {% endif %}
+    </div>
+  </div>
+</section>
+<script>
+  const popup = document.getElementById('popup-{{ section.id }}');
+  const popupHandler = () => {
+    popup.style.display = 'flex';
+  };
+  const closePopup = () => {
+    const icon_close = document.getElementById('close_popup');
+    icon_close.addEventListener('click', () => {
+      console.log('clik');
+      popup.style.display = 'none';
+    });
+  };
+</script>
+{% schema %}
+{
+  "name": "lg image text button popup",
+  "settings": [
+    {
+      "type": "select",
+      "id": "bg_color",
+      "options": [
+        {
+          "value": "tw-bg-primary",
+          "label": "t:sections.all.bg_color.options__1.label"
+        },
+        {
+          "value": "tw-bg-secondary",
+          "label": "t:sections.all.bg_color.options__2.label"
+        },
+        {
+          "value": "tw-bg-tertiary",
+          "label": "t:sections.all.bg_color.options__3.label"
+        },
+        {
+          "value": "tw-bg-brand-secondary",
+          "label": "t:sections.all.bg_color.options__4.label"
+        },
+        {
+          "value": "tw-bg-transparent",
+          "label": "t:sections.all.bg_color.options__5.label"
+        }
+      ],
+      "default": "tw-bg-transparent",
+      "label": "t:sections.all.bg_color.label"
+    },
+    {
+      "type": "select",
+      "id": "title_case",
+      "options": [
+        {
+          "value": "tw-lowercase",
+          "label": "t:sections.all.title_case.options__1.label"
+        },
+        {
+          "value": "tw-capitalize",
+          "label": "t:sections.all.title_case.options__2.label"
+        },
+        {
+          "value": "tw-uppercase",
+          "label": "t:sections.all.title_case.options__3.label"
+        }
+      ],
+      "default": "tw-capitalize",
+      "label": "t:sections.all.title_case.label"
+    },
+    {
+      "type": "select",
+      "id": "title_color",
+      "options": [
+        {
+          "value": "tw-text-primary",
+          "label": "t:sections.all.text_color.options__1.label"
+        },
+        {
+          "value": "tw-text-secondary",
+          "label": "t:sections.all.text_color.options__2.label"
+        },
+        {
+          "value": "tw-text-tertiary",
+          "label": "t:sections.all.text_color.options__3.label"
+        },
+        {
+          "value": "tw-text-brand-secondary",
+          "label": "t:sections.all.text_color.options__4.label"
+        }
+      ],
+      "default": "tw-text-primary",
+      "label": "t:sections.all.title_color.label"
+    },
+    {
+      "type": "select",
+      "id": "title_align",
+      "options": [
+        {
+          "value": "tw-text-left",
+          "label": "Left"
+        },
+        {
+          "value": "tw-text-center",
+          "label": "Center"
+        },
+        {
+          "value": "tw-text-right",
+          "label": "Right"
+        }
+      ],
+      "default": "tw-text-center",
+      "label": "Center"
+    },
+    {
+      "type": "select",
+      "id": "description_color",
+      "options": [
+        {
+          "value": "tw-text-primary",
+          "label": "t:sections.all.text_color.options__1.label"
+        },
+        {
+          "value": "tw-text-secondary",
+          "label": "t:sections.all.text_color.options__2.label"
+        },
+        {
+          "value": "tw-text-tertiary",
+          "label": "t:sections.all.text_color.options__3.label"
+        },
+        {
+          "value": "tw-text-brand-secondary",
+          "label": "t:sections.all.text_color.options__4.label"
+        }
+      ],
+      "default": "tw-text-primary",
+      "label": "t:sections.all.description_color.label"
+    },
+    {
+      "type": "select",
+      "id": "description_align",
+      "options": [
+        {
+          "value": "tw-text-left",
+          "label": "Left"
+        },
+        {
+          "value": "tw-text-center",
+          "label": "Center"
+        },
+        {
+          "value": "tw-text-right",
+          "label": "Right"
+        }
+      ],
+      "default": "tw-text-center",
+      "label": "t:sections.all.description_align.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_image",
+      "label": "Show image on mobile version",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "toggle_image",
+      "label": "Place image to the right",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "TUMI at your Service"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "World class quality meets world class customer service."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button",
+      "default": true,
+      "label": "Show button"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "options": [
+        {
+          "value": "tw-button-primary",
+          "label": "Primary button"
+        },
+        {
+          "value": "tw-button-secondary",
+          "label": "Secondary button"
+        },
+        {
+          "value": "tw-button-fill",
+          "label": "Fill button"
+        },
+        {
+          "value": "tw-button-primary-dark",
+          "label": "Dark Primary button"
+        },
+        {
+          "value": "tw-button-secondary-dark",
+          "label": "Dark Secondary button"
+        },
+        {
+          "value": "tw-button-fill-dark",
+          "label": "Dark Fill button"
+        }
+      ],
+      "label": "Button style",
+      "default": "tw-button-primary"
+    },
+    {
+      "type": "text",
+      "id": "button_title",
+      "label": "Button Title",
+      "default": "Store Hours and Services"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link",
+      "info": "Adding a link here will disable the popup block."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    },
+    {
+      "type": "popup",
+      "name": "Popup",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Popup Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore facilis error accusamus optio ducimus vero minus atque iste repudiandae commodi, dolorum officiis sed, temporibus, sapiente labore illum unde praesentium aspernatur.</p>"
+        },
+        {
+          "type": "color_background",
+          "id": "bg_color",
+          "label": "t:sections.all.bg_color.label",
+          "default": "linear-gradient(#333333, #888888)"
+        },
+        {
+          "type": "select",
+          "id": "popup_text_color",
+          "options": [
+            {
+              "value": "tw-text-primary",
+              "label": "t:sections.all.text_color.options__1.label"
+            },
+            {
+              "value": "tw-text-secondary",
+              "label": "t:sections.all.text_color.options__2.label"
+            },
+            {
+              "value": "tw-text-tertiary",
+              "label": "t:sections.all.text_color.options__3.label"
+            }
+          ],
+          "default": "tw-text-primary",
+          "label": "t:sections.all.text_color.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "lg image text button"
+    }
+  ]
+}
+{% endschema %}

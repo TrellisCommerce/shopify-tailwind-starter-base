@@ -1,0 +1,133 @@
+<section class='tw-grid-system'>
+  <h1
+    class='tw-col-span-4 sm:tw-col-span-8 lg:tw-col-span-12 tw-typ-h2-subheading-a tw-font-bold tw-mb-[18px]'
+    style='margin-top: {{ section.settings.margin_top }}px;'
+  >
+    {{ section.settings.title }}
+  </h1>
+  <div class='tw-col-span-4 sm:tw-col-span-8 lg:tw-col-span-12 tw-grid-system tw-w-full tw-mx-0'>
+    <ul class='tw-col-span-4 lg:tw-col-span-6 [&>li:last-child]:tw-border-b-0'>
+      <li class='tw-mb-[44px] lg:tw-mb-[68px]'>{{ section.settings.service_subtitle }}</li>
+      {% for block in section.blocks %}
+        {% if block.type == 'Service' %}
+          <li class='tw-flex tw-justify-between sm:tw-w-10/12 tw-border-b tw-border-solid tw-boder-border tw-px-[22px] tw-pb-6'>
+            <div class='tw-col-span-9 tw-flex tw-items-center tw-gap-x-6'>
+              {% if block.settings.icon != blank %}
+                <div>
+                  <img src='{{ block.settings.icon | image_url }}' alt='icon' loading='lazy' width='32' height='32'>
+                </div>
+              {% endif %}
+              <div>
+                <p class='tw-typ-h3-subtopic-2 tw-font-bold'>{{ block.settings.title }}</p>
+                <p class='tw-typ-body-1'>{{ block.settings.description }}</p>
+              </div>
+            </div>
+            <div class='tw-col-span-3 tw-flex tw-items-center'>
+              <a href='{{ block.settings.link }}' class='[&>.icon]:tw-w-2'>
+                {% render 'icon-chevron' %}
+              </a>
+            </div>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <ul class='tw-col-span-4 lg:tw-col-span-6'>
+      <li class='tw-mb-[44px] lg:tw-mb-[68px]'>{{ section.settings.politics_subtitle }}</li>
+      {% for block in section.blocks %}
+        {% if block.type == 'Politics' %}
+          <li class='tw-pb-6'>
+            <div class='tw-col-span-9'>
+              <p class='tw-typ-h3-subtopic-2 tw-font-bold'>{{ block.settings.title | link_to: block.settings.link }}</p>
+            </div>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "section sidebar menu",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Get Started"
+    },
+    {
+      "type": "text",
+      "id": "service_subtitle",
+      "label": "Service subtitle"
+    },
+    {
+      "type": "text",
+      "id": "politics_subtitle",
+      "label": "Politics Subtitle"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Margin",
+      "default": 20
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Service",
+      "name": "Service",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Service title"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Service description"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        }
+      ]
+    },
+    {
+      "type": "Politics",
+      "name": "Politics and guides",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Politics title"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "section sidebar menu"
+    }
+  ]
+}
+{% endschema %}
