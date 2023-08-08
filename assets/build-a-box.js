@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const priceTotalCompareAtElement =
     document.querySelector('.price-compare-at');
   const quantityTotalElement = document.querySelector('.total-quantity-couunt');
+  const singleItemPriceElement = document.querySelector(
+    '.single-item-price-count',
+  );
 
   let currentPlan = 689522049319;
 
@@ -23,11 +26,13 @@ document.addEventListener('DOMContentLoaded', function () {
       const quantity =
         variantElement.getElementsByClassName('variant-quantity')[0].value;
 
-      itemsToAdd.push({
-        id: variantId,
-        quantity: quantity,
-        selling_plan: currentPlan,
-      });
+      if (parseInt(quantity) > 0) {
+        itemsToAdd.push({
+          id: variantId,
+          quantity: quantity,
+          selling_plan: currentPlan,
+        });
+      }
     }
     return itemsToAdd;
   }
@@ -37,13 +42,14 @@ document.addEventListener('DOMContentLoaded', function () {
     let totalPrice = 0;
     let totalPriceOriginal = 0;
     let totalQuantity = 0;
+    let itemPrices = [];
 
     for (let i = 0; i < itemsToAdd.length; i++) {
       const item = itemsToAdd[i];
       const variant = window.ur_subscription_variants[item.id];
-      let itemPriceOriginal = variant.price * item.quantity;
+      let itemPriceOriginal = variant.price;
       if (variant.compare_at_price) {
-        itemPriceOriginal = variant.compare_at_price * item.quantity;
+        itemPriceOriginal = variant.compare_at_price;
       }
       let itemPrice = itemPriceOriginal;
 
@@ -52,14 +58,16 @@ document.addEventListener('DOMContentLoaded', function () {
           for (let j = 0; j < variant.selling_plan_allocations.length; j++) {
             const plan = variant.selling_plan_allocations[j];
             if (plan.selling_plan_id == currentPlan) {
-              itemPrice = plan.price * item.quantity;
+              itemPrice = plan.price;
             }
           }
         }
       }
-      totalPriceOriginal = totalPriceOriginal + itemPriceOriginal;
-      totalPrice = totalPrice + itemPrice;
+      totalPriceOriginal =
+        totalPriceOriginal + itemPriceOriginal * item.quantity;
+      totalPrice = totalPrice + itemPrice * item.quantity;
       totalQuantity = totalQuantity + parseInt(item.quantity);
+      itemPrices.push(itemPrice);
     }
 
     priceTotalElement.innerHTML = (totalPrice / 100).toLocaleString(undefined, {
@@ -78,8 +86,14 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       priceTotalCompareAtContainer.classList.add('xhidden');
     }
-
     quantityTotalElement.innerHTML = totalQuantity;
+    singleItemPriceElement.innerHTML = (itemPrices[0] / 100).toLocaleString(
+      undefined,
+      {
+        maximumFractionDigits: 2,
+        minimumFractionDigits: 2,
+      },
+    );
   }
   calculateTotal();
 
@@ -186,6 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const variants = document.getElementsByClassName('ur-variant');
 
+      let countCurrentVariant = 0;
       for (let k = 0; k < variants.length; k++) {
         const variant = variants[k];
 
