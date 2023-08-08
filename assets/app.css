@@ -483,12 +483,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: auto;
 }
 
+.\!xm-0 {
+  margin: 0px !important;
+}
+
 .xmt-8 {
   margin-top: 2rem;
 }
 
+.xmb-8 {
+  margin-bottom: 2rem;
+}
+
 .xmt-1 {
   margin-top: 0.25rem;
+}
+
+.xinline-block {
+  display: inline-block;
 }
 
 .xflex {
@@ -503,8 +515,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.xh-10 {
-  height: 2.5rem;
+.xh-20 {
+  height: 5rem;
 }
 
 .xh-full {
@@ -515,16 +527,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1.5rem;
 }
 
-.xw-32 {
-  width: 8rem;
-}
-
 .xw-full {
   width: 100%;
 }
 
-.xw-20 {
-  width: 5rem;
+.xw-64 {
+  width: 16rem;
 }
 
 .xw-6 {
@@ -543,6 +551,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-direction: row;
 }
 
+.xitems-end {
+  align-items: flex-end;
+}
+
 .xitems-center {
   align-items: center;
 }
@@ -559,22 +571,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 1rem;
 }
 
+.xoverflow-hidden {
+  overflow: hidden;
+}
+
+.xrounded-2xl {
+  border-radius: 1rem;
+}
+
 .xrounded-lg {
   border-radius: 0.5rem;
 }
 
 .xrounded-full {
   border-radius: 9999px;
-}
-
-.xrounded-l {
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-}
-
-.xrounded-r {
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
 }
 
 .xborder {
@@ -594,18 +604,23 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
-.xbg-transparent {
-  background-color: transparent;
+.xbg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.xbg-gray-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+.xbg-transparent {
+  background-color: transparent;
 }
 
 .xbg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.xbg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 
 .xp-4 {
@@ -616,13 +631,43 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 0.25rem;
 }
 
+.xp-2 {
+  padding: 0.5rem;
+}
+
+.xp-8 {
+  padding: 2rem;
+}
+
+.xpx-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.xpx-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.xpt-4 {
+  padding-top: 1rem;
+}
+
+.xtext-left {
+  text-align: left;
+}
+
 .xtext-center {
   text-align: center;
 }
 
-.xtext-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.xtext-right {
+  text-align: right;
+}
+
+.xtext-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .xtext-4xl {
@@ -630,12 +675,33 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.5rem;
 }
 
-.xfont-bold {
-  font-weight: 700;
+.xtext-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
-.xfont-thin {
-  font-weight: 100;
+.xtext-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.xtext-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.xtext-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.xtext-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.xfont-bold {
+  font-weight: 700;
 }
 
 .xfont-semibold {
@@ -646,19 +712,40 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 900;
 }
 
-.xtext-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-
 .xtext-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
+.xtext-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.xtext-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.xtext-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.xline-through {
+  -webkit-text-decoration-line: line-through;
+  text-decoration-line: line-through;
+}
+
 .xoutline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.xtransition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .option-btn {
@@ -697,10 +784,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .ur-button {
   margin-top: 2rem;
   margin-right: 1rem;
-  border-radius: 9999px;
-  border-width: 1px;
+  border-radius: 0.75rem;
+  border-width: 2px;
   --tw-border-opacity: 1;
-  border-color: rgb(17 24 39 / var(--tw-border-opacity));
+  border-color: rgb(34 197 94 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 1rem;
@@ -709,7 +798,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2rem;
   font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -717,9 +806,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ur-button:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
 .plan-selector-btn .select-indicator {
@@ -744,14 +833,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   outline: none !important;
 }
 
-.hover\:xbg-gray-400:hover {
+.hover\:xbg-gray-200:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
-}
-
-.hover\:xtext-gray-700:hover {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .hover\:xtext-black:hover {
@@ -767,4 +851,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .focus\:xoutline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+@media (min-width: 750px) {
+  .md\:xpx-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }

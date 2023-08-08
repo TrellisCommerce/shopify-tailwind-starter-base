@@ -1,32 +1,61 @@
 <script src='{{ 'build-a-box.js' | asset_url }}' defer></script>
 <div class='page-width page-width-desktop scroll-trigger animate--slide-in xmt-8'>
-  <form id='add-box-to-cart-form' class=' xmax-w-2xl'>
+  <form id='add-box-to-cart-form' class=' xmax-w-2xl xpx-2 md:xpx-0'>
     {% assign collection = collections[section.settings.collection] %}
     <script>
       window.ur_subscription_variants = [];
     </script>
 
-    <div class='variant-selector'>
+    <div class='variant-selector xmb-8'>
       <button type='button' class='option-btn' data-option='400g'>400g</button>
       <button type='button' class='option-btn active' data-option='800g'>800g</button>
     </div>
 
+    {% assign preselectedValue = 0 %}
+
     {% for product in collection.products %}
-      <div class='product-item xmt-8 xp-4  xborder xrounded-lg '>
+      {%- liquid
+        assign custom_classes_product = ''
+        assign mod2 = forloop.index | modulo: 2
+        if mod2 != 0
+          assign custom_classes_product = custom_classes_product | append: 'xbg-gray-100 '
+        endif
+      -%}
+      {%- liquid
+        if forloop.index == 1
+          assign preselectedValue = 1
+        elsif forloop.index == 2
+          assign preselectedValue = 1
+        else
+          assign preselectedValue = 0
+        endif
+      -%}
+
+      <div class='product-item xp-4 {{ custom_classes_product }} xoverflow-hidden xrounded-2xl'>
         {% for variant in product.variants %}
-          {% assign custom_classes = '' %}
-          {% if variant.option1 == '400g' %}
-            {% assign custom_classes = custom_classes | append: 'xhidden ' %}
-          {% endif %}
+          {%- liquid
+            assign custom_classes_variant = ''
+            assign preselectedValueVariant = 0
+            if variant.option1 == '400g'
+              assign custom_classes_variant = custom_classes_variant | append: 'xhidden '
+              assign preselectedValueVariant = 0
+            else
+              if preselectedValue == 1
+                assign preselectedValueVariant = 1
+              else
+                assign preselectedValueVariant = 0
+              endif
+            endif
+          -%}
 
           <div
-            class='variant ur-variant {{ custom_classes }} xflex xgap-4 xitems-center'
+            class='variant ur-variant {{ custom_classes_variant }} xflex xgap-4 xitems-center'
             data-option='{{ variant.option1 }}'
           >
-            <div class='variant-img'>
+            <div class='variant-img  xrounded-lg xoverflow-hidden'>
               {% if variant.image != null %}
                 <img
-                  style='max-height: 120px;'
+                  style='max-height: 65px;'
                   height='100'
                   width='auto'
                   loading='lazy'
@@ -35,7 +64,7 @@
                 >
               {% else %}
                 <img
-                  style='max-height: 120px;'
+                  style='max-height: 65px;'
                   height='100'
                   width='auto'
                   loading='lazy'
@@ -44,38 +73,34 @@
                 >
               {% endif %}
             </div>
-            <div class='variant-info'>
-              <h2 class=' xfont-bold'>{{ product.title }}</h2>
-              <span>{{ variant.title }}</span>
-              <br>
-              <span>
-                {{ variant.price | money }}
-              </span>
+            <div class='variant-info xflex xgap-4 xjustify-between xw-full xitems-center'>
+              <h2 class='xfont-bold xtext-3xl'>{{ product.title }}</h2>
 
               <input type='hidden' class='variant-id' value='{{ variant.id }}'>
 
-              <div class='custom-number-input xh-10 xw-32'>
-                <div class='xflex xflex-row xh-10 xw-full xrounded-lg xrelative xbg-transparent xmt-1'>
+              <div class='custom-number-input xh-20  xw-64'>
+                <div class='xflex xflex-row xh-20 xw-full xrounded-lg xrelative xbg-transparent xmt-1'>
                   <button
                     type='button'
                     data-action='decrement'
-                    class=' xbg-gray-300 xtext-gray-600 hover:xtext-gray-700 hover:xbg-gray-400 xh-full xw-20 xrounded-l xcursor-pointer xoutline-none'
+                    class='  xh-full  xw-64 xrounded-full hover:xbg-gray-200 xtransition-all xcursor-pointer xoutline-none'
                   >
-                    <span class='xm-auto xtext-2xl xfont-thin'>−</span>
+                    <span class='xpx-4 xm-auto xtext-4xl xfont-bold'>−</span>
                   </button>
                   <input
                     id='quantity_{{ variant.id }}'
                     type='number'
-                    class='variant-quantity xoutline-none focus:xoutline-none xtext-center xw-full xbg-gray-300 xfont-semibold xtext-md hover:xtext-black focus:xtext-black  md:xtext-basecursor-default xflex xitems-center xtext-gray-700  xoutline-none'
+                    class='variant-quantity xrounded-lg xoutline-none focus:xoutline-none xtext-center xw-full  xfont-semibold xtext-md hover:xtext-black focus:xtext-black  md:xtext-basecursor-default xflex xitems-center xtext-gray-700  xoutline-none {{ custom_classes_product }}'
                     name='custom-input-number'
-                    value='0'
+                    value='{{ preselectedValueVariant }}'
+                    min='0'
                   >
                   <button
                     type='button'
                     data-action='increment'
-                    class='xbg-gray-300 xtext-gray-600 hover:xtext-gray-700 hover:xbg-gray-400 xh-full xw-20 xrounded-r xcursor-pointer'
+                    class=' xh-full  xw-64 xrounded-full hover:xbg-gray-200 xtransition-all xcursor-pointer'
                   >
-                    <span class='xm-auto xtext-2xl xfont-thin'>+</span>
+                    <span class='xpx-4 xm-auto xtext-4xl xfont-bold'>+</span>
                   </button>
                 </div>
               </div>
@@ -98,7 +123,7 @@
         <div class='!xflex xitems-center xjustify-center xrounded-full xw-6 xh-6 xborder-2 xborder-black'>
           <div class='select-indicator xrounded-full xp-1 xbg-black '></div>
         </div>
-        <span> One Time </span>
+        <span> Einmalige Bestellung </span>
       </div>
       <div
         data-plan='689522049319'
@@ -107,12 +132,25 @@
         <div class='!xflex xitems-center xjustify-center xrounded-full xw-6 xh-6 xborder-2 xborder-black'>
           <div class='select-indicator xrounded-full xp-1 xbg-black'></div>
         </div>
-        <span> Monthly </span>
+        <span> Monatliche Lieferung </span>
+        <div class='xbg-green-500 xtext-white xrounded-full xtext-sm xp-2 xpx-4'>Spare 10%!</div>
       </div>
     </div>
-    <div class='ur-form-footer xflex xgap-4 xitems-center xjustify-between'>
-      <div class='price-display xtext-4xl xfont-black '><span class='price-total'>0,00</span><span>€</span></div>
-      <button type='submit' id='add-box-to-cart' class='ur-button'>Add All to Cart</button>
+    <div class='ur-form-footer xmt-8 xp-8 xrounded-lg xborder xmb-8'>
+      <div class='footer-top xflex xgap-4 xitems-end xjustify-between'>
+        <div class='price-display xtext-5xl xfont-black xtext-gray-900'>
+          <span class='price-total '>0.00</span><span>€</span>
+          <div class='price-display-compare xhidden xinline-block xtext-3xl xtext-gray-500 xline-through'>
+            <span class='price-compare-at'>0.00</span><span>€</span>
+          </div>
+        </div>
+        <div class='xtext-right' style='font-size: 1.2rem;'>
+          <div><span class='total-quantity-couunt xfont-bold'>2</span><span> Dosen</span></div>
+          <div><span class='single-item-price xfont-bold'>4.05€</span><span> pro Dose</span></div>
+        </div>
+      </div>
+      <div class='footer-info xtext-lg xborder-t xmt-8 xpt-4'>{{ section.settings.below_price_info }}</div>
+      <button type='submit' id='add-box-to-cart' class='ur-button xw-full xmt-8'>In den Warenkorb</button>
     </div>
   </form>
 </div>
@@ -127,6 +165,12 @@
       "type": "collection",
       "id": "collection",
       "label": "Collection"
+    },
+    {
+      "type": "richtext",
+      "id": "below_price_info",
+      "label": "Below Price Info",
+      "default": "<p>(€7,48 / kg) inkl. MwSt., zzgl. Versandkosten</p>"
     }
   ]
 }
