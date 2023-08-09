@@ -140,26 +140,32 @@
         <div class='xbg-green-500 xtext-white xrounded-full xtext-sm xp-2 xpx-4'>Spare 10%!</div>
       </div>
     </div>
-    <div class='ur-form-footer xmt-8 xp-8 xrounded-lg xborder xmb-8'>
-      <div class='footer-top xflex xgap-4 xitems-end xjustify-between'>
-        <div class='price-display xtext-5xl xfont-black xtext-gray-900'>
-          <span class='price-total '>0.00</span><span>€</span>
-          <div class='price-display-compare xhidden xinline-block xtext-3xl xtext-gray-500 xline-through'>
-            <span class='price-compare-at'>0.00</span><span>€</span>
+    <div class='ur-form-footer xmt-8 xrounded-lg xborder xmb-8 xoverflow-clip'>
+      <div class=' xbg-amber-500 xtext-white xrounded-t-lg xp-4 xfont-bold xtext-center' style='font-size: 1.3rem;'>
+        Füge <span class='quantity-break-counter xfont-black' style='font-size: 1.5rem;'>22</span> Dosen hinzu um
+        weitere 5% zu sparen!
+      </div>
+      <div class='xp-8'>
+        <div class='footer-top xflex xgap-4 xitems-end xjustify-between'>
+          <div class='price-display xtext-5xl xfont-black xtext-gray-900'>
+            <span class='price-total '>0.00</span><span>€</span>
+            <div class='price-display-compare xhidden xinline-block xtext-3xl xtext-gray-500 xline-through'>
+              <span class='price-compare-at'>0.00</span><span>€</span>
+            </div>
+          </div>
+          <div class='xtext-right' style='font-size: 1.2rem;'>
+            <div><span class='total-quantity-couunt xfont-bold'>2</span><span> Dosen</span></div>
+            <div>
+              <span class='single-item-price-count xfont-bold'>4.05</span><span class='xfont-bold'> €</span
+              ><span> pro Dose</span>
+            </div>
           </div>
         </div>
-        <div class='xtext-right' style='font-size: 1.2rem;'>
-          <div><span class='total-quantity-couunt xfont-bold'>2</span><span> Dosen</span></div>
-          <div>
-            <span class='single-item-price-count xfont-bold'>4.05</span><span class='xfont-bold'> €</span
-            ><span> pro Dose</span>
-          </div>
+        <div class='footer-info xtext-lg xborder-t xmt-8 xpt-4'>
+          (<span class='unit-price-display'></span> € / kg) {{ section.settings.below_price_info }}
         </div>
+        <button type='submit' id='add-box-to-cart' class='ur-button xw-full xmt-8'>In den Warenkorb</button>
       </div>
-      <div class='footer-info xtext-lg xborder-t xmt-8 xpt-4'>
-        (<span class='unit-price-display'></span> € / kg) {{ section.settings.below_price_info }}
-      </div>
-      <button type='submit' id='add-box-to-cart' class='ur-button xw-full xmt-8'>In den Warenkorb</button>
     </div>
   </form>
 </div>

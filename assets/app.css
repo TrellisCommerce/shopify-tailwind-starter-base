@@ -571,6 +571,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow: hidden;
 }
 
+.xoverflow-clip {
+  overflow: clip;
+}
+
 .xrounded-2xl {
   border-radius: 1rem;
 }
@@ -581,6 +585,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xrounded-full {
   border-radius: 9999px;
+}
+
+.xrounded-t-lg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .xborder {
@@ -617,6 +626,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xbg-green-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
+
+.xbg-orange-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+}
+
+.xbg-amber-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 158 11 / var(--tw-bg-opacity));
 }
 
 .xp-4 {

@@ -101,8 +101,6 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     );
 
-    console.log(unitPrice);
-
     let unitPriceFormat = (unitPrice / 100).toLocaleString(undefined, {
       maximumFractionDigits: 2,
       minimumFractionDigits: 2,
@@ -218,8 +216,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
       for (let k = 0; k < products.length; k++) {
         const product = products[k];
-        console.log('Product');
-        console.log(product);
         const variants = product.getElementsByClassName('ur-variant');
 
         let highestQuantity = 0;
