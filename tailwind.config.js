@@ -1,3 +1,40 @@
+const plugin = require('tailwindcss/plugin');
+
+const gridSystem = ({ addComponents }) =>
+  addComponents({
+    '.grid-system': {
+      marginLeft: '1rem',
+      marginRight: '1rem',
+      display: 'grid',
+      gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
+      MozColumnGap: '1rem',
+      columnGap: '1rem',
+    },
+    '@media (min-width: 640px)': {
+      '.grid-system': {
+        marginLeft: '2rem',
+        marginRight: '2rem',
+        gridTemplateColumns: 'repeat(8, minmax(0, 1fr))',
+      },
+    },
+    '@media (min-width: 1024px)': {
+      '.grid-system': {
+        marginLeft: '120px',
+        marginRight: '120px',
+        gridTemplateColumns: 'repeat(12, minmax(0, 1fr))',
+        MozColumnGap: '1.25rem',
+        columnGap: '1.25rem',
+      },
+    },
+    '@media (min-width: 1536px)': {
+      '.grid-system': {
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        maxWidth: '1296px',
+      },
+    },
+  });
+
 module.exports = {
   prefix: 'twcss-',
   content: [
@@ -25,5 +62,5 @@ module.exports = {
       black: '#000000',
     },
   },
-  plugins: [],
+  plugins: [plugin(gridSystem)],
 };

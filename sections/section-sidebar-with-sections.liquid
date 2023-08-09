@@ -19,13 +19,22 @@
             class='twcss-flex twcss-items-center twcss-gap-5 twcss-p-4 hover:twcss-bg-box-background twcss-transition-all twcss-duration-300 item-navigation-{{ forloop.index }}'
             href='#item_{{ forloop.index }}'
           >
-            <img
-              src='{{ block.settings.menu_image | image_url }}'
-              alt='{{ block.settings.menu_title }}'
-              height='auto'
-              width='30'
-              loading='lazy'
-            >
+            {% if block.settings.menu_image %}
+              <img
+                src='{{ block.settings.menu_image | image_url }}'
+                alt='{{ block.settings.menu_title }}'
+                height='auto'
+                width='30'
+                loading='lazy'
+              >
+            {% else %}
+              <img
+                src='https://dummyimage.com/220x220'
+                width='30'
+                height='30'
+                loading='lazy'
+              >
+            {% endif %}
             {{ block.settings.menu_title }}
           </a>
         </li>
@@ -427,7 +436,18 @@
   ],
   "presets": [
     {
-      "name": "SidebSidebar with sections"
+      "name": "SidebSidebar with sections",
+      "blocks": [
+        {
+          "type": "version_1"
+        },
+        {
+          "type": "version_2"
+        },
+        {
+          "type": "version_3"
+        }
+      ]
     }
   ]
 }

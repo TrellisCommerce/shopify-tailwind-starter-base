@@ -14,7 +14,13 @@
             height='auto'
           >
         {% else %}
-          <img src='https://dummyimage.com/100x600' width='auto' height='auto' loading='lazy'>
+          <img
+            class='twcss-w-full twcss-object-cover md:twcss-h-[684px] lg:twcss-h-[1040px]'
+            src='https://dummyimage.com/500x1000'
+            width='auto'
+            height='auto'
+            loading='lazy'
+          >
         {% endif %}
         <div class='twcss-mt-[10px] twcss-flex twcss-items-center twcss-gap-2 [&>.icon-caret]:twcss-w-3 [&>.icon-caret]:-twcss-rotate-90'>
           <h4 class='twcss-typ-h4-subtopic-2 twcss-text-primary'>
@@ -48,7 +54,13 @@
               height='auto'
             >
           {% else %}
-            <img src='https://dummyimage.com/600x1000' width='auto' height='auto' loading='lazy'>
+            <img
+              class='twcss-h-full twcss-w-full twcss-object-cover md:twcss-h-[332px] lg:twcss-h-[510px]'
+              src='https://dummyimage.com/500x500'
+              width='auto'
+              height='auto'
+              loading='lazy'
+            >
           {% endif %}
         </div>
         <div class='twcss-mt-[10px] twcss-flex twcss-items-center twcss-gap-2 [&>.icon-caret]:twcss-w-3 [&>.icon-caret]:-twcss-rotate-90'>
@@ -206,17 +218,20 @@
         {
           "type": "textarea",
           "id": "comment",
-          "label": "Comment"
+          "label": "Comment",
+          "default": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim corrupti amet molestias maiores sed, esse dolores exercitationem architecto sequi assumenda."
         },
         {
           "type": "text",
           "id": "author",
-          "label": "Author"
+          "label": "Author",
+          "default": "Lorem ipsum dolor sit amet."
         },
         {
           "type": "text",
           "id": "charge",
-          "label": "Charge"
+          "label": "Charge",
+          "default": "Lorem ipsum dolor sit amet consectetur."
         }
       ]
     },
@@ -227,24 +242,32 @@
         {
           "type": "text",
           "id": "eyebrow",
-          "label": "Eyebrow"
+          "label": "Eyebrow",
+          "default": "Lorem ipsum dolor sit amet."
         },
         {
           "type": "text",
           "id": "title",
-          "label": "Title"
+          "label": "Title",
+          "default": "Lorem ipsum dolor sit amet."
         },
         {
           "type": "textarea",
           "id": "comment",
-          "label": "comment"
+          "label": "comment",
+          "default": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim corrupti amet molestias maiores sed, esse dolores exercitationem architecto sequi assumenda."
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Images with review"
+      "name": "Images with review",
+      "blocks": [
+        {
+          "type": "comment"
+        }
+      ]
     }
   ]
 }

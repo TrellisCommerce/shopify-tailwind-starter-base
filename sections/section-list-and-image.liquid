@@ -59,14 +59,24 @@
   </div>
 
   <div class='twcss-w-full md:twcss-w-1/2'>
-    <img
-      src='{{ section.settings.image | image_url }}'
-      class='twcss-h-full twcss-w-full twcss-object-cover'
-      alt='product-image'
-      loading='lazy'
-      width='auto'
-      height='auto'
-    >
+    {% if section.settings.image %}
+      <img
+        src='{{ section.settings.image | image_url }}'
+        class='twcss-h-full twcss-w-full twcss-object-cover twcss-max-h-[700px]'
+        alt='product-image'
+        loading='lazy'
+        width='auto'
+        height='auto'
+      >
+    {% else %}
+      <img
+        class='twcss-h-full twcss-w-full twcss-object-cover twcss-max-h-[700px]'
+        src='https://dummyimage.com/600x600'
+        width='auto'
+        height='auto'
+        loading='lazy'
+      >
+    {% endif %}
   </div>
 </section>
 

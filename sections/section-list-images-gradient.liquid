@@ -5,7 +5,11 @@
   {%- for block in section.blocks -%}
     <div
       class='twcss-w-1/4 twcss-min-w-[300px] twcss-bg-cover twcss-bg-center twcss-relative twcss-min-h-[700px]'
-      style='background-image: url({{ block.settings.backogrund_image | image_url }});'
+      style='
+        background-image: url({% if block.settings.backogrund_image%}
+        {{ block.settings.backogrund_image | image_url }}
+        {% else %}https://dummyimage.com/300x600 {% endif %});
+      '
     >
       <div
         class='twcss-t-0 twcss-absolute twcss-h-full twcss-w-full empty:twcss-block twcss-z-0'
@@ -116,7 +120,21 @@
   ],
   "presets": [
     {
-      "name": "List images gradient"
+      "name": "List images gradient",
+      "blocks": [
+        {
+          "type": "item_gradient"
+        },
+        {
+          "type": "item_gradient"
+        },
+        {
+          "type": "item_gradient"
+        },
+        {
+          "type": "item_gradient"
+        }
+      ]
     }
   ]
 }

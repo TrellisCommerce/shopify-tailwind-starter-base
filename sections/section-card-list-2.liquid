@@ -9,24 +9,44 @@
     {%- for block in section.blocks -%}
       <div class='twcss-group twcss-w-[253px] twcss-min-w-[253px] twcss-border twcss-border-border twcss-border-opacity-50 twcss-bg-background twcss-p-4 md:twcss-min-w-[279px] lg:twcss-min-w-[400px] lg:twcss-p-5 lg:hover:twcss-border-transparent lg:hover:twcss-shadow-lg hover:lg:twcss-mb-0 lg:twcss-mb-[46px]'>
         <div class='twcss-relative twcss-mb-[10px] lg:twcss-mb-5'>
-          <img
-            src='{{ block.settings.image | image_url }}'
-            class='twcss-h-[300px] twcss-w-full twcss-object-cover'
-            alt='logo'
-            loading='lazy'
-            width='auto'
-            height='auto'
-          >
+          {% if block.settings.image %}
+            <img
+              src='{{ block.settings.image | image_url }}'
+              class='twcss-h-[300px] twcss-w-full twcss-object-cover'
+              alt='logo'
+              loading='lazy'
+              width='auto'
+              height='auto'
+            >
+          {% else %}
+            <img
+              class='twcss-h-[300px] twcss-w-full twcss-object-cover'
+              src='https://dummyimage.com/300x300'
+              width='auto'
+              height='auto'
+              loading='lazy'
+            >
+          {% endif %}
           {%- if block.settings.show_content_image == true -%}
             <div class='twcss-absolute twcss-top-1/2 twcss-left-1/2 twcss-flex twcss-w-full twcss--translate-y-1/2 twcss--translate-x-1/2 twcss-flex-col twcss-items-center twcss-justify-center twcss-bg-black/30 twcss-h-full'>
-              <img
-                src='{{ block.settings.logo | image_url }}'
-                class='twcss-max-w-[54px] twcss-object-cover'
-                alt='image'
-                loading='lazy'
-                width='auto'
-                height='auto'
-              >
+              {% if block.settings.logo %}
+                <img
+                  src='{{ block.settings.logo | image_url }}'
+                  class='twcss-max-w-[54px] twcss-object-cover'
+                  alt='image'
+                  loading='lazy'
+                  width='auto'
+                  height='auto'
+                >
+              {% else %}
+                <img
+                  class='twcss-max-w-[54px] twcss-object-cover'
+                  src='https://dummyimage.com/54x54'
+                  width='auto'
+                  height='auto'
+                  loading='lazy'
+                >
+              {% endif %}
               <p class='twcss-typ-h2-subheading-a twcss-uppercase twcss-text-background'>
                 {{ block.settings.text_image }}
               </p>
@@ -143,7 +163,19 @@
       "name": "Card list 2",
       "blocks": [
         {
-          "type": "Card"
+          "type": "card_section"
+        },
+        {
+          "type": "card_section"
+        },
+        {
+          "type": "card_section"
+        },
+        {
+          "type": "card_section"
+        },
+        {
+          "type": "card_section"
         }
       ]
     }

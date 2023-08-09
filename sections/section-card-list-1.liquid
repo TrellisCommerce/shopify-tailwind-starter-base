@@ -25,14 +25,24 @@
         class='twcss-group twcss-w-[269px] twcss-min-w-[269px] twcss-bg-background md:twcss-min-w-[216px] lg:twcss-mb-[46px] lg:twcss-min-w-[245px] hover:lg:twcss-mb-0'
       >
         <div class='twcss-mb-[16px] lg:twcss-mb-3'>
-          <img
-            src='{{ block.settings.image | image_url }}'
-            class='twcss-h-[269px] twcss-w-full twcss-object-cover md:twcss-h-[216px] lg:twcss-h-[245px]'
-            alt='logo'
-            loading='lazy'
-            width='auto'
-            height='auto'
-          >
+          {% if block.settings.image %}
+            <img
+              src='{{ block.settings.image | image_url }}'
+              class='twcss-h-[269px] twcss-w-full twcss-object-cover md:twcss-h-[216px] lg:twcss-h-[245px]'
+              alt='logo'
+              loading='lazy'
+              width='auto'
+              height='auto'
+            >
+          {% else %}
+            <img
+              class='twcss-h-[269px] twcss-w-full twcss-object-cover md:twcss-h-[216px] lg:twcss-h-[245px]'
+              src='https://dummyimage.com/250x250'
+              width='auto'
+              height='auto'
+              loading='lazy'
+            >
+          {% endif %}
         </div>
         <h4 class='twcss-typ-h4-subtopic-2 twcss-mb-2 twcss-uppercase twcss-text-primary'>
           {{ block.settings.title }}
@@ -59,7 +69,7 @@
   "settings": [],
   "blocks": [
     {
-      "type": "Slider",
+      "type": "card",
       "name": "Feature",
       "settings": [
         {
@@ -70,17 +80,20 @@
         {
           "type": "text",
           "id": "title",
-          "label": "Title"
+          "label": "Title",
+          "default": "Lorem ipsum dolor sit amet."
         },
         {
           "type": "textarea",
           "id": "description",
-          "label": "Description"
+          "label": "Description",
+          "default": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam vitae earum molestiae possimus ipsa saepe dolorem enim aspernatur ut! Unde repellendus iste quasi porro doloribus. Distinctio nesciunt dolorem dicta quis ab. Praesentium eius obcaecati rem, mollitia a dicta eos vitae!"
         },
         {
           "type": "text",
           "id": "button_text",
-          "label": "Button text"
+          "label": "Button text",
+          "default": "Button"
         },
         {
           "type": "url",
@@ -101,7 +114,19 @@
       "name": "Card list 1",
       "blocks": [
         {
-          "type": "Card"
+          "type": "card"
+        },
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
         }
       ]
     }

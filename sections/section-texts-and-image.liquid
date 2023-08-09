@@ -4,14 +4,24 @@
     style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;'
   >
     <div class='twcss-flex twcss-w-full twcss-flex-col twcss-justify-center {% if section.settings.reverse_color == 'dark' %} twcss-bg-primary twcss-text-box-background {% else %} twcss-bg-box-background twcss-text-primary {% endif %} twcss-py-[60px]  twcss-px-4 md:twcss-w-1/2 md:twcss-pl-8 md:twcss-pr-4 lg:twcss-py-[130px] lg:twcss-px-[100px]'>
-      <img
-        src='{{ section.settings.small_image | image_url }}'
-        class='twcss-mb-3 twcss-w-8 twcss-h-8 twcss-rounded-full lg:twcss-hidden'
-        alt='logo'
-        loading='lazy'
-        width='auto'
-        height='auto'
-      >
+      {% if block.settings.menu_image %}
+        <img
+          src='{{ section.settings.small_image | image_url }}'
+          class='twcss-mb-3 twcss-w-8 twcss-h-8 twcss-rounded-full lg:twcss-hidden'
+          alt='logo'
+          loading='lazy'
+          width='auto'
+          height='auto'
+        >
+      {% else %}
+        <img
+          src='https://dummyimage.com/30x30'
+          class='twcss-mb-3 twcss-w-8 twcss-h-8 twcss-rounded-full lg:twcss-hidden'
+          width='auto'
+          height='auto'
+          loading='lazy'
+        >
+      {% endif %}
       <h2 class='twcss-mb-3 twcss-typ-h2-subheading-b lg:twcss-mb-5'>
         {{ section.settings.title }}
       </h2>
@@ -40,14 +50,24 @@
     </div>
 
     <div class='twcss-w-full md:twcss-w-1/2'>
-      <img
-        src='{{ section.settings.big_image | image_url }}'
-        class='twcss-h-full twcss-w-full twcss-object-cover'
-        alt='product-image'
-        loading='lazy'
-        width='auto'
-        height='auto'
-      >
+      {% if block.settings.menu_image %}
+        <img
+          src='{{ section.settings.big_image | image_url }}'
+          class='twcss-h-full twcss-w-full twcss-object-cover'
+          alt='product-image'
+          loading='lazy'
+          width='auto'
+          height='auto'
+        >
+      {% else %}
+        <img
+          src='https://dummyimage.com/500x500'
+          width='auto'
+          height='auto'
+          loading='lazy'
+          class='twcss-h-full twcss-w-full twcss-object-cover'
+        >
+      {% endif %}
     </div>
   </div>
 </div>
