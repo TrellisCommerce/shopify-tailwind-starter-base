@@ -483,6 +483,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: relative;
 }
 
+.xsticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 .xbottom-0 {
   bottom: 0px;
 }
@@ -661,6 +666,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(245 158 11 / var(--tw-bg-opacity));
 }
 
+.xbg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .xp-4 {
   padding: 1rem;
 }
@@ -775,6 +785,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+body {
+  --swiper-navigation-size: 24px;
+  --swiper-theme-color: #000000;
+  --page-width: 140rem;
 }
 
 .option-btn {

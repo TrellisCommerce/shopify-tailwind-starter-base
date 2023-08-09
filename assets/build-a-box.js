@@ -283,8 +283,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
-  //Swiper Init
-  var swiper = new Swiper('.ur-bab-swiper', {
+  const swiperConfig = {
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
@@ -295,14 +294,45 @@ document.addEventListener('DOMContentLoaded', function () {
     loopAdditionalSlides: 6,
     coverflowEffect: {
       rotate: 0,
-      stretch: 120,
-      depth: 1000,
-      modifier: 2,
+      stretch: 280,
+      depth: 700,
+      modifier: 1.8,
       slideShadows: true,
     },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+  };
+
+  //Swiper Init
+  const swiper = new Swiper('.ur-bab-swiper', swiperConfig);
+
+  const productElements = document.querySelectorAll('.ur-product');
+  productElements.forEach((product) => {
+    product.addEventListener('click', function () {
+      const productIndex =
+        parseInt(product.getAttribute('data-product-index')) - 1;
+      swiper.slideToLoop(productIndex, 400, true);
+    });
   });
+
+  //Footer
+  function getOffset(el) {
+    const rect = el.getBoundingClientRect();
+    let top = rect.top + window.scrollY;
+    let left = rect.left + window.scrollX;
+    return { top, left };
+  }
+
+  // Get the element
+  const footer = document.querySelector('.ur-form-footer');
+
+  if (footer) {
+    const position = getOffset(footer);
+    // Now, position the footer as absolute
+    footer.style.bottom = '0';
+    footer.style.left = position.left + 'px';
+    footer.style.position = 'sticky';
+  }
 });

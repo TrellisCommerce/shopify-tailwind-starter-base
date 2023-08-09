@@ -6,11 +6,11 @@
 {% assign subscriptionPlan = 689522049319 %}
 
 <div class='page-width page-width-desktop scroll-trigger animate--slide-in xmt-8 xflex xgap-16'>
-  <div class='ur-product-images' style='width: calc(100% - 46rem);'>
-    <div class='swiper ur-bab-swiper'>
+  <div class='ur-product-images ' style='width: calc(100% - 46rem);'>
+    <div class='swiper ur-bab-swiper '>
       <div class='swiper-wrapper'>
         {% for product in collection.products %}
-          <div class='swiper-slide'>
+          <div class='swiper-slide !xflex xjustify-center xitems-center'>
             {% if product.image != null %}
               <img
                 height='500'
@@ -41,6 +41,7 @@
 
     <script>
       window.ur_subscription_variants = [];
+      window.ur_subscription_products = [];
       window.ur_subscription_plan = '{{ subscriptionPlan }}';
       window.ur_selected_variant_option = '800g';
       window.ur_quantity_break_target = 24;
@@ -78,7 +79,10 @@
         endif
       -%}
 
-      <div class='product-item ur-product xp-4 {{ custom_classes_product }} xoverflow-hidden xrounded-2xl'>
+      <div
+        class='product-item ur-product xp-4 {{ custom_classes_product }} xoverflow-hidden xrounded-2xl'
+        data-product-index='{{ forloop.index }}'
+      >
         {% for variant in product.variants %}
           {%- liquid
             assign custom_classes_variant = ''
@@ -102,7 +106,7 @@
             <div class='variant-img  xrounded-lg xoverflow-hidden'>
               {% if variant.image != null %}
                 <img
-                  style='height: 65px;'
+                  style='height: 65px;     max-width: 400px;'
                   height='100'
                   width='auto'
                   loading='lazy'
@@ -111,7 +115,7 @@
                 >
               {% else %}
                 <img
-                  style='height: 65px;'
+                  style='height: 65px;     max-width: 400px;'
                   height='100'
                   width='auto'
                   loading='lazy'
@@ -162,6 +166,9 @@
             </div>
           </div>
         {% endfor %}
+        <script>
+          window.ur_subscription_products['{{ product.id }}'] = {{ product | json }};
+        </script>
       </div>
     {% endfor %}
 
@@ -183,7 +190,7 @@
         <div class='xbg-green-500 xtext-white xrounded-full xtext-sm xp-2 xpx-4'>Spare 10%!</div>
       </div>
     </div>
-    <div class='ur-form-footer xmt-8 xrounded-lg xborder xmb-8 xoverflow-clip'>
+    <div class='ur-form-footer xbg-white xmt-8 xrounded-lg xborder xmb-8 xoverflow-clip'>
       <div
         class='quantity-break-target xbg-amber-500 xtext-white xrounded-t-lg xp-4 xfont-bold xtext-center xrelative'
         style='font-size: 1.3rem;'

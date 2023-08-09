@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  --swiper-navigation-size: 24px;
+  --swiper-theme-color: #000000;
+  --page-width: 140rem;
+}
+
 .option-btn {
   @apply xmr-4 xborder-gray-900 xborder xrounded-full hover:xbg-gray-900 xtext-gray-900  hover:xtext-white xpx-6 xpy-2 xtransition-all xfont-bold;
 }
