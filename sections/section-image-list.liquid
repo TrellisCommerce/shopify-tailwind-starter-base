@@ -26,26 +26,24 @@
   <div class='container-scroll twcss-flex twcss-w-full twcss-gap-4 twcss-overflow-x-auto twcss-py-5'>
     {% for block in section.blocks %}
       <div class='twcss-flex twcss-justify-center twcss-w-[350px] twcss-min-w-[250px] twcss-flex-col twcss-px-[25px]'>
-        {% if block.settings.logo != blank %}
-          <a href='{{ block.settings.link }}'>
-            {% if block.settings.logo %}
-              <img
-                src='{{ block.settings.logo | image_url }}'
-                alt='logo'
-                loading='lazy'
-                width='auto'
-                height='auto'
-              >
-            {% else %}
-              <img
-                src='https://dummyimage.com/250x250'
-                width='auto'
-                height='auto'
-                loading='lazy'
-              >
-            {% endif %}
-          </a>
-        {% endif %}
+        <a href='{{ block.settings.link }}'>
+          {% if block.settings.logo %}
+            <img
+              src='{{ block.settings.logo | image_url }}'
+              alt='logo'
+              loading='lazy'
+              width='auto'
+              height='auto'
+            >
+          {% else %}
+            <img
+              src='https://dummyimage.com/250x250'
+              width='auto'
+              height='auto'
+              loading='lazy'
+            >
+          {% endif %}
+        </a>
       </div>
     {% endfor %}
   </div>
@@ -77,7 +75,7 @@
   ],
   "presets": [
     {
-      "name": "collaborators",
+      "name": "Image list",
       "blocks": [
         {
           "type": "item"
