@@ -1,0 +1,225 @@
+<section
+  class='twcss-mx-auto twcss-flex twcss-max-w-[1920px] twcss-flex-wrap-reverse twcss-justify-center {% if section.settings.reverse_content == true %} md:twcss-flex-row-reverse {% endif %}'
+  style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;'
+>
+  <div
+    class='twcss-flex twcss-w-full twcss-flex-col twcss-justify-center twcss-py-[60px]  twcss-px-4 md:twcss-w-1/2 md:twcss-pl-8 md:twcss-pr-4 lg:twcss-py-[132px] lg:twcss-pl-[120px] lg:twcss-pr-[108px]'
+    style='background-color: {{ section.settings.background }}; color: {{ section.settings.text_color }};'
+  >
+    <h2 class='twcss-mb-3 twcss-typ-h2-subheading-a lg:twcss-mb-5'>
+      {{ section.settings.title }}
+    </h2>
+    <ul>
+      {%- for block in section.blocks -%}
+        <li>
+          <div class='twcss-flex twcss-gap-4'>
+            <picture>
+              <img
+                src='{{ block.settings.image | image_url }}'
+                class=' twcss-w-[70px]'
+                width='auto'
+                height='auto'
+                loading='lazy'
+              >
+            </picture>
+            <div>
+              <h3 class='twcss-mb-2 twcss-typ-h4-subtopic-2'>
+                {{ block.settings.title }}
+              </h3>
+              <p class='twcss-mb-6 twcss-typ-body-2'>
+                {{ block.settings.descripcion }}
+              </p>
+            </div>
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+
+    <div class='twcss-flex twcss-w-full twcss-flex-col twcss-gap-4 md:twcss-flex-row'>
+      {%- if section.settings.show_button_1 == true -%}
+        <a
+          href='{{ section.settings.link_button_1 }}'
+          class='twcss-button'
+          style='background-color: {{ section.settings.background_button }}; color: {{ section.settings.text_button_color }};'
+        >
+          {{ section.settings.text_button_1 }}
+        </a>
+      {%- endif -%}
+
+      {%- if section.settings.show_button_2 == true -%}
+        <a
+          href='{{ section.settings.link_button_2 }}'
+          class='twcss-button'
+          style='background-color: {{ section.settings.background_button }}; color: {{ section.settings.text_button_color }};'
+        >
+          {{ section.settings.text_button_2 }}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class='twcss-w-full md:twcss-w-1/2'>
+    {% if section.settings.image %}
+      <img
+        src='{{ section.settings.image | image_url }}'
+        class='twcss-h-full twcss-w-full twcss-object-cover twcss-max-h-[700px]'
+        alt='product-image'
+        loading='lazy'
+        width='auto'
+        height='auto'
+      >
+    {% else %}
+      <img
+        class='twcss-h-full twcss-w-full twcss-object-cover twcss-max-h-[700px]'
+        src='https://dummyimage.com/600x600'
+        width='auto'
+        height='auto'
+        loading='lazy'
+      >
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "List and image",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 36
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#E3E3E3"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title text"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#000"
+    },
+    {
+      "type": "checkbox",
+      "id": "reverse_content",
+      "default": false,
+      "label": "Reverse content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "color",
+      "id": "background_button",
+      "label": "Background buttons",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "text_button_color",
+      "label": "Texts color buttons",
+      "default": "#fff"
+    },
+    {
+      "type": "header",
+      "content": "Button 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button_1",
+      "default": true,
+      "label": "Show button"
+    },
+    {
+      "type": "text",
+      "id": "text_button_1",
+      "label": "Content button",
+      "default": "lorem"
+    },
+    {
+      "type": "url",
+      "id": "link_button_1",
+      "label": "Link",
+      "default": "/"
+    },
+    {
+      "type": "header",
+      "content": "Button 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button_2",
+      "default": false,
+      "label": "Show button"
+    },
+    {
+      "type": "text",
+      "id": "text_button_2",
+      "label": "Content button",
+      "default": "lorem"
+    },
+    {
+      "type": "url",
+      "id": "link_button_2",
+      "label": "Link",
+      "default": "/"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "list_element",
+      "name": "List",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Title text"
+        },
+        {
+          "type": "textarea",
+          "id": "descripcion",
+          "label": "descripcion",
+          "default": "Descripcion text"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "List and image"
+    }
+  ]
+}
+{% endschema %}

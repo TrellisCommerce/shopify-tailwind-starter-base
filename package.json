@@ -4,6 +4,9 @@
   "description": "[![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=informational)](/.github/CONTRIBUTING.md)",
   "main": "index.js",
   "scripts": {
+    "dev": "run-p dev:tailwind dev:shopify",
+    "dev:tailwind": "tailwindcss -i assets/app-tailwind.css -o assets/app.css -w",
+    "dev:shopify": "shopify theme dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install"
   },
@@ -18,15 +21,16 @@
   },
   "homepage": "https://github.com/TrellisCommerce/shopify-dawn-tailwind-starter-base#readme",
   "devDependencies": {
-    "autoprefixer": "^10.4.4",
+    "autoprefixer": "^10.4.13",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.3",
-    "postcss": "^8.4.12",
-    "prettier": "^2.5.1",
-    "tailwindcss": "^3.0.24"
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.4",
+    "tailwindcss": "^3.2.6"
   },
   "dependencies": {
-    "@trelliscommerce/prettier-config": "^1.0.0"
+    "@trelliscommerce/prettier-config": "^1.0.0",
+    "npm-run-all": "^4.1.5"
   },
   "prettier": "@trelliscommerce/prettier-config",
   "lint-staged": {

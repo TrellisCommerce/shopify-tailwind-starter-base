@@ -1,0 +1,101 @@
+<style>
+   /* width */
+   .container-scroll::-webkit-scrollbar {
+      height: 4px;
+  }
+
+  /* Track */
+  .container-scroll::-webkit-scrollbar-track {
+      background: #e3e3e3;
+      border-radius: 3px;
+  }
+
+  /* Handle */
+  .container-scroll::-webkit-scrollbar-thumb {
+      background: #000;
+      border-radius: 3px;
+  }
+  #{{ section.id }} svg {
+      max-width: 100%;
+  }
+</style>
+<section
+  id='{{ section.id }}'
+  class='twcss-flex twcss-py-8 twcss-px-4 twcss-bg-primary md:twcss-px-7 lg:twcss-py-[100px] lg:twcss-px-[120px]'
+>
+  <div class='container-scroll twcss-flex twcss-w-full twcss-gap-4 twcss-overflow-x-auto twcss-py-5'>
+    {% for block in section.blocks %}
+      <div class='twcss-flex twcss-justify-center twcss-w-[350px] twcss-min-w-[250px] twcss-flex-col twcss-px-[25px]'>
+        {% if block.settings.logo != blank %}
+          <a href='{{ block.settings.link }}'>
+            {% if block.settings.logo %}
+              <img
+                src='{{ block.settings.logo | image_url }}'
+                alt='logo'
+                loading='lazy'
+                width='auto'
+                height='auto'
+              >
+            {% else %}
+              <img
+                src='https://dummyimage.com/250x250'
+                width='auto'
+                height='auto'
+                loading='lazy'
+              >
+            {% endif %}
+          </a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Image list",
+  "tag": "section",
+  "class": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "url"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "collaborators",
+      "blocks": [
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

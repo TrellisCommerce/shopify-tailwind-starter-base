@@ -1,0 +1,135 @@
+<style>
+  /* width */
+  .container-scroll::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  /* Track */
+  .container-scroll::-webkit-scrollbar-track {
+    background: #e3e3e3;
+    border-radius: 3px;
+  }
+
+  /* Handle */
+  .container-scroll::-webkit-scrollbar-thumb {
+    background: #1c1d1d;
+    border-radius: 3px;
+  }
+</style>
+<section class='twcss-grid-system twcss-mt-4 twcss-pb-[58px] lg:twcss-mt-[50px]'>
+  <div
+    class='container-scroll twcss-col-span-full twcss-flex twcss-items-start twcss-gap-4 twcss-overflow-x-scroll twcss-bg-scroll twcss-pb-6'
+  >
+    {% for block in section.blocks %}
+      <div
+        class='twcss-group twcss-w-[269px] twcss-min-w-[269px] twcss-bg-background md:twcss-min-w-[216px] lg:twcss-mb-[46px] lg:twcss-min-w-[245px] hover:lg:twcss-mb-0'
+      >
+        <div class='twcss-mb-[16px] lg:twcss-mb-3'>
+          {% if block.settings.image %}
+            <img
+              src='{{ block.settings.image | image_url }}'
+              class='twcss-h-[269px] twcss-w-full twcss-object-cover md:twcss-h-[216px] lg:twcss-h-[245px]'
+              alt='logo'
+              loading='lazy'
+              width='auto'
+              height='auto'
+            >
+          {% else %}
+            <img
+              class='twcss-h-[269px] twcss-w-full twcss-object-cover md:twcss-h-[216px] lg:twcss-h-[245px]'
+              src='https://dummyimage.com/250x250'
+              width='auto'
+              height='auto'
+              loading='lazy'
+            >
+          {% endif %}
+        </div>
+        <h4 class='twcss-typ-h4-subtopic-2 twcss-mb-2 twcss-uppercase twcss-text-primary'>
+          {{ block.settings.title }}
+        </h4>
+        <p class='twcss-typ-body-2 twcss-text-tertiary twcss-mb-[20px]'>
+          {{ block.settings.description }}
+        </p>
+        {% if block.settings.show_button %}
+          <a
+            href='{{ block.settings.url_link }}'
+            class='twcss-button twcss-button-primary twcss-mt-2 twcss-hidden twcss-py-[10px] lg:group-hover:twcss-block'
+          >
+            {{ block.settings.button_text }}
+          </a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Card list 1",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Lorem ipsum dolor sit amet."
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam vitae earum molestiae possimus ipsa saepe dolorem enim aspernatur ut! Unde repellendus iste quasi porro doloribus. Distinctio nesciunt dolorem dicta quis ab. Praesentium eius obcaecati rem, mollitia a dicta eos vitae!"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "Button"
+        },
+        {
+          "type": "url",
+          "id": "url_link",
+          "label": "Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_button",
+          "label": "Show button",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Card list 1",
+      "blocks": [
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

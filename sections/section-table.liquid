@@ -1,0 +1,176 @@
+<section
+  style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;'
+  class='twcss-grid-system'
+>
+  <table class='twcss-min-w-full twcss-mt-5 twcss-col-span-full'>
+    <thead>
+      <tr>
+        {%- if section.settings.disabled_column_1 == true -%}
+          <th
+            scope='col'
+            class='font-medium twcss-px-6 twcss-py-3'
+          >
+            {{ section.settings.title_column_1 }}
+          </th>
+        {%- endif -%}
+        {%- if section.settings.disabled_column_2 == true -%}
+          <th
+            scope='col'
+            class='font-medium twcss-px-6 twcss-py-3'
+          >
+            {{ section.settings.title_column_2 }}
+          </th>
+        {%- endif -%}
+        {%- if section.settings.disabled_column_3 == true -%}
+          <th
+            scope='col'
+            class='font-medium twcss-px-6 twcss-py-3'
+          >
+            {{ section.settings.title_column_3 }}
+          </th>
+        {%- endif -%}
+      </tr>
+    </thead>
+
+    <tbody>
+      {%- for block in section.blocks -%}
+        <tr class='odd:twcss-bg-box-background even:twcss-transparent'>
+          {%- if section.settings.disabled_column_1 == true -%}
+            <td class='twcss-px-6 twcss-py-4 twcss-whitespace-nowrap twcss-text-center'>
+              {{ block.settings.column_1 }}
+            </td>
+          {%- endif -%}
+          {%- if section.settings.disabled_column_2 == true -%}
+            <td class='twcss-px-6 twcss-py-4 twcss-whitespace-nowrap twcss-text-center'>
+              {{ block.settings.column_2 }}
+            </td>
+          {%- endif -%}
+          {%- if section.settings.disabled_column_3 == true -%}
+            <td class='twcss-px-6 twcss-py-4 twcss-whitespace-nowrap twcss-text-center'>
+              {{ block.settings.column_3 }}
+            </td>
+          {%- endif -%}
+        </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+</section>
+
+{% schema %}
+{
+  "name": "Table",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 36
+    },
+    {
+      "type": "text",
+      "id": "title_column_1",
+      "label": "Column 1",
+      "default": "Popular Airlines"
+    },
+    {
+      "type": "checkbox",
+      "id": "disabled_column_1",
+      "default": true,
+      "label": "disabled column 1"
+    },
+    {
+      "type": "text",
+      "id": "title_column_2",
+      "label": "Column 2",
+      "default": "Size Allowance"
+    },
+    {
+      "type": "checkbox",
+      "id": "disabled_column_2",
+      "default": true,
+      "label": "disabled column 2"
+    },
+    {
+      "type": "text",
+      "id": "title_column_3",
+      "label": "Column 3",
+      "default": "Weight"
+    },
+    {
+      "type": "checkbox",
+      "id": "disabled_column_3",
+      "default": true,
+      "label": "disabled column 3"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Column 1"
+        },
+        {
+          "type": "text",
+          "id": "column_1",
+          "label": "Column 1",
+          "default": "lorem"
+        },
+        {
+          "type": "header",
+          "content": "Column 2"
+        },
+        {
+          "type": "text",
+          "id": "column_2",
+          "label": "Column 2",
+          "default": "0"
+        },
+        {
+          "type": "header",
+          "content": "Column 3"
+        },
+        {
+          "type": "text",
+          "id": "column_3",
+          "label": "Column 3",
+          "default": "0"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Table",
+      "blocks": [
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

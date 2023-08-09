@@ -1,0 +1,132 @@
+<section class='twcss-grid-system twcss-gap-y-10 twcss-my-[50px]'>
+  <div class='twcss-col-span-full twcss-flex twcss-flex-col twcss-justify-around md:twcss-col-span-2 lg:twcss-col-span-3 empty:twcss-block'>
+    {%- for block in section.blocks -%}
+      {%- if forloop.index <= 2 -%}
+        <div class='twcss-flex twcss-flex-col twcss-items-end twcss-mb-[65px]'>
+          {% if block.settings.image %}
+            <img
+              class='twcss-w-12'
+              src='{{ block.settings.image | image_url }}'
+              alt=''
+              width='auto'
+              height='auto'
+              loading='lazy'
+            >
+          {% endif %}
+          <h4 class='twcss-typ-h4-subtopic-2 twcss-mb-[10px] twcss-text-primary'>
+            {{ block.settings.title }}
+          </h4>
+          <p class='twcss-text-tertiary twcss-typ-body-2 twcss-text-end'>
+            {{ block.settings.descripcion }}
+          </p>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  <div class='twcss-col-span-full twcss-m-auto md:twcss-col-span-4 lg:twcss-col-span-6'>
+    {% if section.settings.backogrund %}
+      <img
+        src='{{ section.settings.backogrund | image_url }}'
+        class='twcss-object-cover twcss-max-h-[700px]'
+        width='auto'
+        height='auto'
+        loading='lazy'
+      >
+    {% else %}
+      <img
+        class='twcss-object-cover twcss-max-h-[700px]'
+        src='https://dummyimage.com/500x700'
+        width='auto'
+        height='auto'
+        loading='lazy'
+      >
+    {% endif %}
+  </div>
+
+  <div class='twcss-col-span-full twcss-flex twcss-flex-col twcss-justify-around md:twcss-col-span-2 lg:twcss-col-span-3 empty:twcss-block'>
+    {%- for block in section.blocks -%}
+      {%- if forloop.index >= 3 -%}
+        <div class='twcss-flex twcss-flex-col twcss-items-start twcss-mb-[65px]'>
+          {% if block.settings.image %}
+            <img
+              class='twcss-w-12'
+              src='{{ block.settings.image | image_url }}'
+              alt=''
+              width='auto'
+              height='auto'
+              loading='lazy'
+            >
+          {% endif %}
+
+          <h4 class='twcss-typ-h4-subtopic-2 twcss-mb-[10px] twcss-text-primary'>
+            {{ block.settings.title }}
+          </h4>
+          <p class='twcss-text-tertiary twcss-typ-body-2'>
+            {{ block.settings.descripcion }}
+          </p>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Texts with image center",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "backogrund",
+      "label": "Background"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "list_element",
+      "name": "List",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Title text"
+        },
+        {
+          "type": "textarea",
+          "id": "descripcion",
+          "label": "descripcion",
+          "default": "Descripcion text"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Texts with image center",
+      "blocks": [
+        {
+          "type": "list_element"
+        },
+        {
+          "type": "list_element"
+        },
+        {
+          "type": "list_element"
+        },
+        {
+          "type": "list_element"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

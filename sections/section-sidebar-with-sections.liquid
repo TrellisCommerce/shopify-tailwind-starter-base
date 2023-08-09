@@ -1,0 +1,454 @@
+<style>
+  * {
+    scroll-behavior: smooth;
+  }
+  .block_content p {
+    margin-bottom: 20px;
+  }
+</style>
+
+<section
+  style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;'
+  class='twcss-flex twcss-grid-system twcss-gap-5'
+>
+  <div class=' twcss-hidden md:twcss-block md:twcss-w-1/5 twcss-relative'>
+    <ul class='twcss-sticky twcss-top-36'>
+      {%- for block in section.blocks -%}
+        <li>
+          <a
+            class='twcss-flex twcss-items-center twcss-gap-5 twcss-p-4 hover:twcss-bg-box-background twcss-transition-all twcss-duration-300 item-navigation-{{ forloop.index }}'
+            href='#item_{{ forloop.index }}'
+          >
+            {% if block.settings.menu_image %}
+              <img
+                src='{{ block.settings.menu_image | image_url }}'
+                alt='{{ block.settings.menu_title }}'
+                height='auto'
+                width='30'
+                loading='lazy'
+              >
+            {% else %}
+              <img
+                src='https://dummyimage.com/220x220'
+                width='30'
+                height='30'
+                loading='lazy'
+              >
+            {% endif %}
+            {{ block.settings.menu_title }}
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  <div class='twcss-w-full md:twcss-w-4/5'>
+    <ul>
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'version_1' -%}
+            <li id='item_{{ forloop.index }}'>
+              <h4 class='twcss-typ-h5-subtopic-3-a'>
+                {{ block.settings.eyebrow }}
+              </h4>
+              <h2 class='twcss-typ-h2-subheading-a'>{{ block.settings.title }}</h2>
+              {%- if block.settings.image -%}
+                <img
+                  src='{{ block.settings.image | image_url }}'
+                  alt='{{ block.settings.title }}'
+                  height='auto'
+                  width='auto'
+                  loading='lazy'
+                  class='twcss-mb-5 !twcss-h-[420px] twcss-w-full twcss-object-cover'
+                >
+              {%- endif -%}
+              <div class='block_content'>
+                {{ block.settings.content }}
+              </div>
+              <hr class='twcss-hidden md:twcss-block twcss-my-[60px] twcss-h-[1px] twcss-bg-[#CCCCCC]'>
+            </li>
+          {%- when 'version_2' -%}
+            <li id='item_{{ forloop.index }}'>
+              <details class='twcss-block twcss-mb-2 twcss-border-b twcss-border-border twcss-px-2 md:twcss-hidden [&[open]>summary>.plus-icon]:twcss-hidden [&[open]>summary>.minus-icon]:twcss-block'>
+                <summary class='twcss-typ-h5-subtopic-3-a twcss-flex twcss-justify-between twcss-py-3 twcss-items-center'>
+                  <span class='twcss-flex twcss-items-center twcss-gap-5'>
+                    {%- if block.settings.menu_image -%}
+                      <img
+                        src='{{ block.settings.menu_image | image_url }}'
+                        alt='{{ block.settings.menu_title }}'
+                        height='auto'
+                        width='30'
+                        loading='lazy'
+                      >
+                    {%- endif -%}
+
+                    {{ block.settings.menu_title }}
+                  </span>
+                  <span class='plus-icon twcss-rotate-90'>
+                    {% render 'icon-chevron' %}
+                  </span>
+                  <span class='twcss-hidden minus-icon -twcss-rotate-90'>
+                    {% render 'icon-chevron' %}
+                  </span>
+                </summary>
+                <div class='twcss-flex twcss-flex-wrap'>
+                  <div class='twcss-w-full twcss-flex twcss-gap-5 twcss-flex-col md:twcss-flex-row twcss-mb-5'>
+                    {%- if block.settings.image_1 -%}
+                      <img
+                        src='{{ block.settings.image_1 | image_url }}'
+                        alt='{{ block.settings.title_1 }}'
+                        height='auto'
+                        width='auto'
+                        loading='lazy'
+                        class='twcss-object-cover !twcss-h-[220px] twcss-w-full md:twcss-w-1/2'
+                      >
+                    {%- endif -%}
+                    {%- if block.settings.image_2 -%}
+                      <img
+                        src='{{ block.settings.image_2 | image_url }}'
+                        alt='{{ block.settings.title_2 }}'
+                        height='auto'
+                        width='auto'
+                        loading='lazy'
+                        class='twcss-object-cover !twcss-h-[220px] twcss-w-full md:twcss-w-1/2'
+                      >
+                    {%- endif -%}
+                  </div>
+                  <h3 class='twcss-typ-h3-subtopic-1-a twcss-w-full twcss-mb-3'>
+                    {{ block.settings.title_columns }}
+                  </h3>
+                  <div class='twcss-w-full twcss-flex twcss-gap-5 twcss-flex-col lg:twcss-flex-row'>
+                    <div>
+                      {{ block.settings.content_1 }}
+                    </div>
+                    <div>
+                      {{ block.settings.content_2 }}
+                    </div>
+                  </div>
+                </div>
+              </details>
+              <div class='twcss-hidden md:twcss-block'>
+                <div class='twcss-w-full twcss-flex lg:twcss-gap-5 twcss-flex-col md:twcss-flex-row'>
+                  {%- if block.settings.image_1 -%}
+                    <img
+                      src='{{ block.settings.image_1 | image_url }}'
+                      alt='{{ block.settings.title_1 }}'
+                      height='auto'
+                      width='auto'
+                      loading='lazy'
+                      class='twcss-mb-5 twcss-object-cover !twcss-h-[220px] twcss-w-full md:twcss-w-1/2 twcss-pr-[10px] lg:twcss-p-0'
+                    >
+                  {%- endif -%}
+                  {%- if block.settings.image_2 -%}
+                    <img
+                      src='{{ block.settings.image_2 | image_url }}'
+                      alt='{{ block.settings.title_2 }}'
+                      height='auto'
+                      width='auto'
+                      loading='lazy'
+                      class='twcss-mb-5 twcss-object-cover !twcss-h-[220px] twcss-w-full md:twcss-w-1/2 twcss-pl-[10px] lg:twcss-p-0'
+                    >
+                  {%- endif -%}
+                </div>
+                <h3 class='twcss-typ-h3-subtopic-1-a twcss-w-full twcss-mb-3'>
+                  {{ block.settings.title_columns }}
+                </h3>
+                <div class='twcss-w-full twcss-flex twcss-gap-5 twcss-flex-col lg:twcss-flex-row'>
+                  <div class='twcss-w-1/2'>
+                    {{ block.settings.content_1 }}
+                  </div>
+                  <div class='twcss-w-1/2'>
+                    {{ block.settings.content_2 }}
+                  </div>
+                </div>
+                <hr class='twcss-my-[60px] twcss-w-full twcss-h-[1px] twcss-bg-[#CCCCCC]'>
+              </div>
+            </li>
+          {%- when 'version_3' -%}
+            <li id='item_{{ forloop.index }}'>
+              <details class='twcss-block twcss-mb-2 twcss-border-b twcss-border-border twcss-px-2 md:twcss-hidden [&[open]>summary>.plus-icon]:twcss-hidden [&[open]>summary>.minus-icon]:twcss-block'>
+                <summary class='twcss-typ-h5-subtopic-3-a twcss-flex twcss-justify-between twcss-py-3 twcss-items-center'>
+                  <span class='twcss-flex twcss-items-center twcss-gap-5'>
+                    {%- if block.settings.menu_image -%}
+                      <img
+                        src='{{ block.settings.menu_image | image_url }}'
+                        alt='{{ block.settings.menu_title }}'
+                        height='auto'
+                        width='30'
+                        loading='lazy'
+                      >
+                    {%- endif -%}
+                    {{ block.settings.menu_title }}
+                  </span>
+                  <span class='plus-icon twcss-rotate-90'>
+                    {% render 'icon-chevron' %}
+                  </span>
+                  <span class='twcss-hidden minus-icon -twcss-rotate-90'>
+                    {% render 'icon-chevron' %}
+                  </span>
+                </summary>
+                <div>
+                  {%- if block.settings.image -%}
+                    <img
+                      src='{{ block.settings.image | image_url }}'
+                      alt='{{ block.settings.title }}'
+                      height='auto'
+                      width='auto'
+                      loading='lazy'
+                      class='twcss-mb-5 !twcss-h-[420px] twcss-w-full twcss-object-cover'
+                    >
+                  {%- endif -%}
+
+                  <h3 class='twcss-typ-h3-subtopic-1-a twcss-w-full twcss-mb-3'>
+                    {{ block.settings.title_columns }}
+                  </h3>
+                  <div class='twcss-flex twcss-flex-col twcss-gap-5'>
+                    <div class='twcss-w-full'>
+                      <div>
+                        {{ block.settings.content_1 }}
+                      </div>
+                    </div>
+                    <div class='twcss-w-full'>
+                      <div>
+                        {{ block.settings.content_2 }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </details>
+              <div class='twcss-hidden md:twcss-block'>
+                {%- if block.settings.image -%}
+                  <img
+                    src='{{ block.settings.image | image_url }}'
+                    alt='{{ block.settings.title }}'
+                    height='auto'
+                    width='auto'
+                    loading='lazy'
+                    class='twcss-mb-5 !twcss-h-[420px] twcss-w-full twcss-object-cover'
+                  >
+                {%- endif -%}
+
+                <h3 class='twcss-typ-h3-subtopic-1-a twcss-w-full twcss-mb-3'>
+                  {{ block.settings.title_columns }}
+                </h3>
+                <div class='twcss-w-full twcss-flex twcss-gap-5 twcss-flex-col lg:twcss-flex-row'>
+                  <div class='twcss-w-1/2'>
+                    {{ block.settings.content_1 }}
+                  </div>
+                  <div class='twcss-w-1/2'>
+                    {{ block.settings.content_2 }}
+                  </div>
+                </div>
+                <hr class='twcss-my-[60px] twcss-h-[1px] twcss-bg-[#CCCCCC]'>
+              </div>
+            </li>
+        {%- endcase -%}
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sidebar with sections",
+  "settings": [
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "version_1",
+      "name": "version 1",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Menu"
+        },
+        {
+          "type": "text",
+          "id": "menu_title",
+          "label": "Menu title",
+          "default": "lorem"
+        },
+        {
+          "type": "image_picker",
+          "id": "menu_image",
+          "label": "Menu image"
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Eyebrow",
+          "default": "Eyebrow"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title",
+          "default": "Title text"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    },
+    {
+      "type": "version_2",
+      "name": "version 2",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Menu"
+        },
+        {
+          "type": "text",
+          "id": "menu_title",
+          "label": "Menu title",
+          "default": "lorem"
+        },
+        {
+          "type": "image_picker",
+          "id": "menu_image",
+          "label": "Menu image"
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "title_columns",
+          "label": "Title columns",
+          "default": "lorem"
+        },
+        {
+          "type": "header",
+          "content": "Column 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "content_1",
+          "label": "Contet"
+        },
+        {
+          "type": "header",
+          "content": "Column 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "content_2",
+          "label": "Contet"
+        }
+      ]
+    },
+    {
+      "type": "version_3",
+      "name": "version 3",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Menu"
+        },
+        {
+          "type": "text",
+          "id": "menu_title",
+          "label": "Menu title",
+          "default": "lorem"
+        },
+        {
+          "type": "image_picker",
+          "id": "menu_image",
+          "label": "Menu image"
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title_columns",
+          "label": "Title columns",
+          "default": "lorem"
+        },
+        {
+          "type": "header",
+          "content": "Column 1"
+        },
+        {
+          "type": "richtext",
+          "id": "content_1",
+          "label": "Contet"
+        },
+        {
+          "type": "header",
+          "content": "Column 2"
+        },
+        {
+          "type": "richtext",
+          "id": "content_2",
+          "label": "Contet"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "SidebSidebar with sections",
+      "blocks": [
+        {
+          "type": "version_1"
+        },
+        {
+          "type": "version_2"
+        },
+        {
+          "type": "version_3"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

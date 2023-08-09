@@ -1,0 +1,131 @@
+<section class='twcss-grid-system twcss-gap-y-[50px] twcss-mt-4 twcss-mb-[58px] lg:twcss-mt-[50px]'>
+  <!-- Primera sección -->
+  <div class='twcss-col-span-full md:twcss-col-span-4 {% if section.settings.toggle_image %}lg:twcss-col-start-8{% else %}md:twcss-col-start-1 lg:twcss-col-start-2{% endif %} lg:twcss-col-span-4 twcss-items-center twcss-flex twcss-flex-col twcss-justify-center'>
+    <h5
+      class='twcss-typ-h5-subtopic-3-a twcss-mb-[16px] twcss-uppercase twcss-text-center twcss-text-primary'
+    >
+      {{ section.settings.sup_title }}
+    </h5>
+    <h2
+      class='twcss-typ-h2-subheading-b twcss-mb-[16px] twcss-text-center twcss-text-primary'
+    >
+      {{ section.settings.title }}
+    </h2>
+    <p
+      class='twcss-typ-body-2 twcss-mb-[14px] twcss-text-center twcss-text-primary'
+    >
+      {{ section.settings.description }}
+    </p>
+    <div class='twcss-flex twcss-flex-col twcss-w-full twcss-gap-y-4'>
+      {% if section.settings.show_first_button %}
+        <button class='twcss-button twcss-button-primary'>
+          {{ section.settings.first_button_title | link_to: section.settings.first_button_link }}
+        </button>
+      {% endif %}
+      {% if section.settings.show_second_button %}
+        <button class='twcss-button twcss-button-secondary'>
+          {{ section.settings.second_button_title | link_to: section.settings.second_button_link }}
+        </button>
+      {% endif %}
+    </div>
+  </div>
+  <!-- Segunda sección -->
+  <div class='twcss-col-span-full twcss-row-start-1 md:twcss-col-span-4 {% if section.settings.toggle_image %}lg:twcss-col-start-2{% else %}md:twcss-col-start-5 lg:twcss-col-start-7{% endif %} lg:twcss-col-span-5'>
+    {% if section.settings.main_image %}
+      <img
+        src='{{ section.settings.main_image | image_url }}'
+        class='{% if section.settings.adapt_image %}twcss-h-[262px]{% endif %} twcss-w-full twcss-object-cover md:twcss-h-[429px] lg:twcss-h-[754px]'
+        alt='logo'
+        loading='lazy'
+        width='auto'
+        height='auto'
+      >
+    {% else %}
+      <div class='twcss-overflow-hidden'>
+        <img src='https://dummyimage.com/720x600' width='auto' height='auto' loading='lazy'>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "lg image text two button",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "toggle_image",
+      "default": false,
+      "label": "Place banner to the left"
+    },
+    {
+      "type": "text",
+      "id": "sup_title",
+      "label": "Store title",
+      "default": "YOUR STORE"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section title",
+      "default": "TUMI at perimeter mall"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "5 miles away  •  Open now until 8pm today"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_first_button",
+      "default": true,
+      "label": "Show first button"
+    },
+    {
+      "type": "text",
+      "id": "first_button_title",
+      "label": "First button title",
+      "default": "Store Hours and Services"
+    },
+    {
+      "type": "url",
+      "id": "first_button_link",
+      "label": "First Button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_second_button",
+      "default": true,
+      "label": "Show second button"
+    },
+    {
+      "type": "text",
+      "id": "second_button_title",
+      "label": "Second button title",
+      "default": "Call us at (770) 390-7353"
+    },
+    {
+      "type": "url",
+      "id": "second_button_link",
+      "label": "Second button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "adapt_image",
+      "default": false,
+      "label": "Adapt image (Movil only)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "lg image text two button"
+    }
+  ]
+}
+{% endschema %}

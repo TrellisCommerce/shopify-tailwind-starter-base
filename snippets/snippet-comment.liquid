@@ -1,0 +1,27 @@
+<div
+  class='twcss-h-full twcss-w-full twcss-flex twcss-justify-between twcss-flex-col twcss-p-10'
+>
+  <div>
+    {%- render 'icon-chevron-open' -%}
+  </div>
+  <div>
+    <h5
+      class='twcss-typ-h5-subtopic-3-a twcss-mb-[40px] twcss-text-background md:twcss-text-[15px] lg:twcss-mb-[60px] lg:twcss-text-2xl'
+    >
+      {{- comment | truncate: 330 -}}
+    </h5>
+    <div class='twcss-flex twcss-flex-col twcss-border-l twcss-pl-[11px]'>
+      <h4
+        class='twcss-typ-h4-subtopic-2 twcss-capitalize twcss-text-background'
+      >
+        {{- author -}}
+      </h4>
+      <span class='twcss-body-2 twcss-text-background'>
+        {{- charge -}}
+      </span>
+    </div>
+  </div>
+  <div class='twcss-flex twcss-justify-end'>
+    {%- render 'icon-chevron-close' -%}
+  </div>
+</div>

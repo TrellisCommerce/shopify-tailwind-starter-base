@@ -1,0 +1,257 @@
+{% liquid
+  assign first_button_type = section.settings.first_button_type
+  assign second_button_type = section.settings.second_button_type
+  assign buttons_alignment = section.settings.buttons_alignment
+  assign title_color = section.settings.title_color
+  assign description_color = section.settings.description_color
+%}
+
+<style>
+  @media only screen and (min-width: 1024px) {
+    .ttb_description {
+      max-width: {{ section.settings.ttb_max_width }};
+    }
+  }
+</style>
+
+<div class='collection !twcss-grid-system'>
+  <div
+    class='twcss-col-span-12'
+    style='text-align: {{ section.settings.text_alignment }}; padding-top: {{ section.settings.ttb_padding_top }}px; padding-bottom: {{ section.settings.ttb_padding_bottom }}px;'
+  >
+    {% if section.settings.ttb_title %}
+      <h1
+        class='twcss-typ-h2-subheading-b lg:twcss-typ-h3-subtopic-1-b twcss-mb-7 twcss-text-{{ title_color }}'
+        style='font-size: {{ section.settings.title_size }}px;'
+      >
+        {{ section.settings.ttb_title }}
+      </h1>
+    {% endif %}
+    {% if section.settings.ttb_max_width %}
+      <p class='ttb_description twcss-typ-body-2 twcss-mx-auto twcss-mb-[34px] twcss-text-{{ description_color }}'>
+        {{ section.settings.ttb_description }}
+      </p>
+    {% endif %}
+    <div class='twcss-flex twcss-gap-x-5 {{ buttons_alignment }}'>
+      {% if section.settings.ttb_link1 %}
+        <a
+          href='{{ section.settings.ttb_link1 }}'
+          class='twcss-typ-h4-subtopic-2 twcss-uppercase twcss-py-2.5 twcss-px-5 lg:twcss-px-[84px] {{ first_button_type }}'
+        >
+          {{- section.settings.ttb_button1 -}}
+        </a>
+      {% endif %}
+      {% if section.settings.ttb_link2 %}
+        <a
+          href='{{ section.settings.ttb_link2 }}'
+          class='twcss-typ-h4-subtopic-2 twcss-uppercase twcss-py-2.5 twcss-px-5 lg:twcss-px-[84px] {{ second_button_type }}'
+        >
+          {{- section.settings.ttb_button2 -}}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "title text button",
+  "settings": [
+    {
+      "type": "text",
+      "id": "ttb_title",
+      "label": "Title",
+      "default": "Section Title"
+    },
+    {
+      "type": "select",
+      "id": "title_color",
+      "options": [
+        {
+          "value": "primary",
+          "label": "t:sections.all.text_color.options__1.label"
+        },
+        {
+          "value": "secondary",
+          "label": "t:sections.all.text_color.options__2.label"
+        },
+        {
+          "value": "tertiary",
+          "label": "t:sections.all.text_color.options__3.label"
+        },
+        {
+          "value": "brand-secondary",
+          "label": "t:sections.all.text_color.options__4.label"
+        }
+      ],
+      "default": "primary",
+      "label": "t:sections.all.title_color.label"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "default": 40,
+      "label": "Font size"
+    },
+    {
+      "type": "textarea",
+      "id": "ttb_description",
+      "label": "Description",
+      "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae laboriosam natus optio incidunt vel? Quis dolore dignissimos fuga illum, et magni unde quibusdam iure impedit nostrum soluta porro laboriosam natus."
+    },
+    {
+      "type": "select",
+      "id": "description_color",
+      "options": [
+        {
+          "value": "primary",
+          "label": "t:sections.all.text_color.options__1.label"
+        },
+        {
+          "value": "secondary",
+          "label": "t:sections.all.text_color.options__2.label"
+        },
+        {
+          "value": "tertiary",
+          "label": "t:sections.all.text_color.options__3.label"
+        },
+        {
+          "value": "brand-secondary",
+          "label": "t:sections.all.text_color.options__4.label"
+        }
+      ],
+      "default": "primary",
+      "label": "t:sections.all.description_color.label"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Text alignment"
+    },
+    {
+      "type": "range",
+      "id": "ttb_max_width",
+      "label": "Description Max Width (%)",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "ttb_padding_top",
+      "label": "Padding Top",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "ttb_padding_bottom",
+      "label": "Padding Bottom",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "default": 20
+    },
+    {
+      "type": "url",
+      "id": "ttb_link1",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "ttb_button1",
+      "label": "Button title",
+      "default": "Button Title"
+    },
+    {
+      "type": "select",
+      "id": "first_button_type",
+      "options": [
+        {
+          "value": "twcss-button-primary",
+          "label": "Primary"
+        },
+        {
+          "value": "twcss-button-secondary",
+          "label": "Secondarys"
+        }
+      ],
+      "default": "twcss-button-primary",
+      "label": "Button Type"
+    },
+    {
+      "type": "url",
+      "id": "ttb_link2",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "ttb_button2",
+      "label": "Button Title",
+      "default": "Button Title"
+    },
+    {
+      "type": "select",
+      "id": "second_button_type",
+      "options": [
+        {
+          "value": "twcss-button-primary",
+          "label": "Primary"
+        },
+        {
+          "value": "twcss-button-secondary",
+          "label": "Secondary"
+        }
+      ],
+      "default": "twcss-button-secondary",
+      "label": "Button Type"
+    },
+    {
+      "type": "select",
+      "id": "buttons_alignment",
+      "options": [
+        {
+          "value": "twcss-justify-start",
+          "label": "Start"
+        },
+        {
+          "value": "twcss-justify-center",
+          "label": "Center"
+        },
+        {
+          "value": "twcss-justify-end",
+          "label": "End"
+        }
+      ],
+      "default": "twcss-justify-center",
+      "label": "Buttons Alignment"
+    }
+  ],
+  "presets": [
+    {
+      "name": "title text button"
+    }
+  ]
+}
+{% endschema %}

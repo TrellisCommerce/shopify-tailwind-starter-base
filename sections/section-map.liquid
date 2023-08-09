@@ -1,0 +1,224 @@
+{%- assign top_margin = section.settings.top_margin -%}
+<style>
+  /* width */
+  .container-scroll::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  /* Track */
+  .container-scroll::-webkit-scrollbar-track {
+    background: #e3e3e3;
+    border-radius: 3px;
+  }
+
+  /* Handle */
+  .container-scroll::-webkit-scrollbar-thumb {
+    background: #1c1d1d;
+    border-radius: 3px;
+  }
+</style>
+<section
+  class='sm:twcss-grid-system twcss-gap-y-5 twcss-mb-16 twcss-px-[15px]'
+  style='margin-top: {{ top_margin }}px;'
+>
+  <h1 class='sm:twcss-hidden twcss-typ-h3-subtopic-1-a twcss-font-bold twcss-uppercase twcss-mb-[25px]'>
+    Find a Store
+  </h1>
+  <p
+    class='sm:twcss-hidden twcss-typ-body-1 twcss-bg-primary twcss-text-brand-secondary twcss-uppercase twcss-text-center twcss-py-2.5 twcss-cursor-pointer twcss-mb-[25px]'
+    onclick='toggleAddreses()'
+  >
+    Select Store
+  </p>
+  <div
+    id='mapAddresses'
+    class='twcss-hidden sm:twcss-block twcss-max-h-[987px] twcss-h-full twcss-overflow-y-scroll sm:twcss-col-span-4 container-scroll'
+  >
+    <ul class='sm:twcss-border sm:twcss-border-solid sm:twcss-border-border'>
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'store_map' -%}
+          <li class='twcss-border-b twcss-border-solid twcss-border-border sm:twcss-px-5 twcss-pb-[38px] twcss-pt-[25px]'>
+            <p class='twcss-typ-h3-subtopic-1-b twcss-uppercase twcss-font-bold twcss-mb-[15px]'>
+              {{ block.settings.location_name }}
+            </p>
+            <p class='twcss-typ-body-1 twcss-mb-[15px]'>
+              <span class='twcss-font-bold'> Address: </span>
+              {{ block.settings.location_address }}
+            </p>
+            <p class='twcss-typ-body-1 twcss-mb-[15px]'>
+              <span class='twcss-font-bold'> Support Schedule: </span>
+              {{ block.settings.location_schedule }}
+            </p>
+            {%- if block.settings.location_address != blank -%}
+              <p
+                class='twcss-typ-body-1 twcss-bg-primary twcss-text-brand-secondary twcss-uppercase twcss-text-center twcss-py-2.5 twcss-cursor-pointer twcss-mx-1'
+                onclick='loadMap({{ block.settings.location_address | json | escape }})'
+              >
+                Get Address
+              </p>
+            {%- endif -%}
+          </li>
+        {%- endif -%}
+        {%- if block.type == 'default_map' -%}
+          <li class='twcss-border-b twcss-border-solid twcss-border-border sm:twcss-px-5 twcss-pb-[38px] twcss-pt-[25px]'>
+            <p class='twcss-typ-h3-subtopic-1-b twcss-uppercase twcss-font-bold twcss-mb-[15px]'>
+              {{ block.settings.location_name }}
+            </p>
+            <p class='twcss-typ-body-1 twcss-mb-[15px]'>
+              <span class='twcss-font-bold'>Address: </span>
+              {{ block.settings.location_address }}
+            </p>
+            <p class='twcss-typ-body-1 twcss-mb-[15px]'>
+              <span class='twcss-font-bold'>Support Schedule: </span>
+              {{ block.settings.location_schedule }}
+            </p>
+            {%- if block.settings.location_address != blank -%}
+              <p
+                class='twcss-typ-body-1 twcss-bg-primary twcss-text-brand-secondary twcss-uppercase twcss-text-center twcss-py-2.5 twcss-cursor-pointer twcss-mx-1'
+                onclick='loadMap({{ block.settings.location_address | json | escape }})'
+              >
+                Get Address
+              </p>
+            {%- endif -%}
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </div>
+  <div class='sm:twcss-col-span-4 lg:twcss-col-span-8'>
+    <iframe
+      id='myMap'
+      title='mapa'
+      src='https://maps.google.com/maps?q=SantiagodeChile&t=&z=13&ie=UTF8&iwloc=&output=embed'
+      frameBorder='0'
+      scrolling='no'
+      marginHeight='0'
+      marginWidth='0'
+      class='twcss-w-full twcss-h-full sm:twcss-max-h-[278px] lg:twcss-max-h-full'
+    ></iframe>
+  </div>
+</section>
+
+<script>
+  const width = window.innerWidth;
+  const loadMap = (text) => {
+    let location =
+      'https://maps.google.com/maps?q=' +
+      text +
+      '&t=&z=13&ie=UTF8&iwloc=&output=embed';
+    document.getElementById('myMap').setAttribute('src', location);
+    if (width < 640) {
+      const x = document.getElementById('mapAddresses');
+      if (x.style.display === 'none') {
+        x.style.display = 'block';
+      } else {
+        x.style.display = 'none';
+      }
+    }
+  };
+
+  const toggleAddreses = () => {
+    if (width < 640) {
+      const x = document.getElementById('mapAddresses');
+      if (x.style.display === 'none') {
+        x.style.display = 'block';
+      } else {
+        x.style.display = 'none';
+      }
+    }
+  };
+
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'default_map' -%}
+      loadMap('{{ block.settings.location_address | json | escape }}'.replaceAll('&quot;', ''))
+    {%- endif -%}
+  {%- endfor -%}
+</script>
+
+{% schema %}
+{
+  "name": "Map",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "top_margin",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "t:sections.store_map.settings.top_margin.label",
+      "default": 20
+    }
+  ],
+  "blocks": [
+    {
+      "type": "store_map",
+      "name": "t:sections.store_map.blocks.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "location_name",
+          "label": "t:sections.store_map.blocks.settings.location_name.label",
+          "default": "Store Name"
+        },
+        {
+          "type": "text",
+          "id": "location_address",
+          "label": "t:sections.store_map.blocks.settings.location_address.label"
+        },
+        {
+          "type": "text",
+          "id": "location_schedule",
+          "label": "t:sections.store_map.blocks.settings.location_schedule.label",
+          "default": "Store Schedule"
+        }
+      ]
+    },
+    {
+      "type": "default_map",
+      "name": "t:sections.store_map.blocks.default_name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "location_name",
+          "label": "t:sections.store_map.blocks.settings.location_name.label",
+          "default": "Store Name"
+        },
+        {
+          "type": "text",
+          "id": "location_address",
+          "label": "t:sections.store_map.blocks.settings.location_address.label"
+        },
+        {
+          "type": "text",
+          "id": "location_schedule",
+          "label": "t:sections.store_map.blocks.settings.location_schedule.label",
+          "default": "Store Schedule"
+        }
+      ],
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "Map",
+      "blocks": [
+        {
+          "type": "default_map"
+        },
+        {
+          "type": "store_map"
+        },
+        {
+          "type": "store_map"
+        },
+        {
+          "type": "store_map"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

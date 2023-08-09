@@ -1,0 +1,274 @@
+{% case section.settings.layout_type %}
+  {% when 'primary' %}
+    <section
+      class='twcss-grid-system twcss-mt-4 twcss-gap-5 twcss-pb-[58px] lg:twcss-mt-[50px]'
+    >
+      <div class='twcss-col-span-full md:twcss-col-span-4 lg:twcss-col-span-6'>
+        {% if section.settings.main_image %}
+          <img
+            src='{{ section.settings.main_image | image_url }}'
+            class='twcss-w-full twcss-object-cover md:twcss-h-[684px] lg:twcss-h-[1040px]'
+            alt='product-image'
+            loading='lazy'
+            width='auto'
+            height='auto'
+          >
+        {% else %}
+          <img
+            class='twcss-w-full twcss-object-cover md:twcss-h-[684px] lg:twcss-h-[1040px]'
+            src='https://dummyimage.com/500x1000'
+            width='auto'
+            height='auto'
+            loading='lazy'
+          >
+        {% endif %}
+        <div class='twcss-mt-[10px] twcss-flex twcss-items-center twcss-gap-2 [&>.icon-caret]:twcss-w-3 [&>.icon-caret]:-twcss-rotate-90'>
+          <h4 class='twcss-typ-h4-subtopic-2 twcss-text-primary'>
+            {{ section.settings.first_title | link_to: section.settings.first_link }}
+          </h4>
+          {% render 'icon-caret' %}
+        </div>
+      </div>
+      <div class='twcss-col-span-full md:twcss-col-span-4 lg:twcss-col-span-6'>
+        <div class='twcss-flex twcss-flex-col twcss-gap-5'>
+          <div class='twcss-h-[400px] twcss-bg-primary md:twcss-h-[332px] lg:twcss-h-[510px]'>
+            {% liquid
+              for block in section.blocks
+                case block.type
+                  when 'comment'
+                    render 'snippet-comment', comment: block.settings.comment, author: block.settings.author, charge: block.settings.charge
+                  when 'center-comment'
+                    render 'snippet-center-comment', eyebrow: block.settings.eyebrow, title: block.settings.title, comment: block.settings.comment
+                endcase
+              endfor
+            %}
+          </div>
+
+          {% if section.settings.second_image %}
+            <img
+              src='{{ section.settings.second_image | image_url }}'
+              class='twcss-h-full twcss-w-full twcss-object-cover md:twcss-h-[332px] lg:twcss-h-[510px]'
+              alt='product-image'
+              loading='lazy'
+              width='auto'
+              height='auto'
+            >
+          {% else %}
+            <img
+              class='twcss-h-full twcss-w-full twcss-object-cover md:twcss-h-[332px] lg:twcss-h-[510px]'
+              src='https://dummyimage.com/500x500'
+              width='auto'
+              height='auto'
+              loading='lazy'
+            >
+          {% endif %}
+        </div>
+        <div class='twcss-mt-[10px] twcss-flex twcss-items-center twcss-gap-2 [&>.icon-caret]:twcss-w-3 [&>.icon-caret]:-twcss-rotate-90'>
+          <h4 class='twcss-typ-h4-subtopic-2 twcss-text-primary'>
+            {{ section.settings.second_title | link_to: section.settings.second_link }}
+          </h4>
+          {% render 'icon-caret' %}
+        </div>
+      </div>
+    </section>
+  {% when 'secondary' %}
+    <section
+      class='twcss-grid-system twcss-mt-4 twcss-gap-5 twcss-pb-[58px] lg:twcss-mt-[50px]'
+    >
+      <div class='twcss-col-span-full'>
+        {% if section.settings.main_image %}
+          <div class='twcss-hidden lg:twcss-block'>
+            {% if section.settings.first_link %}
+              <a href='{{ section.settings.first_link }}'>
+                <img
+                  src='{{ section.settings.main_image | image_url }}'
+                  class='twcss-w-full twcss-object-cover'
+                  style='max-height: 500px;'
+                  alt='product-image'
+                  loading='lazy'
+                  width='auto'
+                  height='auto'
+                >
+              </a>
+            {% else %}
+              <img
+                src='{{ section.settings.main_image | image_url }}'
+                class='twcss-w-full twcss-object-cover'
+                style='max-height: 500px;'
+                alt='product-image'
+                loading='lazy'
+                width='auto'
+                height='auto'
+              >
+            {% endif %}
+          </div>
+        {% else %}
+          <img src='https://dummyimage.com/720x600' width='auto' height='auto' loading='lazy'>
+        {% endif %}
+      </div>
+      <div class='twcss-col-span-full'>
+        <div class='twcss-gap-5 twcss-grid-system !twcss-m-0'>
+          {% if section.settings.second_image %}
+            <div class='twcss-col-span-full lg:twcss-col-span-6'>
+              {% if section.settings.second_link %}
+                <a href='{{ section.settings.second_link }}'>
+                  <img
+                    src='{{ section.settings.second_image | image_url }}'
+                    class='twcss-h-full twcss-w-full twcss-object-cover md:twcss-h-[332px] lg:twcss-h-[510px]'
+                    alt='product-image'
+                    loading='lazy'
+                    width='auto'
+                    height='auto'
+                  >
+                </a>
+              {% else %}
+                <img
+                  src='{{ section.settings.second_image | image_url }}'
+                  class='twcss-h-full twcss-w-full twcss-object-cover md:twcss-h-[332px] lg:twcss-h-[510px]'
+                  alt='product-image'
+                  loading='lazy'
+                  width='auto'
+                  height='auto'
+                >
+              {% endif %}
+            </div>
+          {% else %}
+            <div class='twcss-col-span-full lg:twcss-col-span-6'>
+              <img src='https://dummyimage.com/600x600' width='auto' height='auto' loading='lazy'>
+            </div>
+          {% endif %}
+          <div
+            class='twcss-col-span-full lg:twcss-col-span-6 twcss-relative twcss-h-[400px] twcss-bg-primary md:twcss-h-[332px] lg:twcss-h-[510px]'
+          >
+            {% liquid
+              for block in section.blocks
+                case block.type
+                  when 'comment'
+                    render 'snippet-comment', comment: block.settings.comment, author: block.settings.author, charge: block.settings.charge
+                  when 'center-comment'
+                    render 'snippet-center-comment', eyebrow: block.settings.eyebrow, title: block.settings.title, comment: block.settings.comment
+                endcase
+              endfor
+            %}
+          </div>
+        </div>
+      </div>
+    </section>
+{% endcase %}
+
+{% schema %}
+{
+  "name": "Images with review",
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout_type",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        }
+      ],
+      "default": "primary",
+      "label": "Layout"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Image"
+    },
+    {
+      "type": "text",
+      "id": "first_title",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "first_link",
+      "label": "Link",
+      "info": "Attached to title when primary layout or to main banner when secondary layout."
+    },
+    {
+      "type": "image_picker",
+      "id": "second_image",
+      "label": "Second Image"
+    },
+    {
+      "type": "text",
+      "id": "second_title",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "second_link",
+      "label": "Link",
+      "info": "Attached to title when primary layout or to small banner when secondary layout."
+    }
+  ],
+  "max_blocks": 1,
+  "blocks": [
+    {
+      "type": "comment",
+      "name": "Comment",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "comment",
+          "label": "Comment",
+          "default": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim corrupti amet molestias maiores sed, esse dolores exercitationem architecto sequi assumenda."
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author",
+          "default": "Lorem ipsum dolor sit amet."
+        },
+        {
+          "type": "text",
+          "id": "charge",
+          "label": "Charge",
+          "default": "Lorem ipsum dolor sit amet consectetur."
+        }
+      ]
+    },
+    {
+      "type": "center-comment",
+      "name": "Center comment",
+      "settings": [
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Eyebrow",
+          "default": "Lorem ipsum dolor sit amet."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Lorem ipsum dolor sit amet."
+        },
+        {
+          "type": "textarea",
+          "id": "comment",
+          "label": "comment",
+          "default": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim corrupti amet molestias maiores sed, esse dolores exercitationem architecto sequi assumenda."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Images with review",
+      "blocks": [
+        {
+          "type": "comment"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
