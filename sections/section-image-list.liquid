@@ -28,13 +28,22 @@
       <div class='twcss-flex twcss-justify-center twcss-w-[350px] twcss-min-w-[250px] twcss-flex-col twcss-px-[25px]'>
         {% if block.settings.logo != blank %}
           <a href='{{ block.settings.link }}'>
-            <img
-              src='{{ block.settings.logo | image_url }}'
-              alt='logo'
-              loading='lazy'
-              width='auto'
-              height='auto'
-            >
+            {% if block.settings.logo %}
+              <img
+                src='{{ block.settings.logo | image_url }}'
+                alt='logo'
+                loading='lazy'
+                width='auto'
+                height='auto'
+              >
+            {% else %}
+              <img
+                src='https://dummyimage.com/250x250'
+                width='auto'
+                height='auto'
+                loading='lazy'
+              >
+            {% endif %}
           </a>
         {% endif %}
       </div>
@@ -50,7 +59,7 @@
   "settings": [],
   "blocks": [
     {
-      "type": "Image list",
+      "type": "item",
       "name": "Item",
       "settings": [
         {
@@ -68,7 +77,24 @@
   ],
   "presets": [
     {
-      "name": "collaborators"
+      "name": "collaborators",
+      "blocks": [
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        }
+      ]
     }
   ]
 }
