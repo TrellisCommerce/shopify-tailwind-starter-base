@@ -93,8 +93,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (quantityBreakCounter > 0) {
       quantityBreakCounterElement.innerHTML = quantityBreakCounter;
       const percent = Math.floor((totalQuantity / quantityBreakTarget) * 100);
-      console.log(percent);
       quantityBreakProgressBar.style.width = percent + '%';
+      quantityBreakTargetElement.classList.remove('xhidden');
+      quantityBreakAppliedElement.classList.add('xhidden');
     } else {
       quantityBreakTargetElement.classList.add('xhidden');
       quantityBreakAppliedElement.classList.remove('xhidden');
@@ -272,4 +273,13 @@ document.addEventListener('DOMContentLoaded', function () {
       calculateTotal();
     });
   }
+
+  //Input listener
+  document
+    .querySelector('#add-box-to-cart-form')
+    .addEventListener('input', function (event) {
+      if (event.target.matches('input, select, textarea')) {
+        calculateTotal();
+      }
+    });
 });
