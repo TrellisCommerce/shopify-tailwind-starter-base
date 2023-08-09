@@ -475,8 +475,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia: ;
 }
 
+.xabsolute {
+  position: absolute;
+}
+
 .xrelative {
   position: relative;
+}
+
+.xbottom-0 {
+  bottom: 0px;
+}
+
+.xleft-0 {
+  left: 0px;
 }
 
 .xm-auto {
@@ -493,6 +505,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xmt-1 {
   margin-top: 0.25rem;
+}
+
+.\!xblock {
+  display: block !important;
 }
 
 .xinline-block {
@@ -521,6 +537,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xh-6 {
   height: 1.5rem;
+}
+
+.xh-2 {
+  height: 0.5rem;
 }
 
 .xw-full {
@@ -636,6 +656,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xbg-amber-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(245 158 11 / var(--tw-bg-opacity));
+}
+
+.xbg-amber-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 119 6 / var(--tw-bg-opacity));
 }
 
 .xp-4 {

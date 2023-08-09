@@ -13,8 +13,21 @@ document.addEventListener('DOMContentLoaded', function () {
     '.single-item-price-count',
   );
   const unitPriceDisplayElement = document.querySelector('.unit-price-display');
+  const quantityBreakCounterElement = document.querySelector(
+    '.quantity-break-counter',
+  );
+  const quantityBreakProgressBar = document.querySelector(
+    '.quantity-break-progress-bar',
+  );
+  const quantityBreakTargetElement = document.querySelector(
+    '.quantity-break-target',
+  );
+  const quantityBreakAppliedElement = document.querySelector(
+    '.quantity-break-applied',
+  );
 
   let currentPlan = parseInt(window.ur_subscription_plan);
+  let quantityBreakTarget = parseInt(window.ur_quantity_break_target);
 
   function getVariantItems() {
     const variantElements = document.getElementsByClassName('variant');
@@ -74,6 +87,18 @@ document.addEventListener('DOMContentLoaded', function () {
         totalPriceOriginal + itemPriceOriginal * item.quantity;
       totalPrice = totalPrice + itemPrice * item.quantity;
       totalQuantity = totalQuantity + parseInt(item.quantity);
+    }
+
+    const quantityBreakCounter = quantityBreakTarget - totalQuantity;
+    if (quantityBreakCounter > 0) {
+      quantityBreakCounterElement.innerHTML = quantityBreakCounter;
+      const percent = Math.floor((totalQuantity / quantityBreakTarget) * 100);
+      console.log(percent);
+      quantityBreakProgressBar.style.width = percent + '%';
+    } else {
+      quantityBreakTargetElement.classList.add('xhidden');
+      quantityBreakAppliedElement.classList.remove('xhidden');
+      totalPrice = totalPrice - totalPrice * 0.05;
     }
 
     priceTotalElement.innerHTML = (totalPrice / 100).toLocaleString(undefined, {

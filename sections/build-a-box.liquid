@@ -8,6 +8,7 @@
       window.ur_subscription_variants = [];
       window.ur_subscription_plan = '{{ subscriptionPlan }}';
       window.ur_selected_variant_option = '800g';
+      window.ur_quantity_break_target = 24;
     </script>
 
     <div class='variant-selector xmb-8'>
@@ -141,9 +142,20 @@
       </div>
     </div>
     <div class='ur-form-footer xmt-8 xrounded-lg xborder xmb-8 xoverflow-clip'>
-      <div class=' xbg-amber-500 xtext-white xrounded-t-lg xp-4 xfont-bold xtext-center' style='font-size: 1.3rem;'>
+      <div
+        class='quantity-break-target xbg-amber-500 xtext-white xrounded-t-lg xp-4 xfont-bold xtext-center xrelative'
+        style='font-size: 1.3rem;'
+      >
         Füge <span class='quantity-break-counter xfont-black' style='font-size: 1.5rem;'>22</span> Dosen hinzu um
         weitere 5% zu sparen!
+        <div class='quantity-break-progress-container xabsolute xbottom-0 xleft-0 xh-2 xw-full'>
+          <div class='quantity-break-progress-bar xbg-green-500 xh-2 !xblock xtransition-all' style='width: 8%;'></div>
+        </div>
+      </div>
+      <div
+        class='quantity-break-applied xhidden xbg-green-500 xtext-white xrounded-t-lg xp-4 xfont-bold xtext-center'
+      >
+        Maximale Rabatte aktiviert!
       </div>
       <div class='xp-8'>
         <div class='footer-top xflex xgap-4 xitems-end xjustify-between'>
