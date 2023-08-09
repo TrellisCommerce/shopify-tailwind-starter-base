@@ -12,8 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const singleItemPriceElement = document.querySelector(
     '.single-item-price-count',
   );
+  const unitPriceDisplayElement = document.querySelector('.unit-price-display');
 
-  let currentPlan = 689522049319;
+  let currentPlan = parseInt(window.ur_subscription_plan);
 
   function getVariantItems() {
     const variantElements = document.getElementsByClassName('variant');
@@ -26,13 +27,11 @@ document.addEventListener('DOMContentLoaded', function () {
       const quantity =
         variantElement.getElementsByClassName('variant-quantity')[0].value;
 
-      if (parseInt(quantity) > 0) {
-        itemsToAdd.push({
-          id: variantId,
-          quantity: quantity,
-          selling_plan: currentPlan,
-        });
-      }
+      itemsToAdd.push({
+        id: variantId,
+        quantity: quantity,
+        selling_plan: currentPlan,
+      });
     }
     return itemsToAdd;
   }
@@ -42,7 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let totalPrice = 0;
     let totalPriceOriginal = 0;
     let totalQuantity = 0;
-    let itemPrices = [];
+    let singleItemPrice = 0;
+    let unitPrice = 0;
 
     for (let i = 0; i < itemsToAdd.length; i++) {
       const item = itemsToAdd[i];
@@ -52,6 +52,10 @@ document.addEventListener('DOMContentLoaded', function () {
         itemPriceOriginal = variant.compare_at_price;
       }
       let itemPrice = itemPriceOriginal;
+      if (variant.option1 === window.ur_selected_variant_option) {
+        singleItemPrice = itemPrice;
+        unitPrice = variant.unit_price;
+      }
 
       if (currentPlan) {
         if (currentPlan != '') {
@@ -59,6 +63,9 @@ document.addEventListener('DOMContentLoaded', function () {
             const plan = variant.selling_plan_allocations[j];
             if (plan.selling_plan_id == currentPlan) {
               itemPrice = plan.price;
+              if (variant.option1 === window.ur_selected_variant_option) {
+                singleItemPrice = plan.price;
+              }
             }
           }
         }
@@ -67,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
         totalPriceOriginal + itemPriceOriginal * item.quantity;
       totalPrice = totalPrice + itemPrice * item.quantity;
       totalQuantity = totalQuantity + parseInt(item.quantity);
-      itemPrices.push(itemPrice);
     }
 
     priceTotalElement.innerHTML = (totalPrice / 100).toLocaleString(undefined, {
@@ -87,14 +93,23 @@ document.addEventListener('DOMContentLoaded', function () {
       priceTotalCompareAtContainer.classList.add('xhidden');
     }
     quantityTotalElement.innerHTML = totalQuantity;
-    singleItemPriceElement.innerHTML = (itemPrices[0] / 100).toLocaleString(
+    singleItemPriceElement.innerHTML = (singleItemPrice / 100).toLocaleString(
       undefined,
       {
         maximumFractionDigits: 2,
         minimumFractionDigits: 2,
       },
     );
+
+    console.log(unitPrice);
+
+    let unitPriceFormat = (unitPrice / 100).toLocaleString(undefined, {
+      maximumFractionDigits: 2,
+      minimumFractionDigits: 2,
+    });
+    unitPriceDisplayElement.innerHTML = unitPriceFormat;
   }
+  //Calculate Total on Start
   calculateTotal();
 
   //Send Cart Form
@@ -197,6 +212,7 @@ document.addEventListener('DOMContentLoaded', function () {
       this.classList.add('active');
 
       const clickedOption = this.getAttribute('data-option');
+      window.ur_selected_variant_option = clickedOption;
 
       const variants = document.getElementsByClassName('ur-variant');
 

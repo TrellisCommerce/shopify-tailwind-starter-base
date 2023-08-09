@@ -483,10 +483,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: auto;
 }
 
-.\!xm-0 {
-  margin: 0px !important;
-}
-
 .xmt-8 {
   margin-top: 2rem;
 }
@@ -639,22 +635,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 2rem;
 }
 
-.xpx-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .xpx-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
 
-.xpt-4 {
-  padding-top: 1rem;
+.xpx-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.xtext-left {
-  text-align: left;
+.xpt-4 {
+  padding-top: 1rem;
 }
 
 .xtext-center {
@@ -688,16 +680,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xtext-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
-
-.xtext-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-.xtext-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
 }
 
 .xfont-bold {
