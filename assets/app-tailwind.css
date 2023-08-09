@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .option-btn {
-  @apply xmt-8 xmr-4 xborder-gray-900 xborder xrounded-full hover:xbg-gray-900 xtext-gray-900  hover:xtext-white xpx-6 xpy-2 xtransition-all xfont-bold;
+  @apply xmr-4 xborder-gray-900 xborder xrounded-full hover:xbg-gray-900 xtext-gray-900  hover:xtext-white xpx-6 xpy-2 xtransition-all xfont-bold;
 }
 
 .option-btn.active {
@@ -34,4 +34,9 @@
 
 .custom-number-input button:focus {
   outline: none !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: block !important;
 }

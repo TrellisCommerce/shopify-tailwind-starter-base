@@ -499,6 +499,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 2rem;
 }
 
+.xmt-16 {
+  margin-top: 4rem;
+}
+
 .xmb-8 {
   margin-bottom: 2rem;
 }
@@ -583,6 +587,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-between;
 }
 
+.xgap-16 {
+  gap: 4rem;
+}
+
 .xgap-4 {
   gap: 1rem;
 }
@@ -648,19 +656,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 
-.xbg-orange-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
-}
-
 .xbg-amber-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(245 158 11 / var(--tw-bg-opacity));
-}
-
-.xbg-amber-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(217 119 6 / var(--tw-bg-opacity));
 }
 
 .xp-4 {
@@ -699,6 +697,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xtext-right {
   text-align: right;
+}
+
+.xtext-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .xtext-3xl {
@@ -775,7 +778,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .option-btn {
-  margin-top: 2rem;
   margin-right: 1rem;
   border-radius: 9999px;
   border-width: 1px;
@@ -857,6 +859,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .custom-number-input button:focus {
   outline: none !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: block !important;
 }
 
 .hover\:xbg-gray-200:hover {

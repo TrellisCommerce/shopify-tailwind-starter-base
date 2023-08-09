@@ -282,4 +282,27 @@ document.addEventListener('DOMContentLoaded', function () {
         calculateTotal();
       }
     });
+
+  //Swiper Init
+  var swiper = new Swiper('.ur-bab-swiper', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 1,
+    initialSlide: 2,
+    spaceBetween: -50,
+    loop: true,
+    loopAdditionalSlides: 6,
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 120,
+      depth: 1000,
+      modifier: 2,
+      slideShadows: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
 });

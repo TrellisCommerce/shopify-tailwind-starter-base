@@ -1,8 +1,43 @@
 <script src='{{ 'build-a-box.js' | asset_url }}' defer></script>
-<div class='page-width page-width-desktop scroll-trigger animate--slide-in xmt-8'>
+<script src='{{ 'swiper-bundle.min.js' | asset_url }}' defer></script>
+<link rel='stylesheet' type='text/css' href='{{ 'swiper-bundle.min.css' | asset_url }}'>
+
+{% assign collection = collections[section.settings.collection] %}
+{% assign subscriptionPlan = 689522049319 %}
+
+<div class='page-width page-width-desktop scroll-trigger animate--slide-in xmt-8 xflex xgap-16'>
+  <div class='ur-product-images' style='width: calc(100% - 46rem);'>
+    <div class='swiper ur-bab-swiper'>
+      <div class='swiper-wrapper'>
+        {% for product in collection.products %}
+          <div class='swiper-slide'>
+            {% if product.image != null %}
+              <img
+                height='500'
+                width='auto'
+                loading='lazy'
+                src='{{ product.image.src | img_url: "x500" }}'
+                alt='{{ product.image.alt | escape }}'
+              >
+            {% else %}
+              <img
+                height='500'
+                width='auto'
+                loading='lazy'
+                src='{{ product.featured_image | img_url: "x500" }}'
+                alt='{{ product.title | escape }}'
+              >
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+      <div class='swiper-pagination'></div>
+      <div class='swiper-button-prev'></div>
+      <div class='swiper-button-next'></div>
+    </div>
+  </div>
   <form id='add-box-to-cart-form' class=' xmax-w-2xl xpx-2 md:xpx-0'>
-    {% assign collection = collections[section.settings.collection] %}
-    {% assign subscriptionPlan = 689522049319 %}
+    <h2 class=' xmt-16 xfont-bold xtext-6xl xmb-8'>Build-a-Box</h2>
 
     <script>
       window.ur_subscription_variants = [];
@@ -10,6 +45,13 @@
       window.ur_selected_variant_option = '800g';
       window.ur_quantity_break_target = 24;
     </script>
+
+    <div class='xmb-8'>
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua.
+      </p>
+    </div>
 
     <div class='variant-selector xmb-8'>
       <button type='button' class='option-btn' data-option='400g'>400g</button>
@@ -60,7 +102,7 @@
             <div class='variant-img  xrounded-lg xoverflow-hidden'>
               {% if variant.image != null %}
                 <img
-                  style='max-height: 65px;'
+                  style='height: 65px;'
                   height='100'
                   width='auto'
                   loading='lazy'
@@ -69,7 +111,7 @@
                 >
               {% else %}
                 <img
-                  style='max-height: 65px;'
+                  style='height: 65px;'
                   height='100'
                   width='auto'
                   loading='lazy'
