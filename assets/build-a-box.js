@@ -214,23 +214,36 @@ document.addEventListener('DOMContentLoaded', function () {
       const clickedOption = this.getAttribute('data-option');
       window.ur_selected_variant_option = clickedOption;
 
-      const variants = document.getElementsByClassName('ur-variant');
+      const products = document.getElementsByClassName('ur-product');
 
-      let countCurrentVariant = 0;
-      for (let k = 0; k < variants.length; k++) {
-        const variant = variants[k];
+      for (let k = 0; k < products.length; k++) {
+        const product = products[k];
+        console.log('Product');
+        console.log(product);
+        const variants = product.getElementsByClassName('ur-variant');
 
-        // If variant has the same data-option value as the clicked button,
-        // remove 'hidden' class. Otherwise, add 'hidden' class and set quantity to 0.
-        if (variant.getAttribute('data-option') === clickedOption) {
-          variant.classList.remove('xhidden');
-        } else {
-          variant.classList.add('xhidden');
+        let highestQuantity = 0;
+        for (let l = 0; l < variants.length; l++) {
+          const variant = variants[l];
+          const quantity = variant.querySelector('.variant-quantity').value;
+          if (quantity > highestQuantity) {
+            highestQuantity = quantity;
+          }
+        }
 
-          // Find the quantity input within the hidden variant and set its value to 0
-          var quantityInput = variant.querySelector('.variant-quantity');
-          if (quantityInput) {
-            quantityInput.value = 0;
+        for (let l = 0; l < variants.length; l++) {
+          const variant = variants[l];
+          const quantityElement = variant.querySelector('.variant-quantity');
+          if (variant.getAttribute('data-option') === clickedOption) {
+            variant.classList.remove('xhidden');
+            if (quantityElement) {
+              quantityElement.value = highestQuantity;
+            }
+          } else {
+            variant.classList.add('xhidden');
+            if (quantityElement) {
+              quantityElement.value = 0;
+            }
           }
         }
       }

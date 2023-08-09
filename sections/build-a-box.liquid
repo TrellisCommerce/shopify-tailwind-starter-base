@@ -35,7 +35,7 @@
         endif
       -%}
 
-      <div class='product-item xp-4 {{ custom_classes_product }} xoverflow-hidden xrounded-2xl'>
+      <div class='product-item ur-product xp-4 {{ custom_classes_product }} xoverflow-hidden xrounded-2xl'>
         {% for variant in product.variants %}
           {%- liquid
             assign custom_classes_variant = ''
@@ -150,7 +150,10 @@
         </div>
         <div class='xtext-right' style='font-size: 1.2rem;'>
           <div><span class='total-quantity-couunt xfont-bold'>2</span><span> Dosen</span></div>
-          <div><span class='single-item-price-count xfont-bold'>4.05€</span><span> pro Dose</span></div>
+          <div>
+            <span class='single-item-price-count xfont-bold'>4.05</span><span class='xfont-bold'> €</span
+            ><span> pro Dose</span>
+          </div>
         </div>
       </div>
       <div class='footer-info xtext-lg xborder-t xmt-8 xpt-4'>
