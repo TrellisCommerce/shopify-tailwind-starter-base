@@ -14,29 +14,29 @@
   }
 </style>
 
-<div class='collection !tw-grid-system'>
+<div class='collection !twcss-grid-system'>
   <div
-    class='tw-col-span-12'
+    class='twcss-col-span-12'
     style='text-align: {{ section.settings.text_alignment }}; padding-top: {{ section.settings.ttb_padding_top }}px; padding-bottom: {{ section.settings.ttb_padding_bottom }}px;'
   >
     {% if section.settings.ttb_title %}
       <h1
-        class='tw-typ-h2-subheading-b lg:tw-typ-h3-subtopic-1-b tw-mb-7 tw-text-{{ title_color }}'
+        class='twcss-typ-h2-subheading-b lg:twcss-typ-h3-subtopic-1-b twcss-mb-7 twcss-text-{{ title_color }}'
         style='font-size: {{ section.settings.title_size }}px;'
       >
         {{ section.settings.ttb_title }}
       </h1>
     {% endif %}
     {% if section.settings.ttb_max_width %}
-      <p class='ttb_description tw-typ-body-2 tw-mx-auto tw-mb-[34px] tw-text-{{ description_color }}'>
+      <p class='ttb_description twcss-typ-body-2 twcss-mx-auto twcss-mb-[34px] twcss-text-{{ description_color }}'>
         {{ section.settings.ttb_description }}
       </p>
     {% endif %}
-    <div class='tw-flex tw-gap-x-5 {{ buttons_alignment }}'>
+    <div class='twcss-flex twcss-gap-x-5 {{ buttons_alignment }}'>
       {% if section.settings.ttb_link1 %}
         <a
           href='{{ section.settings.ttb_link1 }}'
-          class='tw-typ-h4-subtopic-2 tw-uppercase tw-py-2.5 tw-px-5 lg:tw-px-[84px] {{ first_button_type }}'
+          class='twcss-typ-h4-subtopic-2 twcss-uppercase twcss-py-2.5 twcss-px-5 lg:twcss-px-[84px] {{ first_button_type }}'
         >
           {{- section.settings.ttb_button1 -}}
         </a>
@@ -44,7 +44,7 @@
       {% if section.settings.ttb_link2 %}
         <a
           href='{{ section.settings.ttb_link2 }}'
-          class='tw-typ-h4-subtopic-2 tw-uppercase tw-py-2.5 tw-px-5 lg:tw-px-[84px] {{ second_button_type }}'
+          class='twcss-typ-h4-subtopic-2 twcss-uppercase twcss-py-2.5 twcss-px-5 lg:twcss-px-[84px] {{ second_button_type }}'
         >
           {{- section.settings.ttb_button2 -}}
         </a>
@@ -189,15 +189,15 @@
       "id": "first_button_type",
       "options": [
         {
-          "value": "tw-button-primary",
+          "value": "twcss-button-primary",
           "label": "Primary"
         },
         {
-          "value": "tw-button-secondary",
+          "value": "twcss-button-secondary",
           "label": "Secondarys"
         }
       ],
-      "default": "tw-button-primary",
+      "default": "twcss-button-primary",
       "label": "Button Type"
     },
     {
@@ -216,15 +216,15 @@
       "id": "second_button_type",
       "options": [
         {
-          "value": "tw-button-primary",
+          "value": "twcss-button-primary",
           "label": "Primary"
         },
         {
-          "value": "tw-button-secondary",
+          "value": "twcss-button-secondary",
           "label": "Secondary"
         }
       ],
-      "default": "tw-button-secondary",
+      "default": "twcss-button-secondary",
       "label": "Button Type"
     },
     {
@@ -232,19 +232,19 @@
       "id": "buttons_alignment",
       "options": [
         {
-          "value": "tw-justify-start",
+          "value": "twcss-justify-start",
           "label": "Start"
         },
         {
-          "value": "tw-justify-center",
+          "value": "twcss-justify-center",
           "label": "Center"
         },
         {
-          "value": "tw-justify-end",
+          "value": "twcss-justify-end",
           "label": "End"
         }
       ],
-      "default": "tw-justify-center",
+      "default": "twcss-justify-center",
       "label": "Buttons Alignment"
     }
   ],

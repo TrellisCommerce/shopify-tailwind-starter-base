@@ -1,21 +1,21 @@
-<section class="tw-grid-system tw-gap-y-10 tw-my-[50px]">
-  <div class="tw-col-span-full tw-flex tw-flex-col tw-justify-around md:tw-col-span-2 lg:tw-col-span-3">
+<section class='twcss-grid-system twcss-gap-y-10 twcss-my-[50px]'>
+  <div class='twcss-col-span-full twcss-flex twcss-flex-col twcss-justify-around md:twcss-col-span-2 lg:twcss-col-span-3'>
     {%- for block in section.blocks -%}
       {%- if forloop.index <= 2 -%}
-        <div class="tw-flex tw-flex-col tw-items-end tw-mb-[65px]">
+        <div class='twcss-flex twcss-flex-col twcss-items-end twcss-mb-[65px]'>
           <img
-            class="tw-w-12"
-            src="{{ block.settings.image | image_url }}"
-            alt=""
-            width="auto"
-            height="auto"
-            loading="lazy"
+            class='twcss-w-12'
+            src='{{ block.settings.image | image_url }}'
+            alt=''
+            width='auto'
+            height='auto'
+            loading='lazy'
             s
           >
-          <h4 class="tw-typ-h4-subtopic-2 tw-mb-[10px] tw-text-primary">
+          <h4 class='twcss-typ-h4-subtopic-2 twcss-mb-[10px] twcss-text-primary'>
             {{ block.settings.title }}
           </h4>
-          <p class="tw-text-tertiary tw-typ-body-2 tw-text-end">
+          <p class='twcss-text-tertiary twcss-typ-body-2 twcss-text-end'>
             {{ block.settings.descripcion }}
           </p>
         </div>
@@ -23,32 +23,32 @@
     {%- endfor -%}
   </div>
 
-  <div class="tw-col-span-full tw-m-auto md:tw-col-span-4 lg:tw-col-span-6">
+  <div class='twcss-col-span-full twcss-m-auto md:twcss-col-span-4 lg:twcss-col-span-6'>
     <img
-      src="{{ section.settings.backogrund | image_url }}"
-      class="tw-object-cover tw-max-h-[700px]"
-      width="auto"
-      height="auto"
-      loading="lazy"
+      src='{{ section.settings.backogrund | image_url }}'
+      class='twcss-object-cover twcss-max-h-[700px]'
+      width='auto'
+      height='auto'
+      loading='lazy'
     >
   </div>
 
-  <div class="tw-col-span-full tw-flex tw-flex-col tw-justify-around md:tw-col-span-2 lg:tw-col-span-3">
+  <div class='twcss-col-span-full twcss-flex twcss-flex-col twcss-justify-around md:twcss-col-span-2 lg:twcss-col-span-3'>
     {%- for block in section.blocks -%}
       {%- if forloop.index >= 3 -%}
-        <div class="tw-flex tw-flex-col tw-items-start tw-mb-[65px]">
+        <div class='twcss-flex twcss-flex-col twcss-items-start twcss-mb-[65px]'>
           <img
-            class="tw-w-12"
-            src="{{ block.settings.image | image_url }}"
-            alt=""
-            width="auto"
-            height="auto"
-            loading="lazy"
+            class='twcss-w-12'
+            src='{{ block.settings.image | image_url }}'
+            alt=''
+            width='auto'
+            height='auto'
+            loading='lazy'
           >
-          <h4 class="tw-typ-h4-subtopic-2 tw-mb-[10px] tw-text-primary">
+          <h4 class='twcss-typ-h4-subtopic-2 twcss-mb-[10px] twcss-text-primary'>
             {{ block.settings.title }}
           </h4>
-          <p class="tw-text-tertiary tw-typ-body-2">
+          <p class='twcss-text-tertiary twcss-typ-body-2'>
             {{ block.settings.descripcion }}
           </p>
         </div>

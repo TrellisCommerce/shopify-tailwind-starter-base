@@ -9,14 +9,14 @@
 
 <section
   style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;'
-  class='tw-flex tw-grid-system tw-gap-5'
+  class='twcss-flex twcss-grid-system twcss-gap-5'
 >
-  <div class=' tw-hidden md:tw-block md:tw-w-1/5 tw-relative'>
-    <ul class='tw-sticky tw-top-36'>
+  <div class=' twcss-hidden md:twcss-block md:twcss-w-1/5 twcss-relative'>
+    <ul class='twcss-sticky twcss-top-36'>
       {%- for block in section.blocks -%}
         <li>
           <a
-            class='tw-flex tw-items-center tw-gap-5 tw-p-4 hover:tw-bg-box-background tw-transition-all tw-duration-300 item-navigation-{{ forloop.index }}'
+            class='twcss-flex twcss-items-center twcss-gap-5 twcss-p-4 hover:twcss-bg-box-background twcss-transition-all twcss-duration-300 item-navigation-{{ forloop.index }}'
             href='#item_{{ forloop.index }}'
           >
             <img
@@ -32,16 +32,16 @@
       {%- endfor -%}
     </ul>
   </div>
-  <div class='tw-w-full md:tw-w-4/5'>
+  <div class='twcss-w-full md:twcss-w-4/5'>
     <ul>
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'version_1' -%}
             <li id='item_{{ forloop.index }}'>
-              <h4 class='tw-typ-h5-subtopic-3-a'>
+              <h4 class='twcss-typ-h5-subtopic-3-a'>
                 {{ block.settings.eyebrow }}
               </h4>
-              <h2 class='tw-typ-h2-subheading-a'>{{ block.settings.title }}</h2>
+              <h2 class='twcss-typ-h2-subheading-a'>{{ block.settings.title }}</h2>
               {%- if block.settings.image -%}
                 <img
                   src='{{ block.settings.image | image_url }}'
@@ -49,19 +49,19 @@
                   height='auto'
                   width='auto'
                   loading='lazy'
-                  class='tw-mb-5 !tw-h-[420px] tw-w-full tw-object-cover'
+                  class='twcss-mb-5 !twcss-h-[420px] twcss-w-full twcss-object-cover'
                 >
               {%- endif -%}
               <div class='block_content'>
                 {{ block.settings.content }}
               </div>
-              <hr class='tw-hidden md:tw-block tw-my-[60px] tw-h-[1px] tw-bg-[#CCCCCC]'>
+              <hr class='twcss-hidden md:twcss-block twcss-my-[60px] twcss-h-[1px] twcss-bg-[#CCCCCC]'>
             </li>
           {%- when 'version_2' -%}
             <li id='item_{{ forloop.index }}'>
-              <details class='tw-block tw-mb-2 tw-border-b tw-border-border tw-px-2 md:tw-hidden [&[open]>summary>.plus-icon]:tw-hidden [&[open]>summary>.minus-icon]:tw-block'>
-                <summary class='tw-typ-h5-subtopic-3-a tw-flex tw-justify-between tw-py-3 tw-items-center'>
-                  <span class='tw-flex tw-items-center tw-gap-5'>
+              <details class='twcss-block twcss-mb-2 twcss-border-b twcss-border-border twcss-px-2 md:twcss-hidden [&[open]>summary>.plus-icon]:twcss-hidden [&[open]>summary>.minus-icon]:twcss-block'>
+                <summary class='twcss-typ-h5-subtopic-3-a twcss-flex twcss-justify-between twcss-py-3 twcss-items-center'>
+                  <span class='twcss-flex twcss-items-center twcss-gap-5'>
                     {%- if block.settings.menu_image -%}
                       <img
                         src='{{ block.settings.menu_image | image_url }}'
@@ -74,15 +74,15 @@
 
                     {{ block.settings.menu_title }}
                   </span>
-                  <span class='plus-icon tw-rotate-90'>
+                  <span class='plus-icon twcss-rotate-90'>
                     {% render 'icon-chevron' %}
                   </span>
-                  <span class='tw-hidden minus-icon -tw-rotate-90'>
+                  <span class='twcss-hidden minus-icon -twcss-rotate-90'>
                     {% render 'icon-chevron' %}
                   </span>
                 </summary>
-                <div class='tw-flex tw-flex-wrap'>
-                  <div class='tw-w-full tw-flex tw-gap-5 tw-flex-col md:tw-flex-row tw-mb-5'>
+                <div class='twcss-flex twcss-flex-wrap'>
+                  <div class='twcss-w-full twcss-flex twcss-gap-5 twcss-flex-col md:twcss-flex-row twcss-mb-5'>
                     {%- if block.settings.image_1 -%}
                       <img
                         src='{{ block.settings.image_1 | image_url }}'
@@ -90,7 +90,7 @@
                         height='auto'
                         width='auto'
                         loading='lazy'
-                        class='tw-object-cover !tw-h-[220px] tw-w-full md:tw-w-1/2'
+                        class='twcss-object-cover !twcss-h-[220px] twcss-w-full md:twcss-w-1/2'
                       >
                     {%- endif -%}
                     {%- if block.settings.image_2 -%}
@@ -100,14 +100,14 @@
                         height='auto'
                         width='auto'
                         loading='lazy'
-                        class='tw-object-cover !tw-h-[220px] tw-w-full md:tw-w-1/2'
+                        class='twcss-object-cover !twcss-h-[220px] twcss-w-full md:twcss-w-1/2'
                       >
                     {%- endif -%}
                   </div>
-                  <h3 class='tw-typ-h3-subtopic-1-a tw-w-full tw-mb-3'>
+                  <h3 class='twcss-typ-h3-subtopic-1-a twcss-w-full twcss-mb-3'>
                     {{ block.settings.title_columns }}
                   </h3>
-                  <div class='tw-w-full tw-flex tw-gap-5 tw-flex-col lg:tw-flex-row'>
+                  <div class='twcss-w-full twcss-flex twcss-gap-5 twcss-flex-col lg:twcss-flex-row'>
                     <div>
                       {{ block.settings.content_1 }}
                     </div>
@@ -117,8 +117,8 @@
                   </div>
                 </div>
               </details>
-              <div class='tw-hidden md:tw-block'>
-                <div class='tw-w-full tw-flex lg:tw-gap-5 tw-flex-col md:tw-flex-row'>
+              <div class='twcss-hidden md:twcss-block'>
+                <div class='twcss-w-full twcss-flex lg:twcss-gap-5 twcss-flex-col md:twcss-flex-row'>
                   {%- if block.settings.image_1 -%}
                     <img
                       src='{{ block.settings.image_1 | image_url }}'
@@ -126,7 +126,7 @@
                       height='auto'
                       width='auto'
                       loading='lazy'
-                      class='tw-mb-5 tw-object-cover !tw-h-[220px] tw-w-full md:tw-w-1/2 tw-pr-[10px] lg:tw-p-0'
+                      class='twcss-mb-5 twcss-object-cover !twcss-h-[220px] twcss-w-full md:twcss-w-1/2 twcss-pr-[10px] lg:twcss-p-0'
                     >
                   {%- endif -%}
                   {%- if block.settings.image_2 -%}
@@ -136,29 +136,29 @@
                       height='auto'
                       width='auto'
                       loading='lazy'
-                      class='tw-mb-5 tw-object-cover !tw-h-[220px] tw-w-full md:tw-w-1/2 tw-pl-[10px] lg:tw-p-0'
+                      class='twcss-mb-5 twcss-object-cover !twcss-h-[220px] twcss-w-full md:twcss-w-1/2 twcss-pl-[10px] lg:twcss-p-0'
                     >
                   {%- endif -%}
                 </div>
-                <h3 class='tw-typ-h3-subtopic-1-a tw-w-full tw-mb-3'>
+                <h3 class='twcss-typ-h3-subtopic-1-a twcss-w-full twcss-mb-3'>
                   {{ block.settings.title_columns }}
                 </h3>
-                <div class='tw-w-full tw-flex tw-gap-5 tw-flex-col lg:tw-flex-row'>
-                  <div class='tw-w-1/2'>
+                <div class='twcss-w-full twcss-flex twcss-gap-5 twcss-flex-col lg:twcss-flex-row'>
+                  <div class='twcss-w-1/2'>
                     {{ block.settings.content_1 }}
                   </div>
-                  <div class='tw-w-1/2'>
+                  <div class='twcss-w-1/2'>
                     {{ block.settings.content_2 }}
                   </div>
                 </div>
-                <hr class='tw-my-[60px] tw-w-full tw-h-[1px] tw-bg-[#CCCCCC]'>
+                <hr class='twcss-my-[60px] twcss-w-full twcss-h-[1px] twcss-bg-[#CCCCCC]'>
               </div>
             </li>
           {%- when 'version_3' -%}
             <li id='item_{{ forloop.index }}'>
-              <details class='tw-block tw-mb-2 tw-border-b tw-border-border tw-px-2 md:tw-hidden [&[open]>summary>.plus-icon]:tw-hidden [&[open]>summary>.minus-icon]:tw-block'>
-                <summary class='tw-typ-h5-subtopic-3-a tw-flex tw-justify-between tw-py-3 tw-items-center'>
-                  <span class='tw-flex tw-items-center tw-gap-5'>
+              <details class='twcss-block twcss-mb-2 twcss-border-b twcss-border-border twcss-px-2 md:twcss-hidden [&[open]>summary>.plus-icon]:twcss-hidden [&[open]>summary>.minus-icon]:twcss-block'>
+                <summary class='twcss-typ-h5-subtopic-3-a twcss-flex twcss-justify-between twcss-py-3 twcss-items-center'>
+                  <span class='twcss-flex twcss-items-center twcss-gap-5'>
                     {%- if block.settings.menu_image -%}
                       <img
                         src='{{ block.settings.menu_image | image_url }}'
@@ -170,10 +170,10 @@
                     {%- endif -%}
                     {{ block.settings.menu_title }}
                   </span>
-                  <span class='plus-icon tw-rotate-90'>
+                  <span class='plus-icon twcss-rotate-90'>
                     {% render 'icon-chevron' %}
                   </span>
-                  <span class='tw-hidden minus-icon -tw-rotate-90'>
+                  <span class='twcss-hidden minus-icon -twcss-rotate-90'>
                     {% render 'icon-chevron' %}
                   </span>
                 </summary>
@@ -185,20 +185,20 @@
                       height='auto'
                       width='auto'
                       loading='lazy'
-                      class='tw-mb-5 !tw-h-[420px] tw-w-full tw-object-cover'
+                      class='twcss-mb-5 !twcss-h-[420px] twcss-w-full twcss-object-cover'
                     >
                   {%- endif -%}
 
-                  <h3 class='tw-typ-h3-subtopic-1-a tw-w-full tw-mb-3'>
+                  <h3 class='twcss-typ-h3-subtopic-1-a twcss-w-full twcss-mb-3'>
                     {{ block.settings.title_columns }}
                   </h3>
-                  <div class='tw-flex tw-flex-col tw-gap-5'>
-                    <div class='tw-w-full'>
+                  <div class='twcss-flex twcss-flex-col twcss-gap-5'>
+                    <div class='twcss-w-full'>
                       <div>
                         {{ block.settings.content_1 }}
                       </div>
                     </div>
-                    <div class='tw-w-full'>
+                    <div class='twcss-w-full'>
                       <div>
                         {{ block.settings.content_2 }}
                       </div>
@@ -206,7 +206,7 @@
                   </div>
                 </div>
               </details>
-              <div class='tw-hidden md:tw-block'>
+              <div class='twcss-hidden md:twcss-block'>
                 {%- if block.settings.image -%}
                   <img
                     src='{{ block.settings.image | image_url }}'
@@ -214,22 +214,22 @@
                     height='auto'
                     width='auto'
                     loading='lazy'
-                    class='tw-mb-5 !tw-h-[420px] tw-w-full tw-object-cover'
+                    class='twcss-mb-5 !twcss-h-[420px] twcss-w-full twcss-object-cover'
                   >
                 {%- endif -%}
 
-                <h3 class='tw-typ-h3-subtopic-1-a tw-w-full tw-mb-3'>
+                <h3 class='twcss-typ-h3-subtopic-1-a twcss-w-full twcss-mb-3'>
                   {{ block.settings.title_columns }}
                 </h3>
-                <div class='tw-w-full tw-flex tw-gap-5 tw-flex-col lg:tw-flex-row'>
-                  <div class='tw-w-1/2'>
+                <div class='twcss-w-full twcss-flex twcss-gap-5 twcss-flex-col lg:twcss-flex-row'>
+                  <div class='twcss-w-1/2'>
                     {{ block.settings.content_1 }}
                   </div>
-                  <div class='tw-w-1/2'>
+                  <div class='twcss-w-1/2'>
                     {{ block.settings.content_2 }}
                   </div>
                 </div>
-                <hr class='tw-my-[60px] tw-h-[1px] tw-bg-[#CCCCCC]'>
+                <hr class='twcss-my-[60px] twcss-h-[1px] twcss-bg-[#CCCCCC]'>
               </div>
             </li>
         {%- endcase -%}

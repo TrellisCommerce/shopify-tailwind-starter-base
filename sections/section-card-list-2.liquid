@@ -1,47 +1,47 @@
 <section
-  class='tw-grid-system'
+  class='twcss-grid-system'
   style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px; background: {{ section.settings.background }}'
 >
-  <h2 class='tw-col-span-full tw-mb-[20px] tw-text-brand-primary tw-text-center tw-typ-h2-subheading-a tw-uppercase lg:tw-mb-[74px]'>
+  <h2 class='twcss-col-span-full twcss-mb-[20px] twcss-text-brand-primary twcss-text-center twcss-typ-h2-subheading-a twcss-uppercase lg:twcss-mb-[74px]'>
     {{ section.settings.title }}
   </h2>
-  <div class='tw-custom-scrollbar tw-col-span-full tw-flex tw-items-start tw-gap-4 tw-overflow-x-scroll tw-bg-scroll tw-pt-[22px] tw-pb-6 tw-px-4'>
+  <div class='twcss-custom-scrollbar twcss-col-span-full twcss-flex twcss-items-start twcss-gap-4 twcss-overflow-x-scroll twcss-bg-scroll twcss-pt-[22px] twcss-pb-6 twcss-px-4'>
     {%- for block in section.blocks -%}
-      <div class='tw-group tw-w-[253px] tw-min-w-[253px] tw-border tw-border-border tw-border-opacity-50 tw-bg-background tw-p-4 md:tw-min-w-[279px] lg:tw-min-w-[400px] lg:tw-p-5 lg:hover:tw-border-transparent lg:hover:tw-shadow-lg hover:lg:tw-mb-0 lg:tw-mb-[46px]'>
-        <div class='tw-relative tw-mb-[10px] lg:tw-mb-5'>
+      <div class='twcss-group twcss-w-[253px] twcss-min-w-[253px] twcss-border twcss-border-border twcss-border-opacity-50 twcss-bg-background twcss-p-4 md:twcss-min-w-[279px] lg:twcss-min-w-[400px] lg:twcss-p-5 lg:hover:twcss-border-transparent lg:hover:twcss-shadow-lg hover:lg:twcss-mb-0 lg:twcss-mb-[46px]'>
+        <div class='twcss-relative twcss-mb-[10px] lg:twcss-mb-5'>
           <img
             src='{{ block.settings.image | image_url }}'
-            class='tw-h-[300px] tw-w-full tw-object-cover'
+            class='twcss-h-[300px] twcss-w-full twcss-object-cover'
             alt='logo'
             loading='lazy'
             width='auto'
             height='auto'
           >
           {%- if block.settings.show_content_image == true -%}
-            <div class='tw-absolute tw-top-1/2 tw-left-1/2 tw-flex tw-w-full tw--translate-y-1/2 tw--translate-x-1/2 tw-flex-col tw-items-center tw-justify-center tw-bg-black/30 tw-h-full'>
+            <div class='twcss-absolute twcss-top-1/2 twcss-left-1/2 twcss-flex twcss-w-full twcss--translate-y-1/2 twcss--translate-x-1/2 twcss-flex-col twcss-items-center twcss-justify-center twcss-bg-black/30 twcss-h-full'>
               <img
                 src='{{ block.settings.logo | image_url }}'
-                class='tw-max-w-[54px] tw-object-cover'
+                class='twcss-max-w-[54px] twcss-object-cover'
                 alt='image'
                 loading='lazy'
                 width='auto'
                 height='auto'
               >
-              <p class='tw-typ-h2-subheading-a tw-uppercase tw-text-background'>
+              <p class='twcss-typ-h2-subheading-a twcss-uppercase twcss-text-background'>
                 {{ block.settings.text_image }}
               </p>
             </div>
           {%- endif -%}
         </div>
-        <h5 class='tw-mb-1 tw-uppercase tw-text-primary tw-typ-h5-subtopic-3-a lg:tw-mb-2'>
+        <h5 class='twcss-mb-1 twcss-uppercase twcss-text-primary twcss-typ-h5-subtopic-3-a lg:twcss-mb-2'>
           {{ block.settings.title }}
         </h5>
-        <p class='tw-mb-[20px] tw-typ-body-2 tw-text-tertiary'>
+        <p class='twcss-mb-[20px] twcss-typ-body-2 twcss-text-tertiary'>
           {{ block.settings.description }}
         </p>
         <a
           href='{{ block.settings.url }}'
-          class='tw-button tw-button-primary tw-mt-2 tw-hidden lg:group-hover:tw-block tw-py-[10px]'
+          class='twcss-button twcss-button-primary twcss-mt-2 twcss-hidden lg:group-hover:twcss-block twcss-py-[10px]'
         >
           {{ block.settings.button }}
         </a>

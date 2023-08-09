@@ -1,15 +1,15 @@
 <section
-  class='tw-w-full tw-bg-[#] tw-py-10'
+  class='twcss-w-full twcss-bg-[#] twcss-py-10'
   style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;'
 >
-  <div class='tw-grid-system'>
-    <div class='tw-col-span-full tw-flex tw-flex-wrap tw-items-center tw-justify-center tw-border-b tw-border-border'>
+  <div class='twcss-grid-system'>
+    <div class='twcss-col-span-full twcss-flex twcss-flex-wrap twcss-items-center twcss-justify-center twcss-border-b twcss-border-border'>
       {% for link in section.settings.menu.links %}
         <a
           href='{{ link.url }}'
-          class='tw-border-b-[2px] {% if link.current %} tw-border-primary {% else %} tw-border-transparent {% endif %} tw-p-[19px] tw-text-center'
+          class='twcss-border-b-[2px] {% if link.current %} twcss-border-primary {% else %} twcss-border-transparent {% endif %} twcss-p-[19px] twcss-text-center'
         >
-          <h5 class='tw-typ-h5-subtopic-3 tw-text-primary'>
+          <h5 class='twcss-typ-h5-subtopic-3 twcss-text-primary'>
             {{- link.title -}}
           </h5>
         </a>

@@ -1,14 +1,14 @@
 <style>
   @media only screen and (max-width: 1023px){
     /* Track */
-    .container-{{ section.id }} .tw-custom-scrollbar::-webkit-scrollbar-track {
+    .container-{{ section.id }} .twcss-custom-scrollbar::-webkit-scrollbar-track {
         background: #e3e3e3;
         border-radius: 3px;
         display: none !important;
     }
 
     /* Handle */
-    .container-{{ section.id }} .tw-custom-scrollbar::-webkit-scrollbar-thumb {
+    .container-{{ section.id }} .twcss-custom-scrollbar::-webkit-scrollbar-thumb {
         background: #1c1d1d;
         border-radius: 3px;
         display: none !important;
@@ -28,25 +28,25 @@
 %}
 
 <section
-  class='container-{{ section.id }} tw-w-full tw-bg-[#] tw-py-10'
+  class='container-{{ section.id }} twcss-w-full twcss-bg-[#] twcss-py-10'
   style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px; background: {{ section.settings.background }};'
 >
-  <div class='tw-grid-system'>
-    <div class='tw-col-span-full tw-text-center'>
+  <div class='twcss-grid-system'>
+    <div class='twcss-col-span-full twcss-text-center'>
       {%- if section.settings.title == blank or section.settings.descripcion != blank -%}
-        <div class='tw-mb-10 tw-text-center md:tw-mb-16'>
+        <div class='twcss-mb-10 twcss-text-center md:twcss-mb-16'>
           {%- if section.settings.eyebrow != blank -%}
-            <h5 class='tw-mx-auto tw-typ-h5-subtopic-3-a tw-uppercase tw-mb-2 tw-text-{{ eyebrow_color }}'>
+            <h5 class='twcss-mx-auto twcss-typ-h5-subtopic-3-a twcss-uppercase twcss-mb-2 twcss-text-{{ eyebrow_color }}'>
               {{ section.settings.eyebrow }}
             </h5>
           {%- endif -%}
           {%- if section.settings.title != blank -%}
-            <h2 class='tw-mx-auto {{ section.settings.heading_size }} tw-capitalize tw-text-{{ title_color }}'>
+            <h2 class='twcss-mx-auto {{ section.settings.heading_size }} twcss-capitalize twcss-text-{{ title_color }}'>
               {{ section.settings.title }}
             </h2>
           {%- endif -%}
           {%- if section.settings.descripcion != blank -%}
-            <p class='tw-typ-body-2 tw-mt-[18px] tw-max-w-[{{ section.settings.max_width }}px] md:tw-mt-3 tw-mx-auto tw-text-{{ description_color }}'>
+            <p class='twcss-typ-body-2 twcss-mt-[18px] twcss-max-w-[{{ section.settings.max_width }}px] md:twcss-mt-3 twcss-mx-auto twcss-text-{{ description_color }}'>
               {{ section.settings.descripcion }}
             </p>
           {%- endif -%}
@@ -54,8 +54,8 @@
       {%- endif -%}
     </div>
 
-    <div class='tw-col-span-full'>
-      <div class='tw-flex lg:tw-justify-center tw-w-full tw-flex-row tw-gap-4 tw-overflow-x-scroll tw-pb-4 {% if section.blocks.size < 3 %} sm:tw-justify-center {% endif %} md:tw-overflow-x-auto tw-custom-scrollbar md:tw-items-baseline {% if flag %}tw-flex-col lg:tw-flex-row{% endif %}'>
+    <div class='twcss-col-span-full'>
+      <div class='twcss-flex lg:twcss-justify-center twcss-w-full twcss-flex-row twcss-gap-4 twcss-overflow-x-scroll twcss-pb-4 {% if section.blocks.size < 3 %} sm:twcss-justify-center {% endif %} md:twcss-overflow-x-auto twcss-custom-scrollbar md:twcss-items-baseline {% if flag %}twcss-flex-col lg:twcss-flex-row{% endif %}'>
         {%- liquid
 
         -%}
@@ -66,21 +66,21 @@
           -%}
           {%- case block.type -%}
             {%- when 'card_section' -%}
-              <div class='tw-flex tw-w-full lg:tw-w-[300px] tw-flex-col tw-items-center tw-border tw-border-brand-secondary tw-px-[25px] tw-py-[35px] md:tw-border-transparent'>
+              <div class='twcss-flex twcss-w-full lg:twcss-w-[300px] twcss-flex-col twcss-items-center twcss-border twcss-border-brand-secondary twcss-px-[25px] twcss-py-[35px] md:twcss-border-transparent'>
                 {% if value.image != blank %}
                   <img
                     src='{{ value.image | image_url }}'
-                    class='tw-w-14 tw-rounded-md'
+                    class='twcss-w-14 twcss-rounded-md'
                     alt='logo'
                     width='auto'
                     height='auto'
                     loading='lazy'
                   >
                 {% endif %}
-                <h4 class='tw-mt-3.5 tw-typ-body-2 tw-text-primary tw-text-center'>
+                <h4 class='twcss-mt-3.5 twcss-typ-body-2 twcss-text-primary twcss-text-center'>
                   {{ value.title }}
                 </h4>
-                <span class='tw-typ-body-2 tw-text-tertiary tw-text-center'>
+                <span class='twcss-typ-body-2 twcss-text-tertiary twcss-text-center'>
                   {{- value.description -}}
                 </span>
               </div>
@@ -94,18 +94,18 @@
               %}
 
               <div
-                class='tw-min-h-[166px] tw-w-[166px] tw-p-5 tw-pt-[30px] tw-bg-cover md:tw-min-h-[184px] md:tw-w-[178px]'
+                class='twcss-min-h-[166px] twcss-w-[166px] twcss-p-5 twcss-pt-[30px] twcss-bg-cover md:twcss-min-h-[184px] md:twcss-w-[178px]'
                 style='{% if image_exist %} background-image: url({{ value.image | image_url }}); background-color: {{ value.background_box }}60; {% else %} background-color: {{ value.background_box }}; {% endif %} color: {{ value.text_color_box }}'
               >
-                <h2 class='tw-typ-h2-subheading-b tw-mb-[33px]'>
+                <h2 class='twcss-typ-h2-subheading-b twcss-mb-[33px]'>
                   {{ index }}
                 </h2>
                 <span
-                  class='tw-mb-[10px] tw-h-[1px] tw-w-5 empty:tw-block'
+                  class='twcss-mb-[10px] twcss-h-[1px] twcss-w-5 empty:twcss-block'
                   style='background-color: {{ value.text_color_box }};'
                 ></span>
                 <p
-                  class='tw-typ-body-2 tw-w-[125px] hover:!tw-block'
+                  class='twcss-typ-body-2 twcss-w-[125px] hover:!twcss-block'
                   onmouseout="this.style.display='-webkit-box'"
                   onmouseover="this.style.display='block'"
                   style='
@@ -221,23 +221,23 @@
       "id": "heading_size",
       "options": [
         {
-          "value": "tw-typ-h3-subtopic-1-a",
+          "value": "twcss-typ-h3-subtopic-1-a",
           "label": "t:sections.all.heading_size.options__1.label"
         },
         {
-          "value": "tw-typ-h2-subheading-b",
+          "value": "twcss-typ-h2-subheading-b",
           "label": "t:sections.all.heading_size.options__2.label"
         },
         {
-          "value": "tw-typ-h2-subheading-a",
+          "value": "twcss-typ-h2-subheading-a",
           "label": "t:sections.all.heading_size.options__3.label"
         },
         {
-          "value": "tw-typ-h1-title",
+          "value": "twcss-typ-h1-title",
           "label": "t:sections.all.heading_size.options__4.label"
         }
       ],
-      "default": "tw-typ-h2-subheading-b",
+      "default": "twcss-typ-h2-subheading-b",
       "label": "t:sections.all.heading_size.label"
     },
     {

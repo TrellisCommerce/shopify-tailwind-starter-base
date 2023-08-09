@@ -11,14 +11,14 @@
     if block.type == 'popup'
       assign popup_bg_color = block.settings.bg_color
 
-      if block.settings.popup_text_color == 'tw-text-primary'
-        assign popup_text_color = 'tw-text-primary'
+      if block.settings.popup_text_color == 'twcss-text-primary'
+        assign popup_text_color = 'twcss-text-primary'
       endif
-      if block.settings.popup_text_color == 'tw-text-secondary'
-        assign popup_text_color = 'tw-text-secondary'
+      if block.settings.popup_text_color == 'twcss-text-secondary'
+        assign popup_text_color = 'twcss-text-secondary'
       endif
-      if block.settings.popup_text_color == 'tw-text-tertiary'
-        assign popup_text_color = 'tw-text-tertiary'
+      if block.settings.popup_text_color == 'twcss-text-tertiary'
+        assign popup_text_color = 'twcss-text-tertiary'
       endif
     endif
   endfor
@@ -36,39 +36,39 @@
   {% endif %}
 </style>
 <section
-  class='tw-relative {{ bg_color }}'
+  class='twcss-relative {{ bg_color }}'
   style='padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;'
 >
   <div
     id='popup-{{ section.id }}'
-    class='tw-hidden tw-fixed tw-top-0 tw-w-full tw-h-full tw-items-center tw-justify-center tw-z-10'
+    class='twcss-hidden twcss-fixed twcss-top-0 twcss-w-full twcss-h-full twcss-items-center twcss-justify-center twcss-z-10'
     style='background: {{ popup_bg_color }};'
   >
-    <div class='popup_wrapper tw-relative tw-max-w-[860px] tw-p-[34px] tw-bg-brand-secondary tw-mx-5'>
+    <div class='popup_wrapper twcss-relative twcss-max-w-[860px] twcss-p-[34px] twcss-bg-brand-secondary twcss-mx-5'>
       <div
         id='close_popup'
-        class='tw-absolute tw-top-5 tw-right-5 tw-cursor-pointer'
+        class='twcss-absolute twcss-top-5 twcss-right-5 twcss-cursor-pointer'
         onclick='closePopup()'
       >
         {% render 'icon-close' %}
       </div>
       {% for block in section.blocks %}
         {% if block.type == 'popup' %}
-          <h1 class='{{ popup_text_color }} tw-text-left tw-typ-h2-subheading-b tw-mb-10'>
+          <h1 class='{{ popup_text_color }} twcss-text-left twcss-typ-h2-subheading-b twcss-mb-10'>
             {{ block.settings.title }}
           </h1>
-          <p class='{{ popup_text_color }} tw-text-left'>
+          <p class='{{ popup_text_color }} twcss-text-left'>
             {{ block.settings.description }}
           </p>
         {% endif %}
       {% endfor %}
     </div>
   </div>
-  <div class='tw-grid-system tw-mt-4 tw-mb-[58px] tw-gap-y-[50px] lg:tw-mt-[50px]'>
-    <div class='ays_image-{{ section.id }} tw-col-span-full lg:tw-col-span-6 {% if section.settings.toggle_image %} lg:tw-col-start-7 {% endif %}'>
+  <div class='twcss-grid-system twcss-mt-4 twcss-mb-[58px] twcss-gap-y-[50px] lg:twcss-mt-[50px]'>
+    <div class='ays_image-{{ section.id }} twcss-col-span-full lg:twcss-col-span-6 {% if section.settings.toggle_image %} lg:twcss-col-start-7 {% endif %}'>
       {% if section.settings.main_image %}
         <img
-          class='tw-h-[262px] tw-w-full tw-object-cover md:tw-h-[429px] lg:tw-h-[754px]'
+          class='twcss-h-[262px] twcss-w-full twcss-object-cover md:twcss-h-[429px] lg:twcss-h-[754px]'
           src='{{ section.settings.main_image | image_url }}'
           alt='icon'
           loading='lazy'
@@ -79,33 +79,33 @@
         <img src='https://dummyimage.com/720x600' width='auto' height='auto' loading='lazy'>
       {% endif %}
     </div>
-    <div class='tw-col-span-full tw-row-start-1 tw-col-start-1 {% if section.settings.toggle_image %} lg:tw-col-start-2 {% else %} lg:tw-col-start-8 {% endif %} tw-mb-16 tw-flex tw-flex-col tw-items-center tw-justify-center lg:tw-col-span-4'>
+    <div class='twcss-col-span-full twcss-row-start-1 twcss-col-start-1 {% if section.settings.toggle_image %} lg:twcss-col-start-2 {% else %} lg:twcss-col-start-8 {% endif %} twcss-mb-16 twcss-flex twcss-flex-col twcss-items-center twcss-justify-center lg:twcss-col-span-4'>
       <h2
-        class='tw-w-full tw-typ-h2-subheading-b tw-mb-[18px] {{ title_case }} {{ title_color }} {{ title_align }}'
+        class='twcss-w-full twcss-typ-h2-subheading-b twcss-mb-[18px] {{ title_case }} {{ title_color }} {{ title_align }}'
       >
         {{ section.settings.title }}
       </h2>
       <p
-        class='tw-typ-body-2 tw-w-full {{ description_color }} tw-mb-[40px] {{ description_align }}'
+        class='twcss-typ-body-2 twcss-w-full {{ description_color }} twcss-mb-[40px] {{ description_align }}'
       >
         {{ section.settings.description }}
       </p>
 
       <div
-        class='tw-flex tw-w-full tw-flex-col tw-justify-between tw-divide-y tw-px-3'
+        class='twcss-flex twcss-w-full twcss-flex-col twcss-justify-between twcss-divide-y twcss-px-3'
       >
         {% for block in section.blocks %}
           {% if block.type == 'text' %}
-            <div class='tw-flex tw-items-center tw-justify-between tw-py-7'>
-              <div class='tw-flex tw-items-center'>
+            <div class='twcss-flex twcss-items-center twcss-justify-between twcss-py-7'>
+              <div class='twcss-flex twcss-items-center'>
                 {% if block.settings.icon %}
                   <div
-                    class='tw-w-12 tw-h-12 tw-bg-box-background tw-overflow-hidden'
+                    class='twcss-w-12 twcss-h-12 twcss-bg-box-background twcss-overflow-hidden'
                     style='border-radius: 50%;'
                   >
                     <img
                       src='{{ block.settings.icon | image_url }}'
-                      class='tw-w-full tw-h-full tw-object-contain'
+                      class='twcss-w-full twcss-h-full twcss-object-contain'
                       alt='icon'
                       loading='lazy'
                       width='auto'
@@ -113,11 +113,11 @@
                     >
                   </div>
                 {% endif %}
-                <div class='tw-ml-[15px]'>
-                  <h2 class='tw-typ-body-2 tw-text-primary'>
+                <div class='twcss-ml-[15px]'>
+                  <h2 class='twcss-typ-body-2 twcss-text-primary'>
                     {{ block.settings.title }}
                   </h2>
-                  <p class='tw-typ-body-2 tw-text-tertiary'>
+                  <p class='twcss-typ-body-2 twcss-text-tertiary'>
                     {{ block.settings.description }}
                   </p>
                 </div>
@@ -133,7 +133,7 @@
       </div>
       {% if section.settings.show_button %}
         <button
-          class='tw-button tw-button-primary tw-mt-6 tw-py-[14px] tw-px-[25px] {{ button_style }}'
+          class='twcss-button twcss-button-primary twcss-mt-6 twcss-py-[14px] twcss-px-[25px] {{ button_style }}'
           {% if section.settings.link == blank %}
             onclick='popupHandler()'
           {% endif %}
@@ -170,27 +170,27 @@
       "id": "bg_color",
       "options": [
         {
-          "value": "tw-bg-primary",
+          "value": "twcss-bg-primary",
           "label": "t:sections.all.bg_color.options__1.label"
         },
         {
-          "value": "tw-bg-secondary",
+          "value": "twcss-bg-secondary",
           "label": "t:sections.all.bg_color.options__2.label"
         },
         {
-          "value": "tw-bg-tertiary",
+          "value": "twcss-bg-tertiary",
           "label": "t:sections.all.bg_color.options__3.label"
         },
         {
-          "value": "tw-bg-brand-secondary",
+          "value": "twcss-bg-brand-secondary",
           "label": "t:sections.all.bg_color.options__4.label"
         },
         {
-          "value": "tw-bg-transparent",
+          "value": "twcss-bg-transparent",
           "label": "t:sections.all.bg_color.options__5.label"
         }
       ],
-      "default": "tw-bg-transparent",
+      "default": "twcss-bg-transparent",
       "label": "t:sections.all.bg_color.label"
     },
     {
@@ -198,19 +198,19 @@
       "id": "title_case",
       "options": [
         {
-          "value": "tw-lowercase",
+          "value": "twcss-lowercase",
           "label": "t:sections.all.title_case.options__1.label"
         },
         {
-          "value": "tw-capitalize",
+          "value": "twcss-capitalize",
           "label": "t:sections.all.title_case.options__2.label"
         },
         {
-          "value": "tw-uppercase",
+          "value": "twcss-uppercase",
           "label": "t:sections.all.title_case.options__3.label"
         }
       ],
-      "default": "tw-capitalize",
+      "default": "twcss-capitalize",
       "label": "t:sections.all.title_case.label"
     },
     {
@@ -218,23 +218,23 @@
       "id": "title_color",
       "options": [
         {
-          "value": "tw-text-primary",
+          "value": "twcss-text-primary",
           "label": "t:sections.all.text_color.options__1.label"
         },
         {
-          "value": "tw-text-secondary",
+          "value": "twcss-text-secondary",
           "label": "t:sections.all.text_color.options__2.label"
         },
         {
-          "value": "tw-text-tertiary",
+          "value": "twcss-text-tertiary",
           "label": "t:sections.all.text_color.options__3.label"
         },
         {
-          "value": "tw-text-brand-secondary",
+          "value": "twcss-text-brand-secondary",
           "label": "t:sections.all.text_color.options__4.label"
         }
       ],
-      "default": "tw-text-primary",
+      "default": "twcss-text-primary",
       "label": "t:sections.all.title_color.label"
     },
     {
@@ -242,19 +242,19 @@
       "id": "title_align",
       "options": [
         {
-          "value": "tw-text-left",
+          "value": "twcss-text-left",
           "label": "Left"
         },
         {
-          "value": "tw-text-center",
+          "value": "twcss-text-center",
           "label": "Center"
         },
         {
-          "value": "tw-text-right",
+          "value": "twcss-text-right",
           "label": "Right"
         }
       ],
-      "default": "tw-text-center",
+      "default": "twcss-text-center",
       "label": "Center"
     },
     {
@@ -262,23 +262,23 @@
       "id": "description_color",
       "options": [
         {
-          "value": "tw-text-primary",
+          "value": "twcss-text-primary",
           "label": "t:sections.all.text_color.options__1.label"
         },
         {
-          "value": "tw-text-secondary",
+          "value": "twcss-text-secondary",
           "label": "t:sections.all.text_color.options__2.label"
         },
         {
-          "value": "tw-text-tertiary",
+          "value": "twcss-text-tertiary",
           "label": "t:sections.all.text_color.options__3.label"
         },
         {
-          "value": "tw-text-brand-secondary",
+          "value": "twcss-text-brand-secondary",
           "label": "t:sections.all.text_color.options__4.label"
         }
       ],
-      "default": "tw-text-primary",
+      "default": "twcss-text-primary",
       "label": "t:sections.all.description_color.label"
     },
     {
@@ -286,19 +286,19 @@
       "id": "description_align",
       "options": [
         {
-          "value": "tw-text-left",
+          "value": "twcss-text-left",
           "label": "Left"
         },
         {
-          "value": "tw-text-center",
+          "value": "twcss-text-center",
           "label": "Center"
         },
         {
-          "value": "tw-text-right",
+          "value": "twcss-text-right",
           "label": "Right"
         }
       ],
-      "default": "tw-text-center",
+      "default": "twcss-text-center",
       "label": "t:sections.all.description_align.label"
     },
     {
@@ -361,32 +361,32 @@
       "id": "button_style",
       "options": [
         {
-          "value": "tw-button-primary",
+          "value": "twcss-button-primary",
           "label": "Primary button"
         },
         {
-          "value": "tw-button-secondary",
+          "value": "twcss-button-secondary",
           "label": "Secondary button"
         },
         {
-          "value": "tw-button-fill",
+          "value": "twcss-button-fill",
           "label": "Fill button"
         },
         {
-          "value": "tw-button-primary-dark",
+          "value": "twcss-button-primary-dark",
           "label": "Dark Primary button"
         },
         {
-          "value": "tw-button-secondary-dark",
+          "value": "twcss-button-secondary-dark",
           "label": "Dark Secondary button"
         },
         {
-          "value": "tw-button-fill-dark",
+          "value": "twcss-button-fill-dark",
           "label": "Dark Fill button"
         }
       ],
       "label": "Button style",
-      "default": "tw-button-primary"
+      "default": "twcss-button-primary"
     },
     {
       "type": "text",
@@ -456,19 +456,19 @@
           "id": "popup_text_color",
           "options": [
             {
-              "value": "tw-text-primary",
+              "value": "twcss-text-primary",
               "label": "t:sections.all.text_color.options__1.label"
             },
             {
-              "value": "tw-text-secondary",
+              "value": "twcss-text-secondary",
               "label": "t:sections.all.text_color.options__2.label"
             },
             {
-              "value": "tw-text-tertiary",
+              "value": "twcss-text-tertiary",
               "label": "t:sections.all.text_color.options__3.label"
             }
           ],
-          "default": "tw-text-primary",
+          "default": "twcss-text-primary",
           "label": "t:sections.all.text_color.label"
         }
       ]

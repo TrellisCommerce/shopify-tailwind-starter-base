@@ -1,13 +1,13 @@
 {% case section.settings.layout_type %}
   {% when 'primary' %}
     <section
-      class='tw-grid-system tw-mt-4 tw-gap-5 tw-pb-[58px] lg:tw-mt-[50px]'
+      class='twcss-grid-system twcss-mt-4 twcss-gap-5 twcss-pb-[58px] lg:twcss-mt-[50px]'
     >
-      <div class='tw-col-span-full md:tw-col-span-4 lg:tw-col-span-6'>
+      <div class='twcss-col-span-full md:twcss-col-span-4 lg:twcss-col-span-6'>
         {% if section.settings.main_image %}
           <img
             src='{{ section.settings.main_image | image_url }}'
-            class='tw-w-full tw-object-cover md:tw-h-[684px] lg:tw-h-[1040px]'
+            class='twcss-w-full twcss-object-cover md:twcss-h-[684px] lg:twcss-h-[1040px]'
             alt='product-image'
             loading='lazy'
             width='auto'
@@ -16,16 +16,16 @@
         {% else %}
           <img src='https://dummyimage.com/100x600' width='auto' height='auto' loading='lazy'>
         {% endif %}
-        <div class='tw-mt-[10px] tw-flex tw-items-center tw-gap-2 [&>.icon-caret]:tw-w-3 [&>.icon-caret]:-tw-rotate-90'>
-          <h4 class='tw-typ-h4-subtopic-2 tw-text-primary'>
+        <div class='twcss-mt-[10px] twcss-flex twcss-items-center twcss-gap-2 [&>.icon-caret]:twcss-w-3 [&>.icon-caret]:-twcss-rotate-90'>
+          <h4 class='twcss-typ-h4-subtopic-2 twcss-text-primary'>
             {{ section.settings.first_title | link_to: section.settings.first_link }}
           </h4>
           {% render 'icon-caret' %}
         </div>
       </div>
-      <div class='tw-col-span-full md:tw-col-span-4 lg:tw-col-span-6'>
-        <div class='tw-flex tw-flex-col tw-gap-5'>
-          <div class='tw-h-[400px] tw-bg-primary md:tw-h-[332px] lg:tw-h-[510px]'>
+      <div class='twcss-col-span-full md:twcss-col-span-4 lg:twcss-col-span-6'>
+        <div class='twcss-flex twcss-flex-col twcss-gap-5'>
+          <div class='twcss-h-[400px] twcss-bg-primary md:twcss-h-[332px] lg:twcss-h-[510px]'>
             {% liquid
               for block in section.blocks
                 case block.type
@@ -41,7 +41,7 @@
           {% if section.settings.second_image %}
             <img
               src='{{ section.settings.second_image | image_url }}'
-              class='tw-h-full tw-w-full tw-object-cover md:tw-h-[332px] lg:tw-h-[510px]'
+              class='twcss-h-full twcss-w-full twcss-object-cover md:twcss-h-[332px] lg:twcss-h-[510px]'
               alt='product-image'
               loading='lazy'
               width='auto'
@@ -51,8 +51,8 @@
             <img src='https://dummyimage.com/600x1000' width='auto' height='auto' loading='lazy'>
           {% endif %}
         </div>
-        <div class='tw-mt-[10px] tw-flex tw-items-center tw-gap-2 [&>.icon-caret]:tw-w-3 [&>.icon-caret]:-tw-rotate-90'>
-          <h4 class='tw-typ-h4-subtopic-2 tw-text-primary'>
+        <div class='twcss-mt-[10px] twcss-flex twcss-items-center twcss-gap-2 [&>.icon-caret]:twcss-w-3 [&>.icon-caret]:-twcss-rotate-90'>
+          <h4 class='twcss-typ-h4-subtopic-2 twcss-text-primary'>
             {{ section.settings.second_title | link_to: section.settings.second_link }}
           </h4>
           {% render 'icon-caret' %}
@@ -61,16 +61,16 @@
     </section>
   {% when 'secondary' %}
     <section
-      class='tw-grid-system tw-mt-4 tw-gap-5 tw-pb-[58px] lg:tw-mt-[50px]'
+      class='twcss-grid-system twcss-mt-4 twcss-gap-5 twcss-pb-[58px] lg:twcss-mt-[50px]'
     >
-      <div class='tw-col-span-full'>
+      <div class='twcss-col-span-full'>
         {% if section.settings.main_image %}
-          <div class='tw-hidden lg:tw-block'>
+          <div class='twcss-hidden lg:twcss-block'>
             {% if section.settings.first_link %}
               <a href='{{ section.settings.first_link }}'>
                 <img
                   src='{{ section.settings.main_image | image_url }}'
-                  class='tw-w-full tw-object-cover'
+                  class='twcss-w-full twcss-object-cover'
                   style='max-height: 500px;'
                   alt='product-image'
                   loading='lazy'
@@ -81,7 +81,7 @@
             {% else %}
               <img
                 src='{{ section.settings.main_image | image_url }}'
-                class='tw-w-full tw-object-cover'
+                class='twcss-w-full twcss-object-cover'
                 style='max-height: 500px;'
                 alt='product-image'
                 loading='lazy'
@@ -94,15 +94,15 @@
           <img src='https://dummyimage.com/720x600' width='auto' height='auto' loading='lazy'>
         {% endif %}
       </div>
-      <div class='tw-col-span-full'>
-        <div class='tw-gap-5 tw-grid-system !tw-m-0'>
+      <div class='twcss-col-span-full'>
+        <div class='twcss-gap-5 twcss-grid-system !twcss-m-0'>
           {% if section.settings.second_image %}
-            <div class='tw-col-span-full lg:tw-col-span-6'>
+            <div class='twcss-col-span-full lg:twcss-col-span-6'>
               {% if section.settings.second_link %}
                 <a href='{{ section.settings.second_link }}'>
                   <img
                     src='{{ section.settings.second_image | image_url }}'
-                    class='tw-h-full tw-w-full tw-object-cover md:tw-h-[332px] lg:tw-h-[510px]'
+                    class='twcss-h-full twcss-w-full twcss-object-cover md:twcss-h-[332px] lg:twcss-h-[510px]'
                     alt='product-image'
                     loading='lazy'
                     width='auto'
@@ -112,7 +112,7 @@
               {% else %}
                 <img
                   src='{{ section.settings.second_image | image_url }}'
-                  class='tw-h-full tw-w-full tw-object-cover md:tw-h-[332px] lg:tw-h-[510px]'
+                  class='twcss-h-full twcss-w-full twcss-object-cover md:twcss-h-[332px] lg:twcss-h-[510px]'
                   alt='product-image'
                   loading='lazy'
                   width='auto'
@@ -121,12 +121,12 @@
               {% endif %}
             </div>
           {% else %}
-            <div class='tw-col-span-full lg:tw-col-span-6'>
+            <div class='twcss-col-span-full lg:twcss-col-span-6'>
               <img src='https://dummyimage.com/600x600' width='auto' height='auto' loading='lazy'>
             </div>
           {% endif %}
           <div
-            class='tw-col-span-full lg:tw-col-span-6 tw-relative tw-h-[400px] tw-bg-primary md:tw-h-[332px] lg:tw-h-[510px]'
+            class='twcss-col-span-full lg:twcss-col-span-6 twcss-relative twcss-h-[400px] twcss-bg-primary md:twcss-h-[332px] lg:twcss-h-[510px]'
           >
             {% liquid
               for block in section.blocks

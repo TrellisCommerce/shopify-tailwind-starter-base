@@ -1,30 +1,30 @@
 <section
-  style="margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;"
-  class="tw-grid-system"
+  style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;'
+  class='twcss-grid-system'
 >
-  <table class="tw-min-w-full tw-mt-5 tw-col-span-full">
+  <table class='twcss-min-w-full twcss-mt-5 twcss-col-span-full'>
     <thead>
       <tr>
         {%- if section.settings.disabled_column_1 == true -%}
           <th
-            scope="col"
-            class="font-medium tw-px-6 tw-py-3"
+            scope='col'
+            class='font-medium twcss-px-6 twcss-py-3'
           >
             {{ section.settings.title_column_1 }}
           </th>
         {%- endif -%}
         {%- if section.settings.disabled_column_2 == true -%}
           <th
-            scope="col"
-            class="font-medium tw-px-6 tw-py-3"
+            scope='col'
+            class='font-medium twcss-px-6 twcss-py-3'
           >
             {{ section.settings.title_column_2 }}
           </th>
         {%- endif -%}
         {%- if section.settings.disabled_column_3 == true -%}
           <th
-            scope="col"
-            class="font-medium tw-px-6 tw-py-3"
+            scope='col'
+            class='font-medium twcss-px-6 twcss-py-3'
           >
             {{ section.settings.title_column_3 }}
           </th>
@@ -34,19 +34,19 @@
 
     <tbody>
       {%- for block in section.blocks -%}
-        <tr class="odd:tw-bg-box-background even:tw-transparent">
+        <tr class='odd:twcss-bg-box-background even:twcss-transparent'>
           {%- if section.settings.disabled_column_1 == true -%}
-            <td class="tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-center">
+            <td class='twcss-px-6 twcss-py-4 twcss-whitespace-nowrap twcss-text-center'>
               {{ block.settings.column_1 }}
             </td>
           {%- endif -%}
           {%- if section.settings.disabled_column_2 == true -%}
-            <td class="tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-center">
+            <td class='twcss-px-6 twcss-py-4 twcss-whitespace-nowrap twcss-text-center'>
               {{ block.settings.column_2 }}
             </td>
           {%- endif -%}
           {%- if section.settings.disabled_column_3 == true -%}
-            <td class="tw-px-6 tw-py-4 tw-whitespace-nowrap tw-text-center">
+            <td class='twcss-px-6 twcss-py-4 twcss-whitespace-nowrap twcss-text-center'>
               {{ block.settings.column_3 }}
             </td>
           {%- endif -%}

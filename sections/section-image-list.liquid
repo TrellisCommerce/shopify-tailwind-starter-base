@@ -21,11 +21,11 @@
 </style>
 <section
   id='{{ section.id }}'
-  class='tw-flex tw-py-8 tw-px-4 tw-bg-primary md:tw-px-7 lg:tw-py-[100px] lg:tw-px-[120px]'
+  class='twcss-flex twcss-py-8 twcss-px-4 twcss-bg-primary md:twcss-px-7 lg:twcss-py-[100px] lg:twcss-px-[120px]'
 >
-  <div class='container-scroll tw-flex tw-w-full tw-gap-4 tw-overflow-x-auto tw-py-5'>
+  <div class='container-scroll twcss-flex twcss-w-full twcss-gap-4 twcss-overflow-x-auto twcss-py-5'>
     {% for block in section.blocks %}
-      <div class='tw-flex tw-justify-center tw-w-[350px] tw-min-w-[250px] tw-flex-col tw-px-[25px]'>
+      <div class='twcss-flex twcss-justify-center twcss-w-[350px] twcss-min-w-[250px] twcss-flex-col twcss-px-[25px]'>
         {% if block.settings.logo != blank %}
           <a href='{{ block.settings.link }}'>
             <img

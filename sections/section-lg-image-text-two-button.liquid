@@ -1,47 +1,47 @@
-<section class='tw-grid-system tw-gap-y-[50px] tw-mt-4 tw-mb-[58px] lg:tw-mt-[50px]'>
+<section class='twcss-grid-system twcss-gap-y-[50px] twcss-mt-4 twcss-mb-[58px] lg:twcss-mt-[50px]'>
   <!-- Primera sección -->
-  <div class='tw-col-span-full md:tw-col-span-4 {% if section.settings.toggle_image %}lg:tw-col-start-8{% else %}md:tw-col-start-1 lg:tw-col-start-2{% endif %} lg:tw-col-span-4 tw-items-center tw-flex tw-flex-col tw-justify-center'>
+  <div class='twcss-col-span-full md:twcss-col-span-4 {% if section.settings.toggle_image %}lg:twcss-col-start-8{% else %}md:twcss-col-start-1 lg:twcss-col-start-2{% endif %} lg:twcss-col-span-4 twcss-items-center twcss-flex twcss-flex-col twcss-justify-center'>
     <h5
-      class='tw-typ-h5-subtopic-3-a tw-mb-[16px] tw-uppercase tw-text-center tw-text-primary'
+      class='twcss-typ-h5-subtopic-3-a twcss-mb-[16px] twcss-uppercase twcss-text-center twcss-text-primary'
     >
       {{ section.settings.sup_title }}
     </h5>
     <h2
-      class='tw-typ-h2-subheading-b tw-mb-[16px] tw-text-center tw-text-primary'
+      class='twcss-typ-h2-subheading-b twcss-mb-[16px] twcss-text-center twcss-text-primary'
     >
       {{ section.settings.title }}
     </h2>
     <p
-      class='tw-typ-body-2 tw-mb-[14px] tw-text-center tw-text-primary'
+      class='twcss-typ-body-2 twcss-mb-[14px] twcss-text-center twcss-text-primary'
     >
       {{ section.settings.description }}
     </p>
-    <div class='tw-flex tw-flex-col tw-w-full tw-gap-y-4'>
+    <div class='twcss-flex twcss-flex-col twcss-w-full twcss-gap-y-4'>
       {% if section.settings.show_first_button %}
-        <button class='tw-button tw-button-primary'>
+        <button class='twcss-button twcss-button-primary'>
           {{ section.settings.first_button_title | link_to: section.settings.first_button_link }}
         </button>
       {% endif %}
       {% if section.settings.show_second_button %}
-        <button class='tw-button tw-button-secondary'>
+        <button class='twcss-button twcss-button-secondary'>
           {{ section.settings.second_button_title | link_to: section.settings.second_button_link }}
         </button>
       {% endif %}
     </div>
   </div>
   <!-- Segunda sección -->
-  <div class='tw-col-span-full tw-row-start-1 md:tw-col-span-4 {% if section.settings.toggle_image %}lg:tw-col-start-2{% else %}md:tw-col-start-5 lg:tw-col-start-7{% endif %} lg:tw-col-span-5'>
+  <div class='twcss-col-span-full twcss-row-start-1 md:twcss-col-span-4 {% if section.settings.toggle_image %}lg:twcss-col-start-2{% else %}md:twcss-col-start-5 lg:twcss-col-start-7{% endif %} lg:twcss-col-span-5'>
     {% if section.settings.main_image %}
       <img
         src='{{ section.settings.main_image | image_url }}'
-        class='{% if section.settings.adapt_image %}tw-h-[262px]{% endif %} tw-w-full tw-object-cover md:tw-h-[429px] lg:tw-h-[754px]'
+        class='{% if section.settings.adapt_image %}twcss-h-[262px]{% endif %} twcss-w-full twcss-object-cover md:twcss-h-[429px] lg:twcss-h-[754px]'
         alt='logo'
         loading='lazy'
         width='auto'
         height='auto'
       >
     {% else %}
-      <div class='tw-overflow-hidden'>
+      <div class='twcss-overflow-hidden'>
         <img src='https://dummyimage.com/720x600' width='auto' height='auto' loading='lazy'>
       </div>
     {% endif %}

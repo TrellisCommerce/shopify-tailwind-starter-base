@@ -1,25 +1,25 @@
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
 <section
-  class='tw-grid-system'
+  class='twcss-grid-system'
   style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;'
 >
-  <div class='tw-col-span-full md:tw-col-span-4 lg:tw-col-span-6 xl:tw-col-span-5 tw-flex tw-flex-col tw-justify-between'>
-    <div class='tw-mx-4 md:tw-m-0'>
-      <h5 class='tw-typ-h5-subtopic-3-a'>{{ section.settings.eyebrow }}</h5>
-      <h2 class='tw-mb-[11px] tw-text-center tw-text-primary tw-typ-h2-subheading-a tw-uppercase md:tw-text-start'>
+  <div class='twcss-col-span-full md:twcss-col-span-4 lg:twcss-col-span-6 xl:twcss-col-span-5 twcss-flex twcss-flex-col twcss-justify-between'>
+    <div class='twcss-mx-4 md:twcss-m-0'>
+      <h5 class='twcss-typ-h5-subtopic-3-a'>{{ section.settings.eyebrow }}</h5>
+      <h2 class='twcss-mb-[11px] twcss-text-center twcss-text-primary twcss-typ-h2-subheading-a twcss-uppercase md:twcss-text-start'>
         {{ section.settings.title }}
       </h2>
-      <p class='tw-mb-[20px] tw-text-center tw-text-tertiary tw-typ-body-1 md:tw-text-start'>
+      <p class='twcss-mb-[20px] twcss-text-center twcss-text-tertiary twcss-typ-body-1 md:twcss-text-start'>
         {{ section.settings.description }}
       </p>
     </div>
-    <div class='tw-relative'>
-      <div class='container-video tw-overflow-hidden tw-relative tw-rounded-3xl [&>video]:!tw-object-cover'>
+    <div class='twcss-relative'>
+      <div class='container-video twcss-overflow-hidden twcss-relative twcss-rounded-3xl [&>video]:!twcss-object-cover'>
         {{ section.settings.video_one | video_tag: image_size: '2048x' }}
         <button
           type='button'
-          class='play-button tw-absolute tw-inset-0 tw-w-full tw-text-2xl tw-font-bold tw-text-white tw-bg-[#00000029]'
+          class='play-button twcss-absolute twcss-inset-0 twcss-w-full twcss-text-2xl twcss-font-bold twcss-text-white twcss-bg-[#00000029]'
         >
           <span class='deferred-media__poster-button motion-reduce'>
             {%- render 'icon-play' -%}
@@ -28,15 +28,15 @@
       </div>
     </div>
   </div>
-  <div class='tw-relative tw-mt-3 md:tw-mt-0 tw-col-span-full md:tw-col-span-4 lg:tw-col-span-6 xl:tw-col-span-7 '>
+  <div class='twcss-relative twcss-mt-3 md:twcss-mt-0 twcss-col-span-full md:twcss-col-span-4 lg:twcss-col-span-6 xl:twcss-col-span-7 '>
     <div
-      class='container-video tw-overflow-hidden tw-relative tw-rounded-3xl [&>video]:!tw-object-cover tw-h-full [&>video]:tw-h-full'
+      class='container-video twcss-overflow-hidden twcss-relative twcss-rounded-3xl [&>video]:!twcss-object-cover twcss-h-full [&>video]:twcss-h-full'
       style='overflow: -webkit-paged-y;'
     >
       {{ section.settings.video_two | video_tag: image_size: '2048x' }}
       <button
         type='button'
-        class='play-button tw-absolute tw-inset-0 tw-w-full tw-text-2xl tw-font-bold tw-text-white tw-bg-[#00000029]'
+        class='play-button twcss-absolute twcss-inset-0 twcss-w-full twcss-text-2xl twcss-font-bold twcss-text-white twcss-bg-[#00000029]'
       >
         <span class='deferred-media__poster-button motion-reduce'>
           {%- render 'icon-play' -%}
@@ -52,13 +52,13 @@
     const container = button?.parentElement;
     const video = container.querySelector('video');
     button?.addEventListener('click', () => {
-      button.classList.add('tw-hidden');
-      button.classList.remove('tw-block');
+      button.classList.add('twcss-hidden');
+      button.classList.remove('twcss-block');
       video.play();
     });
     video?.addEventListener('ended', () => {
-      button.classList.add('tw-block');
-      button.classList.remove('tw-hidden');
+      button.classList.add('twcss-block');
+      button.classList.remove('twcss-hidden');
     });
   });
 </script>

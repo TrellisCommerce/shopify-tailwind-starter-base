@@ -1,24 +1,24 @@
 <section
-  class='tw-p tw-m-auto tw-max-w-[1920px] tw-bg-cover tw-py-[60px] lg:tw-py-[90px]'
+  class='twcss-p twcss-m-auto twcss-max-w-[1920px] twcss-bg-cover twcss-py-[60px] lg:twcss-py-[90px]'
   style='background-image: url({{ section.settings.background | image_url }}); margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;'
 >
-  <div class='tw-grid-system'>
-    <div class='tw-hidden md:tw-col-span-1 md:tw-col-start-2 md:tw-block lg:tw-col-span-2 lg:tw-col-start-2'>
+  <div class='twcss-grid-system'>
+    <div class='twcss-hidden md:twcss-col-span-1 md:twcss-col-start-2 md:twcss-block lg:twcss-col-span-2 lg:twcss-col-start-2'>
       <img
         src='{{ section.settings.icon | image_url }}'
         loading='lazy'
         width='auto'
         height='auto'
-        class='tw-w-full'
+        class='twcss-w-full'
       >
     </div>
-    <div class='tw-col-span-full tw-text-center md:tw-col-span-4 md:tw-col-start-3 md:tw-ml-4 md:tw-text-start lg:tw-col-span-7 lg:tw-col-start-5'>
-      <h2 class='tw-typ-h1-title tw-mb-[30px] tw-uppercase tw-text-primary lg:tw-mb-[45px]'>
+    <div class='twcss-col-span-full twcss-text-center md:twcss-col-span-4 md:twcss-col-start-3 md:twcss-ml-4 md:twcss-text-start lg:twcss-col-span-7 lg:twcss-col-start-5'>
+      <h2 class='twcss-typ-h1-title twcss-mb-[30px] twcss-uppercase twcss-text-primary lg:twcss-mb-[45px]'>
         {{ section.settings.text }}
       </h2>
       <a
         href='{{ section.settings.url }}'
-        class='tw-p-2 tw-font-bold tw-uppercase hover:tw-border-b hover:tw-border-primary lg:tw-ml-4'
+        class='twcss-p-2 twcss-font-bold twcss-uppercase hover:twcss-border-b hover:twcss-border-primary lg:twcss-ml-4'
       >
         {{ section.settings.url_text -}}
       </a>

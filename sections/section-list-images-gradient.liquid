@@ -1,28 +1,28 @@
 <section
-  class='tw-custom-scrollbar tw-m-auto tw-my-16 tw-flex tw-max-w-[1920px] tw-overflow-x-auto tw-bg-scroll tw-pb-8'
+  class='twcss-custom-scrollbar twcss-m-auto twcss-my-16 twcss-flex twcss-max-w-[1920px] twcss-overflow-x-auto twcss-bg-scroll twcss-pb-8'
   style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;'
 >
   {%- for block in section.blocks -%}
     <div
-      class='tw-w-1/4 tw-min-w-[300px] tw-bg-cover tw-bg-center tw-relative tw-min-h-[700px]'
+      class='twcss-w-1/4 twcss-min-w-[300px] twcss-bg-cover twcss-bg-center twcss-relative twcss-min-h-[700px]'
       style='background-image: url({{ block.settings.backogrund_image | image_url }});'
     >
       <div
-        class='tw-t-0 tw-absolute tw-h-full tw-w-full empty:tw-block tw-z-0'
+        class='twcss-t-0 twcss-absolute twcss-h-full twcss-w-full empty:twcss-block twcss-z-0'
         style='background: linear-gradient(transparent, {{ section.settings.gradient_color }});'
       ></div>
-      <div class='tw-top-0 tw-flex tw-h-full tw-w-full tw-flex-col tw-justify-between tw-px-[39px] tw-py-[50px] tw-text-center md:tw-px-[47px] md:tw-py-[65px] lg:tw-px-[75px] lg:tw-py-[110px] tw-z-[1] tw-relative'>
-        <h2 class='tw-typ-h2-subheading-a tw-uppercase tw-text-background'>
+      <div class='twcss-top-0 twcss-flex twcss-h-full twcss-w-full twcss-flex-col twcss-justify-between twcss-px-[39px] twcss-py-[50px] twcss-text-center md:twcss-px-[47px] md:twcss-py-[65px] lg:twcss-px-[75px] lg:twcss-py-[110px] twcss-z-[1] twcss-relative'>
+        <h2 class='twcss-typ-h2-subheading-a twcss-uppercase twcss-text-background'>
           {{ block.settings.title }}
         </h2>
 
         <div>
-          <p class='tw-typ-body-2 tw-mb-6 tw-text-background'>
+          <p class='twcss-typ-body-2 twcss-mb-6 twcss-text-background'>
             {{ block.settings.description }}
           </p>
           <a
             href='{{ block.settings.url_button }}'
-            class='tw-button tw-hidden tw-border-none lg:tw-block'
+            class='twcss-button twcss-hidden twcss-border-none lg:twcss-block'
             style='background-color: {{ section.settings.background_button }}; color: {{ section.settings.text_button_color }};'
           >
             {{ block.settings.button_title }}

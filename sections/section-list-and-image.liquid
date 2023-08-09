@@ -1,32 +1,32 @@
 <section
-  class='tw-mx-auto tw-flex tw-max-w-[1920px] tw-flex-wrap-reverse tw-justify-center {% if section.settings.reverse_content == true %} md:tw-flex-row-reverse {% endif %}'
+  class='twcss-mx-auto twcss-flex twcss-max-w-[1920px] twcss-flex-wrap-reverse twcss-justify-center {% if section.settings.reverse_content == true %} md:twcss-flex-row-reverse {% endif %}'
   style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;'
 >
   <div
-    class='tw-flex tw-w-full tw-flex-col tw-justify-center tw-py-[60px]  tw-px-4 md:tw-w-1/2 md:tw-pl-8 md:tw-pr-4 lg:tw-py-[132px] lg:tw-pl-[120px] lg:tw-pr-[108px]'
+    class='twcss-flex twcss-w-full twcss-flex-col twcss-justify-center twcss-py-[60px]  twcss-px-4 md:twcss-w-1/2 md:twcss-pl-8 md:twcss-pr-4 lg:twcss-py-[132px] lg:twcss-pl-[120px] lg:twcss-pr-[108px]'
     style='background-color: {{ section.settings.background }}; color: {{ section.settings.text_color }};'
   >
-    <h2 class='tw-mb-3 tw-typ-h2-subheading-a lg:tw-mb-5'>
+    <h2 class='twcss-mb-3 twcss-typ-h2-subheading-a lg:twcss-mb-5'>
       {{ section.settings.title }}
     </h2>
     <ul>
       {%- for block in section.blocks -%}
         <li>
-          <div class='tw-flex tw-gap-4'>
+          <div class='twcss-flex twcss-gap-4'>
             <picture>
               <img
                 src='{{ block.settings.image | image_url }}'
-                class=' tw-w-[70px]'
+                class=' twcss-w-[70px]'
                 width='auto'
                 height='auto'
                 loading='lazy'
               >
             </picture>
             <div>
-              <h3 class='tw-mb-2 tw-typ-h4-subtopic-2'>
+              <h3 class='twcss-mb-2 twcss-typ-h4-subtopic-2'>
                 {{ block.settings.title }}
               </h3>
-              <p class='tw-mb-6 tw-typ-body-2'>
+              <p class='twcss-mb-6 twcss-typ-body-2'>
                 {{ block.settings.descripcion }}
               </p>
             </div>
@@ -35,11 +35,11 @@
       {%- endfor -%}
     </ul>
 
-    <div class='tw-flex tw-w-full tw-flex-col tw-gap-4 md:tw-flex-row'>
+    <div class='twcss-flex twcss-w-full twcss-flex-col twcss-gap-4 md:twcss-flex-row'>
       {%- if section.settings.show_button_1 == true -%}
         <a
           href='{{ section.settings.link_button_1 }}'
-          class='tw-button'
+          class='twcss-button'
           style='background-color: {{ section.settings.background_button }}; color: {{ section.settings.text_button_color }};'
         >
           {{ section.settings.text_button_1 }}
@@ -49,7 +49,7 @@
       {%- if section.settings.show_button_2 == true -%}
         <a
           href='{{ section.settings.link_button_2 }}'
-          class='tw-button'
+          class='twcss-button'
           style='background-color: {{ section.settings.background_button }}; color: {{ section.settings.text_button_color }};'
         >
           {{ section.settings.text_button_2 }}
@@ -58,10 +58,10 @@
     </div>
   </div>
 
-  <div class='tw-w-full md:tw-w-1/2'>
+  <div class='twcss-w-full md:twcss-w-1/2'>
     <img
       src='{{ section.settings.image | image_url }}'
-      class='tw-h-full tw-w-full tw-object-cover'
+      class='twcss-h-full twcss-w-full twcss-object-cover'
       alt='product-image'
       loading='lazy'
       width='auto'
