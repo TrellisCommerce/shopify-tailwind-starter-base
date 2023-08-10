@@ -1,0 +1,366 @@
+{%- style -%}
+  .home-link-container-container{
+    width: 100%;
+    background: #eee;
+  }
+
+  .home-link-container {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "item-a item-1 item-2 "
+      "item-a item-3 item-4";
+    text-shadow: 1px -1px black;
+    grid-column-gap: 6px;
+    grid-row-gap: 6px;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .home-link-block{
+    position: relative;
+    overflow: hidden;
+  }
+
+  .home-link-link{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .item-a {
+    grid-area: item-a;
+    height: 486px;
+  }
+
+  .item-1 {
+    grid-area: item-1;
+    height: 240px;
+  }
+
+  .item-2 {
+    grid-area: item-2;
+    height: 240px;
+  }
+
+  .item-3 {
+    grid-area: item-3;
+    height: 240px;
+  }
+
+  .item-4{
+    grid-area: item-4;
+    height: 240px;
+  }
+
+  .pikchur{
+    width: 100%;
+  }
+
+  .block-overlay {
+    opacity: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: {{ section.settings.overlay_color }};
+    text-align: center;
+    line-height: 220px;
+  }
+
+  .block-overlay,
+  .block-overlay > * {
+    color: {{ section.settings.font_color }};
+    font-size: {{ section.settings.font_size }}px;
+  }
+
+  .block-overlay:hover + .pikchur{
+    opacity: 0;
+  }
+
+  .block-overlay:hover{
+    transition: .5s ease-in-out;
+    opacity: 0.8;
+  }
+
+  .item-a .block-overlay{
+    top: 0;
+    line-height: 440px;
+  }
+
+  @media(max-width: 1056px){
+    .home-link-container{
+      transition: .5 linear;
+      grid-template-columns: repeat(2, 350px);
+      grid-template-areas:
+        "item-a item-1"
+        "item-a item-3"
+        "item-2 item-4";
+    }
+  }
+
+  @media(max-width: 777px){
+    .home-link-container{
+      grid-template-columns: 350px;
+      grid-template-areas:
+        "item-a"
+        "item-a"
+        "item-1"
+        "item-2"
+        "item-3"
+        "item-4";
+    }
+  }
+{%- endstyle -%}
+
+<div
+  style='background-color: {{ section.settings.container_color }};padding: {{ section.settings.background_padding }}px;'
+  class='home-link-container-container'
+>
+  <div class='home-link-container'>
+    <div class='home-link-block item-a'>
+      <a class='home-link-link' href='{{ section.settings.link }}'>
+        {% if section.settings.image %}
+          <img
+            class='twcss-w-full twcss-h-full twcss-object-cover pikchur'
+            style='height: 100%; width: auto;'
+            src='{{ section.settings.image | image_url }}'
+            alt=''
+            width='auto'
+            height='auto'
+            loading='lazy'
+          >
+        {% else %}
+          <img
+            class='twcss-w-full twcss-h-full twcss-object-cover pikchur'
+            src='https://dummyimage.com/300x700s'
+            width='auto'
+            height='auto'
+            loading='lazy'
+          >
+        {% endif %}
+
+        <div style='padding-top: {{ section.settings.padding }}%;' class='block-overlay'>
+          {{ section.settings.text }}
+        </div>
+      </a>
+    </div>
+
+    {%- for block in section.blocks -%}
+      {%- style -%}
+        .block-overlay-{{ block.id }} {
+          opacity: 0;
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          background: {{ block.settings.overlay_color }};
+          text-align: center;
+          line-height: 220px;
+        }
+
+        .block-overlay-{{ block.id }},
+        .block-overlay-{{ block.id }} > * {
+          color: {{ block.settings.font_color }};
+          font-size: {{ block.settings.font_size }}px;
+        }
+
+        .block-overlay-{{ block.id }}:hover + .pikchur{
+          opacity: 0;
+        }
+
+        .block-overlay-{{ block.id }}:hover {
+          transition: .5s ease-in-out;
+          opacity: 0.8;
+        }
+
+        .item-a .block-overlay-{{ block.id }} {
+          top: 0;
+          line-height: 440px;
+        }
+      {%- endstyle -%}
+
+      <div class='home-link-block item-{{ forloop.index }}'>
+        <a class='home-link-link' href='{{ block.settings.link }}'>
+          {% if block.settings.image %}
+            <img
+              class='twcss-w-full twcss-h-full twcss-object-cover pikchur'
+              src='{{ block.settings.image | image_url }}'
+              alt=''
+              width='auto'
+              height='auto'
+              loading='lazy'
+            >
+          {% else %}
+            <img
+              class='twcss-w-full twcss-h-full twcss-object-cover'
+              src='https://dummyimage.com/300'
+              width='auto'
+              height='auto'
+              loading='lazy'
+            >
+          {% endif %}
+
+          <div style='padding-top: {{ block.settings.padding }}%;' class='block-overlay-{{ block.id }}'>
+            {{ block.settings.text }}
+          </div>
+        </a>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Images grid",
+  "class": "home-block-links",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "color",
+      "id": "container_color",
+      "label": "Background Container Color",
+      "default": "transparent",
+      "info": "Text"
+    },
+    {
+      "type": "range",
+      "id": "background_padding",
+      "label": "Background Padding",
+      "step": 1,
+      "min": 0,
+      "max": 20,
+      "default": 5,
+      "unit": "px"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Panel One Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Panel One Image"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Panel One Text",
+      "default": "<p>some words</p>"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "label": "Text Position",
+      "step": 1,
+      "min": 0,
+      "max": 100,
+      "default": 0,
+      "unit": "%"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay Color",
+      "default": "#3182ce"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Font size title",
+      "min": 12,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "font_color",
+      "label": "Font color",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Panel",
+      "settings": [
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Panel Link"
+        },
+        {
+          "type": "color",
+          "id": "overlay_color",
+          "label": "Overlay Color",
+          "default": "#3182ce"
+        },
+        {
+          "type": "range",
+          "id": "font_size",
+          "label": "Font size title",
+          "min": 12,
+          "max": 80,
+          "step": 1,
+          "unit": "px",
+          "default": 40
+        },
+        {
+          "type": "color",
+          "id": "font_color",
+          "label": "Font color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Panel Image"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Panel Text",
+          "default": "<p>some words</p>"
+        },
+        {
+          "type": "range",
+          "id": "padding",
+          "label": "Text Position",
+          "step": 1,
+          "min": 0,
+          "max": 50,
+          "default": 0,
+          "unit": "%"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Images grid",
+      "category": "Collection",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
