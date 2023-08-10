@@ -1088,6 +1088,10 @@ video {
   max-width: 860px;
 }
 
+.twcss-max-w-\[1280px\] {
+  max-width: 1280px;
+}
+
 .twcss--translate-x-1\/2 {
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y))
@@ -1792,6 +1796,14 @@ video {
     grid-template-columns: repeat(10, minmax(0, 1fr));
   }
 
+  .md\:twcss-grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:twcss-grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .md\:twcss-flex-row {
     flex-direction: row;
   }
@@ -1971,6 +1983,10 @@ video {
 
   .lg\:twcss-min-w-\[400px\] {
     min-width: 400px;
+  }
+
+  .lg\:twcss-grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lg\:twcss-flex-row {

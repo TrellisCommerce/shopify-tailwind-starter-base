@@ -1,0 +1,415 @@
+{% if section.settings.display %}
+  <div class="twcss-w-full" style="background: {{ section.settings.background }};">
+    {% case section.blocks.size %}
+      {% when 1 %}
+        {%- assign column_size = 'twcss-grid-cols-1' -%}
+      {% when 2 %}
+        {%- assign column_size = 'twcss-grid-cols-1 md:twcss-grid-cols-2' -%}
+      {% when 3 %}
+        {%- assign column_size = 'twcss-grid-cols-1 sm:twcss-grid-cols-2 md:twcss-grid-cols-3' -%}
+      {% else %}
+        {%- assign column_size = 'twcss-grid-cols-1 sm:twcss-grid-cols-2 md:twcss-grid-cols-3 lg:twcss-grid-cols-4' -%}
+    {% endcase %}
+
+    <div class="twcss-container twcss-max-w-[1280px] twcss-px-5 twcss-mx-auto">
+      <div class="twcss-grid {{ column_size }} twcss-gap-2">
+        {% for block in section.blocks %}
+          <div class="twcss-relative">
+            <div class="twcss-h-full js" {{ block.shopify_attributes }}>
+              {% if block.settings.link != blank %}
+                <a class="image-bar__link" href="{{ block.settings.link }}">
+                  <img
+                    class="twcss-object-cover twcss-w-full twcss-h-full lazyload js"
+                    src="{{ block.settings.image | image_url }}"
+                    width='auto'
+                    height='auto'
+                    loading='lazy'
+                  />
+              {% elsif block.settings.image != blank %}
+                  <img
+                    class="twcss-object-cover twcss-w-full twcss-h-full lazyload js"
+                    src="{{ block.settings.image | image_url }}"
+                    width='auto'
+                    height='auto'
+                    loading='lazy'
+                  />
+              {% endif %}
+              <div class="{% if block.settings.cta_label != blank or block.settings.link != blank %} image-bar__overlay{% endif %}">
+                {% if block.settings.image == blank %}
+                  {{ 'image' | placeholder_svg_tag }}
+                {% endif %}
+
+                {% if block.settings.cta_label != blank %}
+                  <div class="image-bar__text">
+                    <h3 class="twcss-text-3xl twcss-font-bold twcss-text-white image-bar__caption">{{ block.settings.cta_label | escape }}</h3>
+                  </div>
+                {% endif %}
+              </div>
+              {% if block.settings.link != blank %}
+                </div></a>
+              {% else %}
+                </div>
+              {% endif %}
+            <noscript>
+              <div {{ block.shopify_attributes }}>
+                <div
+                  class="twcss-relative twcss-w-full image-bar__item--{{ block.id }}"
+                  style="background-image: url({{ block.settings.image | image_url }});"
+                ></div>
+              </div>
+            </noscript>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    
+  </div>
+{% endif %}
+
+
+{% schema %}
+{
+  "name": {
+    "da": "Galleri",
+    "de": "Galerie",
+    "en": "Gallery",
+    "es": "Galería",
+    "fi": "Galleria",
+    "fr": "Galerie",
+    "hi": "गैलरी",
+    "it": "Galleria",
+    "ja": "ギャラリー",
+    "ko": "갤러리",
+    "ms": "Galeri",
+    "nb": "Galleri",
+    "nl": "Galerie",
+    "pt-BR": "Galeria",
+    "pt-PT": "Galeria",
+    "sv": "Galleri",
+    "th": "แกลเลอรี",
+    "zh-CN": "图库",
+    "zh-TW": "圖庫"
+  },
+  "class": "py-8",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "display",
+      "label": "Display section",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "section_height",
+      "label": {
+        "da": "Højde på afsnit",
+        "de": "Bereichs-Höhe",
+        "en": "Section height",
+        "es": "Altura de la sección",
+        "fi": "Osan korkeus",
+        "fr": "Hauteur de la section",
+        "hi": "सेक्शन की ऊंचाई",
+        "it": "Altezza sezione",
+        "ja": "セクションの高さ",
+        "ko": "섹션 높이",
+        "ms": "Ketinggian bahagian",
+        "nb": "Høyde på del",
+        "nl": "Sectiehoogte",
+        "pt-BR": "Altura da seção",
+        "pt-PT": "Altura da secção",
+        "sv": "Sektionshöjd",
+        "th": "ความสูงของส่วน",
+        "zh-CN": "分区高度",
+        "zh-TW": "區塊高度"
+      },
+      "default": "medium",
+      "options": [
+        {
+          "label": {
+            "da": "Ekstra lille",
+            "de": "Extra klein",
+            "en": "Extra Small",
+            "es": "Extra pequeña",
+            "fi": "Erikoispieni",
+            "fr": "Très petite",
+            "hi": "अतिरिक्त छोटा",
+            "it": "Molto piccola",
+            "ja": "極小",
+            "ko": "특소",
+            "ms": "Lebih Kecil",
+            "nb": "Ekstra liten",
+            "nl": "Extra klein",
+            "pt-BR": "Muito pequeno",
+            "pt-PT": "Extra pequeno",
+            "sv": "Extra liten",
+            "th": "ขนาดเล็กพิเศษ",
+            "zh-CN": "特小",
+            "zh-TW": "超小型"
+          },
+          "value": "x-small"
+        },
+        {
+          "label": {
+            "da": "Lille",
+            "de": "Klein",
+            "en": "Small",
+            "es": "Pequeña",
+            "fi": "Pieni",
+            "fr": "Petite",
+            "hi": "छोटा",
+            "it": "Piccolo",
+            "ja": "小",
+            "ko": "스몰",
+            "ms": "Kecil",
+            "nb": "Liten",
+            "nl": "Klein",
+            "pt-BR": "Pequeno",
+            "pt-PT": "Pequeno",
+            "sv": "Liten",
+            "th": "เล็ก",
+            "zh-CN": "小",
+            "zh-TW": "小型"
+          },
+          "value": "small"
+        },
+        {
+          "label": {
+            "da": "Medium",
+            "de": "Mittel",
+            "en": "Medium",
+            "es": "Mediana",
+            "fi": "Keskisuuri",
+            "fr": "Moyenne",
+            "hi": "मध्यम",
+            "it": "Medio",
+            "ja": "中",
+            "ko": "보통",
+            "ms": "Sederhana",
+            "nb": "Middels",
+            "nl": "Gemiddeld",
+            "pt-BR": "Médio",
+            "pt-PT": "Médio",
+            "sv": "Medium",
+            "th": "ปานกลาง",
+            "zh-CN": "中等",
+            "zh-TW": "中等"
+          },
+          "value": "medium"
+        },
+        {
+          "label": {
+            "da": "Stor",
+            "de": "Groß",
+            "en": "Large",
+            "es": "Grande",
+            "fi": "Suuri",
+            "fr": "Grande",
+            "hi": "बड़ा",
+            "it": "Grande",
+            "ja": "大",
+            "ko": "라지",
+            "ms": "Besar",
+            "nb": "Stor",
+            "nl": "Groot",
+            "pt-BR": "Grande",
+            "pt-PT": "Grande",
+            "sv": "Stor",
+            "th": "ใหญ่",
+            "zh-CN": "大",
+            "zh-TW": "大型"
+          },
+          "value": "large"
+        },
+        {
+          "label": {
+            "da": "Ekstra stor",
+            "de": "Extra groß",
+            "en": "Extra Large",
+            "es": "Extra grande",
+            "fi": "Erikoissuuri",
+            "fr": "Très grande",
+            "hi": "अतिरिक्त बड़ा",
+            "it": "Molto grande",
+            "ja": "特大",
+            "ko": "특대",
+            "ms": "Lebih Besar",
+            "nb": "Ekstra stort",
+            "nl": "Extra groot",
+            "pt-BR": "Muito grande",
+            "pt-PT": "Extra grande",
+            "sv": "Extra stor",
+            "th": "ขนาดใหญ่พิเศษ",
+            "zh-CN": "特大",
+            "zh-TW": "超大型"
+          },
+          "value": "x-large"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": {
+        "da": "Billede",
+        "de": "Foto",
+        "en": "Image",
+        "es": "Imagen",
+        "fi": "Kuva",
+        "fr": "Image",
+        "hi": "इमेज",
+        "it": "Immagine",
+        "ja": "画像",
+        "ko": "이미지",
+        "ms": "Imej",
+        "nb": "Bilde",
+        "nl": "Afbeelding",
+        "pt-BR": "Imagem",
+        "pt-PT": "Imagem",
+        "sv": "Bild",
+        "th": "รูปภาพ",
+        "zh-CN": "图片",
+        "zh-TW": "圖片"
+      },
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": {
+            "da": "Billede",
+            "de": "Foto",
+            "en": "Image",
+            "es": "Imagen",
+            "fi": "Kuva",
+            "fr": "Image",
+            "hi": "इमेज",
+            "it": "Immagine",
+            "ja": "画像",
+            "ko": "이미지",
+            "ms": "Imej",
+            "nb": "Bilde",
+            "nl": "Afbeelding",
+            "pt-BR": "Imagem",
+            "pt-PT": "Imagem",
+            "sv": "Bild",
+            "th": "รูปภาพ",
+            "zh-CN": "图片",
+            "zh-TW": "圖片"
+          }
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": {
+            "da": "Link",
+            "de": "Link",
+            "en": "Link",
+            "es": "Enlace",
+            "fi": "Linkki",
+            "fr": "Lien",
+            "hi": "लिंक",
+            "it": "Link",
+            "ja": "リンク",
+            "ko": "링크",
+            "ms": "Pautan",
+            "nb": "Kobling",
+            "nl": "Link",
+            "pt-BR": "Link",
+            "pt-PT": "Ligação",
+            "sv": "Länk",
+            "th": "ลิงก์",
+            "zh-CN": "链接",
+            "zh-TW": "連結"
+          },
+          "info": {
+            "da": "Valgfri",
+            "de": "Optional",
+            "en": "Optional",
+            "es": "Opcional",
+            "fi": "Valinnainen",
+            "fr": "Facultatif",
+            "hi": "वैकल्पिक",
+            "it": "Facoltativo",
+            "ja": "オプション",
+            "ko": "선택 사항",
+            "ms": "Opsyenal",
+            "nb": "Valgfritt",
+            "nl": "Optioneel",
+            "pt-BR": "Opcional",
+            "pt-PT": "Opcional",
+            "sv": "Valfritt",
+            "th": "ไม่จำเป็น",
+            "zh-CN": "可选",
+            "zh-TW": "(選填)"
+          }
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "da": "Galleri",
+        "de": "Galerie",
+        "en": "Gallery",
+        "es": "Galería",
+        "fi": "Galleria",
+        "fr": "Galerie",
+        "hi": "गैलरी",
+        "it": "Galleria",
+        "ja": "ギャラリー",
+        "ko": "갤러리",
+        "ms": "Galeri",
+        "nb": "Galleri",
+        "nl": "Galerie",
+        "pt-BR": "Galeria",
+        "pt-PT": "Galeria",
+        "sv": "Galleri",
+        "th": "แกลเลอรี",
+        "zh-CN": "图库",
+        "zh-TW": "圖庫"
+      },
+      "category": {
+        "da": "Billede",
+        "de": "Foto",
+        "en": "Image",
+        "es": "Imagen",
+        "fi": "Kuva",
+        "fr": "Image",
+        "hi": "इमेज",
+        "it": "Immagine",
+        "ja": "画像",
+        "ko": "이미지",
+        "ms": "Imej",
+        "nb": "Bilde",
+        "nl": "Afbeelding",
+        "pt-BR": "Imagem",
+        "pt-PT": "Imagem",
+        "sv": "Bild",
+        "th": "รูปภาพ",
+        "zh-CN": "图片",
+        "zh-TW": "圖片"
+      },
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
