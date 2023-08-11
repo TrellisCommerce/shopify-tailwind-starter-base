@@ -56,10 +56,33 @@ module.exports = {
     extend: {
       fontFamily: {
         heading: 'var(--font-heading-family)',
+        sans: 'var(--font-body-family)',
       },
     },
     color: {
       black: '#000000',
+      background: 'rgb(var(--color-background))',
+      'gradient-background': 'var(--gradient-background)',
+      foreground: 'rgb(var(--color-foreground))',
+      shadow: 'rgb(var(--color-shadow))',
+      button: {
+        DEFAULT: 'rgb(var(--color-button))',
+        text: 'rgb(var(--color-button-text))',
+      },
+      secondary: {
+        button: {
+          DEFAULT: 'rgb(var(--color-secondary-button))',
+          text: 'rgb(var(--color-secondary-button-text))',
+        },
+      },
+      link: 'rgb(var(--color-link))',
+      badge: {
+        foreground: 'rgb(var(--color-badge-foreground))',
+        background: 'rgb(var(--color-badge-background))',
+        border: 'rgb(var(--color-badge-border))',
+      },
+      'payment-terms-background-color':
+        'var(--color-payment-terms-background-color)',
     },
   },
   plugins: [plugin(gridSystem)],
