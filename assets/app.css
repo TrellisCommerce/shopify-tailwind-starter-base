@@ -930,6 +930,10 @@ video {
   display: none;
 }
 
+.\!twcss-hidden {
+  display: none !important;
+}
+
 .\!twcss-h-\[220px\] {
   height: 220px !important;
 }
@@ -972,6 +976,10 @@ video {
 
 .twcss-h-full {
   height: 100%;
+}
+
+.twcss-h-5 {
+  height: 1.25rem;
 }
 
 .twcss-max-h-\[700px\] {
@@ -1299,12 +1307,34 @@ video {
   background-color: #;
 }
 
+.twcss-bg-background {
+  background-color: rgb(var(--color-background));
+}
+
+.twcss-bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .twcss-bg-black\/30 {
   background-color: rgb(0 0 0 / 0.3);
 }
 
 .twcss-bg-transparent {
   background-color: transparent;
+}
+
+.twcss-bg-button {
+  background-color: rgb(var(--color-button));
+}
+
+.twcss-bg-secondary-button {
+  background-color: rgb(var(--color-secondary-button));
+}
+
+.twcss-bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
 .twcss-bg-cover {
@@ -1558,9 +1588,21 @@ video {
   text-transform: none;
 }
 
+.twcss-text-background {
+  color: rgb(var(--color-background));
+}
+
 .twcss-text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.twcss-text-button-text {
+  color: rgb(var(--color-button-text));
+}
+
+.twcss-text-secondary-button-text {
+  color: rgb(var(--color-secondary-button-text));
 }
 
 .twcss-no-underline {
@@ -1659,6 +1701,19 @@ video {
 
 .hover\:twcss-opacity-100:hover {
   opacity: 1;
+}
+
+.twcss-peer:checked ~ .peer-checked\:twcss-block {
+  display: block;
+}
+
+.twcss-peer:checked ~ .peer-checked\:twcss-flex {
+  display: flex;
+}
+
+.twcss-peer:checked ~ .peer-checked\:twcss-bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 320px) {

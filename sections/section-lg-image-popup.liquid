@@ -1,27 +1,14 @@
 {% liquid
-  assign bg_color = section.settings.bg_color
-  assign title_color = section.settings.title_color
-  assign description_color = section.settings.description_color
   assign title_align = section.settings.title_align
   assign description_align = section.settings.description_align
   assign title_case = section.settings.title_case
   assign button_style = section.settings.button_style
 
-  for block in section.blocks
-    if block.type == 'popup'
-      assign popup_bg_color = block.settings.bg_color
-
-      if block.settings.popup_text_color == 'twcss-text-primary'
-        assign popup_text_color = 'twcss-text-primary'
-      endif
-      if block.settings.popup_text_color == 'twcss-text-secondary'
-        assign popup_text_color = 'twcss-text-secondary'
-      endif
-      if block.settings.popup_text_color == 'twcss-text-tertiary'
-        assign popup_text_color = 'twcss-text-tertiary'
-      endif
-    endif
-  endfor
+  if button_style
+    assign button_style_type = 'button--secondary'
+  else
+    assign button_style_type = 'button--primary'
+  endif
 %}
 <style>
   #close_popup svg {
@@ -36,34 +23,9 @@
   {% endif %}
 </style>
 <section
-  class='twcss-relative {{ bg_color }}'
+  class='twcss-relative color-{{ section.settings.color_scheme }}'
   style='padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;'
 >
-  <div
-    id='popup-{{ section.id }}'
-    class='twcss-hidden twcss-fixed twcss-top-0 twcss-w-full twcss-h-full twcss-items-center twcss-justify-center twcss-z-10'
-    style='background: {{ popup_bg_color }};'
-  >
-    <div class='popup_wrapper twcss-relative twcss-max-w-[860px] twcss-p-[34px] twcss-bg-brand-secondary twcss-mx-5'>
-      <div
-        id='close_popup'
-        class='twcss-absolute twcss-top-5 twcss-right-5 twcss-cursor-pointer'
-        onclick='closePopup()'
-      >
-        {% render 'icon-close' %}
-      </div>
-      {% for block in section.blocks %}
-        {% if block.type == 'popup' %}
-          <h1 class='{{ popup_text_color }} twcss-text-left twcss-typ-h2-subheading-b twcss-mb-10'>
-            {{ block.settings.title }}
-          </h1>
-          <p class='{{ popup_text_color }} twcss-text-left'>
-            {{ block.settings.description }}
-          </p>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
   <div class='twcss-grid-system twcss-mt-4 twcss-mb-[58px] twcss-gap-y-[50px] lg:twcss-mt-[50px]'>
     <div class='ays_image-{{ section.id }} twcss-col-span-full lg:twcss-col-span-6 {% if section.settings.toggle_image %} lg:twcss-col-start-7 {% endif %}'>
       {% if section.settings.main_image %}
@@ -76,17 +38,17 @@
           height='auto'
         >
       {% else %}
-        <img src='https://dummyimage.com/720x600' width='auto' height='auto' loading='lazy'>
+        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
       {% endif %}
     </div>
     <div class='twcss-col-span-full twcss-row-start-1 twcss-col-start-1 {% if section.settings.toggle_image %} lg:twcss-col-start-2 {% else %} lg:twcss-col-start-8 {% endif %} twcss-mb-16 twcss-flex twcss-flex-col twcss-items-center twcss-justify-center lg:twcss-col-span-4'>
       <h2
-        class='twcss-w-full twcss-typ-h2-subheading-b twcss-mb-[18px] {{ title_case }} {{ title_color }} {{ title_align }}'
+        class='twcss-w-full twcss-typ-h2-subheading-b twcss-mb-[18px] {{ title_case }} {{ title_align }}'
       >
         {{ section.settings.title }}
       </h2>
       <p
-        class='twcss-typ-body-2 twcss-w-full {{ description_color }} twcss-mb-[40px] {{ description_align }}'
+        class='twcss-typ-body-2 twcss-w-full twcss-mb-[40px] {{ description_align }}'
       >
         {{ section.settings.description }}
       </p>
@@ -132,66 +94,63 @@
         {% endfor %}
       </div>
       {% if section.settings.show_button %}
-        <button
-          class='twcss-button twcss-button-primary twcss-mt-6 twcss-py-[14px] twcss-px-[25px] {{ button_style }}'
-          {% if section.settings.link == blank %}
-            onclick='popupHandler()'
-          {% endif %}
+        <input
+          type='checkbox'
+          id='open_modal'
+          class='twcss-peer !twcss-hidden'
         >
-          {% if section.settings.link %}
-            {{ section.settings.button_title | link_to: section.settings.link }}
-          {% else %}
+        {% if section.settings.link %}
+          <a
+            class='twcss-mt-6 button {{ button_style_type }}'
+            href='{{ section.settings.link }}'
+          >
             {{ section.settings.button_title }}
-          {% endif %}
-        </button>
+          </a>
+        {% else %}
+          <label
+            for='open_modal'
+            class='peer-checked twcss-mt-6 twcss-cursor-pointer button {{ button_style_type }} button'
+          >
+            {{ section.settings.button_title }}
+          </label>
+        {% endif %}
       {% endif %}
+
+      <div
+        class='peer-checked:twcss-flex twcss-hidden twcss-fixed twcss-inset-0 twcss-w-full twcss-h-full twcss-items-center twcss-justify-center twcss-z-10 color-{{ section.settings.color_scheme }}'
+      >
+        <div class='popup_wrapper twcss-relative twcss-max-w-[860px] twcss-p-[34px] twcss-bg-brand-secondary twcss-mx-5'>
+          <label
+            for='open_modal'
+            class='twcss-absolute twcss-h-8 twcss-w-8 twcss-top-5 twcss-block twcss-right-5 twcss-cursor-pointer'
+          >
+            {% render 'icon-close' %}
+          </label>
+          {% for block in section.blocks %}
+            {% if block.type == 'popup' %}
+              <h1 class='twcss-text-left twcss-typ-h2-subheading-b twcss-mb-10'>
+                {{ block.settings.title }}
+              </h1>
+              <p class='twcss-text-left'>
+                {{ block.settings.description }}
+              </p>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
     </div>
   </div>
 </section>
-<script>
-  const popup = document.getElementById('popup-{{ section.id }}');
-  const popupHandler = () => {
-    popup.style.display = 'flex';
-  };
-  const closePopup = () => {
-    const icon_close = document.getElementById('close_popup');
-    icon_close.addEventListener('click', () => {
-      console.log('clik');
-      popup.style.display = 'none';
-    });
-  };
-</script>
+
 {% schema %}
 {
   "name": "lg image text popup",
   "settings": [
     {
-      "type": "select",
-      "id": "bg_color",
-      "options": [
-        {
-          "value": "twcss-bg-primary",
-          "label": "t:sections.all.bg_color.options__1.label"
-        },
-        {
-          "value": "twcss-bg-secondary",
-          "label": "t:sections.all.bg_color.options__2.label"
-        },
-        {
-          "value": "twcss-bg-tertiary",
-          "label": "t:sections.all.bg_color.options__3.label"
-        },
-        {
-          "value": "twcss-bg-brand-secondary",
-          "label": "t:sections.all.bg_color.options__4.label"
-        },
-        {
-          "value": "twcss-bg-transparent",
-          "label": "t:sections.all.bg_color.options__5.label"
-        }
-      ],
-      "default": "twcss-bg-transparent",
-      "label": "t:sections.all.bg_color.label"
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
     },
     {
       "type": "select",
@@ -199,43 +158,19 @@
       "options": [
         {
           "value": "twcss-lowercase",
-          "label": "t:sections.all.title_case.options__1.label"
+          "label": "Lowercase"
         },
         {
           "value": "twcss-capitalize",
-          "label": "t:sections.all.title_case.options__2.label"
+          "label": "Capitalize"
         },
         {
           "value": "twcss-uppercase",
-          "label": "t:sections.all.title_case.options__3.label"
+          "label": "Uppercase"
         }
       ],
       "default": "twcss-capitalize",
-      "label": "t:sections.all.title_case.label"
-    },
-    {
-      "type": "select",
-      "id": "title_color",
-      "options": [
-        {
-          "value": "twcss-text-primary",
-          "label": "t:sections.all.text_color.options__1.label"
-        },
-        {
-          "value": "twcss-text-secondary",
-          "label": "t:sections.all.text_color.options__2.label"
-        },
-        {
-          "value": "twcss-text-tertiary",
-          "label": "t:sections.all.text_color.options__3.label"
-        },
-        {
-          "value": "twcss-text-brand-secondary",
-          "label": "t:sections.all.text_color.options__4.label"
-        }
-      ],
-      "default": "twcss-text-primary",
-      "label": "t:sections.all.title_color.label"
+      "label": "Capitalize"
     },
     {
       "type": "select",
@@ -255,31 +190,7 @@
         }
       ],
       "default": "twcss-text-center",
-      "label": "Center"
-    },
-    {
-      "type": "select",
-      "id": "description_color",
-      "options": [
-        {
-          "value": "twcss-text-primary",
-          "label": "t:sections.all.text_color.options__1.label"
-        },
-        {
-          "value": "twcss-text-secondary",
-          "label": "t:sections.all.text_color.options__2.label"
-        },
-        {
-          "value": "twcss-text-tertiary",
-          "label": "t:sections.all.text_color.options__3.label"
-        },
-        {
-          "value": "twcss-text-brand-secondary",
-          "label": "t:sections.all.text_color.options__4.label"
-        }
-      ],
-      "default": "twcss-text-primary",
-      "label": "t:sections.all.description_color.label"
+      "label": "Title Alignment"
     },
     {
       "type": "select",
@@ -299,7 +210,7 @@
         }
       ],
       "default": "twcss-text-center",
-      "label": "t:sections.all.description_align.label"
+      "label": "Description Alignment"
     },
     {
       "type": "checkbox",
@@ -357,37 +268,12 @@
       "label": "Show button"
     },
     {
-      "type": "select",
+      "type": "checkbox",
       "id": "button_style",
-      "options": [
-        {
-          "value": "twcss-button-primary",
-          "label": "Primary button"
-        },
-        {
-          "value": "twcss-button-secondary",
-          "label": "Secondary button"
-        },
-        {
-          "value": "twcss-button-fill",
-          "label": "Fill button"
-        },
-        {
-          "value": "twcss-button-primary-dark",
-          "label": "Dark Primary button"
-        },
-        {
-          "value": "twcss-button-secondary-dark",
-          "label": "Dark Secondary button"
-        },
-        {
-          "value": "twcss-button-fill-dark",
-          "label": "Dark Fill button"
-        }
-      ],
-      "label": "Button style",
-      "default": "twcss-button-primary"
+      "default": false,
+      "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
     },
+
     {
       "type": "text",
       "id": "button_title",
@@ -444,32 +330,6 @@
           "id": "description",
           "label": "Description",
           "default": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore facilis error accusamus optio ducimus vero minus atque iste repudiandae commodi, dolorum officiis sed, temporibus, sapiente labore illum unde praesentium aspernatur.</p>"
-        },
-        {
-          "type": "color_background",
-          "id": "bg_color",
-          "label": "t:sections.all.bg_color.label",
-          "default": "linear-gradient(#333333, #888888)"
-        },
-        {
-          "type": "select",
-          "id": "popup_text_color",
-          "options": [
-            {
-              "value": "twcss-text-primary",
-              "label": "t:sections.all.text_color.options__1.label"
-            },
-            {
-              "value": "twcss-text-secondary",
-              "label": "t:sections.all.text_color.options__2.label"
-            },
-            {
-              "value": "twcss-text-tertiary",
-              "label": "t:sections.all.text_color.options__3.label"
-            }
-          ],
-          "default": "twcss-text-primary",
-          "label": "t:sections.all.text_color.label"
         }
       ]
     }
