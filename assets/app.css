@@ -1076,6 +1076,10 @@ video {
   max-width: 1200px;
 }
 
+.twcss-max-w-\[1280px\] {
+  max-width: 1280px;
+}
+
 .twcss-max-w-\[1920px\] {
   max-width: 1920px;
 }
@@ -1086,10 +1090,6 @@ video {
 
 .twcss-max-w-\[860px\] {
   max-width: 860px;
-}
-
-.twcss-max-w-\[1280px\] {
-  max-width: 1280px;
 }
 
 .twcss--translate-x-1\/2 {
@@ -1585,6 +1585,29 @@ video {
 
 .twcss-duration-300 {
   transition-duration: 300ms;
+}
+
+/*! in the migration the following line should be deleted */
+
+.btn-primary {
+  cursor: pointer;
+  line-height: inherit;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  outline: 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  transition-property: all;
+  transition-duration: 0.2s;
+  background: #585656;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
 }
 
 @media (min-width: 320px) {
