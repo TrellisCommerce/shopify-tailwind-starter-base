@@ -1,0 +1,498 @@
+{% if section.settings.display %}
+  {% style %}
+    .it_title_{{ section.id }} {
+      font-size: {{ section.settings.title_size }}px;
+      color: {{ section.settings.title_color }};
+      font-weight: {{ section.settings.title_weight }};
+    }
+
+    .it_text_{{ section.id }},
+    .it_text_{{ section.id }} > p {
+      font-size: {{ section.settings.text_size }}px;
+      color: {{ section.settings.text_color }};
+      text-align: {{ section.settings.text_align }};
+      line-height: 1.2;
+    }
+
+    .it_box_title_{{ section.id }} {
+      font-size: {{ section.settings.description_title_size }}px;
+      color: {{ section.settings.description_title_color }};
+      font-weight: {{ section.settings.description_title_weight }};
+    }
+
+    .it_description_{{ section.id }},
+    .it_description_{{ section.id }} > * {
+      font-size: {{ section.settings.description_size }}px;
+      color: {{ section.settings.description_color }};
+      text-align: {{ section.settings.description_align }};
+      line-height: 1.2;
+    }
+
+    @media (max-width: 767.98px) {
+      .it_title_{{ section.id }},
+      .it_box_title_{{ section.id }} {
+        font-size: 25px;
+        text-align: center;
+      }
+
+      .it_text_{{ section.id }},
+      .it_text_{{ section.id }} > p,
+      .it_description_{{ section.id }},
+      .it_description_{{ section.id }} > * {
+        font-size: 15px;
+        text-align:center;
+      }
+    }
+  {% endstyle %}
+
+  {% assign numbers = 4 %}
+
+  <div class='twcss-w-full py-{{ section.settings.spacing }}' style='background: {{ section.settings.background }};'>
+    <div class='twcss-container twcss-px-5 twcss-mx-auto twcss-max-w-[1200px]'>
+      {% if section.settings.title %}
+        <h2 class='{{ section.settings.title_align }} {{ section.settings.title_transform }} it_title_{{ section.id }} twcss-mb-4'>
+          {{ section.settings.title }}
+        </h2>
+      {% endif %}
+
+      {% if section.settings.text %}
+        <div class='it_text_{{ section.id }} twcss-mb-8'>{{ section.settings.text }}</div>
+      {% endif %}
+
+      <div
+        class='twcss-grid twcss-grid-cols-1 md:twcss-grid-cols-10'
+        style='
+          grid-template-columns: repeat({{ section.settings.items_per_col }}, minmax(0, 1fr));
+          gap: {{ section.settings.grid_spacing }}px;
+        '
+      >
+        {% if section.blocks.size > 0 %}
+          {% for twcss-block in section.blocks %}
+            {% assign collection = collections[block.settings.collection] %}
+
+            <div
+              class='twcss-relative twcss-block'
+              {{ twcss-block.shopify_attributes }}
+            >
+              <div>
+                {% if collection.image %}
+                  <img
+                    width='auto'
+                    height='auto'
+                    loading='lazy'
+                    src='{{ collection.image | image_url }}'
+                    class='twcss-w-full'
+                  >
+                {% else %}
+                  {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                  {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %}
+              </div>
+
+              {% if section.settings.show_categories_without_box %}
+                <div class='twcss-flex twcss-justify-start twcss-my-4'>
+                  <a
+                    href='{{ collection.url }}'
+                    class='twcss-block twcss-w-full twcss-text-center twcss-no-underline btn-primary'
+                  >
+                    {{ collection.title }}
+                  </a>
+                </div>
+
+                <div class='twcss-mb-4 twcss-hidden sm:twcss-block it_description_{{ section.id }}'>
+                  {{ collection.description }}
+                </div>
+              {% else %}
+                <div
+                  class='twcss-absolute twcss-inset-0 twcss-flex twcss-flex-col twcss-justify-center twcss-block twcss-px-16 twcss-no-underline twcss-transition-all twcss-duration-200 twcss-opacity-0 hover:twcss-opacity-100'
+                  style='background: {{ section.settings.background_block | color_modify: 'alpha', section.settings.background_opacity }};'
+                >
+                  <h3
+                    class='twcss-mb-4 {{ section.settings.description_title_align }} {{ section.settings.description_title_transform }} it_box_title_{{ section.id }}'
+                  >
+                    {{ collection.title }}
+                  </h3>
+
+                  <div class='twcss-mb-4 twcss-hidden sm:twcss-block it_description_{{ section.id }}'>
+                    {{ collection.description }}
+                  </div>
+
+                  <div class='twcss-flex twcss-justify-start twcss-mt-4'>
+                    <a href='{{ collection.url }}' class='twcss-block twcss-no-underline outlined-button-white'>
+                      READ MORE
+                    </a>
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        {% endif %}
+
+        {% if section.blocks.size == 0 %}
+          {% for twcss-block in (1..numbers) %}
+            <div
+              class='twcss-relative twcss-block'
+              {{ twcss-block.shopify_attributes }}
+            >
+              <div>
+                {% capture current %}{% cycle 1, 2, 3, 4 %}{% endcapture %}
+                {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+
+              <div
+                class='twcss-absolute twcss-inset-0 twcss-flex twcss-flex-col twcss-justify-center twcss-block twcss-px-16 twcss-no-underline twcss-transition-all twcss-duration-200 twcss-opacity-0 hover:twcss-opacity-100'
+                style='background: {{ section.settings.background_block | color_modify: 'alpha', section.settings.background_opacity }};'
+              >
+                <h3 class='twcss-mb-4 twcss-text-3xl twcss-font-bold twcss-text-white'>Category title</h3>
+
+                <p class='twcss-hidden twcss-mb-4 twcss-text-white sm:twcss-block'>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.
+                </p>
+
+                <div class='twcss-flex twcss-justify-start twcss-mt-4'>
+                  <a href='#!' class='twcss-block twcss-no-underline outlined-button-white'>READ MORE</a>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Categories hover text",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "display",
+      "label": "Display section",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "spacing",
+      "label": "Spacing top and bottom",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 8
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Categories"
+    },
+    {
+      "label": "Title weight",
+      "id": "title_weight",
+      "type": "select",
+      "default": "700",
+      "options": [
+        {
+          "group": "style",
+          "value": "400",
+          "label": "400"
+        },
+        {
+          "group": "style",
+          "value": "500",
+          "label": "500"
+        },
+        {
+          "group": "style",
+          "value": "600",
+          "label": "600"
+        },
+        {
+          "group": "style",
+          "value": "700",
+          "label": "700"
+        },
+        {
+          "group": "style",
+          "value": "800",
+          "label": "800"
+        },
+        {
+          "group": "style",
+          "value": "900",
+          "label": "900"
+        }
+      ]
+    },
+    {
+      "label": "Title type",
+      "id": "title_transform",
+      "type": "select",
+      "default": "twcss-capitalize",
+      "options": [
+        {
+          "value": "twcss-lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "twcss-capitalize",
+          "label": "Capitalize"
+        },
+        {
+          "value": "twcss-uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "twcss-normal-case",
+          "label": "Normal"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size Title",
+      "default": 42
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Color Title",
+      "default": "#4A5568"
+    },
+    {
+      "type": "select",
+      "id": "title_align",
+      "options": [
+        { "value": "twcss-text-left", "label": "Left" },
+        { "value": "twcss-text-center", "label": "Center" },
+        { "value": "twcss-text-right", "label": "Right" }
+      ],
+      "label": "Title align",
+      "default": "twcss-text-center"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size Text",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color Text",
+      "default": "#718096"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "label": "Text align",
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Box items configuration"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_categories_without_box",
+      "label": "Show image, button and text instead of box hover",
+      "default": false
+    },
+    {
+      "label": "Title weight",
+      "id": "description_title_weight",
+      "type": "select",
+      "default": "700",
+      "options": [
+        {
+          "group": "style",
+          "value": "400",
+          "label": "400"
+        },
+        {
+          "group": "style",
+          "value": "500",
+          "label": "500"
+        },
+        {
+          "group": "style",
+          "value": "600",
+          "label": "600"
+        },
+        {
+          "group": "style",
+          "value": "700",
+          "label": "700"
+        },
+        {
+          "group": "style",
+          "value": "800",
+          "label": "800"
+        },
+        {
+          "group": "style",
+          "value": "900",
+          "label": "900"
+        }
+      ]
+    },
+    {
+      "label": "Title type",
+      "id": "description_title_transform",
+      "type": "select",
+      "default": "twcss-text-capitalize",
+      "options": [
+        {
+          "value": "twcss-text-lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "twcss-text-capitalize",
+          "label": "Capitalize"
+        },
+        {
+          "value": "twcss-text-uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "twcss-text-normal-case",
+          "label": "Normal"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "description_title_size",
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size Title",
+      "default": 32
+    },
+    {
+      "type": "color",
+      "id": "description_title_color",
+      "label": "Color Title",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "description_title_align",
+      "options": [
+        { "value": "twcss-text-left", "label": "Left" },
+        { "value": "twcss-text-center", "label": "Center" },
+        { "value": "twcss-text-right", "label": "Right" }
+      ],
+      "label": "Title align",
+      "default": "twcss-text-left"
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size box text",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Color box Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "description_align",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "label": "Text align box",
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "items_per_col",
+      "label": "Items per row",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "grid_spacing",
+      "label": "Spacing between items",
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "color",
+      "id": "background_block",
+      "label": "Background color on hover",
+      "default": "#4299e1"
+    },
+    {
+      "type": "range",
+      "id": "background_opacity",
+      "label": "Background color opacity",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "default": 0.8
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Categories",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Category"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Categories hover text",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

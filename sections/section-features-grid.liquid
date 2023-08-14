@@ -1,0 +1,421 @@
+{% if section.settings.display %}
+  {% style %}
+        .it_title_{{ section.id }} {
+          font-size: {{ section.settings.title_size }}px;
+          color: {{ section.settings.title_color }};
+          font-weight: {{ section.settings.title_weight }};
+        }
+
+        @media (max-width: 767.98px) {
+          .it_title_{{ section.id }} {
+            font-size: 25px;
+            text-align: center;
+          }
+        }
+
+    @media (min-width: 750px) {
+        .grid-cols {
+            grid-template-columns: repeat({{ section.settings.grid }}, minmax(0, 1fr));
+        }
+    }
+  {% endstyle %}
+
+  <div
+    class='twcss-w-full'
+    style='background: {{ section.settings.background }}; padding: {{ section.settings.spacing }}px'
+  >
+    <div class='twcss-container twcss-px-5 twcss-mx-auto twcss-max-w-[1200px]'>
+      {% if section.settings.title != blank %}
+        <h2 class='{{ section.settings.title_align }} {{ section.settings.title_transform }} it_title_{{ section.id }} twcss-pb-4'>
+          {{ section.settings.title }}
+        </h2>
+      {% endif %}
+
+      {% if section.blocks.size > 0 %}
+        <div
+          class='twcss-grid twcss-grid-cols-1 twcss-gap-1 sm:twcss-grid-cols-2 md:twcss-grid-cols-1 grid-cols'
+          style='gap: {{ section.settings.grid_spacing }}px;'
+        >
+          {% for block in section.blocks %}
+            <div>
+              {% style %}
+                .f_title_{{ block.id }} {
+                  font-size: {{ block.settings.title_size }}px;
+                  color: {{ block.settings.title_color }};
+                  font-weight: {{ block.settings.title_weight }};
+                }
+
+                .f_text_{{ block.id }} {
+                  font-size: {{ block.settings.text_size }}px;
+                  color: {{ block.settings.text_color }};
+                  font-weight: 500;
+                }
+
+                @media (max-width: 767.98px) {
+                  .f_title_{{ block.id }} {
+                    font-size: 25px;
+                    text-align: center;
+                  }
+
+                  .f_title_{{ block.id }} {
+                    font-size: 16px;
+                    text-align: center;
+                  }
+                }
+              {% endstyle %}
+
+              {% if block.settings.display_image %}
+                {% if block.settings.image != blank %}
+                  <img
+                    src='{{ block.settings.image | image_url }}'
+                    alt=''
+                    class='twcss-block twcss-object-cover twcss-w-40 twcss-h-40 twcss-mx-auto twcss-mb-2 twcss-rounded-full lazyload'
+                    width='auto'
+                    height='auto'
+                    loading='lazy'
+                  >
+                {% else %}
+                  <img
+                    class='twcss-block twcss-w-40 twcss-h-40 twcss-mx-auto twcss-mb-2 twcss-border twcss-rounded-full'
+                    src='https://dummyimage.com/160x160'
+                    width='auto'
+                    height='auto'
+                    loading='lazy'
+                  >
+                {% endif %}
+              {% endif %}
+
+              {% if block.settings.title %}
+                <h3 class='{{ block.settings.title_align }} {{ block.settings.title_transform }} f_title_{{ block.id }}'>
+                  {{ block.settings.title }}
+                </h3>
+              {% endif %}
+
+              {% if block.settings.text %}
+                <h5 class='{{ block.settings.text_align }} twcss-mb-4 f_text_{{ block.id }}'>
+                  {{ block.settings.text }}
+                </h5>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Features grid",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "display",
+      "label": "Display section",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "spacing",
+      "label": "Spacing top and bottom",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Title settings"
+    },
+    {
+      "label": "Title",
+      "id": "title",
+      "type": "text"
+    },
+    {
+      "label": "Title weight",
+      "id": "title_weight",
+      "type": "select",
+      "default": "700",
+      "options": [
+        {
+          "group": "style",
+          "value": "400",
+          "label": "400"
+        },
+        {
+          "group": "style",
+          "value": "500",
+          "label": "500"
+        },
+        {
+          "group": "style",
+          "value": "600",
+          "label": "600"
+        },
+        {
+          "group": "style",
+          "value": "700",
+          "label": "700"
+        },
+        {
+          "group": "style",
+          "value": "800",
+          "label": "800"
+        },
+        {
+          "group": "style",
+          "value": "900",
+          "label": "900"
+        }
+      ]
+    },
+    {
+      "label": "Title type",
+      "id": "title_transform",
+      "type": "select",
+      "default": "capitalize",
+      "options": [
+        {
+          "value": "lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitalize"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "normal-case",
+          "label": "Normal"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size Title",
+      "default": 42
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Color Title",
+      "default": "#4A5568"
+    },
+    {
+      "type": "select",
+      "id": "title_align",
+      "options": [
+        { "value": "twcss-text-left", "label": "Left" },
+        { "value": "twcss-text-center", "label": "Center" },
+        { "value": "twcss-text-right", "label": "Right" }
+      ],
+      "label": "Title align",
+      "default": "twcss-text-center"
+    },
+    {
+      "type": "range",
+      "id": "grid",
+      "label": "Columns to show",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "grid_spacing",
+      "label": "Spacing between items",
+      "min": 0,
+      "max": 25,
+      "step": 5,
+      "default": 10
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Features",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "display_image",
+          "label": "Display image",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "header",
+          "content": "Title settings"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Feature"
+        },
+        {
+          "label": "Title weight",
+          "id": "title_weight",
+          "type": "select",
+          "default": "700",
+          "options": [
+            {
+              "group": "style",
+              "value": "400",
+              "label": "400"
+            },
+            {
+              "group": "style",
+              "value": "500",
+              "label": "500"
+            },
+            {
+              "group": "style",
+              "value": "600",
+              "label": "600"
+            },
+            {
+              "group": "style",
+              "value": "700",
+              "label": "700"
+            },
+            {
+              "group": "style",
+              "value": "800",
+              "label": "800"
+            },
+            {
+              "group": "style",
+              "value": "900",
+              "label": "900"
+            }
+          ]
+        },
+        {
+          "label": "Title type",
+          "id": "title_transform",
+          "type": "select",
+          "default": "capitalize",
+          "options": [
+            {
+              "value": "lowercase",
+              "label": "Lowercase"
+            },
+            {
+              "value": "capitalize",
+              "label": "Capitalize"
+            },
+            {
+              "value": "normal-case",
+              "label": "Normal"
+            }
+          ]
+        },
+        {
+          "type": "range",
+          "id": "title_size",
+          "min": 10,
+          "max": 50,
+          "step": 1,
+          "unit": "px",
+          "label": "Font size title",
+          "default": 24
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Color title",
+          "default": "#4A5568"
+        },
+        {
+          "type": "select",
+          "id": "title_align",
+          "options": [
+            { "value": "twcss-text-left", "label": "Left" },
+            { "value": "twcss-text-center", "label": "Center" },
+            { "value": "twcss-text-right", "label": "Right" }
+          ],
+          "label": "Title align",
+          "default": "twcss-text-center"
+        },
+        {
+          "type": "header",
+          "content": "Text settings"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea velit iure blanditiis autem facilis minima nesciunt exercitationem!</p>"
+        },
+        {
+          "type": "range",
+          "id": "text_size",
+          "min": 10,
+          "max": 50,
+          "step": 1,
+          "unit": "px",
+          "label": "Font Size Text",
+          "default": 16
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Color Text",
+          "default": "#718096"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "options": [
+            { "value": "twcss-text-left", "label": "Left" },
+            { "value": "twcss-text-center", "label": "Center" },
+            { "value": "twcss-text-right", "label": "Right" }
+          ],
+          "label": "Text align",
+          "default": "twcss-text-center"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Features grid",
+      "category": "Text",
+      "blocks": [
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

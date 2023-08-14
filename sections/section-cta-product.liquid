@@ -1,0 +1,258 @@
+{% if section.settings.display %}
+  {% style %}
+    .it_title_{{ section.id }} {
+      font-size: {{ section.settings.title_size }}px;
+      color: {{ section.settings.title_color }};
+      font-weight: {{ section.settings.title_weight }};
+    }
+
+    .it_text_{{ section.id }},
+    .it_text_{{ section.id }} > p {
+      font-size: {{ section.settings.text_size }}px;
+      text-align: {{ section.settings.text_align }};
+      color: {{ section.settings.text_color }};
+      line-height: 1.2;
+    }
+
+    @media (max-width: 767.98px) {
+      .it_title_{{ section.id }} {
+        font-size: 25px;
+        text-align: center;
+      }
+      .it_text_{{ section.id }} {
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+  {% endstyle %}
+
+  <div class='twcss-w-full' style='background: {{ section.settings.background }};'>
+    <div class='{% if section.settings.full_width %}twcss-w-full{% else %}twcss-container twcss-px-5 py-{{ section.settings.spacing }} twcss-mx-auto{% endif %}'>
+      {% if section.settings.title != blank %}
+        <h2 class='twcss-text-{{ section.settings.title_align }} {{ section.settings.title_transform }} it_title_{{ section.id }} twcss-pb-4'>
+          {{ section.settings.title }}
+        </h2>
+      {% endif %}
+
+      {% if section.settings.text != blank %}
+        <div class='it_text_{{ section.id }} twcss-mb-8'>{{ section.settings.text }}</div>
+      {% endif %}
+
+      {% if section.settings.image != blank %}
+        <img
+          class='twcss-w-full'
+          width='autp'
+          height='auto'
+          loading='lazy'
+          src='{{ section.settings.image | image_url }}'
+          style='object-fit: {{ section.settings.image_fit }};'
+        >
+      {% else %}
+        {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Call To Action Product",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Call to action",
+      "info": "Call to action section to show aleatory information that you want"
+    },
+    {
+      "type": "checkbox",
+      "id": "display",
+      "label": "Display section",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width section",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "spacing",
+      "label": "Spacing top and bottom",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "label": "Background",
+      "id": "background",
+      "type": "color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Title"
+    },
+    {
+      "label": "Title",
+      "id": "title",
+      "type": "text",
+      "default": "Doloremque Laudantium"
+    },
+    {
+      "label": "Title weight",
+      "id": "title_weight",
+      "type": "select",
+      "default": "700",
+      "options": [
+        {
+          "group": "style",
+          "value": "400",
+          "label": "400"
+        },
+        {
+          "group": "style",
+          "value": "500",
+          "label": "500"
+        },
+        {
+          "group": "style",
+          "value": "600",
+          "label": "600"
+        },
+        {
+          "group": "style",
+          "value": "700",
+          "label": "700"
+        },
+        {
+          "group": "style",
+          "value": "800",
+          "label": "800"
+        },
+        {
+          "group": "style",
+          "value": "900",
+          "label": "900"
+        }
+      ]
+    },
+    {
+      "label": "Title type",
+      "id": "title_transform",
+      "type": "select",
+      "default": "capitalize",
+      "options": [
+        {
+          "value": "lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitalize"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "normal-case",
+          "label": "Normal"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size Title",
+      "default": 42
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Color Title",
+      "default": "#4A5568"
+    },
+    {
+      "type": "select",
+      "id": "title_align",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "label": "Title align",
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "label": "Text",
+      "id": "text",
+      "type": "richtext",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size Text",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color Text",
+      "default": "#718096"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "label": "Text align",
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "image_fit",
+      "options": [
+        { "value": "cover", "label": "Cover" },
+        { "value": "fill", "label": "Fill" },
+        { "value": "contain", "label": "Contain" },
+        { "value": "scale-down", "label": "Scale-Down" },
+        { "value": "none", "label": "None" }
+      ],
+      "label": "Fit exactly into a certain given dimension"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Call To Action Product",
+      "category": "Promotional"
+    }
+  ]
+}
+{% endschema %}
