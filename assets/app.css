@@ -2147,6 +2147,18 @@ video {
   .twcss-group:hover .lg\:group-hover\:twcss-block {
     display: block;
   }
+
+  .twcss-group:hover .lg\:group-hover\:\!twcss-block {
+    display: block !important;
+  }
+
+  .twcss-group:hover .lg\:group-hover\:twcss-flex {
+    display: flex;
+  }
+
+  .twcss-group:hover .lg\:group-hover\:\!twcss-flex {
+    display: flex !important;
+  }
 }
 
 .\[\&\>\.icon-caret\]\:twcss-w-3 > .icon-caret {

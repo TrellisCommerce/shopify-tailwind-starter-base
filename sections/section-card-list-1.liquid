@@ -1,3 +1,13 @@
+{% liquid
+  assign button_style = section.settings.button_style
+
+  if button_style
+    assign button_style_type = 'button--secondary'
+  else
+    assign button_style_type = 'button--primary'
+  endif
+%}
+
 <style>
   /* width */
   .container-scroll::-webkit-scrollbar {
@@ -16,57 +26,92 @@
     border-radius: 3px;
   }
 </style>
-<section class='twcss-grid-system twcss-mt-4 twcss-pb-[58px] lg:twcss-mt-[50px]'>
+
+<section
+  class='color-{{ section.settings.color_scheme }}'
+>
   <div
-    class='container-scroll twcss-col-span-full twcss-flex twcss-items-start twcss-gap-4 twcss-overflow-x-scroll twcss-bg-scroll twcss-pb-6'
+    class='twcss-grid-system'
+    style='padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;'
   >
-    {% for block in section.blocks %}
-      <div
-        class='twcss-group twcss-w-[269px] twcss-min-w-[269px] twcss-bg-background md:twcss-min-w-[216px] lg:twcss-mb-[46px] lg:twcss-min-w-[245px] hover:lg:twcss-mb-0'
-      >
-        <div class='twcss-mb-[16px] lg:twcss-mb-3'>
-          {% if block.settings.image %}
-            <img
-              src='{{ block.settings.image | image_url }}'
-              class='twcss-h-[269px] twcss-w-full twcss-object-cover md:twcss-h-[216px] lg:twcss-h-[245px]'
-              alt='logo'
-              loading='lazy'
-              width='auto'
-              height='auto'
+    <div
+      class='container-scroll twcss-col-span-full twcss-flex twcss-items-start twcss-gap-4 twcss-overflow-x-scroll twcss-bg-scroll'
+    >
+      {% for block in section.blocks %}
+        <div
+          class='twcss-group twcss-w-[269px] twcss-min-w-[269px] twcss-bg-background md:twcss-min-w-[216px] lg:twcss-mb-[46px] lg:twcss-min-w-[245px] hover:lg:twcss-mb-0'
+        >
+          <div class='twcss-mb-[16px] lg:twcss-mb-3'>
+            {% if block.settings.image %}
+              <img
+                src='{{ block.settings.image | image_url }}'
+                class='twcss-h-[269px] twcss-w-full twcss-object-cover md:twcss-h-[216px] lg:twcss-h-[245px]'
+                alt='logo'
+                loading='lazy'
+                width='auto'
+                height='auto'
+              >
+            {% else %}
+              {{ 'collection-5' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+          </div>
+          <h4 class='twcss-typ-h4-subtopic-2 twcss-mb-2 twcss-uppercase twcss-text-primary'>
+            {{ block.settings.title }}
+          </h4>
+          <p class='twcss-typ-body-2 twcss-text-tertiary twcss-mb-[20px]'>
+            {{ block.settings.description }}
+          </p>
+          {% if block.settings.show_button %}
+            <a
+              href='{{ block.settings.url_link }}'
+              class='button {{ button_style_type }} twcss-mt-2 !twcss-hidden lg:group-hover:!twcss-flex'
             >
-          {% else %}
-            <img
-              class='twcss-h-[269px] twcss-w-full twcss-object-cover md:twcss-h-[216px] lg:twcss-h-[245px]'
-              src='https://dummyimage.com/250x250'
-              width='auto'
-              height='auto'
-              loading='lazy'
-            >
+              {{ block.settings.button_text }}
+            </a>
           {% endif %}
         </div>
-        <h4 class='twcss-typ-h4-subtopic-2 twcss-mb-2 twcss-uppercase twcss-text-primary'>
-          {{ block.settings.title }}
-        </h4>
-        <p class='twcss-typ-body-2 twcss-text-tertiary twcss-mb-[20px]'>
-          {{ block.settings.description }}
-        </p>
-        {% if block.settings.show_button %}
-          <a
-            href='{{ block.settings.url_link }}'
-            class='twcss-button twcss-button-primary twcss-mt-2 twcss-hidden twcss-py-[10px] lg:group-hover:twcss-block'
-          >
-            {{ block.settings.button_text }}
-          </a>
-        {% endif %}
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 </section>
 
 {% schema %}
 {
   "name": "Card list 1",
-  "settings": [],
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_style",
+      "default": false,
+      "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
   "blocks": [
     {
       "type": "card",
