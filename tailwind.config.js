@@ -10,14 +10,14 @@ const gridSystem = ({ addComponents }) =>
       MozColumnGap: '1rem',
       columnGap: '1rem',
     },
-    '@media (min-width: 640px)': {
+    '@media (min-width: 750px)': {
       '.grid-system': {
         marginLeft: '2rem',
         marginRight: '2rem',
         gridTemplateColumns: 'repeat(8, minmax(0, 1fr))',
       },
     },
-    '@media (min-width: 1024px)': {
+    '@media (min-width: 990px)': {
       '.grid-system': {
         marginLeft: '120px',
         marginRight: '120px',
@@ -26,7 +26,7 @@ const gridSystem = ({ addComponents }) =>
         columnGap: '1.25rem',
       },
     },
-    '@media (min-width: 1536px)': {
+    '@media (min-width: 1440px)': {
       '.grid-system': {
         marginLeft: 'auto',
         marginRight: 'auto',
