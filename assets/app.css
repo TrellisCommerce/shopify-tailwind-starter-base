@@ -842,6 +842,10 @@ video {
   margin-bottom: 20px;
 }
 
+.twcss-mb-\[25px\] {
+  margin-bottom: 25px;
+}
+
 .twcss-mb-\[30px\] {
   margin-bottom: 30px;
 }
@@ -904,10 +908,6 @@ video {
 
 .twcss-mt-\[18px\] {
   margin-top: 18px;
-}
-
-.twcss-mb-\[25px\] {
-  margin-bottom: 25px;
 }
 
 .twcss-block {
@@ -974,24 +974,24 @@ video {
   height: 100%;
 }
 
-.twcss-max-h-\[700px\] {
-  max-height: 700px;
-}
-
 .twcss-max-h-\[200px\] {
   max-height: 200px;
+}
+
+.twcss-max-h-\[700px\] {
+  max-height: 700px;
 }
 
 .twcss-min-h-\[166px\] {
   min-height: 166px;
 }
 
-.twcss-min-h-\[700px\] {
-  min-height: 700px;
-}
-
 .twcss-min-h-\[300px\] {
   min-height: 300px;
+}
+
+.twcss-min-h-\[700px\] {
+  min-height: 700px;
 }
 
 .twcss-w-1\/2 {
@@ -1246,10 +1246,6 @@ video {
   white-space: nowrap;
 }
 
-.twcss-rounded-3xl {
-  border-radius: 1.5rem;
-}
-
 .twcss-rounded-full {
   border-radius: 9999px;
 }
@@ -1290,10 +1286,6 @@ video {
   --tw-border-opacity: 0.5;
 }
 
-.twcss-bg-\[\#00000029\] {
-  background-color: #00000029;
-}
-
 .twcss-bg-\[\#CCCCCC\] {
   --tw-bg-opacity: 1;
   background-color: rgb(204 204 204 / var(--tw-bg-opacity));
@@ -1311,24 +1303,9 @@ video {
   background-color: rgb(0 0 0 / 0.3);
 }
 
-.twcss-bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
-.twcss-bg-gray-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
-}
-
 .twcss-bg-gray-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
-.twcss-bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .twcss-bg-cover {
@@ -1494,10 +1471,6 @@ video {
   padding-bottom: 2rem;
 }
 
-.twcss-pb-\[38px\] {
-  padding-bottom: 38px;
-}
-
 .twcss-pb-\[58px\] {
   padding-bottom: 58px;
 }
@@ -1518,10 +1491,6 @@ video {
   padding-top: 22px;
 }
 
-.twcss-pt-\[25px\] {
-  padding-top: 25px;
-}
-
 .twcss-pt-\[30px\] {
   padding-top: 30px;
 }
@@ -1540,11 +1509,6 @@ video {
 
 .twcss-text-end {
   text-align: end;
-}
-
-.twcss-text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .twcss-text-3xl {
@@ -1647,32 +1611,12 @@ video {
 }
 
 @media (min-width: 320px) {
-  .sm\:twcss-col-span-4 {
-    grid-column: span 4 / span 4;
-  }
-
   .sm\:twcss-col-span-8 {
     grid-column: span 8 / span 8;
   }
 
-  .sm\:twcss-col-span-3 {
-    grid-column: span 3 / span 3;
-  }
-
-  .sm\:twcss-col-span-5 {
-    grid-column: span 5 / span 5;
-  }
-
   .sm\:twcss-block {
     display: block;
-  }
-
-  .sm\:twcss-hidden {
-    display: none;
-  }
-
-  .sm\:twcss-max-h-\[278px\] {
-    max-height: 278px;
   }
 
   .sm\:twcss-w-10\/12 {
@@ -1694,15 +1638,6 @@ video {
   .sm\:twcss-border-solid {
     border-style: solid;
   }
-
-  .sm\:twcss-p-5 {
-    padding: 1.25rem;
-  }
-
-  .sm\:twcss-px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
 }
 
 @media (min-width: 750px) {
@@ -1714,12 +1649,12 @@ video {
     grid-column: span 2 / span 2;
   }
 
-  .md\:twcss-col-span-4 {
-    grid-column: span 4 / span 4;
-  }
-
   .md\:twcss-col-span-3 {
     grid-column: span 3 / span 3;
+  }
+
+  .md\:twcss-col-span-4 {
+    grid-column: span 4 / span 4;
   }
 
   .md\:twcss-col-span-5 {
@@ -1895,6 +1830,10 @@ video {
     grid-column: span 3 / span 3;
   }
 
+  .lg\:twcss-col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+
   .lg\:twcss-col-span-5 {
     grid-column: span 5 / span 5;
   }
@@ -1909,10 +1848,6 @@ video {
 
   .lg\:twcss-col-span-8 {
     grid-column: span 8 / span 8;
-  }
-
-  .lg\:twcss-col-span-4 {
-    grid-column: span 4 / span 4;
   }
 
   .lg\:twcss-col-start-1 {
@@ -1993,10 +1928,6 @@ video {
 
   .lg\:twcss-h-\[754px\] {
     height: 754px;
-  }
-
-  .lg\:twcss-max-h-full {
-    max-height: 100%;
   }
 
   .lg\:twcss-w-\[300px\] {
@@ -2132,15 +2063,6 @@ video {
 
 .\[\&\>li\:last-child\]\:twcss-border-b-0 > li:last-child {
   border-bottom-width: 0px;
-}
-
-.\[\&\>video\]\:twcss-h-full > video {
-  height: 100%;
-}
-
-.\[\&\>video\]\:\!twcss-object-cover > video {
-  -o-object-fit: cover !important;
-  object-fit: cover !important;
 }
 
 .\[\&\[open\]\>summary\>\.minus-icon\]\:twcss-block[open]
