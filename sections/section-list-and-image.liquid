@@ -1,81 +1,94 @@
+{% liquid
+  assign button_style_1 = section.settings.button_style_1
+
+  if button_style_1
+    assign button_style_type_1 = 'button--secondary'
+  else
+    assign button_style_type_1 = 'button--primary'
+  endif
+
+  assign button_style_2 = section.settings.button_style_2
+
+  if button_style_2
+    assign button_style_type_2 = 'button--secondary'
+  else
+    assign button_style_type_2 = 'button--primary'
+  endif
+%}
+
 <section
-  class='twcss-mx-auto twcss-flex twcss-max-w-[1920px] twcss-flex-wrap-reverse twcss-justify-center {% if section.settings.reverse_content == true %} md:twcss-flex-row-reverse {% endif %}'
+  class='color-{{ section.settings.color_scheme }} twcss-mx-auto twcss-flex twcss-max-w-[1920px] twcss-flex-wrap-reverse twcss-justify-center {% if section.settings.reverse_content == true %} md:twcss-flex-row-reverse {% endif %}'
   style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;'
 >
   <div
-    class='twcss-flex twcss-w-full twcss-flex-col twcss-justify-center twcss-py-[60px]  twcss-px-4 md:twcss-w-1/2 md:twcss-pl-8 md:twcss-pr-4 lg:twcss-py-[132px] lg:twcss-pl-[120px] lg:twcss-pr-[108px]'
-    style='background-color: {{ section.settings.background }}; color: {{ section.settings.text_color }};'
+    class='twcss-flex twcss-w-full twcss-flex-col twcss-justify-center md:twcss-w-1/2 twcss-items-center'
   >
-    <h2 class='twcss-mb-3 twcss-typ-h2-subheading-a lg:twcss-mb-5'>
-      {{ section.settings.title }}
-    </h2>
-    <ul>
-      {%- for block in section.blocks -%}
-        <li>
-          <div class='twcss-flex twcss-gap-4'>
-            <picture>
-              <img
-                src='{{ block.settings.image | image_url }}'
-                class=' twcss-w-[70px]'
-                width='auto'
-                height='auto'
-                loading='lazy'
-              >
-            </picture>
-            <div>
-              <h3 class='twcss-mb-2 twcss-typ-h4-subtopic-2'>
-                {{ block.settings.title }}
-              </h3>
-              <p class='twcss-mb-6 twcss-typ-body-2'>
-                {{ block.settings.descripcion }}
-              </p>
+    <div class='twcss-max-w-[700px] twcss-w-full twcss-p-10'>
+      <h2 class='twcss-mb-3 twcss-typ-h2-subheading-a lg:twcss-mb-5'>
+        {{ section.settings.title }}
+      </h2>
+      <ul>
+        {%- for block in section.blocks -%}
+          <li>
+            <div class='twcss-flex twcss-gap-4'>
+              <picture>
+                {%- if block.settings.image -%}
+                  <img
+                    src='{{ block.settings.image | image_url }}'
+                    class=' twcss-w-[70px]'
+                    width='auto'
+                    height='auto'
+                    loading='lazy'
+                  >
+                {%- endif -%}
+              </picture>
+              <div>
+                <h3 class='twcss-mb-2 twcss-typ-h4-subtopic-2'>
+                  {{ block.settings.title }}
+                </h3>
+                <p class='twcss-mb-6 twcss-typ-body-2'>
+                  {{ block.settings.descripcion }}
+                </p>
+              </div>
             </div>
-          </div>
-        </li>
-      {%- endfor -%}
-    </ul>
+          </li>
+        {%- endfor -%}
+      </ul>
 
-    <div class='twcss-flex twcss-w-full twcss-flex-col twcss-gap-4 md:twcss-flex-row'>
-      {%- if section.settings.show_button_1 == true -%}
-        <a
-          href='{{ section.settings.link_button_1 }}'
-          class='twcss-button'
-          style='background-color: {{ section.settings.background_button }}; color: {{ section.settings.text_button_color }};'
-        >
-          {{ section.settings.text_button_1 }}
-        </a>
-      {%- endif -%}
+      <div class='twcss-flex twcss-w-full twcss-flex-col twcss-gap-4 md:twcss-flex-row'>
+        {%- if section.settings.link_button_1 -%}
+          <a
+            href='{{ section.settings.link_button_1 }}'
+            class='{{ button_style_type_1 }} button twcss-w-full'
+          >
+            {{ section.settings.text_button_1 }}
+          </a>
+        {%- endif -%}
 
-      {%- if section.settings.show_button_2 == true -%}
-        <a
-          href='{{ section.settings.link_button_2 }}'
-          class='twcss-button'
-          style='background-color: {{ section.settings.background_button }}; color: {{ section.settings.text_button_color }};'
-        >
-          {{ section.settings.text_button_2 }}
-        </a>
-      {%- endif -%}
+        {%- if section.settings.link_button_2 -%}
+          <a
+            href='{{ section.settings.link_button_2 }}'
+            class='{{ button_style_type_2 }} button twcss-w-full'
+          >
+            {{ section.settings.text_button_2 }}
+          </a>
+        {%- endif -%}
+      </div>
     </div>
   </div>
 
-  <div class='twcss-w-full md:twcss-w-1/2'>
+  <div class='twcss-w-full md:twcss-w-1/2 twcss-max-h-[700px]'>
     {% if section.settings.image %}
       <img
         src='{{ section.settings.image | image_url }}'
-        class='twcss-h-full twcss-w-full twcss-object-cover twcss-max-h-[700px]'
+        class='twcss-h-full twcss-w-full twcss-object-cover '
         alt='product-image'
         loading='lazy'
         width='auto'
         height='auto'
       >
     {% else %}
-      <img
-        class='twcss-h-full twcss-w-full twcss-object-cover twcss-max-h-[700px]'
-        src='https://dummyimage.com/600x600'
-        width='auto'
-        height='auto'
-        loading='lazy'
-      >
+      {{ 'collection-5' | placeholder_svg_tag: 'placeholder-svg' }}
     {% endif %}
   </div>
 </section>
@@ -85,6 +98,12 @@
   "name": "List and image",
   "tag": "section",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
     {
       "type": "range",
       "id": "margin_top",
@@ -106,22 +125,10 @@
       "default": 36
     },
     {
-      "type": "color",
-      "id": "background",
-      "label": "Background",
-      "default": "#E3E3E3"
-    },
-    {
       "type": "text",
       "id": "title",
       "label": "Title",
       "default": "Title text"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text",
-      "default": "#000"
     },
     {
       "type": "checkbox",
@@ -134,27 +141,16 @@
       "id": "image",
       "label": "Image"
     },
-    {
-      "type": "color",
-      "id": "background_button",
-      "label": "Background buttons",
-      "default": "#000"
-    },
-    {
-      "type": "color",
-      "id": "text_button_color",
-      "label": "Texts color buttons",
-      "default": "#fff"
-    },
+
     {
       "type": "header",
       "content": "Button 1"
     },
     {
       "type": "checkbox",
-      "id": "show_button_1",
-      "default": true,
-      "label": "Show button"
+      "id": "button_style_1",
+      "default": false,
+      "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
     },
     {
       "type": "text",
@@ -174,9 +170,9 @@
     },
     {
       "type": "checkbox",
-      "id": "show_button_2",
+      "id": "button_style_2",
       "default": false,
-      "label": "Show button"
+      "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
     },
     {
       "type": "text",

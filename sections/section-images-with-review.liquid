@@ -14,13 +14,7 @@
             height='auto'
           >
         {% else %}
-          <img
-            class='twcss-w-full twcss-object-cover md:twcss-h-[684px] lg:twcss-h-[1040px]'
-            src='https://dummyimage.com/500x1000'
-            width='auto'
-            height='auto'
-            loading='lazy'
-          >
+          {{ 'collection-5' | placeholder_svg_tag: 'placeholder-svg' }}
         {% endif %}
         <div class='twcss-mt-[10px] twcss-flex twcss-items-center twcss-gap-2 [&>.icon-caret]:twcss-w-3 [&>.icon-caret]:-twcss-rotate-90'>
           <h4 class='twcss-typ-h4-subtopic-2 twcss-text-primary'>
@@ -54,13 +48,7 @@
               height='auto'
             >
           {% else %}
-            <img
-              class='twcss-h-full twcss-w-full twcss-object-cover md:twcss-h-[332px] lg:twcss-h-[510px]'
-              src='https://dummyimage.com/500x500'
-              width='auto'
-              height='auto'
-              loading='lazy'
-            >
+            {{ 'collection-5' | placeholder_svg_tag: 'placeholder-svg' }}
           {% endif %}
         </div>
         <div class='twcss-mt-[10px] twcss-flex twcss-items-center twcss-gap-2 [&>.icon-caret]:twcss-w-3 [&>.icon-caret]:-twcss-rotate-90'>
