@@ -1,42 +1,57 @@
-<section
-  class='twcss-p twcss-m-auto twcss-max-w-[1920px] twcss-bg-cover twcss-py-[60px] lg:twcss-py-[90px]'
-  style='background-image: url( {% if section.settings.background %} {{ section.settings.background | image_url }} {% else %} https://dummyimage.com/1000x700 {% endif %}); margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;'
->
-  <div class='twcss-grid-system'>
-    <div class='twcss-hidden md:twcss-col-span-1 md:twcss-col-start-2 md:twcss-block lg:twcss-col-span-2 lg:twcss-col-start-2'>
-      {% if section.settings.icon %}
-        <img
-          src='{{ section.settings.icon | image_url }}'
-          loading='lazy'
-          width='auto'
-          height='auto'
-          class='twcss-w-full'
-        >
-      {% else %}
-        <img
-          src='https://dummyimage.com/500x500'
-          width='auto'
-          height='auto'
-          loading='lazy'
-        >
-      {% endif %}
-    </div>
-    <div class='twcss-col-span-full twcss-text-center md:twcss-col-span-4 md:twcss-col-start-3 md:twcss-ml-4 md:twcss-text-start lg:twcss-col-span-7 lg:twcss-col-start-5 twcss-flex twcss-flex-col twcss-justify-center'>
-      <h2 class='twcss-typ-h1-title twcss-mb-[30px] twcss-uppercase twcss-text-primary lg:twcss-mb-[45px]'>
-        {{ section.settings.text }}
-      </h2>
-      <span>
-        <a
-          href='{{ section.settings.url }}'
-          class='twcss-p-2 twcss-font-bold twcss-uppercase hover:twcss-border-b hover:twcss-border-primary lg:twcss-ml-4'
-        >
-          {{ section.settings.url_text -}}
-        </a>
-      </span>
-    </div>
-  </div>
-</section>
+{% liquid
+  assign button_style = section.settings.button_style
 
+  if button_style
+    assign button_style_type = 'button--secondary'
+  else
+    assign button_style_type = 'button--primary'
+  endif
+%}
+<div class='color-{{ section.settings.color_scheme }}'>
+  <section
+    class='twcss-p twcss-m-auto twcss-max-w-[1920px] twcss-bg-cover twcss-relative'
+    style='padding-bottom: {{ section.settings.padding_bottom }}px; padding-top: {{ section.settings.padding_top }}px;'
+  >
+    {%- if section.settings.background -%}
+      <img
+        src='{{ section.settings.background | image_url }}'
+        loading='lazy'
+        width='auto'
+        height='auto'
+        class='twcss-absolute twcss-inset-0 twcss-h-full twcss-w-full twcss-object-cover'
+      >
+    {% endif %}
+    <div class='twcss-grid-system twcss-relative twcss-flex twcss-justify-center twcss-items-center twcss-gap-5 twcss-flex-col md:twcss-flex-row'>
+      {% if section.settings.icon %}
+        <div class='twcss-flex twcss-justify-center md:twcss-w-1/2'>
+          <img
+            src='{{ section.settings.icon | image_url }}'
+            loading='lazy'
+            width='auto'
+            height='auto'
+            class='twcss-w-full twcss-max-w-[400px]'
+          >
+        </div>
+      {% endif %}
+      <div class='twcss-text-center md:twcss-ml-4 md:twcss-text-start twcss-flex twcss-flex-col twcss-justify-center md:twcss-w-1/2'>
+        <h2 class=' twcss-mb-[10px] twcss-uppercase'>
+          {{ section.settings.text }}
+        </h2>
+        <p class=' twcss-mb-[20px] twcss-uppercase twcss-font-bold'>
+          {{ section.settings.description }}
+        </p>
+        <div>
+          <a
+            href='{{ section.settings.url }}'
+            class='twcss-uppercase {{ button_style_type }} button'
+          >
+            {{ section.settings.url_text -}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 {% schema %}
 {
   "name": "Banner image button text",
@@ -44,23 +59,30 @@
   "class": "section",
   "settings": [
     {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+
+    {
       "type": "range",
-      "id": "margin_top",
+      "id": "padding_top",
       "min": 0,
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "Margin top",
+      "label": "Padding top",
       "default": 36
     },
     {
       "type": "range",
-      "id": "margin_bottom",
+      "id": "padding_bottom",
       "min": 0,
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "Margin bottom",
+      "label": "Padding bottom",
       "default": 36
     },
     {
@@ -80,8 +102,20 @@
       "default": "Find a store near you"
     },
     {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est provident placeat unde tempore repellat facere nam, possimus molestias quisquam officiis!"
+    },
+    {
       "type": "header",
-      "content": "Url"
+      "content": "Button"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_style",
+      "default": false,
+      "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
     },
     {
       "type": "url",
