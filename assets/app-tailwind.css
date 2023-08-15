@@ -46,3 +46,9 @@ body {
 .swiper-button-next {
   display: block !important;
 }
+
+@media (min-width: 750px) {
+  .ur-product-images {
+    width: calc(100% - 46rem);
+  }
+}

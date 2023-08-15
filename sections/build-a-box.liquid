@@ -5,9 +5,9 @@
 {% assign collection = collections[section.settings.collection] %}
 {% assign subscriptionPlan = 689522049319 %}
 
-<div class='page-width page-width-desktop scroll-trigger animate--slide-in xmt-8 xflex xgap-16'>
-  <div class='ur-product-images ' style='width: calc(100% - 46rem);'>
-    <div class='swiper ur-bab-swiper '>
+<div class='page-width page-width-desktop scroll-trigger animate--slide-in xmt-8 xflex xgap-16 xflex-col md:xflex-row'>
+  <div class='ur-product-images xrelative md:xmt-32'>
+    <div class='swiper ur-bab-swiper !xsticky xtop-0'>
       <div class='swiper-wrapper'>
         {% for product in collection.products %}
           <div class='swiper-slide !xflex xjustify-center xitems-center'>
@@ -106,6 +106,7 @@
             <div class='variant-img  xrounded-lg xoverflow-hidden'>
               {% if variant.image != null %}
                 <img
+                  class='  xw-16 md:xw-auto  xobject-contain'
                   style='height: 65px;     max-width: 400px;'
                   height='100'
                   width='auto'
@@ -115,6 +116,7 @@
                 >
               {% else %}
                 <img
+                  class='  xw-16 md:xw-auto  xobject-contain'
                   style='height: 65px;     max-width: 400px;'
                   height='100'
                   width='auto'
