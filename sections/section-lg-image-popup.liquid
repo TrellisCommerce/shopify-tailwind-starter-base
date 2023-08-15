@@ -27,7 +27,7 @@
   style='padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;'
 >
   <div class='twcss-grid-system twcss-mt-4 twcss-mb-[58px] twcss-gap-y-[50px] lg:twcss-mt-[50px]'>
-    <div class='ays_image-{{ section.id }} twcss-col-span-full lg:twcss-col-span-6 {% if section.settings.toggle_image %} lg:twcss-col-start-7 {% endif %}'>
+    <div class='ays_image-{{ section.id }} twcss-col-span-full twcss-row-start-1 {% if section.settings.toggle_image %}lg:twcss-col-start-1{% else %}lg:twcss-col-start-8{% endif %} md:twcss-col-span-4 lg:twcss-col-span-5'>
       {% if section.settings.main_image %}
         <img
           class='twcss-h-[262px] twcss-w-full twcss-object-cover md:twcss-h-[429px] lg:twcss-h-[754px]'
@@ -41,7 +41,7 @@
         {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
       {% endif %}
     </div>
-    <div class='twcss-col-span-full twcss-row-start-1 twcss-col-start-1 {% if section.settings.toggle_image %} lg:twcss-col-start-2 {% else %} lg:twcss-col-start-8 {% endif %} twcss-mb-16 twcss-flex twcss-flex-col twcss-items-center twcss-justify-center lg:twcss-col-span-4'>
+    <div class='twcss-col-span-full {% if section.settings.toggle_image %}md:twcss-col-start-5 lg:twcss-col-start-8{% else %}lg:twcss-col-start-1{% endif %} md:twcss-col-span-4 lg:twcss-col-span-5 twcss-items-center twcss-flex twcss-flex-col twcss-justify-center twcss-p-10 lg:twcss-p-0'>
       <h2
         class='twcss-w-full twcss-typ-h2-subheading-b twcss-mb-[18px] {{ title_case }} {{ title_align }}'
       >
@@ -273,7 +273,6 @@
       "default": false,
       "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
     },
-
     {
       "type": "text",
       "id": "button_title",

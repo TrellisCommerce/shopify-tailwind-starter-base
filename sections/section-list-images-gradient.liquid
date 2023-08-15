@@ -1,6 +1,16 @@
+{% liquid
+  assign button_style = section.settings.button_style
+
+  if button_style
+    assign button_style_type = 'button--secondary'
+  else
+    assign button_style_type = 'button--primary'
+  endif
+%}
+
 <section
+  style='padding-bottom: {{ section.settings.padding_bottom }}px; padding-top: {{ section.settings.padding_top }}px;'
   class='twcss-custom-scrollbar twcss-m-auto twcss-my-16 twcss-flex twcss-max-w-[1920px] twcss-overflow-x-auto twcss-bg-scroll twcss-pb-8'
-  style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;'
 >
   {%- for block in section.blocks -%}
     <div
@@ -26,8 +36,7 @@
           </p>
           <a
             href='{{ block.settings.url_button }}'
-            class='twcss-button twcss-hidden twcss-border-none lg:twcss-block'
-            style='background-color: {{ section.settings.background_button }}; color: {{ section.settings.text_button_color }};'
+            class='button twcss-hidden twcss-border-none lg:twcss-block {{ button_style_type }}'
           >
             {{ block.settings.button_title }}
           </a>
@@ -44,36 +53,30 @@
   "max_blocks": 4,
   "settings": [
     {
+      "type": "checkbox",
+      "id": "button_style",
+      "default": false,
+      "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
+    },
+    {
       "type": "range",
-      "id": "margin_top",
+      "id": "padding_top",
       "min": 0,
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "Margin top",
+      "label": "Padding top",
       "default": 36
     },
     {
       "type": "range",
-      "id": "margin_bottom",
+      "id": "padding_bottom",
       "min": 0,
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "Margin bottom",
+      "label": "Padding bottom",
       "default": 36
-    },
-    {
-      "type": "color",
-      "id": "background_button",
-      "label": "Background buttons",
-      "default": "#000"
-    },
-    {
-      "type": "color",
-      "id": "text_button_color",
-      "label": "Texts color buttons",
-      "default": "#fff"
     },
     {
       "type": "color",

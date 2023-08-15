@@ -1,50 +1,53 @@
-<section class='twcss-grid-system twcss-gap-y-[50px] twcss-mt-4 twcss-mb-[58px] lg:twcss-mt-[50px]'>
-  <!-- Primera sección -->
-  <div class='twcss-col-span-full md:twcss-col-span-4 {% if section.settings.toggle_image %}lg:twcss-col-start-8{% else %}md:twcss-col-start-1 lg:twcss-col-start-2{% endif %} lg:twcss-col-span-4 twcss-items-center twcss-flex twcss-flex-col twcss-justify-center'>
-    <h5
-      class='twcss-typ-h5-subtopic-3-a twcss-mb-[16px] twcss-uppercase twcss-text-center twcss-text-primary'
-    >
-      {{ section.settings.sup_title }}
-    </h5>
-    <h2
-      class='twcss-typ-h2-subheading-b twcss-mb-[16px] twcss-text-center twcss-text-primary'
-    >
-      {{ section.settings.title }}
-    </h2>
-    <p
-      class='twcss-typ-body-2 twcss-mb-[14px] twcss-text-center twcss-text-primary'
-    >
-      {{ section.settings.description }}
-    </p>
-    <div class='twcss-flex twcss-flex-col twcss-w-full twcss-gap-y-4'>
-      {% if section.settings.show_first_button %}
-        <button class='twcss-button twcss-button-primary'>
-          {{ section.settings.first_button_title | link_to: section.settings.first_button_link }}
-        </button>
-      {% endif %}
-      {% if section.settings.show_second_button %}
-        <button class='twcss-button twcss-button-secondary'>
-          {{ section.settings.second_button_title | link_to: section.settings.second_button_link }}
-        </button>
+<section
+  class='color-{{ section.settings.color_scheme }}'
+  style='padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;'
+>
+  <div class='twcss-grid-system twcss-gap-y-[50px] twcss-mt-4 twcss-mb-[58px] lg:twcss-mt-[50px]'>
+    <div class='twcss-col-span-full {% if section.settings.toggle_image %}md:twcss-col-start-5 lg:twcss-col-start-8{% else %}lg:twcss-col-start-1{% endif %} md:twcss-col-span-4 lg:twcss-col-span-5 twcss-items-center twcss-flex twcss-flex-col twcss-justify-center twcss-p-10 lg:twcss-p-0'>
+      <h5
+        class='twcss-typ-h5-subtopic-3-a twcss-mb-[16px] twcss-uppercase twcss-text-center twcss-text-primary'
+      >
+        {{ section.settings.sup_title }}
+      </h5>
+      <h2
+        class='twcss-typ-h2-subheading-b twcss-mb-[16px] twcss-text-center twcss-text-primary'
+      >
+        {{ section.settings.title }}
+      </h2>
+      <p
+        class='twcss-typ-body-2 twcss-mb-[14px] twcss-text-center twcss-text-primary'
+      >
+        {{ section.settings.description }}
+      </p>
+      <div class='twcss-flex twcss-flex-col twcss-w-full twcss-gap-y-4'>
+        {% if section.settings.show_first_button %}
+          <button class='button button--primary'>
+            {{ section.settings.first_button_title | link_to: section.settings.first_button_link }}
+          </button>
+        {% endif %}
+        {% if section.settings.show_second_button %}
+          <button class='button button--secondary'>
+            {{ section.settings.second_button_title | link_to: section.settings.second_button_link }}
+          </button>
+        {% endif %}
+      </div>
+    </div>
+    <div class='twcss-col-span-full twcss-row-start-1 {% if section.settings.toggle_image %}lg:twcss-col-start-1{% else %}lg:twcss-col-start-8{% endif %} md:twcss-col-span-4 lg:twcss-col-span-5'>
+      {% if section.settings.main_image %}
+        <img
+          src='{{ section.settings.main_image | image_url }}'
+          class='{% if section.settings.adapt_image %}twcss-h-[262px]{% endif %} twcss-w-full twcss-object-cover md:twcss-h-[429px] lg:twcss-h-[754px]'
+          alt='logo'
+          loading='lazy'
+          width='auto'
+          height='auto'
+        >
+      {% else %}
+        <div class='twcss-overflow-hidden'>
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        </div>
       {% endif %}
     </div>
-  </div>
-  <!-- Segunda sección -->
-  <div class='twcss-col-span-full twcss-row-start-1 md:twcss-col-span-4 {% if section.settings.toggle_image %}lg:twcss-col-start-2{% else %}md:twcss-col-start-5 lg:twcss-col-start-7{% endif %} lg:twcss-col-span-5'>
-    {% if section.settings.main_image %}
-      <img
-        src='{{ section.settings.main_image | image_url }}'
-        class='{% if section.settings.adapt_image %}twcss-h-[262px]{% endif %} twcss-w-full twcss-object-cover md:twcss-h-[429px] lg:twcss-h-[754px]'
-        alt='logo'
-        loading='lazy'
-        width='auto'
-        height='auto'
-      >
-    {% else %}
-      <div class='twcss-overflow-hidden'>
-        <img src='https://dummyimage.com/720x600' width='auto' height='auto' loading='lazy'>
-      </div>
-    {% endif %}
   </div>
 </section>
 
@@ -52,6 +55,32 @@
 {
   "name": "lg image text two button",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
     {
       "type": "image_picker",
       "id": "main_image",
