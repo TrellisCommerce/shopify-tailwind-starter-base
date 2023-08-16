@@ -1330,6 +1330,11 @@ video {
   object-fit: cover;
 }
 
+.twcss-object-top {
+  -o-object-position: top;
+  object-position: top;
+}
+
 .twcss-p-10 {
   padding: 2.5rem;
 }
@@ -1532,6 +1537,10 @@ video {
   text-transform: none;
 }
 
+.twcss-leading-\[220px\] {
+  line-height: 220px;
+}
+
 .twcss-text-background {
   color: rgb(var(--color-background));
 }
@@ -1555,12 +1564,26 @@ video {
   transition-duration: 150ms;
 }
 
+.twcss-transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .twcss-duration-200 {
   transition-duration: 200ms;
 }
 
 .twcss-duration-300 {
   transition-duration: 300ms;
+}
+
+.twcss-duration-500 {
+  transition-duration: 500ms;
+}
+
+.twcss-ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*! in the migration the following line should be deleted */
@@ -1596,6 +1619,28 @@ video {
 
 .hover\:twcss-opacity-100:hover {
   opacity: 1;
+}
+
+.hover\:twcss-opacity-80:hover {
+  opacity: 0.8;
+}
+
+.hover\:twcss-transition-opacity:hover {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.hover\:twcss-duration-500:hover {
+  transition-duration: 500ms;
+}
+
+.hover\:twcss-ease-in-out:hover {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.twcss-group\/block-overlay:hover .group-hover\/block-overlay\:twcss-opacity-0 {
+  opacity: 0;
 }
 
 .twcss-peer:checked ~ .peer-checked\:twcss-flex {
@@ -1980,6 +2025,10 @@ video {
   }
 }
 
+.\[\&\:hover_\+_\.pikchur\]\:twcss-opacity-0:hover + .pikchur {
+  opacity: 0;
+}
+
 .\[\&\>\.icon-caret\]\:twcss-w-3 > .icon-caret {
   width: 0.75rem;
 }
@@ -2009,4 +2058,12 @@ video {
   > summary
   > .plus-icon {
   display: none;
+}
+
+.item-a .\[\.item-a_\&\]\:twcss-top-0 {
+  top: 0px;
+}
+
+.item-a .\[\.item-a_\&\]\:twcss-leading-\[440px\] {
+  line-height: 440px;
 }
