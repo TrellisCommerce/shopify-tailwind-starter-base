@@ -64,7 +64,7 @@
 {%- endstyle -%}
 
 <section
-  class='color-{{ section.settings.color_scheme }} twcss-w-full'
+  class='twcss-w-full twcss-bg-background color-{{ section.settings.color_scheme }}'
   style='padding: {{ section.settings.background_padding }}px;'
 >
   <div class='home-link-container'>
@@ -84,7 +84,7 @@
           {{ 'hero-apparel-1' | placeholder_svg_tag: 'twcss-w-full twcss-h-full twcss-transition-opacity twcss-duration-200 twcss-ease-in-out group-hover/block-overlay:twcss-opacity-0' }}
         {% endif %}
 
-        <div style='--overlay-color: {{ section.settings.overlay_color }}; --font-color: {{ section.settings.font_color }}; --font-size: {{ section.settings.font_size }}px; padding-top: {{ section.settings.padding }}%;' class='twcss-opacity-0 twcss-block twcss-absolute twcss-w-full twcss-h-full twcss-top-0 twcss-text-center twcss-leading-[220px] hover:twcss-opacity-80 hover:twcss-duration-500 hover:twcss-transition-opacity hover:twcss-ease-in-out [.item-a_&]:twcss-top-0 [.item-a_&]:twcss-leading-[440px]'>
+        <div style='--overlay-color: {{ section.settings.overlay_color }}; --font-color: {{ section.settings.font_color }}; --font-size: {{ section.settings.font_size }}px; padding-top: {{ section.settings.padding }}%;' class='twcss-opacity-0 twcss-block twcss-absolute twcss-w-full twcss-h-full twcss-top-0 twcss-text-center twcss-leading-[220px] twcss-bg-[--overlay-color] twcss-text-[color:--font-color] twcss-text-[length:--font-size] hover:twcss-opacity-80 hover:twcss-duration-500 hover:twcss-transition-opacity hover:twcss-ease-in-out [.item-a_&]:twcss-top-0 [.item-a_&]:twcss-leading-[440px]'>
           {{ section.settings.text }}
         </div>
       </a>
@@ -106,7 +106,7 @@
             {{ 'hero-apparel-3' | placeholder_svg_tag: 'twcss-w-full twcss-h-full twcss-transition-opacity twcss-duration-200 twcss-ease-in-out group-hover/block-overlay:twcss-opacity-0' }}
           {% endif %}
 
-          <div style='--overlay-color: {{ block.settings.overlay_color }}; --font-color: {{ block.settings.font_color }}; --font-size: {{ block.settings.font_size }}px; padding-top: {{ block.settings.padding }}%;' class='twcss-opacity-0 twcss-block twcss-absolute twcss-w-full twcss-h-full twcss-top-0 twcss-text-center twcss-leading-[220px] hover:twcss-opacity-80 hover:twcss-duration-500 hover:twcss-transition-opacity hover:twcss-ease-in-out [.item-a_&]:twcss-top-0 [.item-a_&]:twcss-leading-[440px] block-overlay-{{ block.id }}'>
+          <div style='--overlay-color: {{ block.settings.overlay_color }}; --font-color: {{ block.settings.font_color }}; --font-size: {{ block.settings.font_size }}px; padding-top: {{ block.settings.padding }}%;' class='twcss-opacity-0 twcss-block twcss-absolute twcss-w-full twcss-h-full twcss-top-0 twcss-text-center twcss-leading-[220px] twcss-bg-[--overlay-color] twcss-text-[color:--font-color] twcss-text-[length:--font-size] hover:twcss-opacity-80 hover:twcss-duration-500 hover:twcss-transition-opacity hover:twcss-ease-in-out [.item-a_&]:twcss-top-0 [.item-a_&]:twcss-leading-[440px] block-overlay-{{ block.id }}'>
             {{ block.settings.text }}
           </div>
         </a>

@@ -1,147 +1,134 @@
-{% if section.settings.display %}
-  {% style %}
-        .it_title_{{ section.id }} {
-          font-size: {{ section.settings.title_size }}px;
-          color: {{ section.settings.title_color }};
-          font-weight: {{ section.settings.title_weight }};
-        }
+{% style %}
+  .it_title_{{ section.id }} {
+    font-size: {{ section.settings.title_size }}px;
+    color: {{ section.settings.title_color }};
+    font-weight: {{ section.settings.title_weight }};
+  }
 
-        .it_text_{{ section.id }},
-        .it_text_{{ section.id }} > p {
-          font-size: {{ section.settings.text_size }}px;
-          color: {{ section.settings.text_color }};
-          text-align: {{ section.settings.text_align }};
-          line-height: 1.2;
-        }
+  .it_text_{{ section.id }},
+  .it_text_{{ section.id }} > p {
+    font-size: {{ section.settings.text_size }}px;
+    color: {{ section.settings.text_color }};
+    text-align: {{ section.settings.text_align }};
+    line-height: 1.2;
+  }
 
-        .it_box_title_{{ section.id }} {
-          font-size: {{ section.settings.description_title_size }}px;
-          color: {{ section.settings.description_title_color }};
-          font-weight: {{ section.settings.description_title_weight }};
-        }
+  .it_box_title_{{ section.id }} {
+    font-size: {{ section.settings.description_title_size }}px;
+    color: {{ section.settings.description_title_color }};
+    font-weight: {{ section.settings.description_title_weight }};
+  }
 
-        .it_description_{{ section.id }},
-        .it_description_{{ section.id }} > * {
-          font-size: {{ section.settings.description_size }}px;
-          color: {{ section.settings.description_color }};
-          text-align: {{ section.settings.description_align }};
-          line-height: 1.2;
-        }
+  .it_description_{{ section.id }},
+  .it_description_{{ section.id }} > * {
+    font-size: {{ section.settings.description_size }}px;
+    color: {{ section.settings.description_color }};
+    text-align: {{ section.settings.description_align }};
+    line-height: 1.2;
+  }
 
-        @media (max-width: 767.98px) {
-          .it_title_{{ section.id }},
-          .it_box_title_{{ section.id }} {
-            font-size: 18px;
-            text-align: center;
-          }
-
-          .it_text_{{ section.id }},
-          .it_text_{{ section.id }} > p,
-          .it_description_{{ section.id }},
-          .it_description_{{ section.id }} > * {
-            font-size: 15px;
-            text-align:center;
-          }
-        }
-    @media (min-width: 750px) {
-          .grid-cols {
-            grid-template-columns: repeat({{ section.settings.items_per_col }}, minmax(0, 1fr));
-        }
+  @media (max-width: 767.98px) {
+    .it_title_{{ section.id }},
+    .it_box_title_{{ section.id }} {
+      font-size: 18px;
+      text-align: center;
     }
-  {% endstyle %}
 
-  <div
-    class='twcss-w-full'
-    style='background: {{ section.settings.background }};padding: {{ section.settings.spacing }}px'
-  >
-    <div class='twcss-container twcss-max-w-[1200px] twcss-px-5 twcss-mx-auto'>
-      {% if section.settings.title %}
-        <h2 class='{{ section.settings.title_align }} {{ section.settings.title_transform }} it_title_{{ section.id }} twcss-mb-4'>
-          {{ section.settings.title }}
-        </h2>
-      {% endif %}
+    .it_text_{{ section.id }},
+    .it_text_{{ section.id }} > p,
+    .it_description_{{ section.id }},
+    .it_description_{{ section.id }} > * {
+      font-size: 15px;
+      text-align:center;
+    }
+  }
+  @media (min-width: 750px) {
+    .grid-cols {
+      grid-template-columns: repeat({{ section.settings.items_per_col }}, minmax(0, 1fr));
+    }
+  }
+{% endstyle %}
 
-      {% if section.settings.text %}
-        <div class='it_text_{{ section.id }} twcss-mb-8'>{{ section.settings.text }}</div>
-      {% endif %}
+<div
+  class='twcss-w-full twcss-bg-background color-{{ section.settings.color_scheme }}'
+  style='padding: {{ section.settings.spacing }}px'
+>
+  <div class='twcss-container twcss-max-w-[1200px] twcss-px-5 twcss-mx-auto'>
+    {% if section.settings.title %}
+      <h2 class='{{ section.settings.title_align }} {{ section.settings.title_transform }} it_title_{{ section.id }} twcss-mb-4'>
+        {{ section.settings.title }}
+      </h2>
+    {% endif %}
 
-      <div
-        class='twcss-grid twcss-grid-cols-1 twcss-gap-1 md:twcss-grid-cols-2 grid-cols'
-        style='gap: {{ section.settings.grid_spacing }}rem;'
-      >
-        {% if section.blocks.size > 0 %}
-          {% for block in section.blocks %}
-            <div
-              class='twcss-block'
-              {{ block.shopify_attributes }}
-            >
-              <div>
-                {% if block.settings.img %}
-                  <img
-                    src='{{ block.settings.img | image_url }}'
-                    class='twcss-w-full lazyload'
-                    width='auto'
-                    height='auto'
-                    loading='lazy'
-                  >
-                {% else %}
-                  <img
-                    src='https://dummyimage.com/300'
-                    class='twcss-w-full lazyload'
-                    width='auto'
-                    height='auto'
-                    loading='lazy'
-                  >
-                {% endif %}
-              </div>
+    {% if section.settings.text %}
+      <div class='it_text_{{ section.id }} twcss-mb-8'>{{ section.settings.text }}</div>
+    {% endif %}
 
-              {% if block.settings.button_title != blank and block.settings.button_url != blank %}
-                <div class='twcss-flex twcss-justify-start twcss-my-4'>
-                  <a
-                    href='{{ block.settings.button_url }}'
-                    class='twcss-block twcss-w-full twcss-text-center twcss-no-underline btn-primary it_box_title_{{ section.id }}'
-                  >
-                    {{ block.settings.button_title }}
-                  </a>
-                </div>
-              {% endif %}
-
-              {% if block.settings.text %}
-                <div class='twcss-mb-4 it_description_{{ section.id }}'>
-                  {{ block.settings.text }}
-                </div>
+    <div
+      class='twcss-grid twcss-grid-cols-1 twcss-gap-1 md:twcss-grid-cols-2 grid-cols'
+      style='gap: {{ section.settings.grid_spacing }}rem;'
+    >
+      {% if section.blocks.size > 0 %}
+        {% for block in section.blocks %}
+          <div
+            class='twcss-block'
+            {{ block.shopify_attributes }}
+          >
+            <div>
+              {% if block.settings.img %}
+                <img
+                  src='{{ block.settings.img | image_url }}'
+                  class='twcss-w-full lazyload'
+                  width='auto'
+                  height='auto'
+                  loading='lazy'
+                >
+              {% else %}
+                {{ 'hero-apparel-3' | placeholder_svg_tag: 'twcss-w-full' }}
               {% endif %}
             </div>
-          {% endfor %}
-        {% endif %}
-      </div>
+
+            {% if block.settings.button_title != blank and block.settings.button_url != blank %}
+              <div class='twcss-flex twcss-justify-start twcss-my-4'>
+                <a
+                  href='{{ block.settings.button_url }}'
+                  class='twcss-block twcss-w-full twcss-text-center twcss-no-underline btn-primary it_box_title_{{ section.id }}'
+                >
+                  {{ block.settings.button_title }}
+                </a>
+              </div>
+            {% endif %}
+
+            {% if block.settings.text %}
+              <div class='twcss-mb-4 it_description_{{ section.id }}'>
+                {{ block.settings.text }}
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      {% endif %}
     </div>
   </div>
-{% endif %}
+</div>
 
 {% schema %}
 {
   "name": "Card list 3",
+  "tag": "section",
   "settings": [
     {
-      "type": "checkbox",
-      "id": "display",
-      "label": "Display section",
-      "default": true
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "Background",
-      "default": "#ffffff"
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
     },
     {
       "type": "range",
       "id": "spacing",
       "label": "Spacing top and bottom",
       "min": 0,
-      "max": 10,
-      "step": 1,
+      "max": 128,
+      "step": 4,
       "default": 8
     },
     {
@@ -232,9 +219,18 @@
       "type": "select",
       "id": "title_align",
       "options": [
-        { "value": "twcss-text-left", "label": "Left" },
-        { "value": "twcss-text-center", "label": "Center" },
-        { "value": "twcss-text-right", "label": "Right" }
+        {
+          "value": "twcss-text-left",
+          "label": "Left"
+        },
+        {
+          "value": "twcss-text-center",
+          "label": "Center"
+        },
+        {
+          "value": "twcss-text-right",
+          "label": "Right"
+        }
       ],
       "label": "Title align",
       "default": "twcss-text-center"
@@ -265,9 +261,18 @@
       "type": "select",
       "id": "text_align",
       "options": [
-        { "value": "left", "label": "Left" },
-        { "value": "center", "label": "Center" },
-        { "value": "right", "label": "Right" }
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
       ],
       "label": "Text align",
       "default": "center"
@@ -358,9 +363,18 @@
       "type": "select",
       "id": "description_title_align",
       "options": [
-        { "value": "twcss-text-left", "label": "Left" },
-        { "value": "twcss-text-center", "label": "Center" },
-        { "value": "twcss-text-right", "label": "Right" }
+        {
+          "value": "twcss-text-left",
+          "label": "Left"
+        },
+        {
+          "value": "twcss-text-center",
+          "label": "Center"
+        },
+        {
+          "value": "twcss-text-right",
+          "label": "Right"
+        }
       ],
       "label": "Title align",
       "default": "twcss-text-left"
@@ -385,9 +399,18 @@
       "type": "select",
       "id": "description_align",
       "options": [
-        { "value": "left", "label": "Left" },
-        { "value": "center", "label": "Center" },
-        { "value": "right", "label": "Right" }
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
       ],
       "label": "Text align box",
       "default": "left"

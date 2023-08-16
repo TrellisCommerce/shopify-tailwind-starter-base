@@ -1308,6 +1308,10 @@ video {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
+.twcss-bg-\[--overlay-color\] {
+  background-color: var(--overlay-color);
+}
+
 .twcss-bg-cover {
   background-size: cover;
 }
@@ -1517,6 +1521,10 @@ video {
   line-height: 2.25rem;
 }
 
+.twcss-text-\[length\:--font-size\] {
+  font-size: var(--font-size);
+}
+
 .twcss-font-bold {
   font-weight: 700;
 }
@@ -1548,6 +1556,14 @@ video {
 .twcss-text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.twcss-text-\[--font-color\] {
+  color: var(--font-color);
+}
+
+.twcss-text-\[color\:--font-color\] {
+  color: var(--font-color);
 }
 
 .twcss-no-underline {
