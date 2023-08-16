@@ -37,7 +37,7 @@
             {% endif %}
             <div class="{% if block.settings.cta_label != blank or block.settings.link != blank %} image-bar__overlay{% endif %}">
               {% if block.settings.image == blank %}
-                {{ 'image' | placeholder_svg_tag }}
+                {{ 'detailed-apparel-1' | placeholder_svg_tag: "twcss-w-full twcss-h-full" }}
               {% endif %}
 
               {% if block.settings.cta_label != blank %}
