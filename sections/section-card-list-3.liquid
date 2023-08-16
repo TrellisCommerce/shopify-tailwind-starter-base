@@ -1,10 +1,4 @@
 {% style %}
-  .it_title_{{ section.id }} {
-    font-size: {{ section.settings.title_size }}px;
-    color: {{ section.settings.title_color }};
-    font-weight: {{ section.settings.title_weight }};
-  }
-
   .it_text_{{ section.id }},
   .it_text_{{ section.id }} > p {
     font-size: {{ section.settings.text_size }}px;
@@ -28,7 +22,6 @@
   }
 
   @media (max-width: 767.98px) {
-    .it_title_{{ section.id }},
     .it_box_title_{{ section.id }} {
       font-size: 18px;
       text-align: center;
@@ -55,7 +48,10 @@
 >
   <div class='twcss-container twcss-max-w-[1200px] twcss-px-5 twcss-mx-auto'>
     {% if section.settings.title %}
-      <h2 class='{{ section.settings.title_align }} {{ section.settings.title_transform }} it_title_{{ section.id }} twcss-mb-4'>
+      <h2 
+        class='{{ section.settings.title_align }} {{ section.settings.title_transform }} twcss-mb-4 twcss-text-[length:--font-size] twcss-text-[color:--font-color] twcss-font-[--font-weight]'
+        style="--font-size: {{ section.settings.title_size }}px; --font-color: {{ section.settings.title_color }}; --font-weight: {{ section.settings.title_weight }};"
+      >
         {{ section.settings.title }}
       </h2>
     {% endif %}

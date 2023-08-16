@@ -1529,6 +1529,10 @@ video {
   font-weight: 700;
 }
 
+.twcss-font-\[--font-weight\] {
+  font-weight: var(--font-weight);
+}
+
 .twcss-uppercase {
   text-transform: uppercase;
 }
