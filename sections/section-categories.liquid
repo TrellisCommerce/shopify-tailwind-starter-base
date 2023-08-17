@@ -1,190 +1,155 @@
-{% if section.settings.display %}
-  {% style %}
-    .it_title_{{ section.id }} {
-      font-size: {{ section.settings.title_size }}px;
-      color: {{ section.settings.title_color }};
-      font-weight: {{ section.settings.title_weight }};
-    }
+{% assign numbers = 4 %}
 
-    .it_text_{{ section.id }},
-    .it_text_{{ section.id }} > p {
-      font-size: {{ section.settings.text_size }}px;
-      color: {{ section.settings.text_color }};
-      text-align: {{ section.settings.text_align }};
-      line-height: 1.2;
-    }
-
-    .it_box_title_{{ section.id }} {
-      font-size: {{ section.settings.description_title_size }}px;
-      color: {{ section.settings.description_title_color }};
-      font-weight: {{ section.settings.description_title_weight }};
-    }
-
-    .it_description_{{ section.id }},
-    .it_description_{{ section.id }} > * {
-      font-size: {{ section.settings.description_size }}px;
-      color: {{ section.settings.description_color }};
-      text-align: {{ section.settings.description_align }};
-      line-height: 1.2;
-    }
-
-    @media (max-width: 767.98px) {
-      .it_title_{{ section.id }},
-      .it_box_title_{{ section.id }} {
-        font-size: 25px;
-        text-align: center;
-      }
-
-      .it_text_{{ section.id }},
-      .it_text_{{ section.id }} > p,
-      .it_description_{{ section.id }},
-      .it_description_{{ section.id }} > * {
-        font-size: 15px;
-        text-align:center;
-      }
-    }
-  {% endstyle %}
-
-  {% assign numbers = 4 %}
-
-  <div class='twcss-w-full py-{{ section.settings.spacing }}' style='background: {{ section.settings.background }};'>
-    <div class='twcss-container twcss-px-5 twcss-mx-auto twcss-max-w-[1200px]'>
-      {% if section.settings.title %}
-        <h2 class='{{ section.settings.title_align }} {{ section.settings.title_transform }} it_title_{{ section.id }} twcss-mb-4'>
-          {{ section.settings.title }}
-        </h2>
-      {% endif %}
-
-      {% if section.settings.text %}
-        <div class='it_text_{{ section.id }} twcss-mb-8'>{{ section.settings.text }}</div>
-      {% endif %}
-
-      <div
-        class='twcss-grid twcss-grid-cols-1 md:twcss-grid-cols-10'
-        style='
-          grid-template-columns: repeat({{ section.settings.items_per_col }}, minmax(0, 1fr));
-          gap: {{ section.settings.grid_spacing }}px;
-        '
+<div 
+  class='twcss-w-full twcss-bg-background color-{{ section.settings.color_scheme }}'
+  style='padding: {{ section.settings.spacing }}px'
+>
+  <div class='twcss-container twcss-px-5 twcss-mx-auto twcss-max-w-[1200px]'>
+    {% if section.settings.title %}
+      <h2 
+        class='{{ section.settings.title_align }} {{ section.settings.title_transform }} twcss-mb-4 twcss-text-[length:--font-size] twcss-text-[color:--font-color] twcss-font-[--font-weight]'
+        style='--font-size: {{ section.settings.title_size }}px; --font-color: {{ section.settings.title_color }}; --font-weight: {{ section.settings.title_weight }};'
       >
-        {% if section.blocks.size > 0 %}
-          {% for twcss-block in section.blocks %}
-            {% assign collection = collections[block.settings.collection] %}
+        {{ section.settings.title }}
+      </h2>
+    {% endif %}
 
-            <div
-              class='twcss-relative twcss-block'
-              {{ twcss-block.shopify_attributes }}
-            >
-              <div>
-                {% if collection.image %}
-                  <img
-                    width='auto'
-                    height='auto'
-                    loading='lazy'
-                    src='{{ collection.image | image_url }}'
-                    class='twcss-w-full'
-                  >
-                {% else %}
-                  {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
-                  {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
-                {% endif %}
-              </div>
+    {% if section.settings.text %}
+      <div 
+        class='twcss-mb-8 twcss-leading-[1.2] twcss-text-[length:--font-size] twcss-text-[color:--font-color]'
+        style='--font-size: {{ section.settings.text_size }}px; --font-color: {{ section.settings.text_color }}; text-align: {{ section.settings.text_align }};'
+      >
+        {{ section.settings.text }}
+      </div>
+    {% endif %}
 
-              {% if section.settings.show_categories_without_box %}
-                <div class='twcss-flex twcss-justify-start twcss-my-4'>
-                  <a
-                    href='{{ collection.url }}'
-                    class='twcss-block twcss-w-full twcss-text-center twcss-no-underline btn-primary'
-                  >
-                    {{ collection.title }}
-                  </a>
-                </div>
+    <div
+      class='twcss-grid twcss-grid-cols-1 md:twcss-grid-cols-10'
+      style='
+        grid-template-columns: repeat({{ section.settings.items_per_col }}, minmax(0, 1fr));
+        gap: {{ section.settings.grid_spacing }}px;
+      '
+    >
+      {% if section.blocks.size > 0 %}
+        {% for block in section.blocks %}
+          {% assign collection = collections[block.settings.collection] %}
 
-                <div class='twcss-mb-4 twcss-hidden sm:twcss-block it_description_{{ section.id }}'>
-                  {{ collection.description }}
-                </div>
-              {% else %}
-                <div
-                  class='twcss-absolute twcss-inset-0 twcss-flex twcss-flex-col twcss-justify-center twcss-block twcss-px-16 twcss-no-underline twcss-transition-all twcss-duration-200 twcss-opacity-0 hover:twcss-opacity-100'
-                  style='background: {{ section.settings.background_block | color_modify: 'alpha', section.settings.background_opacity }};'
+          <div
+            class='twcss-relative twcss-block'
+            {{ block.shopify_attributes }}
+          >
+            <div>
+              {% if collection.image %}
+                <img
+                  width='auto'
+                  height='auto'
+                  loading='lazy'
+                  src='{{ collection.image | image_url }}'
+                  class='twcss-w-full'
                 >
-                  <h3
-                    class='twcss-mb-4 {{ section.settings.description_title_align }} {{ section.settings.description_title_transform }} it_box_title_{{ section.id }}'
-                  >
-                    {{ collection.title }}
-                  </h3>
-
-                  <div class='twcss-mb-4 twcss-hidden sm:twcss-block it_description_{{ section.id }}'>
-                    {{ collection.description }}
-                  </div>
-
-                  <div class='twcss-flex twcss-justify-start twcss-mt-4'>
-                    <a href='{{ collection.url }}' class='twcss-block twcss-no-underline outlined-button-white'>
-                      READ MORE
-                    </a>
-                  </div>
-                </div>
+              {% else %}
+                {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                {{ 'collection-' | append: current | placeholder_svg_tag: 'twcss-w-full' }}
               {% endif %}
             </div>
-          {% endfor %}
-        {% endif %}
 
-        {% if section.blocks.size == 0 %}
-          {% for twcss-block in (1..numbers) %}
-            <div
-              class='twcss-relative twcss-block'
-              {{ twcss-block.shopify_attributes }}
-            >
-              <div>
-                {% capture current %}{% cycle 1, 2, 3, 4 %}{% endcapture %}
-                {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+            {% if section.settings.show_categories_without_box %}
+              <div class='twcss-flex twcss-justify-start twcss-my-4'>
+                <a
+                  href='{{ collection.url }}'
+                  class='twcss-block twcss-w-full twcss-text-center twcss-no-underline btn-primary'
+                >
+                  {{ collection.title }}
+                </a>
               </div>
 
+              <div 
+                class='twcss-mb-4 twcss-hidden twcss-leading-[1.2] twcss-text-[length:--font-size] twcss-text-[color:--font-color] sm:twcss-block'
+                style='--font-size: {{ section.settings.description_size }}px; --font-color: {{ section.settings.description_color }}; text-align: {{ section.settings.description_align }};'
+              >
+                {{ collection.description }}
+              </div>
+            {% else %}
               <div
-                class='twcss-absolute twcss-inset-0 twcss-flex twcss-flex-col twcss-justify-center twcss-block twcss-px-16 twcss-no-underline twcss-transition-all twcss-duration-200 twcss-opacity-0 hover:twcss-opacity-100'
+                class='twcss-absolute twcss-inset-0 twcss-flex twcss-flex-col twcss-justify-center twcss-px-16 twcss-no-underline twcss-transition-all twcss-duration-200 twcss-opacity-0 hover:twcss-opacity-100'
                 style='background: {{ section.settings.background_block | color_modify: 'alpha', section.settings.background_opacity }};'
               >
-                <h3 class='twcss-mb-4 twcss-text-3xl twcss-font-bold twcss-text-white'>Category title</h3>
+                <h3
+                  class='twcss-mb-4 {{ section.settings.description_title_align }} {{ section.settings.description_title_transform }} twcss-text-[length:--font-size] twcss-text-[color:--font-color] twcss-font-[--font-weight]'
+                  style='--font-size: {{ section.settings.description_title_size }}px; --font-color: {{ section.settings.description_title_color }}; --font-weight: {{ section.settings.description_title_weight }};'
+                >
+                  {{ collection.title }}
+                </h3>
 
-                <p class='twcss-hidden twcss-mb-4 twcss-text-white sm:twcss-block'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua.
-                </p>
+                <div 
+                  class='twcss-mb-4 twcss-hidden twcss-leading-[1.2] twcss-text-[length:--font-size] twcss-text-[color:--font-color] sm:twcss-block'
+                  style='--font-size: {{ section.settings.description_size }}px; --font-color: {{ section.settings.description_color }}; text-align: {{ section.settings.description_align }};'
+                >
+                  {{ collection.description }}
+                </div>
 
                 <div class='twcss-flex twcss-justify-start twcss-mt-4'>
-                  <a href='#!' class='twcss-block twcss-no-underline outlined-button-white'>READ MORE</a>
+                  <a href='{{ collection.url }}' class='twcss-block twcss-no-underline outlined-button-white'>
+                    READ MORE
+                  </a>
                 </div>
               </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      {% endif %}
+
+      {% if section.blocks.size == 0 %}
+        {% for block in (1..numbers) %}
+          <div
+            class='twcss-relative twcss-block'
+            {{ block.shopify_attributes }}
+          >
+            <div>
+              {% capture current %}{% cycle 1, 2, 3, 4 %}{% endcapture %}
+              {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
             </div>
-          {% endfor %}
-        {% endif %}
-      </div>
+
+            <div
+              class='twcss-absolute twcss-inset-0 twcss-flex twcss-flex-col twcss-justify-center twcss-px-16 twcss-no-underline twcss-transition-all twcss-duration-200 twcss-opacity-0 hover:twcss-opacity-100'
+              style='background: {{ section.settings.background_block | color_modify: 'alpha', section.settings.background_opacity }};'
+            >
+              <h3 class='twcss-mb-4 twcss-text-3xl twcss-font-bold twcss-text-white'>Category title</h3>
+
+              <p class='twcss-hidden twcss-mb-4 twcss-text-white sm:twcss-block'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+              </p>
+
+              <div class='twcss-flex twcss-justify-start twcss-mt-4'>
+                <a href='#!' class='twcss-block twcss-no-underline outlined-button-white'>READ MORE</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
     </div>
   </div>
-{% endif %}
+</div>
 
 {% schema %}
 {
   "name": "Categories hover text",
+  "tag": "section",
   "settings": [
     {
-      "type": "checkbox",
-      "id": "display",
-      "label": "Display section",
-      "default": true
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "Background",
-      "default": "#ffffff"
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
     },
     {
       "type": "range",
       "id": "spacing",
       "label": "Spacing top and bottom",
       "min": 0,
-      "max": 10,
-      "step": 1,
+      "max": 128,
+      "step": 4,
       "default": 8
     },
     {
@@ -275,9 +240,18 @@
       "type": "select",
       "id": "title_align",
       "options": [
-        { "value": "twcss-text-left", "label": "Left" },
-        { "value": "twcss-text-center", "label": "Center" },
-        { "value": "twcss-text-right", "label": "Right" }
+        {
+          "value": "twcss-text-left",
+          "label": "Left"
+        },
+        {
+          "value": "twcss-text-center",
+          "label": "Center"
+        },
+        {
+          "value": "twcss-text-right",
+          "label": "Right"
+        }
       ],
       "label": "Title align",
       "default": "twcss-text-center"
@@ -308,9 +282,18 @@
       "type": "select",
       "id": "text_align",
       "options": [
-        { "value": "left", "label": "Left" },
-        { "value": "center", "label": "Center" },
-        { "value": "right", "label": "Right" }
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
       ],
       "label": "Text align",
       "default": "center"
@@ -407,9 +390,18 @@
       "type": "select",
       "id": "description_title_align",
       "options": [
-        { "value": "twcss-text-left", "label": "Left" },
-        { "value": "twcss-text-center", "label": "Center" },
-        { "value": "twcss-text-right", "label": "Right" }
+        {
+          "value": "twcss-text-left",
+          "label": "Left"
+        },
+        {
+          "value": "twcss-text-center",
+          "label": "Center"
+        },
+        {
+          "value": "twcss-text-right",
+          "label": "Right"
+        }
       ],
       "label": "Title align",
       "default": "twcss-text-left"
@@ -434,9 +426,18 @@
       "type": "select",
       "id": "description_align",
       "options": [
-        { "value": "left", "label": "Left" },
-        { "value": "center", "label": "Center" },
-        { "value": "right", "label": "Right" }
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
       ],
       "label": "Text align box",
       "default": "left"
