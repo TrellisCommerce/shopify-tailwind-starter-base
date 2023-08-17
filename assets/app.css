@@ -1956,6 +1956,10 @@ video {
     min-width: 400px;
   }
 
+  .lg\:twcss-max-w-\[--large-max-width\] {
+    max-width: var(--large-max-width);
+  }
+
   .lg\:twcss-grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
