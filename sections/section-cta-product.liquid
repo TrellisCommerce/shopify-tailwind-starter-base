@@ -1,62 +1,45 @@
-{% if section.settings.display %}
-  {% style %}
-    .it_title_{{ section.id }} {
-      font-size: {{ section.settings.title_size }}px;
-      color: {{ section.settings.title_color }};
-      font-weight: {{ section.settings.title_weight }};
-    }
+<div 
+  class='twcss-w-full twcss-bg-background color-{{ section.settings.color_scheme }}'
+  style='padding: {{ section.settings.spacing }}px'
+>
+  <div class='{% if section.settings.full_width %}twcss-w-full{% else %}twcss-container twcss-px-5 twcss-mx-auto{% endif %}'>
+    {% if section.settings.title != blank %}
+      <h2 
+        class='twcss-text-{{ section.settings.title_align }} {{ section.settings.title_transform }} twcss-pb-4 twcss-text-[length:--font-size] twcss-text-[color:--font-color] twcss-font-[--font-weight]'
+        style='--font-size: {{ section.settings.title_size }}px; --font-color: {{ section.settings.title_color }}; --font-weight: {{ section.settings.title_weight }};'
+      >
+        {{ section.settings.title }}
+      </h2>
+    {% endif %}
 
-    .it_text_{{ section.id }},
-    .it_text_{{ section.id }} > p {
-      font-size: {{ section.settings.text_size }}px;
-      text-align: {{ section.settings.text_align }};
-      color: {{ section.settings.text_color }};
-      line-height: 1.2;
-    }
+    {% if section.settings.text != blank %}
+      <div 
+        class='twcss-mb-8 twcss-text-[length:--font-size] twcss-text-[color:--font-color] twcss-leading-[1.2]'
+        style='--font-size: {{ section.settings.text_size }}px; --font-color: {{ section.settings.text_color }}; text-align: {{ section.settings.text_align }};'
+      >
+        {{ section.settings.text }}
+      </div>
+    {% endif %}
 
-    @media (max-width: 767.98px) {
-      .it_title_{{ section.id }} {
-        font-size: 25px;
-        text-align: center;
-      }
-      .it_text_{{ section.id }} {
-        font-size: 15px;
-        text-align: center;
-      }
-    }
-  {% endstyle %}
-
-  <div class='twcss-w-full' style='background: {{ section.settings.background }};'>
-    <div class='{% if section.settings.full_width %}twcss-w-full{% else %}twcss-container twcss-px-5 py-{{ section.settings.spacing }} twcss-mx-auto{% endif %}'>
-      {% if section.settings.title != blank %}
-        <h2 class='twcss-text-{{ section.settings.title_align }} {{ section.settings.title_transform }} it_title_{{ section.id }} twcss-pb-4'>
-          {{ section.settings.title }}
-        </h2>
-      {% endif %}
-
-      {% if section.settings.text != blank %}
-        <div class='it_text_{{ section.id }} twcss-mb-8'>{{ section.settings.text }}</div>
-      {% endif %}
-
-      {% if section.settings.image != blank %}
-        <img
-          class='twcss-w-full'
-          width='autp'
-          height='auto'
-          loading='lazy'
-          src='{{ section.settings.image | image_url }}'
-          style='object-fit: {{ section.settings.image_fit }};'
-        >
-      {% else %}
-        {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
-      {% endif %}
-    </div>
+    {% if section.settings.image != blank %}
+      <img
+        class='twcss-w-full'
+        width='auto'
+        height='auto'
+        loading='lazy'
+        src='{{ section.settings.image | image_url }}'
+        style='object-fit: {{ section.settings.image_fit }};'
+      >
+    {% else %}
+      {{ 'lifestyle-2' | placeholder_svg_tag: 'twcss-w-full' }}
+    {% endif %}
   </div>
-{% endif %}
+</div>
 
 {% schema %}
 {
   "name": "Call To Action Product",
+  "tag": "section",
   "settings": [
     {
       "type": "header",
@@ -64,10 +47,10 @@
       "info": "Call to action section to show aleatory information that you want"
     },
     {
-      "type": "checkbox",
-      "id": "display",
-      "label": "Display section",
-      "default": true
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
     },
     {
       "type": "checkbox",
@@ -80,15 +63,9 @@
       "id": "spacing",
       "label": "Spacing top and bottom",
       "min": 0,
-      "max": 10,
-      "step": 1,
-      "default": 10
-    },
-    {
-      "label": "Background",
-      "id": "background",
-      "type": "color",
-      "default": "#ffffff"
+      "max": 128,
+      "step": 4,
+      "default": 8
     },
     {
       "type": "header",
@@ -182,9 +159,18 @@
       "type": "select",
       "id": "title_align",
       "options": [
-        { "value": "left", "label": "Left" },
-        { "value": "center", "label": "Center" },
-        { "value": "right", "label": "Right" }
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
       ],
       "label": "Title align",
       "default": "center"
@@ -219,9 +205,18 @@
       "type": "select",
       "id": "text_align",
       "options": [
-        { "value": "left", "label": "Left" },
-        { "value": "center", "label": "Center" },
-        { "value": "right", "label": "Right" }
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
       ],
       "label": "Text align",
       "default": "center"
@@ -239,11 +234,26 @@
       "type": "select",
       "id": "image_fit",
       "options": [
-        { "value": "cover", "label": "Cover" },
-        { "value": "fill", "label": "Fill" },
-        { "value": "contain", "label": "Contain" },
-        { "value": "scale-down", "label": "Scale-Down" },
-        { "value": "none", "label": "None" }
+        {
+          "value": "cover",
+          "label": "Cover"
+        },
+        {
+          "value": "fill",
+          "label": "Fill"
+        },
+        {
+          "value": "contain",
+          "label": "Contain"
+        },
+        {
+          "value": "scale-down",
+          "label": "Scale-Down"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
       ],
       "label": "Fit exactly into a certain given dimension"
     }

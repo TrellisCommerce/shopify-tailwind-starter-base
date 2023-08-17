@@ -1548,6 +1548,10 @@ video {
   text-transform: none;
 }
 
+.twcss-leading-\[1\.2\] {
+  line-height: 1.2;
+}
+
 .twcss-leading-\[220px\] {
   line-height: 220px;
 }
@@ -1779,10 +1783,6 @@ video {
 
   .md\:twcss-min-w-\[279px\] {
     min-width: 279px;
-  }
-
-  .md\:twcss-grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .md\:twcss-grid-cols-10 {
