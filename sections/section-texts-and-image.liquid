@@ -1,4 +1,4 @@
-<div class='{{ section.settings.container_size }} twcss-flex'>
+<div class='{{ section.settings.container_size }} twcss-flex twcss-bg-background color-{{ section.settings.color_scheme }}'>
   <div
     class='twcss-mx-auto twcss-flex twcss-max-w-[1920px] twcss-flex-wrap-reverse twcss-justify-center {% if section.settings.reverse_content == true %} md:twcss-flex-row-reverse {% endif %}'
     style='margin-bottom: {{ section.settings.margin_bottom }}px; margin-top: {{ section.settings.margin_top }}px;'
@@ -14,13 +14,7 @@
           height='auto'
         >
       {% else %}
-        <img
-          src='https://dummyimage.com/30x30'
-          class='twcss-mb-3 twcss-w-8 twcss-h-8 twcss-rounded-full lg:twcss-hidden'
-          width='auto'
-          height='auto'
-          loading='lazy'
-        >
+        {{ 'detailed-apparel-1' | placeholder_svg_tag: "twcss-mb-3 twcss-w-8 twcss-h-8 twcss-rounded-full lg:twcss-hidden" }}
       {% endif %}
       <h2 class='twcss-mb-3 twcss-typ-h2-subheading-b lg:twcss-mb-5'>
         {{ section.settings.title }}
@@ -60,13 +54,7 @@
           height='auto'
         >
       {% else %}
-        <img
-          src='https://dummyimage.com/500x500'
-          width='auto'
-          height='auto'
-          loading='lazy'
-          class='twcss-h-full twcss-w-full twcss-object-cover'
-        >
+        {{ 'detailed-apparel-1' | placeholder_svg_tag: "twcss-h-full twcss-w-full twcss-object-cover" }}
       {% endif %}
     </div>
   </div>
@@ -76,6 +64,12 @@
   "name": "Texts and image",
   "tag": "section",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
     {
       "type": "range",
       "id": "margin_top",
