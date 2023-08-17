@@ -1295,6 +1295,10 @@ video {
   background-color: #;
 }
 
+.twcss-bg-\[--overlay-color\] {
+  background-color: var(--overlay-color);
+}
+
 .twcss-bg-background {
   background-color: rgb(var(--color-background));
 }
@@ -1306,10 +1310,6 @@ video {
 .twcss-bg-gray-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
-.twcss-bg-\[--overlay-color\] {
-  background-color: var(--overlay-color);
 }
 
 .twcss-bg-cover {
@@ -1332,11 +1332,6 @@ video {
 .twcss-object-cover {
   -o-object-fit: cover;
   object-fit: cover;
-}
-
-.twcss-object-top {
-  -o-object-position: top;
-  object-position: top;
 }
 
 .twcss-p-10 {
@@ -1525,12 +1520,16 @@ video {
   font-size: var(--font-size);
 }
 
+.twcss-font-\[--font-weight\] {
+  font-weight: var(--font-weight);
+}
+
 .twcss-font-bold {
   font-weight: 700;
 }
 
-.twcss-font-\[--font-weight\] {
-  font-weight: var(--font-weight);
+.twcss-font-medium {
+  font-weight: 500;
 }
 
 .twcss-uppercase {
@@ -1553,6 +1552,10 @@ video {
   line-height: 220px;
 }
 
+.twcss-text-\[color\:--font-color\] {
+  color: var(--font-color);
+}
+
 .twcss-text-background {
   color: rgb(var(--color-background));
 }
@@ -1560,14 +1563,6 @@ video {
 .twcss-text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.twcss-text-\[--font-color\] {
-  color: var(--font-color);
-}
-
-.twcss-text-\[color\:--font-color\] {
-  color: var(--font-color);
 }
 
 .twcss-no-underline {
@@ -1596,10 +1591,6 @@ video {
 
 .twcss-duration-300 {
   transition-duration: 300ms;
-}
-
-.twcss-duration-500 {
-  transition-duration: 500ms;
 }
 
 .twcss-ease-in-out {
@@ -1804,6 +1795,12 @@ video {
 
   .md\:twcss-grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:twcss-grid-cols-\[repeat\(var\(--medium-columns-grid\)\2c
+    minmax\(0\2c
+    1fr\)\)\] {
+    grid-template-columns: repeat(var(--medium-columns-grid), minmax(0, 1fr));
   }
 
   .md\:twcss-flex-row {
@@ -2043,10 +2040,6 @@ video {
   .twcss-group:hover .lg\:group-hover\:\!twcss-flex {
     display: flex !important;
   }
-}
-
-.\[\&\:hover_\+_\.pikchur\]\:twcss-opacity-0:hover + .pikchur {
-  opacity: 0;
 }
 
 .\[\&\>\.icon-caret\]\:twcss-w-3 > .icon-caret {

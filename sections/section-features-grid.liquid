@@ -1,124 +1,73 @@
-{% if section.settings.display %}
-  {% style %}
-        .it_title_{{ section.id }} {
-          font-size: {{ section.settings.title_size }}px;
-          color: {{ section.settings.title_color }};
-          font-weight: {{ section.settings.title_weight }};
-        }
+<div
+  class='twcss-w-full twcss-bg-background color-{{ section.settings.color_scheme }}'
+  style='padding: {{ section.settings.spacing }}px'
+>
+  <div class='twcss-container twcss-px-5 twcss-mx-auto twcss-max-w-[1200px]'>
+    {% if section.settings.title != blank %}
+      <h2 
+        class='{{ section.settings.title_align }} {{ section.settings.title_transform }} twcss-pb-4 twcss-text-[length:--font-size] twcss-text-[color:--font-color] twcss-font-[--font-weight]'
+        style='--font-size: {{ section.settings.title_size }}px; --font-color: {{ section.settings.title_color }}; --font-weight: {{ section.settings.title_weight }};'
+      >
+        {{ section.settings.title }}
+      </h2>
+    {% endif %}
 
-        @media (max-width: 767.98px) {
-          .it_title_{{ section.id }} {
-            font-size: 25px;
-            text-align: center;
-          }
-        }
-
-    @media (min-width: 750px) {
-        .grid-cols {
-            grid-template-columns: repeat({{ section.settings.grid }}, minmax(0, 1fr));
-        }
-    }
-  {% endstyle %}
-
-  <div
-    class='twcss-w-full'
-    style='background: {{ section.settings.background }}; padding: {{ section.settings.spacing }}px'
-  >
-    <div class='twcss-container twcss-px-5 twcss-mx-auto twcss-max-w-[1200px]'>
-      {% if section.settings.title != blank %}
-        <h2 class='{{ section.settings.title_align }} {{ section.settings.title_transform }} it_title_{{ section.id }} twcss-pb-4'>
-          {{ section.settings.title }}
-        </h2>
-      {% endif %}
-
-      {% if section.blocks.size > 0 %}
-        <div
-          class='twcss-grid twcss-grid-cols-1 twcss-gap-1 sm:twcss-grid-cols-2 md:twcss-grid-cols-1 grid-cols'
-          style='gap: {{ section.settings.grid_spacing }}px;'
-        >
-          {% for block in section.blocks %}
-            <div>
-              {% style %}
-                .f_title_{{ block.id }} {
-                  font-size: {{ block.settings.title_size }}px;
-                  color: {{ block.settings.title_color }};
-                  font-weight: {{ block.settings.title_weight }};
-                }
-
-                .f_text_{{ block.id }} {
-                  font-size: {{ block.settings.text_size }}px;
-                  color: {{ block.settings.text_color }};
-                  font-weight: 500;
-                }
-
-                @media (max-width: 767.98px) {
-                  .f_title_{{ block.id }} {
-                    font-size: 25px;
-                    text-align: center;
-                  }
-
-                  .f_title_{{ block.id }} {
-                    font-size: 16px;
-                    text-align: center;
-                  }
-                }
-              {% endstyle %}
-
-              {% if block.settings.display_image %}
-                {% if block.settings.image != blank %}
-                  <img
-                    src='{{ block.settings.image | image_url }}'
-                    alt=''
-                    class='twcss-block twcss-object-cover twcss-w-40 twcss-h-40 twcss-mx-auto twcss-mb-2 twcss-rounded-full lazyload'
-                    width='auto'
-                    height='auto'
-                    loading='lazy'
-                  >
-                {% else %}
-                  <img
-                    class='twcss-block twcss-w-40 twcss-h-40 twcss-mx-auto twcss-mb-2 twcss-border twcss-rounded-full'
-                    src='https://dummyimage.com/160x160'
-                    width='auto'
-                    height='auto'
-                    loading='lazy'
-                  >
-                {% endif %}
+    {% if section.blocks.size > 0 %}
+      <div
+        class='twcss-grid twcss-grid-cols-1 twcss-gap-1 sm:twcss-grid-cols-2 md:twcss-grid-cols-[repeat(var(--medium-columns-grid),minmax(0,1fr))]'
+        style='--medium-columns-grid: {{ section.settings.grid }};gap: {{ section.settings.grid_spacing }}px;'
+      >
+        {% for block in section.blocks %}
+          <div>
+            {% if block.settings.display_image %}
+              {% if block.settings.image != blank %}
+                <img
+                  src='{{ block.settings.image | image_url }}'
+                  alt=''
+                  class='twcss-block twcss-object-cover twcss-w-40 twcss-h-40 twcss-mx-auto twcss-mb-2 twcss-rounded-full lazyload'
+                  width='auto'
+                  height='auto'
+                  loading='lazy'
+                >
+              {% else %}
+                {{ 'detailed-apparel-1' | placeholder_svg_tag: "twcss-block twcss-w-40 twcss-h-40 twcss-mx-auto twcss-mb-2 twcss-border twcss-rounded-full" }}
               {% endif %}
+            {% endif %}
 
-              {% if block.settings.title %}
-                <h3 class='{{ block.settings.title_align }} {{ block.settings.title_transform }} f_title_{{ block.id }}'>
-                  {{ block.settings.title }}
-                </h3>
-              {% endif %}
+            {% if block.settings.title %}
+              <h3 
+                class='{{ block.settings.title_align }} {{ block.settings.title_transform }} twcss-text-[length:--font-size] twcss-text-[color:--font-color] twcss-font-[--font-weight]'
+                style="--font-size: {{ block.settings.title_size }}px; --font-color: {{ block.settings.title_color }}; --font-weight: {{ block.settings.title_weight }};"
+              >
+                {{ block.settings.title }}
+              </h3>
+            {% endif %}
 
-              {% if block.settings.text %}
-                <h5 class='{{ block.settings.text_align }} twcss-mb-4 f_text_{{ block.id }}'>
-                  {{ block.settings.text }}
-                </h5>
-              {% endif %}
-            </div>
-          {% endfor %}
-        </div>
-      {% endif %}
-    </div>
+            {% if block.settings.text %}
+              <h5 
+                class='{{ block.settings.text_align }} twcss-mb-4 twcss-text-[length:--font-size] twcss-text-[color:--font-color] twcss-font-medium'
+                style='--font-size: {{ block.settings.text_size }}px; --font-color: {{ block.settings.text_color }};'
+              >
+                {{ block.settings.text }}
+              </h5>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
-{% endif %}
+</div>
 
 {% schema %}
 {
   "name": "Features grid",
+  "tag": "section",
   "settings": [
     {
-      "type": "checkbox",
-      "id": "display",
-      "label": "Display section",
-      "default": true
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "Background",
-      "default": "#ffffff"
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
     },
     {
       "type": "range",
@@ -220,9 +169,18 @@
       "type": "select",
       "id": "title_align",
       "options": [
-        { "value": "twcss-text-left", "label": "Left" },
-        { "value": "twcss-text-center", "label": "Center" },
-        { "value": "twcss-text-right", "label": "Right" }
+        {
+          "value": "twcss-text-left",
+          "label": "Left"
+        },
+        {
+          "value": "twcss-text-center",
+          "label": "Center"
+        },
+        {
+          "value": "twcss-text-right",
+          "label": "Right"
+        }
       ],
       "label": "Title align",
       "default": "twcss-text-center"
@@ -255,7 +213,7 @@
           "type": "checkbox",
           "id": "display_image",
           "label": "Display image",
-          "default": false
+          "default": true
         },
         {
           "type": "image_picker",
@@ -350,9 +308,18 @@
           "type": "select",
           "id": "title_align",
           "options": [
-            { "value": "twcss-text-left", "label": "Left" },
-            { "value": "twcss-text-center", "label": "Center" },
-            { "value": "twcss-text-right", "label": "Right" }
+            {
+              "value": "twcss-text-left",
+              "label": "Left"
+            },
+            {
+              "value": "twcss-text-center",
+              "label": "Center"
+            },
+            {
+              "value": "twcss-text-right",
+              "label": "Right"
+            }
           ],
           "label": "Title align",
           "default": "twcss-text-center"
@@ -387,9 +354,18 @@
           "type": "select",
           "id": "text_align",
           "options": [
-            { "value": "twcss-text-left", "label": "Left" },
-            { "value": "twcss-text-center", "label": "Center" },
-            { "value": "twcss-text-right", "label": "Right" }
+            {
+              "value": "twcss-text-left",
+              "label": "Left"
+            },
+            {
+              "value": "twcss-text-center",
+              "label": "Center"
+            },
+            {
+              "value": "twcss-text-right",
+              "label": "Right"
+            }
           ],
           "label": "Text align",
           "default": "twcss-text-center"
