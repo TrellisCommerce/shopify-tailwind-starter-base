@@ -510,5 +510,5 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .twcss-block {
-  display: block;
+  display: block !important;
 }
