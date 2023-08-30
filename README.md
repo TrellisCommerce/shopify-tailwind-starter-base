@@ -110,6 +110,10 @@ These secret values are used in the `ci.yml` github workflow:
    `npx tailwindcss -i ./assets/app-tailwind.css -o ./assets/app.css --watch`
 
 - Run this command in a separate terminal so it will continue to run while you are developing.
+- Note that using a TailwindCSS class without a space afterwards when followed by a liquid tag causes compiling issues:
+`lg:!twcss-px-[32px]{% endif %}'>`
+But this does work:
+`lg:!twcss-px-[32px] {% endif %}'>`
 
 5. Launch the local development server:
    `shopify theme serve`
