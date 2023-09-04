@@ -12,6 +12,7 @@ if (!customElements.get('product-form')) {
           document.querySelector('cart-notification') ||
           document.querySelector('cart-drawer');
         this.submitButton = this.querySelector('[type="submit"]');
+
         if (document.querySelector('cart-drawer'))
           this.submitButton.setAttribute('aria-haspopup', 'dialog');
 
@@ -74,6 +75,7 @@ if (!customElements.get('product-form')) {
               publish(PUB_SUB_EVENTS.cartUpdate, {
                 source: 'product-form',
                 productVariantId: formData.get('id'),
+                cartData: response,
               });
             this.error = false;
             const quickAddModal = this.closest('quick-add-modal');
