@@ -855,8 +855,29 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 750px) {
-  .md\:xpx-0 {
-    padding-left: 0px;
-    padding-right: 0px;
+  .twcss-container {
+    max-width: 750px;
   }
+}
+
+@media (min-width: 990px) {
+  .twcss-container {
+    max-width: 990px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .twcss-container {
+    max-width: 1440px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .twcss-container {
+    max-width: 1920px;
+  }
+}
+
+.twcss-block {
+  display: block;
 }

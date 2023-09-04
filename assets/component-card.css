@@ -146,6 +146,12 @@
   grid-template-rows: max-content minmax(0, 1fr) max-content auto;
 }
 
+.card-information .card__information-volume-pricing-note {
+  margin-top: 0.6rem;
+  line-height: calc(0.5 + 0.4 / var(--font-body-scale));
+  color: rgba(var(--color-foreground), 0.75);
+}
+
 @media screen and (min-width: 750px) {
   .card__information {
     padding-bottom: 1.7rem;
@@ -201,7 +207,7 @@
 .card--horizontal
   .card-information
   > *:not(.visually-hidden:first-child)
-  + *:not(.rating) {
+  + *:not(.rating):not(.card__information-volume-pricing-note) {
   margin-top: 0;
 }
 
@@ -376,7 +382,9 @@
   margin-top: 0.4rem;
 }
 
-.card-information > *:not(.visually-hidden:first-child) + *:not(.rating) {
+.card-information
+  > *:not(.visually-hidden:first-child)
+  + *:not(.rating):not(.card__information-volume-pricing-note) {
   margin-top: 0.7rem;
 }
 
@@ -395,7 +403,8 @@
 }
 
 .card--shape.card--standard:not(.card--text) .card__inner {
-  border: 0; /* Border is not currently compatible with image shapes for standard cards. */
+  border: 0;
+  /* Border is not currently compatible with image shapes for standard cards. */
   background-color: transparent;
   filter: drop-shadow(
     var(--shadow-horizontal-offset) var(--shadow-vertical-offset)

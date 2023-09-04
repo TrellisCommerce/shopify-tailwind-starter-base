@@ -1,6 +1,6 @@
 Brought to you and maintained by [Trellis Commerce](https://trellis.co/) - A full-service eCommerce agency based in Boston, MA
 
-Lastest merged code from [Dawn v10.0.0](https://github.com/Shopify/dawn/releases/tag/v10.0.0)
+Lastest merged code from [Dawn v11.0.0](https://github.com/Shopify/dawn/releases/tag/v11.0.0)
 
 # Dawn + TailWindCSS + Prettier Shopify Starter Theme
 
@@ -110,6 +110,10 @@ These secret values are used in the `ci.yml` github workflow:
    `npx tailwindcss -i ./assets/app-tailwind.css -o ./assets/app.css --watch`
 
 - Run this command in a separate terminal so it will continue to run while you are developing.
+- Note that using a TailwindCSS class without a space afterwards when followed by a liquid tag causes compiling issues:
+`lg:!twcss-px-[32px]{% endif %}'>`
+But this does work:
+`lg:!twcss-px-[32px] {% endif %}'>`
 
 5. Launch the local development server:
    `shopify theme serve`
