@@ -40,11 +40,9 @@ html {
   -moz-tab-size: 4;
   /* 3 */
   -o-tab-size: 4;
-  tab-size: 4;
+     tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
 }
 
@@ -81,7 +79,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /*
@@ -125,8 +123,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    'Liberation Mono', 'Courier New', monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -349,16 +346,14 @@ textarea {
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
-input::-moz-placeholder,
-textarea::-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
   /* 2 */
 }
 
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
@@ -378,7 +373,7 @@ Set the default cursor for buttons.
 */
 
 button,
-[role='button'] {
+[role="button"] {
   cursor: pointer;
 }
 
@@ -428,9 +423,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-*,
-::before,
-::after {
+*, ::before, ::after {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
   --tw-rotate: 0;
@@ -438,16 +431,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-skew-y: 0;
   --tw-scale-x: 1;
   --tw-scale-y: 1;
-  --tw-pan-x: ;
-  --tw-pan-y: ;
-  --tw-pinch-zoom: ;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
   --tw-scroll-snap-strictness: proximity;
-  --tw-ordinal: ;
-  --tw-slashed-zero: ;
-  --tw-numeric-figure: ;
-  --tw-numeric-spacing: ;
-  --tw-numeric-fraction: ;
-  --tw-ring-inset: ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: rgb(59 130 246 / 0.5);
@@ -455,28 +448,49 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
-  --tw-blur: ;
-  --tw-brightness: ;
-  --tw-contrast: ;
-  --tw-grayscale: ;
-  --tw-hue-rotate: ;
-  --tw-invert: ;
-  --tw-saturate: ;
-  --tw-sepia: ;
-  --tw-drop-shadow: ;
-  --tw-backdrop-blur: ;
-  --tw-backdrop-brightness: ;
-  --tw-backdrop-contrast: ;
-  --tw-backdrop-grayscale: ;
-  --tw-backdrop-hue-rotate: ;
-  --tw-backdrop-invert: ;
-  --tw-backdrop-opacity: ;
-  --tw-backdrop-saturate: ;
-  --tw-backdrop-sepia: ;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+.xabsolute {
+  position: absolute;
 }
 
 .xrelative {
   position: relative;
+}
+
+.\!xsticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+}
+
+.xtop-0 {
+  top: 0px;
+}
+
+.xbottom-0 {
+  bottom: 0px;
+}
+
+.xleft-0 {
+  left: 0px;
 }
 
 .xm-auto {
@@ -487,12 +501,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 2rem;
 }
 
+.xmt-16 {
+  margin-top: 4rem;
+}
+
 .xmb-8 {
   margin-bottom: 2rem;
 }
 
 .xmt-1 {
   margin-top: 0.25rem;
+}
+
+.\!xblock {
+  display: block !important;
 }
 
 .xinline-block {
@@ -523,6 +545,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1.5rem;
 }
 
+.xh-2 {
+  height: 0.5rem;
+}
+
+.xw-16 {
+  width: 4rem;
+}
+
 .xw-full {
   width: 100%;
 }
@@ -547,6 +577,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-direction: row;
 }
 
+.xflex-col {
+  flex-direction: column;
+}
+
 .xitems-end {
   align-items: flex-end;
 }
@@ -561,6 +595,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xjustify-between {
   justify-content: space-between;
+}
+
+.xgap-16 {
+  gap: 4rem;
 }
 
 .xgap-4 {
@@ -628,14 +666,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 
-.xbg-orange-500 {
+.xbg-white {
   --tw-bg-opacity: 1;
-  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .xbg-amber-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(245 158 11 / var(--tw-bg-opacity));
+}
+
+.xobject-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .xp-4 {
@@ -674,6 +717,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xtext-right {
   text-align: right;
+}
+
+.xtext-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .xtext-3xl {
@@ -735,7 +783,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xline-through {
   -webkit-text-decoration-line: line-through;
-  text-decoration-line: line-through;
+          text-decoration-line: line-through;
 }
 
 .xoutline-none {
@@ -749,8 +797,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
+body {
+  --swiper-navigation-size: 24px;
+  --swiper-theme-color: #000000;
+  --page-width: 140rem;
+}
+
 .option-btn {
-  margin-top: 2rem;
   margin-right: 1rem;
   border-radius: 9999px;
   border-width: 1px;
@@ -834,6 +887,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   outline: none !important;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  display: block !important;
+}
+
+@media (min-width: 750px) {
+  .ur-product-images {
+    width: calc(100% - 46rem);
+  }
+}
+
 .hover\:xbg-gray-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -855,8 +919,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 750px) {
-  .twcss-container {
-    max-width: 750px;
+  .md\:xmt-32 {
+    margin-top: 8rem;
+  }
+
+  .md\:xw-auto {
+    width: auto;
+  }
+
+  .md\:xflex-row {
+    flex-direction: row;
+  }
+
+  .md\:xpx-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 

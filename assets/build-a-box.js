@@ -13,8 +13,21 @@ document.addEventListener('DOMContentLoaded', function () {
     '.single-item-price-count',
   );
   const unitPriceDisplayElement = document.querySelector('.unit-price-display');
+  const quantityBreakCounterElement = document.querySelector(
+    '.quantity-break-counter',
+  );
+  const quantityBreakProgressBar = document.querySelector(
+    '.quantity-break-progress-bar',
+  );
+  const quantityBreakTargetElement = document.querySelector(
+    '.quantity-break-target',
+  );
+  const quantityBreakAppliedElement = document.querySelector(
+    '.quantity-break-applied',
+  );
 
   let currentPlan = parseInt(window.ur_subscription_plan);
+  let quantityBreakTarget = parseInt(window.ur_quantity_break_target);
 
   function getVariantItems() {
     const variantElements = document.getElementsByClassName('variant');
@@ -74,6 +87,19 @@ document.addEventListener('DOMContentLoaded', function () {
         totalPriceOriginal + itemPriceOriginal * item.quantity;
       totalPrice = totalPrice + itemPrice * item.quantity;
       totalQuantity = totalQuantity + parseInt(item.quantity);
+    }
+
+    const quantityBreakCounter = quantityBreakTarget - totalQuantity;
+    if (quantityBreakCounter > 0) {
+      quantityBreakCounterElement.innerHTML = quantityBreakCounter;
+      const percent = Math.floor((totalQuantity / quantityBreakTarget) * 100);
+      quantityBreakProgressBar.style.width = percent + '%';
+      quantityBreakTargetElement.classList.remove('xhidden');
+      quantityBreakAppliedElement.classList.add('xhidden');
+    } else {
+      quantityBreakTargetElement.classList.add('xhidden');
+      quantityBreakAppliedElement.classList.remove('xhidden');
+      totalPrice = totalPrice - totalPrice * 0.05;
     }
 
     priceTotalElement.innerHTML = (totalPrice / 100).toLocaleString(undefined, {
@@ -246,5 +272,67 @@ document.addEventListener('DOMContentLoaded', function () {
 
       calculateTotal();
     });
+  }
+
+  //Input listener
+  document
+    .querySelector('#add-box-to-cart-form')
+    .addEventListener('input', function (event) {
+      if (event.target.matches('input, select, textarea')) {
+        calculateTotal();
+      }
+    });
+
+  const swiperConfig = {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 1,
+    initialSlide: 2,
+    spaceBetween: -50,
+    loop: true,
+    loopAdditionalSlides: 6,
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 280,
+      depth: 700,
+      modifier: 1.8,
+      slideShadows: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  };
+
+  //Swiper Init
+  const swiper = new Swiper('.ur-bab-swiper', swiperConfig);
+
+  const productElements = document.querySelectorAll('.ur-product');
+  productElements.forEach((product) => {
+    product.addEventListener('click', function () {
+      const productIndex =
+        parseInt(product.getAttribute('data-product-index')) - 1;
+      swiper.slideToLoop(productIndex, 400, true);
+    });
+  });
+
+  //Footer
+  function getOffset(el) {
+    const rect = el.getBoundingClientRect();
+    let top = rect.top + window.scrollY;
+    let left = rect.left + window.scrollX;
+    return { top, left };
+  }
+
+  // Get the element
+  const footer = document.querySelector('.ur-form-footer');
+
+  if (footer) {
+    const position = getOffset(footer);
+    // Now, position the footer as absolute
+    footer.style.bottom = '0';
+    footer.style.left = position.left + 'px';
+    footer.style.position = 'sticky';
   }
 });
