@@ -2,6 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Rooney';
+  src: url("{{ 'rooney-regular.woff2' | asset_url }}") format('woff2'),
+    url("{{ 'rooney-regular.woff' | asset_url }}") format('woff'),
+    url("{{ 'rooney-regular.otf' | asset_url }}") format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Rooney';
+  src: url("{{ 'rooney-medium.woff2' | asset_url }}") format('woff2'),
+    url("{{ 'rooney-medium.woff' | asset_url }}") format('woff'),
+    url("{{ 'rooney-medium.otf' | asset_url }}") format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Rooney';
+  src: url("{{ 'rooney-bold.woff2' | asset_url }}") format('woff2'),
+    url("{{ 'rooney-bold.woff' | asset_url }}") format('woff'),
+    url("{{ 'rooney-bold.otf' | asset_url }}") format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Rooney';
+  src: url("{{ 'rooney-heavy.woff2' | asset_url }}") format('woff2'),
+    url("{{ 'rooney-heavy.woff' | asset_url }}") format('woff'),
+    url("{{ 'rooney-medheavyum.otf' | asset_url }}") format('opentype');
+  font-display: auto;
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: normal;
+}
+
 body {
   --swiper-navigation-size: 24px;
   --swiper-theme-color: #000000;
