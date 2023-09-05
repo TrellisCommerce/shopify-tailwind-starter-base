@@ -761,6 +761,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 900;
 }
 
+.xfont-extrabold {
+  font-weight: 800;
+}
+
 .xtext-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
@@ -797,10 +801,76 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
+@font-face {
+  font-family: 'Rooney';
+
+  src: url("{{ 'rooney-regular.woff2' | asset_url }}") format('woff2'),
+    url("{{ 'rooney-regular.woff' | asset_url }}") format('woff'),
+    url("{{ 'rooney-regular.otf' | asset_url }}") format('opentype');
+
+  font-display: auto;
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Rooney';
+
+  src: url("{{ 'rooney-medium.woff2' | asset_url }}") format('woff2'),
+    url("{{ 'rooney-medium.woff' | asset_url }}") format('woff'),
+    url("{{ 'rooney-medium.otf' | asset_url }}") format('opentype');
+
+  font-display: auto;
+
+  font-style: normal;
+
+  font-weight: 500;
+
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Rooney';
+
+  src: url("{{ 'rooney-bold.woff2' | asset_url }}") format('woff2'),
+    url("{{ 'rooney-bold.woff' | asset_url }}") format('woff'),
+    url("{{ 'rooney-bold.otf' | asset_url }}") format('opentype');
+
+  font-display: auto;
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Rooney';
+
+  src: url("{{ 'rooney-heavy.woff2' | asset_url }}") format('woff2'),
+    url("{{ 'rooney-heavy.woff' | asset_url }}") format('woff'),
+    url("{{ 'rooney-medheavyum.otf' | asset_url }}") format('opentype');
+
+  font-display: auto;
+
+  font-style: normal;
+
+  font-weight: 900;
+
+  font-stretch: normal;
+}
+
 body {
   --swiper-navigation-size: 24px;
   --swiper-theme-color: #000000;
   --page-width: 140rem;
+  --font-heading-family: 'Rooney' !important;
+  --font-heading-weight: 900 !important;
 }
 
 .option-btn {
@@ -935,26 +1005,4 @@ body {
     padding-left: 0px;
     padding-right: 0px;
   }
-}
-
-@media (min-width: 990px) {
-  .twcss-container {
-    max-width: 990px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .twcss-container {
-    max-width: 1440px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .twcss-container {
-    max-width: 1920px;
-  }
-}
-
-.twcss-block {
-  display: block;
 }

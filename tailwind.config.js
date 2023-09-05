@@ -22,7 +22,7 @@ module.exports = {
       },
     },
     color: {
-      black: '#000000',
+      black: '#151515',
     },
   },
   plugins: [],

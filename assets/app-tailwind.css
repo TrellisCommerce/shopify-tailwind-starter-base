@@ -50,6 +50,8 @@ body {
   --swiper-navigation-size: 24px;
   --swiper-theme-color: #000000;
   --page-width: 140rem;
+  --font-heading-family: 'Rooney' !important;
+  --font-heading-weight: 900 !important;
 }
 
 .option-btn {
