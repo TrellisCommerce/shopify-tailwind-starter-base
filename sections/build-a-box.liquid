@@ -59,122 +59,125 @@
       <button type='button' class='option-btn active' data-option='800g'>800g</button>
     </div>
 
-    {% assign preselectedValue = 0 %}
+    <div class='xborder xrounded-3xl xborder-black'>
+      {% assign preselectedValue = 0 %}
 
-    {% for product in collection.products %}
-      {%- liquid
-        assign custom_classes_product = ''
-        assign mod2 = forloop.index | modulo: 2
-        if mod2 != 0
-          assign custom_classes_product = custom_classes_product | append: 'xbg-gray-100 '
-        endif
-      -%}
-      {%- liquid
-        if forloop.index == 1
-          assign preselectedValue = 1
-        elsif forloop.index == 2
-          assign preselectedValue = 1
-        else
-          assign preselectedValue = 0
-        endif
-      -%}
+      {% for product in collection.products %}
+        {%- liquid
+          assign custom_classes_product = ''
+          assign mod2 = forloop.index | modulo: 2
+          if mod2 != 0
+            assign custom_classes_product = custom_classes_product | append: ' second'
+          endif
+        -%}
 
-      <div
-        class='product-item ur-product xp-4 {{ custom_classes_product }} xoverflow-hidden xrounded-2xl'
-        data-product-index='{{ forloop.index }}'
-      >
-        {% for variant in product.variants %}
-          {%- liquid
-            assign custom_classes_variant = ''
-            assign preselectedValueVariant = 0
-            if variant.option1 == '400g'
-              assign custom_classes_variant = custom_classes_variant | append: 'xhidden '
+        {%- liquid
+          if forloop.index == 1
+            assign preselectedValue = 1
+          elsif forloop.index == 2
+            assign preselectedValue = 1
+          else
+            assign preselectedValue = 0
+          endif
+        -%}
+
+        <div
+          class='product-item ur-product xp-4 {{ custom_classes_product }} xoverflow-hidden xborder-beige-800 xborder-b last-of-type:xborder-none'
+          data-product-index='{{ forloop.index }}'
+        >
+          {% for variant in product.variants %}
+            {%- liquid
+              assign custom_classes_variant = ''
               assign preselectedValueVariant = 0
-            else
-              if preselectedValue == 1
-                assign preselectedValueVariant = 1
-              else
+              if variant.option1 == '400g'
+                assign custom_classes_variant = custom_classes_variant | append: 'xhidden '
                 assign preselectedValueVariant = 0
+              else
+                if preselectedValue == 1
+                  assign preselectedValueVariant = 1
+                else
+                  assign preselectedValueVariant = 0
+                endif
               endif
-            endif
-          -%}
+            -%}
 
-          <div
-            class='variant ur-variant {{ custom_classes_variant }} xflex xgap-4 xitems-center'
-            data-option='{{ variant.option1 }}'
-          >
-            <div class='variant-img  xrounded-lg xoverflow-hidden'>
-              {% if variant.image != null %}
-                <img
-                  class='  xw-16 md:xw-auto  xobject-contain'
-                  style='height: 65px;     max-width: 400px;'
-                  height='100'
-                  width='auto'
-                  loading='lazy'
-                  src='{{ variant.image.src | img_url: 'medium' }}'
-                  alt='{{ variant.image.alt | escape }}'
-                >
-              {% else %}
-                <img
-                  class='  xw-16 md:xw-auto  xobject-contain'
-                  style='height: 65px;     max-width: 400px;'
-                  height='100'
-                  width='auto'
-                  loading='lazy'
-                  src='{{ product.featured_image | img_url: 'medium' }}'
-                  alt='{{ product.title | escape }}'
-                >
-              {% endif %}
-            </div>
-            <div class='variant-info xflex xgap-4 xjustify-between xw-full xitems-center'>
-              <h2 class='xfont-bold xtext-3xl'>{{ product.title }}</h2>
-
-              <input type='hidden' class='variant-id' value='{{ variant.id }}'>
-
-              <div class='custom-number-input xh-20  xw-64'>
-                <div class='xflex xflex-row xh-20 xw-full xrounded-lg xrelative xbg-transparent xmt-1'>
-                  <button
-                    type='button'
-                    data-action='decrement'
-                    class='  xh-full  xw-64 xrounded-full hover:xbg-gray-200 xtransition-all xcursor-pointer xoutline-none'
+            <div
+              class='variant ur-variant {{ custom_classes_variant }} xflex xgap-4 xitems-center'
+              data-option='{{ variant.option1 }}'
+            >
+              <div class='variant-img  xrounded-lg xoverflow-hidden'>
+                {% if variant.image != null %}
+                  <img
+                    class='  xw-16 md:xw-auto  xobject-contain'
+                    style='height: 65px;     max-width: 400px;'
+                    height='100'
+                    width='auto'
+                    loading='lazy'
+                    src='{{ variant.image.src | img_url: 'medium' }}'
+                    alt='{{ variant.image.alt | escape }}'
                   >
-                    <span class='xpx-4 xm-auto xtext-4xl xfont-bold'>−</span>
-                  </button>
-                  <input
-                    id='quantity_{{ variant.id }}'
-                    type='number'
-                    class='variant-quantity xrounded-lg xoutline-none focus:xoutline-none xtext-center xw-full  xfont-semibold xtext-md hover:xtext-black focus:xtext-black  md:xtext-basecursor-default xflex xitems-center xtext-gray-700  xoutline-none {{ custom_classes_product }}'
-                    name='custom-input-number'
-                    value='{{ preselectedValueVariant }}'
-                    min='0'
+                {% else %}
+                  <img
+                    class='  xw-16 md:xw-auto  xobject-contain'
+                    style='height: 65px;     max-width: 400px;'
+                    height='100'
+                    width='auto'
+                    loading='lazy'
+                    src='{{ product.featured_image | img_url: 'medium' }}'
+                    alt='{{ product.title | escape }}'
                   >
-                  <button
-                    type='button'
-                    data-action='increment'
-                    class=' xh-full  xw-64 xrounded-full hover:xbg-gray-200 xtransition-all xcursor-pointer'
-                  >
-                    <span class='xpx-4 xm-auto xtext-4xl xfont-bold'>+</span>
-                  </button>
-                </div>
+                {% endif %}
               </div>
+              <div class='variant-info xflex xgap-4 xjustify-between xw-full xitems-center'>
+                <h2 class='xfont-bold xtext-3xl'>{{ product.title }}</h2>
 
-              <script>
-                window.ur_subscription_variants['{{ variant.id }}'] = {{ variant | json }};
-              </script>
-              {% if variant.selling_plan_allocations.size > 0 %}
-                {% for allocation in variant.selling_plan_allocations %}
-                {% endfor %}
-              {% endif %}
+                <input type='hidden' class='variant-id' value='{{ variant.id }}'>
+
+                <div class='custom-number-input xh-20  xw-64'>
+                  <div class='xflex xflex-row xh-20 xw-full xrounded-lg xrelative xbg-transparent xmt-1'>
+                    <button
+                      type='button'
+                      data-action='decrement'
+                      class='  xh-full  xw-64 xrounded-full hover:xbg-gray-200 xtransition-all xcursor-pointer xoutline-none'
+                    >
+                      <span class='xpx-4 xm-auto xtext-4xl xfont-bold'>−</span>
+                    </button>
+                    <input
+                      id='quantity_{{ variant.id }}'
+                      type='number'
+                      class='variant-quantity xrounded-lg xoutline-none focus:xoutline-none xtext-center xw-full  xfont-semibold xtext-md hover:xtext-black focus:xtext-black  md:xtext-basecursor-default xflex xitems-center xtext-gray-700  xoutline-none {{ custom_classes_product }}'
+                      name='custom-input-number'
+                      value='{{ preselectedValueVariant }}'
+                      min='0'
+                    >
+                    <button
+                      type='button'
+                      data-action='increment'
+                      class=' xh-full  xw-64 xrounded-full hover:xbg-gray-200 xtransition-all xcursor-pointer'
+                    >
+                      <span class='xpx-4 xm-auto xtext-4xl xfont-bold'>+</span>
+                    </button>
+                  </div>
+                </div>
+
+                <script>
+                  window.ur_subscription_variants['{{ variant.id }}'] = {{ variant | json }};
+                </script>
+                {% if variant.selling_plan_allocations.size > 0 %}
+                  {% for allocation in variant.selling_plan_allocations %}
+                  {% endfor %}
+                {% endif %}
+              </div>
             </div>
-          </div>
-        {% endfor %}
-        <script>
-          window.ur_subscription_products['{{ product.id }}'] = {{ product | json }};
-        </script>
-      </div>
-    {% endfor %}
+          {% endfor %}
+          <script>
+            window.ur_subscription_products['{{ product.id }}'] = {{ product | json }};
+          </script>
+        </div>
+      {% endfor %}
+    </div>
 
-    <div class='plan-selector xborder xrounded-lg xmt-8'>
+    <div class='plan-selector xborder xrounded-3xl xmt-8 xfont-medium xborder-black'>
       <div data-plan='' class='plan-selector-btn xcursor-pointer   xp-4 xflex xgap-4 xitems-center'>
         <div class='!xflex xitems-center xjustify-center xrounded-full xw-6 xh-6 xborder-2 xborder-black'>
           <div class='select-indicator xrounded-full xp-1 xbg-black '></div>
@@ -183,7 +186,7 @@
       </div>
       <div
         data-plan='{{ subscriptionPlan }}'
-        class='plan-selector-btn active xcursor-pointer xp-4 xflex xgap-4 xborder-t xitems-center'
+        class='plan-selector-btn active xcursor-pointer xp-4 xflex xgap-4 xborder-t xborder-black xitems-center'
       >
         <div class='!xflex xitems-center xjustify-center xrounded-full xw-6 xh-6 xborder-2 xborder-black'>
           <div class='select-indicator xrounded-full xp-1 xbg-black'></div>
@@ -192,7 +195,8 @@
         <div class='xbg-green-500 xtext-white xrounded-full xtext-sm xp-2 xpx-4'>Spare 10%!</div>
       </div>
     </div>
-    <div class='ur-form-footer xbg-white xmt-8 xrounded-lg xborder xmb-8 xoverflow-clip'>
+
+    <div class='ur-form-footer xbg-white xmt-8 xrounded-3xl xborder xmb-8 xoverflow-clip'>
       <div
         class='quantity-break-target xbg-amber-500 xtext-white xrounded-t-lg xp-4 xfont-bold xtext-center xrelative'
         style='font-size: 1.3rem;'

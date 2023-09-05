@@ -613,8 +613,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow: clip;
 }
 
-.xrounded-2xl {
-  border-radius: 1rem;
+.xrounded-3xl {
+  border-radius: 1.5rem;
 }
 
 .xrounded-lg {
@@ -638,6 +638,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 2px;
 }
 
+.xborder-b {
+  border-bottom-width: 1px;
+}
+
 .xborder-t {
   border-top-width: 1px;
 }
@@ -645,11 +649,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xborder-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-
-.xbg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .xbg-transparent {
@@ -749,6 +748,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
+.xfont-black {
+  font-weight: 900;
+}
+
 .xfont-bold {
   font-weight: 700;
 }
@@ -757,12 +760,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 600;
 }
 
-.xfont-black {
-  font-weight: 900;
-}
-
-.xfont-extrabold {
-  font-weight: 800;
+.xfont-medium {
+  font-weight: 500;
 }
 
 .xtext-gray-700 {
@@ -966,6 +965,10 @@ body {
   .ur-product-images {
     width: calc(100% - 46rem);
   }
+}
+
+.last-of-type\:xborder-none:last-of-type {
+  border-style: none;
 }
 
 .hover\:xbg-gray-200:hover {
