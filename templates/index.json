@@ -3,7 +3,8 @@
     "build-a-box": {
       "type": "build-a-box",
       "settings": {
-        "collection": "all"
+        "collection": "all",
+        "below_price_info": "inkl. MwSt., zzgl. Versandkosten"
       }
     },
     "rich_text": {
@@ -46,7 +47,7 @@
         "description_style": "body",
         "collection": "all",
         "products_to_show": 8,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
