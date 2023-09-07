@@ -83,6 +83,19 @@ header,
   @apply !xtext-beige-900 !xtext-2xl;
 }
 
+.quantity__input {
+  @apply !xrounded-lg !xw-24  !xoutline-none focus:!xoutline-none !xtext-center  !xfont-semibold  hover:!xtext-black focus:!xtext-black   !xflex !xitems-center !xtext-black  !xoutline-none  !xbg-lightbeige  !xbg-white;
+}
+
+.quantity__button {
+  @apply !xw-20 !xh-20 !xrounded-full hover:!xbg-beige-300 !xtransition-all !xcursor-pointer;
+}
+
+.quantity:after {
+  display: none !important;
+  @apply xmt-4;
+  /* @apply !xrounded-full; */
+}
 .option-btn {
   @apply xmr-4 xborder-gray-900 xborder xrounded-full hover:xbg-gray-900 xtext-gray-900  hover:xtext-white xpx-6 xpy-2 xtransition-all xfont-bold;
 }
