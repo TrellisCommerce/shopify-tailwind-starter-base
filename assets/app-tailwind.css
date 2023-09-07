@@ -70,6 +70,7 @@ header,
     clip-path: url(#ur-clip);
     aspect-ratio: 1;
     max-width: 35.5rem !important;
+    padding-top: 7rem !important;
   }
 }
 
