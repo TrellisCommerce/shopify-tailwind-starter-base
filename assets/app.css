@@ -768,13 +768,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 600;
 }
 
-.xfont-medium {
-  font-weight: 500;
-}
-
-.xtext-gray-700 {
+.xtext-black {
   --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
+  color: rgb(21 21 21 / var(--tw-text-opacity));
 }
 
 .xtext-white {
@@ -782,24 +778,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.xtext-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-
 .xtext-beige-900 {
   --tw-text-opacity: 1;
   color: rgb(63 53 42 / var(--tw-text-opacity));
-}
-
-.xtext-beige-700 {
-  --tw-text-opacity: 1;
-  color: rgb(129 110 60 / var(--tw-text-opacity));
-}
-
-.xtext-black {
-  --tw-text-opacity: 1;
-  color: rgb(21 21 21 / var(--tw-text-opacity));
 }
 
 .xline-through {
@@ -892,6 +873,7 @@ body {
   --ur-border: #e0d7bd;
   -webkit-text-decoration-color: #3f352a;
   text-decoration-color: #3f352a;
+  --font-body-weight: 400;
 }
 
 header,
