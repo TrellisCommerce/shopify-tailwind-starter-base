@@ -7,9 +7,9 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/m0k13_Photorealistic_image_of_a_happy_dog_in_front_mountains_ea_1928b19a-9d02-4cab-9a67-951cc57a90b7.png",
-            "heading": "Image slide",
+            "heading": "Die Natur in jeder Mahlzeit!",
             "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
+            "subheading": "Exklusive Rabatte auf ALLE Gebinde & Pakete! Nutze die Chance und spare bei Kauf unseres Slow-Cooked Premium Nassfutters",
             "button_label": "Button label",
             "link": "",
             "button_style_secondary": false,
@@ -25,9 +25,9 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_su_b29c0781-ee5d-4f96-812c-2417e49ed61d.png",
-            "heading": "Image slide",
+            "heading": "Dein Uncle Rusty's Sommer!",
             "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
+            "subheading": "Exklusive Rabatte auf ALLE Gebinde & Pakete! Nutze die Chance und spare bei Kauf unseres Slow-Cooked Premium Nassfutters",
             "button_label": "Button label",
             "link": "",
             "button_style_secondary": false,
@@ -43,9 +43,9 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_ea_b8bbc685-0a92-43ea-bc69-25c18faef102.png",
-            "heading": "Image slide",
+            "heading": "Die Natur in jeder Mahlzeit!",
             "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
+            "subheading": "Exklusive Rabatte auf ALLE Gebinde & Pakete! Nutze die Chance und spare bei Kauf unseres Slow-Cooked Premium Nassfutters",
             "button_label": "Button label",
             "link": "",
             "button_style_secondary": false,
@@ -120,48 +120,45 @@
         "padding_bottom": 36
       }
     },
-    "e96401f3-2586-4b1f-8b99-d5691e08a7c1": {
-      "type": "image-with-text",
+    "c2f0ff7f-b966-4dad-a0a0-d354fa082545": {
+      "type": "multicolumn",
       "blocks": {
-        "template--20724493582631__e96401f3-2586-4b1f-8b99-d5691e08a7c1-heading-1": {
-          "type": "heading",
+        "template--20724493582631__c2f0ff7f-b966-4dad-a0a0-d354fa082545-column-1": {
+          "type": "column",
           "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "template--20724493582631__e96401f3-2586-4b1f-8b99-d5691e08a7c1-text-1": {
-          "type": "text",
-          "settings": {
+            "title": "Column",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
+            "link_label": "",
+            "link": ""
           }
         },
-        "template--20724493582631__e96401f3-2586-4b1f-8b99-d5691e08a7c1-button-1": {
-          "type": "button",
+        "template--20724493582631__c2f0ff7f-b966-4dad-a0a0-d354fa082545-column-2": {
+          "type": "column",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "template--20724493582631__e96401f3-2586-4b1f-8b99-d5691e08a7c1-heading-1",
-        "template--20724493582631__e96401f3-2586-4b1f-8b99-d5691e08a7c1-text-1",
-        "template--20724493582631__e96401f3-2586-4b1f-8b99-d5691e08a7c1-button-1"
+        "template--20724493582631__c2f0ff7f-b966-4dad-a0a0-d354fa082545-column-1",
+        "template--20724493582631__c2f0ff7f-b966-4dad-a0a0-d354fa082545-column-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/pic1.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
         "color_scheme": "background-2",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -388,7 +385,7 @@
   "order": [
     "d02ba099-4a0b-4f7d-a3b1-1514075d5076",
     "d837f995-d7ac-4bf9-9639-27c44400c905",
-    "e96401f3-2586-4b1f-8b99-d5691e08a7c1",
+    "c2f0ff7f-b966-4dad-a0a0-d354fa082545",
     "build-a-box",
     "rich_text",
     "featured_collection",

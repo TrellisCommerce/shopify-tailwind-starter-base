@@ -281,6 +281,19 @@
     {% sections 'header-group' %}
 
     <main id='MainContent' class='content-for-layout focus-none' role='main' tabindex='-1'>
+      <svg height='0' width='0'>
+        <defs>
+            <clipPath id="ur-clip">
+                <path fill="#FFFFFF" stroke="#000000" stroke-width="1.5794" stroke-miterlimit="10"
+                  d="M350,3.11,103.64,18.43C48,21.9,2.9,68.22,2.9,121.9V359.56C2.9,413.24,48,454,103.64,450.49L350,435.17C405.6,431.7,450.7,385.38,450.7,331.7V94C450.7,40.36,405.6-.35,350,3.11Z" transform="translate(-2.9 -2.9)" />
+            </clipPath>
+
+            <clipPath id="ur-clip-wide">
+              <path fill="#FFFFFF" stroke="#000000" stroke-width="1.5794" stroke-miterlimit="10"
+                d="M350,80,103.64,90C48,92.28,2.9,122.69,2.9,157.94V314c0,35.24,45.1,62,100.74,59.69L350,363.59c55.64-2.27,100.74-32.68,100.74-67.93v-156C450.7,104.4,405.6,77.68,350,80Z" transform="translate(-2.9 -79.81)" />
+          </clipPath>
+        </defs>
+      </svg>
       {{ content_for_layout }}
     </main>
 
