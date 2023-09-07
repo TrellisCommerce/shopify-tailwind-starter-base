@@ -952,8 +952,7 @@ header,
   background-color: rgb(224 215 189 / var(--tw-bg-opacity)) !important;
 }
 
-.gradient,
-.color-background-2 {
+.multicolumn.color-accent-2 {
   background-attachment: fixed;
   background-repeat: repeat;
   background-size: 2246px;
