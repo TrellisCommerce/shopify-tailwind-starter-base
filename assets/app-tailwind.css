@@ -53,6 +53,8 @@ body {
   --font-heading-family: 'Rooney' !important;
   --font-heading-weight: 900 !important;
   --ur-base: #3f352a;
+  --ur-border: #e0d7bd;
+  text-decoration-color: #3f352a;
 }
 
 header,

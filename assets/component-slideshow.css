@@ -109,7 +109,7 @@ slideshow-component .slideshow.banner {
 }
 
 .slideshow__controls {
-  border: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  border: 2px solid rgba(var(--color-foreground), 0.08);
 }
 
 .slideshow__controls--top {

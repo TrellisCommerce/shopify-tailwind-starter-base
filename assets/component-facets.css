@@ -62,7 +62,7 @@
   padding: 0 1.5rem;
   min-width: 25rem;
   margin-top: 2.4rem;
-  border: 0.1rem solid rgba(var(--color-foreground), 0.55);
+  border: 2px solid rgba(var(--color-foreground), 0.55);
 }
 
 .facet-filters__summary::after {
@@ -333,7 +333,7 @@
 @media screen and (forced-colors: active) {
   .facet-checkbox > svg {
     background-color: inherit;
-    border: 0.1rem solid rgb(var(--color-background));
+    border: 2px solid rgb(var(--color-background));
   }
 
   .facet-checkbox > input[type='checkbox']:checked ~ .icon-checkmark {

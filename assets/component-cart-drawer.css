@@ -20,7 +20,7 @@
   width: 40rem;
   max-width: calc(100vw - 3rem);
   padding: 0 1.5rem;
-  border: 0.1rem solid rgba(var(--color-foreground), 0.2);
+  border: 2px solid rgba(var(--color-foreground), 0.2);
   border-right: 0;
   background-color: rgb(var(--color-background));
   overflow: hidden;

@@ -488,7 +488,7 @@
   padding: 1.1rem 1.5rem;
   text-decoration: none;
   box-shadow: 0 0 0 0.1rem rgba(var(--color-link), 0.2);
-  border: 0.1rem solid transparent;
+  border: 2px solid transparent;
   font-size: 1.2rem;
 }
 

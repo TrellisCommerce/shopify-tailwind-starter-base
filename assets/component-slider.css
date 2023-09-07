@@ -325,7 +325,7 @@ slider-component.slider-component-full-width {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  border: 0.1rem solid rgba(var(--color-foreground), 0.5);
+  border: 2px solid rgba(var(--color-foreground), 0.5);
   padding: 0;
   display: block;
 }

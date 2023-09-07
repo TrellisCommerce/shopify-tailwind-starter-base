@@ -110,7 +110,7 @@
 
 .quick-add-modal__toggle {
   background-color: rgb(var(--color-background));
-  border: 0.1rem solid rgba(var(--color-foreground), 0.1);
+  border: 2px solid rgba(var(--color-foreground), 0.1);
   border-radius: 50%;
   color: rgba(var(--color-foreground), 0.55);
   display: flex;
