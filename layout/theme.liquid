@@ -249,7 +249,7 @@
 
     {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
       {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
-      <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
+      <script src='{{ 'localization-form.js' | asset_url }}' defer='defer'></script>
     {%- endif -%}
 
     {%- if settings.predictive_search_enabled -%}
@@ -336,4 +336,8 @@
       <script src='{{ 'predictive-search.js' | asset_url }}' defer='defer'></script>
     {%- endif -%}
   </body>
+  <script
+    src='{{ 'instant-page.js' | asset_url }}'
+    type='module'
+  ></script>
 </html>

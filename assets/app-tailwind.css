@@ -48,10 +48,21 @@
 
 body {
   --swiper-navigation-size: 24px;
-  --swiper-theme-color: #000000;
+  --swiper-theme-color: #151515;
   --page-width: 140rem;
   --font-heading-family: 'Rooney' !important;
   --font-heading-weight: 900 !important;
+}
+
+header,
+.localization-form__select span {
+  font-family: 'Rooney';
+  font-weight: 700 !important;
+  font-size: 1.6rem;
+}
+
+.header__menu-item {
+  @apply xtext-beige-900;
 }
 
 .option-btn {
@@ -63,7 +74,7 @@ body {
 }
 
 .ur-button {
-  @apply xmt-8 xmr-4 xtext-white xborder-green-500 xbg-green-500 xborder-2 xrounded-xl hover:xbg-white   hover:xtext-gray-900 xpx-8 xpy-4 xtransition-all xfont-bold xtext-2xl;
+  @apply xmt-8 xmr-4 xtext-white xborder-green-600 xbg-green-600 xborder-2 xrounded-full hover:xbg-white   hover:xtext-gray-900 xpx-8 xpy-4 xtransition-all xfont-bold xtext-2xl;
 }
 
 .plan-selector-btn .select-indicator {

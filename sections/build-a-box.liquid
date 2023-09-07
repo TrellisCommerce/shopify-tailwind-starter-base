@@ -59,7 +59,7 @@
       <button type='button' class='option-btn active' data-option='800g'>800g</button>
     </div>
 
-    <div class='xborder xrounded-3xl xborder-black'>
+    <div class=''>
       {% assign preselectedValue = 0 %}
 
       {% for product in collection.products %}
@@ -67,7 +67,7 @@
           assign custom_classes_product = ''
           assign mod2 = forloop.index | modulo: 2
           if mod2 != 0
-            assign custom_classes_product = custom_classes_product | append: ' second'
+            assign custom_classes_product = custom_classes_product | append: ' xbg-lightbeige  second'
           endif
         -%}
 
@@ -82,7 +82,7 @@
         -%}
 
         <div
-          class='product-item ur-product xp-4 {{ custom_classes_product }} xoverflow-hidden xborder-beige-800 xborder-b last-of-type:xborder-none'
+          class='product-item ur-product xp-4 {{ custom_classes_product }} xrounded-3xl xoverflow-hidden last-of-type:xborder-none'
           data-product-index='{{ forloop.index }}'
         >
           {% for variant in product.variants %}
@@ -102,7 +102,7 @@
             -%}
 
             <div
-              class='variant ur-variant {{ custom_classes_variant }} xflex xgap-4 xitems-center'
+              class='variant ur-variant {{ custom_classes_variant }}  xflex xgap-4 xitems-center'
               data-option='{{ variant.option1 }}'
             >
               <div class='variant-img  xrounded-lg xoverflow-hidden'>
@@ -138,14 +138,14 @@
                     <button
                       type='button'
                       data-action='decrement'
-                      class='  xh-full  xw-64 xrounded-full hover:xbg-gray-200 xtransition-all xcursor-pointer xoutline-none'
+                      class='  xh-full  xw-64 xrounded-full hover:xbg-beige-300 xtransition-all xcursor-pointer xoutline-none'
                     >
                       <span class='xpx-4 xm-auto xtext-4xl xfont-bold'>−</span>
                     </button>
                     <input
                       id='quantity_{{ variant.id }}'
                       type='number'
-                      class='variant-quantity xrounded-lg xoutline-none focus:xoutline-none xtext-center xw-full  xfont-semibold xtext-md hover:xtext-black focus:xtext-black  md:xtext-basecursor-default xflex xitems-center xtext-gray-700  xoutline-none {{ custom_classes_product }}'
+                      class='variant-quantity xrounded-lg xoutline-none focus:xoutline-none xtext-center xw-full  xfont-semibold xtext-md hover:xtext-black focus:xtext-black  md:xtext-basecursor-default xflex xitems-center xtext-gray-700  xoutline-none {{ custom_classes_product }} xbg-white'
                       name='custom-input-number'
                       value='{{ preselectedValueVariant }}'
                       min='0'
@@ -153,7 +153,7 @@
                     <button
                       type='button'
                       data-action='increment'
-                      class=' xh-full  xw-64 xrounded-full hover:xbg-gray-200 xtransition-all xcursor-pointer'
+                      class=' xh-full  xw-64 xrounded-full hover:xbg-beige-300 xtransition-all xcursor-pointer'
                     >
                       <span class='xpx-4 xm-auto xtext-4xl xfont-bold'>+</span>
                     </button>
@@ -177,38 +177,38 @@
       {% endfor %}
     </div>
 
-    <div class='plan-selector xborder xrounded-3xl xmt-8 xfont-medium xborder-black'>
+    <div class='plan-selector xborder-2 xrounded-3xl xmt-8 xfont-medium xborder-beige-300'>
       <div data-plan='' class='plan-selector-btn xcursor-pointer   xp-4 xflex xgap-4 xitems-center'>
-        <div class='!xflex xitems-center xjustify-center xrounded-full xw-6 xh-6 xborder-2 xborder-black'>
+        <div class='!xflex xitems-center xjustify-center xrounded-full xw-6 xh-6 xborder-2 xborder-beige-300'>
           <div class='select-indicator xrounded-full xp-1 xbg-black '></div>
         </div>
         <span> Einmalige Bestellung </span>
       </div>
       <div
         data-plan='{{ subscriptionPlan }}'
-        class='plan-selector-btn active xcursor-pointer xp-4 xflex xgap-4 xborder-t xborder-black xitems-center'
+        class='plan-selector-btn active xcursor-pointer xp-4 xflex xgap-4 xborder-t-2 xborder-beige-300 xitems-center'
       >
-        <div class='!xflex xitems-center xjustify-center xrounded-full xw-6 xh-6 xborder-2 xborder-black'>
+        <div class='!xflex xitems-center xjustify-center xrounded-full xw-6 xh-6 xborder-2 xborder-beige-300'>
           <div class='select-indicator xrounded-full xp-1 xbg-black'></div>
         </div>
         <span> Monatliche Lieferung </span>
-        <div class='xbg-green-500 xtext-white xrounded-full xtext-sm xp-2 xpx-4'>Spare 10%!</div>
+        <div class='xbg-green-600 xtext-white xrounded-full xtext-sm xp-2 xpx-4'>Spare 10%!</div>
       </div>
     </div>
 
     <div class='ur-form-footer xbg-white xmt-8 xrounded-3xl xborder xmb-8 xoverflow-clip'>
       <div
-        class='quantity-break-target xbg-amber-500 xtext-white xrounded-t-lg xp-4 xfont-bold xtext-center xrelative'
+        class='quantity-break-target xbg-orange-600 xtext-white xrounded-t-lg xp-4 xfont-bold xtext-center xrelative'
         style='font-size: 1.3rem;'
       >
         Füge <span class='quantity-break-counter xfont-black' style='font-size: 1.5rem;'>22</span> Dosen hinzu um
         weitere 5% zu sparen!
         <div class='quantity-break-progress-container xabsolute xbottom-0 xleft-0 xh-2 xw-full'>
-          <div class='quantity-break-progress-bar xbg-green-500 xh-2 !xblock xtransition-all' style='width: 8%;'></div>
+          <div class='quantity-break-progress-bar xbg-green-600 xh-2 !xblock xtransition-all' style='width: 8%;'></div>
         </div>
       </div>
       <div
-        class='quantity-break-applied xhidden xbg-green-500 xtext-white xrounded-t-lg xp-4 xfont-bold xtext-center'
+        class='quantity-break-applied xhidden xbg-green-600 xtext-white xrounded-t-lg xp-4 xfont-bold xtext-center'
       >
         Maximale Rabatte aktiviert!
       </div>
