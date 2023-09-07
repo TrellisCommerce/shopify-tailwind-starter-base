@@ -1,5 +1,5 @@
 .product__xr-button {
-  background: rgba(var(--color-foreground), 0.08);
+  background: var(--ur-border);
   color: rgb(var(--color-foreground));
   margin: 1rem auto;
   box-shadow: none;

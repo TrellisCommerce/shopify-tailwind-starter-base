@@ -109,7 +109,7 @@ slideshow-component .slideshow.banner {
 }
 
 .slideshow__controls {
-  border: 2px solid rgba(var(--color-foreground), 0.08);
+  border: 2px solid var(--ur-border);
 }
 
 .slideshow__controls--top {
@@ -165,7 +165,7 @@ slideshow-component:not(.page-width) .slider-buttons {
     position: inherit;
     margin-left: 0.6rem;
     padding: 0 0 0 0.6rem;
-    border-left: 0.1rem solid rgba(var(--color-foreground), 0.08);
+    border-left: 0.1rem solid var(--ur-border);
   }
 }
 

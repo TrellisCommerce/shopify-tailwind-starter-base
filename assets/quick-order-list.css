@@ -25,7 +25,7 @@ quick-order-list .quantity__button {
 
 .quick-order-list__total {
   padding-top: 2rem;
-  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  border-top: 0.1rem solid var(--ur-border);
 }
 
 .totals__product-total {
@@ -421,7 +421,7 @@ quick-order-list-remove-button:hover .icon-remove {
   .quick-order-list__table thead tr {
     display: flex;
     justify-content: space-between;
-    border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+    border-bottom: 0.1rem solid var(--ur-border);
     margin-bottom: 4rem;
   }
 
@@ -509,7 +509,7 @@ quick-order-list-remove-button:hover .icon-remove {
   }
 
   .quick-order-list__table th {
-    border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+    border-bottom: 0.1rem solid var(--ur-border);
   }
 
   .quick-order-list__table thead th:first-child {
@@ -632,7 +632,7 @@ quick-order-list-remove-button {
 
 .quick-order-list-total {
   padding-top: 2rem;
-  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  border-top: 0.1rem solid var(--ur-border);
 }
 
 .quick-order-list-total__price {

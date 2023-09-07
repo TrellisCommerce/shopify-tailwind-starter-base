@@ -247,7 +247,7 @@ cart-drawer-items {
 }
 
 .cart-drawer .cart-items th {
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  border-bottom: 0.1rem solid var(--ur-border);
 }
 
 .cart-drawer .cart-item:last-child {

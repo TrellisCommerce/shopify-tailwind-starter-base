@@ -13,7 +13,7 @@
 }
 
 .reset__button:not(:focus-visible)::after {
-  border-right: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  border-right: 0.1rem solid var(--ur-border);
   display: block;
   height: calc(100% - 1.5rem);
   content: '';
@@ -22,7 +22,7 @@
 }
 
 .reset__button:not(:focus)::after {
-  border-right: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  border-right: 0.1rem solid var(--ur-border);
   display: block;
   height: calc(100% - 1.8rem);
   content: '';
