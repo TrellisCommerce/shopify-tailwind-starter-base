@@ -149,7 +149,7 @@
 .card-information .card__information-volume-pricing-note {
   margin-top: 0.6rem;
   line-height: calc(0.5 + 0.4 / var(--font-body-scale));
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--ur-base);
 }
 
 @media screen and (min-width: 750px) {
@@ -375,7 +375,7 @@
 }
 
 .card--horizontal .card-information > .price {
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--ur-base);
 }
 
 .card-information > .rating {

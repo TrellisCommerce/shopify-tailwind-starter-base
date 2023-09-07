@@ -784,9 +784,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
-.xtext-gray-500 {
+.xtext-beige-900 {
   --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
+  color: rgb(63 53 42 / var(--tw-text-opacity));
 }
 
 .xline-through {
@@ -875,18 +875,21 @@ body {
   --page-width: 140rem;
   --font-heading-family: 'Rooney' !important;
   --font-heading-weight: 900 !important;
+  --ur-base: #3f352a;
 }
 
 header,
 .localization-form__select span {
   font-family: 'Rooney';
   font-weight: 700 !important;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .header__menu-item {
-  --tw-text-opacity: 1;
-  color: rgb(52 45 24 / var(--tw-text-opacity));
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(63 53 42 / var(--tw-text-opacity)) !important;
 }
 
 .option-btn {

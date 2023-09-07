@@ -52,17 +52,18 @@ body {
   --page-width: 140rem;
   --font-heading-family: 'Rooney' !important;
   --font-heading-weight: 900 !important;
+  --ur-base: #3f352a;
 }
 
 header,
 .localization-form__select span {
   font-family: 'Rooney';
   font-weight: 700 !important;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .header__menu-item {
-  @apply xtext-beige-900;
+  @apply !xtext-beige-900 !xtext-2xl;
 }
 
 .option-btn {

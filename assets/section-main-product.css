@@ -128,7 +128,7 @@
 }
 
 .shopify-payment-button__more-options {
-  margin: 1.6rem 0 1rem;
+  margin: 1.5rem 0 1rem;
   font-size: 1.2rem;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   letter-spacing: 0.05rem;
@@ -177,7 +177,7 @@ variant-selects {
 }
 
 .product-form__input--dropdown {
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.5rem;
 }
 
 .product-form__input .form__label {
@@ -350,7 +350,7 @@ fieldset.product-form__input .form__label {
 a.product__text {
   display: block;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--ur-base);
 }
 
 .product__text.caption-with-letter-spacing {
@@ -405,7 +405,7 @@ a.product__text {
   }
 
   .product__info-container .price--on-sale .price-item--regular {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .product__info-container > *:first-child {
@@ -671,8 +671,8 @@ a.product__text {
     .product__media-item--full
     .deferred-media__poster-button
     .icon {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 
@@ -902,7 +902,7 @@ a.product__text {
 }
 
 .product-media-modal__toggle:hover {
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--ur-base);
 }
 
 .product-media-modal__toggle .icon {
@@ -1012,7 +1012,7 @@ a.product__text {
 }
 
 .product-popup-modal__button {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   padding-right: 1.3rem;
   padding-left: 0;
   min-height: 4.4rem;
@@ -1060,7 +1060,7 @@ a.product__text {
 }
 
 .product-popup-modal__toggle:hover {
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--ur-base);
 }
 
 .product-popup-modal__toggle .icon {
@@ -1534,7 +1534,7 @@ a.product__text {
 
 /* Recipient form */
 .recipient-form {
-  /* (2.88[line-height] - 1.6rem) / 2 */
+  /* (2.88[line-height] - 1.5rem) / 2 */
   --recipient-checkbox-margin-top: 0.64rem;
 
   display: block;
@@ -1554,7 +1554,7 @@ a.product__text {
 
 .recipient-checkbox {
   flex-grow: 1;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   display: flex;
   word-break: break-word;
   align-items: flex-start;
@@ -1569,8 +1569,8 @@ a.product__text {
 
 .recipient-form > input[type='checkbox'] {
   position: absolute;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.5rem;
+  height: 1.5rem;
   margin: var(--recipient-checkbox-margin-top) 0;
   top: 0;
   left: 0;
@@ -1613,7 +1613,7 @@ a.product__text {
 }
 
 .recipient-fields hr {
-  margin: 1.6rem auto;
+  margin: 1.5rem auto;
 }
 
 .recipient-form > input[type='checkbox']:checked ~ .recipient-fields {

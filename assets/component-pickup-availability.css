@@ -19,13 +19,13 @@ pickup-availability[available] {
 }
 
 .pickup-availability-preview .icon-unavailable {
-  height: 1.6rem;
+  height: 1.5rem;
   margin-top: 0.1rem;
 }
 
 .pickup-availability-button {
   background-color: transparent;
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--ur-base);
   letter-spacing: 0.06rem;
   padding: 0 0 0.2rem;
   text-align: left;
@@ -109,7 +109,7 @@ pickup-availability-drawer[open] {
 }
 
 .pickup-availability-drawer-button:hover {
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--ur-base);
 }
 
 .pickup-availability-variant {

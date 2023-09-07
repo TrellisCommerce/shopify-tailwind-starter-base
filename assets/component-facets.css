@@ -201,7 +201,7 @@
 }
 
 .facets__summary {
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--ur-base);
   font-size: 1.4rem;
   padding: 0 1.75rem 0 0;
   margin-bottom: 1.5rem;
@@ -299,8 +299,8 @@
 .facet-checkbox input[type='checkbox'] {
   position: absolute;
   opacity: 1;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.5rem;
+  height: 1.5rem;
   top: 0.7rem;
   left: -0.4rem;
   z-index: -1;
@@ -823,8 +823,8 @@ details.menu-opening .mobile-facets__close svg {
 input.mobile-facets__checkbox {
   border: 0;
   position: absolute;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.5rem;
+  height: 1.5rem;
   position: absolute;
   left: 2.1rem;
   top: 1.2rem;

@@ -5,12 +5,12 @@
 }
 
 .totals > * {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   margin: 0;
 }
 
 .totals > h2 {
-  font-size: calc(var(--font-heading-scale) * 1.6rem);
+  font-size: calc(var(--font-heading-scale) * 1.5rem);
 }
 
 .totals * {

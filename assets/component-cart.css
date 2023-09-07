@@ -93,7 +93,7 @@ cart-items {
   line-height: 1;
   height: 1.8rem;
   top: -3rem;
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--ur-base);
 }
 
 .cart__note .field__input {
@@ -183,7 +183,7 @@ cart-items {
 }
 
 .tax-note {
-  margin: 2.2rem 0 1.6rem auto;
+  margin: 2.2rem 0 1.5rem auto;
   text-align: center;
   display: block;
 }

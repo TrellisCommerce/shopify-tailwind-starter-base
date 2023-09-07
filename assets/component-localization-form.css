@@ -175,7 +175,7 @@ noscript .localization-selector.link {
   padding: 0.95rem 3.5rem 0.95rem 2rem;
   text-decoration: none;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--ur-base);
   word-break: break-word;
 }
 

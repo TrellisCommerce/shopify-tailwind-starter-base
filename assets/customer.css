@@ -66,7 +66,7 @@
   border-bottom: 0.01rem solid rgba(var(--color-foreground), 0.08);
   box-shadow: none;
   width: 100%;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   position: relative;
 }
 
@@ -240,7 +240,7 @@
   }
 
   .customer td::before {
-    color: rgba(var(--color-foreground), 0.75);
+    color: var(--ur-base);
     content: attr(data-label);
     font-size: 1.4rem;
     padding-right: 2rem;
@@ -351,7 +351,7 @@
 .login h3 {
   margin-top: 1.5rem;
   text-align: left;
-  font-size: calc(var(--font-heading-scale) * 1.6rem);
+  font-size: calc(var(--font-heading-scale) * 1.5rem);
 }
 
 #customer_login_guest button {
@@ -443,7 +443,7 @@
 
 :is(.account, .order) p {
   margin: 0 0 2rem;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 :is(.account, .order) h1 {

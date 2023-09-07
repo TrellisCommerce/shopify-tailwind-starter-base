@@ -43,7 +43,7 @@
 .collection-hero__title + .collection-hero__description {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
 }
 

@@ -188,7 +188,7 @@ predictive-search[loading]
 }
 
 .predictive-search__item-query-result mark {
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--ur-base);
 }
 
 .predictive-search__item-query-result mark {

@@ -361,14 +361,14 @@ h5,
 
 h6,
 .h6 {
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--ur-base);
   margin-block-start: 1.67em;
   margin-block-end: 1.67em;
 }
 
 blockquote {
   font-style: italic;
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--ur-base);
   border-left: 0.2rem solid rgba(var(--color-foreground), 0.2);
   padding-left: 1rem;
 }
@@ -511,7 +511,7 @@ h6:empty {
 }
 
 .link--text:hover {
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--ur-base);
 }
 
 .link-with-icon {
@@ -887,7 +887,7 @@ summary::-webkit-details-marker {
 }
 
 .subtitle--medium {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   letter-spacing: 0.08rem;
 }
 
@@ -1503,7 +1503,7 @@ details[open] > .share-button__fallback {
 }
 
 .share-button__fallback button:hover {
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--ur-base);
 }
 
 .share-button__fallback button:hover svg {
@@ -1601,7 +1601,7 @@ details[open] > .share-button__fallback {
   appearance: none;
   background-color: rgb(var(--color-background));
   color: rgb(var(--color-foreground));
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   width: 100%;
   box-sizing: border-box;
   transition: box-shadow var(--duration-short) ease;
@@ -1657,7 +1657,7 @@ details[open] > .share-button__fallback {
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
   font-size: 1.2rem;
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--ur-base);
 }
 
 .field:hover.field:after,
@@ -1754,7 +1754,7 @@ details[open] > .share-button__fallback {
 
 .field__label,
 .customer .field label {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   left: calc(var(--inputs-border-width) + 2rem);
   top: calc(1rem + var(--inputs-border-width));
   margin-bottom: 0;
@@ -1762,7 +1762,7 @@ details[open] > .share-button__fallback {
   position: absolute;
   transition: top var(--duration-short) ease,
     font-size var(--duration-short) ease;
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--ur-base);
   letter-spacing: 0.1rem;
   line-height: 1.5;
 }
@@ -1859,7 +1859,7 @@ input[type='checkbox'] {
 }
 
 .form__message--large {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .customer .field .form__message {
@@ -1888,7 +1888,7 @@ input[type='checkbox'] {
 
 .form-status {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .form-status-list {
@@ -1948,7 +1948,7 @@ input[type='checkbox'] {
 
 .quantity__input {
   color: currentColor;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 500;
   opacity: 0.85;
   text-align: center;
@@ -2498,7 +2498,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 .header__heading-link .h2 {
   line-height: 1;
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--ur-base);
 }
 
 .header__heading-logo {
@@ -2837,7 +2837,7 @@ details[open] > .header__submenu {
 .header__menu-item {
   padding: 1.2rem;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 0.75);
+  color: var(--ur-base);
 }
 
 .header__menu-item:hover {
