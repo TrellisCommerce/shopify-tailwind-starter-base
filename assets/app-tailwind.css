@@ -65,11 +65,19 @@ header,
   font-weight: 700 !important;
   font-size: 1.5rem;
 }
-
-.banner__box {
-  clip-path: url(#ur-clip);
-  aspect-ratio: 1;
+@media (min-width: 750px) {
+  .banner__box {
+    clip-path: url(#ur-clip);
+    aspect-ratio: 1;
+    max-width: 35.5rem !important;
+  }
 }
+
+.multicolumn.background-primary .multicolumn-card {
+  background: var(--color-background) !important;
+  @apply xborder-2 xborder-beige-300 xrounded-3xl;
+}
+
 .header__menu-item {
   @apply !xtext-beige-900 !xtext-2xl;
 }
