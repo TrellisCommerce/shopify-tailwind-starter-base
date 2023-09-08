@@ -87,6 +87,11 @@ header,
   @apply !xtext-3xl;
 }
 
+.quantity {
+  @apply !xbg-lightbeige !xp-2;
+  width: 174px !important;
+}
+
 .quantity__input {
   @apply !xrounded-lg !xw-24  !xoutline-none focus:!xoutline-none !xtext-center  !xfont-semibold  hover:!xtext-black focus:!xtext-black   !xflex !xitems-center !xtext-black  !xoutline-none  !xbg-lightbeige  !xbg-white;
 }

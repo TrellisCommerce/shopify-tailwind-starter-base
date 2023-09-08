@@ -953,6 +953,13 @@ header,
   line-height: 2.25rem !important;
 }
 
+.quantity {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(236 231 216 / var(--tw-bg-opacity)) !important;
+  padding: 0.5rem !important;
+  width: 174px !important;
+}
+
 .quantity__input {
   display: flex !important;
   width: 6rem !important;
