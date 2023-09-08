@@ -1125,8 +1125,22 @@ header,
   padding: 2rem !important;
 }
 
-.collapsible-content__grid--reverse {
+.collapsible-content__grid--reverse.collapsible-content__grid {
+  flex-wrap: nowrap !important;
   align-items: center !important;
+  gap: 4rem !important;
+}
+
+@media (min-width: 750px) {
+  .collapsible-content__grid--reverse.collapsible-content__grid {
+    flex-wrap: wrap !important;
+  }
+}
+
+@media (min-width: 1000px) {
+  .collapsible-content__grid--reverse.collapsible-content__grid {
+    flex-wrap: nowrap !important;
+  }
 }
 
 @media (min-width: 750px) {

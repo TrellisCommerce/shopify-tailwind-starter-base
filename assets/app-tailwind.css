@@ -168,8 +168,14 @@ header,
   @apply !xp-8;
 }
 
-.collapsible-content__grid--reverse {
-  @apply !xitems-center;
+.collapsible-content__grid--reverse.collapsible-content__grid {
+  @apply !xitems-center !xflex-nowrap md:!xflex-wrap !xgap-16;
+}
+
+@media (min-width: 1000px) {
+  .collapsible-content__grid--reverse.collapsible-content__grid {
+    flex-wrap: nowrap !important;
+  }
 }
 
 @media (min-width: 750px) {
