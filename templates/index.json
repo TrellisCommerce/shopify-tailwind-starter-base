@@ -98,22 +98,19 @@
         "template--20724493582631__3ec2a987-b522-4a27-b800-28dc1b68f35f-featured_collection-1": {
           "type": "featured_collection",
           "settings": {
-            "collection": "nassfutter",
-            "collection_description": "<p>Test Description<\/p>"
+            "collection": "nassfutter"
           }
         },
         "template--20724493582631__3ec2a987-b522-4a27-b800-28dc1b68f35f-featured_collection-2": {
           "type": "featured_collection",
           "settings": {
-            "collection": "nassfutter",
-            "collection_description": "<p>Test Description<\/p>"
+            "collection": "nassfutter"
           }
         },
         "template--20724493582631__3ec2a987-b522-4a27-b800-28dc1b68f35f-featured_collection-3": {
           "type": "featured_collection",
           "settings": {
-            "collection": "nassfutter",
-            "collection_description": "<p>Test Description<\/p>"
+            "collection": "nassfutter"
           }
         }
       },
@@ -125,7 +122,7 @@
       "settings": {
         "title": "Collections",
         "heading_size": "h1",
-        "image_ratio": "square",
+        "image_ratio": "adapt",
         "columns_desktop": 3,
         "color_scheme": "",
         "show_view_all": false,
