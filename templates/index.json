@@ -93,7 +93,11 @@
       }
     },
     "two-richtext": {
-      "type": "two-richtext"
+      "type": "two-richtext",
+      "settings": {
+        "richtext_left": "<h1>Convenient Delivery to Your Doorstep<\/h1>",
+        "richtext_right": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>"
+      }
     },
     "3ec2a987-b522-4a27-b800-28dc1b68f35f": {
       "type": "collection-list",
@@ -244,7 +248,6 @@
         "padding_bottom": 36
       }
     },
-
     "build-a-box": {
       "type": "build-a-box",
       "settings": {

@@ -95,6 +95,10 @@ header,
   @apply !xw-20 !xh-20 !xrounded-full hover:!xbg-beige-300 !xtransition-all !xcursor-pointer;
 }
 
+.richtext-section.left h1 {
+  font-weight: 600 !important;
+}
+
 .multicolumn.color-accent-2 {
   background-attachment: fixed;
   background-repeat: repeat;
