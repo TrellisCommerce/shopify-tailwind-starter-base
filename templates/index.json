@@ -92,6 +92,9 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "two-richtext": {
+      "type": "two-richtext"
+    },
     "3ec2a987-b522-4a27-b800-28dc1b68f35f": {
       "type": "collection-list",
       "blocks": {
@@ -120,7 +123,7 @@
         "template--20724493582631__3ec2a987-b522-4a27-b800-28dc1b68f35f-featured_collection-3"
       ],
       "settings": {
-        "title": "Collections",
+        "title": "",
         "heading_size": "h1",
         "image_ratio": "adapt",
         "columns_desktop": 3,
@@ -241,6 +244,7 @@
         "padding_bottom": 36
       }
     },
+
     "build-a-box": {
       "type": "build-a-box",
       "settings": {
@@ -462,6 +466,7 @@
   },
   "order": [
     "d02ba099-4a0b-4f7d-a3b1-1514075d5076",
+    "two-richtext",
     "3ec2a987-b522-4a27-b800-28dc1b68f35f",
     "d837f995-d7ac-4bf9-9639-27c44400c905",
     "c2f0ff7f-b966-4dad-a0a0-d354fa082545",

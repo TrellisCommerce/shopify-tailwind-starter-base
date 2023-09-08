@@ -1,0 +1,39 @@
+<div class='page-width xmy-8'>
+  <div class='richtext-section xgrid xgrid-cols-1 md:xgrid-cols-2 w-full'>
+    <div class='richtext-left'>
+      {{ section.settings.richtext_left }}
+    </div>
+
+    <div class='richtext-right'>
+      {{ section.settings.richtext_right }}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "UR TwoText Fields",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "richtext_left",
+      "label": "Left Text",
+      "default": "<p>This is the default left text.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "richtext_right",
+      "label": "Right Text",
+      "default": "<p>This is the default right text.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
