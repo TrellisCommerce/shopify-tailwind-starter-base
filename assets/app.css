@@ -909,6 +909,11 @@ header,
   color: rgb(63 53 42 / var(--tw-text-opacity)) !important;
 }
 
+.card__heading.h5 {
+  font-size: 1.875rem !important;
+  line-height: 2.25rem !important;
+}
+
 .quantity__input {
   display: flex !important;
   width: 6rem !important;

@@ -39,6 +39,23 @@
             "text_alignment_mobile": "center"
           }
         },
+        "07259e2e-bc98-4550-be7e-7f054c0334a2": {
+          "type": "slide",
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
         "508f1faf-6509-4c43-8aee-9b234b5b673e": {
           "type": "slide",
           "settings": {
@@ -61,6 +78,7 @@
       "block_order": [
         "template--20724493582631__d02ba099-4a0b-4f7d-a3b1-1514075d5076-slide-1",
         "template--20724493582631__d02ba099-4a0b-4f7d-a3b1-1514075d5076-slide-2",
+        "07259e2e-bc98-4550-be7e-7f054c0334a2",
         "508f1faf-6509-4c43-8aee-9b234b5b673e"
       ],
       "settings": {
@@ -72,6 +90,49 @@
         "image_behavior": "none",
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "3ec2a987-b522-4a27-b800-28dc1b68f35f": {
+      "type": "collection-list",
+      "blocks": {
+        "template--20724493582631__3ec2a987-b522-4a27-b800-28dc1b68f35f-featured_collection-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "nassfutter",
+            "collection_description": "<p>Test Description<\/p>"
+          }
+        },
+        "template--20724493582631__3ec2a987-b522-4a27-b800-28dc1b68f35f-featured_collection-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "nassfutter",
+            "collection_description": "<p>Test Description<\/p>"
+          }
+        },
+        "template--20724493582631__3ec2a987-b522-4a27-b800-28dc1b68f35f-featured_collection-3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "nassfutter",
+            "collection_description": "<p>Test Description<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20724493582631__3ec2a987-b522-4a27-b800-28dc1b68f35f-featured_collection-1",
+        "template--20724493582631__3ec2a987-b522-4a27-b800-28dc1b68f35f-featured_collection-2",
+        "template--20724493582631__3ec2a987-b522-4a27-b800-28dc1b68f35f-featured_collection-3"
+      ],
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "d837f995-d7ac-4bf9-9639-27c44400c905": {
@@ -404,6 +465,7 @@
   },
   "order": [
     "d02ba099-4a0b-4f7d-a3b1-1514075d5076",
+    "3ec2a987-b522-4a27-b800-28dc1b68f35f",
     "d837f995-d7ac-4bf9-9639-27c44400c905",
     "c2f0ff7f-b966-4dad-a0a0-d354fa082545",
     "build-a-box",
