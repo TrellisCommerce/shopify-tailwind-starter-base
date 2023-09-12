@@ -487,6 +487,16 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "b076c1a8-b027-4cdd-80a7-525f325b73e2": {
+      "type": "quick-cta",
+      "settings": {
+        "color_scheme": "inverse",
+        "cta_text": "<h2>Headline<\/h2><p>Test Text<\/p>",
+        "cta_image": "shopify:\/\/shop_images\/purple.png",
+        "button_text": "Click me",
+        "button_url": ""
+      }
     }
   },
   "order": [
@@ -501,6 +511,7 @@
     "2af0e9d7-f2a8-434b-b346-ee8969847698",
     "collage",
     "b689839d-3ad5-4bc2-b3e0-cc27453d2ce7",
-    "multicolumn"
+    "multicolumn",
+    "b076c1a8-b027-4cdd-80a7-525f325b73e2"
   ]
 }

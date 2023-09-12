@@ -737,6 +737,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 2rem;
 }
 
+.xp-16 {
+  padding: 4rem;
+}
+
 .xpx-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -750,6 +754,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xpy-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.xpy-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .xpt-4 {
@@ -828,11 +837,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xtext-beige-900 {
   --tw-text-opacity: 1;
   color: rgb(63 53 42 / var(--tw-text-opacity));
-}
-
-.\!xtext-white {
-  --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
 .\!xtext-beige-200 {
