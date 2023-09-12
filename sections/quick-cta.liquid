@@ -1,0 +1,72 @@
+{% schema %}
+{
+  "name": "Quick CTA",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Schema",
+      "default": "background-1"
+    },
+    {
+      "type": "rich_text",
+      "id": "cta_text",
+      "label": "CTA Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "cta_image",
+      "label": "CTA Image"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Click me"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "UR Quick CTA",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  .quick-cta__image {
+    max-width: 300px;
+    max-height: 300px;
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  // Any JavaScript specific to this section can go here.
+{% endjavascript %}
+
+<div class='quick-cta' style='background-color: {{ section.settings.background_color }};'>
+  <div class='quick-cta__content'>
+    {{ section.settings.cta_text }}
+  </div>
+
+  {% if section.settings.cta_image != blank %}
+    <img
+      src='{{ section.settings.cta_image | img_url: '300x300' }}'
+      alt=''
+      width='300'
+      height='300'
+      class='quick-cta__image'
+      loading='lazy'
+    >
+  {% endif %}
+
+  {% if section.settings.button_text != blank and section.settings.button_url != blank %}
+    <a href='{{ section.settings.button_url }}' class='btn'>{{ section.settings.button_text }}</a>
+  {% endif %}
+</div>
