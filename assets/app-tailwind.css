@@ -92,16 +92,16 @@ header,
   width: 174px !important;
 }
 
-.richtext.white h1,
-.richtext.white h2,
-.richtext.white h3,
-.richtext.white h4,
-.richtext.white h5 {
-  @apply !xtext-white !xmb-4;
+.richtext.beige h1,
+.richtext.beige h2,
+.richtext.beige h3,
+.richtext.beige h4,
+.richtext.beige h5 {
+  @apply !xtext-beige-200 !xmb-4;
 }
 
-.button.white {
-  @apply !xbg-white !xtext-black !xborder-white;
+.button.beige {
+  @apply !xbg-beige-200 !xtext-black !xborder-beige-200;
 }
 
 .quantity__input {

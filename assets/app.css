@@ -835,6 +835,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
+.\!xtext-beige-200 {
+  --tw-text-opacity: 1 !important;
+  color: rgb(242 238 227 / var(--tw-text-opacity)) !important;
+}
+
 .xline-through {
   -webkit-text-decoration-line: line-through;
   text-decoration-line: line-through;
@@ -973,21 +978,21 @@ header,
   width: 174px !important;
 }
 
-.richtext.white h1,
-.richtext.white h2,
-.richtext.white h3,
-.richtext.white h4,
-.richtext.white h5 {
+.richtext.beige h1,
+.richtext.beige h2,
+.richtext.beige h3,
+.richtext.beige h4,
+.richtext.beige h5 {
   margin-bottom: 1rem !important;
   --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+  color: rgb(242 238 227 / var(--tw-text-opacity)) !important;
 }
 
-.button.white {
+.button.beige {
   --tw-border-opacity: 1 !important;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity)) !important;
+  border-color: rgb(242 238 227 / var(--tw-border-opacity)) !important;
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+  background-color: rgb(242 238 227 / var(--tw-bg-opacity)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(21 21 21 / var(--tw-text-opacity)) !important;
 }
