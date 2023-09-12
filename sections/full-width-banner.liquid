@@ -35,21 +35,20 @@
 {% endschema %}
 
 <div
-  class='fullwidth-banner'
-  style='background-image: url({{ section.settings.background_image | image_url: '1920x1080' }});'
+  class='fullwidth-banner xmin-h-[400px]'
+  style="background-image: url('{{ section.settings.background_image.src | img_url: "x500" }}');"
 >
-  <div class='fullwidth-banner-content'>
-    <div class='container'>
-      <div class='row'>
-        <div class='col-md-6'>
-          <div class='richtext'>
-            {{ section.settings.content }}
-          </div>
-          <a href='{{ section.settings.button_link }}' class='fullwidth-banner-button'>
-            {{- section.settings.button_text -}}
-          </a>
-        </div>
+  <div class=''>
+    <div class='xflex xitems-start xflex-col xjustify-center container page-width xtext-white xp-8  xmin-h-[400px] '>
+      <div class='richtext xp-8 !xtext-white white'>
+        {{ section.settings.content }}
       </div>
+      <a
+        href='{{ section.settings.button_link }}'
+        class='button white'
+      >
+        {{- section.settings.button_text -}}
+      </a>
     </div>
   </div>
 </div>

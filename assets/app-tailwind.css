@@ -92,6 +92,18 @@ header,
   width: 174px !important;
 }
 
+.richtext.white h1,
+.richtext.white h2,
+.richtext.white h3,
+.richtext.white h4,
+.richtext.white h5 {
+  @apply !xtext-white !xmb-4;
+}
+
+.button.white {
+  @apply !xbg-white !xtext-black !xborder-white;
+}
+
 .quantity__input {
   @apply !xrounded-lg !xw-24  !xoutline-none focus:!xoutline-none !xtext-center  !xfont-semibold  hover:!xtext-black focus:!xtext-black   !xflex !xitems-center !xtext-black  !xoutline-none  !xbg-lightbeige  !xbg-white;
 }

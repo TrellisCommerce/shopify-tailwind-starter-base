@@ -295,6 +295,15 @@
         "padding_bottom": 36
       }
     },
+    "2af0e9d7-f2a8-434b-b346-ee8969847698": {
+      "type": "full-width-banner",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_ea_0d2b07ee-b9a6-421c-8ef0-6a94b7499025.png",
+        "content": "<h1>Headline<\/h1><p>Test Text<\/p>",
+        "button_text": "Button Text",
+        "button_link": ""
+      }
+    },
     "collage": {
       "type": "collage",
       "blocks": {
@@ -489,6 +498,7 @@
     "build-a-box",
     "rich_text",
     "featured_collection",
+    "2af0e9d7-f2a8-434b-b346-ee8969847698",
     "collage",
     "b689839d-3ad5-4bc2-b3e0-cc27453d2ce7",
     "multicolumn"

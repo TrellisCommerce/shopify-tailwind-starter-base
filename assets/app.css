@@ -573,6 +573,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 0.5rem;
 }
 
+.xmin-h-\[400px\] {
+  min-height: 400px;
+}
+
 .xw-16 {
   width: 4rem;
 }
@@ -611,6 +615,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xflex-col {
   flex-direction: column;
+}
+
+.xitems-start {
+  align-items: flex-start;
 }
 
 .xitems-end {
@@ -822,6 +830,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(63 53 42 / var(--tw-text-opacity));
 }
 
+.\!xtext-white {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
 .xline-through {
   -webkit-text-decoration-line: line-through;
   text-decoration-line: line-through;
@@ -958,6 +971,25 @@ header,
   background-color: rgb(236 231 216 / var(--tw-bg-opacity)) !important;
   padding: 0.5rem !important;
   width: 174px !important;
+}
+
+.richtext.white h1,
+.richtext.white h2,
+.richtext.white h3,
+.richtext.white h4,
+.richtext.white h5 {
+  margin-bottom: 1rem !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
+.button.white {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity)) !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(21 21 21 / var(--tw-text-opacity)) !important;
 }
 
 .quantity__input {
