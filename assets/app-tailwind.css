@@ -104,6 +104,10 @@ header,
   font-weight: 600 !important;
 }
 
+.collapsible-content summary:hover {
+  background: inherit !important;
+}
+
 .multicolumn.color-accent-2 {
   background-attachment: fixed;
   background-repeat: repeat;

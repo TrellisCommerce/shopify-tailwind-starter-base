@@ -1,0 +1,77 @@
+{% schema %}
+{
+  "name": "Fullwidth Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Background Image",
+      "id": "background_image"
+    },
+    {
+      "type": "richtext",
+      "label": "Content",
+      "id": "content",
+      "default": "<p>Test Text</p>"
+    },
+    {
+      "type": "text",
+      "label": "Button Text",
+      "id": "button_text",
+      "default": "Button Text"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "UR Fullwidth Banner",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div
+  class='fullwidth-banner'
+  style='background-image: url({{ section.settings.background_image | image_url: '1920x1080' }});'
+>
+  <div class='fullwidth-banner-content'>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-md-6'>
+          <div class='richtext'>
+            {{ section.settings.content }}
+          </div>
+          <a href='{{ section.settings.button_link }}' class='fullwidth-banner-button'>
+            {{- section.settings.button_text -}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Custom CSS styles for the Fullwidth Banner section */
+  .fullwidth-banner {
+    /* Add your background styles here */
+    background-size: cover;
+    background-position: center;
+    /* Adjust other styles as needed */
+  }
+
+  .fullwidth-banner-content {
+    /* Add styles for the content container */
+  }
+
+  .richtext {
+    /* Add styles for the rich text content */
+  }
+
+  .fullwidth-banner-button {
+    /* Add styles for the button */
+  }
+</style>
