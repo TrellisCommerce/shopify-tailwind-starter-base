@@ -622,6 +622,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-direction: column;
 }
 
+.xflex-wrap {
+  flex-wrap: wrap;
+}
+
 .xitems-start {
   align-items: flex-start;
 }
@@ -1361,15 +1365,6 @@ details[open] svg {
   text-align: left !important;
 }
 
-.jdgm-carousel-item {
-  margin-right: 2rem !important;
-  border-radius: 1.5rem !important;
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
-  padding: 1rem !important;
-  width: calc(33.3% - 16px) !important;
-}
-
 .jdgm-carousel__arrows {
   text-align: right !important;
 }
@@ -1384,6 +1379,21 @@ details[open] svg {
   height: 10px !important;
   cursor: pointer;
   transform: rotate(-45deg);
+}
+
+.jdgm-carousel-item {
+  margin-right: 2rem !important;
+  border-radius: 1.5rem !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+  padding: 1rem !important;
+  width: calc(33.3% - 16px) !important;
+}
+
+@media (max-width: 800px) {
+  .jdgm-carousel-item {
+    width: 100% !important;
+  }
 }
 
 /* JudgeMe Reviews End */
@@ -1438,6 +1448,10 @@ details[open] svg {
     width: auto;
   }
 
+  .md\:xmax-w-2xl {
+    max-width: 42rem;
+  }
+
   .md\:xgrid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1449,5 +1463,10 @@ details[open] svg {
   .md\:xpx-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .md\:xpx-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }

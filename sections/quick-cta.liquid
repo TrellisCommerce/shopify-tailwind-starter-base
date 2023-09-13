@@ -78,7 +78,7 @@
 
 <div class='quick-cta '>
   <div class='quick-cta__content page-width'>
-    <div class='xrounded-3xl xflex xgap-4 xp-16  xmy-8 xbg-{{ section.settings.background_color }}'>
+    <div class='xrounded-3xl xflex xflex-col md:xflex-row xgap-4 xp-16  xmy-8 xbg-{{ section.settings.background_color }}'>
       {% if section.settings.cta_image != blank %}
         <img
           src='{{ section.settings.cta_image | img_url: '300x300' }}'
@@ -89,7 +89,7 @@
           loading='lazy'
         >
       {% endif %}
-      <div class='xflex xjustify-between xw-full '>
+      <div class='xflex xjustify-between xflex-wrap xw-full '>
         <div class='richtext xp-8 {{ section.settings.text_color }}'>{{ section.settings.cta_text }}</div>
         {% if section.settings.button_text != blank %}
           <div class='xflex xitems-end'>

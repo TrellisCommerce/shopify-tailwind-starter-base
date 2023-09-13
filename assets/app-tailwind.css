@@ -287,10 +287,6 @@ details[open] svg {
   display: block;
   text-align: left !important;
 }
-.jdgm-carousel-item {
-  @apply !xbg-white !xrounded-3xl !xp-4 !xmr-8;
-  width: calc(33.3% - 16px) !important;
-}
 
 .jdgm-carousel__arrows {
   text-align: right !important;
@@ -308,6 +304,16 @@ details[open] svg {
   transform: rotate(-45deg);
 }
 
+.jdgm-carousel-item {
+  @apply !xbg-white !xrounded-3xl !xp-4 !xmr-8;
+  width: calc(33.3% - 16px) !important;
+}
+
+@media (max-width: 800px) {
+  .jdgm-carousel-item {
+    width: 100% !important;
+  }
+}
 /* JudgeMe Reviews End */
 
 .multicolumn.color-accent-2 {
