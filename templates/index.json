@@ -389,7 +389,6 @@
         "color_scheme": "",
         "container_color_scheme": "",
         "open_first_collapsible_row": false,
-        "image": "shopify:\/\/shop_images\/pic1.png",
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 36,
@@ -492,6 +491,40 @@
         "button_text": "Click me",
         "button_url": ""
       }
+    },
+    "1694590585319894d8": {
+      "type": "apps",
+      "blocks": {
+        "8a6f59a9-05e7-414e-9796-b8e8449cf484": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "8a6f59a9-05e7-414e-9796-b8e8449cf484"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "4d3e2d55-73ec-42e7-9d29-ee985d8ff178": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Blog posts",
+        "heading_size": "h1",
+        "blog": "",
+        "post_limit": 2,
+        "columns_desktop": 2,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": true,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -509,6 +542,8 @@
     "b076c1a8-b027-4cdd-80a7-525f325b73e2",
     "1cda79a1-8b02-4c62-a4e2-d7ec642279c8",
     "39fc5abc-8968-44f4-b2f2-d8ac92951665",
-    "d6a60efa-b69e-407a-bba8-6e5b0def2989"
+    "d6a60efa-b69e-407a-bba8-6e5b0def2989",
+    "1694590585319894d8",
+    "4d3e2d55-73ec-42e7-9d29-ee985d8ff178"
   ]
 }

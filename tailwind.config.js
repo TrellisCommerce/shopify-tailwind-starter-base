@@ -21,7 +21,7 @@ module.exports = {
         heading: 'var(--font-heading-family)',
       },
       colors: {
-        black: '#151515',
+        black: '#211C0F',
         beige: {
           DEFAULT: '#F2EEE3',
           100: '#FFFFFF',
@@ -95,7 +95,7 @@ module.exports = {
       },
     },
     color: {
-      black: '#151515',
+      black: '#211C0F',
     },
   },
   plugins: [],

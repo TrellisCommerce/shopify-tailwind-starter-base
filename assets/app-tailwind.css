@@ -109,8 +109,31 @@ header,
   @apply !xmb-4;
 }
 
+.slider-counter__link--active.slider-counter__link--dots .dot {
+  @apply !xbg-beige-900;
+}
+
+.slideshow__autoplay .icon.icon-play,
+.slideshow__autoplay .icon.icon-pause,
+.slider-button .icon {
+  height: 2.4rem !important;
+  width: auto !important;
+}
+
 .button {
   @apply !xtransition-all !xfont-semibold;
+  --border-offset: 0px !important;
+  --border-opacity: unset;
+}
+
+.product-form__submit {
+  @apply !xbg-black !xtext-beige-200 !xborder-2 !xborder-black !xtransition-all;
+  --border-offset: 0px !important;
+  --border-opacity: unset;
+}
+
+.product-form__submit:hover {
+  @apply !xbg-beige !xtext-black;
   --border-offset: 0px !important;
   --border-opacity: unset;
 }
