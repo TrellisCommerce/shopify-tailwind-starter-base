@@ -489,15 +489,15 @@
           "label": "Simgeleri masaüstünde göster"
         },
         "header__3": {
-          "content": "Ülke/bölge seçici",
-          "info": "Ülke/bölge eklemek için [pazar ayarlarınıza](/admin/settings/markets) gidin."
+          "content": "Ülke\/bölge seçici",
+          "info": "Ülke\/bölge eklemek için [pazar ayarlarınıza](\/admin\/settings\/markets) gidin."
         },
         "enable_country_selector": {
-          "label": "Ülke/bölge seçiciyi etkinleştir"
+          "label": "Ülke\/bölge seçiciyi etkinleştir"
         },
         "header__4": {
           "content": "Dil seçici",
-          "info": "Dil eklemek için [dil ayarlarınıza](/admin/settings/languages) gidin."
+          "info": "Dil eklemek için [dil ayarlarınıza](\/admin\/settings\/languages) gidin."
         },
         "enable_language_selector": {
           "label": "Dil seçiciyi etkinleştir"
@@ -661,7 +661,7 @@
       "settings": {
         "custom_liquid": {
           "label": "Liquid kodu",
-          "info": "Gelişmiş özelleştirmeler oluşturmak için uygulama parçacıkları veya başka bir kod ekleyin. [Daha fazla bilgi edinin](https://shopify.dev/docs/api/liquid)"
+          "info": "Gelişmiş özelleştirmeler oluşturmak için uygulama parçacıkları veya başka bir kod ekleyin. [Daha fazla bilgi edinin](https:\/\/shopify.dev\/docs\/api\/liquid)"
         }
       },
       "presets": {

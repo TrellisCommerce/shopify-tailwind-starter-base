@@ -118,7 +118,7 @@
         "minimum_of": "最少 {{ quantity }} 個",
         "maximum_of": "最多 {{ quantity }} 個",
         "multiples_of": "{{ quantity }} 的倍數",
-        "in_cart_html": "購物車中有 <span class=\"quantity-cart\">{{ quantity }}</span> 個",
+        "in_cart_html": "購物車中有 <span class=\"quantity-cart\">{{ quantity }}<\/span> 個",
         "note": "檢視數量規則"
       },
       "price": {
@@ -171,7 +171,7 @@
         "title": "批發價",
         "note": "提供批發價",
         "minimum": "{{ quantity }}+",
-        "price_at_each": "{{ price }}/每項",
+        "price_at_each": "{{ price }}\/每項",
         "price_range": "{{ minimum }} - {{ maximum }}"
       }
     },
@@ -277,9 +277,9 @@
       "empty": "您的購物車是空的",
       "cart_error": "更新購物車時發生錯誤。請再試一次。",
       "cart_quantity_error_html": "您只能將 {{ quantity }} 項商品加入您的購物車。",
-      "taxes_and_shipping_policy_at_checkout_html": "結帳時計算稅金、折扣和<a href=\"{{ link }}\">運費</a>",
+      "taxes_and_shipping_policy_at_checkout_html": "結帳時計算稅金、折扣和<a href=\"{{ link }}\">運費<\/a>",
       "taxes_included_but_shipping_at_checkout": "內含稅金，結帳時計算運費和折扣",
-      "taxes_included_and_shipping_policy_html": "內含稅金。結帳時計算<a href=\"{{ link }}\">運費</a>和折扣。",
+      "taxes_included_and_shipping_policy_html": "內含稅金。結帳時計算<a href=\"{{ link }}\">運費<\/a>和折扣。",
       "taxes_and_shipping_at_checkout": "結帳時計算稅金、折扣和運費",
       "headings": {
         "product": "產品",
@@ -291,7 +291,7 @@
       "update": "更新",
       "login": {
         "title": "是否有帳號？",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">登入</a>以加速結帳。"
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">登入<\/a>以加速結帳。"
       },
       "estimated_total": "估計總金額",
       "new_estimated_total": "新的估計總金額"
@@ -341,7 +341,7 @@
     "quick_order_list": {
       "product_total": "商品小計",
       "view_cart": "檢視購物車",
-      "each": "{{ money }}/每項",
+      "each": "{{ money }}\/每項",
       "product": "商品",
       "variant": "子類",
       "variant_total": "子類總計",

@@ -489,15 +489,15 @@
           "label": "Pictogrammen op bureaublad weergeven"
         },
         "header__3": {
-          "content": "Kiezer voor land/regio",
-          "info": "Ga naar de [marktinstellingen](/admin/settings/markets) om een land/regio toe te voegen."
+          "content": "Kiezer voor land\/regio",
+          "info": "Ga naar de [marktinstellingen](\/admin\/settings\/markets) om een land\/regio toe te voegen."
         },
         "enable_country_selector": {
-          "label": "Kiezer voor land/regio inschakelen"
+          "label": "Kiezer voor land\/regio inschakelen"
         },
         "header__4": {
           "content": "Taalkiezer",
-          "info": "Ga naar je [taalinstellingen](/admin/settings/languages) om een taal toe te voegen."
+          "info": "Ga naar je [taalinstellingen](\/admin\/settings\/languages) om een taal toe te voegen."
         },
         "enable_language_selector": {
           "label": "Taalkiezer inschakelen"
@@ -661,7 +661,7 @@
       "settings": {
         "custom_liquid": {
           "label": "Liquid-code",
-          "info": "Voeg app-fragmenten of andere code toe om geavanceerde aanpassingen aan te maken. [Meer informatie](https://shopify.dev/docs/api/liquid)"
+          "info": "Voeg app-fragmenten of andere code toe om geavanceerde aanpassingen aan te maken. [Meer informatie](https:\/\/shopify.dev\/docs\/api\/liquid)"
         }
       },
       "presets": {

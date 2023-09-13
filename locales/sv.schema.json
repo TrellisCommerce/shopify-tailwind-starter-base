@@ -489,15 +489,15 @@
           "label": "Visa ikoner på skrivbordet"
         },
         "header__3": {
-          "content": "Land-/regionväljare",
-          "info": "Om du vill lägga till land/region så går du till [marknadsinställningar.](/admin/settings/markets)"
+          "content": "Land-\/regionväljare",
+          "info": "Om du vill lägga till land\/region så går du till [marknadsinställningar.](\/admin\/settings\/markets)"
         },
         "enable_country_selector": {
-          "label": "Aktivera land/regionväljare"
+          "label": "Aktivera land\/regionväljare"
         },
         "header__4": {
           "content": "Språkväljare",
-          "info": "Om du vill lägga till ett språk så går du till [språkinställningar.](/admin/settings/languages)"
+          "info": "Om du vill lägga till ett språk så går du till [språkinställningar.](\/admin\/settings\/languages)"
         },
         "enable_language_selector": {
           "label": "Aktivera språkväljare"
@@ -661,7 +661,7 @@
       "settings": {
         "custom_liquid": {
           "label": "Liquid-kod",
-          "info": "Lägg till appfragment eller annan kod för att skapa avancerade anpassningar. [Mer information](https://shopify.dev/docs/api/liquid)"
+          "info": "Lägg till appfragment eller annan kod för att skapa avancerade anpassningar. [Mer information](https:\/\/shopify.dev\/docs\/api\/liquid)"
         }
       },
       "presets": {

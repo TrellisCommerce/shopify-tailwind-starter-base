@@ -118,7 +118,7 @@
         "minimum_of": "Mínimo de {{ quantity }}",
         "maximum_of": "Máximo de {{ quantity }}",
         "multiples_of": "Incrementos de {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> en el carrito",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}<\/span> en el carrito",
         "note": "Ver reglas de cantidad"
       },
       "price": {
@@ -287,9 +287,9 @@
       "empty": "Tu carrito esta vacío",
       "cart_error": "Hubo un error al actualizar tu carrito de compra. Inténtalo de nuevo.",
       "cart_quantity_error_html": "Solo puedes agregar {{ quantity }} de este artículo a tu carrito.",
-      "taxes_and_shipping_policy_at_checkout_html": "Impuestos, descuentos y <a href=\"{{ link }}\">envío</a> calculados en la pantalla de pago",
+      "taxes_and_shipping_policy_at_checkout_html": "Impuestos, descuentos y <a href=\"{{ link }}\">envío<\/a> calculados en la pantalla de pago",
       "taxes_included_but_shipping_at_checkout": "Impuesto incluido, envío y descuentos calculados en la pantalla de pago",
-      "taxes_included_and_shipping_policy_html": "Impuesto incluido. <a href=\"{{ link }}\">Envío</a> y descuentos calculados en la pantalla de pago.",
+      "taxes_included_and_shipping_policy_html": "Impuesto incluido. <a href=\"{{ link }}\">Envío<\/a> y descuentos calculados en la pantalla de pago.",
       "taxes_and_shipping_at_checkout": "Impuestos, descuentos y envío calculados en la pantalla de pago",
       "headings": {
         "product": "Producto",
@@ -301,7 +301,7 @@
       "update": "Actualizar",
       "login": {
         "title": "¿Tienes una cuenta?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Inicia sesión</a> para finalizar tus compras con mayor rapidez."
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Inicia sesión<\/a> para finalizar tus compras con mayor rapidez."
       },
       "estimated_total": "Total estimado",
       "new_estimated_total": "Nuevo total estimado"
@@ -351,7 +351,7 @@
     "quick_order_list": {
       "product_total": "Subtotal de productos",
       "view_cart": "Ver carrito",
-      "each": "{{ money }}/unidad",
+      "each": "{{ money }}\/unidad",
       "product": "Producto",
       "variant": "Variante",
       "variant_total": "Total de variantes",

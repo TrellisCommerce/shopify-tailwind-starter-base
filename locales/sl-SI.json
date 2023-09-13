@@ -127,7 +127,7 @@
         "minimum_of": "Najmanj od {{ quantity }}",
         "maximum_of": "Največ od {{ quantity }}",
         "multiples_of": "V korakih po {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> v košarici",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}<\/span> v košarici",
         "note": "Prikaži pravila glede količine"
       },
       "price": {
@@ -173,7 +173,7 @@
         "title": "Količinski popust",
         "note": "Na voljo je količinski popust",
         "minimum": "{{ quantity }} in več",
-        "price_at_each": "po ceni {{ price }}/kos",
+        "price_at_each": "po ceni {{ price }}\/kos",
         "price_range": "{{ minimum }}–{{ maximum }}"
       }
     },
@@ -297,9 +297,9 @@
       "empty": "Vaša košarica je prazna",
       "cart_error": "Pri posodabljanju vaše košarice je prišlo do napake. Poskusite znova.",
       "cart_quantity_error_html": "V košarico lahko dodate največ toliko tovrstnih izdelkov: {{ quantity }}.",
-      "taxes_and_shipping_policy_at_checkout_html": "Davki, popusti in <a href=\"{{ link }}\">strošek dostave</a> se obračunajo ob zaključku nakupa",
+      "taxes_and_shipping_policy_at_checkout_html": "Davki, popusti in <a href=\"{{ link }}\">strošek dostave<\/a> se obračunajo ob zaključku nakupa",
       "taxes_included_but_shipping_at_checkout": "Vključeni davek ter strošek dostave in popusti se obračunajo ob zaključku nakupa",
-      "taxes_included_and_shipping_policy_html": "Davek vključen. <a href=\"{{ link }}\">Strošek dostave</a> in popusti se obračunajo ob zaključku nakupa.",
+      "taxes_included_and_shipping_policy_html": "Davek vključen. <a href=\"{{ link }}\">Strošek dostave<\/a> in popusti se obračunajo ob zaključku nakupa.",
       "taxes_and_shipping_at_checkout": "Davki, popusti in strošek dostave se obračunajo ob zaključku nakupa",
       "update": "Posodobitev",
       "headings": {
@@ -311,7 +311,7 @@
       },
       "login": {
         "title": "Ali imate račun?",
-        "paragraph_html": "Za hitrejši zaključek nakupa <a href=\"{{ link }}\" class=\"link underlined-link\">se prijavite</a>."
+        "paragraph_html": "Za hitrejši zaključek nakupa <a href=\"{{ link }}\" class=\"link underlined-link\">se prijavite<\/a>."
       },
       "estimated_total": "Predvideni skupni znesek",
       "new_estimated_total": "Nov predvideni skupni znesek"
@@ -361,7 +361,7 @@
     "quick_order_list": {
       "product_total": "Vmesna vsota",
       "view_cart": "Prikaži košarico",
-      "each": "{{ money }}/kos",
+      "each": "{{ money }}\/kos",
       "product": "Izdelek",
       "variant": "Različica",
       "variant_total": "Skupaj različice",

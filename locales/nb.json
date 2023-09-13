@@ -117,7 +117,7 @@
         "minimum_of": "Minimum på {{ quantity }}",
         "maximum_of": "Maksimum på {{ quantity }}",
         "multiples_of": "Økninger på {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> i handlekurven",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}<\/span> i handlekurven",
         "note": "Vis antallsregler"
       },
       "price": {
@@ -170,7 +170,7 @@
         "title": "Volumprissetting",
         "note": "Volumprissetting er tilgjengelig",
         "minimum": "{{ quantity }}+",
-        "price_at_each": "til {{ price }}/pr. stk",
+        "price_at_each": "til {{ price }}\/pr. stk",
         "price_range": "{{ minimum }}–{{ maximum }}"
       },
       "product_variants": "Produktvarianter"
@@ -277,9 +277,9 @@
       "empty": "Handlekurven din er tom",
       "cart_error": "Det oppstod en feil under oppdateringen av handlekurven din. Prøv på nytt.",
       "cart_quantity_error_html": "Du kan bare legge {{ quantity }} av denne varen i handlekurven.",
-      "taxes_and_shipping_policy_at_checkout_html": "Avgifter, rabatter og <a href=\"{{ link }}\">frakt</a> beregnes i kassen",
+      "taxes_and_shipping_policy_at_checkout_html": "Avgifter, rabatter og <a href=\"{{ link }}\">frakt<\/a> beregnes i kassen",
       "taxes_included_but_shipping_at_checkout": "Inkluderte avgifter, frakt og rabatter beregnes i kassen",
-      "taxes_included_and_shipping_policy_html": "Inkluderte avgifter. <a href=\"{{ link }}\">Frakt</a> og rabatter beregnes i kassen.",
+      "taxes_included_and_shipping_policy_html": "Inkluderte avgifter. <a href=\"{{ link }}\">Frakt<\/a> og rabatter beregnes i kassen.",
       "taxes_and_shipping_at_checkout": "Avgifter, rabatter og frakt beregnes i kassen",
       "headings": {
         "product": "Produkt",
@@ -291,7 +291,7 @@
       "update": "Oppdater",
       "login": {
         "title": "Har du en konto?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Logg på</a> for å betale raskere."
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Logg på<\/a> for å betale raskere."
       },
       "estimated_total": "Estimert totalsum",
       "new_estimated_total": "Ny estimert totalsum"
@@ -341,7 +341,7 @@
     "quick_order_list": {
       "product_total": "Produktets delsum",
       "view_cart": "Vis handlekurv",
-      "each": "{{ money }}/stk.",
+      "each": "{{ money }}\/stk.",
       "product": "Produkt",
       "variant": "Variant",
       "variant_total": "Delsum varianter",

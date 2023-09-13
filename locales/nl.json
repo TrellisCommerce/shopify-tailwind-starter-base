@@ -117,7 +117,7 @@
         "minimum_of": "Minimum van {{ quantity }}",
         "maximum_of": "Maximum van {{ quantity }}",
         "multiples_of": "Stappen van {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> in winkelwagen",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}<\/span> in winkelwagen",
         "note": "Hoeveelheidsregels bekijken"
       },
       "price": {
@@ -170,7 +170,7 @@
         "title": "Volumeprijsstelling",
         "note": "Volumeprijsstelling beschikbaar",
         "minimum": "Meer dan {{ quantity }}",
-        "price_at_each": "{{ price }}/st.",
+        "price_at_each": "{{ price }}\/st.",
         "price_range": "{{ minimum }} - {{ maximum }}"
       },
       "product_variants": "Productvarianten"
@@ -277,9 +277,9 @@
       "empty": "Je winkelwagen is leeg",
       "cart_error": "Er is een fout opgetreden bij het bijwerken van je winkelwagen. Probeer het opnieuw.",
       "cart_quantity_error_html": "Je kunt maar {{ quantity }} van dit artikel toevoegen aan je winkelwagen.",
-      "taxes_and_shipping_policy_at_checkout_html": "Belastingen, kortingen en <a href=\"{{ link }}\">verzending</a> worden bij de checkout berekend",
+      "taxes_and_shipping_policy_at_checkout_html": "Belastingen, kortingen en <a href=\"{{ link }}\">verzending<\/a> worden bij de checkout berekend",
       "taxes_included_but_shipping_at_checkout": "Inclusief belasting; verzendkosten en kortingen worden bij de checkout berekend",
-      "taxes_included_and_shipping_policy_html": "Inclusief belasting. <a href=\"{{ link }}\">Verzending</a> en kortingen worden bij de checkout berekend.",
+      "taxes_included_and_shipping_policy_html": "Inclusief belasting. <a href=\"{{ link }}\">Verzending<\/a> en kortingen worden bij de checkout berekend.",
       "taxes_and_shipping_at_checkout": "Belastingen, kortingen en verzending worden bij de checkout berekend",
       "headings": {
         "product": "Product",
@@ -291,7 +291,7 @@
       "update": "Bijwerken",
       "login": {
         "title": "Heb je een account?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in</a> om sneller af te rekenen."
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in<\/a> om sneller af te rekenen."
       },
       "estimated_total": "Geschat totaal",
       "new_estimated_total": "Nieuw geschat totaal"
@@ -341,7 +341,7 @@
     "quick_order_list": {
       "product_total": "Productsubtotaal",
       "view_cart": "Winkelwagen bekijken",
-      "each": "{{ money }}/st",
+      "each": "{{ money }}\/st",
       "product": "Product",
       "variant": "Variant",
       "variant_total": "Totaal variant",

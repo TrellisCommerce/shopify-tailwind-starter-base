@@ -117,7 +117,7 @@
         "minimum_of": "จำนวนต่ำสุดของ {{ quantity }}",
         "maximum_of": "จำนวนสูงสุดของ {{ quantity }}",
         "multiples_of": "เพิ่มขึ้นได้ทีละ {{ quantity }}",
-        "in_cart_html": "จำนวน <span class=\"quantity-cart\">{{ quantity }}</span> ในตะกร้าสินค้า",
+        "in_cart_html": "จำนวน <span class=\"quantity-cart\">{{ quantity }}<\/span> ในตะกร้าสินค้า",
         "note": "ดูกฎเกี่ยวกับจำนวน"
       },
       "price": {
@@ -170,7 +170,7 @@
         "title": "การกำหนดราคาตามปริมาณ",
         "note": "การกำหนดราคาตามปริมาณพร้อมใช้งาน",
         "minimum": "{{ quantity }}+",
-        "price_at_each": "ที่ {{ price }}/หน่วย",
+        "price_at_each": "ที่ {{ price }}\/หน่วย",
         "price_range": "{{ minimum }} - {{ maximum }}"
       },
       "product_variants": "ตัวเลือกสินค้า"
@@ -277,9 +277,9 @@
       "empty": "ตะกร้าสินค้าของคุณว่างอยู่",
       "cart_error": "เกิดข้อผิดพลาดระหว่างการอัปเดตตะกร้าสินค้าของคุณ โปรดลองอีกครั้ง",
       "cart_quantity_error_html": "คุณสามารถเพิ่มรายการนี้ {{ quantity }} รายการลงในตะกร้าสินค้าของคุณเท่านั้น",
-      "taxes_and_shipping_policy_at_checkout_html": "ระบบจะคำนวณภาษี ส่วนลด และ<a href=\"{{ link }}\">ค่าจัดส่ง</a>ในขั้นตอนการชำระเงิน",
+      "taxes_and_shipping_policy_at_checkout_html": "ระบบจะคำนวณภาษี ส่วนลด และ<a href=\"{{ link }}\">ค่าจัดส่ง<\/a>ในขั้นตอนการชำระเงิน",
       "taxes_included_but_shipping_at_checkout": "ภาษีที่ใส่และค่าจัดส่งและส่วนลดที่คำนวณไว้ในขั้นตอนการชำระเงิน",
-      "taxes_included_and_shipping_policy_html": "รวมภาษีแล้ว ระบบจะคำนวณ<a href=\"{{ link }}\">ค่าจัดส่ง</a>และส่วนลดในขั้นตอนการชำระเงิน",
+      "taxes_included_and_shipping_policy_html": "รวมภาษีแล้ว ระบบจะคำนวณ<a href=\"{{ link }}\">ค่าจัดส่ง<\/a>และส่วนลดในขั้นตอนการชำระเงิน",
       "taxes_and_shipping_at_checkout": "ระบบจะคำนวณภาษีและค่าจัดส่งในขั้นตอนการชำระเงิน",
       "headings": {
         "product": "สินค้า",
@@ -291,7 +291,7 @@
       "update": "อัปเดต",
       "login": {
         "title": "มีบัญชีผู้ใช้อยู่แล้วใช่หรือไม่",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">เข้าสู่ระบบ</a>เพื่อชำระเงินให้รวดเร็วยิ่งขึ้น"
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">เข้าสู่ระบบ<\/a>เพื่อชำระเงินให้รวดเร็วยิ่งขึ้น"
       },
       "estimated_total": "ยอดทั้งหมดโดยประมาณ",
       "new_estimated_total": "ยอดรวมโดยประมาณใหม่"
@@ -341,7 +341,7 @@
     "quick_order_list": {
       "product_total": "ยอดรวมสินค้า",
       "view_cart": "ดูตะกร้าสินค้า",
-      "each": "{{ money }}/หน่วย",
+      "each": "{{ money }}\/หน่วย",
       "product": "สินค้า",
       "variant": "ตัวเลือกสินค้า",
       "variant_total": "ยอดรวมของตัวเลือกสินค้า",

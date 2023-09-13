@@ -117,7 +117,7 @@
         "minimum_of": "Vähimmäismäärä {{ quantity }}",
         "maximum_of": "Enimmäismäärä {{ quantity }}",
         "multiples_of": "Lisäysten koko: {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> ostoskorissa",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}<\/span> ostoskorissa",
         "note": "Katso määräsäännöt"
       },
       "price": {
@@ -170,7 +170,7 @@
         "title": "Volyymihinnoittelu",
         "note": "Volyymihinnoittelu saatavilla",
         "minimum": "Yli {{ quantity }}",
-        "price_at_each": "{{ price }}/kpl",
+        "price_at_each": "{{ price }}\/kpl",
         "price_range": "{{ minimum }} - {{ maximum }}"
       },
       "product_variants": "Tuoteversiot"
@@ -277,9 +277,9 @@
       "empty": "Ostoskorisi on tyhjä",
       "cart_error": "Ostoskorisi päivityksessä tapahtui virhe. Yritä uudelleen.",
       "cart_quantity_error_html": "Voit lisätä ostoskoriisi vain {{ quantity }} kappaletta tätä tuotetta.",
-      "taxes_and_shipping_policy_at_checkout_html": "Verot, alennukset ja <a href=\"{{ link }}\">toimituskulut</a> lasketaan kassalla",
+      "taxes_and_shipping_policy_at_checkout_html": "Verot, alennukset ja <a href=\"{{ link }}\">toimituskulut<\/a> lasketaan kassalla",
       "taxes_included_but_shipping_at_checkout": "Sisältää veron; toimituskulut ja alennukset lasketaan kassalla",
-      "taxes_included_and_shipping_policy_html": "Sisältää veron. <a href=\"{{ link }}\">Toimituskulut</a> ja alennukset lasketaan kassalla.",
+      "taxes_included_and_shipping_policy_html": "Sisältää veron. <a href=\"{{ link }}\">Toimituskulut<\/a> ja alennukset lasketaan kassalla.",
       "taxes_and_shipping_at_checkout": "Verot, alennukset ja toimituskulut lasketaan kassalla",
       "headings": {
         "product": "Tuote",
@@ -291,7 +291,7 @@
       "update": "Päivitä",
       "login": {
         "title": "Onko sinulla tili?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Kirjaudu sisään</a>, jotta voit maksaa kassalla nopeammin."
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Kirjaudu sisään<\/a>, jotta voit maksaa kassalla nopeammin."
       },
       "estimated_total": "Arvioitu kokonaishinta",
       "new_estimated_total": "Uusi arvioitu kokonaishinta"
@@ -341,7 +341,7 @@
     "quick_order_list": {
       "product_total": "Tuotteen välisumma",
       "view_cart": "Katso ostoskori",
-      "each": "{{ money }}/kpl",
+      "each": "{{ money }}\/kpl",
       "product": "Tuote",
       "variant": "Versio",
       "variant_total": "Versioiden summa",

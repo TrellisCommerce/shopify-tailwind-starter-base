@@ -126,7 +126,7 @@
         "minimum_of": "Minimum {{ quantity }}",
         "maximum_of": "Maximum {{ quantity }}",
         "multiples_of": "Incrementuri de {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> în coș",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}<\/span> în coș",
         "note": "Vezi regulile legate de cantitate"
       },
       "price": {
@@ -172,7 +172,7 @@
         "title": "Stabilire preț per volum",
         "note": "Stabilirea prețului per volum este disponibilă",
         "minimum": "Peste {{ quantity }}",
-        "price_at_each": "la {{ price }}/buc.",
+        "price_at_each": "la {{ price }}\/buc.",
         "price_range": "{{ minimum }} - {{ maximum }}"
       }
     },
@@ -287,9 +287,9 @@
       "empty": "Coșul dvs. este gol",
       "cart_error": "A apărut o eroare în timpul actualizării coșului. Încercați din nou.",
       "cart_quantity_error_html": "Cantitatea maximă pe care o poți adăuga în coș din acest articol: {{ quantity }}.",
-      "taxes_and_shipping_policy_at_checkout_html": "Taxele, reducerile și <a href=\"{{ link }}\">transportul</a> sunt calculate la finalizarea comenzii",
+      "taxes_and_shipping_policy_at_checkout_html": "Taxele, reducerile și <a href=\"{{ link }}\">transportul<\/a> sunt calculate la finalizarea comenzii",
       "taxes_included_but_shipping_at_checkout": "Taxele sunt incluse, iar transportul și reducerile sunt calculate la finalizarea comenzii",
-      "taxes_included_and_shipping_policy_html": "Taxele sunt incluse. <a href=\"{{ link }}\">Transportul</a> și reducerile sunt calculate la finalizarea comenzii.",
+      "taxes_included_and_shipping_policy_html": "Taxele sunt incluse. <a href=\"{{ link }}\">Transportul<\/a> și reducerile sunt calculate la finalizarea comenzii.",
       "taxes_and_shipping_at_checkout": "Taxele, reducerile și transportul sunt calculate la finalizarea comenzii",
       "update": "Actualizați",
       "headings": {
@@ -301,7 +301,7 @@
       },
       "login": {
         "title": "Ai un cont?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Conectează-te</a> pentru a finaliza comanda mai rapid."
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Conectează-te<\/a> pentru a finaliza comanda mai rapid."
       },
       "estimated_total": "Total estimat",
       "new_estimated_total": "Noul total estimat"
@@ -351,7 +351,7 @@
     "quick_order_list": {
       "product_total": "Subtotal produs",
       "view_cart": "Vezi coșul",
-      "each": "{{ money }}/buc.",
+      "each": "{{ money }}\/buc.",
       "product": "Produs",
       "variant": "Variantă",
       "variant_total": "Total variantă",

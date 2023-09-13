@@ -137,6 +137,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "14060646107696862457": {
+        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
@@ -144,22 +150,22 @@
         "settings": {
           "background": "#f2eee3",
           "background_gradient": "",
-          "text": "#211C0F",
-          "button": "#211C0F",
+          "text": "#211c0f",
+          "button": "#211c0f",
           "button_label": "#ffffff",
-          "secondary_button_label": "#211C0F",
-          "shadow": "#211C0F"
+          "secondary_button_label": "#211c0f",
+          "shadow": "#211c0f"
         }
       },
       "background-2": {
         "settings": {
           "background": "#ece7d8",
           "background_gradient": "",
-          "text": "#211C0F",
-          "button": "#211C0F",
+          "text": "#211c0f",
+          "button": "#211c0f",
           "button_label": "#f3f3f3",
-          "secondary_button_label": "#211C0F",
-          "shadow": "#211C0F"
+          "secondary_button_label": "#211c0f",
+          "shadow": "#211c0f"
         }
       },
       "inverse": {
@@ -170,29 +176,29 @@
           "button": "#ffffff",
           "button_label": "#000000",
           "secondary_button_label": "#ffffff",
-          "shadow": "#211C0F"
+          "shadow": "#211c0f"
         }
       },
       "accent-1": {
         "settings": {
           "background": "#f2eee3",
           "background_gradient": "",
-          "text": "#211C0F",
+          "text": "#211c0f",
           "button": "#000000",
-          "button_label": "#211C0F",
+          "button_label": "#211c0f",
           "secondary_button_label": "#ffffff",
-          "shadow": "#211C0F"
+          "shadow": "#211c0f"
         }
       },
       "accent-2": {
         "settings": {
           "background": "#ece7d8",
           "background_gradient": "",
-          "text": "#211C0F",
-          "button": "#211C0F",
+          "text": "#211c0f",
+          "button": "#211c0f",
           "button_label": "#f5f5f5",
-          "secondary_button_label": "#211C0F",
-          "shadow": "#211C0F"
+          "secondary_button_label": "#211c0f",
+          "shadow": "#211c0f"
         }
       }
     }

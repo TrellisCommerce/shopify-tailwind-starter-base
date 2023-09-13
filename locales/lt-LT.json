@@ -127,7 +127,7 @@
         "minimum_of": "Mažiausiai {{ quantity }}",
         "maximum_of": "Daugiausiai {{ quantity }}",
         "multiples_of": "Kiekis didėja kas {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> vnt. krepšelyje",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}<\/span> vnt. krepšelyje",
         "note": "Peržiūrėti kiekių taisykles"
       },
       "price": {
@@ -173,7 +173,7 @@
         "title": "Kiekybinė kainodara",
         "note": "Galima kiekybinė kainodara",
         "minimum": "{{ quantity }}+",
-        "price_at_each": "po {{ price }}/vnt.",
+        "price_at_each": "po {{ price }}\/vnt.",
         "price_range": "{{ minimum }}–{{ maximum }}"
       }
     },
@@ -297,9 +297,9 @@
       "empty": "Jūsų krepšelis tuščias",
       "cart_error": "Atnaujinant krepšelį įvyko klaida. Bandykite dar kartą.",
       "cart_quantity_error_html": "Į krepšelį galite įdėti tik {{ quantity }}šios prekės vnt.",
-      "taxes_and_shipping_policy_at_checkout_html": "Mokesčiai, nuolaidos ir <a href=\"{{ link }}\">siuntimo išlaidos</a> apskaičiuojami atsiskaitant",
+      "taxes_and_shipping_policy_at_checkout_html": "Mokesčiai, nuolaidos ir <a href=\"{{ link }}\">siuntimo išlaidos<\/a> apskaičiuojami atsiskaitant",
       "taxes_included_but_shipping_at_checkout": "Mokesčiai įtraukti, o siuntimo išlaidos ir nuolaidos apskaičiuojamos atsiskaitant",
-      "taxes_included_and_shipping_policy_html": "Mokesčiai įtraukti. <a href=\"{{ link }}\">Siuntimo išlaidos</a> ir nuolaidos apskaičiuojamos atsiskaitant.",
+      "taxes_included_and_shipping_policy_html": "Mokesčiai įtraukti. <a href=\"{{ link }}\">Siuntimo išlaidos<\/a> ir nuolaidos apskaičiuojamos atsiskaitant.",
       "taxes_and_shipping_at_checkout": "Mokesčiai, nuolaidos ir siuntimo išlaidos apskaičiuojami atsiskaitant",
       "update": "Atnaujinti",
       "headings": {
@@ -311,7 +311,7 @@
       },
       "login": {
         "title": "Turite paskyrą?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Prisijunkite</a> ir atsiskaitysite greičiau."
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Prisijunkite<\/a> ir atsiskaitysite greičiau."
       },
       "estimated_total": "Apskaičiuota bendra suma",
       "new_estimated_total": "Nauja apskaičiuota bendra suma"
@@ -361,7 +361,7 @@
     "quick_order_list": {
       "product_total": "Gaminių tarpinė suma",
       "view_cart": "Peržiūrėti krepšelį",
-      "each": "{{ money }}/vnt.",
+      "each": "{{ money }}\/vnt.",
       "product": "Gaminys",
       "variant": "Variantas",
       "variant_total": "Variantų bendra suma",

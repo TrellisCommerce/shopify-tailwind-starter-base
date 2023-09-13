@@ -489,15 +489,15 @@
           "label": "Vis ikoner på skrivebordet"
         },
         "header__3": {
-          "content": "Land-/områdevelger",
-          "info": "Gå til [markedsinnstillinger](/admin/settings/markets) for å legge til land/område."
+          "content": "Land-\/områdevelger",
+          "info": "Gå til [markedsinnstillinger](\/admin\/settings\/markets) for å legge til land\/område."
         },
         "enable_country_selector": {
-          "label": "Aktiver land-/områdevelger"
+          "label": "Aktiver land-\/områdevelger"
         },
         "header__4": {
           "content": "Språkvelger",
-          "info": "Gå til [språkinnstillingene](/admin/settings/languages) for å legge til et språk."
+          "info": "Gå til [språkinnstillingene](\/admin\/settings\/languages) for å legge til et språk."
         },
         "enable_language_selector": {
           "label": "Aktiver språkvelger"
@@ -661,7 +661,7 @@
       "settings": {
         "custom_liquid": {
           "label": "Liquid-kode",
-          "info": "Legg til kodeutdrag fra app eller en annen kode for å opprette avanserte tilpasninger. [Finn ut mer](https://shopify.dev/docs/api/liquid)"
+          "info": "Legg til kodeutdrag fra app eller en annen kode for å opprette avanserte tilpasninger. [Finn ut mer](https:\/\/shopify.dev\/docs\/api\/liquid)"
         }
       },
       "presets": {

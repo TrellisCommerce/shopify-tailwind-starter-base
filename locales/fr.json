@@ -119,7 +119,7 @@
         "minimum_of": "Minimum de {{ quantity }}",
         "maximum_of": "Maximum de {{ quantity }}",
         "multiples_of": "Incréments de {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> dans le panier",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}<\/span> dans le panier",
         "note": "Voir les règles de quantité"
       },
       "price": {
@@ -172,7 +172,7 @@
         "title": "Tarification basée sur le volume",
         "note": "La tarification basée sur le volume est disponible",
         "minimum": "{{ quantity }} ou plus",
-        "price_at_each": "à {{ price }}/pièce",
+        "price_at_each": "à {{ price }}\/pièce",
         "price_range": "{{ minimum }} - {{ maximum }}"
       }
     },
@@ -287,9 +287,9 @@
       "empty": "Votre panier est vide",
       "cart_error": "Une erreur est survenue lors de l’actualisation de votre panier. Veuillez réessayer.",
       "cart_quantity_error_html": "Vous ne pouvez pas ajouter plus de {{ quantity }} de ce produit à votre panier.",
-      "taxes_and_shipping_policy_at_checkout_html": "Taxes, réductions et <a href=\"{{ link }}\">frais d’expédition</a> calculés à l’étape du paiement",
+      "taxes_and_shipping_policy_at_checkout_html": "Taxes, réductions et <a href=\"{{ link }}\">frais d’expédition<\/a> calculés à l’étape du paiement",
       "taxes_included_but_shipping_at_checkout": "Taxe incluse, frais d’expédition et réductions calculés à l’étape du paiement",
-      "taxes_included_and_shipping_policy_html": "Taxe incluse. <a href=\"{{ link }}\">Frais d’expédition</a> et réductions calculés à l’étape du paiement.",
+      "taxes_included_and_shipping_policy_html": "Taxe incluse. <a href=\"{{ link }}\">Frais d’expédition<\/a> et réductions calculés à l’étape du paiement.",
       "taxes_and_shipping_at_checkout": "Taxes, réductions et frais d’expédition calculés à l’étape du paiement",
       "headings": {
         "product": "Produit",
@@ -301,7 +301,7 @@
       "update": "Mettre à jour",
       "login": {
         "title": "Vous possédez un compte ?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Connectez-vous</a> pour payer plus vite."
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Connectez-vous<\/a> pour payer plus vite."
       },
       "estimated_total": "Total estimé",
       "new_estimated_total": "Nouveau total estimé"
@@ -351,7 +351,7 @@
     "quick_order_list": {
       "product_total": "Sous-total des produits",
       "view_cart": "Voir le panier",
-      "each": "{{ money }}/pièce",
+      "each": "{{ money }}\/pièce",
       "product": "Produit",
       "variant": "Variante",
       "variant_total": "Total des variantes",

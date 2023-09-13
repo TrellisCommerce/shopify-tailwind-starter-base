@@ -118,7 +118,7 @@
         "minimum_of": "최소 {{ quantity }}개",
         "maximum_of": "최대 {{ quantity }}개",
         "multiples_of": "{{ quantity }}개씩 증가",
-        "in_cart_html": "카트 내 <span class=\"quantity-cart\">{{ quantity }}</span>개",
+        "in_cart_html": "카트 내 <span class=\"quantity-cart\">{{ quantity }}<\/span>개",
         "note": "수량 규칙 보기"
       },
       "price": {
@@ -277,9 +277,9 @@
       "empty": "카트가 비어 있습니다",
       "cart_error": "카트를 업데이트하는 중 오류가 발생했습니다. 다시 시도하십시오.",
       "cart_quantity_error_html": "카트에는 이 품목을 {{ quantity }}개만 추가할 수 있습니다.",
-      "taxes_and_shipping_policy_at_checkout_html": "결제 시 세금, 할인 및 <a href=\"{{ link }}\">배송료</a> 계산됨",
+      "taxes_and_shipping_policy_at_checkout_html": "결제 시 세금, 할인 및 <a href=\"{{ link }}\">배송료<\/a> 계산됨",
       "taxes_included_but_shipping_at_checkout": "세금 포함 및 결제 시 배송료 계산됨",
-      "taxes_included_and_shipping_policy_html": "세금이 포함된 가격입니다. <a href=\"{{ link }}\">배송료</a> 및 할인은 결제 시 계산됩니다.",
+      "taxes_included_and_shipping_policy_html": "세금이 포함된 가격입니다. <a href=\"{{ link }}\">배송료<\/a> 및 할인은 결제 시 계산됩니다.",
       "taxes_and_shipping_at_checkout": "결제 시 세금, 할인 및 배송료 계산됨",
       "headings": {
         "product": "제품",
@@ -291,7 +291,7 @@
       "update": "업데이트",
       "login": {
         "title": "계정이 있습니까?",
-        "paragraph_html": "더 빠르게 결제하려면 <a href=\"{{ link }}\" class=\"link underlined-link\">로그인</a>하십시오."
+        "paragraph_html": "더 빠르게 결제하려면 <a href=\"{{ link }}\" class=\"link underlined-link\">로그인<\/a>하십시오."
       },
       "estimated_total": "예상 총액",
       "new_estimated_total": "새로운 예상 총액"

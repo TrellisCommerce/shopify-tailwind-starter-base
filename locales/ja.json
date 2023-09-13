@@ -118,7 +118,7 @@
         "minimum_of": "最小{{ quantity }}",
         "maximum_of": "最大{{ quantity }}",
         "multiples_of": "{{ quantity }}の増分",
-        "in_cart_html": "カートに<span class=\"quantity-cart\">{{ quantity }}</span>",
+        "in_cart_html": "カートに<span class=\"quantity-cart\">{{ quantity }}<\/span>",
         "note": "数量ルールを見る"
       },
       "price": {
@@ -171,7 +171,7 @@
         "title": "量による価格",
         "note": "量による価格が利用可能",
         "minimum": "{{ quantity }}個以上",
-        "price_at_each": "{{ price }}/ユニットで",
+        "price_at_each": "{{ price }}\/ユニットで",
         "price_range": "{{ minimum }}～{{ maximum }}"
       }
     },
@@ -277,9 +277,9 @@
       "empty": "カートは空です",
       "cart_error": "カートをアップデートするときにエラーが発生しました。もう一度お試しください。",
       "cart_quantity_error_html": "このアイテムは{{ quantity }}個しかカートに追加することができません。",
-      "taxes_and_shipping_policy_at_checkout_html": "税、ディスカウント、および<a href=\"{{ link }}\">配送料</a>はチエックアウト時に計算されます",
+      "taxes_and_shipping_policy_at_checkout_html": "税、ディスカウント、および<a href=\"{{ link }}\">配送料<\/a>はチエックアウト時に計算されます",
       "taxes_included_but_shipping_at_checkout": "税込みで、配送料とディスカウントはチェックアアウト時に計算されます",
-      "taxes_included_and_shipping_policy_html": "税込。<a href=\"{{ link }}\">配送料</a>とディスカウントはチエックアウト時に計算されます",
+      "taxes_included_and_shipping_policy_html": "税込。<a href=\"{{ link }}\">配送料<\/a>とディスカウントはチエックアウト時に計算されます",
       "taxes_and_shipping_at_checkout": "税、ディスカウント、および配送料はチエックアウト時に計算されます",
       "headings": {
         "product": "商品",
@@ -291,7 +291,7 @@
       "update": "アップデート",
       "login": {
         "title": "アカウントをお持ちですか?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">ログイン</a>することで、チェックアウトがスピーディーに行えます。"
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">ログイン<\/a>することで、チェックアウトがスピーディーに行えます。"
       },
       "estimated_total": "見積もり合計",
       "new_estimated_total": "新たな推定総額"
@@ -341,7 +341,7 @@
     "quick_order_list": {
       "product_total": "商品の小計",
       "view_cart": "カートを見る",
-      "each": "{{ money }}/ユニット",
+      "each": "{{ money }}\/ユニット",
       "product": "商品",
       "variant": "バリエーション",
       "variant_total": "バリエーションの合計額",

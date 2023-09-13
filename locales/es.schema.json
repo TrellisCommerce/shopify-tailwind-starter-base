@@ -490,14 +490,14 @@
         },
         "header__3": {
           "content": "Selector de país o región",
-          "info": "Para agregar un país o una región, ve a la [configuración del mercado.](/admin/settings/markets)"
+          "info": "Para agregar un país o una región, ve a la [configuración del mercado.](\/admin\/settings\/markets)"
         },
         "enable_country_selector": {
           "label": "Activar selector de país o región"
         },
         "header__4": {
           "content": "Selector de idioma",
-          "info": "Para agregar un idioma, ve a la [configuración de idiomas.](/admin/settings/languages)"
+          "info": "Para agregar un idioma, ve a la [configuración de idiomas.](\/admin\/settings\/languages)"
         },
         "enable_language_selector": {
           "label": "Activar selector de idioma"
@@ -661,7 +661,7 @@
       "settings": {
         "custom_liquid": {
           "label": "Código de Liquid",
-          "info": "Agrega fragmentos de la aplicación u otros códigos para crear personalizaciones avanzadas. [Más información](https://shopify.dev/docs/api/liquid)"
+          "info": "Agrega fragmentos de la aplicación u otros códigos para crear personalizaciones avanzadas. [Más información](https:\/\/shopify.dev\/docs\/api\/liquid)"
         }
       },
       "presets": {

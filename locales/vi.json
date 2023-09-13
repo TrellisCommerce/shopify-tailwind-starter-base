@@ -118,7 +118,7 @@
         "minimum_of": "Tối thiểu {{ quantity }}",
         "maximum_of": "Tối đa {{ quantity }}",
         "multiples_of": "Số lượng gia tăng {{ quantity }}",
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> trong giỏ hàng",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}<\/span> trong giỏ hàng",
         "note": "Xem quy tắc số lượng"
       },
       "price": {
@@ -171,7 +171,7 @@
         "title": "Định giá theo số lượng",
         "note": "Có sẵn định giá theo số lượng",
         "minimum": "Hơn {{ quantity }}",
-        "price_at_each": "với giá {{ price }}/chiếc",
+        "price_at_each": "với giá {{ price }}\/chiếc",
         "price_range": "{{ minimum }} - {{ maximum }}"
       }
     },
@@ -277,9 +277,9 @@
       "empty": "Giỏ hàng của bạn đang trống",
       "cart_error": "Đã xảy ra lỗi khi cập nhật giỏ hàng. Vui lòng thử lại.",
       "cart_quantity_error_html": "Bạn chỉ có thể thêm {{ quantity }} mặt hàng này vào giỏ hàng.",
-      "taxes_and_shipping_policy_at_checkout_html": "Thuế, ưu đãi giảm giá và <a href=\"{{ link }}\">phí vận chuyển</a> được tính khi thanh toán",
+      "taxes_and_shipping_policy_at_checkout_html": "Thuế, ưu đãi giảm giá và <a href=\"{{ link }}\">phí vận chuyển<\/a> được tính khi thanh toán",
       "taxes_included_but_shipping_at_checkout": "Đã bao gồm thuế, còn phí vận chuyển và ưu đãi giảm giá được tính khi thanh toán",
-      "taxes_included_and_shipping_policy_html": "Đã bao gồm thuế. <a href=\"{{ link }}\">Phí vận chuyển</a> và ưu đãi giảm giá được tính khi thanh toán.",
+      "taxes_included_and_shipping_policy_html": "Đã bao gồm thuế. <a href=\"{{ link }}\">Phí vận chuyển<\/a> và ưu đãi giảm giá được tính khi thanh toán.",
       "taxes_and_shipping_at_checkout": "Thuế, ưu đãi giảm giá và phí vận chuyển được tính khi thanh toán",
       "headings": {
         "product": "Sản phẩm",
@@ -291,7 +291,7 @@
       "update": "Cập nhật",
       "login": {
         "title": "Bạn đã có tài khoản?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Đăng nhập</a> để thanh toán nhanh hơn."
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Đăng nhập<\/a> để thanh toán nhanh hơn."
       },
       "estimated_total": "Tổng số tiền ước tính",
       "new_estimated_total": "Tổng số tiền ước tính mới"
@@ -341,7 +341,7 @@
     "quick_order_list": {
       "product_total": "Tổng phụ sản phẩm",
       "view_cart": "Xem giỏ hàng",
-      "each": "{{ money }}/chiếc",
+      "each": "{{ money }}\/chiếc",
       "product": "Sản phẩm",
       "variant": "Mẫu mã",
       "variant_total": "Tổng số mẫu mã",

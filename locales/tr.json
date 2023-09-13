@@ -117,7 +117,7 @@
         "minimum_of": "Minimum: {{ quantity }}",
         "maximum_of": "Maksimum: {{ quantity }}",
         "multiples_of": "Artış değeri: {{ quantity }}",
-        "in_cart_html": "Sepette: <span class=\"quantity-cart\">{{ quantity }}</span>",
+        "in_cart_html": "Sepette: <span class=\"quantity-cart\">{{ quantity }}<\/span>",
         "note": "Adet kurallarını görüntüle"
       },
       "price": {
@@ -170,7 +170,7 @@
         "title": "Toplu Alım Bazlı Fiyatlandırma",
         "note": "Toplu alım bazlı fiyatlandırma kullanılabilir",
         "minimum": "{{ quantity }}+",
-        "price_at_each": "{{ price }}/adet",
+        "price_at_each": "{{ price }}\/adet",
         "price_range": "{{ minimum }} - {{ maximum }}"
       },
       "product_variants": "Ürün varyasyonları"
@@ -277,9 +277,9 @@
       "empty": "Sepetiniz boş",
       "cart_error": "Sepetiniz güncellenirken bir hata oluştu. Lütfen tekrar deneyin.",
       "cart_quantity_error_html": "Sepetinize bu üründen yalnızca {{ quantity }} adet ekleyebilirsiniz.",
-      "taxes_and_shipping_policy_at_checkout_html": "Vergiler, indirimler ve <a href=\"{{ link }}\">kargo</a>, ödeme sayfasında hesaplanır",
+      "taxes_and_shipping_policy_at_checkout_html": "Vergiler, indirimler ve <a href=\"{{ link }}\">kargo<\/a>, ödeme sayfasında hesaplanır",
       "taxes_included_but_shipping_at_checkout": "Vergi dahildir ve kargo ile indirimler, ödeme sayfasında hesaplanır",
-      "taxes_included_and_shipping_policy_html": "Vergi dahildir. <a href=\"{{ link }}\">Kargo</a> ve indirimler, ödeme sayfasında hesaplanır.",
+      "taxes_included_and_shipping_policy_html": "Vergi dahildir. <a href=\"{{ link }}\">Kargo<\/a> ve indirimler, ödeme sayfasında hesaplanır.",
       "taxes_and_shipping_at_checkout": "Vergiler, indirimler ve kargo, ödeme sayfasında hesaplanır",
       "headings": {
         "product": "Ürün",
@@ -291,7 +291,7 @@
       "update": "Güncelle",
       "login": {
         "title": "Hesabınız var mı?",
-        "paragraph_html": "Daha hızlı ödeme yapmak için <a href=\"{{ link }}\" class=\"link underlined-link\">oturum açın</a>."
+        "paragraph_html": "Daha hızlı ödeme yapmak için <a href=\"{{ link }}\" class=\"link underlined-link\">oturum açın<\/a>."
       },
       "estimated_total": "Tahmini toplam",
       "new_estimated_total": "Yeni tahmini toplam"
@@ -341,7 +341,7 @@
     "quick_order_list": {
       "product_total": "Ürün alt toplamı",
       "view_cart": "Sepeti görüntüle",
-      "each": "{{ money }}/adet",
+      "each": "{{ money }}\/adet",
       "product": "Ürün",
       "variant": "Varyasyon",
       "variant_total": "Varyasyon toplamı",

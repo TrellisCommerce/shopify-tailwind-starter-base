@@ -489,15 +489,15 @@
           "label": "Afficher les icônes sur le bureau"
         },
         "header__3": {
-          "content": "Sélecteur de pays/région",
-          "info": "Pour ajouter un pays/une région, accédez à vos [paramètres de marché.](/admin/settings/markets)"
+          "content": "Sélecteur de pays\/région",
+          "info": "Pour ajouter un pays\/une région, accédez à vos [paramètres de marché.](\/admin\/settings\/markets)"
         },
         "enable_country_selector": {
-          "label": "Activer le sélecteur de pays/région"
+          "label": "Activer le sélecteur de pays\/région"
         },
         "header__4": {
           "content": "Sélecteur de langue",
-          "info": "Pour ajouter une langue, accédez à vos [paramètres de langue.](/admin/settings/languages)"
+          "info": "Pour ajouter une langue, accédez à vos [paramètres de langue.](\/admin\/settings\/languages)"
         },
         "enable_language_selector": {
           "label": "Activer le sélecteur de langue"
@@ -661,7 +661,7 @@
       "settings": {
         "custom_liquid": {
           "label": "Code Liquid",
-          "info": "Ajoutez des extraits d’application ou autre code pour créer des personnalisations avancées. [En savoir plus](https://shopify.dev/docs/api/liquid)"
+          "info": "Ajoutez des extraits d’application ou autre code pour créer des personnalisations avancées. [En savoir plus](https:\/\/shopify.dev\/docs\/api\/liquid)"
         }
       },
       "presets": {

@@ -489,15 +489,15 @@
           "label": "Näytä työpöydällä olevat kuvakkeet"
         },
         "header__3": {
-          "content": "Maa-/aluevalitsin",
-          "info": "Lisää maa/alue siirtymällä [markkina-asetuksiisi.](/admin/settings/markets)"
+          "content": "Maa-\/aluevalitsin",
+          "info": "Lisää maa\/alue siirtymällä [markkina-asetuksiisi.](\/admin\/settings\/markets)"
         },
         "enable_country_selector": {
-          "label": "Ota käyttöön maa-/aluevalitsin"
+          "label": "Ota käyttöön maa-\/aluevalitsin"
         },
         "header__4": {
           "content": "Kielivalitsin",
-          "info": "Lisää kieli siirtymällä [kieliasetuksiisi.](/admin/settings/languages)"
+          "info": "Lisää kieli siirtymällä [kieliasetuksiisi.](\/admin\/settings\/languages)"
         },
         "enable_language_selector": {
           "label": "Ota kielivalitsin käyttöön"
@@ -661,7 +661,7 @@
       "settings": {
         "custom_liquid": {
           "label": "Liquid-koodi",
-          "info": "Luo vaativampia mukautuksia lisäämällä sovelluksen koodinpätkiä tai muita koodeja. [Lisätietoja](https://shopify.dev/docs/api/liquid)"
+          "info": "Luo vaativampia mukautuksia lisäämällä sovelluksen koodinpätkiä tai muita koodeja. [Lisätietoja](https:\/\/shopify.dev\/docs\/api\/liquid)"
         }
       },
       "presets": {
