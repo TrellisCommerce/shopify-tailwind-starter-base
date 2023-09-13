@@ -504,6 +504,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: auto;
 }
 
+.xmy-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .\!xmy-24 {
   margin-top: 6rem !important;
   margin-bottom: 6rem !important;
@@ -599,10 +604,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xmax-w-2xl {
   max-width: 42rem;
-}
-
-.xflex-1 {
-  flex: 1 1 0%;
 }
 
 .xcursor-pointer {
@@ -718,6 +719,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xbg-orange-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(222 139 53 / var(--tw-bg-opacity));
+}
+
+.xbg-red {
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 91 57 / var(--tw-bg-opacity));
+}
+
+.xbg-purple {
+  --tw-bg-opacity: 1;
+  background-color: rgb(135 125 163 / var(--tw-bg-opacity));
+}
+
+.xbg-green {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 143 113 / var(--tw-bg-opacity));
+}
+
+.xbg-orange {
+  --tw-bg-opacity: 1;
+  background-color: rgb(230 167 101 / var(--tw-bg-opacity));
 }
 
 .xobject-contain {
@@ -985,7 +1006,8 @@ header,
 .richtext.beige h2,
 .richtext.beige h3,
 .richtext.beige h4,
-.richtext.beige h5 {
+.richtext.beige h5,
+.richtext.beige p {
   --tw-text-opacity: 1 !important;
   color: rgb(242 238 227 / var(--tw-text-opacity)) !important;
 }
@@ -998,6 +1020,27 @@ header,
   margin-bottom: 1rem !important;
 }
 
+.button {
+  font-weight: 600 !important;
+  transition-property: all !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 150ms !important;
+  --border-offset: 0px !important;
+  --border-opacity: unset;
+}
+
+.button:hover {
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(21 21 21 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 238 227 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(21 21 21 / var(--tw-text-opacity));
+  --border-offset: 0px !important;
+  --border-opacity: unset;
+}
+
 .button.beige {
   --tw-border-opacity: 1 !important;
   border-color: rgb(242 238 227 / var(--tw-border-opacity)) !important;
@@ -1005,6 +1048,26 @@ header,
   background-color: rgb(242 238 227 / var(--tw-bg-opacity)) !important;
   --tw-text-opacity: 1 !important;
   color: rgb(21 21 21 / var(--tw-text-opacity)) !important;
+  transition-property: all !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 150ms !important;
+}
+
+.button.beige:hover {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(21 21 21 / var(--tw-bg-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(242 238 227 / var(--tw-text-opacity)) !important;
+}
+
+.button.beige {
+  --border-offset: 0px !important;
+  --border-opacity: unset;
+}
+
+.button.beige:hover {
+  --border-offset: 0px !important;
+  --border-opacity: unset;
 }
 
 .quantity__input {

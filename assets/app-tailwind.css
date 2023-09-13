@@ -96,7 +96,8 @@ header,
 .richtext.beige h2,
 .richtext.beige h3,
 .richtext.beige h4,
-.richtext.beige h5 {
+.richtext.beige h5,
+.richtext.beige p {
   @apply !xtext-beige-200;
 }
 
@@ -108,8 +109,27 @@ header,
   @apply !xmb-4;
 }
 
+.button {
+  @apply !xtransition-all !xfont-semibold;
+  --border-offset: 0px !important;
+  --border-opacity: unset;
+}
+
+.button:hover {
+  @apply xborder-2 xborder-black xbg-beige-200 xtext-black;
+  --border-offset: 0px !important;
+  --border-opacity: unset;
+}
+
 .button.beige {
-  @apply !xbg-beige-200 !xtext-black !xborder-beige-200;
+  @apply !xtransition-all !xbg-beige-200 !xtext-black !xborder-beige-200 hover:!xbg-black hover:!xtext-beige-200;
+  --border-offset: 0px !important;
+  --border-opacity: unset;
+}
+
+.button.beige:hover {
+  --border-offset: 0px !important;
+  --border-opacity: unset;
 }
 
 .quantity__input {

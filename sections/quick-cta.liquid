@@ -3,10 +3,42 @@
   "name": "Quick CTA",
   "settings": [
     {
-      "type": "color",
-      "id": "background_color",
+      "type": "select",
+      "label": "Text Color",
+      "id": "text_color",
+      "options": [
+        {
+          "value": "dark",
+          "label": "Dark"
+        },
+        {
+          "value": "beige",
+          "label": "Light"
+        }
+      ]
+    },
+    {
+      "type": "select",
       "label": "Background Color",
-      "default": "#ffffff"
+      "id": "background_color",
+      "options": [
+        {
+          "value": "red",
+          "label": "UR Red"
+        },
+        {
+          "value": "green",
+          "label": "UR Green"
+        },
+        {
+          "value": "purple",
+          "label": "UR Purple"
+        },
+        {
+          "value": "orange",
+          "label": "UR Orange"
+        }
+      ]
     },
     {
       "type": "richtext",
@@ -29,21 +61,6 @@
       "type": "url",
       "id": "button_url",
       "label": "Button URL"
-    },
-    {
-      "type": "select",
-      "label": "Text Color",
-      "id": "text_color",
-      "options": [
-        {
-          "value": "dark",
-          "label": "Dark"
-        },
-        {
-          "value": "beige",
-          "label": "Light"
-        }
-      ]
     }
   ],
   "presets": [
@@ -59,31 +76,24 @@
   // Any JavaScript specific to this section can go here.
 {% endjavascript %}
 
-{% assign text_color_classes = '' %}
-{% if section.settings.text_color == 'dark' %}
-  {% assign text_color_classes = 'dark' %}
-{% elsif section.settings.text_color == 'light' %}
-  {% assign text_color_classes = 'beige' %}
-{% endif %}
-
-<div class='quick-cta color-{{ section.settings.color_scheme }}'>
+<div class='quick-cta '>
   <div class='quick-cta__content page-width'>
-    <div class='xrounded-3xl xflex xgap-4 xp-16' style='background-color: {{ section.settings.background_color }};'>
+    <div class='xrounded-3xl xflex xgap-4 xp-16  xmy-8 xbg-{{ section.settings.background_color }}'>
       {% if section.settings.cta_image != blank %}
         <img
           src='{{ section.settings.cta_image | img_url: '300x300' }}'
           alt=''
           width='150'
           height='150'
-          class='quick-cta__image'
+          class='quick-cta__image xrounded-3xl'
           loading='lazy'
         >
       {% endif %}
       <div class='xflex xjustify-between xw-full '>
-        <div class='richtext xp-8 {{ text_color_classes }}'>{{ section.settings.cta_text }}</div>
+        <div class='richtext xp-8 {{ section.settings.text_color }}'>{{ section.settings.cta_text }}</div>
         {% if section.settings.button_text != blank %}
           <div class='xflex xitems-end'>
-            <a href='{{ section.settings.button_url }}' class='button {{ text_color_classes }}'>
+            <a href='{{ section.settings.button_url }}' class='button {{ section.settings.text_color }}'>
               {{- section.settings.button_text -}}
             </a>
           </div>
@@ -92,3 +102,5 @@
     </div>
   </div>
 </div>
+
+<div class='xbg-red xbg-purple xbg-green xbg-orange hidden'></div>

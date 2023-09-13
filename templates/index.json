@@ -304,45 +304,6 @@
         "button_link": ""
       }
     },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "b689839d-3ad5-4bc2-b3e0-cc27453d2ce7": {
       "type": "collapsible-content",
       "blocks": {
@@ -491,9 +452,43 @@
     "b076c1a8-b027-4cdd-80a7-525f325b73e2": {
       "type": "quick-cta",
       "settings": {
-        "color_scheme": "inverse",
+        "text_color": "beige",
+        "background_color": "red",
+        "cta_text": "<h2>Quick CTA Headline<\/h2><p>Test Text<\/p>",
+        "cta_image": "shopify:\/\/shop_images\/istockphoto-1147544807-612x612.jpg",
+        "button_text": "Click me",
+        "button_url": ""
+      }
+    },
+    "1cda79a1-8b02-4c62-a4e2-d7ec642279c8": {
+      "type": "quick-cta",
+      "settings": {
+        "text_color": "beige",
+        "background_color": "green",
+        "cta_text": "<h2>Quick CTA Headline<\/h2><p>Test Text<\/p>",
+        "cta_image": "shopify:\/\/shop_images\/istockphoto-1147544807-612x612.jpg",
+        "button_text": "Click me",
+        "button_url": ""
+      }
+    },
+    "39fc5abc-8968-44f4-b2f2-d8ac92951665": {
+      "type": "quick-cta",
+      "settings": {
+        "text_color": "beige",
+        "background_color": "purple",
+        "cta_text": "<h2>Quick CTA Headline<\/h2><p>Test Text<\/p>",
+        "cta_image": "shopify:\/\/shop_images\/istockphoto-1147544807-612x612.jpg",
+        "button_text": "Click me",
+        "button_url": ""
+      }
+    },
+    "d6a60efa-b69e-407a-bba8-6e5b0def2989": {
+      "type": "quick-cta",
+      "settings": {
+        "text_color": "beige",
+        "background_color": "orange",
         "cta_text": "<h2>Headline<\/h2><p>Test Text<\/p>",
-        "cta_image": "shopify:\/\/shop_images\/purple.png",
+        "cta_image": "shopify:\/\/shop_images\/istockphoto-1147544807-612x612.jpg",
         "button_text": "Click me",
         "button_url": ""
       }
@@ -509,9 +504,11 @@
     "rich_text",
     "featured_collection",
     "2af0e9d7-f2a8-434b-b346-ee8969847698",
-    "collage",
     "b689839d-3ad5-4bc2-b3e0-cc27453d2ce7",
     "multicolumn",
-    "b076c1a8-b027-4cdd-80a7-525f325b73e2"
+    "b076c1a8-b027-4cdd-80a7-525f325b73e2",
+    "1cda79a1-8b02-4c62-a4e2-d7ec642279c8",
+    "39fc5abc-8968-44f4-b2f2-d8ac92951665",
+    "d6a60efa-b69e-407a-bba8-6e5b0def2989"
   ]
 }
