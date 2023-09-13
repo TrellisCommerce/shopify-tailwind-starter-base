@@ -601,6 +601,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 42rem;
 }
 
+.xflex-1 {
+  flex: 1 1 0%;
+}
+
 .xcursor-pointer {
   cursor: pointer;
 }
@@ -754,11 +758,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xpy-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-.xpy-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 .xpt-4 {
@@ -987,9 +986,16 @@ header,
 .richtext.beige h3,
 .richtext.beige h4,
 .richtext.beige h5 {
-  margin-bottom: 1rem !important;
   --tw-text-opacity: 1 !important;
   color: rgb(242 238 227 / var(--tw-text-opacity)) !important;
+}
+
+.richtext h1,
+.richtext h2,
+.richtext h3,
+.richtext h4,
+.richtext h5 {
+  margin-bottom: 1rem !important;
 }
 
 .button.beige {

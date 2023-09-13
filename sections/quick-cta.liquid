@@ -29,6 +29,21 @@
       "type": "url",
       "id": "button_url",
       "label": "Button URL"
+    },
+    {
+      "type": "select",
+      "label": "Text Color",
+      "id": "text_color",
+      "options": [
+        {
+          "value": "dark",
+          "label": "Dark"
+        },
+        {
+          "value": "beige",
+          "label": "Light"
+        }
+      ]
     }
   ],
   "presets": [
@@ -44,6 +59,13 @@
   // Any JavaScript specific to this section can go here.
 {% endjavascript %}
 
+{% assign text_color_classes = '' %}
+{% if section.settings.text_color == 'dark' %}
+  {% assign text_color_classes = 'dark' %}
+{% elsif section.settings.text_color == 'light' %}
+  {% assign text_color_classes = 'beige' %}
+{% endif %}
+
 <div class='quick-cta color-{{ section.settings.color_scheme }}'>
   <div class='quick-cta__content page-width'>
     <div class='xrounded-3xl xflex xgap-4 xp-16' style='background-color: {{ section.settings.background_color }};'>
@@ -51,16 +73,20 @@
         <img
           src='{{ section.settings.cta_image | img_url: '300x300' }}'
           alt=''
-          width='200'
-          height='200'
+          width='150'
+          height='150'
           class='quick-cta__image'
           loading='lazy'
         >
       {% endif %}
-      <div>
-        <div class='xp-8'>{{ section.settings.cta_text }}</div>
+      <div class='xflex xjustify-between xw-full '>
+        <div class='richtext xp-8 {{ text_color_classes }}'>{{ section.settings.cta_text }}</div>
         {% if section.settings.button_text != blank %}
-          <a href='{{ section.settings.button_url }}' class='button'>{{ section.settings.button_text }}</a>
+          <div class='xflex xitems-end'>
+            <a href='{{ section.settings.button_url }}' class='button {{ text_color_classes }}'>
+              {{- section.settings.button_text -}}
+            </a>
+          </div>
         {% endif %}
       </div>
     </div>

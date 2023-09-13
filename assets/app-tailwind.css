@@ -97,7 +97,15 @@ header,
 .richtext.beige h3,
 .richtext.beige h4,
 .richtext.beige h5 {
-  @apply !xtext-beige-200 !xmb-4;
+  @apply !xtext-beige-200;
+}
+
+.richtext h1,
+.richtext h2,
+.richtext h3,
+.richtext h4,
+.richtext h5 {
+  @apply !xmb-4;
 }
 
 .button.beige {
