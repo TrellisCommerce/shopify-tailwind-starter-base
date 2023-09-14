@@ -1361,6 +1361,11 @@ details[open] svg {
   text-align: right !important;
 }
 
+.jdgm-carousel-item__review-title {
+  font-family: 'Rooney';
+  font-size: 1.8rem;
+}
+
 .jdgm-carousel__right-arrow,
 .jdgm-carousel__left-arrow {
   border-width: 2px !important;
