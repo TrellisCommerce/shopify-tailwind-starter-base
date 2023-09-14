@@ -16,9 +16,12 @@
         <div class='select-question'>
           <label for='{{ block.id }}-select'>{{ block.settings.question_text }}</label>
           <select id='{{ block.id }}-select'>
-            {% for option in block.settings.options %}
-              <option value='{{ option.value }}'>{{ option.name }}</option>
-            {% endfor %}
+            {% if block.settings.option_1_name and block.settings.option_1_value %}
+              <option value='{{ block.settings.option_1_value }}'>{{ block.settings.option_1_name }}</option>
+            {% endif %}
+            {% if block.settings.option_2_name and block.settings.option_2_value %}
+              <option value='{{ block.settings.option_2_value }}'>{{ block.settings.option_2_name }}</option>
+            {% endif %}
           </select>
         </div>
 
@@ -40,7 +43,7 @@
 
 {% schema %}
 {
-  "name": "Uncle Rustys Questionnaire",
+  "name": "UR Questionnaire",
   "blocks": [
     {
       "type": "text-question",
@@ -71,17 +74,26 @@
           "default": "Choose an option"
         },
         {
-          "type": "array",
-          "label": "Options",
-          "id": "options",
-          "item": {
-            "type": "object",
-            "properties": [
-              { "type": "text", "label": "Option Name", "id": "name" },
-              { "type": "text", "label": "Option Value", "id": "value" }
-            ]
-          }
+          "type": "text",
+          "label": "Option 1 Name",
+          "id": "option_1_name"
+        },
+        {
+          "type": "text",
+          "label": "Option 1 Value",
+          "id": "option_1_value"
+        },
+        {
+          "type": "text",
+          "label": "Option 2 Name",
+          "id": "option_2_name"
+        },
+        {
+          "type": "text",
+          "label": "Option 2 Value",
+          "id": "option_2_value"
         }
+        // Continue in this pattern up to your maximum predetermined number of options.
       ]
     },
     {
@@ -129,7 +141,7 @@
   ],
   "presets": [
     {
-      "name": "UR Image with Text",
+      "name": "UR Questionaire",
       "blocks": [
         {
           "type": "text-question"
