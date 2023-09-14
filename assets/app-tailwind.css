@@ -351,6 +351,7 @@ details[open] svg {
   width: 26px !important;
 }
 
+.icon-row-section.color-background-2,
 .ur-image-with-text.color-background-2,
 .multicolumn.color-accent-2 {
   background-attachment: fixed;

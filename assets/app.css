@@ -514,11 +514,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 6rem !important;
 }
 
-.xmy-16 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
 .xmt-8 {
   margin-top: 2rem;
 }
@@ -615,6 +610,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+.xgrid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.xgrid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .xflex-row {
   flex-direction: row;
 }
@@ -657,6 +660,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xgap-4 {
   gap: 1rem;
+}
+
+.xgap-32 {
+  gap: 8rem;
 }
 
 .xoverflow-hidden {
@@ -783,11 +790,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xpy-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-.xpy-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
 }
 
 .xpy-32 {
@@ -1440,6 +1442,7 @@ details[open] svg {
   width: 26px !important;
 }
 
+.icon-row-section.color-background-2,
 .ur-image-with-text.color-background-2,
 .multicolumn.color-accent-2 {
   background-attachment: fixed;
@@ -1497,6 +1500,10 @@ details[open] svg {
 
   .md\:xgrid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:xgrid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:xflex-row {
