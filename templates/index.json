@@ -310,6 +310,34 @@
             "text_style": "body"
           }
         },
+        "0d331331-f64a-4ffd-9edf-45d20f706b77": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_text": "Regionale Zutaten"
+          }
+        },
+        "04544f39-b233-4153-a50d-ca2cb01b6274": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-no-gluten-color",
+            "icon_text": "Glutenfrei"
+          }
+        },
+        "007035b8-304e-4acf-ac27-bedfe03d79a5": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-no-chemicals-color",
+            "icon_text": "Ohne Chemie"
+          }
+        },
+        "3551eac1-1b96-49ad-ae2e-95c7080d8117": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-no-animals-color",
+            "icon_text": "Frei von Tierversuchen"
+          }
+        },
         "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1": {
           "type": "button",
           "settings": {
@@ -317,21 +345,17 @@
             "button_link": "shopify:\/\/pages\/build-a-box",
             "button_style_secondary": false
           }
-        },
-        "04544f39-b233-4153-a50d-ca2cb01b6274": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-gluten-color",
-            "icon_text": "Enter your text here"
-          }
         }
       },
       "block_order": [
         "c7cb0cce-33e7-4e54-870a-5b33c1044e07",
         "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-heading-1",
         "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-text-1",
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1",
-        "04544f39-b233-4153-a50d-ca2cb01b6274"
+        "0d331331-f64a-4ffd-9edf-45d20f706b77",
+        "04544f39-b233-4153-a50d-ca2cb01b6274",
+        "007035b8-304e-4acf-ac27-bedfe03d79a5",
+        "3551eac1-1b96-49ad-ae2e-95c7080d8117",
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/pic1.png",
@@ -351,6 +375,14 @@
     "46b6142b-478f-4606-bc1d-d5759641bc51": {
       "type": "ur-image-with-text",
       "blocks": {
+        "d0709e61-db07-49d3-97bc-b327a18d4ed7": {
+          "type": "caption",
+          "settings": {
+            "caption": "Add a tagline",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
         "template--20724493582631__46b6142b-478f-4606-bc1d-d5759641bc51-heading-1": {
           "type": "heading",
           "settings": {
@@ -365,6 +397,34 @@
             "text_style": "body"
           }
         },
+        "fc52187c-1be7-4bd6-98da-cd366c316b84": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-organic",
+            "icon_text": "Regionale Zutaten"
+          }
+        },
+        "c5e85e30-e453-40cb-bab3-b2ad4fe7c768": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-no-gluten",
+            "icon_text": "Glutenfrei"
+          }
+        },
+        "7b45e723-f887-4535-9d44-d7e2a40957f8": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-no-chemicals",
+            "icon_text": "Ohne Chemie"
+          }
+        },
+        "02ec7204-cbd8-4763-aaa3-5e44fe7ebd12": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-no-animals",
+            "icon_text": "Frei von Tierversuchen"
+          }
+        },
         "template--20724493582631__46b6142b-478f-4606-bc1d-d5759641bc51-button-1": {
           "type": "button",
           "settings": {
@@ -375,8 +435,13 @@
         }
       },
       "block_order": [
+        "d0709e61-db07-49d3-97bc-b327a18d4ed7",
         "template--20724493582631__46b6142b-478f-4606-bc1d-d5759641bc51-heading-1",
         "template--20724493582631__46b6142b-478f-4606-bc1d-d5759641bc51-text-1",
+        "fc52187c-1be7-4bd6-98da-cd366c316b84",
+        "c5e85e30-e453-40cb-bab3-b2ad4fe7c768",
+        "7b45e723-f887-4535-9d44-d7e2a40957f8",
+        "02ec7204-cbd8-4763-aaa3-5e44fe7ebd12",
         "template--20724493582631__46b6142b-478f-4606-bc1d-d5759641bc51-button-1"
       ],
       "settings": {
