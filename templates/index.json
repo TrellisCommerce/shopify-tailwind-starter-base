@@ -299,7 +299,7 @@
         "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Image with text & colored icons",
             "heading_size": "h1"
           }
         },
@@ -386,7 +386,7 @@
         "template--20724493582631__46b6142b-478f-4606-bc1d-d5759641bc51-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Image with text & outline icons",
             "heading_size": "h1"
           }
         },
@@ -457,6 +457,55 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "725ba129-f8af-4713-96b3-1e8558451133": {
+      "type": "icon-row",
+      "blocks": {
+        "8ffc3a51-3c1f-4a3a-9dd7-c4696e7b51a5": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_rich_text": "<p>Describe your icon here.<\/p>"
+          }
+        },
+        "73156a81-f259-4990-8da8-58c6fc90da13": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-gluten-color",
+            "icon_rich_text": "<p>Describe your icon here.<\/p>"
+          }
+        },
+        "7d166ad5-1c0a-449d-9002-32d99805450e": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-3d-model",
+            "icon_rich_text": "<p>Describe your icon here.<\/p>"
+          }
+        },
+        "37b610c1-7282-4184-9845-427f8f7b6390": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-3d-model",
+            "icon_rich_text": "<p>Describe your icon here.<\/p>"
+          }
+        },
+        "893fd8bf-dae0-4ccc-8e82-ec27a23b545d": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-3d-model",
+            "icon_rich_text": "<p>Describe your icon here.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "8ffc3a51-3c1f-4a3a-9dd7-c4696e7b51a5",
+        "73156a81-f259-4990-8da8-58c6fc90da13",
+        "7d166ad5-1c0a-449d-9002-32d99805450e",
+        "37b610c1-7282-4184-9845-427f8f7b6390",
+        "893fd8bf-dae0-4ccc-8e82-ec27a23b545d"
+      ],
+      "settings": {
       }
     },
     "build-a-box": {
@@ -765,6 +814,7 @@
     "9c172180-9760-4bc3-989a-937f54d744fd",
     "357173cd-30c8-440c-bfb8-6e34d14254f8",
     "46b6142b-478f-4606-bc1d-d5759641bc51",
+    "725ba129-f8af-4713-96b3-1e8558451133",
     "build-a-box",
     "rich_text",
     "featured_collection",
