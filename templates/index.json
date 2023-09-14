@@ -317,13 +317,21 @@
             "button_link": "shopify:\/\/pages\/build-a-box",
             "button_style_secondary": false
           }
+        },
+        "04544f39-b233-4153-a50d-ca2cb01b6274": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-no-gluten-color",
+            "icon_text": "Enter your text here"
+          }
         }
       },
       "block_order": [
         "c7cb0cce-33e7-4e54-870a-5b33c1044e07",
         "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-heading-1",
         "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-text-1",
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1"
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1",
+        "04544f39-b233-4153-a50d-ca2cb01b6274"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/pic1.png",
