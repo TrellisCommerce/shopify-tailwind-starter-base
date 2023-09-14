@@ -75,6 +75,23 @@
                 <div class='image-with-text__text rte {{ block.settings.text_style }}' {{ block.shopify_attributes }}>
                   {{ block.settings.text }}
                 </div>
+              {% when 'icon-text' %}
+                <div class='icon-text-container'>
+                  {% if block.settings.icon != blank %}
+                    <img
+                      src='{{ block.settings.icon | img_url: '150x' }}'
+                      alt='{{ block.settings.icon.alt }}'
+                      class='icon'
+                      loading='lazy'
+                      width='150'
+                      height='150'
+                    >
+                  {% endif %}
+                  {% if block.settings.icon_text != blank %}
+                    <p>{{ block.settings.icon_text }}</p>
+                  {% endif %}
+                </div>
+
               {%- when 'button' -%}
                 {%- if block.settings.button_label != blank -%}
                   <a
@@ -416,6 +433,28 @@
           ],
           "default": "body",
           "label": "t:sections.image-with-text.blocks.text.settings.text_style.label"
+        }
+      ]
+    },
+    {
+      "name": "Icon & Text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "icon_text",
+          "label": "Text",
+          "default": "Enter your text here"
+        }
+      ],
+      "presets": [
+        {
+          "name": "Icon & Text",
+          "category": "Custom"
         }
       ]
     },

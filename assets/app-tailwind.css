@@ -320,6 +320,20 @@ details[open] svg {
   }
 }
 /* JudgeMe Reviews End */
+
+.blog .slider-counter.caption {
+  display: none;
+}
+
+.blog .slider-buttons {
+  justify-content: flex-end !important;
+  margin-right: 0.5rem !important;
+}
+
+.blog .slider-button {
+  width: 26px !important;
+}
+
 .ur-image-with-text.color-background-2,
 .multicolumn.color-accent-2 {
   background-attachment: fixed;
