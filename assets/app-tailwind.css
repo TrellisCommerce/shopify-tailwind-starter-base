@@ -314,6 +314,13 @@ details[open] svg {
   width: calc(33.3% - 16px) !important;
 }
 
+.icon-row-section .icon svg {
+  @apply !xmb-8;
+  width: 65px;
+  height: 65px;
+  margin: auto;
+}
+
 @media (max-width: 800px) {
   .jdgm-carousel-item {
     width: 100% !important;
