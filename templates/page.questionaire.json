@@ -2,13 +2,55 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "4839e6f9-7cb2-4f6e-a6fb-6501615d67e7": {
+      "type": "questionaire",
+      "blocks": {
+        "template--20907867046183__4839e6f9-7cb2-4f6e-a6fb-6501615d67e7-text-question-1": {
+          "type": "text-question",
+          "settings": {
+            "question_text": "Enter your question here",
+            "placeholder_text": "Enter your answer here"
+          }
+        },
+        "template--20907867046183__4839e6f9-7cb2-4f6e-a6fb-6501615d67e7-select-question-1": {
+          "type": "select-question",
+          "settings": {
+            "question_text": "Choose an option",
+            "option_1_name": "",
+            "option_1_value": "",
+            "option_2_name": "",
+            "option_2_value": ""
+          }
+        },
+        "template--20907867046183__4839e6f9-7cb2-4f6e-a6fb-6501615d67e7-slider-question-1": {
+          "type": "slider-question",
+          "settings": {
+            "question_text": "Rate from 1 to 10",
+            "min_value": 1,
+            "max_value": 10,
+            "step_value": 1,
+            "min_label": "1",
+            "max_label": "10"
+          }
+        }
+      },
+      "block_order": [
+        "template--20907867046183__4839e6f9-7cb2-4f6e-a6fb-6501615d67e7-text-question-1",
+        "template--20907867046183__4839e6f9-7cb2-4f6e-a6fb-6501615d67e7-select-question-1",
+        "template--20907867046183__4839e6f9-7cb2-4f6e-a6fb-6501615d67e7-slider-question-1"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "4839e6f9-7cb2-4f6e-a6fb-6501615d67e7"
   ]
 }
