@@ -602,10 +602,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 12rem;
 }
 
-.xmax-w-2xl {
-  max-width: 42rem;
-}
-
 .xcursor-pointer {
   cursor: pointer;
 }
@@ -772,11 +768,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xp-16 {
   padding: 4rem;
-}
-
-.xpx-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 .xpx-4 {
@@ -1460,13 +1451,13 @@ details[open] svg {
     flex-direction: row;
   }
 
-  .md\:xpx-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
   .md\:xpx-2 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+  }
+
+  .md\:xpx-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }

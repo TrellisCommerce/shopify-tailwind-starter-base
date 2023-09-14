@@ -1,0 +1,155 @@
+{% comment %}
+  This is the section for 'Uncle Rustys Questionnaire'.
+{% endcomment %}
+
+<!-- Uncle Rustys Questionnaire Section -->
+<section id='uncle-rustys-questionnaire'>
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'text-question' %}
+        <div class='text-question'>
+          <label for='{{ block.id }}-text'>{{ block.settings.question_text }}</label>
+          <input type='text' id='{{ block.id }}-text' placeholder='{{ block.settings.placeholder_text }}'>
+        </div>
+
+      {% when 'select-question' %}
+        <div class='select-question'>
+          <label for='{{ block.id }}-select'>{{ block.settings.question_text }}</label>
+          <select id='{{ block.id }}-select'>
+            {% for option in block.settings.options %}
+              <option value='{{ option.value }}'>{{ option.name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+      {% when 'slider-question' %}
+        <div class='slider-question'>
+          <label for='{{ block.id }}-slider'>{{ block.settings.question_text }}</label>
+          <input
+            type='range'
+            id='{{ block.id }}-slider'
+            min='{{ block.settings.min_value }}'
+            max='{{ block.settings.max_value }}'
+            step='{{ block.settings.step_value }}'
+          >
+          <span>{{ block.settings.min_label }}</span> - <span>{{ block.settings.max_label }}</span>
+        </div>
+    {% endcase %}
+  {% endfor %}
+</section>
+
+{% schema %}
+{
+  "name": "Uncle Rustys Questionnaire",
+  "blocks": [
+    {
+      "type": "text-question",
+      "name": "Text Question",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Question Text",
+          "id": "question_text",
+          "default": "Enter your question here"
+        },
+        {
+          "type": "text",
+          "label": "Placeholder Text",
+          "id": "placeholder_text",
+          "default": "Enter your answer here"
+        }
+      ]
+    },
+    {
+      "type": "select-question",
+      "name": "Select Question",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Question Text",
+          "id": "question_text",
+          "default": "Choose an option"
+        },
+        {
+          "type": "array",
+          "label": "Options",
+          "id": "options",
+          "item": {
+            "type": "object",
+            "properties": [
+              { "type": "text", "label": "Option Name", "id": "name" },
+              { "type": "text", "label": "Option Value", "id": "value" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "slider-question",
+      "name": "Slider Question",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Question Text",
+          "id": "question_text",
+          "default": "Rate from 1 to 10"
+        },
+        {
+          "type": "number",
+          "label": "Minimum Value",
+          "id": "min_value",
+          "default": 1
+        },
+        {
+          "type": "number",
+          "label": "Maximum Value",
+          "id": "max_value",
+          "default": 10
+        },
+        {
+          "type": "number",
+          "label": "Step Value",
+          "id": "step_value",
+          "default": 1
+        },
+        {
+          "type": "text",
+          "label": "Minimum Label",
+          "id": "min_label",
+          "default": "1"
+        },
+        {
+          "type": "text",
+          "label": "Maximum Label",
+          "id": "max_label",
+          "default": "10"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "UR Image with Text",
+      "blocks": [
+        {
+          "type": "text-question"
+        },
+        {
+          "type": "select-question"
+        },
+        {
+          "type": "slider-question"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+  /* You can add styling here for your section and blocks */
+{% endstylesheet %}
+
+{% javascript %}
+  // You can add JavaScript functionalities here if needed
+{% endjavascript %}
