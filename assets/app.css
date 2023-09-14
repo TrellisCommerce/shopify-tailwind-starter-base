@@ -587,6 +587,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-height: 400px;
 }
 
+.xmin-h-\[50vh\] {
+  min-height: 50vh;
+}
+
 .xw-16 {
   width: 4rem;
 }
@@ -637,6 +641,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xitems-center {
   align-items: center;
+}
+
+.xjustify-end {
+  justify-content: flex-end;
 }
 
 .xjustify-center {
@@ -700,9 +708,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-top-width: 1px;
 }
 
+.xborder-b-2 {
+  border-bottom-width: 2px;
+}
+
 .xborder-beige-300 {
   --tw-border-opacity: 1;
   border-color: rgb(224 215 189 / var(--tw-border-opacity));
+}
+
+.xborder-beige-950 {
+  --tw-border-opacity: 1;
+  border-color: rgb(33 28 15 / var(--tw-border-opacity));
 }
 
 .xbg-lightbeige {
@@ -754,6 +771,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(230 167 101 / var(--tw-bg-opacity));
 }
 
+.xbg-beige-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 238 227 / var(--tw-bg-opacity));
+}
+
+.\!xbg-beige-200 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(242 238 227 / var(--tw-bg-opacity)) !important;
+}
+
 .xobject-contain {
   -o-object-fit: contain;
   object-fit: contain;
@@ -792,6 +819,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xpy-32 {
   padding-top: 8rem;
   padding-bottom: 8rem;
+}
+
+.xpy-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.xpx-0 {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .xpt-4 {
@@ -882,9 +919,44 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(242 238 227 / var(--tw-text-opacity));
 }
 
+.xtext-beige-950 {
+  --tw-text-opacity: 1;
+  color: rgb(33 28 15 / var(--tw-text-opacity));
+}
+
 .xline-through {
   -webkit-text-decoration-line: line-through;
   text-decoration-line: line-through;
+}
+
+.xplaceholder-lightbeige::-moz-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(236 231 216 / var(--tw-placeholder-opacity));
+}
+
+.xplaceholder-lightbeige:-ms-input-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(236 231 216 / var(--tw-placeholder-opacity));
+}
+
+.xplaceholder-lightbeige::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(236 231 216 / var(--tw-placeholder-opacity));
+}
+
+.xplaceholder-beige-400::-moz-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(206 191 150 / var(--tw-placeholder-opacity));
+}
+
+.xplaceholder-beige-400:-ms-input-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(206 191 150 / var(--tw-placeholder-opacity));
+}
+
+.xplaceholder-beige-400::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(206 191 150 / var(--tw-placeholder-opacity));
 }
 
 .xoutline-none {

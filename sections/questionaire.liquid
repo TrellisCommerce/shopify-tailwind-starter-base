@@ -3,41 +3,61 @@
 {% endcomment %}
 
 <!-- Uncle Rustys Questionnaire Section -->
+<script src='{{ 'questionaire.js' | asset_url }}' defer></script>
 <section id='uncle-rustys-questionnaire'>
   {% for block in section.blocks %}
-    {% case block.type %}
-      {% when 'text-question' %}
-        <div class='text-question'>
-          <label for='{{ block.id }}-text'>{{ block.settings.question_text }}</label>
-          <input type='text' id='{{ block.id }}-text' placeholder='{{ block.settings.placeholder_text }}'>
-        </div>
+    <div
+      data-slide='{{ forloop.index }}'
+      data-active='{% if forloop.first %}true{% else %}false{% endif %}'
+      class='questionaire-slide page-width xflex xflex-col xjustify-center xgap-16 xmin-h-[50vh] {% unless forloop.first %}xhidden{% endunless %}'
+    >
+      {% case block.type %}
+        {% when 'text-question' %}
+          <div class='text-question xflex xflex-col xgap-16'>
+            <label
+              for='{{ block.id }}-text'
+              class='xfont-semibold xtext-6xl'
+              style="font-family: 'Rooney';"
+            >
+              {{- block.settings.question_text -}}
+            </label>
+            <input
+              type='text'
+              id='{{ block.id }}-text'
+              placeholder='{{ block.settings.placeholder_text }}'
+              class='!xbg-beige-200 xpy-4 xpx-0 xborder-b-2 xtext-beige-950 xborder-beige-950 xtext-4xl xfont-semibold xplaceholder-beige-400 [&:has(:focus-visible)]:xoutline-none'
+            >
+          </div>
+        {% when 'select-question' %}
+          <div class='select-question'>
+            <label for='{{ block.id }}-select'>{{ block.settings.question_text }}</label>
+            <select id='{{ block.id }}-select'>
+              {% if block.settings.option_1_name and block.settings.option_1_value %}
+                <option value='{{ block.settings.option_1_value }}'>{{ block.settings.option_1_name }}</option>
+              {% endif %}
+              {% if block.settings.option_2_name and block.settings.option_2_value %}
+                <option value='{{ block.settings.option_2_value }}'>{{ block.settings.option_2_name }}</option>
+              {% endif %}
+            </select>
+          </div>
+        {% when 'slider-question' %}
+          <div class='slider-question'>
+            <label for='{{ block.id }}-slider'>{{ block.settings.question_text }}</label>
+            <input
+              type='range'
+              id='{{ block.id }}-slider'
+              min='{{ block.settings.min_value }}'
+              max='{{ block.settings.max_value }}'
+              step='{{ block.settings.step_value }}'
+            >
+            <span>{{ block.settings.min_label }}</span> - <span>{{ block.settings.max_label }}</span>
+          </div>
+      {% endcase %}
 
-      {% when 'select-question' %}
-        <div class='select-question'>
-          <label for='{{ block.id }}-select'>{{ block.settings.question_text }}</label>
-          <select id='{{ block.id }}-select'>
-            {% if block.settings.option_1_name and block.settings.option_1_value %}
-              <option value='{{ block.settings.option_1_value }}'>{{ block.settings.option_1_name }}</option>
-            {% endif %}
-            {% if block.settings.option_2_name and block.settings.option_2_value %}
-              <option value='{{ block.settings.option_2_value }}'>{{ block.settings.option_2_name }}</option>
-            {% endif %}
-          </select>
-        </div>
-
-      {% when 'slider-question' %}
-        <div class='slider-question'>
-          <label for='{{ block.id }}-slider'>{{ block.settings.question_text }}</label>
-          <input
-            type='range'
-            id='{{ block.id }}-slider'
-            min='{{ block.settings.min_value }}'
-            max='{{ block.settings.max_value }}'
-            step='{{ block.settings.step_value }}'
-          >
-          <span>{{ block.settings.min_label }}</span> - <span>{{ block.settings.max_label }}</span>
-        </div>
-    {% endcase %}
+      <div class='xw-full xflex xjustify-end'>
+        <button class='button qur-next'>Weiter</button>
+      </div>
+    </div>
   {% endfor %}
 </section>
 
