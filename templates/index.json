@@ -121,115 +121,6 @@
         "padding_bottom": 36
       }
     },
-    "d837f995-d7ac-4bf9-9639-27c44400c905": {
-      "type": "image-with-text",
-      "blocks": {
-        "template--20724493582631__d837f995-d7ac-4bf9-9639-27c44400c905-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "template--20724493582631__d837f995-d7ac-4bf9-9639-27c44400c905-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "template--20724493582631__d837f995-d7ac-4bf9-9639-27c44400c905-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "shopify:\/\/collections\/all",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "template--20724493582631__d837f995-d7ac-4bf9-9639-27c44400c905-heading-1",
-        "template--20724493582631__d837f995-d7ac-4bf9-9639-27c44400c905-text-1",
-        "template--20724493582631__d837f995-d7ac-4bf9-9639-27c44400c905-button-1"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/pic1.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "c2f0ff7f-b966-4dad-a0a0-d354fa082545": {
-      "type": "multicolumn",
-      "blocks": {
-        "template--20724493582631__c2f0ff7f-b966-4dad-a0a0-d354fa082545-column-1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "169e7353-358b-4007-9160-32d706341ceb": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "25fd5b06-0583-4e8a-bb06-3a3a4197a5f2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "48adface-c128-48cd-bbc3-47382b7ba0e7": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--20724493582631__c2f0ff7f-b966-4dad-a0a0-d354fa082545-column-1",
-        "169e7353-358b-4007-9160-32d706341ceb",
-        "25fd5b06-0583-4e8a-bb06-3a3a4197a5f2",
-        "48adface-c128-48cd-bbc3-47382b7ba0e7"
-      ],
-      "settings": {
-        "title": "Multicolumn",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "Button label",
-        "button_link": "",
-        "color_scheme": "accent-2",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 52,
-        "padding_bottom": 36
-      }
-    },
     "9c172180-9760-4bc3-989a-937f54d744fd": {
       "type": "ur-image-with-text",
       "blocks": {
@@ -459,53 +350,241 @@
         "padding_bottom": 36
       }
     },
-    "725ba129-f8af-4713-96b3-1e8558451133": {
+    "236d8c14-c1eb-4043-ae32-9b1fa09d766b": {
       "type": "icon-row",
       "blocks": {
-        "8ffc3a51-3c1f-4a3a-9dd7-c4696e7b51a5": {
+        "0b5c8777-0c46-4143-9109-15ea8fb9127a": {
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-organic-color",
-            "icon_rich_text": "<p>Describe your icon here.<\/p>"
+            "icon_rich_text": "<h3>Regionale <\/h3><h3>& Natürliche Zutaten<\/h3>"
           }
         },
-        "73156a81-f259-4990-8da8-58c6fc90da13": {
+        "232b11dd-f86c-414b-8c8e-a0c6414b76ac": {
           "type": "icon-text-block",
           "settings": {
             "icon_selection": "icon-no-gluten-color",
-            "icon_rich_text": "<p>Describe your icon here.<\/p>"
+            "icon_rich_text": "<h3>Glutenfrei<\/h3>"
           }
         },
-        "7d166ad5-1c0a-449d-9002-32d99805450e": {
+        "c8227c67-4b4b-4f96-beb3-ee472b298f40": {
           "type": "icon-text-block",
           "settings": {
-            "icon_selection": "icon-3d-model",
-            "icon_rich_text": "<p>Describe your icon here.<\/p>"
+            "icon_selection": "icon-no-sugar-color",
+            "icon_rich_text": "<h3>Ohne Zucker<\/h3>"
           }
         },
-        "37b610c1-7282-4184-9845-427f8f7b6390": {
+        "dcd78d78-ac88-44f0-84b4-00970a1cef33": {
           "type": "icon-text-block",
           "settings": {
-            "icon_selection": "icon-3d-model",
-            "icon_rich_text": "<p>Describe your icon here.<\/p>"
+            "icon_selection": "icon-no-chemicals-color",
+            "icon_rich_text": "<h3>Keine Zusätze <\/h3><h3>oder Chemie<\/h3>"
           }
         },
-        "893fd8bf-dae0-4ccc-8e82-ec27a23b545d": {
+        "505f6a44-0aec-4df9-a468-fcb7ee338d0d": {
           "type": "icon-text-block",
           "settings": {
-            "icon_selection": "icon-3d-model",
-            "icon_rich_text": "<p>Describe your icon here.<\/p>"
+            "icon_selection": "icon-no-animals-color",
+            "icon_rich_text": "<h3>Keine <\/h3><h3>Tierversuche<\/h3>"
+          }
+        },
+        "099196d8-2cfe-4075-b0a8-9c6d08896d65": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_rich_text": "<h3>Hochwertiges<\/h3><h3>Muskelfleisch<\/h3>"
           }
         }
       },
       "block_order": [
-        "8ffc3a51-3c1f-4a3a-9dd7-c4696e7b51a5",
-        "73156a81-f259-4990-8da8-58c6fc90da13",
-        "7d166ad5-1c0a-449d-9002-32d99805450e",
-        "37b610c1-7282-4184-9845-427f8f7b6390",
-        "893fd8bf-dae0-4ccc-8e82-ec27a23b545d"
+        "0b5c8777-0c46-4143-9109-15ea8fb9127a",
+        "232b11dd-f86c-414b-8c8e-a0c6414b76ac",
+        "c8227c67-4b4b-4f96-beb3-ee472b298f40",
+        "dcd78d78-ac88-44f0-84b4-00970a1cef33",
+        "505f6a44-0aec-4df9-a468-fcb7ee338d0d",
+        "099196d8-2cfe-4075-b0a8-9c6d08896d65"
       ],
       "settings": {
+        "color_scheme": ""
+      }
+    },
+    "e6110f6c-1cec-4c14-8440-d44764670054": {
+      "type": "icon-row",
+      "blocks": {
+        "f6528b93-b843-4809-aad7-3d5089e1d308": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_rich_text": "<h3>Regionale <\/h3><h3>& Natürliche Zutaten<\/h3>"
+          }
+        },
+        "ae16ad4d-ab1c-4c05-82e8-10f04ef874f5": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-gluten-color",
+            "icon_rich_text": "<h3>Glutenfrei<\/h3>"
+          }
+        },
+        "031d7b38-253e-4d90-9a17-f63dc4d3ec24": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-sugar-color",
+            "icon_rich_text": "<h3>Ohne Zucker<\/h3>"
+          }
+        },
+        "dea814d0-8e28-4694-9ddc-7138b9b4c3ef": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-chemicals-color",
+            "icon_rich_text": "<h3>Keine Zusätze <\/h3><h3>oder Chemie<\/h3>"
+          }
+        },
+        "dd36e573-41ee-4794-a7f5-9538379a3793": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-animals-color",
+            "icon_rich_text": "<h3>Keine <\/h3><h3>Tierversuche<\/h3>"
+          }
+        },
+        "d6647be6-70cd-4342-9b0f-1fed272bd413": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_rich_text": "<h3>Hochwertiges<\/h3><h3>Muskelfleisch<\/h3>"
+          }
+        }
+      },
+      "block_order": [
+        "f6528b93-b843-4809-aad7-3d5089e1d308",
+        "ae16ad4d-ab1c-4c05-82e8-10f04ef874f5",
+        "031d7b38-253e-4d90-9a17-f63dc4d3ec24",
+        "dea814d0-8e28-4694-9ddc-7138b9b4c3ef",
+        "dd36e573-41ee-4794-a7f5-9538379a3793",
+        "d6647be6-70cd-4342-9b0f-1fed272bd413"
+      ],
+      "settings": {
+        "color_scheme": "background-2"
+      }
+    },
+    "566dfd4f-bb7b-4e24-b0d2-191a21f8e43b": {
+      "type": "icon-row",
+      "blocks": {
+        "24a00a1f-1d28-45ce-80a5-ce42c0918cdc": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-organic",
+            "icon_rich_text": "<h3>Regionale <\/h3><h3>& Natürliche Zutaten<\/h3>"
+          }
+        },
+        "7b6cab40-3fb9-4c5b-b673-4628e41017f3": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-gluten",
+            "icon_rich_text": "<h3>Glutenfrei<\/h3>"
+          }
+        },
+        "b1853ad3-f558-4061-bd79-7d9baca1bf98": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-sugar",
+            "icon_rich_text": "<h3>Ohne Zucker<\/h3>"
+          }
+        },
+        "8a53fe21-e548-4f60-a1c4-a4341fa80b69": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-chemicals",
+            "icon_rich_text": "<h3>Keine Zusätze <\/h3><h3>oder Chemie<\/h3>"
+          }
+        },
+        "d56bf972-ee38-4454-9229-4253856499cf": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-animals",
+            "icon_rich_text": "<h3>Keine <\/h3><h3>Tierversuche<\/h3>"
+          }
+        },
+        "277cab53-f530-48a9-a961-124cba7bd082": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-meat",
+            "icon_rich_text": "<h3>Hochwertiges<\/h3><h3>Muskelfleisch<\/h3>"
+          }
+        }
+      },
+      "block_order": [
+        "24a00a1f-1d28-45ce-80a5-ce42c0918cdc",
+        "7b6cab40-3fb9-4c5b-b673-4628e41017f3",
+        "b1853ad3-f558-4061-bd79-7d9baca1bf98",
+        "8a53fe21-e548-4f60-a1c4-a4341fa80b69",
+        "d56bf972-ee38-4454-9229-4253856499cf",
+        "277cab53-f530-48a9-a961-124cba7bd082"
+      ],
+      "settings": {
+        "color_scheme": ""
+      }
+    },
+    "c2f0ff7f-b966-4dad-a0a0-d354fa082545": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--20724493582631__c2f0ff7f-b966-4dad-a0a0-d354fa082545-column-1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "169e7353-358b-4007-9160-32d706341ceb": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "25fd5b06-0583-4e8a-bb06-3a3a4197a5f2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "48adface-c128-48cd-bbc3-47382b7ba0e7": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20724493582631__c2f0ff7f-b966-4dad-a0a0-d354fa082545-column-1",
+        "169e7353-358b-4007-9160-32d706341ceb",
+        "25fd5b06-0583-4e8a-bb06-3a3a4197a5f2",
+        "48adface-c128-48cd-bbc3-47382b7ba0e7"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "accent-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 52,
+        "padding_bottom": 36
       }
     },
     "build-a-box": {
@@ -809,12 +888,13 @@
     "d02ba099-4a0b-4f7d-a3b1-1514075d5076",
     "two-richtext",
     "3ec2a987-b522-4a27-b800-28dc1b68f35f",
-    "d837f995-d7ac-4bf9-9639-27c44400c905",
-    "c2f0ff7f-b966-4dad-a0a0-d354fa082545",
     "9c172180-9760-4bc3-989a-937f54d744fd",
     "357173cd-30c8-440c-bfb8-6e34d14254f8",
     "46b6142b-478f-4606-bc1d-d5759641bc51",
-    "725ba129-f8af-4713-96b3-1e8558451133",
+    "236d8c14-c1eb-4043-ae32-9b1fa09d766b",
+    "e6110f6c-1cec-4c14-8440-d44764670054",
+    "566dfd4f-bb7b-4e24-b0d2-191a21f8e43b",
+    "c2f0ff7f-b966-4dad-a0a0-d354fa082545",
     "build-a-box",
     "rich_text",
     "featured_collection",
