@@ -450,7 +450,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-ring-inset: ;
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-color: rgb(170 198 207 / 0.5);
   --tw-ring-offset-shadow: 0 0 #0000;
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
@@ -512,6 +512,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .\!xmy-24 {
   margin-top: 6rem !important;
   margin-bottom: 6rem !important;
+}
+
+.xmy-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .xmt-8 {
@@ -608,14 +613,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xgrid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.xgrid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.xgrid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .xflex-row {
@@ -880,6 +877,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(242 238 227 / var(--tw-text-opacity)) !important;
 }
 
+.xtext-beige-200 {
+  --tw-text-opacity: 1;
+  color: rgb(242 238 227 / var(--tw-text-opacity));
+}
+
 .xline-through {
   -webkit-text-decoration-line: line-through;
   text-decoration-line: line-through;
@@ -989,6 +991,11 @@ header,
     max-width: 35.5rem !important;
     padding-top: 7rem !important;
   }
+}
+
+.ur-button,
+.button {
+  font-family: 'Rooney' !important;
 }
 
 .multicolumn.background-primary .multicolumn-card {
@@ -1498,12 +1505,12 @@ details[open] svg {
     max-width: 42rem;
   }
 
-  .md\:xgrid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .md\:xgrid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:xgrid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:xflex-row {

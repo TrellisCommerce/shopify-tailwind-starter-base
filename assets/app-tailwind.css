@@ -73,6 +73,10 @@ header,
     padding-top: 7rem !important;
   }
 }
+.ur-button,
+.button {
+  font-family: 'Rooney' !important;
+}
 
 .multicolumn.background-primary .multicolumn-card {
   background: #ece7d8 !important;

@@ -3,37 +3,59 @@
 <link rel='stylesheet' type='text/css' href='{{ 'swiper-bundle.min.css' | asset_url }}'>
 
 {% assign collection = collections[section.settings.collection] %}
+{% comment %} TODO {% endcomment %}
 {% assign subscriptionPlan = 689522049319 %}
 
 <div class='page-width page-width-desktop scroll-trigger animate--slide-in xmt-8 xflex xgap-16 xflex-col md:xflex-row'>
   <div class='ur-product-images xrelative md:xmt-32'>
-    <div class='swiper ur-bab-swiper !xsticky xtop-0'>
-      <div class='swiper-wrapper'>
-        {% for product in collection.products %}
-          <div class='swiper-slide !xflex xjustify-center xitems-center'>
-            {% if product.image != null %}
-              <img
-                height='500'
-                width='auto'
-                loading='lazy'
-                src='{{ product.image.src | img_url: "x500" }}'
-                alt='{{ product.image.alt | escape }}'
-              >
-            {% else %}
-              <img
-                height='500'
-                width='auto'
-                loading='lazy'
-                src='{{ product.featured_image | img_url: "x500" }}'
-                alt='{{ product.title | escape }}'
-              >
-            {% endif %}
-          </div>
-        {% endfor %}
+    <div class='!xsticky xtop-0'>
+      <div class='swiper ur-bab-swiper '>
+        <div class='swiper-wrapper'>
+          {% for product in collection.products %}
+            <div class='swiper-slide !xflex xjustify-center xitems-center'>
+              {% if product.image != null %}
+                <img
+                  height='500'
+                  width='auto'
+                  loading='lazy'
+                  src='{{ product.image.src | img_url: "x500" }}'
+                  alt='{{ product.image.alt | escape }}'
+                >
+              {% else %}
+                <img
+                  height='500'
+                  width='auto'
+                  loading='lazy'
+                  src='{{ product.featured_image | img_url: "x500" }}'
+                  alt='{{ product.title | escape }}'
+                >
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+        <div class='swiper-pagination'></div>
+        <div class='swiper-button-prev'></div>
+        <div class='swiper-button-next'></div>
       </div>
-      <div class='swiper-pagination'></div>
-      <div class='swiper-button-prev'></div>
-      <div class='swiper-button-next'></div>
+      <div class='xmy-16 xbg-lightbeige xrounded-3xl xp-8'>
+        <div class='richtext cta-richtext'>{{ section.settings.questionaire_info_text }}</div>
+
+        <div class='cta-container'>
+          {%- if block.settings.button_label != blank -%}
+            <a
+              {% if block.settings.button_link == blank %}
+                role='link' aria-disabled='true'
+              {% else %}
+                href='{{ block.settings.button_link }}'
+              {% endif %}
+              class='button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}'
+              {{ block.shopify_attributes }}
+            >
+              {{ block.settings.button_label | escape }}
+            </a>
+          {%- endif -%}
+        </div>
+      </div>
     </div>
   </div>
   <form id='add-box-to-cart-form' class='md:xmax-w-2xl  xpx-4 md:xpx-2 md:xpx-0'>
@@ -48,10 +70,7 @@
     </script>
 
     <div class='xmb-8'>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua.
-      </p>
+      {{ section.settings.instruction_text }}
     </div>
 
     <div class='variant-selector xmb-8'>
@@ -247,6 +266,29 @@
       "type": "collection",
       "id": "collection",
       "label": "Collection"
+    },
+    {
+      "type": "richtext",
+      "id": "instruction_text",
+      "label": "Instruction Text",
+      "default": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "questionaire_info_text",
+      "label": "Questionaire Info",
+      "default": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>"
+    },
+    {
+      "type": "text",
+      "id": "questionaire_button_label",
+      "default": "Button label",
+      "label": "Questionaire Button Label"
+    },
+    {
+      "type": "url",
+      "id": "questionaire_button_link",
+      "label": "Questionaire Button Link"
     },
     {
       "type": "text",
