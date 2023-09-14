@@ -233,6 +233,14 @@
     "9c172180-9760-4bc3-989a-937f54d744fd": {
       "type": "ur-image-with-text",
       "blocks": {
+        "2b32871e-92d6-49e5-b97d-cf9214a4930f": {
+          "type": "caption",
+          "settings": {
+            "caption": "Add a tagline",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
         "template--20724493582631__9c172180-9760-4bc3-989a-937f54d744fd-heading-1": {
           "type": "heading",
           "settings": {
@@ -257,6 +265,7 @@
         }
       },
       "block_order": [
+        "2b32871e-92d6-49e5-b97d-cf9214a4930f",
         "template--20724493582631__9c172180-9760-4bc3-989a-937f54d744fd-heading-1",
         "template--20724493582631__9c172180-9760-4bc3-989a-937f54d744fd-text-1",
         "template--20724493582631__9c172180-9760-4bc3-989a-937f54d744fd-button-1"
@@ -279,6 +288,14 @@
     "357173cd-30c8-440c-bfb8-6e34d14254f8": {
       "type": "ur-image-with-text",
       "blocks": {
+        "c7cb0cce-33e7-4e54-870a-5b33c1044e07": {
+          "type": "caption",
+          "settings": {
+            "caption": "Add a tagline",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
         "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-heading-1": {
           "type": "heading",
           "settings": {
@@ -303,6 +320,7 @@
         }
       },
       "block_order": [
+        "c7cb0cce-33e7-4e54-870a-5b33c1044e07",
         "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-heading-1",
         "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-text-1",
         "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1"
