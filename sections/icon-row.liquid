@@ -1,0 +1,414 @@
+<section class='icon-row-section'>
+  {% for block in section.blocks %}
+    <div class='icon-text-block'>
+      {% case settings.icon_selection %}
+        {% when 'icon-3d-model' %}
+          {% render 'icon-3d-model' %}
+
+        {% when 'icon-accordion' %}
+          {% render 'icon-accordion' %}
+
+        {% when 'icon-account' %}
+          {% render 'icon-account' %}
+
+        {% when 'icon-arrow' %}
+          {% render 'icon-arrow' %}
+
+        {% when 'icon-caret' %}
+          {% render 'icon-caret' %}
+
+        {% when 'icon-cart-empty' %}
+          {% render 'icon-cart-empty' %}
+
+        {% when 'icon-cart' %}
+          {% render 'icon-cart' %}
+
+        {% when 'icon-checkmark' %}
+          {% render 'icon-checkmark' %}
+
+        {% when 'icon-clipboard' %}
+          {% render 'icon-clipboard' %}
+
+        {% when 'icon-close-small' %}
+          {% render 'icon-close-small' %}
+
+        {% when 'icon-close' %}
+          {% render 'icon-close' %}
+
+        {% when 'icon-discount' %}
+          {% render 'icon-discount' %}
+
+        {% when 'icon-error' %}
+          {% render 'icon-error' %}
+
+        {% when 'icon-facebook' %}
+          {% render 'icon-facebook' %}
+
+        {% when 'icon-filter' %}
+          {% render 'icon-filter' %}
+
+        {% when 'icon-hamburger' %}
+          {% render 'icon-hamburger' %}
+
+        {% when 'icon-info' %}
+          {% render 'icon-info' %}
+
+        {% when 'icon-instagram' %}
+          {% render 'icon-instagram' %}
+
+        {% when 'icon-meat-color' %}
+          {% render 'icon-meat-color' %}
+
+        {% when 'icon-meat' %}
+          {% render 'icon-meat' %}
+
+        {% when 'icon-minus' %}
+          {% render 'icon-minus' %}
+
+        {% when 'icon-no-animals-color' %}
+          {% render 'icon-no-animals-color' %}
+
+        {% when 'icon-no-animals' %}
+          {% render 'icon-no-animals' %}
+
+        {% when 'icon-no-chemicals-color' %}
+          {% render 'icon-no-chemicals-color' %}
+
+        {% when 'icon-no-chemicals' %}
+          {% render 'icon-no-chemicals' %}
+
+        {% when 'icon-no-gluten-color' %}
+          {% render 'icon-no-gluten-color' %}
+
+        {% when 'icon-no-gluten' %}
+          {% render 'icon-no-gluten' %}
+
+        {% when 'icon-no-sugar-color' %}
+          {% render 'icon-no-sugar-color' %}
+
+        {% when 'icon-no-sugar' %}
+          {% render 'icon-no-sugar' %}
+
+        {% when 'icon-organic-color' %}
+          {% render 'icon-organic-color' %}
+
+        {% when 'icon-organic' %}
+          {% render 'icon-organic' %}
+
+        {% when 'icon-padlock' %}
+          {% render 'icon-padlock' %}
+
+        {% when 'icon-pause' %}
+          {% render 'icon-pause' %}
+
+        {% when 'icon-pinterest' %}
+          {% render 'icon-pinterest' %}
+
+        {% when 'icon-play' %}
+          {% render 'icon-play' %}
+
+        {% when 'icon-plus' %}
+          {% render 'icon-plus' %}
+
+        {% when 'icon-region-color' %}
+          {% render 'icon-region-color' %}
+
+        {% when 'icon-region' %}
+          {% render 'icon-region' %}
+
+        {% when 'icon-remove' %}
+          {% render 'icon-remove' %}
+
+        {% when 'icon-search' %}
+          {% render 'icon-search' %}
+
+        {% when 'icon-share' %}
+          {% render 'icon-share' %}
+
+        {% when 'icon-snapchat' %}
+          {% render 'icon-snapchat' %}
+
+        {% when 'icon-success' %}
+          {% render 'icon-success' %}
+
+        {% when 'icon-tick' %}
+          {% render 'icon-tick' %}
+
+        {% when 'icon-tiktok' %}
+          {% render 'icon-tiktok' %}
+
+        {% when 'icon-tumblr' %}
+          {% render 'icon-tumblr' %}
+
+        {% when 'icon-twitter' %}
+          {% render 'icon-twitter' %}
+
+        {% when 'icon-unavailable' %}
+          {% render 'icon-unavailable' %}
+
+        {% when 'icon-vimeo' %}
+          {% render 'icon-vimeo' %}
+
+        {% when 'icon-with-text' %}
+          {% render 'icon-with-text' %}
+
+        {% when 'icon-youtube' %}
+          {% render 'icon-youtube' %}
+
+        {% when 'icon-zoom' %}
+          {% render 'icon-zoom' %}
+
+        {%- else -%}
+          <!-- Default action if no icon matches -->
+          <p>No Icon Selected</p>
+      {% endcase %}
+
+      <div class='icon-description'>
+        {{ block.settings.icon_rich_text | escape }}
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
+{% schema %}
+{
+  "name": "UR Icon Row",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "icon-text-block",
+      "name": "Icon & Text",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon_selection",
+          "label": "Select an Icon",
+          "options": [
+            {
+              "value": "icon-3d-model",
+              "label": "3d model"
+            },
+            {
+              "value": "icon-accordion",
+              "label": "accordion"
+            },
+            {
+              "value": "icon-account",
+              "label": "account"
+            },
+            {
+              "value": "icon-arrow",
+              "label": "arrow"
+            },
+            {
+              "value": "icon-caret",
+              "label": "caret"
+            },
+            {
+              "value": "icon-cart-empty",
+              "label": "cart empty"
+            },
+            {
+              "value": "icon-cart",
+              "label": "cart"
+            },
+            {
+              "value": "icon-checkmark",
+              "label": "checkmark"
+            },
+            {
+              "value": "icon-clipboard",
+              "label": "clipboard"
+            },
+            {
+              "value": "icon-close-small",
+              "label": "close small"
+            },
+            {
+              "value": "icon-close",
+              "label": "close"
+            },
+            {
+              "value": "icon-discount",
+              "label": "discount"
+            },
+            {
+              "value": "icon-error",
+              "label": "error"
+            },
+            {
+              "value": "icon-facebook",
+              "label": "facebook"
+            },
+            {
+              "value": "icon-filter",
+              "label": "filter"
+            },
+            {
+              "value": "icon-hamburger",
+              "label": "hamburger"
+            },
+            {
+              "value": "icon-info",
+              "label": "info"
+            },
+            {
+              "value": "icon-instagram",
+              "label": "instagram"
+            },
+            {
+              "value": "icon-meat-color",
+              "label": "meat color"
+            },
+            {
+              "value": "icon-meat",
+              "label": "meat"
+            },
+            {
+              "value": "icon-minus",
+              "label": "minus"
+            },
+            {
+              "value": "icon-no-animals-color",
+              "label": "no animals color"
+            },
+            {
+              "value": "icon-no-animals",
+              "label": "no animals"
+            },
+            {
+              "value": "icon-no-chemicals-color",
+              "label": "no chemicals color"
+            },
+            {
+              "value": "icon-no-chemicals",
+              "label": "no chemicals"
+            },
+            {
+              "value": "icon-no-gluten-color",
+              "label": "no gluten color"
+            },
+            {
+              "value": "icon-no-gluten",
+              "label": "no gluten"
+            },
+            {
+              "value": "icon-no-sugar-color",
+              "label": "no sugar color"
+            },
+            {
+              "value": "icon-no-sugar",
+              "label": "no sugar"
+            },
+            {
+              "value": "icon-organic-color",
+              "label": "organic color"
+            },
+            {
+              "value": "icon-organic",
+              "label": "organic"
+            },
+            {
+              "value": "icon-padlock",
+              "label": "padlock"
+            },
+            {
+              "value": "icon-pause",
+              "label": "pause"
+            },
+            {
+              "value": "icon-pinterest",
+              "label": "pinterest"
+            },
+            {
+              "value": "icon-play",
+              "label": "play"
+            },
+            {
+              "value": "icon-plus",
+              "label": "plus"
+            },
+            {
+              "value": "icon-region-color",
+              "label": "region color"
+            },
+            {
+              "value": "icon-region",
+              "label": "region"
+            },
+            {
+              "value": "icon-remove",
+              "label": "remove"
+            },
+            {
+              "value": "icon-search",
+              "label": "search"
+            },
+            {
+              "value": "icon-share",
+              "label": "share"
+            },
+            {
+              "value": "icon-snapchat",
+              "label": "snapchat"
+            },
+            {
+              "value": "icon-success",
+              "label": "success"
+            },
+            {
+              "value": "icon-tick",
+              "label": "tick"
+            },
+            {
+              "value": "icon-tiktok",
+              "label": "tiktok"
+            },
+            {
+              "value": "icon-tumblr",
+              "label": "tumblr"
+            },
+            {
+              "value": "icon-twitter",
+              "label": "twitter"
+            },
+            {
+              "value": "icon-unavailable",
+              "label": "unavailable"
+            },
+            {
+              "value": "icon-vimeo",
+              "label": "vimeo"
+            },
+            {
+              "value": "icon-with-text",
+              "label": "with text"
+            },
+            {
+              "value": "icon-youtube",
+              "label": "youtube"
+            },
+            {
+              "value": "icon-zoom",
+              "label": "zoom"
+            }
+          ],
+          "default": "icon-3d-model"
+        },
+        {
+          "type": "rich_text",
+          "id": "icon_rich_text",
+          "label": "Icon Description",
+          "default": "<p>Describe your icon here.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "UR Icon Row",
+      "category": "Custom"
+    }
+  ] // Adjust this number based on how many blocks you want to allow
+}
+{% endschema %}
