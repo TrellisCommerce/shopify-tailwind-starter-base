@@ -321,6 +321,16 @@ details[open] svg {
 }
 /* JudgeMe Reviews End */
 
+.icon-text-container {
+  font-family: 'Rooney';
+  font-weight: 600;
+}
+
+.icon-text-container .icon-container svg {
+  height: 25px;
+  width: 25px;
+}
+
 .blog .slider-counter.caption {
   display: none;
 }
