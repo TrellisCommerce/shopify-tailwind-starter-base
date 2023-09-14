@@ -1264,6 +1264,7 @@ header,
 }
 
 .accordion summary {
+  justify-content: space-between !important;
   padding: 2rem !important;
 }
 
@@ -1389,6 +1390,7 @@ details[open] svg {
 
 /* JudgeMe Reviews End */
 
+.ur-image-with-text.color-background-2,
 .multicolumn.color-accent-2 {
   background-attachment: fixed;
   background-repeat: repeat;

@@ -225,7 +225,7 @@ header,
 }
 
 .accordion summary {
-  @apply !xp-8;
+  @apply !xp-8 !xjustify-between;
 }
 
 .collapsible-content__grid--reverse.collapsible-content__grid {
@@ -315,7 +315,7 @@ details[open] svg {
   }
 }
 /* JudgeMe Reviews End */
-
+.ur-image-with-text.color-background-2,
 .multicolumn.color-accent-2 {
   background-attachment: fixed;
   background-repeat: repeat;
