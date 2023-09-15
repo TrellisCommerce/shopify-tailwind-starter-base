@@ -631,6 +631,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 10rem;
 }
 
+.xmax-w-md {
+  max-width: 28rem;
+}
+
+.xmax-w-lg {
+  max-width: 32rem;
+}
+
+.xmax-w-3xl {
+  max-width: 48rem;
+}
+
 .xflex-1 {
   flex: 1 1 0%;
 }
@@ -641,6 +653,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xgrid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.xgrid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .xflex-row {
@@ -903,6 +919,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .\!xtext-4xl {
   font-size: 2.25rem !important;
   line-height: 2.5rem !important;
+}
+
+.\!xtext-xl {
+  font-size: 1.25rem !important;
+  line-height: 1.75rem !important;
+}
+
+.\!xtext-3xl {
+  font-size: 1.875rem !important;
+  line-height: 2.25rem !important;
 }
 
 .xfont-black {
