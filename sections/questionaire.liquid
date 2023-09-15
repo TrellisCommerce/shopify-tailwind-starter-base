@@ -4,6 +4,7 @@
 
 <!-- Uncle Rustys Questionnaire Section -->
 <script src='{{ 'questionaire.js' | asset_url }}' defer></script>
+<script src='https://cdn.jsdelivr.net/npm/fuse.js@6.6.2' defer></script>
 <section id='uncle-rustys-questionnaire'>
   <div class='page-width xflex xflex-col'>
     <div id='slide-wrap' class='wrap  xmin-h-[50vh] xmax-h-[50vh] xoverflow-y-clip'>
@@ -64,18 +65,26 @@
                   >
                     {{- block.settings.question_text -}}
                   </label>
-                  <input
-                    type='month'
-                    id='{{ block.id }}-text'
-                    placeholder='{{ block.settings.placeholder_text }}'
-                    class='!xbg-beige-200 xpy-4 xpx-0 xborder-b-2 xtext-beige-950 xborder-beige-950 xtext-4xl xfont-semibold xplaceholder-beige-400 [&:has(:focus-visible)]:xoutline-none'
-                  >
-                  <input
-                    type='checkbox'
-                    id='notshure'
-                    name='dontknow'
-                  >
-                  <label for='notshure'>Ich bin mir nicht sicher...</label>
+                  <div class='ur-suggestion'>
+                    <input
+                      name='ur-breed'
+                      type='text'
+                      id='{{ block.id }}-text'
+                      placeholder='{{ block.settings.placeholder_text }}'
+                      class='ur-breed-input !xbg-beige-200 xpy-4 xpx-0 xborder-b-2 xtext-beige-950 xborder-beige-950 xtext-4xl xfont-semibold xplaceholder-beige-400 [&:has(:focus-visible)]:xoutline-none'
+                    >
+                    <div class='ur-dropdown'>
+                      <div class='SuggInput'>No Suggestion</div>
+                    </div>
+                  </div>
+                  <div>
+                    <input
+                      type='checkbox'
+                      id='notshure'
+                      name='dontknow'
+                    >
+                    <label for='notshure' class='' style="font-family: 'Rooney';">Ich bin mir nicht sicher...</label>
+                  </div>
                   <p>{{ block.settings.question_descr }}</p>
                 </form>
               </div>
@@ -150,13 +159,13 @@
           "type": "text",
           "label": "Question Description",
           "id": "question_descr",
-          "default": "Hier reicht eine Schätzung, falls du das exakte Alter von %{name} nicht kennst."
+          "default": "Anweisung"
         },
         {
           "type": "text",
           "label": "Placeholder Text",
           "id": "placeholder_text",
-          "default": "2016-04"
+          "default": "z.B. Eurasier"
         }
       ]
     }

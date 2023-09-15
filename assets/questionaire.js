@@ -1,11 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('keydown', function (event) {
-    if (event.key === 'Enter' || event.keyCode === 13) {
+    if (event.key === 'Enter') {
       // 'Enter' key was pressed
       event.preventDefault();
       tryNext();
     }
+
+    if (event.target.classList.contains('ur-breed-input')) {
+      searchBreed(event.target.value);
+    }
   });
+
+  console.log('1::');
 
   const nextBtn = document.querySelector('.qur-next');
   const prevBtn = document.querySelector('.qur-prev');
@@ -94,6 +100,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   }
+
+  console.log('2::');
 
   const breeds = [
     {
@@ -785,4 +793,17 @@ document.addEventListener('DOMContentLoaded', function () {
       name: 'Yorkshire Terrier',
     },
   ];
+
+  console.log(breeds);
+  console.log(Fuse);
+
+  const fuseOptions = {
+    keys: ['name'],
+  };
+
+  const fuse = new Fuse(breeds, fuseOptions);
+
+  function searchBreed(search) {
+    console.log(fuse.search(search));
+  }
 });

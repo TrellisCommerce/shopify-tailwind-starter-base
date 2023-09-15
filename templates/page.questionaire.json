@@ -25,11 +25,20 @@
             "question_descr": "Hier reicht eine Schätzung, falls du das exakte Alter von %{name} nicht kennst.",
             "placeholder_text": "2016-04"
           }
+        },
+        "b75941ac-20be-425d-810f-b5f6dbafeada": {
+          "type": "breed-question",
+          "settings": {
+            "question_text": "Welcher Rasse gehört %{name} zu?",
+            "question_descr": "Anweisung",
+            "placeholder_text": "z.B. Eurasier"
+          }
         }
       },
       "block_order": [
         "020c3437-c274-4dab-9c0c-f90f5babf3be",
-        "859a7f87-7b5f-41bd-9d63-9d474e6c88f8"
+        "859a7f87-7b5f-41bd-9d63-9d474e6c88f8",
+        "b75941ac-20be-425d-810f-b5f6dbafeada"
       ],
       "settings": {
       }
