@@ -567,6 +567,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.\!xhidden {
+  display: none !important;
+}
+
 .xh-20 {
   height: 5rem;
 }
@@ -609,6 +613,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xw-48 {
   width: 12rem;
+}
+
+.xflex-1 {
+  flex: 1 1 0%;
 }
 
 .xcursor-pointer {
@@ -957,6 +965,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xplaceholder-beige-400::placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(206 191 150 / var(--tw-placeholder-opacity));
+}
+
+.xopacity-0 {
+  opacity: 0;
 }
 
 .xoutline-none {
