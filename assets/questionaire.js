@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const breedDropdown = document.querySelector('.ur-dropdown');
   const nextBtn = document.querySelector('.qur-next');
   const prevBtn = document.querySelector('.qur-prev');
   nextBtn.addEventListener('click', tryNext);
@@ -24,12 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (event.target.classList.contains('ur-breed-result')) {
-      console.log('clicked on resulst');
       const input = document.querySelector('.ur-breed-input');
-      console.log(event.target.innerHTML);
       input.value = event.target.innerHTML;
     }
-
+    const breedDropdown = document.querySelector('.ur-dropdown');
     breedDropdown.classList.add('xhidden');
   });
 
@@ -814,6 +811,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const fuse = new Fuse(breeds, fuseOptions);
 
   function searchBreed(search) {
+    const breedDropdown = document.querySelector('.ur-dropdown');
     breedDropdown.classList.remove('xhidden');
     // Clear all child elements of breedDropdown
     while (breedDropdown.firstChild) {
