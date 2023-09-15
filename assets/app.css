@@ -543,6 +543,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 1rem;
 }
 
+.xmt-4 {
+  margin-top: 1rem;
+}
+
 .\!xblock {
   display: block !important;
 }
@@ -589,6 +593,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xmax-h-\[50vh\] {
   max-height: 50vh;
+}
+
+.xmax-h-60 {
+  max-height: 15rem;
+}
+
+.xmax-h-96 {
+  max-height: 24rem;
 }
 
 .xmin-h-\[400px\] {
@@ -679,12 +691,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 8rem;
 }
 
+.xgap-2 {
+  gap: 0.5rem;
+}
+
 .xoverflow-hidden {
   overflow: hidden;
 }
 
 .xoverflow-clip {
   overflow: clip;
+}
+
+.xoverflow-scroll {
+  overflow: scroll;
 }
 
 .xoverflow-y-clip {
@@ -944,6 +964,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xplaceholder-beige-400::placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(206 191 150 / var(--tw-placeholder-opacity));
+}
+
+.xshadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
+    0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .xoutline-none {
@@ -1510,6 +1539,25 @@ details[open] svg {
 
 .blog .slider-button {
   width: 26px !important;
+}
+
+.ur-dropdown {
+  position: absolute !important;
+}
+
+.ur-suggestion {
+  position: relative !important;
+}
+
+.ur-breed-result {
+  cursor: pointer;
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+
+.ur-breed-result:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 238 227 / var(--tw-bg-opacity));
 }
 
 .icon-row-section.color-background-2,

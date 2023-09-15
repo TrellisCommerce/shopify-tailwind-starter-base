@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const breedDropdown = document.querySelector('.ur-dropdown');
+  const nextBtn = document.querySelector('.qur-next');
+  const prevBtn = document.querySelector('.qur-prev');
+  nextBtn.addEventListener('click', tryNext);
+  prevBtn.addEventListener('click', back);
+
   document.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
       // 'Enter' key was pressed
@@ -11,12 +17,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  console.log('1::');
+  document.addEventListener('mousedown', function (event) {
+    if (event.target.classList.contains('ur-breed-input')) {
+      searchBreed('');
+      return;
+    }
 
-  const nextBtn = document.querySelector('.qur-next');
-  const prevBtn = document.querySelector('.qur-prev');
-  nextBtn.addEventListener('click', tryNext);
-  prevBtn.addEventListener('click', back);
+    if (event.target.classList.contains('ur-breed-result')) {
+      console.log('clicked on resulst');
+      const input = document.querySelector('.ur-breed-input');
+      console.log(event.target.innerHTML);
+      input.value = event.target.innerHTML;
+    }
+
+    breedDropdown.classList.add('xhidden');
+  });
 
   function tryNext() {
     // Find the current active slide
@@ -100,8 +115,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   }
-
-  console.log('2::');
 
   const breeds = [
     {
@@ -794,9 +807,6 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   ];
 
-  console.log(breeds);
-  console.log(Fuse);
-
   const fuseOptions = {
     keys: ['name'],
   };
@@ -804,6 +814,21 @@ document.addEventListener('DOMContentLoaded', function () {
   const fuse = new Fuse(breeds, fuseOptions);
 
   function searchBreed(search) {
-    console.log(fuse.search(search));
+    breedDropdown.classList.remove('xhidden');
+    // Clear all child elements of breedDropdown
+    while (breedDropdown.firstChild) {
+      breedDropdown.removeChild(breedDropdown.firstChild);
+    }
+
+    // Search using fuse
+    const res = fuse.search(search);
+
+    // Iterate through the search results
+    res.forEach((result) => {
+      const breedDiv = document.createElement('div');
+      breedDiv.textContent = result.item.name;
+      breedDiv.classList.add('ur-breed-result');
+      breedDropdown.appendChild(breedDiv);
+    });
   }
 });

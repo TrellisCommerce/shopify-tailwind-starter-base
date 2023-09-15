@@ -68,13 +68,14 @@
                   <div class='ur-suggestion'>
                     <input
                       name='ur-breed'
+                      autocomplete='off'
                       type='text'
                       id='{{ block.id }}-text'
                       placeholder='{{ block.settings.placeholder_text }}'
                       class='ur-breed-input !xbg-beige-200 xpy-4 xpx-0 xborder-b-2 xtext-beige-950 xborder-beige-950 xtext-4xl xfont-semibold xplaceholder-beige-400 [&:has(:focus-visible)]:xoutline-none'
                     >
-                    <div class='ur-dropdown'>
-                      <div class='SuggInput'>No Suggestion</div>
+                    <div class='ur-dropdown xhidden xmt-4 xbg-white xshadow-lg xrounded-3xl xp-4 xflex xflex-col xgap-2 xmax-h-96 xoverflow-scroll'>
+                      <div class='item'>No Suggestion</div>
                     </div>
                   </div>
                   <div>

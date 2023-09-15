@@ -355,6 +355,18 @@ details[open] svg {
   width: 26px !important;
 }
 
+.ur-dropdown {
+  position: absolute !important;
+}
+
+.ur-suggestion {
+  position: relative !important;
+}
+
+.ur-breed-result {
+  @apply hover:xbg-beige-200 xrounded-3xl xcursor-pointer xp-4;
+}
+
 .icon-row-section.color-background-2,
 .ur-image-with-text.color-background-2,
 .multicolumn.color-accent-2 {
