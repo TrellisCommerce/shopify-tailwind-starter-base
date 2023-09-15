@@ -595,10 +595,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-height: 50vh;
 }
 
-.xmax-h-60 {
-  max-height: 15rem;
-}
-
 .xmax-h-96 {
   max-height: 24rem;
 }
@@ -629,6 +625,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xw-48 {
   width: 12rem;
+}
+
+.xw-40 {
+  width: 10rem;
 }
 
 .xflex-1 {
@@ -946,6 +946,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(33 28 15 / var(--tw-text-opacity));
 }
 
+.xtext-beige-400 {
+  --tw-text-opacity: 1;
+  color: rgb(206 191 150 / var(--tw-text-opacity));
+}
+
 .xline-through {
   -webkit-text-decoration-line: line-through;
   text-decoration-line: line-through;
@@ -1148,12 +1153,21 @@ header,
 }
 
 .button {
+  --tw-border-opacity: 1;
+  border-color: rgb(33 28 15 / var(--tw-border-opacity));
   font-weight: 600 !important;
   transition-property: all !important;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
   transition-duration: 150ms !important;
+}
+
+.button:hover {
+  border-width: 2px;
+}
+
+.button {
   --border-offset: 0px !important;
-  --border-opacity: unset;
+  --border-color: rgb(33 28 15);
 }
 
 .product-form__submit {
@@ -1189,7 +1203,6 @@ header,
   --tw-text-opacity: 1;
   color: rgb(33 28 15 / var(--tw-text-opacity));
   --border-offset: 0px !important;
-  --border-opacity: unset;
 }
 
 .button.beige {

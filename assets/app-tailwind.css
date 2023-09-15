@@ -125,9 +125,9 @@ header,
 }
 
 .button {
-  @apply !xtransition-all !xfont-semibold;
+  @apply !xtransition-all !xfont-semibold hover:xborder-2 xborder-beige-950;
   --border-offset: 0px !important;
-  --border-opacity: unset;
+  --border-color: rgb(33 28 15);
 }
 
 .product-form__submit {
@@ -145,7 +145,6 @@ header,
 .button:hover {
   @apply xborder-2 xborder-black xbg-beige-200 xtext-black;
   --border-offset: 0px !important;
-  --border-opacity: unset;
 }
 
 .button.beige {

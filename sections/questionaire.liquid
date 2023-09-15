@@ -26,13 +26,15 @@
                   >
                     {{- block.settings.question_text -}}
                   </label>
-                  <input
-                    type='text'
-                    required
-                    id='{{ block.id }}-text'
-                    placeholder='{{ block.settings.placeholder_text }}'
-                    class='!xbg-beige-200 xpy-4 xpx-0 xborder-b-2 xtext-beige-950 xborder-beige-950 xtext-4xl xfont-semibold xplaceholder-beige-400 [&:has(:focus-visible)]:xoutline-none'
-                  >
+                  <div>
+                    <input
+                      type='text'
+                      required
+                      id='{{ block.id }}-text'
+                      placeholder='{{ block.settings.placeholder_text }}'
+                      class='!xbg-beige-200 xpy-4 xpx-0 xborder-b-2 xtext-beige-950 xborder-beige-950 xtext-4xl xfont-semibold xplaceholder-beige-400 [&:has(:focus-visible)]:xoutline-none'
+                    >
+                  </div>
                 </form>
               </div>
             {% when 'age-question' %}
@@ -48,13 +50,15 @@
                     </label>
                     <p class='xmt-8'>{{ block.settings.question_descr }}</p>
                   </div>
-                  <input
-                    type='month'
-                    required
-                    id='{{ block.id }}-text'
-                    placeholder='2016-02'
-                    class='!xbg-beige-200 xpy-4 xpx-0 xborder-b-2 xtext-beige-950 xborder-beige-950 xtext-4xl xfont-semibold xplaceholder-beige-400 [&:has(:focus-visible)]:xoutline-none'
-                  >
+                  <div>
+                    <input
+                      type='month'
+                      required
+                      id='{{ block.id }}-text'
+                      placeholder='2016-02'
+                      class='!xbg-beige-200 xpy-4 xpx-0 xborder-b-2 xtext-beige-950 xborder-beige-950 xtext-4xl xfont-semibold xplaceholder-beige-400 [&:has(:focus-visible)]:xoutline-none'
+                    >
+                  </div>
                 </form>
               </div>
             {% when 'breed-question' %}
@@ -106,13 +110,43 @@
                     </label>
                     <p class='xmt-8'>{{ block.settings.question_descr }}</p>
                   </div>
-                  <input
-                    type='number'
-                    required
-                    id='{{ block.id }}-text'
-                    placeholder='{{ block.settings.placeholder_text }}'
-                    class='!xbg-beige-200 xpy-4 xpx-0 xborder-b-2 xtext-beige-950 xborder-beige-950 xtext-4xl xfont-semibold xplaceholder-beige-400 [&:has(:focus-visible)]:xoutline-none'
-                  >
+                  <div>
+                    <input
+                      type='number'
+                      required
+                      id='{{ block.id }}-text'
+                      placeholder='{{ block.settings.placeholder_text }}'
+                      class='ur-weight-input xw-40 !xbg-beige-200 xpy-4 xpx-0 xborder-b-2 xtext-beige-950 xborder-beige-950 xtext-4xl xfont-semibold xplaceholder-beige-400 [&:has(:focus-visible)]:xoutline-none'
+                    >
+                    <span class='xrelative -xleft-9 xtext-beige-400 xtext-4xl xfont-semibold' style='left: -60px'
+                      >kg</span
+                    >
+                  </div>
+                </form>
+              </div>
+            {% when 'allergies-question' %}
+              <div class='allergies-question'>
+                <form class='xflex xflex-col xgap-16'>
+                  <div>
+                    <label
+                      class='xfont-semibold xtext-6xl'
+                      style="font-family: 'Rooney';"
+                    >
+                      {{- block.settings.question_text -}}
+                    </label>
+                    <p class='xmt-8'>{{ block.settings.question_descr }}</p>
+                  </div>
+                  <div>
+                    <div>
+                      <input type='checkbox' id='fish' name='fish'>
+                      <label for='fish'>Fisch</label>
+                    </div>
+
+                    <div>
+                      <input type='checkbox' id='getreide' name='getreide'>
+                      <label for='getreide'>Getreide</label>
+                    </div>
+                  </div>
                 </form>
               </div>
           {% endcase %}
@@ -217,6 +251,24 @@
           "label": "Placeholder Text",
           "id": "placeholder_text",
           "default": "15"
+        }
+      ]
+    },
+    {
+      "type": "allergies-question",
+      "name": "Allergies Question",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Question Text",
+          "id": "question_text",
+          "default": "Hat %{name} Allergien oder Unverträglichkeiten?"
+        },
+        {
+          "type": "text",
+          "label": "Question Description",
+          "id": "question_descr",
+          "default": "Erklärung"
         }
       ]
     }

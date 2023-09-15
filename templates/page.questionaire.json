@@ -33,12 +33,21 @@
             "question_descr": "Anweisung",
             "placeholder_text": "z.B. Eurasier"
           }
+        },
+        "51b19b37-1fe3-4573-8bf6-9329044d8d19": {
+          "type": "weight-question",
+          "settings": {
+            "question_text": "Wieviel wiegt %{name}?",
+            "question_descr": "Du kannst das Gewicht schätzen wenn du es nicht genau weißt.",
+            "placeholder_text": "15"
+          }
         }
       },
       "block_order": [
         "020c3437-c274-4dab-9c0c-f90f5babf3be",
         "859a7f87-7b5f-41bd-9d63-9d474e6c88f8",
-        "b75941ac-20be-425d-810f-b5f6dbafeada"
+        "b75941ac-20be-425d-810f-b5f6dbafeada",
+        "51b19b37-1fe3-4573-8bf6-9329044d8d19"
       ],
       "settings": {
       }

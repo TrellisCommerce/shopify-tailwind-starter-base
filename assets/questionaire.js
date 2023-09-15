@@ -70,6 +70,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const breedValue = currentSlide.querySelector('input').value;
         dogData.breed = breedValue;
         break;
+      case 'weight-question':
+        const weightValue = currentSlide.querySelector('input').value;
+        dogData.weight = weightValue;
+        break;
     }
 
     console.log(dogData);
@@ -841,5 +845,6 @@ document.addEventListener('DOMContentLoaded', function () {
       breedDiv.classList.add('ur-breed-result');
       breedDropdown.appendChild(breedDiv);
     });
+    breedDropdown.scrollTop = 0;
   }
 });
