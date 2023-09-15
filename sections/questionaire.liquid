@@ -8,13 +8,14 @@
   <div class='page-width  xmin-h-[50vh] xflex xflex-col'>
     {% for block in section.blocks %}
       <div
-        data-slide='{{ forloop.index }}'
+        data-slide='{{ block.type }}'
         data-active='{% if forloop.first %}true{% else %}false{% endif %}'
+        data-type='{{ forloop.index }}'
         class='questionaire-slide xflex-1 xflex xflex-col xjustify-center xgap-16 {% unless forloop.first %}xhidden{% endunless %}'
       >
         {% case block.type %}
-          {% when 'text-question' %}
-            <div class='text-question'>
+          {% when 'name-question' %}
+            <div class='name-question'>
               <form class='xflex xflex-col xgap-16'>
                 <label
                   for='{{ block.id }}-text'
@@ -32,29 +33,25 @@
                 >
               </form>
             </div>
-          {% when 'select-question' %}
-            <div class='select-question'>
-              <label for='{{ block.id }}-select'>{{ block.settings.question_text }}</label>
-              <select id='{{ block.id }}-select'>
-                {% if block.settings.option_1_name and block.settings.option_1_value %}
-                  <option value='{{ block.settings.option_1_value }}'>{{ block.settings.option_1_name }}</option>
-                {% endif %}
-                {% if block.settings.option_2_name and block.settings.option_2_value %}
-                  <option value='{{ block.settings.option_2_value }}'>{{ block.settings.option_2_name }}</option>
-                {% endif %}
-              </select>
-            </div>
-          {% when 'slider-question' %}
-            <div class='slider-question'>
-              <label for='{{ block.id }}-slider'>{{ block.settings.question_text }}</label>
-              <input
-                type='range'
-                id='{{ block.id }}-slider'
-                min='{{ block.settings.min_value }}'
-                max='{{ block.settings.max_value }}'
-                step='{{ block.settings.step_value }}'
-              >
-              <span>{{ block.settings.min_label }}</span> - <span>{{ block.settings.max_label }}</span>
+          {% when 'age-question' %}
+            <div class='name-question'>
+              <form class='xflex xflex-col xgap-16'>
+                <label
+                  for='{{ block.id }}-text'
+                  class='xfont-semibold xtext-6xl'
+                  style="font-family: 'Rooney';"
+                >
+                  {{- block.settings.question_text -}}
+                </label>
+                <input
+                  type='text'
+                  required
+                  id='{{ block.id }}-text'
+                  placeholder='{{ block.settings.placeholder_text }}'
+                  class='!xbg-beige-200 xpy-4 xpx-0 xborder-b-2 xtext-beige-950 xborder-beige-950 xtext-4xl xfont-semibold xplaceholder-beige-400 [&:has(:focus-visible)]:xoutline-none'
+                >
+                <p>{{ block.settings.question_descr }}</p>
+              </form>
             </div>
         {% endcase %}
       </div>
@@ -71,95 +68,44 @@
   "name": "UR Questionnaire",
   "blocks": [
     {
-      "type": "text-question",
-      "name": "Text Question",
+      "type": "name-question",
+      "name": "Name Question",
       "settings": [
         {
           "type": "text",
           "label": "Question Text",
           "id": "question_text",
-          "default": "Enter your question here"
+          "default": "Wie heißt dein Hund?"
         },
         {
           "type": "text",
           "label": "Placeholder Text",
           "id": "placeholder_text",
-          "default": "Enter your answer here"
+          "default": "Name"
         }
       ]
     },
     {
-      "type": "select-question",
-      "name": "Select Question",
+      "type": "age-question",
+      "name": "Age Question",
       "settings": [
         {
           "type": "text",
           "label": "Question Text",
           "id": "question_text",
-          "default": "Choose an option"
+          "default": "Wie alt ist %{name}"
         },
         {
           "type": "text",
-          "label": "Option 1 Name",
-          "id": "option_1_name"
+          "label": "Question Description",
+          "id": "question_descr",
+          "default": "Hier reicht eine Schätzung, falls du das exakte Alter von %{name} nicht kennst."
         },
         {
           "type": "text",
-          "label": "Option 1 Value",
-          "id": "option_1_value"
-        },
-        {
-          "type": "text",
-          "label": "Option 2 Name",
-          "id": "option_2_name"
-        },
-        {
-          "type": "text",
-          "label": "Option 2 Value",
-          "id": "option_2_value"
-        }
-        // Continue in this pattern up to your maximum predetermined number of options.
-      ]
-    },
-    {
-      "type": "slider-question",
-      "name": "Slider Question",
-      "settings": [
-        {
-          "type": "text",
-          "label": "Question Text",
-          "id": "question_text",
-          "default": "Rate from 1 to 10"
-        },
-        {
-          "type": "number",
-          "label": "Minimum Value",
-          "id": "min_value",
-          "default": 1
-        },
-        {
-          "type": "number",
-          "label": "Maximum Value",
-          "id": "max_value",
-          "default": 10
-        },
-        {
-          "type": "number",
-          "label": "Step Value",
-          "id": "step_value",
-          "default": 1
-        },
-        {
-          "type": "text",
-          "label": "Minimum Label",
-          "id": "min_label",
-          "default": "1"
-        },
-        {
-          "type": "text",
-          "label": "Maximum Label",
-          "id": "max_label",
-          "default": "10"
+          "label": "Placeholder Text",
+          "id": "placeholder_text",
+          "default": "04.2015"
         }
       ]
     }
@@ -169,7 +115,7 @@
       "name": "UR Questionaire",
       "blocks": [
         {
-          "type": "text-question"
+          "type": "name-question"
         },
         {
           "type": "select-question"
