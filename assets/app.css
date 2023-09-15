@@ -504,6 +504,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: auto;
 }
 
+.xmy-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
 .xmy-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -512,11 +517,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .\!xmy-24 {
   margin-top: 6rem !important;
   margin-bottom: 6rem !important;
-}
-
-.xmy-16 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
 }
 
 .xmt-8 {
@@ -587,6 +587,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 0.5rem;
 }
 
+.xmax-h-\[50vh\] {
+  max-height: 50vh;
+}
+
 .xmin-h-\[400px\] {
   min-height: 400px;
 }
@@ -651,10 +655,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
-.xjustify-end {
-  justify-content: flex-end;
-}
-
 .xjustify-center {
   justify-content: center;
 }
@@ -685,6 +685,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xoverflow-clip {
   overflow: clip;
+}
+
+.xoverflow-y-clip {
+  overflow-y: clip;
 }
 
 .xrounded-3xl {
@@ -759,6 +763,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(222 139 53 / var(--tw-bg-opacity));
 }
 
+.\!xbg-beige-200 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(242 238 227 / var(--tw-bg-opacity)) !important;
+}
+
 .xbg-red {
   --tw-bg-opacity: 1;
   background-color: rgb(212 91 57 / var(--tw-bg-opacity));
@@ -779,19 +788,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(230 167 101 / var(--tw-bg-opacity));
 }
 
-.xbg-beige-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(242 238 227 / var(--tw-bg-opacity));
-}
-
-.\!xbg-beige-200 {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(242 238 227 / var(--tw-bg-opacity)) !important;
-}
-
 .xobject-contain {
   -o-object-fit: contain;
   object-fit: contain;
+}
+
+.xp-8 {
+  padding: 2rem;
 }
 
 .xp-4 {
@@ -804,10 +807,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xp-2 {
   padding: 0.5rem;
-}
-
-.xp-8 {
-  padding: 2rem;
 }
 
 .xp-16 {
@@ -922,11 +921,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(242 238 227 / var(--tw-text-opacity)) !important;
 }
 
-.xtext-beige-200 {
-  --tw-text-opacity: 1;
-  color: rgb(242 238 227 / var(--tw-text-opacity));
-}
-
 .xtext-beige-950 {
   --tw-text-opacity: 1;
   color: rgb(33 28 15 / var(--tw-text-opacity));
@@ -935,21 +929,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xline-through {
   -webkit-text-decoration-line: line-through;
   text-decoration-line: line-through;
-}
-
-.xplaceholder-lightbeige::-moz-placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(236 231 216 / var(--tw-placeholder-opacity));
-}
-
-.xplaceholder-lightbeige:-ms-input-placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(236 231 216 / var(--tw-placeholder-opacity));
-}
-
-.xplaceholder-lightbeige::placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(236 231 216 / var(--tw-placeholder-opacity));
 }
 
 .xplaceholder-beige-400::-moz-placeholder {
@@ -967,10 +946,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(206 191 150 / var(--tw-placeholder-opacity));
 }
 
-.xopacity-0 {
-  opacity: 0;
-}
-
 .xoutline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -980,6 +955,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.xduration-700 {
+  transition-duration: 700ms;
 }
 
 @font-face {

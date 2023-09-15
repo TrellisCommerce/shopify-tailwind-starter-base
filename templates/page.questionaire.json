@@ -21,9 +21,9 @@
         "859a7f87-7b5f-41bd-9d63-9d474e6c88f8": {
           "type": "age-question",
           "settings": {
-            "question_text": "Wie alt ist %{name}",
+            "question_text": "Wann wurde %{name} geboren?",
             "question_descr": "Hier reicht eine Schätzung, falls du das exakte Alter von %{name} nicht kennst.",
-            "placeholder_text": "04.2015"
+            "placeholder_text": "2016-04"
           }
         }
       },
