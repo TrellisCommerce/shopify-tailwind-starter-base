@@ -38,34 +38,38 @@
             {% when 'age-question' %}
               <div class='age-question'>
                 <form class='xflex xflex-col xgap-16'>
-                  <label
-                    for='{{ block.id }}-text'
-                    class='xfont-semibold xtext-6xl'
-                    style="font-family: 'Rooney';"
-                  >
-                    {{- block.settings.question_text -}}
-                  </label>
+                  <div>
+                    <label
+                      for='{{ block.id }}-text'
+                      class='xfont-semibold xtext-6xl'
+                      style="font-family: 'Rooney';"
+                    >
+                      {{- block.settings.question_text -}}
+                    </label>
+                    <p class='xmt-8'>{{ block.settings.question_descr }}</p>
+                  </div>
                   <input
                     type='month'
                     required
                     id='{{ block.id }}-text'
-                    placeholder='{{ block.settings.placeholder_text }}'
+                    placeholder='2016-02'
                     class='!xbg-beige-200 xpy-4 xpx-0 xborder-b-2 xtext-beige-950 xborder-beige-950 xtext-4xl xfont-semibold xplaceholder-beige-400 [&:has(:focus-visible)]:xoutline-none'
                   >
-                  <p>{{ block.settings.question_descr }}</p>
                 </form>
               </div>
             {% when 'breed-question' %}
               <div class='breed-question'>
                 <form class='xflex xflex-col xgap-16'>
-                  <label
-                    for='{{ block.id }}-text'
-                    class='xfont-semibold xtext-6xl'
-                    style="font-family: 'Rooney';"
-                  >
-                    {{- block.settings.question_text -}}
-                  </label>
-
+                  <div>
+                    <label
+                      for='{{ block.id }}-text'
+                      class='xfont-semibold xtext-6xl'
+                      style="font-family: 'Rooney';"
+                    >
+                      {{- block.settings.question_text -}}
+                    </label>
+                    <p class='xmt-8'>{{ block.settings.question_descr }}</p>
+                  </div>
                   <div class='ur-suggestion'>
                     <input
                       name='ur-breed'
@@ -87,6 +91,28 @@
                     >
                     <label for='notshure' class='' style="font-family: 'Rooney';">Ich bin mir nicht sicher...</label>
                   </div>
+                </form>
+              </div>
+            {% when 'weight-question' %}
+              <div class='weight-question'>
+                <form class='xflex xflex-col xgap-16'>
+                  <div>
+                    <label
+                      for='{{ block.id }}-text'
+                      class='xfont-semibold xtext-6xl'
+                      style="font-family: 'Rooney';"
+                    >
+                      {{- block.settings.question_text -}}
+                    </label>
+                    <p class='xmt-8'>{{ block.settings.question_descr }}</p>
+                  </div>
+                  <input
+                    type='number'
+                    required
+                    id='{{ block.id }}-text'
+                    placeholder='{{ block.settings.placeholder_text }}'
+                    class='!xbg-beige-200 xpy-4 xpx-0 xborder-b-2 xtext-beige-950 xborder-beige-950 xtext-4xl xfont-semibold xplaceholder-beige-400 [&:has(:focus-visible)]:xoutline-none'
+                  >
                 </form>
               </div>
           {% endcase %}
@@ -169,6 +195,30 @@
           "default": "z.B. Eurasier"
         }
       ]
+    },
+    {
+      "type": "weight-question",
+      "name": "Weight Question",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Question Text",
+          "id": "question_text",
+          "default": "Wieviel wiegt %{name}?"
+        },
+        {
+          "type": "text",
+          "label": "Question Description",
+          "id": "question_descr",
+          "default": "Du kannst das Gewicht schätzen wenn du es nicht genau weißt."
+        },
+        {
+          "type": "text",
+          "label": "Placeholder Text",
+          "id": "placeholder_text",
+          "default": "15"
+        }
+      ]
     }
   ],
   "presets": [
@@ -183,6 +233,9 @@
         },
         {
           "type": "breed-question"
+        },
+        {
+          "type": "weight-question"
         }
       ]
     }

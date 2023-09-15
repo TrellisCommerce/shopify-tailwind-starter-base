@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const dogData = {};
   const nextBtn = document.querySelector('.qur-next');
   const prevBtn = document.querySelector('.qur-prev');
   nextBtn.addEventListener('click', tryNext);
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  document.addEventListener('mousedown', function (event) {
+  document.addEventListener('click', function (event) {
     if (event.target.classList.contains('ur-breed-input')) {
       searchBreed('');
       return;
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (event.target.classList.contains('ur-breed-result')) {
       const input = document.querySelector('.ur-breed-input');
       input.value = event.target.innerHTML;
+      tryNext();
     }
     const breedDropdown = document.querySelector('.ur-dropdown');
     breedDropdown.classList.add('xhidden');
@@ -58,8 +60,19 @@ document.addEventListener('DOMContentLoaded', function () {
         slides.forEach((slide) => {
           slide.innerHTML = slide.innerHTML.replace(/%\{name\}/g, nameValue);
         });
+        dogData.name = nameValue;
+        break;
+      case 'age-question':
+        const ageValue = currentSlide.querySelector('input').value;
+        dogData.birth = ageValue;
+        break;
+      case 'breed-question':
+        const breedValue = currentSlide.querySelector('input').value;
+        dogData.breed = breedValue;
         break;
     }
+
+    console.log(dogData);
 
     // Return whether the slide (all forms in it) is valid or not
     return true;
