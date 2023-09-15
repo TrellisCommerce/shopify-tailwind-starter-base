@@ -74,6 +74,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const weightValue = currentSlide.querySelector('input').value;
         dogData.weight = weightValue;
         break;
+      case 'allergies-question':
+        const checkboxes = currentSlide.querySelectorAll(
+          'input[type="checkbox"]',
+        );
+        const checkedArray = Array.from(checkboxes)
+          .filter((checkbox) => checkbox.checked)
+          .map((checkbox) => checkbox.name);
+        dogData.allergies = checkedArray;
+        break;
     }
 
     console.log(dogData);
