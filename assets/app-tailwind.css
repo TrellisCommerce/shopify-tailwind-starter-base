@@ -75,6 +75,13 @@ header,
   font-weight: 700 !important;
   font-size: 1.5rem;
 }
+.facet-filters__sort + .icon-caret {
+  width: 20px !important;
+  height: 20px !important;
+  top: 0.2rem !important;
+  right: -0.15rem !important;
+}
+
 @media (min-width: 750px) {
   .banner__box {
     clip-path: url(#ur-clip);
