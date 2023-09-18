@@ -5,20 +5,20 @@
   {% render 'header-dropdown-menu' %}
 {% endcomment %}
 
-<nav class="header__inline-menu">
-  <ul class="list-menu list-menu--inline" role="list">
+<nav class='header__inline-menu'>
+  <ul class='list-menu list-menu--inline' role='list'>
     {%- for link in section.settings.menu.links -%}
       <li>
         {%- if link.links != blank -%}
           <header-menu>
-            <details id="Details-HeaderMenu-{{ forloop.index }}">
+            <details id='Details-HeaderMenu-{{ forloop.index }}'>
               <summary
-                id="HeaderMenu-{{ link.handle }}"
-                class="header__menu-item list-menu__item link focus-inset"
+                id='HeaderMenu-{{ link.handle }}'
+                class='header__menu-item list-menu__item link focus-inset'
               >
                 <span
                   {%- if link.child_active %}
-                    class="header__active-menu-item"
+                    class='header__active-menu-item'
                   {% endif %}
                 >
                   {{- link.title | escape -}}
@@ -26,45 +26,45 @@
                 {% render 'icon-caret' %}
               </summary>
               <ul
-                id="HeaderMenu-MenuList-{{ forloop.index }}"
-                class="header__submenu list-menu list-menu--disclosure color-{{ section.settings.menu_color_scheme }} gradient caption-large motion-reduce global-settings-popup"
-                role="list"
-                tabindex="-1"
+                id='HeaderMenu-MenuList-{{ forloop.index }}'
+                class='header__submenu list-menu list-menu--disclosure color-{{ section.settings.menu_color_scheme }} gradient caption-large motion-reduce global-settings-popup'
+                role='list'
+                tabindex='-1'
               >
                 {%- for childlink in link.links -%}
                   <li>
                     {%- if childlink.links == blank -%}
                       <a
-                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                        href="{{ childlink.url }}"
-                        class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"
+                        id='HeaderMenu-{{ link.handle }}-{{ childlink.handle }}'
+                        href='{{ childlink.url }}'
+                        class='header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}'
                         {% if childlink.current %}
-                          aria-current="page"
+                          aria-current='page'
                         {% endif %}
                       >
                         {{ childlink.title | escape }}
                       </a>
                     {%- else -%}
-                      <details id="Details-HeaderSubMenu-{{ link.handle }}-{{ childlink.handle }}">
+                      <details id='Details-HeaderSubMenu-{{ link.handle }}-{{ childlink.handle }}'>
                         <summary
-                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                          class="header__menu-item link link--text list-menu__item focus-inset caption-large"
+                          id='HeaderMenu-{{ link.handle }}-{{ childlink.handle }}'
+                          class='header__menu-item link link--text list-menu__item focus-inset caption-large'
                         >
                           <span>{{ childlink.title | escape }}</span>
                           {% render 'icon-caret' %}
                         </summary>
                         <ul
-                          id="HeaderMenu-SubMenuList-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                          class="header__submenu list-menu motion-reduce"
+                          id='HeaderMenu-SubMenuList-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}'
+                          class='header__submenu list-menu motion-reduce'
                         >
                           {%- for grandchildlink in childlink.links -%}
                             <li>
                               <a
-                                id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                href="{{ grandchildlink.url }}"
-                                class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}"
+                                id='HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}'
+                                href='{{ grandchildlink.url }}'
+                                class='header__menu-item list-menu__item link link--text focus-inset caption-large{% if grandchildlink.current %} list-menu__item--active{% endif %}'
                                 {% if grandchildlink.current %}
-                                  aria-current="page"
+                                  aria-current='page'
                                 {% endif %}
                               >
                                 {{ grandchildlink.title | escape }}
@@ -81,16 +81,16 @@
           </header-menu>
         {%- else -%}
           <a
-            id="HeaderMenu-{{ link.handle }}"
-            href="{{ link.url }}"
-            class="header__menu-item list-menu__item link link--text focus-inset"
+            id='HeaderMenu-{{ link.handle }}'
+            href='{{ link.url }}'
+            class='header__menu-item list-menu__item link link--text focus-inset'
             {% if link.current %}
-              aria-current="page"
+              aria-current='page'
             {% endif %}
           >
             <span
               {%- if link.current %}
-                class="header__active-menu-item"
+                class='header__active-menu-item'
               {% endif %}
             >
               {{- link.title | escape -}}
