@@ -1115,6 +1115,11 @@ header,
   right: -0.15rem !important;
 }
 
+.facets__display,
+.global-settings-popup {
+  border-radius: 1.5rem !important;
+}
+
 @media (min-width: 750px) {
   .banner__box {
     -webkit-clip-path: url(#ur-clip);
