@@ -82,6 +82,11 @@ header,
   right: -0.15rem !important;
 }
 
+.facets__display,
+.global-settings-popup {
+  @apply !xrounded-3xl;
+}
+
 @media (min-width: 750px) {
   .banner__box {
     clip-path: url(#ur-clip);
