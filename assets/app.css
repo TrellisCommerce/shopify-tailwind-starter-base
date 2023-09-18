@@ -1016,69 +1016,73 @@ Ensure the default browser behavior of the `hidden` attribute.
 @font-face {
   font-family: 'Rooney';
 
-  src: url("{{ 'rooney-regular.woff2' | asset_url }}") format('woff2'),
-    url("{{ 'rooney-regular.woff' | asset_url }}") format('woff'),
-    url("{{ 'rooney-regular.ttf' | asset_url }}") format('truetype'),
-    url("{{ 'rooney-regular.otf' | asset_url }}") format('opentype');
+  src: url('RooneyRegular.eot');
 
-  font-display: auto;
+  src: url('RooneyRegular.eot?#iefix') format('embedded-opentype'),
+    url('RooneyRegular.woff2') format('woff2'),
+    url('RooneyRegular.woff') format('woff'),
+    url('RooneyRegular.ttf') format('truetype'),
+    url('RooneyRegular.svg#RooneyRegular') format('svg');
+
+  font-weight: normal;
 
   font-style: normal;
 
-  font-weight: 400;
-
-  font-stretch: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Rooney';
 
-  src: url("{{ 'rooney-medium.woff2' | asset_url }}") format('woff2'),
-    url("{{ 'rooney-medium.woff' | asset_url }}") format('woff'),
-    url("{{ 'rooney-medium.ttf' | asset_url }}") format('truetype'),
-    url("{{ 'rooney-medium.otf' | asset_url }}") format('opentype');
+  src: url('RooneyHeavy.eot');
 
-  font-display: auto;
-
-  font-style: normal;
-
-  font-weight: 500;
-
-  font-stretch: normal;
-}
-
-@font-face {
-  font-family: 'Rooney';
-
-  src: url("{{ 'rooney-bold.woff2' | asset_url }}") format('woff2'),
-    url("{{ 'rooney-bold.woff' | asset_url }}") format('woff'),
-    url("{{ 'rooney-bold.ttf' | asset_url }}") format('truetype'),
-    url("{{ 'rooney-bold.otf' | asset_url }}") format('opentype');
-
-  font-display: auto;
-
-  font-style: normal;
-
-  font-weight: 700;
-
-  font-stretch: normal;
-}
-
-@font-face {
-  font-family: 'Rooney';
-
-  src: url("{{ 'rooney-heavy.woff2' | asset_url }}") format('woff2'),
-    url("{{ 'rooney-heavy.woff' | asset_url }}") format('woff'),
-    url("{{ 'rooney-heavy.ttf' | asset_url }}") format('truetype'),
-    url("{{ 'rooney-medheavyum.otf' | asset_url }}") format('opentype');
-
-  font-display: auto;
-
-  font-style: normal;
+  src: url('RooneyHeavy.eot?#iefix') format('embedded-opentype'),
+    url('RooneyHeavy.woff2') format('woff2'),
+    url('RooneyHeavy.woff') format('woff'),
+    url('RooneyHeavy.ttf') format('truetype'),
+    url('RooneyHeavy.svg#RooneyHeavy') format('svg');
 
   font-weight: 900;
 
-  font-stretch: normal;
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rooney';
+
+  src: url('RooneyBold.eot');
+
+  src: url('RooneyBold.eot?#iefix') format('embedded-opentype'),
+    url('RooneyBold.woff2') format('woff2'),
+    url('RooneyBold.woff') format('woff'),
+    url('RooneyBold.ttf') format('truetype'),
+    url('RooneyBold.svg#RooneyBold') format('svg');
+
+  font-weight: bold;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rooney';
+
+  src: url('RooneyMedium.eot');
+
+  src: url('RooneyMedium.eot?#iefix') format('embedded-opentype'),
+    url('RooneyMedium.woff2') format('woff2'),
+    url('RooneyMedium.woff') format('woff'),
+    url('RooneyMedium.ttf') format('truetype'),
+    url('RooneyMedium.svg#RooneyMedium') format('svg');
+
+  font-weight: 500;
+
+  font-style: normal;
+
+  font-display: swap;
 }
 
 body {
