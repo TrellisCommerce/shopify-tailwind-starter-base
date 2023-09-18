@@ -1599,6 +1599,18 @@ details[open] svg {
   background-color: rgb(242 238 227 / var(--tw-bg-opacity));
 }
 
+summary .icon-caret {
+  position: absolute;
+  height: 24px !important;
+  width: 24px !important;
+  right: 1.5rem;
+  top: unset !important;
+}
+
+.header__menu-item .icon-caret {
+  right: 0rem !important;
+}
+
 .icon-row-section.color-background-2,
 .ur-image-with-text.color-background-2,
 .multicolumn.color-accent-2 {
