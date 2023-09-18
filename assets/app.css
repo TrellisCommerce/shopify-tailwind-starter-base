@@ -1087,7 +1087,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 body {
   --swiper-navigation-size: 24px;
-  --swiper-theme-color: #151515;
+  --swiper-theme-color: #3f352a;
   --page-width: 140rem;
   --font-heading-family: 'Rooney' !important;
   --font-heading-weight: 900 !important;
