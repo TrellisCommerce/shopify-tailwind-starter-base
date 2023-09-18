@@ -631,14 +631,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 10rem;
 }
 
-.xmax-w-md {
-  max-width: 28rem;
-}
-
-.xmax-w-lg {
-  max-width: 32rem;
-}
-
 .xmax-w-3xl {
   max-width: 48rem;
 }
@@ -1026,6 +1018,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   src: url("{{ 'rooney-regular.woff2' | asset_url }}") format('woff2'),
     url("{{ 'rooney-regular.woff' | asset_url }}") format('woff'),
+    url("{{ 'rooney-regular.ttf' | asset_url }}") format('truetype'),
     url("{{ 'rooney-regular.otf' | asset_url }}") format('opentype');
 
   font-display: auto;
@@ -1042,6 +1035,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   src: url("{{ 'rooney-medium.woff2' | asset_url }}") format('woff2'),
     url("{{ 'rooney-medium.woff' | asset_url }}") format('woff'),
+    url("{{ 'rooney-medium.ttf' | asset_url }}") format('truetype'),
     url("{{ 'rooney-medium.otf' | asset_url }}") format('opentype');
 
   font-display: auto;
@@ -1058,6 +1052,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   src: url("{{ 'rooney-bold.woff2' | asset_url }}") format('woff2'),
     url("{{ 'rooney-bold.woff' | asset_url }}") format('woff'),
+    url("{{ 'rooney-bold.ttf' | asset_url }}") format('truetype'),
     url("{{ 'rooney-bold.otf' | asset_url }}") format('opentype');
 
   font-display: auto;
@@ -1074,6 +1069,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   src: url("{{ 'rooney-heavy.woff2' | asset_url }}") format('woff2'),
     url("{{ 'rooney-heavy.woff' | asset_url }}") format('woff'),
+    url("{{ 'rooney-heavy.ttf' | asset_url }}") format('truetype'),
     url("{{ 'rooney-medheavyum.otf' | asset_url }}") format('opentype');
 
   font-display: auto;
