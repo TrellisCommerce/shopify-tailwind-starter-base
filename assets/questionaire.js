@@ -109,7 +109,12 @@ document.addEventListener('DOMContentLoaded', function () {
       // If there's a next slide, set it to active and show it
       if (nextSlide) {
         nextSlide.setAttribute('data-active', 'true');
+        nextSlide.classList.remove('xhidden');
       }
+
+      setTimeout(() => {
+        currentActiveSlide.classList.add('xhidden');
+      }, 700);
     }
   }
 
@@ -130,12 +135,17 @@ document.addEventListener('DOMContentLoaded', function () {
       // If there's a previous slide, set it to active and show it
       if (prevSlide) {
         prevSlide.setAttribute('data-active', 'true');
+        prevSlide.classList.remove('xhidden');
       }
 
       // If we're at the first slide after moving back, hide the 'back' button
       if (prevSlideIndex === 1) {
         prevBtn.classList.add('!xhidden');
       }
+
+      setTimeout(() => {
+        currentActiveSlide.classList.add('xhidden');
+      }, 700);
     }
   }
 
