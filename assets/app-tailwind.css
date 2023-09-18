@@ -65,6 +65,8 @@ body {
   text-decoration-color: #3f352a;
   --font-body-weight: 400;
   --media-border-width: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 header,
