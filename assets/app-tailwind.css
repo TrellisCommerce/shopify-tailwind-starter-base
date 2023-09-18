@@ -88,6 +88,18 @@ header,
   font-family: 'Rooney' !important;
 }
 
+.collection-hero__title {
+  @apply !xmt-24;
+}
+
+.facets__form {
+  font-weight: 600;
+}
+.facets__summary .icon-caret {
+  right: -0.5rem !important;
+  top: 0.05rem !important;
+}
+
 .multicolumn.background-primary .multicolumn-card {
   background: #ece7d8 !important;
   @apply xborder-2 xborder-beige-300 xrounded-3xl;
