@@ -631,6 +631,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 10rem;
 }
 
+.xmin-w-\[50\%\] {
+  min-width: 50%;
+}
+
 .xmax-w-3xl {
   max-width: 48rem;
 }
@@ -945,6 +949,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.25rem !important;
 }
 
+.xtext-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.xtext-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.xtext-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .xfont-black {
   font-weight: 900;
 }
@@ -999,6 +1018,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xline-through {
   -webkit-text-decoration-line: line-through;
   text-decoration-line: line-through;
+}
+
+.\!xdecoration-beige-200 {
+  -webkit-text-decoration-color: #f2eee3 !important;
+  text-decoration-color: #f2eee3 !important;
 }
 
 .xplaceholder-beige-400::-moz-placeholder {
@@ -1749,6 +1773,10 @@ summary .icon-caret {
     margin-top: 8rem;
   }
 
+  .md\:xblock {
+    display: block;
+  }
+
   .md\:xw-auto {
     width: auto;
   }
@@ -1765,8 +1793,16 @@ summary .icon-caret {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:xgrid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .md\:xflex-row {
     flex-direction: row;
+  }
+
+  .md\:xgap-8 {
+    gap: 2rem;
   }
 
   .md\:xpx-2 {
@@ -1777,5 +1813,15 @@ summary .icon-caret {
   .md\:xpx-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .md\:xtext-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .md\:xtext-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }

@@ -34,11 +34,11 @@
       {%- endif -%}
 
       {% if collection.id == blank %}
-        <div class=' xgrid xgrid-cols-4 xgap-8'>
+        <div class=' xgrid xgrid-cols-2 md:xgrid-cols-4 xgap-4 md:xgap-8'>
           {% for block in section.blocks %}
             <a
               href='{{ block.settings.block_link }}'
-              class=' ur-collection-card xcard xrounded-3xl xp-8 xborder-lightbeige xborder-2 xflex xgap-8 xitems-center xtransition-all xbg-{{ block.settings.background_color }}'
+              class=' ur-collection-card xcard xrounded-3xl xp-8 xborder-lightbeige xborder-2 xflex xflex-wrap xgap-8 xitems-center xtransition-all xbg-{{ block.settings.background_color }}'
             >
               {% if block.settings.block_image != blank %}
                 <img
@@ -51,11 +51,11 @@
                 >
               {% endif %}
 
-              <div class='xflex xgap-8 xflex-1 xitems-center'>
-                <h2 class=' !xtext-beige-200 !wxdecoration-beige-200'>
+              <div class='xflex xgap-8 xflex-1 xitems-center xmin-w-[50%]'>
+                <h2 class=' !xtext-beige-200 !xdecoration-beige-200 xtext-2xl md:xtext-4xl'>
                   {{ block.settings.block_text }}
                 </h2>
-                <span class=' xfill-beige-200 !xtext-beige-200'>{% render 'icon-arrow' %} </span>
+                <span class=' xhidden md:xblock xfill-beige-200 !xtext-beige-200'>{% render 'icon-arrow' %} </span>
               </div>
             </a>
           {% endfor %}
