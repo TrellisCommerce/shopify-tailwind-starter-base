@@ -12,6 +12,15 @@
 <div class='collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient'>
   <div class='collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}'>
     <div class='collection-hero__text-wrapper'>
+      {% if collection.id != blank %}
+        <a
+          href='/collections/all'
+          class=' xfont-semibold xtext-beige-400 hover:xtext-beige-700 xtransition-all xflex xgap-4 xitems-center xmt-8'
+          style="font-family: 'Rooney';"
+        >
+          <span class='back'>{% render 'icon-arrow' %} </span> Zurück zum gesamten Sortiment
+        </a>
+      {% endif %}
       <h1 class='collection-hero__title'>
         <span class='visually-hidden'>{{ 'sections.collection_template.title' | t }}: </span>
         {{- collection.title | escape -}}
@@ -29,7 +38,7 @@
           {% for block in section.blocks %}
             <a
               href='{{ block.settings.block_link }}'
-              class='xcard xrounded-3xl xp-8 xborder-lightbeige xborder-2 xflex xgap-8 xitems-center xbg-{{ block.settings.background_color }}'
+              class=' ur-collection-card xcard xrounded-3xl xp-8 xborder-lightbeige xborder-2 xflex xgap-8 xitems-center xtransition-all xbg-{{ block.settings.background_color }}'
             >
               {% if block.settings.block_image != blank %}
                 <img
@@ -43,9 +52,9 @@
               {% endif %}
 
               <div class='xflex xgap-8 xflex-1 xitems-center'>
-                <div class='richtext beige no-margin !xtext-beige-200'>
-                  {{ block.settings.block_richtext }}
-                </div>
+                <h2 class=' !xtext-beige-200 !wxdecoration-beige-200'>
+                  {{ block.settings.block_text }}
+                </h2>
                 <span class=' xfill-beige-200 !xtext-beige-200'>{% render 'icon-arrow' %} </span>
               </div>
             </a>
@@ -124,10 +133,10 @@
           "label": "Image"
         },
         {
-          "type": "richtext",
-          "id": "block_richtext",
+          "type": "text",
+          "id": "block_text",
           "label": "Text",
-          "default": "<h2>Nassfutter</h2>"
+          "default": "Nassfutter"
         },
         {
           "type": "select",

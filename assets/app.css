@@ -981,6 +981,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(242 238 227 / var(--tw-text-opacity)) !important;
 }
 
+.xtext-beige-500 {
+  --tw-text-opacity: 1;
+  color: rgb(189 168 112 / var(--tw-text-opacity));
+}
+
 .xtext-beige-950 {
   --tw-text-opacity: 1;
   color: rgb(33 28 15 / var(--tw-text-opacity));
@@ -1195,6 +1200,19 @@ header,
   background-color: rgb(236 231 216 / var(--tw-bg-opacity)) !important;
   padding: 0.5rem !important;
   width: 174px !important;
+}
+
+.ur-collection-card:hover {
+  text-decoration: underline !important;
+  -webkit-text-decoration-color: #e0d7bd !important;
+  text-decoration-color: #e0d7bd !important;
+}
+
+.back .icon-arrow {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .richtext.beige h1,
@@ -1689,6 +1707,21 @@ summary .icon-caret {
 .hover\:xtext-black:hover {
   --tw-text-opacity: 1;
   color: rgb(33 28 15 / var(--tw-text-opacity));
+}
+
+.hover\:xtext-beige-800:hover {
+  --tw-text-opacity: 1;
+  color: rgb(90 78 42 / var(--tw-text-opacity));
+}
+
+.hover\:xtext-beige-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(167 143 78 / var(--tw-text-opacity));
+}
+
+.hover\:xtext-beige-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(129 110 60 / var(--tw-text-opacity));
 }
 
 .hover\:xunderline:hover {

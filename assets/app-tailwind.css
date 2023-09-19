@@ -130,6 +130,15 @@ header,
   width: 174px !important;
 }
 
+.ur-collection-card:hover {
+  text-decoration: underline !important;
+  text-decoration-color: #e0d7bd !important;
+}
+
+.back .icon-arrow {
+  @apply xrotate-180;
+}
+
 .richtext.beige h1,
 .richtext.beige h2,
 .richtext.beige h3,
