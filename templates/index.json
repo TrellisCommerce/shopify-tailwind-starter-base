@@ -684,7 +684,7 @@
     "build-a-box": {
       "type": "build-a-box",
       "settings": {
-        "collection": "all",
+        "collection": "nassfutter",
         "instruction_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<\/p>",
         "questionaire_info_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<\/p>",
         "questionaire_button_label": "Button label",

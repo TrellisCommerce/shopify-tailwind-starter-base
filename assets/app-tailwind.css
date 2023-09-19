@@ -129,7 +129,9 @@ header,
   @apply !xbg-lightbeige !xp-2;
   width: 174px !important;
 }
-
+.ur-collection-card {
+  text-decoration-color: #e0d7bd !important;
+}
 .ur-collection-card:hover {
   text-decoration: underline !important;
   text-decoration-color: #e0d7bd !important;
