@@ -4,28 +4,57 @@
 {%- style -%}
   @media screen and (max-width: 749px) {
     .collection-hero--with-image .collection-hero__inner {
-      padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
+      padding-bottom: calc({{settings.media_shadow_vertical_offset | at_least: 0}}px + 2rem);
     }
   }
 {%- endstyle -%}
 
-<div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
-  <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-    <div class="collection-hero__text-wrapper">
-      <h1 class="collection-hero__title">
-        <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+<div class='collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient'>
+  <div class='collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}'>
+    <div class='collection-hero__text-wrapper'>
+      <h1 class='collection-hero__title'>
+        <span class='visually-hidden'>{{ 'sections.collection_template.title' | t }}: </span>
         {{- collection.title | escape -}}
       </h1>
 
+      <script>
+        console.log({{ collection | json }});
+      </script>
+
       {%- if section.settings.show_collection_description -%}
-        <div class="collection-hero__description rte">{{ collection.description }}</div>
+        <div class='collection-hero__description rte'>{{ collection.description }}</div>
       {%- endif -%}
+
+      <div class='xflex xflex-row xspace-x-4'>
+        {% for block in section.blocks %}
+          <div class='xcard xborder xrounded xshadow-md xp-4'>
+            {% if block.settings.block_image != blank %}
+              <img
+                src='{{ block.settings.block_image | img_url: '300x' }}'
+                alt=''
+                class='xw-full xobject-cover xmb-4'
+                width='300'
+                height='300'
+                loading='lazy'
+              >
+            {% endif %}
+
+            <div class='xtext-base xleading-normal xmb-2'>
+              {{ block.settings.block_richtext }}
+            </div>
+
+            <a href='{{ block.settings.block_link }}' class='xtext-blue-500 xhover:text-blue-700'>
+              {{- block.settings.block_link -}}
+            </a>
+          </div>
+        {% endfor %}
+      </div>
     </div>
 
     {%- if section.settings.show_collection_image and collection.image -%}
-      <div class="collection-hero__image-container media gradient">
+      <div class='collection-hero__image-container media gradient'>
         <img
-          srcset="
+          srcset='
             {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
             {%- if collection.image.width >= 360 -%}{{ collection.image | image_url: width: 360 }} 360w,{%- endif -%}
             {%- if collection.image.width >= 535 -%}{{ collection.image | image_url: width: 535 }} 535w,{%- endif -%}
@@ -33,12 +62,12 @@
             {%- if collection.image.width >= 1070 -%}{{ collection.image | image_url: width: 1070 }} 1070w,{%- endif -%}
             {%- if collection.image.width >= 1500 -%}{{ collection.image | image_url: width: 1500 }} 1500w,{%- endif -%}
             {{ collection.image | image_url }} {{ collection.image.width }}w
-          "
-          src="{{ collection.image | image_url: width: 750 }}"
-          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)"
-          alt=""
-          width="{{ collection.image.width }}"
-          height="{{ collection.image.height }}"
+          '
+          src='{{ collection.image | image_url: width: 750 }}'
+          sizes='(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px, (min-width: 750px) calc(50vw - 130px), calc(50vw - 55px)'
+          alt=''
+          width='{{ collection.image.width }}'
+          height='{{ collection.image.height }}'
         >
       </div>
     {%- endif -%}
@@ -72,6 +101,30 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "background-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "url",
+          "id": "block_link",
+          "label": "Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "block_image",
+          "label": "Image"
+        },
+        {
+          "type": "textarea",
+          "id": "block_richtext",
+          "label": "Text",
+          "default": "<h2>Nassfutter</h2>"
+        }
+      ]
     }
   ]
 }

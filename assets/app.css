@@ -547,6 +547,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
+.xmb-4 {
+  margin-bottom: 1rem;
+}
+
+.xmb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .\!xblock {
   display: block !important;
 }
@@ -703,6 +711,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 0.5rem;
 }
 
+.xspace-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .xoverflow-hidden {
   overflow: hidden;
 }
@@ -731,6 +745,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 9999px;
 }
 
+.xrounded {
+  border-radius: 0.25rem;
+}
+
 .xrounded-t-lg {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
@@ -738,6 +756,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xborder-2 {
   border-width: 2px;
+}
+
+.xborder {
+  border-width: 1px;
 }
 
 .xborder-t-2 {
@@ -819,6 +841,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xobject-contain {
   -o-object-fit: contain;
   object-fit: contain;
+}
+
+.xobject-cover {
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .xp-8 {
@@ -923,6 +950,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.25rem !important;
 }
 
+.xtext-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .xfont-black {
   font-weight: 900;
 }
@@ -937,6 +969,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .\!xfont-semibold {
   font-weight: 600 !important;
+}
+
+.xleading-normal {
+  line-height: 1.5;
 }
 
 .xtext-black {
@@ -969,6 +1005,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(206 191 150 / var(--tw-text-opacity));
 }
 
+.xtext-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(170 198 207 / var(--tw-text-opacity));
+}
+
 .xline-through {
   -webkit-text-decoration-line: line-through;
   text-decoration-line: line-through;
@@ -994,6 +1035,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
     0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.xshadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
+    0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
