@@ -147,6 +147,14 @@ header,
   @apply !xmb-4;
 }
 
+.richtext.no-margin h1,
+.richtext.no-margin h2,
+.richtext.no-margin h3,
+.richtext.no-margin h4,
+.richtext.no-margin h5 {
+  @apply !xmb-0;
+}
+
 .slider-counter__link--active.slider-counter__link--dots .dot {
   @apply !xbg-beige-900;
 }
