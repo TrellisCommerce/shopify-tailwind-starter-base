@@ -129,6 +129,17 @@ header,
   @apply !xbg-lightbeige !xp-2;
   width: 174px !important;
 }
+.ur-collection-card {
+  text-decoration-color: #e0d7bd !important;
+}
+.ur-collection-card:hover {
+  text-decoration: underline !important;
+  text-decoration-color: #e0d7bd !important;
+}
+
+.back .icon-arrow {
+  @apply xrotate-180;
+}
 
 .richtext.beige h1,
 .richtext.beige h2,
@@ -145,6 +156,14 @@ header,
 .richtext h4,
 .richtext h5 {
   @apply !xmb-4;
+}
+
+.richtext.no-margin h1,
+.richtext.no-margin h2,
+.richtext.no-margin h3,
+.richtext.no-margin h4,
+.richtext.no-margin h5 {
+  @apply !xmb-0;
 }
 
 .slider-counter__link--active.slider-counter__link--dots .dot {

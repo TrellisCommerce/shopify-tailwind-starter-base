@@ -1,0 +1,89 @@
+<div class='page-width'>
+  <div class=' xgrid xgrid-cols-2 md:xgrid-cols-4 xgap-4 md:xgap-8'>
+    {% for block in section.blocks %}
+      <a
+        href='{{ block.settings.block_link }}'
+        class=' ur-collection-card xcard xrounded-3xl xp-8 xborder-lightbeige xborder-2 xflex xflex-wrap xgap-8 xitems-center xtransition-all xbg-{{ block.settings.background_color }}'
+      >
+        {% if block.settings.block_image != blank %}
+          <img
+            src='{{ block.settings.block_image | img_url: '300x' }}'
+            alt=''
+            class=' xobject-cover'
+            width='60'
+            height='60'
+            loading='lazy'
+          >
+        {% endif %}
+
+        <div class='xflex xgap-8 xflex-1 xitems-center xmin-w-[50%]'>
+          <h2 class=' !xtext-beige-200 !xdecoration-beige-200 xtext-2xl md:xtext-4xl'>
+            {{ block.settings.block_text }}
+          </h2>
+          <span class=' xhidden md:xblock xfill-beige-200 !xtext-beige-200'>{% render 'icon-arrow' %} </span>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "UR Colored Cards",
+  "class": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "url",
+          "id": "block_link",
+          "label": "Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "block_image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "block_text",
+          "label": "Text",
+          "default": "Nassfutter"
+        },
+        {
+          "type": "select",
+          "label": "Background Color",
+          "id": "background_color",
+          "options": [
+            {
+              "value": "red",
+              "label": "UR Red"
+            },
+            {
+              "value": "green",
+              "label": "UR Green"
+            },
+            {
+              "value": "purple",
+              "label": "UR Purple"
+            },
+            {
+              "value": "orange",
+              "label": "UR Orange"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "UR Colored Cards",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

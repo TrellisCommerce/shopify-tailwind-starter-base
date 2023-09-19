@@ -631,6 +631,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 10rem;
 }
 
+.xmin-w-\[50\%\] {
+  min-width: 50%;
+}
+
 .xmax-w-3xl {
   max-width: 48rem;
 }
@@ -643,12 +647,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   cursor: pointer;
 }
 
-.xgrid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
 .xgrid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.xgrid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .xflex-row {
@@ -693,6 +697,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xgap-4 {
   gap: 1rem;
+}
+
+.xgap-8 {
+  gap: 2rem;
 }
 
 .xgap-32 {
@@ -757,6 +765,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(224 215 189 / var(--tw-border-opacity));
 }
 
+.xborder-lightbeige {
+  --tw-border-opacity: 1;
+  border-color: rgb(236 231 216 / var(--tw-border-opacity));
+}
+
 .xborder-beige-950 {
   --tw-border-opacity: 1;
   border-color: rgb(33 28 15 / var(--tw-border-opacity));
@@ -816,9 +829,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(230 167 101 / var(--tw-bg-opacity));
 }
 
+.xfill-beige-200 {
+  fill: #f2eee3;
+}
+
 .xobject-contain {
   -o-object-fit: contain;
   object-fit: contain;
+}
+
+.xobject-cover {
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .xp-8 {
@@ -913,6 +935,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.5rem !important;
 }
 
+.xtext-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .\!xtext-xl {
   font-size: 1.25rem !important;
   line-height: 1.75rem !important;
@@ -959,19 +986,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(242 238 227 / var(--tw-text-opacity)) !important;
 }
 
-.xtext-beige-950 {
-  --tw-text-opacity: 1;
-  color: rgb(33 28 15 / var(--tw-text-opacity));
-}
-
 .xtext-beige-400 {
   --tw-text-opacity: 1;
   color: rgb(206 191 150 / var(--tw-text-opacity));
 }
 
+.xtext-beige-950 {
+  --tw-text-opacity: 1;
+  color: rgb(33 28 15 / var(--tw-text-opacity));
+}
+
 .xline-through {
   -webkit-text-decoration-line: line-through;
   text-decoration-line: line-through;
+}
+
+.\!xdecoration-beige-200 {
+  -webkit-text-decoration-color: #f2eee3 !important;
+  text-decoration-color: #f2eee3 !important;
 }
 
 .xplaceholder-beige-400::-moz-placeholder {
@@ -1175,6 +1207,24 @@ header,
   width: 174px !important;
 }
 
+.ur-collection-card {
+  -webkit-text-decoration-color: #e0d7bd !important;
+  text-decoration-color: #e0d7bd !important;
+}
+
+.ur-collection-card:hover {
+  text-decoration: underline !important;
+  -webkit-text-decoration-color: #e0d7bd !important;
+  text-decoration-color: #e0d7bd !important;
+}
+
+.back .icon-arrow {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .richtext.beige h1,
 .richtext.beige h2,
 .richtext.beige h3,
@@ -1191,6 +1241,14 @@ header,
 .richtext h4,
 .richtext h5 {
   margin-bottom: 1rem !important;
+}
+
+.richtext.no-margin h1,
+.richtext.no-margin h2,
+.richtext.no-margin h3,
+.richtext.no-margin h4,
+.richtext.no-margin h5 {
+  margin-bottom: 0px !important;
 }
 
 .slider-counter__link--active.slider-counter__link--dots .dot {
@@ -1661,6 +1719,11 @@ summary .icon-caret {
   color: rgb(33 28 15 / var(--tw-text-opacity));
 }
 
+.hover\:xtext-beige-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(129 110 60 / var(--tw-text-opacity));
+}
+
 .hover\:xunderline:hover {
   -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
@@ -1686,12 +1749,20 @@ summary .icon-caret {
     margin-top: 8rem;
   }
 
+  .md\:xblock {
+    display: block;
+  }
+
   .md\:xw-auto {
     width: auto;
   }
 
   .md\:xmax-w-2xl {
     max-width: 42rem;
+  }
+
+  .md\:xgrid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:xgrid-cols-3 {
@@ -1706,6 +1777,10 @@ summary .icon-caret {
     flex-direction: row;
   }
 
+  .md\:xgap-8 {
+    gap: 2rem;
+  }
+
   .md\:xpx-2 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -1714,5 +1789,10 @@ summary .icon-caret {
   .md\:xpx-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .md\:xtext-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }

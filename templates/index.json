@@ -121,6 +121,100 @@
         "padding_bottom": 36
       }
     },
+    "a3587d64-149a-4ee7-a42e-dafa93696b9e": {
+      "type": "colored-cards",
+      "blocks": {
+        "96ebf1dd-3bbf-4092-ab6a-3183001942df": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/nassfutter",
+            "block_text": "Nassfutter",
+            "background_color": "green"
+          }
+        },
+        "349db816-6348-4845-93a1-82e0be56b394": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/snacks",
+            "block_text": "Snacks",
+            "background_color": "purple"
+          }
+        },
+        "e557e6b5-0e34-4396-8fec-3626838441ae": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/ole",
+            "block_text": "Öle",
+            "background_color": "orange"
+          }
+        },
+        "ed261184-7291-4458-8af5-3a6cd7ad665d": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/pakete",
+            "block_text": "Pakete",
+            "background_color": "red"
+          }
+        }
+      },
+      "block_order": [
+        "96ebf1dd-3bbf-4092-ab6a-3183001942df",
+        "349db816-6348-4845-93a1-82e0be56b394",
+        "e557e6b5-0e34-4396-8fec-3626838441ae",
+        "ed261184-7291-4458-8af5-3a6cd7ad665d"
+      ],
+      "settings": {
+      }
+    },
+    "5b1bf651-85a1-474d-be11-0a684a5ec1ac": {
+      "type": "colored-cards",
+      "blocks": {
+        "a172fe29-a9c7-4d97-a9e9-8813d6a2e431": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/nassfutter",
+            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
+            "block_text": "Nassfutter",
+            "background_color": "green"
+          }
+        },
+        "805192d3-78fa-4fd7-b008-35196044e55f": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/snacks",
+            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
+            "block_text": "Snacks",
+            "background_color": "purple"
+          }
+        },
+        "fedeeb03-96b5-41e9-aa03-db77afa0700a": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/ole",
+            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
+            "block_text": "Öle",
+            "background_color": "orange"
+          }
+        },
+        "60eb449e-fecb-437b-aafa-8ef447145639": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/pakete",
+            "block_image": "shopify:\/\/shop_images\/test_collection.webp",
+            "block_text": "Pakete",
+            "background_color": "red"
+          }
+        }
+      },
+      "block_order": [
+        "a172fe29-a9c7-4d97-a9e9-8813d6a2e431",
+        "805192d3-78fa-4fd7-b008-35196044e55f",
+        "fedeeb03-96b5-41e9-aa03-db77afa0700a",
+        "60eb449e-fecb-437b-aafa-8ef447145639"
+      ],
+      "settings": {
+      }
+    },
     "9c172180-9760-4bc3-989a-937f54d744fd": {
       "type": "ur-image-with-text",
       "blocks": {
@@ -590,7 +684,11 @@
     "build-a-box": {
       "type": "build-a-box",
       "settings": {
-        "collection": "all",
+        "collection": "nassfutter",
+        "instruction_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<\/p>",
+        "questionaire_info_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<\/p>",
+        "questionaire_button_label": "Button label",
+        "questionaire_button_link": "",
         "below_price_info": "inkl. MwSt., zzgl. Versandkosten"
       }
     },
@@ -853,7 +951,7 @@
       "type": "apps",
       "blocks": {
         "8a6f59a9-05e7-414e-9796-b8e8449cf484": {
-          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "maxwidth": 1080
           }
@@ -888,6 +986,8 @@
     "d02ba099-4a0b-4f7d-a3b1-1514075d5076",
     "two-richtext",
     "3ec2a987-b522-4a27-b800-28dc1b68f35f",
+    "a3587d64-149a-4ee7-a42e-dafa93696b9e",
+    "5b1bf651-85a1-474d-be11-0a684a5ec1ac",
     "9c172180-9760-4bc3-989a-937f54d744fd",
     "357173cd-30c8-440c-bfb8-6e34d14254f8",
     "46b6142b-478f-4606-bc1d-d5759641bc51",

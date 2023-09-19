@@ -2,6 +2,50 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "blocks": {
+        "67be43dd-b022-4184-812c-09b70f884027": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/nassfutter",
+            "block_image": "shopify:\/\/shop_images\/test_collection.webp",
+            "block_text": "Nassfutter",
+            "background_color": "green"
+          }
+        },
+        "cf02a690-328d-4090-9f9d-29aa3003662c": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/snacks",
+            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
+            "block_text": "Snacks",
+            "background_color": "purple"
+          }
+        },
+        "214e923f-b344-43ba-9949-151eca8ee522": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/ole",
+            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
+            "block_text": "Öle",
+            "background_color": "orange"
+          }
+        },
+        "acd0fe1c-1fa6-406e-8c70-be0179aad2f5": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/pakete",
+            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
+            "block_text": "Pakete",
+            "background_color": "red"
+          }
+        }
+      },
+      "block_order": [
+        "67be43dd-b022-4184-812c-09b70f884027",
+        "cf02a690-328d-4090-9f9d-29aa3003662c",
+        "214e923f-b344-43ba-9949-151eca8ee522",
+        "acd0fe1c-1fa6-406e-8c70-be0179aad2f5"
+      ],
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
