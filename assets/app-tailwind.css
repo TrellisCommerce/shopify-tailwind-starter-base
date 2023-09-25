@@ -305,6 +305,14 @@ header,
   }
 }
 
+.header__icon .icon {
+  fill: currentColor !important;
+}
+.icon.icon-hamburger {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
 summary {
   cursor: pointer;
   list-style: none;
@@ -322,11 +330,16 @@ details[open] summary ~ * {
     transform: translateY(0px);
   }
 }
-details svg {
+.accordion details svg {
   transition: all 0.3s ease;
 }
-details[open] svg {
+
+.accordion details[open] svg {
   transform: rotate(90deg);
+}
+
+.menu-drawer__close-button svg {
+  rotate: 180deg;
 }
 
 /* JudgeMe Reviews */
