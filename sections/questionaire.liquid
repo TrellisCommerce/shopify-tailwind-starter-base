@@ -6,6 +6,12 @@
 <script src='{{ 'questionaire.js' | asset_url }}' defer></script>
 <script src='{{ 'fuse.js' | asset_url }}' defer></script>
 <section id='uncle-rustys-questionnaire'>
+  {% assign numberOfBlocks = section.blocks.size %}
+
+  <script>
+    window.ur_questionaire_slide_count = {{ numberOfBlocks }};
+  </script>
+
   <div class='xabsolute xw-full page-width xflex xmx-auto' style='left: 50%; transform: translateX(-50%);'>
     <div class=' xrounded-3xl xbg-lightbeige xmt-8 xp-8 xflex-1'>
       <h1 class=' xtext-4xl'>Ernährungsberatung</h1>
@@ -13,7 +19,7 @@
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
         dolore magna aliquyam erat.
       </p>
-      <progress class='xmt-8' value='0' max='100' style='--value: 20; --max: 100;'></progress>
+      <progress id='questionaire-progress' class='xmt-8' value='0' max='100' style='--value: 1; --max: 100;'></progress>
     </div>
   </div>
   <div class='page-width xflex xflex-col'>

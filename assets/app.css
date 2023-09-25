@@ -500,10 +500,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0px;
 }
 
-.xleft-1\/2 {
-  left: 50%;
-}
-
 .xm-auto {
   margin: auto;
 }
@@ -511,6 +507,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xmy-16 {
   margin-top: 4rem;
   margin-bottom: 4rem;
+}
+
+.xmx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .xmy-8 {
@@ -521,11 +522,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .\!xmy-24 {
   margin-top: 6rem !important;
   margin-bottom: 6rem !important;
-}
-
-.xmx-auto {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .xmt-8 {
@@ -650,13 +646,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xflex-1 {
   flex: 1 1 0%;
-}
-
-.x-translate-x-1\/2 {
-  --tw-translate-x: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .xcursor-pointer {
@@ -877,10 +866,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xp-16 {
   padding: 4rem;
-}
-
-.\!xp-0 {
-  padding: 0px !important;
 }
 
 .xpx-4 {
