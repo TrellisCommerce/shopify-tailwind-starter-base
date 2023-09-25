@@ -37,23 +37,24 @@
         <div class='swiper-button-prev'></div>
         <div class='swiper-button-next'></div>
       </div>
-      <div class='xmy-16 xbg-lightbeige xrounded-3xl xp-8'>
-        <div class='richtext cta-richtext'>{{ section.settings.questionaire_info_text }}</div>
-
-        <div class='cta-container'>
-          {%- if block.settings.button_label != blank -%}
-            <a
-              {% if block.settings.button_link == blank %}
-                role='link' aria-disabled='true'
-              {% else %}
-                href='{{ block.settings.button_link }}'
-              {% endif %}
-              class='button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}'
-              {{ block.shopify_attributes }}
-            >
-              {{ block.settings.button_label | escape }}
-            </a>
-          {%- endif -%}
+      <div class='xmb-8'>
+        <div class='xmy-16 xbg-lightbeige xrounded-3xl xp-8'>
+          <div class='richtext cta-richtext'>{{ section.settings.questionaire_info_text }}</div>
+          <div class='cta-container'>
+            {%- if block.settings.button_label != blank -%}
+              <a
+                {% if block.settings.button_link == blank %}
+                  role='link' aria-disabled='true'
+                {% else %}
+                  href='{{ block.settings.button_link }}'
+                {% endif %}
+                class='button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}'
+                {{ block.shopify_attributes }}
+              >
+                {{ block.settings.button_label | escape }}
+              </a>
+            {%- endif -%}
+          </div>
         </div>
       </div>
     </div>
@@ -215,7 +216,7 @@
       </div>
     </div>
 
-    <div class='ur-form-footer xbg-white xmt-8 xrounded-3xl xmb-8 xoverflow-clip'>
+    <div class='ur-form-footer xbg-white xmt-8 xrounded-3xl xoverflow-clip'>
       <div
         class='quantity-break-target xbg-orange-600 xtext-white xrounded-t-lg xp-4 xfont-bold xtext-center xrelative'
         style='font-size: 1.3rem;'
