@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const slideCount = window.ur_questionaire_slide_count;
+
   const dogData = {};
   const nextBtn = document.querySelector('.qur-next');
   const prevBtn = document.querySelector('.qur-prev');
+  const progressBar = document.querySelector('#questionaire-progress');
+
   nextBtn.addEventListener('click', tryNext);
   prevBtn.addEventListener('click', back);
 
@@ -97,9 +101,10 @@ document.addEventListener('DOMContentLoaded', function () {
       // Set its active status to false and hide it
       currentActiveSlide.setAttribute('data-active', 'false');
 
-      // Get the next slide
-      const nextSlideIndex =
-        parseInt(currentActiveSlide.getAttribute('data-slide')) + 1;
+      const currentSlideIndex = parseInt(
+        currentActiveSlide.getAttribute('data-slide'),
+      );
+      const nextSlideIndex = currentSlideIndex + 1;
       const nextSlide = document.querySelector(
         `[data-slide="${nextSlideIndex}"]`,
       );
@@ -115,6 +120,8 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(() => {
         currentActiveSlide.classList.add('xhidden');
       }, 700);
+
+      setProgress(currentSlideIndex);
     }
   }
 
@@ -125,9 +132,10 @@ document.addEventListener('DOMContentLoaded', function () {
       // Set its active status to false and hide it
       currentActiveSlide.setAttribute('data-active', 'false');
 
-      // Get the previous slide index
-      const prevSlideIndex =
-        parseInt(currentActiveSlide.getAttribute('data-slide'), 10) - 1;
+      const currentSlideIndex = parseInt(
+        currentActiveSlide.getAttribute('data-slide'),
+      );
+      const prevSlideIndex = currentSlideIndex - 1;
       const prevSlide = document.querySelector(
         `[data-slide="${prevSlideIndex}"]`,
       );
@@ -146,9 +154,31 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(() => {
         currentActiveSlide.classList.add('xhidden');
       }, 700);
+
+      setProgress(prevSlideIndex);
     }
   }
 
+  function setProgress(currentSlideIndex) {
+    const perc = (currentSlideIndex / slideCount) * 100;
+    console.log(perc);
+    var from = parseInt(progressBar.style.getPropertyValue('--value'));
+    var duration = 500; // 500ms
+
+    var start = new Date().getTime();
+
+    var timer = setInterval(function () {
+      var time = new Date().getTime() - start;
+      var x = Math.floor(easeInOutQuart(time, from, perc - from, duration));
+      progressBar.style.setProperty('--value', x);
+      if (time >= duration) clearInterval(timer);
+    }, 1000 / 60);
+  }
+
+  function easeInOutQuart(t, b, c, d) {
+    if ((t /= d / 2) < 1) return (c / 2) * t * t * t * t + b;
+    return (-c / 2) * ((t -= 2) * t * t * t - 2) + b;
+  }
   const breeds = [
     {
       id: 1,
