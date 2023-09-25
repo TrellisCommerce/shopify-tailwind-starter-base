@@ -686,9 +686,9 @@
       "settings": {
         "collection": "nassfutter",
         "instruction_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<\/p>",
-        "questionaire_info_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<\/p>",
-        "questionaire_button_label": "Button label",
-        "questionaire_button_link": "",
+        "questionaire_info_text": "<p>Du brauchst Unterstützung bei der Auswahl?<\/p>",
+        "questionaire_button_label": "Ernährungsberatung",
+        "questionaire_button_link": "shopify:\/\/pages\/questionaire",
         "below_price_info": "inkl. MwSt., zzgl. Versandkosten"
       }
     },

@@ -4,7 +4,7 @@
 
 {% assign collection = collections[section.settings.collection] %}
 {% comment %} TODO {% endcomment %}
-{% assign subscriptionPlan = 689522049319 %}
+{% assign subscriptionPlan = section.settings.questionaire_subscription_plan %}
 
 <div class='page-width page-width-desktop scroll-trigger animate--slide-in xmt-8 xflex xgap-16 xflex-col md:xflex-row'>
   <div class='ur-product-images xrelative md:xmt-32'>
@@ -267,6 +267,12 @@
       "type": "collection",
       "id": "collection",
       "label": "Collection"
+    },
+    {
+      "type": "number",
+      "id": "questionaire_subscription_plan",
+      "default": 689522049319,
+      "label": "Subscription Plan ID"
     },
     {
       "type": "richtext",
