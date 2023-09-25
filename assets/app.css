@@ -1268,6 +1268,11 @@ header,
   width: auto !important;
 }
 
+.header__icon .icon.icon-account {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
 .button {
   --tw-border-opacity: 1;
   border-color: rgb(33 28 15 / var(--tw-border-opacity));

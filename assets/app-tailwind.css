@@ -177,6 +177,11 @@ header,
   width: auto !important;
 }
 
+.header__icon .icon.icon-account {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
 .button {
   @apply !xtransition-all !xfont-semibold hover:xborder-2 xborder-beige-950;
   --border-offset: 0px !important;
