@@ -640,6 +640,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-width: 50%;
 }
 
+.xmin-w-\[80\%\] {
+  min-width: 80%;
+}
+
+.xmin-w-\[60\%\] {
+  min-width: 60%;
+}
+
 .xmax-w-3xl {
   max-width: 48rem;
 }
@@ -1889,6 +1897,10 @@ progress[value]::-moz-progress-bar {
     max-width: 42rem;
   }
 
+  .md\:xflex-1 {
+    flex: 1 1 0%;
+  }
+
   .md\:xgrid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -1920,6 +1932,26 @@ progress[value]::-moz-progress-bar {
   }
 
   .md\:xtext-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .md\:xtext-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 990px) {
+  .lg\:xflex-initial {
+    flex: 0 1 auto;
+  }
+
+  .lg\:xgrid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:xtext-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
