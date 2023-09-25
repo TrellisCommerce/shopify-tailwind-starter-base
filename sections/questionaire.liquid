@@ -13,14 +13,58 @@
   </script>
 
   <div class='xabsolute xw-full page-width xflex xmx-auto' style='left: 50%; transform: translateX(-50%);'>
-    <div class=' xrounded-3xl xbg-lightbeige xmt-8 xp-8 xflex-1'>
-      <h1 class=' xtext-4xl'>Ernährungsberatung</h1>
-      <p class='xmt-8'>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat.
-      </p>
-      <progress id='questionaire-progress' class='xmt-8' value='0' max='100' style='--value: 1; --max: 100;'></progress>
+    <div class='accordion content-container color-background-2 gradient xflex-1 xmt-8'>
+      <details id='info'>
+        <summary
+          id='info_sum'
+          role='button'
+          aria-expanded='false'
+          aria-controls='info_content'
+          class='xflex'
+        >
+          <h3 class='accordion__title inline-richtext h4 xfont-bold'>Ernährungsberatung</h3>
+          <svg
+            class='icon icon-caret'
+            width='24'
+            height='24'
+            viewBox='0 0 24 24'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <path d="M16.293 8.05029L12 12.3433L7.70697 8.05029L6.29297 9.46429L12 15.1713L17.707 9.46429L16.293 8.05029Z" fill="currentColor"></path>
+          </svg>
+        </summary>
+        <div
+          class='accordion__content rte'
+          id='info_content'
+          role='region'
+          aria-labelledby='info_sum'
+        >
+          <p class=' xpx-8 xpb-8'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+            tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae
+            erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor
+            interdum nulla.
+          </p>
+        </div>
+      </details>
+      <progress
+        id='questionaire-progress'
+        class='xpx-8 xmb-4'
+        value='0'
+        max='100'
+        style='--value: 1; --max: 100;'
+      ></progress>
     </div>
+    {% comment %}
+      <div class=' xrounded-3xl xbg-lightbeige xmt-8 xp-8 xflex-1'>
+        <h1 class=' xtext-4xl'>Ernährungsberatung</h1>
+        <p class='xmt-8'>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+          dolore magna aliquyam erat.
+        </p>
+      </div>
+    {% endcomment %}
   </div>
   <div class='page-width xflex xflex-col'>
     <div id='slide-wrap' class='wrap  xmin-h-[50vh] xmax-h-[50vh] xoverflow-y-clip'>

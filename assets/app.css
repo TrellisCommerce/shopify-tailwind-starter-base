@@ -552,6 +552,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
+.xmb-4 {
+  margin-bottom: 1rem;
+}
+
 .\!xblock {
   display: block !important;
 }
@@ -901,8 +905,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0px;
 }
 
+.xpx-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .xpt-4 {
   padding-top: 1rem;
+}
+
+.xpb-8 {
+  padding-bottom: 2rem;
 }
 
 .xtext-center {
