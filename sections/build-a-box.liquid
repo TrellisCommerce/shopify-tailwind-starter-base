@@ -38,20 +38,21 @@
         <div class='swiper-button-next'></div>
       </div>
       <div class='xmb-8'>
-        <div class='xmy-16 xbg-lightbeige xrounded-3xl xp-8'>
-          <div class='richtext cta-richtext'>{{ section.settings.questionaire_info_text }}</div>
+        <div class='xmy-16 xbg-lightbeige xrounded-3xl xp-8 xflex xflex-wrap xgap-8 xjustify-between xitems-center'>
+          <div class='richtext cta-richtext  xfont-black xtext-2xl ' style="font-family: 'Rooney';">
+            {{ section.settings.questionaire_info_text }}
+          </div>
           <div class='cta-container'>
-            {%- if block.settings.button_label != blank -%}
+            {%- if section.settings.questionaire_button_label != blank -%}
               <a
-                {% if block.settings.button_link == blank %}
+                {% if section.settings.questionaire_button_link == blank %}
                   role='link' aria-disabled='true'
                 {% else %}
-                  href='{{ block.settings.button_link }}'
+                  href='{{ section.settings.questionaire_button_link }}'
                 {% endif %}
-                class='button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}'
-                {{ block.shopify_attributes }}
+                class='button button--secondary'
               >
-                {{ block.settings.button_label | escape }}
+                {{ section.settings.questionaire_button_label | escape }}
               </a>
             {%- endif -%}
           </div>
