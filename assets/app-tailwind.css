@@ -304,6 +304,17 @@ header,
     width: calc(100% - 46rem);
   }
 }
+.card__badge {
+  @apply xfont-semibold;
+}
+.card__badge.top {
+  margin: 1.3rem;
+}
+
+.color-accent-2 {
+  --color-badge-foreground: 255, 255, 255;
+  --color-badge-background: 230, 167, 101;
+}
 
 .header__icon .icon {
   fill: currentColor !important;

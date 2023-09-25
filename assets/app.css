@@ -548,12 +548,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 1rem;
 }
 
-.xmt-4 {
-  margin-top: 1rem;
-}
-
 .xmb-4 {
   margin-bottom: 1rem;
+}
+
+.xmt-4 {
+  margin-top: 1rem;
 }
 
 .\!xblock {
@@ -640,16 +640,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 10rem;
 }
 
-.xmin-w-\[50\%\] {
-  min-width: 50%;
-}
-
-.xmin-w-\[80\%\] {
-  min-width: 80%;
-}
-
 .xmin-w-\[60\%\] {
   min-width: 60%;
+}
+
+.xmin-w-\[50\%\] {
+  min-width: 50%;
 }
 
 .xmax-w-3xl {
@@ -895,6 +891,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 8rem;
 }
 
+.xpx-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .xpy-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -903,11 +904,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xpx-0 {
   padding-left: 0px;
   padding-right: 0px;
-}
-
-.xpx-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .xpt-4 {
@@ -1563,6 +1559,19 @@ header,
   }
 }
 
+.card__badge {
+  font-weight: 600;
+}
+
+.card__badge.top {
+  margin: 1.3rem;
+}
+
+.color-accent-2 {
+  --color-badge-foreground: 255, 255, 255;
+  --color-badge-background: 230, 167, 101;
+}
+
 .header__icon .icon {
   fill: currentColor !important;
 }
@@ -1914,12 +1923,12 @@ progress[value]::-moz-progress-bar {
     flex: 1 1 0%;
   }
 
-  .md\:xgrid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .md\:xgrid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:xgrid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:xgrid-cols-2 {
@@ -1944,14 +1953,14 @@ progress[value]::-moz-progress-bar {
     padding-right: 0px;
   }
 
-  .md\:xtext-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
   .md\:xtext-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .md\:xtext-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 
