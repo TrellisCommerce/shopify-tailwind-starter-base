@@ -7,9 +7,6 @@
         "padding_bottom": 36
       }
     },
-    "build-a-box": {
-      "type": "build-a-box"
-    },
     "form": {
       "type": "contact-form",
       "settings": {
@@ -23,7 +20,6 @@
   },
   "order": [
     "main",
-    "build-a-box",
     "form"
   ]
 }
