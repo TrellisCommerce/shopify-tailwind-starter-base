@@ -197,6 +197,26 @@
   </div>
 </section>
 
+{% if request.design_mode %}
+  <script>
+    document.addEventListener('shopify:block:select', function (event) {
+      const blockSelectedIsSlide = event.target.classList.contains('questionaire-slide');
+      if (!blockSelectedIsSlide) return;
+
+      const slides = document.querySelectorAll('.questionaire-slide');
+      const slideArray = [...slides];
+
+      slideArray.map(function (slide) {
+        slide.setAttribute('data-active', 'false');
+        slide.classList.add('xhidden');
+      });
+
+      event.target.setAttribute('data-active', 'true');
+      event.target.classList.remove('xhidden');
+    });
+  </script>
+{% endif %}
+
 {% schema %}
 {
   "name": "UR Questionnaire",
