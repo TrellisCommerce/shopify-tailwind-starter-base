@@ -76,7 +76,10 @@
                   {{ block.settings.text }}
                 </div>
               {% when 'icon-text' %}
-                <div class='icon-text-container xflex xgap-4 xitems-center'>
+                <div
+                  class='icon-text-container xflex xgap-4 xitems-center'
+                  {{ block.shopify_attributes }}
+                >
                   <div class='icon-container '>
                     {% case block.settings.icon_selection %}
                       {% when 'icon-3d-model' %}

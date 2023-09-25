@@ -4,6 +4,7 @@
       <a
         href='{{ block.settings.block_link }}'
         class=' ur-collection-card xcard xrounded-3xl xp-8 xborder-lightbeige xborder-2 xflex xflex-wrap xgap-8 xitems-center xtransition-all xbg-{{ block.settings.background_color }}'
+        {{ block.shopify_attributes }}
       >
         {% if block.settings.block_image != blank %}
           <img

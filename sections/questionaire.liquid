@@ -30,6 +30,7 @@
           data-active='{% if forloop.first %}true{% else %}false{% endif %}'
           data-type='{{ block.type }}'
           class='questionaire-slide xflex-1 xflex xflex-col xjustify-center xgap-16 xmin-h-[50vh] xtransition-all xduration-700 {% unless forloop.first %}xhidden{% endunless %}'
+          {{ block.shopify_attributes }}
         >
           {% case block.type %}
             {% when 'name-question' %}
