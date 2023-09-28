@@ -27,7 +27,7 @@
             "image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_su_b29c0781-ee5d-4f96-812c-2417e49ed61d.png",
             "heading": "Mehr als nur ein Hundefutter",
             "heading_size": "h1",
-            "subheading": "Jedes Menü ist ein Versprechen - reine, regionale Zutaten, handverlesen und schonend verarbeitet.",
+            "subheading": "Jedes Menü ist ein Versprechen - reine, regionale Zutaten, sorgfältig ausgewählt und schonend verarbeitet. Weil jeder Bissen zählt.",
             "button_label": "Button label",
             "link": "",
             "button_style_secondary": false,
@@ -77,7 +77,7 @@
     "two-richtext": {
       "type": "two-richtext",
       "settings": {
-        "richtext_left": "<h1>Convenient Delivery to Your Doorstep<\/h1>",
+        "richtext_left": "<h1>Echtes Handwerk. Weil jeder Bissen zählt.<\/h1>",
         "richtext_right": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>"
       }
     },
