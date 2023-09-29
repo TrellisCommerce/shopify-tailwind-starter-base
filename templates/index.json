@@ -330,7 +330,7 @@
         "48e385e2-672a-47df-893c-61ec9e7b0758": {
           "type": "text",
           "settings": {
-            "text": "<p>Bei Uncle Rusty's glauben wir, dass Hundefutter mehr sein sollte als nur eine Mahlzeit. Es sollte eine Ernährungsphilosophie sein, die das Wohlbefinden und die Gesundheit deines Hundes in den Mittelpunkt stellt. Unser Futter ist 100% getreidefrei und enthält weder Gluten, Zucker, Soja, Knochenmehl, Schlachtabfälle, Farbstoffe noch Tierversuche sowie Gentechnik. Mit einem idealen Fleisch-, Nähr- und Mineralstoffe-Verhältnis bieten wir eine Ernährung, die deinem Hund gerecht wird.<\/p>",
+            "text": "<p>Bei Uncle Rusty's glauben wir, dass Hundefutter mehr sein sollte als nur eine Mahlzeit. Es sollte eine Ernährungsphilosophie sein, die das Wohlbefinden und die Gesundheit deines Hundes in den Mittelpunkt stellt. Unser Futter ist 100% naturbelassen und enthält weder Gluten, Zucker, Soja, Knochenmehl, Schlachtabfälle, Farbstoffe noch Tierversuche sowie Gentechnik. Mit einem idealen Fleisch-, Nähr- und Mineralstoffe-Verhältnis bieten wir eine Ernährung, die deinem Hund gerecht wird.<\/p>",
             "text_style": "body"
           }
         },
@@ -338,28 +338,28 @@
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-organic-color",
-            "icon_text": "Regionale Zutaten"
+            "icon_text": "Transparenz - Volldeklaration nach EU-Recht"
           }
         },
         "43dc0855-04c8-498f-94b0-025b01978538": {
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-no-gluten-color",
-            "icon_text": "Glutenfrei"
+            "icon_text": "Individualität - Menüs für jeden Hund anpassbar"
           }
         },
         "f6100df4-5580-4f6b-9421-1d0a9f5a8758": {
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-no-chemicals-color",
-            "icon_text": "Ohne Chemie"
+            "icon_text": "Nachhaltigkeit - Für eine bessere Zukunft"
           }
         },
         "73f94850-ec21-4589-8038-d48c405ece3a": {
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-no-animals-color",
-            "icon_text": "Frei von Tierversuchen"
+            "icon_text": "Exklusivität - Nur online, nur bei Uncle Rusty's"
           }
         },
         "532b8682-d57d-483c-aca7-0fc749f6f613": {
