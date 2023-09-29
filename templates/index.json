@@ -173,7 +173,7 @@
         "c7cb0cce-33e7-4e54-870a-5b33c1044e07": {
           "type": "caption",
           "settings": {
-            "caption": "Add a tagline",
+            "caption": "Mehr als nur eine Marke",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium"
           }
@@ -181,14 +181,14 @@
         "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text & colored icons",
+            "heading": "Die Geschichte von Rusty",
             "heading_size": "h1"
           }
         },
         "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Alles begann mit Rusty, einem Familienhund aus Bayern, der uns zeigte, wie wichtig echte, natürliche Ernährung ist. Bei Uncle Rusty's geht es nicht nur um Hundefutter. Es geht um ein Versprechen, das wir jedem Hund geben: Natürlichkeit, Ehrlichkeit und Qualität in jeder Dose. Fast wie selbst gekocht, bringen wir eine artgerechte, naturreine und vor allem preiswerte Nahrung in den Napf.<\/p>",
             "text_style": "body"
           }
         },
@@ -196,21 +196,21 @@
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-organic-color",
-            "icon_text": "Regionale Zutaten"
+            "icon_text": "Handwerk - Tradition trifft Innovation"
           }
         },
         "04544f39-b233-4153-a50d-ca2cb01b6274": {
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-no-gluten-color",
-            "icon_text": "Glutenfrei"
+            "icon_text": "Natürlich - Nur echte Vitamine, keine Synthetik"
           }
         },
         "007035b8-304e-4acf-ac27-bedfe03d79a5": {
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-no-chemicals-color",
-            "icon_text": "Ohne Chemie"
+            "icon_text": "Reinheit - Keine Füllstoffe, nur das Beste"
           }
         },
         "3551eac1-1b96-49ad-ae2e-95c7080d8117": {
