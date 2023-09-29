@@ -365,7 +365,7 @@
         "532b8682-d57d-483c-aca7-0fc749f6f613": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "Unsere Werte",
             "button_link": "shopify:\/\/pages\/build-a-box",
             "button_style_secondary": false
           }
