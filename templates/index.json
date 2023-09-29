@@ -323,14 +323,14 @@
         "e32ac028-a304-4775-a1d4-a95b9d27c9de": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text & colored icons",
+            "heading": "Unser Anspruch",
             "heading_size": "h1"
           }
         },
         "48e385e2-672a-47df-893c-61ec9e7b0758": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Bei Uncle Rusty's glauben wir, dass Hundefutter mehr sein sollte als nur eine Mahlzeit. Es sollte eine Ernährungsphilosophie sein, die das Wohlbefinden und die Gesundheit deines Hundes in den Mittelpunkt stellt. Unser Futter ist 100% getreidefrei und enthält weder Gluten, Zucker, Soja, Knochenmehl, Schlachtabfälle, Farbstoffe noch Tierversuche sowie Gentechnik. Mit einem idealen Fleisch-, Nähr- und Mineralstoffe-Verhältnis bieten wir eine Ernährung, die deinem Hund gerecht wird.<\/p>",
             "text_style": "body"
           }
         },
