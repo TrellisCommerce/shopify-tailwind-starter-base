@@ -39,11 +39,15 @@ document.addEventListener('DOMContentLoaded', function () {
         variantElement.getElementsByClassName('variant-id')[0].value;
       const quantity =
         variantElement.getElementsByClassName('variant-quantity')[0].value;
+      const variantCollection = variantElement
+        .getElementsByClassName('variant-id')[0]
+        .getAttribute('data-collection');
 
       itemsToAdd.push({
         id: variantId,
         quantity: quantity,
         selling_plan: currentPlan,
+        collection: variantCollection
       });
     }
     return itemsToAdd;
@@ -51,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function calculateTotal() {
     const itemsToAdd = getVariantItems();
+    console.log(itemsToAdd);
     let totalPrice = 0;
     let totalPriceOriginal = 0;
     let totalQuantity = 0;
@@ -86,7 +91,10 @@ document.addEventListener('DOMContentLoaded', function () {
       totalPriceOriginal =
         totalPriceOriginal + itemPriceOriginal * item.quantity;
       totalPrice = totalPrice + itemPrice * item.quantity;
-      totalQuantity = totalQuantity + parseInt(item.quantity);
+      if(item.collection === 'main') {
+        totalQuantity = totalQuantity + parseInt(item.quantity);
+
+      }
     }
 
     const quantityBreakCounter = quantityBreakTarget - totalQuantity;
