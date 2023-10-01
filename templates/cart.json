@@ -1,5 +1,12 @@
 {
   "sections": {
+    "03eaa699-07cd-4a55-8c1b-b54a1e7074e4": {
+      "type": "cart-upsell",
+      "settings": {
+        "upsell_collection": "snacks",
+        "cta_text": "Shop Now"
+      }
+    },
     "cart-items": {
       "type": "main-cart-items",
       "settings": {
@@ -26,6 +33,8 @@
         "buttons"
       ],
       "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "featured-collection": {
@@ -33,15 +42,23 @@
       "settings": {
         "title": "Featured collection",
         "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
         "collection": "all",
         "products_to_show": 4,
         "columns_desktop": 4,
+        "full_width": false,
         "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
         "color_scheme": "background-1",
         "image_ratio": "square",
+        "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
+        "enable_quick_add": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -50,6 +67,7 @@
     }
   },
   "order": [
+    "03eaa699-07cd-4a55-8c1b-b54a1e7074e4",
     "cart-items",
     "cart-footer",
     "featured-collection"

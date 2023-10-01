@@ -12,6 +12,12 @@
       "type": "build-a-box",
       "settings": {
         "collection": "nassfutter",
+        "additives_collection": "ole",
+        "questionaire_subscription_plan": 689522049319,
+        "instruction_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<\/p>",
+        "questionaire_info_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<\/p>",
+        "questionaire_button_label": "Button label",
+        "questionaire_button_link": "",
         "below_price_info": "inkl. MwSt., zzgl. Versandkosten"
       }
     }
