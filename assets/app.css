@@ -40,9 +40,11 @@ html {
   -moz-tab-size: 4;
   /* 3 */
   -o-tab-size: 4;
-     tab-size: 4;
+  tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   /* 4 */
 }
 
@@ -79,7 +81,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /*
@@ -123,7 +125,8 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -346,14 +349,16 @@ textarea {
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
-input::-moz-placeholder, textarea::-moz-placeholder {
+input::-moz-placeholder,
+textarea::-moz-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
   /* 2 */
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
@@ -373,7 +378,7 @@ Set the default cursor for buttons.
 */
 
 button,
-[role="button"] {
+[role='button'] {
   cursor: pointer;
 }
 
@@ -423,7 +428,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-*, ::before, ::after {
+*,
+::before,
+::after {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
   --tw-rotate: 0;
@@ -431,16 +438,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-skew-y: 0;
   --tw-scale-x: 1;
   --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
+  --tw-pan-x: ;
+  --tw-pan-y: ;
+  --tw-pinch-zoom: ;
   --tw-scroll-snap-strictness: proximity;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
+  --tw-ordinal: ;
+  --tw-slashed-zero: ;
+  --tw-numeric-figure: ;
+  --tw-numeric-spacing: ;
+  --tw-numeric-fraction: ;
+  --tw-ring-inset: ;
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: rgb(170 198 207 / 0.5);
@@ -448,24 +455,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
+  --tw-blur: ;
+  --tw-brightness: ;
+  --tw-contrast: ;
+  --tw-grayscale: ;
+  --tw-hue-rotate: ;
+  --tw-invert: ;
+  --tw-saturate: ;
+  --tw-sepia: ;
+  --tw-drop-shadow: ;
+  --tw-backdrop-blur: ;
+  --tw-backdrop-brightness: ;
+  --tw-backdrop-contrast: ;
+  --tw-backdrop-grayscale: ;
+  --tw-backdrop-hue-rotate: ;
+  --tw-backdrop-invert: ;
+  --tw-backdrop-opacity: ;
+  --tw-backdrop-saturate: ;
+  --tw-backdrop-sepia: ;
 }
 
 .xabsolute {
@@ -836,17 +843,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .xfill-beige-200 {
-  fill: #F2EEE3;
+  fill: #f2eee3;
 }
 
 .xobject-contain {
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .xobject-cover {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .xp-8 {
@@ -1013,12 +1020,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xline-through {
   -webkit-text-decoration-line: line-through;
-          text-decoration-line: line-through;
+  text-decoration-line: line-through;
 }
 
 .\!xdecoration-beige-200 {
-  -webkit-text-decoration-color: #F2EEE3 !important;
-          text-decoration-color: #F2EEE3 !important;
+  -webkit-text-decoration-color: #f2eee3 !important;
+  text-decoration-color: #f2eee3 !important;
 }
 
 .xplaceholder-beige-400::-moz-placeholder {
@@ -1037,9 +1044,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .xshadow-lg {
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
+    0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .xoutline-none {
@@ -1138,7 +1148,7 @@ body {
   --ur-base: #3f352a;
   --ur-border: #e0d7bd;
   -webkit-text-decoration-color: #3f352a;
-          text-decoration-color: #3f352a;
+  text-decoration-color: #3f352a;
   --font-body-weight: 400;
   --media-border-width: 0px;
   -webkit-font-smoothing: antialiased;
@@ -1159,14 +1169,15 @@ header,
   right: -0.15rem !important;
 }
 
-.facets__display, .global-settings-popup {
+.facets__display,
+.global-settings-popup {
   border-radius: 1.5rem !important;
 }
 
 @media (min-width: 750px) {
   .banner__box {
     -webkit-clip-path: url(#ur-clip);
-            clip-path: url(#ur-clip);
+    clip-path: url(#ur-clip);
     aspect-ratio: 1;
     max-width: 35.5rem !important;
     padding-top: 7rem !important;
@@ -1220,30 +1231,45 @@ header,
 
 .ur-collection-card {
   -webkit-text-decoration-color: #e0d7bd !important;
-          text-decoration-color: #e0d7bd !important;
+  text-decoration-color: #e0d7bd !important;
 }
 
 .ur-collection-card:hover {
   text-decoration: underline !important;
   -webkit-text-decoration-color: #e0d7bd !important;
-          text-decoration-color: #e0d7bd !important;
+  text-decoration-color: #e0d7bd !important;
 }
 
 .back .icon-arrow {
   --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.richtext.beige h1, .richtext.beige h2, .richtext.beige h3, .richtext.beige h4, .richtext.beige h5, .richtext.beige p {
+.richtext.beige h1,
+.richtext.beige h2,
+.richtext.beige h3,
+.richtext.beige h4,
+.richtext.beige h5,
+.richtext.beige p {
   --tw-text-opacity: 1 !important;
   color: rgb(242 238 227 / var(--tw-text-opacity)) !important;
 }
 
-.richtext h1, .richtext h2, .richtext h3, .richtext h4, .richtext h5 {
+.richtext h1,
+.richtext h2,
+.richtext h3,
+.richtext h4,
+.richtext h5 {
   margin-bottom: 1rem !important;
 }
 
-.richtext.no-margin h1, .richtext.no-margin h2, .richtext.no-margin h3, .richtext.no-margin h4, .richtext.no-margin h5 {
+.richtext.no-margin h1,
+.richtext.no-margin h2,
+.richtext.no-margin h3,
+.richtext.no-margin h4,
+.richtext.no-margin h5 {
   margin-bottom: 0px !important;
 }
 
@@ -1498,7 +1524,8 @@ header,
   font-weight: 600 !important;
 }
 
-.accordion, .accordion details {
+.accordion,
+.accordion details {
   overflow: clip;
   border-radius: 1.5rem !important;
 }
@@ -1561,7 +1588,7 @@ summary {
 
 details[open] summary ~ * {
   -webkit-animation: toggle 0.2s ease-in-out;
-          animation: toggle 0.2s ease-in-out;
+  animation: toggle 0.2s ease-in-out;
 }
 
 @-webkit-keyframes toggle {
@@ -1632,7 +1659,8 @@ details[open] summary ~ * {
   font-size: 1.8rem;
 }
 
-.jdgm-carousel__right-arrow, .jdgm-carousel__left-arrow {
+.jdgm-carousel__right-arrow,
+.jdgm-carousel__left-arrow {
   border-width: 2px !important;
   --tw-border-opacity: 1 !important;
   border-color: rgb(63 53 42 / var(--tw-border-opacity)) !important;
@@ -1753,8 +1781,8 @@ progress[value] {
   display: block;
   position: relative;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   width: 100%;
   height: 6px;
   border: 0;
@@ -1791,9 +1819,9 @@ progress[value] {
           ) * 1%
       )
   );
-  -webkit-animation: calc(3s * var(--progress-max-decimal)) linear 0.5s 1 normal both
-    progress;
-          animation: calc(3s * var(--progress-max-decimal)) linear 0.5s 1 normal both
+  -webkit-animation: calc(3s * var(--progress-max-decimal)) linear 0.5s 1 normal
+    both progress;
+  animation: calc(3s * var(--progress-max-decimal)) linear 0.5s 1 normal both
     progress;
 }
 
@@ -1856,7 +1884,7 @@ progress[value]::-moz-progress-bar {
 
 .hover\:xunderline:hover {
   -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 
 .focus\:xtext-black:focus {
