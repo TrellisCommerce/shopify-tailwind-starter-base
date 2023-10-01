@@ -1,0 +1,45 @@
+{% assign collection = collections[section.settings.upsell_collection] %}
+{% assign show_upsell = true %}
+
+{% for item in cart.items %}
+  {% if item.product.collections contains collection %}
+    {% assign show_upsell = false %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if show_upsell and collection %}
+  <div class='cart-upsell'>
+    {% if collection.image %}
+      <img src='{{ collection.image.src | img_url: '300x' }}' alt='{{ collection.title }}'>
+    {% endif %}
+
+    <a href='{{ collection.url }}' class='cta-button'>
+      {{ section.settings.cta_text }}
+    </a>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Cart Upsell",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "upsell_collection",
+      "label": "Select a collection"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Button Text",
+      "default": "Shop Now"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Uncle Rustys Cart Upsell"
+    }
+  ]
+}
+{% endschema %}
