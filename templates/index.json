@@ -236,14 +236,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "Entdecke unsere handverlesenen Menüs",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>Jedes unserer Menüs erzählt eine eigene Geschichte - von sorgfältig ausgewählten Zutaten über liebevolle Zubereitung bis hin zum fertigen Gericht, das deinem Hund nicht nur schmeckt, sondern ihm auch alle notwendigen Nährstoffe liefert. Lass dich von der Vielfalt unserer Rezepte inspirieren und finde das perfekte Menü für deinen Vierbeiner. Ob saftiges Fleisch, frisches Gemüse oder schmackhafte Kräuter - bei Uncle Rusty's ist für jeden Geschmack etwas dabei. Tauche ein in unsere kulinarische Welt und verwöhne deinen Hund mit einem Futter, das Liebe, Qualität und Tradition vereint. Und das Beste? Mit nur wenigen Klicks kannst du deinem Liebling eine Gaumenfreude bereiten. Entdecke jetzt unsere Menüs und überzeuge dich selbst!<\/p>"
           }
         }
       },
