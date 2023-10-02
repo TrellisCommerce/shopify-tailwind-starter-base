@@ -173,8 +173,8 @@
         "template--20724493582631__c2f0ff7f-b966-4dad-a0a0-d354fa082545-column-1": {
           "type": "column",
           "settings": {
-            "title": "Reine Naturkraft",
-            "text": "<p>Wir setzen auf die Kraft der Natur. Unsere Menüs enthalten Vitamine ausschließlich in ihrer natürlichen Form, ohne synthetische Zusätze.<\/p>",
+            "title": "Natürliche Kraftquelle",
+            "text": "<p>Unsere Menüs schöpfen aus der vollen Kraft der Natur. Vitamine in ihrer reinsten Form, ohne synthetische Zusätze, unterstützen die Vitalität deines Hundes.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -182,8 +182,8 @@
         "169e7353-358b-4007-9160-32d706341ceb": {
           "type": "column",
           "settings": {
-            "title": "Wie selbst eingekocht",
-            "text": "<p>Unser einzigartiges Slow-Cooked Verfahren erhält nicht nur den Geschmack, sondern auch die wertvollen Vitamine und Mineralstoffe. <\/p>",
+            "title": "Geschmack & Nährstoffe bewahrt",
+            "text": "<p>Dank unseres Slow-Cooked Verfahrens bleibt nicht nur der authentische Geschmack, sondern auch die essentiellen Vitamine und Mineralstoffe erhalten.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -192,7 +192,7 @@
           "type": "column",
           "settings": {
             "title": "Transparent & Ehrlich",
-            "text": "<p>Bei uns ist drin, was drauf steht. Keine versteckten Inhaltsstoffe, keine Füllstoffe. Nur reine, regionale Zutaten, die deinem Hund guttun.<\/p>",
+            "text": "<p>Was drauf steht, ist auch drin. Keine versteckten Überraschungen, nur ehrliche, regionale Zutaten für deinen Vierbeiner.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -201,7 +201,7 @@
           "type": "column",
           "settings": {
             "title": "Mit Liebe aus Bayern",
-            "text": "<p>Traditionelle Werte treffen auf moderne Ernährungswissenschaft. Jedes Produkt ist ein Versprechen – von unserer Familie an deinen Hund.<\/p>",
+            "text": "<p>Wo Tradition auf Innovation trifft: Jedes unserer Produkte ist ein liebevolles Versprechen von unserer Familie an deinen treuen Begleiter.<\/p>",
             "link_label": "",
             "link": ""
           }
