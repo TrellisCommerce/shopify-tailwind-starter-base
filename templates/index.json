@@ -230,62 +230,62 @@
         "padding_bottom": 36
       }
     },
-    "236d8c14-c1eb-4043-ae32-9b1fa09d766b": {
-      "type": "icon-row",
+    "rich_text": {
+      "type": "rich-text",
       "blocks": {
-        "0b5c8777-0c46-4143-9109-15ea8fb9127a": {
-          "type": "icon-text-block",
+        "heading": {
+          "type": "heading",
           "settings": {
-            "icon_selection": "icon-organic-color",
-            "icon_rich_text": "<h3>Regionale <\/h3><h3>& Natürliche Zutaten<\/h3>"
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
           }
         },
-        "232b11dd-f86c-414b-8c8e-a0c6414b76ac": {
-          "type": "icon-text-block",
+        "text": {
+          "type": "text",
           "settings": {
-            "icon_selection": "icon-no-gluten-color",
-            "icon_rich_text": "<h3>Glutenfrei<\/h3>"
-          }
-        },
-        "c8227c67-4b4b-4f96-beb3-ee472b298f40": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-sugar-color",
-            "icon_rich_text": "<h3>Ohne Zucker<\/h3>"
-          }
-        },
-        "dcd78d78-ac88-44f0-84b4-00970a1cef33": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-chemicals-color",
-            "icon_rich_text": "<h3>Keine Zusätze <\/h3><h3>oder Chemie<\/h3>"
-          }
-        },
-        "505f6a44-0aec-4df9-a468-fcb7ee338d0d": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-animals-color",
-            "icon_rich_text": "<h3>Keine <\/h3><h3>Tierversuche<\/h3>"
-          }
-        },
-        "099196d8-2cfe-4075-b0a8-9c6d08896d65": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-meat-color",
-            "icon_rich_text": "<h3>Hochwertiges<\/h3><h3>Muskelfleisch<\/h3>"
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
           }
         }
       },
       "block_order": [
-        "0b5c8777-0c46-4143-9109-15ea8fb9127a",
-        "232b11dd-f86c-414b-8c8e-a0c6414b76ac",
-        "c8227c67-4b4b-4f96-beb3-ee472b298f40",
-        "dcd78d78-ac88-44f0-84b4-00970a1cef33",
-        "505f6a44-0aec-4df9-a468-fcb7ee338d0d",
-        "099196d8-2cfe-4075-b0a8-9c6d08896d65"
+        "heading",
+        "text"
       ],
       "settings": {
-        "color_scheme": ""
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "nassfutter",
+        "products_to_show": 6,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 28,
+        "padding_bottom": 36
       }
     },
     "357173cd-30c8-440c-bfb8-6e34d14254f8": {
@@ -373,6 +373,113 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "236d8c14-c1eb-4043-ae32-9b1fa09d766b": {
+      "type": "icon-row",
+      "blocks": {
+        "0b5c8777-0c46-4143-9109-15ea8fb9127a": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_rich_text": "<h3>Regionale <\/h3><h3>& Natürliche Zutaten<\/h3>"
+          }
+        },
+        "232b11dd-f86c-414b-8c8e-a0c6414b76ac": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-gluten-color",
+            "icon_rich_text": "<h3>Glutenfrei<\/h3>"
+          }
+        },
+        "c8227c67-4b4b-4f96-beb3-ee472b298f40": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-sugar-color",
+            "icon_rich_text": "<h3>Ohne Zucker<\/h3>"
+          }
+        },
+        "dcd78d78-ac88-44f0-84b4-00970a1cef33": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-chemicals-color",
+            "icon_rich_text": "<h3>Keine Zusätze <\/h3><h3>oder Chemie<\/h3>"
+          }
+        },
+        "505f6a44-0aec-4df9-a468-fcb7ee338d0d": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-animals-color",
+            "icon_rich_text": "<h3>Keine <\/h3><h3>Tierversuche<\/h3>"
+          }
+        },
+        "099196d8-2cfe-4075-b0a8-9c6d08896d65": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_rich_text": "<h3>Hochwertiges<\/h3><h3>Muskelfleisch<\/h3>"
+          }
+        }
+      },
+      "block_order": [
+        "0b5c8777-0c46-4143-9109-15ea8fb9127a",
+        "232b11dd-f86c-414b-8c8e-a0c6414b76ac",
+        "c8227c67-4b4b-4f96-beb3-ee472b298f40",
+        "dcd78d78-ac88-44f0-84b4-00970a1cef33",
+        "505f6a44-0aec-4df9-a468-fcb7ee338d0d",
+        "099196d8-2cfe-4075-b0a8-9c6d08896d65"
+      ],
+      "settings": {
+        "color_scheme": ""
+      }
+    },
+    "5b1bf651-85a1-474d-be11-0a684a5ec1ac": {
+      "type": "colored-cards",
+      "blocks": {
+        "a172fe29-a9c7-4d97-a9e9-8813d6a2e431": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/nassfutter",
+            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
+            "block_text": "Nassfutter",
+            "background_color": "green"
+          }
+        },
+        "805192d3-78fa-4fd7-b008-35196044e55f": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/snacks",
+            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
+            "block_text": "Snacks",
+            "background_color": "purple"
+          }
+        },
+        "fedeeb03-96b5-41e9-aa03-db77afa0700a": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/ole",
+            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
+            "block_text": "Öle",
+            "background_color": "orange"
+          }
+        },
+        "60eb449e-fecb-437b-aafa-8ef447145639": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/pakete",
+            "block_image": "shopify:\/\/shop_images\/test_collection.webp",
+            "block_text": "Pakete",
+            "background_color": "red"
+          }
+        }
+      },
+      "block_order": [
+        "a172fe29-a9c7-4d97-a9e9-8813d6a2e431",
+        "805192d3-78fa-4fd7-b008-35196044e55f",
+        "fedeeb03-96b5-41e9-aa03-db77afa0700a",
+        "60eb449e-fecb-437b-aafa-8ef447145639"
+      ],
+      "settings": {
       }
     },
     "9c172180-9760-4bc3-989a-937f54d744fd": {
@@ -736,113 +843,6 @@
         "below_price_info": "inkl. MwSt., zzgl. Versandkosten"
       }
     },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "5b1bf651-85a1-474d-be11-0a684a5ec1ac": {
-      "type": "colored-cards",
-      "blocks": {
-        "a172fe29-a9c7-4d97-a9e9-8813d6a2e431": {
-          "type": "content_block",
-          "settings": {
-            "block_link": "shopify:\/\/collections\/nassfutter",
-            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
-            "block_text": "Nassfutter",
-            "background_color": "green"
-          }
-        },
-        "805192d3-78fa-4fd7-b008-35196044e55f": {
-          "type": "content_block",
-          "settings": {
-            "block_link": "shopify:\/\/collections\/snacks",
-            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
-            "block_text": "Snacks",
-            "background_color": "purple"
-          }
-        },
-        "fedeeb03-96b5-41e9-aa03-db77afa0700a": {
-          "type": "content_block",
-          "settings": {
-            "block_link": "shopify:\/\/collections\/ole",
-            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
-            "block_text": "Öle",
-            "background_color": "orange"
-          }
-        },
-        "60eb449e-fecb-437b-aafa-8ef447145639": {
-          "type": "content_block",
-          "settings": {
-            "block_link": "shopify:\/\/collections\/pakete",
-            "block_image": "shopify:\/\/shop_images\/test_collection.webp",
-            "block_text": "Pakete",
-            "background_color": "red"
-          }
-        }
-      },
-      "block_order": [
-        "a172fe29-a9c7-4d97-a9e9-8813d6a2e431",
-        "805192d3-78fa-4fd7-b008-35196044e55f",
-        "fedeeb03-96b5-41e9-aa03-db77afa0700a",
-        "60eb449e-fecb-437b-aafa-8ef447145639"
-      ],
-      "settings": {
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
     "2af0e9d7-f2a8-434b-b346-ee8969847698": {
       "type": "full-width-banner",
       "settings": {
@@ -1057,19 +1057,30 @@
         "include_margins": true
       }
     },
-    "4d3e2d55-73ec-42e7-9d29-ee985d8ff178": {
-      "type": "featured-blog",
+    "d5cdfbca-65f8-4333-9257-2f162556e2b5": {
+      "type": "featured-collection",
       "settings": {
-        "heading": "Blog posts",
+        "title": "Featured collection",
         "heading_size": "h1",
-        "blog": "",
-        "post_limit": 2,
-        "columns_desktop": 2,
-        "color_scheme": "",
-        "show_image": true,
-        "show_date": true,
-        "show_author": true,
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "nassfutter",
+        "products_to_show": 6,
+        "columns_desktop": 3,
+        "full_width": false,
         "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -1081,17 +1092,17 @@
     "3ec2a987-b522-4a27-b800-28dc1b68f35f",
     "a3587d64-149a-4ee7-a42e-dafa93696b9e",
     "c2f0ff7f-b966-4dad-a0a0-d354fa082545",
-    "236d8c14-c1eb-4043-ae32-9b1fa09d766b",
+    "rich_text",
+    "featured_collection",
     "357173cd-30c8-440c-bfb8-6e34d14254f8",
+    "236d8c14-c1eb-4043-ae32-9b1fa09d766b",
+    "5b1bf651-85a1-474d-be11-0a684a5ec1ac",
     "9c172180-9760-4bc3-989a-937f54d744fd",
     "b4972843-a229-4c6c-be94-30fde72c05ae",
     "46b6142b-478f-4606-bc1d-d5759641bc51",
     "e6110f6c-1cec-4c14-8440-d44764670054",
     "566dfd4f-bb7b-4e24-b0d2-191a21f8e43b",
     "build-a-box",
-    "rich_text",
-    "5b1bf651-85a1-474d-be11-0a684a5ec1ac",
-    "featured_collection",
     "2af0e9d7-f2a8-434b-b346-ee8969847698",
     "b689839d-3ad5-4bc2-b3e0-cc27453d2ce7",
     "multicolumn",
@@ -1100,6 +1111,6 @@
     "39fc5abc-8968-44f4-b2f2-d8ac92951665",
     "d6a60efa-b69e-407a-bba8-6e5b0def2989",
     "1694590585319894d8",
-    "4d3e2d55-73ec-42e7-9d29-ee985d8ff178"
+    "d5cdfbca-65f8-4333-9257-2f162556e2b5"
   ]
 }
