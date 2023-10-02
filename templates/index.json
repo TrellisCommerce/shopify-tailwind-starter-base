@@ -174,7 +174,7 @@
           "type": "column",
           "settings": {
             "title": "Natürliche Kraftquelle",
-            "text": "<p>Unsere Menüs schöpfen aus der vollen Kraft der Natur. Vitamine in ihrer reinsten Form, ohne synthetische Zusätze, unterstützen die Vitalität deines Hundes.<\/p>",
+            "text": "<p>Unsere Menüs schöpfen aus der vollen Kraft der Natur. Vitamine in ihrer reinsten Form stärken die Vitalität und das Wohlbefinden deines Hundes. <\/p>",
             "link_label": "",
             "link": ""
           }
@@ -183,7 +183,7 @@
           "type": "column",
           "settings": {
             "title": "Geschmack & Nährstoffe bewahrt",
-            "text": "<p>Dank unseres Slow-Cooked Verfahrens bleibt nicht nur der authentische Geschmack, sondern auch die essentiellen Vitamine und Mineralstoffe erhalten.<\/p>",
+            "text": "<p>Durch unser Slow-Cooked Verfahren bleibt der authentische Geschmack erhalten und die essenziellen Vitamine und Mineralstoffe werden geschützt.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -192,7 +192,7 @@
           "type": "column",
           "settings": {
             "title": "Klarheit in jeder Dose",
-            "text": "<p>Transparent und ehrlich: Bei uns weißt du genau, was drin ist. Reine, regionale Zutaten ohne versteckte Füllstoffe sorgen für das Wohl deines Hundes.<\/p>",
+            "text": "<p>Bei Uncle Rusty's gibt es keine Geheimnisse. Reine, regionale Zutaten ohne versteckte Füllstoffe oder künstliche Zusätze. Einfach ehrliches Futter. <\/p>",
             "link_label": "",
             "link": ""
           }
@@ -201,7 +201,7 @@
           "type": "column",
           "settings": {
             "title": "Herzlich aus Bayern",
-            "text": "<p>Wo Tradition auf Innovation trifft: Jedes unserer Produkte ist ein liebevolles Versprechen von unserer Familie an deinen treuen Begleiter.<\/p>",
+            "text": "<p>Unsere Wurzeln liegen in Bayern, wo wir mit Leidenschaft und Hingabe für deinen Hund kochen. Ein Versprechen von unserer Familie an deinen treuen Begleiter.<br\/><br\/><\/p>",
             "link_label": "",
             "link": ""
           }
