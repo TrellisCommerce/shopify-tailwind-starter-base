@@ -349,6 +349,10 @@ details[open] summary ~ * {
   transform: rotate(90deg);
 }
 
+.accordion details[open] .summary__title svg {
+  transform: rotate(0deg) !important;
+}
+
 .menu-drawer__close-button svg {
   rotate: 180deg;
 }
@@ -555,4 +559,11 @@ progress[value]::-moz-progress-bar {
   to {
     --progress-value: var(--value);
   }
+}
+
+.tippy-box[data-theme~='unclerustys'] {
+  @apply xrounded-3xl xp-4;
+  background-color: white;
+  color: var(--ur-base);
+  border: 2px solid var(--ur-base);
 }

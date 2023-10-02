@@ -53,9 +53,9 @@
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
+            "heading": "Inhaltsangaben",
+            "icon": "serving_dish",
+            "content": "{{ product.metafields.custom.content_information | metafield_tag }}",
             "page": ""
           }
         },
@@ -163,7 +163,7 @@
       "type": "apps",
       "blocks": {
         "4e0e223b-8191-412f-80a7-a090f143b0c9": {
-          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
         }
