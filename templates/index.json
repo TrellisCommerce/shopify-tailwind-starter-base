@@ -167,6 +167,127 @@
       "settings": {
       }
     },
+    "c2f0ff7f-b966-4dad-a0a0-d354fa082545": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--20724493582631__c2f0ff7f-b966-4dad-a0a0-d354fa082545-column-1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "169e7353-358b-4007-9160-32d706341ceb": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "25fd5b06-0583-4e8a-bb06-3a3a4197a5f2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "48adface-c128-48cd-bbc3-47382b7ba0e7": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20724493582631__c2f0ff7f-b966-4dad-a0a0-d354fa082545-column-1",
+        "169e7353-358b-4007-9160-32d706341ceb",
+        "25fd5b06-0583-4e8a-bb06-3a3a4197a5f2",
+        "48adface-c128-48cd-bbc3-47382b7ba0e7"
+      ],
+      "settings": {
+        "title": "Unser Anspruch",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "accent-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 52,
+        "padding_bottom": 36
+      }
+    },
+    "236d8c14-c1eb-4043-ae32-9b1fa09d766b": {
+      "type": "icon-row",
+      "blocks": {
+        "0b5c8777-0c46-4143-9109-15ea8fb9127a": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_rich_text": "<h3>Regionale <\/h3><h3>& Natürliche Zutaten<\/h3>"
+          }
+        },
+        "232b11dd-f86c-414b-8c8e-a0c6414b76ac": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-gluten-color",
+            "icon_rich_text": "<h3>Glutenfrei<\/h3>"
+          }
+        },
+        "c8227c67-4b4b-4f96-beb3-ee472b298f40": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-sugar-color",
+            "icon_rich_text": "<h3>Ohne Zucker<\/h3>"
+          }
+        },
+        "dcd78d78-ac88-44f0-84b4-00970a1cef33": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-chemicals-color",
+            "icon_rich_text": "<h3>Keine Zusätze <\/h3><h3>oder Chemie<\/h3>"
+          }
+        },
+        "505f6a44-0aec-4df9-a468-fcb7ee338d0d": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-animals-color",
+            "icon_rich_text": "<h3>Keine <\/h3><h3>Tierversuche<\/h3>"
+          }
+        },
+        "099196d8-2cfe-4075-b0a8-9c6d08896d65": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_rich_text": "<h3>Hochwertiges<\/h3><h3>Muskelfleisch<\/h3>"
+          }
+        }
+      },
+      "block_order": [
+        "0b5c8777-0c46-4143-9109-15ea8fb9127a",
+        "232b11dd-f86c-414b-8c8e-a0c6414b76ac",
+        "c8227c67-4b4b-4f96-beb3-ee472b298f40",
+        "dcd78d78-ac88-44f0-84b4-00970a1cef33",
+        "505f6a44-0aec-4df9-a468-fcb7ee338d0d",
+        "099196d8-2cfe-4075-b0a8-9c6d08896d65"
+      ],
+      "settings": {
+        "color_scheme": ""
+      }
+    },
     "357173cd-30c8-440c-bfb8-6e34d14254f8": {
       "type": "ur-image-with-text",
       "blocks": {
@@ -484,64 +605,6 @@
         "padding_bottom": 36
       }
     },
-    "236d8c14-c1eb-4043-ae32-9b1fa09d766b": {
-      "type": "icon-row",
-      "blocks": {
-        "0b5c8777-0c46-4143-9109-15ea8fb9127a": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-organic-color",
-            "icon_rich_text": "<h3>Regionale <\/h3><h3>& Natürliche Zutaten<\/h3>"
-          }
-        },
-        "232b11dd-f86c-414b-8c8e-a0c6414b76ac": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-gluten-color",
-            "icon_rich_text": "<h3>Glutenfrei<\/h3>"
-          }
-        },
-        "c8227c67-4b4b-4f96-beb3-ee472b298f40": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-sugar-color",
-            "icon_rich_text": "<h3>Ohne Zucker<\/h3>"
-          }
-        },
-        "dcd78d78-ac88-44f0-84b4-00970a1cef33": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-chemicals-color",
-            "icon_rich_text": "<h3>Keine Zusätze <\/h3><h3>oder Chemie<\/h3>"
-          }
-        },
-        "505f6a44-0aec-4df9-a468-fcb7ee338d0d": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-animals-color",
-            "icon_rich_text": "<h3>Keine <\/h3><h3>Tierversuche<\/h3>"
-          }
-        },
-        "099196d8-2cfe-4075-b0a8-9c6d08896d65": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-meat-color",
-            "icon_rich_text": "<h3>Hochwertiges<\/h3><h3>Muskelfleisch<\/h3>"
-          }
-        }
-      },
-      "block_order": [
-        "0b5c8777-0c46-4143-9109-15ea8fb9127a",
-        "232b11dd-f86c-414b-8c8e-a0c6414b76ac",
-        "c8227c67-4b4b-4f96-beb3-ee472b298f40",
-        "dcd78d78-ac88-44f0-84b4-00970a1cef33",
-        "505f6a44-0aec-4df9-a468-fcb7ee338d0d",
-        "099196d8-2cfe-4075-b0a8-9c6d08896d65"
-      ],
-      "settings": {
-        "color_scheme": ""
-      }
-    },
     "5b1bf651-85a1-474d-be11-0a684a5ec1ac": {
       "type": "colored-cards",
       "blocks": {
@@ -709,74 +772,11 @@
         "color_scheme": ""
       }
     },
-    "c2f0ff7f-b966-4dad-a0a0-d354fa082545": {
-      "type": "multicolumn",
-      "blocks": {
-        "template--20724493582631__c2f0ff7f-b966-4dad-a0a0-d354fa082545-column-1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "169e7353-358b-4007-9160-32d706341ceb": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "25fd5b06-0583-4e8a-bb06-3a3a4197a5f2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "48adface-c128-48cd-bbc3-47382b7ba0e7": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--20724493582631__c2f0ff7f-b966-4dad-a0a0-d354fa082545-column-1",
-        "169e7353-358b-4007-9160-32d706341ceb",
-        "25fd5b06-0583-4e8a-bb06-3a3a4197a5f2",
-        "48adface-c128-48cd-bbc3-47382b7ba0e7"
-      ],
-      "settings": {
-        "title": "Multicolumn",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "Button label",
-        "button_link": "",
-        "color_scheme": "accent-2",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 52,
-        "padding_bottom": 36
-      }
-    },
     "build-a-box": {
       "type": "build-a-box",
       "settings": {
         "collection": "nassfutter",
-        "additives_collection": "ole",
+        "additives_collection": "",
         "questionaire_subscription_plan": 689522049319,
         "instruction_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<\/p>",
         "questionaire_info_text": "<p>Du brauchst Unterstützung bei der Auswahl?<\/p>",
@@ -1080,15 +1080,15 @@
     "two-richtext",
     "3ec2a987-b522-4a27-b800-28dc1b68f35f",
     "a3587d64-149a-4ee7-a42e-dafa93696b9e",
+    "c2f0ff7f-b966-4dad-a0a0-d354fa082545",
+    "236d8c14-c1eb-4043-ae32-9b1fa09d766b",
     "357173cd-30c8-440c-bfb8-6e34d14254f8",
     "9c172180-9760-4bc3-989a-937f54d744fd",
     "b4972843-a229-4c6c-be94-30fde72c05ae",
     "46b6142b-478f-4606-bc1d-d5759641bc51",
-    "236d8c14-c1eb-4043-ae32-9b1fa09d766b",
     "5b1bf651-85a1-474d-be11-0a684a5ec1ac",
     "e6110f6c-1cec-4c14-8440-d44764670054",
     "566dfd4f-bb7b-4e24-b0d2-191a21f8e43b",
-    "c2f0ff7f-b966-4dad-a0a0-d354fa082545",
     "build-a-box",
     "rich_text",
     "featured_collection",
