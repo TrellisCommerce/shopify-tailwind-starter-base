@@ -93,13 +93,13 @@
         "template--20724493582631__3ec2a987-b522-4a27-b800-28dc1b68f35f-featured_collection-2": {
           "type": "featured_collection",
           "settings": {
-            "collection": "nassfutter"
+            "collection": "snacks"
           }
         },
         "template--20724493582631__3ec2a987-b522-4a27-b800-28dc1b68f35f-featured_collection-3": {
           "type": "featured_collection",
           "settings": {
-            "collection": "nassfutter"
+            "collection": "pakete"
           }
         }
       },
