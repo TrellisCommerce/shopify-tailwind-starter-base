@@ -243,7 +243,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Jedes Menü von Uncle Rusty's ist ein kulinarisches Erlebnis. Handverlesen, natürlich und voller Geschmack. Ob saftiges Rind, zartes Geflügel oder delikater Fisch - für jeden Hund ist etwas dabei. Entdecke jetzt die Vielfalt und gönne deinem Vierbeiner ein Menü, das er lieben wird. Warum warten? Mit nur wenigen Klicks kannst du deinem Hund eine kulinarische Reise direkt nach Hause liefern lassen.<\/p>"
+            "text": "<p>Jedes Menü ist ein kulinarisches Erlebnis. Handverlesen, natürlich und voller Geschmack. Ob saftiges Rind, zartes Geflügel oder delikater Fisch - für jeden Hund ist etwas dabei. Entdecke jetzt die Vielfalt und gönne deinem Vierbeiner ein Menü, das er lieben wird. Warum warten? Mit nur wenigen Klicks kannst du deinem Hund eine kulinarische Reise direkt nach Hause liefern lassen.<\/p>"
           }
         }
       },
@@ -269,12 +269,12 @@
         "show_description": false,
         "description_style": "body",
         "collection": "nassfutter",
-        "products_to_show": 6,
+        "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": true,
+        "enable_desktop_slider": false,
         "color_scheme": "background-1",
         "image_ratio": "adapt",
         "image_shape": "default",
