@@ -656,7 +656,7 @@
         "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Mein Hund hat viele Unverträglichkeiten. Kann mir Uncle Rusty's dabei weiterhelfen?",
+            "heading": "Was, wenn mein Hund eine Allergie oder spezielle Ernährungsbedürfnisse hat?",
             "icon": "none",
             "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
             "page": ""
@@ -706,6 +706,24 @@
             "row_content": "",
             "page": ""
           }
+        },
+        "75b03cd8-3788-4bf3-809e-c5f886466dc3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie stelle ich das ideale Menü für meinen Hund zusammen?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "ae161e47-2ba4-43c9-964d-eb5d6feea26e": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Was bedeutet \"Slow-Cooked\" und gibt es künstliche Zusätze oder Füllstoffe in Uncle Rusty's Produkten?",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -716,7 +734,9 @@
         "1bd49921-b85c-4bbd-9440-ef578f8d6ff7",
         "ab619596-6175-4ff4-a7d7-26f221447ceb",
         "b547ec99-6c0a-4552-aa6c-7c77dc24469f",
-        "b2fbd7ea-200b-4741-a774-224cb05ec391"
+        "b2fbd7ea-200b-4741-a774-224cb05ec391",
+        "75b03cd8-3788-4bf3-809e-c5f886466dc3",
+        "ae161e47-2ba4-43c9-964d-eb5d6feea26e"
       ],
       "settings": {
         "caption": "",
