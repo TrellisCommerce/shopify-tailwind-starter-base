@@ -238,6 +238,9 @@
         "dd36e573-41ee-4794-a7f5-9538379a3793",
         "d6647be6-70cd-4342-9b0f-1fed272bd413"
       ],
+      "custom_css": [
+
+      ],
       "settings": {
         "color_scheme": "background-2"
       }
@@ -429,7 +432,7 @@
           "type": "column",
           "settings": {
             "title": "Natur pur aus der Region",
-            "text": "<p>Wir setzen auf Fleisch aus Weidehaltung, vorzugsweise aus Oberbayern. Durch kurze Lieferketten und den Verzicht auf Massentierhaltung garantieren wir nicht nur Frische, sondern auch ethische Standards. In unseren Dosen findest du nur sinnvolle Zutaten aus vertrauenswürdigen, regionalen Quellen, keine Füllstoffe.<\/p>",
+            "text": "<p>Wir setzen auf Fleisch aus Weidehaltung, vorzugsweise aus Oberbayern. Durch kurze Lieferketten und den Verzicht auf Massentierhaltung garantieren wir nicht nur Frische, sondern auch ethische Standards. In unseren Dosen findest du nur sinnvolle Zutaten aus vertrauenswürdigen, regionalen Quellen.<\/p>",
             "link_label": "",
             "link": ""
           }
