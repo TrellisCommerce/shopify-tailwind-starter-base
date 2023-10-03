@@ -355,93 +355,6 @@
         "include_margins": true
       }
     },
-    "357173cd-30c8-440c-bfb8-6e34d14254f8": {
-      "type": "ur-image-with-text",
-      "blocks": {
-        "c7cb0cce-33e7-4e54-870a-5b33c1044e07": {
-          "type": "caption",
-          "settings": {
-            "caption": "Wie alles begann",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Unsere Geschichte",
-            "heading_size": "h1"
-          }
-        },
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Unsere Geschichte ist geprägt von Rusty, unserem geliebten Familienhund. Seine Bedürfnisse inspirierten uns, die Grenzen herkömmlichen Hundefutters zu überschreiten und etwas Einzigartiges zu schaffen.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "0d331331-f64a-4ffd-9edf-45d20f706b77": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-organic-color",
-            "icon_text": "Inspiration - Rusty, der Beginn unserer Reise"
-          }
-        },
-        "04544f39-b233-4153-a50d-ca2cb01b6274": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-gluten-color",
-            "icon_text": "Individualität - Jedes Menü, einzigartig wie dein Hund"
-          }
-        },
-        "007035b8-304e-4acf-ac27-bedfe03d79a5": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-chemicals-color",
-            "icon_text": "Transparenz - Klarheit von Anfang bis Ende"
-          }
-        },
-        "3551eac1-1b96-49ad-ae2e-95c7080d8117": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-animals-color",
-            "icon_text": "Tradition - Bewährte Methoden, modern interpretiert"
-          }
-        },
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Über Uns",
-            "button_link": "shopify:\/\/pages\/build-a-box",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "c7cb0cce-33e7-4e54-870a-5b33c1044e07",
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-heading-1",
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-text-1",
-        "0d331331-f64a-4ffd-9edf-45d20f706b77",
-        "04544f39-b233-4153-a50d-ca2cb01b6274",
-        "007035b8-304e-4acf-ac27-bedfe03d79a5",
-        "3551eac1-1b96-49ad-ae2e-95c7080d8117",
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/pic1.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "236d8c14-c1eb-4043-ae32-9b1fa09d766b": {
       "type": "icon-row",
       "blocks": {
@@ -853,6 +766,93 @@
         "padding_bottom": 36
       }
     },
+    "357173cd-30c8-440c-bfb8-6e34d14254f8": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "c7cb0cce-33e7-4e54-870a-5b33c1044e07": {
+          "type": "caption",
+          "settings": {
+            "caption": "Wie alles begann",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unsere Geschichte",
+            "heading_size": "h1"
+          }
+        },
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unsere Geschichte ist geprägt von Rusty, unserem geliebten Familienhund. Seine Bedürfnisse inspirierten uns, die Grenzen herkömmlichen Hundefutters zu überschreiten und etwas Einzigartiges zu schaffen.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "0d331331-f64a-4ffd-9edf-45d20f706b77": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_text": "Inspiration - Rusty, der Beginn unserer Reise"
+          }
+        },
+        "04544f39-b233-4153-a50d-ca2cb01b6274": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-no-gluten-color",
+            "icon_text": "Individualität - Jedes Menü, einzigartig wie dein Hund"
+          }
+        },
+        "007035b8-304e-4acf-ac27-bedfe03d79a5": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-no-chemicals-color",
+            "icon_text": "Transparenz - Klarheit von Anfang bis Ende"
+          }
+        },
+        "3551eac1-1b96-49ad-ae2e-95c7080d8117": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-no-animals-color",
+            "icon_text": "Tradition - Bewährte Methoden, modern interpretiert"
+          }
+        },
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Über Uns",
+            "button_link": "shopify:\/\/pages\/build-a-box",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "c7cb0cce-33e7-4e54-870a-5b33c1044e07",
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-heading-1",
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-text-1",
+        "0d331331-f64a-4ffd-9edf-45d20f706b77",
+        "04544f39-b233-4153-a50d-ca2cb01b6274",
+        "007035b8-304e-4acf-ac27-bedfe03d79a5",
+        "3551eac1-1b96-49ad-ae2e-95c7080d8117",
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/pic1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "2af0e9d7-f2a8-434b-b346-ee8969847698": {
       "type": "full-width-banner",
       "settings": {
@@ -1122,13 +1122,13 @@
     "featured_collection",
     "5b1bf651-85a1-474d-be11-0a684a5ec1ac",
     "1694590585319894d8",
-    "357173cd-30c8-440c-bfb8-6e34d14254f8",
     "236d8c14-c1eb-4043-ae32-9b1fa09d766b",
     "9c172180-9760-4bc3-989a-937f54d744fd",
     "b4972843-a229-4c6c-be94-30fde72c05ae",
     "46b6142b-478f-4606-bc1d-d5759641bc51",
     "e6110f6c-1cec-4c14-8440-d44764670054",
     "02ac5c7a-1520-48d1-8103-39db72c5c2ec",
+    "357173cd-30c8-440c-bfb8-6e34d14254f8",
     "2af0e9d7-f2a8-434b-b346-ee8969847698",
     "566dfd4f-bb7b-4e24-b0d2-191a21f8e43b",
     "build-a-box",
