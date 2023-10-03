@@ -796,7 +796,7 @@
         "template--20196637933863__02ac5c7a-1520-48d1-8103-39db72c5c2ec-column-1": {
           "type": "column",
           "settings": {
-            "title": "Column",
+            "title": "Tagesvielfalt",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
@@ -805,7 +805,7 @@
         "template--20196637933863__02ac5c7a-1520-48d1-8103-39db72c5c2ec-column-2": {
           "type": "column",
           "settings": {
-            "title": "Column",
+            "title": "Individualisierbar",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
@@ -814,7 +814,7 @@
         "template--20196637933863__02ac5c7a-1520-48d1-8103-39db72c5c2ec-column-3": {
           "type": "column",
           "settings": {
-            "title": "Column",
+            "title": "Von der Natur inspiriert",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
@@ -823,7 +823,7 @@
         "bdc0af51-c640-49d3-8f13-f8f240c41b27": {
           "type": "column",
           "settings": {
-            "title": "Column",
+            "title": "Weniger ist mehr",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
             "link": ""
@@ -851,6 +851,15 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "2af0e9d7-f2a8-434b-b346-ee8969847698": {
+      "type": "full-width-banner",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_ea_0d2b07ee-b9a6-421c-8ef0-6a94b7499025.png",
+        "content": "<h1>Headline<\/h1><p>Test Text<\/p>",
+        "button_text": "Button Text",
+        "button_link": ""
       }
     },
     "566dfd4f-bb7b-4e24-b0d2-191a21f8e43b": {
@@ -923,15 +932,6 @@
         "questionaire_button_label": "Ernährungsberatung",
         "questionaire_button_link": "shopify:\/\/pages\/questionaire",
         "below_price_info": "inkl. MwSt., zzgl. Versandkosten"
-      }
-    },
-    "2af0e9d7-f2a8-434b-b346-ee8969847698": {
-      "type": "full-width-banner",
-      "settings": {
-        "background_image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_ea_0d2b07ee-b9a6-421c-8ef0-6a94b7499025.png",
-        "content": "<h1>Headline<\/h1><p>Test Text<\/p>",
-        "button_text": "Button Text",
-        "button_link": ""
       }
     },
     "b689839d-3ad5-4bc2-b3e0-cc27453d2ce7": {
@@ -1129,9 +1129,9 @@
     "46b6142b-478f-4606-bc1d-d5759641bc51",
     "e6110f6c-1cec-4c14-8440-d44764670054",
     "02ac5c7a-1520-48d1-8103-39db72c5c2ec",
+    "2af0e9d7-f2a8-434b-b346-ee8969847698",
     "566dfd4f-bb7b-4e24-b0d2-191a21f8e43b",
     "build-a-box",
-    "2af0e9d7-f2a8-434b-b346-ee8969847698",
     "b689839d-3ad5-4bc2-b3e0-cc27453d2ce7",
     "multicolumn",
     "b076c1a8-b027-4cdd-80a7-525f325b73e2",
