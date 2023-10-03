@@ -359,7 +359,7 @@
         "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Alles begann mit Rusty, einem Familienhund aus Bayern, der uns zeigte, wie wichtig echte, natürliche Ernährung ist. Bei Uncle Rusty's geht es nicht nur um Hundefutter. Es geht um ein Versprechen, das wir jedem Hund geben: Natürlichkeit, Ehrlichkeit und Qualität in jeder Dose. Fast wie selbst gekocht, bringen wir eine artgerechte, naturreine und vor allem preiswerte Nahrung in den Napf.<\/p>",
+            "text": "<p>Unsere Geschichte ist geprägt von Rusty, unserem geliebten Familienhund. Seine Bedürfnisse inspirierten uns, die Grenzen herkömmlichen Hundefutters zu überschreiten und etwas Einzigartiges zu schaffen.<\/p>",
             "text_style": "body"
           }
         },
@@ -523,6 +523,7 @@
         "template--20724493582631__9c172180-9760-4bc3-989a-937f54d744fd-text-1",
         "template--20724493582631__9c172180-9760-4bc3-989a-937f54d744fd-button-1"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/pic1.png",
         "height": "adapt",
@@ -614,7 +615,7 @@
         "image": "shopify:\/\/shop_images\/pic1.png",
         "height": "adapt",
         "desktop_image_width": "medium",
-        "layout": "text_first",
+        "layout": "image_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
