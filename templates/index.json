@@ -638,7 +638,7 @@
         "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Wie stelle ich auf Uncle Rusty's um, wenn ich vorher etwas anderes gefüttert habe?",
             "icon": "none",
             "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
             "page": ""
@@ -647,7 +647,7 @@
         "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Für welche Hunde ist Uncle Rusty's Nassnahrung geeignet?",
             "icon": "none",
             "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
             "page": ""
@@ -656,7 +656,7 @@
         "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Mein Hund hat viele Unverträglichkeiten. Kann mir Uncle Rusty's dabei weiterhelfen?",
             "icon": "none",
             "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
             "page": ""
@@ -665,7 +665,7 @@
         "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Muss ich etwas zufüttern wenn ich meinen Hund mit Uncle Rusty's füttere?",
             "icon": "none",
             "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
             "page": ""
@@ -674,7 +674,7 @@
         "1bd49921-b85c-4bbd-9440-ef578f8d6ff7": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Was ist der Unterschied zwischen konventionellem Futter und Uncle Rusty's?",
             "icon": "none",
             "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
             "page": ""
@@ -683,7 +683,7 @@
         "ab619596-6175-4ff4-a7d7-26f221447ceb": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Wie oft und wie viel Futter von Uncle Rusty's sollte mein Hund täglich bekommen?",
             "icon": "none",
             "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
             "page": ""
@@ -692,9 +692,18 @@
         "b547ec99-6c0a-4552-aa6c-7c77dc24469f": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Wie lange ist eine geöffnete Dose Uncle Uncle Rusty's im Kühlschrank haltbar?",
             "icon": "none",
             "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
+            "page": ""
+          }
+        },
+        "b2fbd7ea-200b-4741-a774-224cb05ec391": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wer steht hinter Uncle Rusty's und warum wurde die Firma gegründet?",
+            "icon": "none",
+            "row_content": "",
             "page": ""
           }
         }
@@ -706,7 +715,8 @@
         "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-4",
         "1bd49921-b85c-4bbd-9440-ef578f8d6ff7",
         "ab619596-6175-4ff4-a7d7-26f221447ceb",
-        "b547ec99-6c0a-4552-aa6c-7c77dc24469f"
+        "b547ec99-6c0a-4552-aa6c-7c77dc24469f",
+        "b2fbd7ea-200b-4741-a774-224cb05ec391"
       ],
       "settings": {
         "caption": "",
