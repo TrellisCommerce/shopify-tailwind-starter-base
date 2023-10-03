@@ -572,7 +572,7 @@
         "column2": {
           "type": "column",
           "settings": {
-            "title": "Column",
+            "title": "Vitalität & Wohlbefinden",
             "text": "<p>Unsere Nahrung bietet eine ausgewogene Mischung essentieller Nährstoffe, die das Immunsystem stärken. Sie unterstützt nicht nur Knochen und Gelenke, sondern auch die Herzfunktion, was zu einer gesteigerten körperlichen Fitness und geistigen Aktivität führt.<\/p>",
             "link_label": "",
             "link": ""
@@ -581,7 +581,7 @@
         "column3": {
           "type": "column",
           "settings": {
-            "title": "Column",
+            "title": "Langfristige Gesundheit",
             "text": "<p>Mit unseren Menüs investierst du in die Zukunft deines Hundes. Unsere Nahrung ist darauf ausgerichtet, Krankheiten proaktiv entgegenzuwirken. Die Kombination aus hochwertigen Zutaten und dem Verzicht auf schädliche Zusätze sorgt für ein nachhaltiges Wohlbefinden deines Vierbeiners.<\/p>",
             "link_label": "",
             "link": ""
