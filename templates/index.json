@@ -317,65 +317,6 @@
         "include_margins": true
       }
     },
-    "236d8c14-c1eb-4043-ae32-9b1fa09d766b": {
-      "type": "icon-row",
-      "blocks": {
-        "0b5c8777-0c46-4143-9109-15ea8fb9127a": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-organic-color",
-            "icon_rich_text": "<h3>Regionale <\/h3><h3>& Natürliche Zutaten<\/h3>"
-          }
-        },
-        "232b11dd-f86c-414b-8c8e-a0c6414b76ac": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-gluten-color",
-            "icon_rich_text": "<h3>Glutenfrei<\/h3>"
-          }
-        },
-        "c8227c67-4b4b-4f96-beb3-ee472b298f40": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-sugar-color",
-            "icon_rich_text": "<h3>Ohne Zucker<\/h3>"
-          }
-        },
-        "dcd78d78-ac88-44f0-84b4-00970a1cef33": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-chemicals-color",
-            "icon_rich_text": "<h3>Keine Zusätze <\/h3><h3>oder Chemie<\/h3>"
-          }
-        },
-        "505f6a44-0aec-4df9-a468-fcb7ee338d0d": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-animals-color",
-            "icon_rich_text": "<h3>Keine <\/h3><h3>Tierversuche<\/h3>"
-          }
-        },
-        "099196d8-2cfe-4075-b0a8-9c6d08896d65": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-meat-color",
-            "icon_rich_text": "<h3>Hochwertiges<\/h3><h3>Muskelfleisch<\/h3>"
-          }
-        }
-      },
-      "block_order": [
-        "0b5c8777-0c46-4143-9109-15ea8fb9127a",
-        "232b11dd-f86c-414b-8c8e-a0c6414b76ac",
-        "c8227c67-4b4b-4f96-beb3-ee472b298f40",
-        "dcd78d78-ac88-44f0-84b4-00970a1cef33",
-        "505f6a44-0aec-4df9-a468-fcb7ee338d0d",
-        "099196d8-2cfe-4075-b0a8-9c6d08896d65"
-      ],
-      "disabled": true,
-      "settings": {
-        "color_scheme": ""
-      }
-    },
     "b4972843-a229-4c6c-be94-30fde72c05ae": {
       "type": "ur-image-with-text",
       "blocks": {
@@ -463,94 +404,6 @@
         "padding_bottom": 36
       }
     },
-    "46b6142b-478f-4606-bc1d-d5759641bc51": {
-      "type": "ur-image-with-text",
-      "blocks": {
-        "d0709e61-db07-49d3-97bc-b327a18d4ed7": {
-          "type": "caption",
-          "settings": {
-            "caption": "Add a tagline",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
-        "template--20724493582631__46b6142b-478f-4606-bc1d-d5759641bc51-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text & outline icons",
-            "heading_size": "h1"
-          }
-        },
-        "template--20724493582631__46b6142b-478f-4606-bc1d-d5759641bc51-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "fc52187c-1be7-4bd6-98da-cd366c316b84": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-organic",
-            "icon_text": "Regionale Zutaten"
-          }
-        },
-        "c5e85e30-e453-40cb-bab3-b2ad4fe7c768": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-gluten",
-            "icon_text": "Glutenfrei"
-          }
-        },
-        "7b45e723-f887-4535-9d44-d7e2a40957f8": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-chemicals",
-            "icon_text": "Ohne Chemie"
-          }
-        },
-        "02ec7204-cbd8-4763-aaa3-5e44fe7ebd12": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-animals",
-            "icon_text": "Frei von Tierversuchen"
-          }
-        },
-        "template--20724493582631__46b6142b-478f-4606-bc1d-d5759641bc51-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "shopify:\/\/pages\/build-a-box",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "d0709e61-db07-49d3-97bc-b327a18d4ed7",
-        "template--20724493582631__46b6142b-478f-4606-bc1d-d5759641bc51-heading-1",
-        "template--20724493582631__46b6142b-478f-4606-bc1d-d5759641bc51-text-1",
-        "fc52187c-1be7-4bd6-98da-cd366c316b84",
-        "c5e85e30-e453-40cb-bab3-b2ad4fe7c768",
-        "7b45e723-f887-4535-9d44-d7e2a40957f8",
-        "02ec7204-cbd8-4763-aaa3-5e44fe7ebd12",
-        "template--20724493582631__46b6142b-478f-4606-bc1d-d5759641bc51-button-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify:\/\/shop_images\/pic1.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "02ac5c7a-1520-48d1-8103-39db72c5c2ec": {
       "type": "multicolumn",
       "blocks": {
@@ -612,56 +465,6 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "5b1bf651-85a1-474d-be11-0a684a5ec1ac": {
-      "type": "colored-cards",
-      "blocks": {
-        "a172fe29-a9c7-4d97-a9e9-8813d6a2e431": {
-          "type": "content_block",
-          "settings": {
-            "block_link": "shopify:\/\/collections\/nassfutter",
-            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
-            "block_text": "Nassfutter",
-            "background_color": "green"
-          }
-        },
-        "805192d3-78fa-4fd7-b008-35196044e55f": {
-          "type": "content_block",
-          "settings": {
-            "block_link": "shopify:\/\/collections\/snacks",
-            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
-            "block_text": "Snacks",
-            "background_color": "purple"
-          }
-        },
-        "fedeeb03-96b5-41e9-aa03-db77afa0700a": {
-          "type": "content_block",
-          "settings": {
-            "block_link": "shopify:\/\/collections\/ole",
-            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
-            "block_text": "Öle",
-            "background_color": "orange"
-          }
-        },
-        "60eb449e-fecb-437b-aafa-8ef447145639": {
-          "type": "content_block",
-          "settings": {
-            "block_link": "shopify:\/\/collections\/pakete",
-            "block_image": "shopify:\/\/shop_images\/test_collection.webp",
-            "block_text": "Pakete",
-            "background_color": "red"
-          }
-        }
-      },
-      "block_order": [
-        "a172fe29-a9c7-4d97-a9e9-8813d6a2e431",
-        "805192d3-78fa-4fd7-b008-35196044e55f",
-        "fedeeb03-96b5-41e9-aa03-db77afa0700a",
-        "60eb449e-fecb-437b-aafa-8ef447145639"
-      ],
-      "disabled": true,
-      "settings": {
       }
     },
     "357173cd-30c8-440c-bfb8-6e34d14254f8": {
@@ -751,15 +554,6 @@
         "padding_bottom": 36
       }
     },
-    "2af0e9d7-f2a8-434b-b346-ee8969847698": {
-      "type": "full-width-banner",
-      "settings": {
-        "background_image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_ea_0d2b07ee-b9a6-421c-8ef0-6a94b7499025.png",
-        "content": "<h1>Headline<\/h1><p>Test Text<\/p>",
-        "button_text": "Button Text",
-        "button_link": ""
-      }
-    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -813,63 +607,13 @@
         "padding_bottom": 36
       }
     },
-    "566dfd4f-bb7b-4e24-b0d2-191a21f8e43b": {
-      "type": "icon-row",
-      "blocks": {
-        "24a00a1f-1d28-45ce-80a5-ce42c0918cdc": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-organic",
-            "icon_rich_text": "<h3>Regionale <\/h3><h3>& Natürliche Zutaten<\/h3>"
-          }
-        },
-        "7b6cab40-3fb9-4c5b-b673-4628e41017f3": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-gluten",
-            "icon_rich_text": "<h3>Glutenfrei<\/h3>"
-          }
-        },
-        "b1853ad3-f558-4061-bd79-7d9baca1bf98": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-sugar",
-            "icon_rich_text": "<h3>Ohne Zucker<\/h3>"
-          }
-        },
-        "8a53fe21-e548-4f60-a1c4-a4341fa80b69": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-chemicals",
-            "icon_rich_text": "<h3>Keine Zusätze <\/h3><h3>oder Chemie<\/h3>"
-          }
-        },
-        "d56bf972-ee38-4454-9229-4253856499cf": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-animals",
-            "icon_rich_text": "<h3>Keine <\/h3><h3>Tierversuche<\/h3>"
-          }
-        },
-        "277cab53-f530-48a9-a961-124cba7bd082": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-meat",
-            "icon_rich_text": "<h3>Hochwertiges<\/h3><h3>Muskelfleisch<\/h3>"
-          }
-        }
-      },
-      "block_order": [
-        "24a00a1f-1d28-45ce-80a5-ce42c0918cdc",
-        "7b6cab40-3fb9-4c5b-b673-4628e41017f3",
-        "b1853ad3-f558-4061-bd79-7d9baca1bf98",
-        "8a53fe21-e548-4f60-a1c4-a4341fa80b69",
-        "d56bf972-ee38-4454-9229-4253856499cf",
-        "277cab53-f530-48a9-a961-124cba7bd082"
-      ],
-      "disabled": true,
+    "2af0e9d7-f2a8-434b-b346-ee8969847698": {
+      "type": "full-width-banner",
       "settings": {
-        "color_scheme": ""
+        "background_image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_ea_0d2b07ee-b9a6-421c-8ef0-6a94b7499025.png",
+        "content": "<h1>Headline<\/h1><p>Test Text<\/p>",
+        "button_text": "Button Text",
+        "button_link": ""
       }
     },
     "build-a-box": {
@@ -1054,6 +798,174 @@
       "disabled": true,
       "settings": {
       }
+    },
+    "5b1bf651-85a1-474d-be11-0a684a5ec1ac": {
+      "type": "colored-cards",
+      "blocks": {
+        "a172fe29-a9c7-4d97-a9e9-8813d6a2e431": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/nassfutter",
+            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
+            "block_text": "Nassfutter",
+            "background_color": "green"
+          }
+        },
+        "805192d3-78fa-4fd7-b008-35196044e55f": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/snacks",
+            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
+            "block_text": "Snacks",
+            "background_color": "purple"
+          }
+        },
+        "fedeeb03-96b5-41e9-aa03-db77afa0700a": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/ole",
+            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
+            "block_text": "Öle",
+            "background_color": "orange"
+          }
+        },
+        "60eb449e-fecb-437b-aafa-8ef447145639": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/pakete",
+            "block_image": "shopify:\/\/shop_images\/test_collection.webp",
+            "block_text": "Pakete",
+            "background_color": "red"
+          }
+        }
+      },
+      "block_order": [
+        "a172fe29-a9c7-4d97-a9e9-8813d6a2e431",
+        "805192d3-78fa-4fd7-b008-35196044e55f",
+        "fedeeb03-96b5-41e9-aa03-db77afa0700a",
+        "60eb449e-fecb-437b-aafa-8ef447145639"
+      ],
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "236d8c14-c1eb-4043-ae32-9b1fa09d766b": {
+      "type": "icon-row",
+      "blocks": {
+        "0b5c8777-0c46-4143-9109-15ea8fb9127a": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_rich_text": "<h3>Regionale <\/h3><h3>& Natürliche Zutaten<\/h3>"
+          }
+        },
+        "232b11dd-f86c-414b-8c8e-a0c6414b76ac": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-gluten-color",
+            "icon_rich_text": "<h3>Glutenfrei<\/h3>"
+          }
+        },
+        "c8227c67-4b4b-4f96-beb3-ee472b298f40": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-sugar-color",
+            "icon_rich_text": "<h3>Ohne Zucker<\/h3>"
+          }
+        },
+        "dcd78d78-ac88-44f0-84b4-00970a1cef33": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-chemicals-color",
+            "icon_rich_text": "<h3>Keine Zusätze <\/h3><h3>oder Chemie<\/h3>"
+          }
+        },
+        "505f6a44-0aec-4df9-a468-fcb7ee338d0d": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-animals-color",
+            "icon_rich_text": "<h3>Keine <\/h3><h3>Tierversuche<\/h3>"
+          }
+        },
+        "099196d8-2cfe-4075-b0a8-9c6d08896d65": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_rich_text": "<h3>Hochwertiges<\/h3><h3>Muskelfleisch<\/h3>"
+          }
+        }
+      },
+      "block_order": [
+        "0b5c8777-0c46-4143-9109-15ea8fb9127a",
+        "232b11dd-f86c-414b-8c8e-a0c6414b76ac",
+        "c8227c67-4b4b-4f96-beb3-ee472b298f40",
+        "dcd78d78-ac88-44f0-84b4-00970a1cef33",
+        "505f6a44-0aec-4df9-a468-fcb7ee338d0d",
+        "099196d8-2cfe-4075-b0a8-9c6d08896d65"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": ""
+      }
+    },
+    "566dfd4f-bb7b-4e24-b0d2-191a21f8e43b": {
+      "type": "icon-row",
+      "blocks": {
+        "24a00a1f-1d28-45ce-80a5-ce42c0918cdc": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-organic",
+            "icon_rich_text": "<h3>Regionale <\/h3><h3>& Natürliche Zutaten<\/h3>"
+          }
+        },
+        "7b6cab40-3fb9-4c5b-b673-4628e41017f3": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-gluten",
+            "icon_rich_text": "<h3>Glutenfrei<\/h3>"
+          }
+        },
+        "b1853ad3-f558-4061-bd79-7d9baca1bf98": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-sugar",
+            "icon_rich_text": "<h3>Ohne Zucker<\/h3>"
+          }
+        },
+        "8a53fe21-e548-4f60-a1c4-a4341fa80b69": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-chemicals",
+            "icon_rich_text": "<h3>Keine Zusätze <\/h3><h3>oder Chemie<\/h3>"
+          }
+        },
+        "d56bf972-ee38-4454-9229-4253856499cf": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-animals",
+            "icon_rich_text": "<h3>Keine <\/h3><h3>Tierversuche<\/h3>"
+          }
+        },
+        "277cab53-f530-48a9-a961-124cba7bd082": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-meat",
+            "icon_rich_text": "<h3>Hochwertiges<\/h3><h3>Muskelfleisch<\/h3>"
+          }
+        }
+      },
+      "block_order": [
+        "24a00a1f-1d28-45ce-80a5-ce42c0918cdc",
+        "7b6cab40-3fb9-4c5b-b673-4628e41017f3",
+        "b1853ad3-f558-4061-bd79-7d9baca1bf98",
+        "8a53fe21-e548-4f60-a1c4-a4341fa80b69",
+        "d56bf972-ee38-4454-9229-4253856499cf",
+        "277cab53-f530-48a9-a961-124cba7bd082"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": ""
+      }
     }
   },
   "order": [
@@ -1065,20 +977,19 @@
     "rich_text",
     "featured_collection",
     "1694590585319894d8",
-    "236d8c14-c1eb-4043-ae32-9b1fa09d766b",
     "b4972843-a229-4c6c-be94-30fde72c05ae",
-    "46b6142b-478f-4606-bc1d-d5759641bc51",
     "02ac5c7a-1520-48d1-8103-39db72c5c2ec",
-    "5b1bf651-85a1-474d-be11-0a684a5ec1ac",
     "357173cd-30c8-440c-bfb8-6e34d14254f8",
-    "2af0e9d7-f2a8-434b-b346-ee8969847698",
     "multicolumn",
-    "566dfd4f-bb7b-4e24-b0d2-191a21f8e43b",
+    "2af0e9d7-f2a8-434b-b346-ee8969847698",
     "build-a-box",
     "b689839d-3ad5-4bc2-b3e0-cc27453d2ce7",
     "b076c1a8-b027-4cdd-80a7-525f325b73e2",
     "1cda79a1-8b02-4c62-a4e2-d7ec642279c8",
     "39fc5abc-8968-44f4-b2f2-d8ac92951665",
-    "a3587d64-149a-4ee7-a42e-dafa93696b9e"
+    "a3587d64-149a-4ee7-a42e-dafa93696b9e",
+    "5b1bf651-85a1-474d-be11-0a684a5ec1ac",
+    "236d8c14-c1eb-4043-ae32-9b1fa09d766b",
+    "566dfd4f-bb7b-4e24-b0d2-191a21f8e43b"
   ]
 }
