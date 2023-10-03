@@ -470,59 +470,6 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "Für deinen Hund bedeutet das",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "357173cd-30c8-440c-bfb8-6e34d14254f8": {
       "type": "ur-image-with-text",
       "blocks": {
@@ -606,6 +553,59 @@
         "color_scheme": "background-2",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "title": "Effiziente Verdauung",
+            "text": "<p>Unsere sorgfältig ausgewählten Premium-Zutaten garantieren eine optimale Nährstoffaufnahme. Durch den Einsatz rein natürlicher Inhaltsstoffe fördern wir eine robuste Darmflora, was wiederum Verdauungsprobleme und Blähungen signifikant reduziert.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Unsere Nahrung bietet eine ausgewogene Mischung essentieller Nährstoffe, die das Immunsystem stärken. Sie unterstützt nicht nur Knochen und Gelenke, sondern auch die Herzfunktion, was zu einer gesteigerten körperlichen Fitness und geistigen Aktivität führt.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Mit unseren Menüs investierst du in die Zukunft deines Hundes. Unsere Nahrung ist darauf ausgerichtet, Krankheiten proaktiv entgegenzuwirken. Die Kombination aus hochwertigen Zutaten und dem Verzicht auf schädliche Zusätze sorgt für ein nachhaltiges Wohlbefinden deines Vierbeiners.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
+      "settings": {
+        "title": "Für deinen Hund bedeutet das",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -982,8 +982,8 @@
     "1694590585319894d8",
     "b4972843-a229-4c6c-be94-30fde72c05ae",
     "02ac5c7a-1520-48d1-8103-39db72c5c2ec",
-    "multicolumn",
     "357173cd-30c8-440c-bfb8-6e34d14254f8",
+    "multicolumn",
     "2af0e9d7-f2a8-434b-b346-ee8969847698",
     "build-a-box",
     "b689839d-3ad5-4bc2-b3e0-cc27453d2ce7",
