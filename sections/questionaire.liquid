@@ -139,7 +139,7 @@
                       required
                       id='year-input'
                       placeholder='2016'
-                      class='!xbg-beige-200 xw-20 xpy-4 xpx-0 xborder-b-2 xtext-beige-950 xborder-beige-950 xtext-4xl xfont-semibold xplaceholder-beige-400 [&:has(:focus-visible)]:xoutline-none'
+                      class='!xbg-beige-200 xw-28 xpy-4 xpx-0 xborder-b-2 xtext-beige-950 xborder-beige-950 xtext-4xl xfont-semibold xplaceholder-beige-400 [&:has(:focus-visible)]:xoutline-none'
                     >
                   </div>
                 </form>
@@ -306,7 +306,7 @@
                 </form>
               </div>
             {% when 'yes-no-question' %}
-              <div class='yes-no-question'>
+              <div class='yes-no-question' data-key='{{block.settings.data_key}}'>
                 <form class='xflex xflex-col xgap-16'>
                   <div>
                     <label
@@ -320,6 +320,7 @@
                   </div>
                   <div class='xflex xgap-8'>
                     <button
+                      data-key='{{block.settings.data_key}}'
                       type='button'
                       id='yes-button'
                       class='yes-button xbg-lightbeige xrounded-3xl xp-8 xflex xflex-col xjustify-center xitems-center hover:xbg-beige-300 xtransition-all'
@@ -338,9 +339,10 @@
                       <span class='xmt-8 xfont-semibold gender-male'>Ja</span>
                     </button>
                     <button
+                      data-key='{{block.settings.data_key}}'
                       type='button'
-                      id='gender-female'
-                      class='gender-female xbg-lightbeige xrounded-3xl xp-8 xflex xflex-col xjustify-center xitems-center hover:xbg-beige-300 xtransition-all'
+                      id='no-button'
+                      class='no-button xbg-lightbeige xrounded-3xl xp-8 xflex xflex-col xjustify-center xitems-center hover:xbg-beige-300 xtransition-all'
                     >
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
@@ -527,7 +529,7 @@
           "type": "text",
           "label": "Question Text",
           "id": "question_text",
-          "default": "Welcher Rasse gehört %{name} zu?"
+          "default": "Ist %{name} kastriert/sterilisiert??"
         },
         {
           "type": "text",

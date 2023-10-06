@@ -637,6 +637,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 5rem;
 }
 
+.xw-24 {
+  width: 6rem;
+}
+
+.xw-28 {
+  width: 7rem;
+}
+
 .xmin-w-\[60\%\] {
   min-width: 60%;
 }

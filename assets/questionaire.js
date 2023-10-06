@@ -46,6 +46,19 @@ document.addEventListener('DOMContentLoaded', function () {
       dogData.gender = 'female';
       tryNext();
     }
+
+    if (event.target.classList.contains('yes-button')) {
+      const btn = event.target.closest('#yes-button');
+      const dataKey = btn.getAttribute('data-key');
+      dogData[dataKey] = 'yes';
+      tryNext();
+    }
+    if (event.target.classList.contains('no-button')) {
+      const btn = event.target.closest('#no-button');
+      const dataKey = btn.getAttribute('data-key');
+      dogData[dataKey] = 'no';
+      tryNext();
+    }
   });
 
   function tryNext() {
