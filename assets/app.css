@@ -1860,6 +1860,11 @@ progress[value]::-moz-progress-bar {
   background-color: rgb(224 215 189 / var(--tw-bg-opacity));
 }
 
+.hover\:xbg-beige-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(189 168 112 / var(--tw-bg-opacity));
+}
+
 .hover\:xtext-black:hover {
   --tw-text-opacity: 1;
   color: rgb(33 28 15 / var(--tw-text-opacity));
