@@ -34,6 +34,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     const breedDropdown = document.querySelector('.ur-dropdown');
     breedDropdown.classList.add('xhidden');
+
+    if (event.target.classList.contains('gender-male')) {
+      event.preventDefault();
+      dogData.gender = 'male';
+      tryNext();
+    }
+
+    if (event.target.classList.contains('gender-female')) {
+      event.preventDefault();
+      dogData.gender = 'female';
+      tryNext();
+    }
   });
 
   function tryNext() {
