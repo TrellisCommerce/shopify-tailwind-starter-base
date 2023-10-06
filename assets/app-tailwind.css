@@ -567,11 +567,3 @@ progress[value]::-moz-progress-bar {
   color: var(--ur-base);
   border: 2px solid var(--ur-base);
 }
-
-.card__inner {
-  max-height: 306px;
-}
-
-.card__media .media img {
-  object-fit: contain !important;
-}

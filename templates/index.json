@@ -9,7 +9,7 @@
             "image": "shopify:\/\/shop_images\/m0k13_Photorealistic_image_of_a_happy_dog_in_front_mountains_ea_1928b19a-9d02-4cab-9a67-951cc57a90b7.png",
             "heading": "Die Natur in jeder Mahlzeit",
             "heading_size": "h1",
-            "subheading": "Echtes Handwerk, keine Kompromisse. Nutze die Chance und spare beim Kauf unseres Slow-Cooked Premium Nassfutters.",
+            "subheading": "Echtes Handwerk, echter Geschmack. Spare beim Kauf unseres Slow-Cooked Premium Nassfutters.",
             "button_label": "Jetzt entdecken",
             "link": "",
             "button_style_secondary": false,
@@ -27,7 +27,7 @@
             "image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_su_b29c0781-ee5d-4f96-812c-2417e49ed61d.png",
             "heading": "Mehr als nur ein Hundefutter",
             "heading_size": "h1",
-            "subheading": "Reine, regionale Zutaten - sorgfältig ausgewählt und schonend verarbeitet. Weil jeder Bissen zählt.",
+            "subheading": "Ausgewählte, regionale Zutaten - sorgfältig verarbeitet. Weil Qualität in jedem Bissen zählt.",
             "button_label": "Button label",
             "link": "",
             "button_style_secondary": false,
@@ -43,9 +43,9 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_ea_b8bbc685-0a92-43ea-bc69-25c18faef102.png",
-            "heading": "Jedes Menü ist ein Versprechen",
+            "heading": "Exklusivität, die überzeugt",
             "heading_size": "h1",
-            "subheading": "Nur online, nur bei Uncle Rusty's. Entdecke exklusive Angebote und erlebe den Unterschied.",
+            "subheading": "Entdecke exklusive Angebote nur bei Uncle Rusty's und spüre den Unterschied.",
             "button_label": "Button label",
             "link": "",
             "button_style_secondary": false,
@@ -77,8 +77,8 @@
     "two-richtext": {
       "type": "two-richtext",
       "settings": {
-        "richtext_left": "<h1>Eine Nahrung für Hunde, die mehr verdienen<\/h1>",
-        "richtext_right": "<p>Bei Uncle Rusty's verbinden wir traditionelle Werte mit modernster Ernährungswissenschaft. Jedes Produkt ist das Ergebnis unserer tiefen Überzeugung: Hundefutter sollte natürlich, ehrlich und von höchster Qualität sein. Als familiengeführtes Unternehmen setzen wir auf regionale Zutaten und verzichten konsequent auf synthetische Zusätze.<\/p>"
+        "richtext_left": "<h1>Von der Natur inspiriert, für den Genuss deines Hundes kreiert. <\/h1>",
+        "richtext_right": "<p>Bei Uncle Rusty's steht der Hund im Mittelpunkt. Unsere Überzeugung ist einfach: Wenn es um Ernährung geht, verdient dein Hund nur das Beste. Deshalb kombinieren wir traditionelle Handwerkskunst mit modernster Ernährungswissenschaft. Das Ergebnis? Ein Futter, das so natürlich und ehrlich ist wie die Liebe zu deinem Vierbeiner. Bei uns findest du keine Massenproduktion, sondern handverlesene, regionale Zutaten und eine Produktion, die auf Nachhaltigkeit und Qualität setzt. <\/p>"
       }
     },
     "3ec2a987-b522-4a27-b800-28dc1b68f35f": {
@@ -93,13 +93,13 @@
         "template--20724493582631__3ec2a987-b522-4a27-b800-28dc1b68f35f-featured_collection-2": {
           "type": "featured_collection",
           "settings": {
-            "collection": "nassfutter"
+            "collection": "snacks"
           }
         },
         "template--20724493582631__3ec2a987-b522-4a27-b800-28dc1b68f35f-featured_collection-3": {
           "type": "featured_collection",
           "settings": {
-            "collection": "nassfutter"
+            "collection": "pakete"
           }
         }
       },
@@ -121,474 +121,67 @@
         "padding_bottom": 36
       }
     },
-    "a3587d64-149a-4ee7-a42e-dafa93696b9e": {
-      "type": "colored-cards",
+    "c2f0ff7f-b966-4dad-a0a0-d354fa082545": {
+      "type": "multicolumn",
       "blocks": {
-        "96ebf1dd-3bbf-4092-ab6a-3183001942df": {
-          "type": "content_block",
+        "template--20724493582631__c2f0ff7f-b966-4dad-a0a0-d354fa082545-column-1": {
+          "type": "column",
           "settings": {
-            "block_link": "shopify:\/\/collections\/nassfutter",
-            "block_text": "Nassfutter",
-            "background_color": "green"
+            "title": "Natürliche Kraftquelle",
+            "text": "<p>Unsere Menüs schöpfen aus der vollen Kraft der Natur. Vitamine in ihrer reinsten Form stärken die Vitalität und das Wohlbefinden deines Hundes. <\/p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "349db816-6348-4845-93a1-82e0be56b394": {
-          "type": "content_block",
+        "169e7353-358b-4007-9160-32d706341ceb": {
+          "type": "column",
           "settings": {
-            "block_link": "shopify:\/\/collections\/snacks",
-            "block_text": "Snacks",
-            "background_color": "purple"
+            "title": "Geschmack & Nährstoffe bewahrt",
+            "text": "<p>Durch unser Slow-Cooked Verfahren bleibt der authentische Geschmack erhalten und die essenziellen Vitamine und Mineralstoffe werden geschützt.<\/p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "e557e6b5-0e34-4396-8fec-3626838441ae": {
-          "type": "content_block",
+        "25fd5b06-0583-4e8a-bb06-3a3a4197a5f2": {
+          "type": "column",
           "settings": {
-            "block_link": "shopify:\/\/collections\/ole",
-            "block_text": "Öle",
-            "background_color": "orange"
+            "title": "Klarheit in jeder Dose",
+            "text": "<p>Bei Uncle Rusty's gibt es keine Geheimnisse. Reine, regionale Zutaten ohne versteckte Füllstoffe oder künstliche Zusätze. Einfach ehrliches Hundefutter. <\/p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "ed261184-7291-4458-8af5-3a6cd7ad665d": {
-          "type": "content_block",
+        "48adface-c128-48cd-bbc3-47382b7ba0e7": {
+          "type": "column",
           "settings": {
-            "block_link": "shopify:\/\/collections\/pakete",
-            "block_text": "Pakete",
-            "background_color": "red"
+            "title": "Herzlich aus Bayern",
+            "text": "<p>Unsere Wurzeln liegen in Bayern, wo wir mit Leidenschaft und Hingabe für deinen Hund kochen. Ein Versprechen von unserer Familie an deinen treuen Begleiter.<br\/><br\/><\/p>",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "96ebf1dd-3bbf-4092-ab6a-3183001942df",
-        "349db816-6348-4845-93a1-82e0be56b394",
-        "e557e6b5-0e34-4396-8fec-3626838441ae",
-        "ed261184-7291-4458-8af5-3a6cd7ad665d"
-      ],
-      "disabled": true,
-      "settings": {
-      }
-    },
-    "357173cd-30c8-440c-bfb8-6e34d14254f8": {
-      "type": "ur-image-with-text",
-      "blocks": {
-        "c7cb0cce-33e7-4e54-870a-5b33c1044e07": {
-          "type": "caption",
-          "settings": {
-            "caption": "Mehr als nur eine Marke",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Die Geschichte von Rusty",
-            "heading_size": "h1"
-          }
-        },
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Alles begann mit Rusty, einem Familienhund aus Bayern, der uns zeigte, wie wichtig echte, natürliche Ernährung ist. Bei Uncle Rusty's geht es nicht nur um Hundefutter. Es geht um ein Versprechen, das wir jedem Hund geben: Natürlichkeit, Ehrlichkeit und Qualität in jeder Dose. Fast wie selbst gekocht, bringen wir eine artgerechte, naturreine und vor allem preiswerte Nahrung in den Napf.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "0d331331-f64a-4ffd-9edf-45d20f706b77": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-organic-color",
-            "icon_text": "Handwerk - Tradition trifft Innovation"
-          }
-        },
-        "04544f39-b233-4153-a50d-ca2cb01b6274": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-gluten-color",
-            "icon_text": "Natürlichkeit - Nur echte Vitamine, keine Synthetik"
-          }
-        },
-        "007035b8-304e-4acf-ac27-bedfe03d79a5": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-chemicals-color",
-            "icon_text": "Reinheit - Keine Füllstoffe, nur das Beste"
-          }
-        },
-        "3551eac1-1b96-49ad-ae2e-95c7080d8117": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-animals-color",
-            "icon_text": "Familienbetrieb - Mit Liebe aus Bayern"
-          }
-        },
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Über Uns",
-            "button_link": "shopify:\/\/pages\/build-a-box",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "c7cb0cce-33e7-4e54-870a-5b33c1044e07",
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-heading-1",
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-text-1",
-        "0d331331-f64a-4ffd-9edf-45d20f706b77",
-        "04544f39-b233-4153-a50d-ca2cb01b6274",
-        "007035b8-304e-4acf-ac27-bedfe03d79a5",
-        "3551eac1-1b96-49ad-ae2e-95c7080d8117",
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1"
+        "template--20724493582631__c2f0ff7f-b966-4dad-a0a0-d354fa082545-column-1",
+        "169e7353-358b-4007-9160-32d706341ceb",
+        "25fd5b06-0583-4e8a-bb06-3a3a4197a5f2",
+        "48adface-c128-48cd-bbc3-47382b7ba0e7"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/pic1.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
+        "title": "Unser Anspruch",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "accent-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 52,
         "padding_bottom": 36
-      }
-    },
-    "9c172180-9760-4bc3-989a-937f54d744fd": {
-      "type": "ur-image-with-text",
-      "blocks": {
-        "2b32871e-92d6-49e5-b97d-cf9214a4930f": {
-          "type": "caption",
-          "settings": {
-            "caption": "Die Grundbasis für eine gesunde Ernährung",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
-        "template--20724493582631__9c172180-9760-4bc3-989a-937f54d744fd-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Warum Uncle Rusty's?",
-            "heading_size": "h1"
-          }
-        },
-        "template--20724493582631__9c172180-9760-4bc3-989a-937f54d744fd-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Jede Entscheidung, die wir bei Uncle Rusty's treffen, basiert auf einer einfachen Frage: Würden wir es unserem eigenen Hund geben? Von der Auswahl der Zutaten bis zur finalen Zubereitung, wir setzen alles daran, deinem Hund das Beste zu bieten. Unser einzigartiges Slow-Cooked Produktionsverfahren sorgt dafür, dass die Menüs optimal verdaulich, gesund und wohlschmeckend sind. Kurz gesagt: Es ist drin, was drauf steht!<\/p>",
-            "text_style": "body"
-          }
-        },
-        "template--20724493582631__9c172180-9760-4bc3-989a-937f54d744fd-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Zu den Produkten",
-            "button_link": "shopify:\/\/pages\/build-a-box",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "2b32871e-92d6-49e5-b97d-cf9214a4930f",
-        "template--20724493582631__9c172180-9760-4bc3-989a-937f54d744fd-heading-1",
-        "template--20724493582631__9c172180-9760-4bc3-989a-937f54d744fd-text-1",
-        "template--20724493582631__9c172180-9760-4bc3-989a-937f54d744fd-button-1"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/pic1.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-1",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "b4972843-a229-4c6c-be94-30fde72c05ae": {
-      "type": "ur-image-with-text",
-      "blocks": {
-        "d7db799e-5f1a-4cb1-9e2b-47364a265d73": {
-          "type": "caption",
-          "settings": {
-            "caption": "Qualität, wie selbst eingekocht",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
-        "e32ac028-a304-4775-a1d4-a95b9d27c9de": {
-          "type": "heading",
-          "settings": {
-            "heading": "Unser Anspruch",
-            "heading_size": "h1"
-          }
-        },
-        "48e385e2-672a-47df-893c-61ec9e7b0758": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Bei Uncle Rusty's glauben wir, dass Hundefutter mehr sein sollte als nur eine Mahlzeit. Es sollte eine Ernährungsphilosophie sein, die das Wohlbefinden und die Gesundheit deines Hundes in den Mittelpunkt stellt. Unser Futter ist 100% naturbelassen und enthält weder Gluten, Zucker, Soja, Knochenmehl, Schlachtabfälle, Farbstoffe noch Tierversuche sowie Gentechnik. Mit einem idealen Fleisch-, Nähr- und Mineralstoffe-Verhältnis bieten wir eine Ernährung, die deinem Hund gerecht wird.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "491ffb1b-5296-4e92-afc2-95b771151998": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-organic-color",
-            "icon_text": "Transparenz - Volldeklaration nach EU-Recht"
-          }
-        },
-        "43dc0855-04c8-498f-94b0-025b01978538": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-gluten-color",
-            "icon_text": "Individualität - Menüs für jeden Hund anpassbar"
-          }
-        },
-        "f6100df4-5580-4f6b-9421-1d0a9f5a8758": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-chemicals-color",
-            "icon_text": "Nachhaltigkeit - Für eine bessere Zukunft"
-          }
-        },
-        "73f94850-ec21-4589-8038-d48c405ece3a": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-animals-color",
-            "icon_text": "Exklusivität - Nur online, nur bei Uncle Rusty's"
-          }
-        },
-        "532b8682-d57d-483c-aca7-0fc749f6f613": {
-          "type": "button",
-          "settings": {
-            "button_label": "Unsere Werte",
-            "button_link": "shopify:\/\/pages\/build-a-box",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "d7db799e-5f1a-4cb1-9e2b-47364a265d73",
-        "e32ac028-a304-4775-a1d4-a95b9d27c9de",
-        "48e385e2-672a-47df-893c-61ec9e7b0758",
-        "491ffb1b-5296-4e92-afc2-95b771151998",
-        "43dc0855-04c8-498f-94b0-025b01978538",
-        "f6100df4-5580-4f6b-9421-1d0a9f5a8758",
-        "73f94850-ec21-4589-8038-d48c405ece3a",
-        "532b8682-d57d-483c-aca7-0fc749f6f613"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/pic1.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "46b6142b-478f-4606-bc1d-d5759641bc51": {
-      "type": "ur-image-with-text",
-      "blocks": {
-        "d0709e61-db07-49d3-97bc-b327a18d4ed7": {
-          "type": "caption",
-          "settings": {
-            "caption": "Add a tagline",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
-        "template--20724493582631__46b6142b-478f-4606-bc1d-d5759641bc51-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text & outline icons",
-            "heading_size": "h1"
-          }
-        },
-        "template--20724493582631__46b6142b-478f-4606-bc1d-d5759641bc51-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "fc52187c-1be7-4bd6-98da-cd366c316b84": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-organic",
-            "icon_text": "Regionale Zutaten"
-          }
-        },
-        "c5e85e30-e453-40cb-bab3-b2ad4fe7c768": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-gluten",
-            "icon_text": "Glutenfrei"
-          }
-        },
-        "7b45e723-f887-4535-9d44-d7e2a40957f8": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-chemicals",
-            "icon_text": "Ohne Chemie"
-          }
-        },
-        "02ec7204-cbd8-4763-aaa3-5e44fe7ebd12": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-animals",
-            "icon_text": "Frei von Tierversuchen"
-          }
-        },
-        "template--20724493582631__46b6142b-478f-4606-bc1d-d5759641bc51-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "shopify:\/\/pages\/build-a-box",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "d0709e61-db07-49d3-97bc-b327a18d4ed7",
-        "template--20724493582631__46b6142b-478f-4606-bc1d-d5759641bc51-heading-1",
-        "template--20724493582631__46b6142b-478f-4606-bc1d-d5759641bc51-text-1",
-        "fc52187c-1be7-4bd6-98da-cd366c316b84",
-        "c5e85e30-e453-40cb-bab3-b2ad4fe7c768",
-        "7b45e723-f887-4535-9d44-d7e2a40957f8",
-        "02ec7204-cbd8-4763-aaa3-5e44fe7ebd12",
-        "template--20724493582631__46b6142b-478f-4606-bc1d-d5759641bc51-button-1"
-      ],
-      "disabled": true,
-      "settings": {
-        "image": "shopify:\/\/shop_images\/pic1.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "236d8c14-c1eb-4043-ae32-9b1fa09d766b": {
-      "type": "icon-row",
-      "blocks": {
-        "0b5c8777-0c46-4143-9109-15ea8fb9127a": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-organic-color",
-            "icon_rich_text": "<h3>Regionale <\/h3><h3>& Natürliche Zutaten<\/h3>"
-          }
-        },
-        "232b11dd-f86c-414b-8c8e-a0c6414b76ac": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-gluten-color",
-            "icon_rich_text": "<h3>Glutenfrei<\/h3>"
-          }
-        },
-        "c8227c67-4b4b-4f96-beb3-ee472b298f40": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-sugar-color",
-            "icon_rich_text": "<h3>Ohne Zucker<\/h3>"
-          }
-        },
-        "dcd78d78-ac88-44f0-84b4-00970a1cef33": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-chemicals-color",
-            "icon_rich_text": "<h3>Keine Zusätze <\/h3><h3>oder Chemie<\/h3>"
-          }
-        },
-        "505f6a44-0aec-4df9-a468-fcb7ee338d0d": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-animals-color",
-            "icon_rich_text": "<h3>Keine <\/h3><h3>Tierversuche<\/h3>"
-          }
-        },
-        "099196d8-2cfe-4075-b0a8-9c6d08896d65": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-meat-color",
-            "icon_rich_text": "<h3>Hochwertiges<\/h3><h3>Muskelfleisch<\/h3>"
-          }
-        }
-      },
-      "block_order": [
-        "0b5c8777-0c46-4143-9109-15ea8fb9127a",
-        "232b11dd-f86c-414b-8c8e-a0c6414b76ac",
-        "c8227c67-4b4b-4f96-beb3-ee472b298f40",
-        "dcd78d78-ac88-44f0-84b4-00970a1cef33",
-        "505f6a44-0aec-4df9-a468-fcb7ee338d0d",
-        "099196d8-2cfe-4075-b0a8-9c6d08896d65"
-      ],
-      "settings": {
-        "color_scheme": ""
-      }
-    },
-    "5b1bf651-85a1-474d-be11-0a684a5ec1ac": {
-      "type": "colored-cards",
-      "blocks": {
-        "a172fe29-a9c7-4d97-a9e9-8813d6a2e431": {
-          "type": "content_block",
-          "settings": {
-            "block_link": "shopify:\/\/collections\/nassfutter",
-            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
-            "block_text": "Nassfutter",
-            "background_color": "green"
-          }
-        },
-        "805192d3-78fa-4fd7-b008-35196044e55f": {
-          "type": "content_block",
-          "settings": {
-            "block_link": "shopify:\/\/collections\/snacks",
-            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
-            "block_text": "Snacks",
-            "background_color": "purple"
-          }
-        },
-        "fedeeb03-96b5-41e9-aa03-db77afa0700a": {
-          "type": "content_block",
-          "settings": {
-            "block_link": "shopify:\/\/collections\/ole",
-            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
-            "block_text": "Öle",
-            "background_color": "orange"
-          }
-        },
-        "60eb449e-fecb-437b-aafa-8ef447145639": {
-          "type": "content_block",
-          "settings": {
-            "block_link": "shopify:\/\/collections\/pakete",
-            "block_image": "shopify:\/\/shop_images\/test_collection.webp",
-            "block_text": "Pakete",
-            "background_color": "red"
-          }
-        }
-      },
-      "block_order": [
-        "a172fe29-a9c7-4d97-a9e9-8813d6a2e431",
-        "805192d3-78fa-4fd7-b008-35196044e55f",
-        "fedeeb03-96b5-41e9-aa03-db77afa0700a",
-        "60eb449e-fecb-437b-aafa-8ef447145639"
-      ],
-      "settings": {
       }
     },
     "e6110f6c-1cec-4c14-8440-d44764670054": {
@@ -645,9 +238,707 @@
         "dd36e573-41ee-4794-a7f5-9538379a3793",
         "d6647be6-70cd-4342-9b0f-1fed272bd413"
       ],
-      "disabled": true,
+      "custom_css": [
+
+      ],
       "settings": {
         "color_scheme": "background-2"
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Unsere Menü-Highlights<\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Jedes Menü ist ein kulinarisches Erlebnis. Handverlesen, natürlich und voller Geschmack. Ob saftiges Rind, zartes Geflügel oder delikater Fisch - für jeden Hund ist etwas dabei. Entdecke jetzt die Vielfalt und gönne deinem Vierbeiner ein Menü, das er lieben wird. Warum warten? Mit nur wenigen Klicks kannst du deinem Hund eine kulinarische Reise direkt nach Hause liefern lassen.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "nassfutter",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "1694590585319894d8": {
+      "type": "apps",
+      "blocks": {
+        "8a6f59a9-05e7-414e-9796-b8e8449cf484": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "8a6f59a9-05e7-414e-9796-b8e8449cf484"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "b4972843-a229-4c6c-be94-30fde72c05ae": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "d7db799e-5f1a-4cb1-9e2b-47364a265d73": {
+          "type": "caption",
+          "settings": {
+            "caption": "Warum Uncle Rusty's",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "e32ac028-a304-4775-a1d4-a95b9d27c9de": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unsere Philosophie",
+            "heading_size": "h1"
+          }
+        },
+        "48e385e2-672a-47df-893c-61ec9e7b0758": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wir glauben, dass wahre Qualität in den Details liegt. Vom sorgfältigen Auswählen der Zutaten bis zur finalen Zubereitung, bei uns steht Authentizität im Vordergrund. Wir sind stolz darauf, ein Futter zu bieten, das frei von Kompromissen und voller Leidenschaft ist.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "491ffb1b-5296-4e92-afc2-95b771151998": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_text": "Authentizität - Echtheit in jeder Dose"
+          }
+        },
+        "43dc0855-04c8-498f-94b0-025b01978538": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-no-gluten-color",
+            "icon_text": "Slow-Cooked - Bewahrung von Geschmack & Nährstoffen"
+          }
+        },
+        "f6100df4-5580-4f6b-9421-1d0a9f5a8758": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-no-chemicals-color",
+            "icon_text": "Gesundheit - Nährstoffreiche Menüs für Vitalität"
+          }
+        },
+        "73f94850-ec21-4589-8038-d48c405ece3a": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-no-animals-color",
+            "icon_text": "Vertrauen - Ehrlichkeit in jedem Schritt"
+          }
+        },
+        "532b8682-d57d-483c-aca7-0fc749f6f613": {
+          "type": "button",
+          "settings": {
+            "button_label": "Unsere Werte",
+            "button_link": "shopify:\/\/pages\/build-a-box",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "d7db799e-5f1a-4cb1-9e2b-47364a265d73",
+        "e32ac028-a304-4775-a1d4-a95b9d27c9de",
+        "48e385e2-672a-47df-893c-61ec9e7b0758",
+        "491ffb1b-5296-4e92-afc2-95b771151998",
+        "43dc0855-04c8-498f-94b0-025b01978538",
+        "f6100df4-5580-4f6b-9421-1d0a9f5a8758",
+        "73f94850-ec21-4589-8038-d48c405ece3a",
+        "532b8682-d57d-483c-aca7-0fc749f6f613"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/pic1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "02ac5c7a-1520-48d1-8103-39db72c5c2ec": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--20196637933863__02ac5c7a-1520-48d1-8103-39db72c5c2ec-column-1": {
+          "type": "column",
+          "settings": {
+            "title": "Perfekte Grundbasis",
+            "text": "<p>Unsere Menüs setzen auf wenige, aber gezielte Zutaten pro Tag und bieten über die Woche hinweg eine abwechslungsreiche Vielfalt. Dies erleichtert die Akzeptanz durch die Hunde und bietet gleichzeitig eine solide Ernährungsbasis. Weniger ist oft mehr, besonders wenn es um die Verdauung geht.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--20196637933863__02ac5c7a-1520-48d1-8103-39db72c5c2ec-column-2": {
+          "type": "column",
+          "settings": {
+            "title": "Flexibel & beratend",
+            "text": "<p>Jeder Hund ist einzigartig. Unsere Menüs sind so konzipiert, dass sie sich individuell anpassen und ergänzen lassen. Wir bieten die perfekte Grundlage, während du die Freiheit hast, die Ernährung deines Vierbeiners zu personalisieren. Und bei Fragen stehen wir dir immer zur Seite.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--20196637933863__02ac5c7a-1520-48d1-8103-39db72c5c2ec-column-3": {
+          "type": "column",
+          "settings": {
+            "title": "Natur pur aus der Region",
+            "text": "<p>Wir setzen auf Fleisch aus Weidehaltung, vorzugsweise aus Oberbayern. Durch kurze Lieferketten und den Verzicht auf Massentierhaltung garantieren wir nicht nur Frische, sondern auch ethische Standards. In unseren Dosen findest du nur sinnvolle Zutaten aus vertrauenswürdigen, regionalen Quellen.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "bdc0af51-c640-49d3-8f13-f8f240c41b27": {
+          "type": "column",
+          "settings": {
+            "title": "Maximale Nährstoffeffizienz",
+            "text": "<p>Bei uns ist kein Platz für unnötige Füllstoffe. Jedes Gramm in unserer Dose ist mit wertvollen Nährstoffen gefüllt. Wir sparen nicht an der falschen Stelle, sondern investieren in das, was deinem Hund wirklich guttut. Wir wissen, dass Qualität nicht durch Quantität ersetzt werden kann.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20196637933863__02ac5c7a-1520-48d1-8103-39db72c5c2ec-column-1",
+        "template--20196637933863__02ac5c7a-1520-48d1-8103-39db72c5c2ec-column-2",
+        "template--20196637933863__02ac5c7a-1520-48d1-8103-39db72c5c2ec-column-3",
+        "bdc0af51-c640-49d3-8f13-f8f240c41b27"
+      ],
+      "settings": {
+        "title": "Das macht uns einzigartig",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "357173cd-30c8-440c-bfb8-6e34d14254f8": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "c7cb0cce-33e7-4e54-870a-5b33c1044e07": {
+          "type": "caption",
+          "settings": {
+            "caption": "Wie alles begann",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unsere Geschichte",
+            "heading_size": "h1"
+          }
+        },
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unsere Geschichte ist geprägt von Rusty, unserem geliebten Familienhund. Seine Bedürfnisse inspirierten uns, die Grenzen herkömmlichen Hundefutters zu überschreiten und etwas Einzigartiges zu schaffen.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "0d331331-f64a-4ffd-9edf-45d20f706b77": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_text": "Inspiration - Rusty, der Beginn unserer Reise"
+          }
+        },
+        "04544f39-b233-4153-a50d-ca2cb01b6274": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-no-gluten-color",
+            "icon_text": "Individualität - Jedes Menü, einzigartig wie dein Hund"
+          }
+        },
+        "007035b8-304e-4acf-ac27-bedfe03d79a5": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-no-chemicals-color",
+            "icon_text": "Transparenz - Klarheit von Anfang bis Ende"
+          }
+        },
+        "3551eac1-1b96-49ad-ae2e-95c7080d8117": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-no-animals-color",
+            "icon_text": "Tradition - Bewährte Methoden, modern interpretiert"
+          }
+        },
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Über Uns",
+            "button_link": "shopify:\/\/pages\/build-a-box",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "c7cb0cce-33e7-4e54-870a-5b33c1044e07",
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-heading-1",
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-text-1",
+        "0d331331-f64a-4ffd-9edf-45d20f706b77",
+        "04544f39-b233-4153-a50d-ca2cb01b6274",
+        "007035b8-304e-4acf-ac27-bedfe03d79a5",
+        "3551eac1-1b96-49ad-ae2e-95c7080d8117",
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/pic1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "title": "Effiziente Verdauung",
+            "text": "<p>Unsere sorgfältig ausgewählten Premium-Zutaten garantieren eine optimale Nährstoffaufnahme. Durch den Einsatz rein natürlicher Inhaltsstoffe fördern wir eine robuste Darmflora, was wiederum Verdauungsprobleme und Blähungen signifikant reduziert.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "title": "Vitalität & Wohlbefinden",
+            "text": "<p>Unsere Nahrung bietet eine ausgewogene Mischung essentieller Nährstoffe, die das Immunsystem stärken. Sie unterstützt nicht nur Knochen und Gelenke, sondern auch die Herzfunktion, was zu einer gesteigerten körperlichen Fitness und geistigen Aktivität führt.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "title": "Langfristige Gesundheit",
+            "text": "<p>Mit unseren Menüs investierst du in die Zukunft deines Hundes. Unsere Nahrung ist darauf ausgerichtet, Krankheiten proaktiv entgegenzuwirken. Die Kombination aus hochwertigen Zutaten und dem Verzicht auf schädliche Zusätze sorgt für ein nachhaltiges Wohlbefinden deines Vierbeiners.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
+      "settings": {
+        "title": "Für deinen Hund bedeutet das",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "2af0e9d7-f2a8-434b-b346-ee8969847698": {
+      "type": "full-width-banner",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_ea_0d2b07ee-b9a6-421c-8ef0-6a94b7499025.png",
+        "content": "<h1><strong>Jede Mahlzeit zählt: Der Uncle Rusty's Mix<\/strong><\/h1><p>Stelle das ideale Paket zusammen: 3x helles Fleisch, 3x rotes Fleisch, 1x Fisch. Der Schlüssel für eine rundum gesunde Ernährung deines Hundes. Einfach, effektiv, ernährungsreich!<\/p>",
+        "button_text": "Mix & Match: Dein Menü",
+        "button_link": "shopify:\/\/pages\/build-a-box"
+      }
+    },
+    "build-a-box": {
+      "type": "build-a-box",
+      "settings": {
+        "collection": "nassfutter",
+        "additives_collection": "",
+        "questionaire_subscription_plan": 689522049319,
+        "instruction_text": "<p>Mit nur wenigen Klicks zum perfekten Futterpaket für deinen Hund. Wähle aus unseren 6 Sorten und stelle dir ein Menü zusammen, das perfekt zu deinem Hund. passt. Sieh direkt, wie sich der Preis anpasst und sichere dir maximale Rabatte. Genieße die volle Kontrolle der Hundeernährung und profitiere von unschlagbaren Angeboten. Einfacher war Hundefutterkauf noch nie!<\/p>",
+        "questionaire_info_text": "<p>Du brauchst Unterstützung bei der Auswahl?<\/p>",
+        "questionaire_button_label": "Ernährungsberatung",
+        "questionaire_button_link": "shopify:\/\/pages\/questionaire",
+        "below_price_info": "inkl. MwSt., zzgl. Versandkosten"
+      }
+    },
+    "b689839d-3ad5-4bc2-b3e0-cc27453d2ce7": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie stelle ich auf Uncle Rusty's um, wenn ich vorher etwas anderes gefüttert habe?",
+            "icon": "none",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
+            "page": ""
+          }
+        },
+        "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Für welche Hunde ist Uncle Rusty's Nassnahrung geeignet?",
+            "icon": "none",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
+            "page": ""
+          }
+        },
+        "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Was, wenn mein Hund eine Allergie oder spezielle Ernährungsbedürfnisse hat?",
+            "icon": "none",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
+            "page": ""
+          }
+        },
+        "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Muss ich etwas zufüttern wenn ich meinen Hund mit Uncle Rusty's füttere?",
+            "icon": "none",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
+            "page": ""
+          }
+        },
+        "1bd49921-b85c-4bbd-9440-ef578f8d6ff7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Was ist der Unterschied zwischen konventionellem Futter und Uncle Rusty's?",
+            "icon": "none",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
+            "page": ""
+          }
+        },
+        "ab619596-6175-4ff4-a7d7-26f221447ceb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie oft und wie viel Futter von Uncle Rusty's sollte mein Hund täglich bekommen?",
+            "icon": "none",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
+            "page": ""
+          }
+        },
+        "b547ec99-6c0a-4552-aa6c-7c77dc24469f": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie lange ist eine geöffnete Dose Uncle Uncle Rusty's im Kühlschrank haltbar?",
+            "icon": "none",
+            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
+            "page": ""
+          }
+        },
+        "b2fbd7ea-200b-4741-a774-224cb05ec391": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wer steht hinter Uncle Rusty's und warum wurde die Firma gegründet?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "75b03cd8-3788-4bf3-809e-c5f886466dc3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie stelle ich das ideale Menü für meinen Hund zusammen?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "ae161e47-2ba4-43c9-964d-eb5d6feea26e": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Was bedeutet \"Slow-Cooked\" und gibt es künstliche Zusätze oder Füllstoffe in Uncle Rusty's Produkten?",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-1",
+        "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-2",
+        "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-3",
+        "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-4",
+        "1bd49921-b85c-4bbd-9440-ef578f8d6ff7",
+        "ab619596-6175-4ff4-a7d7-26f221447ceb",
+        "b547ec99-6c0a-4552-aa6c-7c77dc24469f",
+        "b2fbd7ea-200b-4741-a774-224cb05ec391",
+        "75b03cd8-3788-4bf3-809e-c5f886466dc3",
+        "ae161e47-2ba4-43c9-964d-eb5d6feea26e"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "row",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "b076c1a8-b027-4cdd-80a7-525f325b73e2": {
+      "type": "quick-cta",
+      "settings": {
+        "text_color": "beige",
+        "background_color": "red",
+        "cta_text": "<h2>Quick CTA Headline<\/h2><p>Test Text<\/p>",
+        "cta_image": "shopify:\/\/shop_images\/istockphoto-1147544807-612x612.jpg",
+        "button_text": "Click me",
+        "button_url": ""
+      }
+    },
+    "1cda79a1-8b02-4c62-a4e2-d7ec642279c8": {
+      "type": "quick-cta",
+      "settings": {
+        "text_color": "beige",
+        "background_color": "green",
+        "cta_text": "<h2>Quick CTA Headline<\/h2><p>Test Text<\/p>",
+        "cta_image": "shopify:\/\/shop_images\/istockphoto-1147544807-612x612.jpg",
+        "button_text": "Click me",
+        "button_url": ""
+      }
+    },
+    "39fc5abc-8968-44f4-b2f2-d8ac92951665": {
+      "type": "quick-cta",
+      "settings": {
+        "text_color": "beige",
+        "background_color": "purple",
+        "cta_text": "<h2>Quick CTA Headline<\/h2><p>Test Text<\/p>",
+        "cta_image": "shopify:\/\/shop_images\/istockphoto-1147544807-612x612.jpg",
+        "button_text": "Click me",
+        "button_url": ""
+      }
+    },
+    "a3587d64-149a-4ee7-a42e-dafa93696b9e": {
+      "type": "colored-cards",
+      "blocks": {
+        "96ebf1dd-3bbf-4092-ab6a-3183001942df": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/nassfutter",
+            "block_text": "Nassfutter",
+            "background_color": "green"
+          }
+        },
+        "349db816-6348-4845-93a1-82e0be56b394": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/snacks",
+            "block_text": "Snacks",
+            "background_color": "purple"
+          }
+        },
+        "e557e6b5-0e34-4396-8fec-3626838441ae": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/ole",
+            "block_text": "Öle",
+            "background_color": "orange"
+          }
+        },
+        "ed261184-7291-4458-8af5-3a6cd7ad665d": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/pakete",
+            "block_text": "Pakete",
+            "background_color": "red"
+          }
+        }
+      },
+      "block_order": [
+        "96ebf1dd-3bbf-4092-ab6a-3183001942df",
+        "349db816-6348-4845-93a1-82e0be56b394",
+        "e557e6b5-0e34-4396-8fec-3626838441ae",
+        "ed261184-7291-4458-8af5-3a6cd7ad665d"
+      ],
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "5b1bf651-85a1-474d-be11-0a684a5ec1ac": {
+      "type": "colored-cards",
+      "blocks": {
+        "a172fe29-a9c7-4d97-a9e9-8813d6a2e431": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/nassfutter",
+            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
+            "block_text": "Nassfutter",
+            "background_color": "green"
+          }
+        },
+        "805192d3-78fa-4fd7-b008-35196044e55f": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/snacks",
+            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
+            "block_text": "Snacks",
+            "background_color": "purple"
+          }
+        },
+        "fedeeb03-96b5-41e9-aa03-db77afa0700a": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/ole",
+            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
+            "block_text": "Öle",
+            "background_color": "orange"
+          }
+        },
+        "60eb449e-fecb-437b-aafa-8ef447145639": {
+          "type": "content_block",
+          "settings": {
+            "block_link": "shopify:\/\/collections\/pakete",
+            "block_image": "shopify:\/\/shop_images\/test_collection.webp",
+            "block_text": "Pakete",
+            "background_color": "red"
+          }
+        }
+      },
+      "block_order": [
+        "a172fe29-a9c7-4d97-a9e9-8813d6a2e431",
+        "805192d3-78fa-4fd7-b008-35196044e55f",
+        "fedeeb03-96b5-41e9-aa03-db77afa0700a",
+        "60eb449e-fecb-437b-aafa-8ef447145639"
+      ],
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "236d8c14-c1eb-4043-ae32-9b1fa09d766b": {
+      "type": "icon-row",
+      "blocks": {
+        "0b5c8777-0c46-4143-9109-15ea8fb9127a": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_rich_text": "<h3>Regionale <\/h3><h3>& Natürliche Zutaten<\/h3>"
+          }
+        },
+        "232b11dd-f86c-414b-8c8e-a0c6414b76ac": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-gluten-color",
+            "icon_rich_text": "<h3>Glutenfrei<\/h3>"
+          }
+        },
+        "c8227c67-4b4b-4f96-beb3-ee472b298f40": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-sugar-color",
+            "icon_rich_text": "<h3>Ohne Zucker<\/h3>"
+          }
+        },
+        "dcd78d78-ac88-44f0-84b4-00970a1cef33": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-chemicals-color",
+            "icon_rich_text": "<h3>Keine Zusätze <\/h3><h3>oder Chemie<\/h3>"
+          }
+        },
+        "505f6a44-0aec-4df9-a468-fcb7ee338d0d": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-animals-color",
+            "icon_rich_text": "<h3>Keine <\/h3><h3>Tierversuche<\/h3>"
+          }
+        },
+        "099196d8-2cfe-4075-b0a8-9c6d08896d65": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_rich_text": "<h3>Hochwertiges<\/h3><h3>Muskelfleisch<\/h3>"
+          }
+        }
+      },
+      "block_order": [
+        "0b5c8777-0c46-4143-9109-15ea8fb9127a",
+        "232b11dd-f86c-414b-8c8e-a0c6414b76ac",
+        "c8227c67-4b4b-4f96-beb3-ee472b298f40",
+        "dcd78d78-ac88-44f0-84b4-00970a1cef33",
+        "505f6a44-0aec-4df9-a468-fcb7ee338d0d",
+        "099196d8-2cfe-4075-b0a8-9c6d08896d65"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": ""
       }
     },
     "566dfd4f-bb7b-4e24-b0d2-191a21f8e43b": {
@@ -708,398 +999,30 @@
       "settings": {
         "color_scheme": ""
       }
-    },
-    "c2f0ff7f-b966-4dad-a0a0-d354fa082545": {
-      "type": "multicolumn",
-      "blocks": {
-        "template--20724493582631__c2f0ff7f-b966-4dad-a0a0-d354fa082545-column-1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "169e7353-358b-4007-9160-32d706341ceb": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "25fd5b06-0583-4e8a-bb06-3a3a4197a5f2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "48adface-c128-48cd-bbc3-47382b7ba0e7": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--20724493582631__c2f0ff7f-b966-4dad-a0a0-d354fa082545-column-1",
-        "169e7353-358b-4007-9160-32d706341ceb",
-        "25fd5b06-0583-4e8a-bb06-3a3a4197a5f2",
-        "48adface-c128-48cd-bbc3-47382b7ba0e7"
-      ],
-      "settings": {
-        "title": "Multicolumn",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "Button label",
-        "button_link": "",
-        "color_scheme": "accent-2",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 52,
-        "padding_bottom": 36
-      }
-    },
-    "build-a-box": {
-      "type": "build-a-box",
-      "settings": {
-        "collection": "nassfutter",
-        "additives_collection": "ole",
-        "questionaire_subscription_plan": 689522049319,
-        "instruction_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<\/p>",
-        "questionaire_info_text": "<p>Du brauchst Unterstützung bei der Auswahl?<\/p>",
-        "questionaire_button_label": "Ernährungsberatung",
-        "questionaire_button_link": "shopify:\/\/pages\/questionaire",
-        "below_price_info": "inkl. MwSt., zzgl. Versandkosten"
-      }
-    },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "2af0e9d7-f2a8-434b-b346-ee8969847698": {
-      "type": "full-width-banner",
-      "settings": {
-        "background_image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_ea_0d2b07ee-b9a6-421c-8ef0-6a94b7499025.png",
-        "content": "<h1>Headline<\/h1><p>Test Text<\/p>",
-        "button_text": "Button Text",
-        "button_link": ""
-      }
-    },
-    "b689839d-3ad5-4bc2-b3e0-cc27453d2ce7": {
-      "type": "collapsible-content",
-      "blocks": {
-        "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-1": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "none",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
-            "page": ""
-          }
-        },
-        "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-2": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "none",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
-            "page": ""
-          }
-        },
-        "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-3": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "none",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
-            "page": ""
-          }
-        },
-        "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-4": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "none",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
-            "page": ""
-          }
-        },
-        "1bd49921-b85c-4bbd-9440-ef578f8d6ff7": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "none",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
-            "page": ""
-          }
-        },
-        "ab619596-6175-4ff4-a7d7-26f221447ceb": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "none",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
-            "page": ""
-          }
-        },
-        "b547ec99-6c0a-4552-aa6c-7c77dc24469f": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "none",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-1",
-        "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-2",
-        "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-3",
-        "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-4",
-        "1bd49921-b85c-4bbd-9440-ef578f8d6ff7",
-        "ab619596-6175-4ff4-a7d7-26f221447ceb",
-        "b547ec99-6c0a-4552-aa6c-7c77dc24469f"
-      ],
-      "settings": {
-        "caption": "",
-        "heading": "FAQs",
-        "heading_size": "h1",
-        "heading_alignment": "left",
-        "layout": "row",
-        "color_scheme": "",
-        "container_color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "b076c1a8-b027-4cdd-80a7-525f325b73e2": {
-      "type": "quick-cta",
-      "settings": {
-        "text_color": "beige",
-        "background_color": "red",
-        "cta_text": "<h2>Quick CTA Headline<\/h2><p>Test Text<\/p>",
-        "cta_image": "shopify:\/\/shop_images\/istockphoto-1147544807-612x612.jpg",
-        "button_text": "Click me",
-        "button_url": ""
-      }
-    },
-    "1cda79a1-8b02-4c62-a4e2-d7ec642279c8": {
-      "type": "quick-cta",
-      "settings": {
-        "text_color": "beige",
-        "background_color": "green",
-        "cta_text": "<h2>Quick CTA Headline<\/h2><p>Test Text<\/p>",
-        "cta_image": "shopify:\/\/shop_images\/istockphoto-1147544807-612x612.jpg",
-        "button_text": "Click me",
-        "button_url": ""
-      }
-    },
-    "39fc5abc-8968-44f4-b2f2-d8ac92951665": {
-      "type": "quick-cta",
-      "settings": {
-        "text_color": "beige",
-        "background_color": "purple",
-        "cta_text": "<h2>Quick CTA Headline<\/h2><p>Test Text<\/p>",
-        "cta_image": "shopify:\/\/shop_images\/istockphoto-1147544807-612x612.jpg",
-        "button_text": "Click me",
-        "button_url": ""
-      }
-    },
-    "d6a60efa-b69e-407a-bba8-6e5b0def2989": {
-      "type": "quick-cta",
-      "settings": {
-        "text_color": "beige",
-        "background_color": "orange",
-        "cta_text": "<h2>Headline<\/h2><p>Test Text<\/p>",
-        "cta_image": "shopify:\/\/shop_images\/istockphoto-1147544807-612x612.jpg",
-        "button_text": "Click me",
-        "button_url": ""
-      }
-    },
-    "1694590585319894d8": {
-      "type": "apps",
-      "blocks": {
-        "8a6f59a9-05e7-414e-9796-b8e8449cf484": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "maxwidth": 1080
-          }
-        }
-      },
-      "block_order": [
-        "8a6f59a9-05e7-414e-9796-b8e8449cf484"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "4d3e2d55-73ec-42e7-9d29-ee985d8ff178": {
-      "type": "featured-blog",
-      "settings": {
-        "heading": "Blog posts",
-        "heading_size": "h1",
-        "blog": "",
-        "post_limit": 2,
-        "columns_desktop": 2,
-        "color_scheme": "",
-        "show_image": true,
-        "show_date": true,
-        "show_author": true,
-        "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "d02ba099-4a0b-4f7d-a3b1-1514075d5076",
     "two-richtext",
     "3ec2a987-b522-4a27-b800-28dc1b68f35f",
-    "a3587d64-149a-4ee7-a42e-dafa93696b9e",
-    "357173cd-30c8-440c-bfb8-6e34d14254f8",
-    "9c172180-9760-4bc3-989a-937f54d744fd",
-    "b4972843-a229-4c6c-be94-30fde72c05ae",
-    "46b6142b-478f-4606-bc1d-d5759641bc51",
-    "236d8c14-c1eb-4043-ae32-9b1fa09d766b",
-    "5b1bf651-85a1-474d-be11-0a684a5ec1ac",
-    "e6110f6c-1cec-4c14-8440-d44764670054",
-    "566dfd4f-bb7b-4e24-b0d2-191a21f8e43b",
     "c2f0ff7f-b966-4dad-a0a0-d354fa082545",
-    "build-a-box",
+    "e6110f6c-1cec-4c14-8440-d44764670054",
     "rich_text",
     "featured_collection",
-    "2af0e9d7-f2a8-434b-b346-ee8969847698",
-    "b689839d-3ad5-4bc2-b3e0-cc27453d2ce7",
+    "1694590585319894d8",
+    "b4972843-a229-4c6c-be94-30fde72c05ae",
+    "02ac5c7a-1520-48d1-8103-39db72c5c2ec",
+    "357173cd-30c8-440c-bfb8-6e34d14254f8",
     "multicolumn",
+    "2af0e9d7-f2a8-434b-b346-ee8969847698",
+    "build-a-box",
+    "b689839d-3ad5-4bc2-b3e0-cc27453d2ce7",
     "b076c1a8-b027-4cdd-80a7-525f325b73e2",
     "1cda79a1-8b02-4c62-a4e2-d7ec642279c8",
     "39fc5abc-8968-44f4-b2f2-d8ac92951665",
-    "d6a60efa-b69e-407a-bba8-6e5b0def2989",
-    "1694590585319894d8",
-    "4d3e2d55-73ec-42e7-9d29-ee985d8ff178"
+    "a3587d64-149a-4ee7-a42e-dafa93696b9e",
+    "5b1bf651-85a1-474d-be11-0a684a5ec1ac",
+    "236d8c14-c1eb-4043-ae32-9b1fa09d766b",
+    "566dfd4f-bb7b-4e24-b0d2-191a21f8e43b"
   ]
 }

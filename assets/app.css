@@ -1847,15 +1847,6 @@ progress[value]::-moz-progress-bar {
   border: 2px solid var(--ur-base);
 }
 
-.card__inner {
-  max-height: 306px;
-}
-
-.card__media .media img {
-  -o-object-fit: contain !important;
-     object-fit: contain !important;
-}
-
 .last-of-type\:xborder-none:last-of-type {
   border-style: none;
 }
