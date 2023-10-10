@@ -13,11 +13,11 @@
             >
           {% endif %}
           <div class='hero-slide-content page-width xw-full xh-full xflex xflex-col xjustify-center'>
-            <div class='richtext !xtext-beige-200 beige xmb-40 richtext-hero'>
+            <div class='richtext {% if block.settings.theme_mode == 'dark' %}{% else %}!xtext-beige-200{% endif %}  beige xmb-40 richtext-hero'>
               {{ block.settings.hero_text }}
               <a
                 href='{{ block.settings.button_link }}'
-                class='button beige xmt-8'
+                class='button  {% if block.settings.theme_mode == 'dark' %}{% else %}beige{% endif %} xmt-8'
               >
                 {{- block.settings.button_label -}}
               </a>
@@ -91,6 +91,22 @@
           "id": "button_label",
           "label": "Button Label",
           "default": "Learn More"
+        },
+        {
+          "type": "select",
+          "id": "theme_mode",
+          "label": "Select Theme Mode",
+          "options": [
+            {
+              "value": "dark",
+              "label": "Dark"
+            },
+            {
+              "value": "light",
+              "label": "Light"
+            }
+          ],
+          "default": "light"
         }
       ]
     }

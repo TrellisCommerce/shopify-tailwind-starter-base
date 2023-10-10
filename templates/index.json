@@ -12,6 +12,15 @@
             "button_label": "Jetzt entdecken"
           }
         },
+        "c9a19ac3-ae3f-438f-bc8e-62e83fcddfae": {
+          "type": "hero-slide",
+          "settings": {
+            "hero_image": "shopify:\/\/shop_images\/topview0039.png",
+            "hero_text": "<h1>Mehr als nur<br\/>ein Hundefutter<\/h1><p>Ausgewählte, regionale Zutaten - sorgfältig verarbeitet. Weil Qualität in jedem Bissen zählt.<\/p>",
+            "button_link": "shopify:\/\/collections\/all",
+            "button_label": "Jetzt entdecken"
+          }
+        },
         "ca9378e3-b3fb-4caf-910c-45c8755a8e86": {
           "type": "hero-slide",
           "settings": {
@@ -24,6 +33,7 @@
       },
       "block_order": [
         "template--20724493582631__30fbf7e1-21c6-45a8-834f-aa38c719a695-hero-slide-1",
+        "c9a19ac3-ae3f-438f-bc8e-62e83fcddfae",
         "ca9378e3-b3fb-4caf-910c-45c8755a8e86"
       ],
       "settings": {
