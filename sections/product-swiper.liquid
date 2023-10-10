@@ -1,0 +1,45 @@
+<div class='swiper-container'>
+  <div class='swiper-wrapper ur-product-swiper contains-card--product'>
+    {%- for product in section.settings.collection.products -%}
+      <div class='swiper-slide card-wrapper product-card-wrapper underline-links-hover'>
+        {% render 'card-product', show_vendor: false %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% javascript %}
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const swiperConfig = {
+      loop: true,
+      slidesPerView: 4.5,
+      spaceBetween: 10,
+      direction: 'horizontal',
+      autoplay: {
+        delay: 5000,
+      },
+    };
+
+    //Swiper Init
+    const swiper = new Swiper('.ur-product-swiper', swiperConfig);
+  });
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Product Card Swiper",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select a Collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "UR Product Card Swiper",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
