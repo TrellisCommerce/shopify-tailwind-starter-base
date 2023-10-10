@@ -1,0 +1,66 @@
+<div class='herop-container'>
+  <div class='swiper-wrapper'>
+    {% for block in section.blocks %}
+      <div class='swiper-slide !xflex xjustify-center xitems-center'>
+        {% if product.image != null %}
+          <img
+            height='500'
+            width='auto'
+            loading='lazy'
+            src='{{ block.settings.hero_image.src | img_url: "x500" }}'
+            alt='{{ block.settings.hero_image.src | escape }}'
+          >
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+  <div class='swiper-pagination'></div>
+  <div class='swiper-button-prev'></div>
+  <div class='swiper-button-next'></div>
+</div>
+
+{% schema %}
+{
+  "name": "UR Hero Slider",
+  "blocks": [
+    {
+      "type": "hero-slide",
+      "name": "Hero Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "hero_image",
+          "label": "Select Image"
+        },
+        {
+          "type": "richtext",
+          "id": "hero_text",
+          "label": "Rich Text Content",
+          "default": "<h1>Your Heading Here</h1><p>Your description here.</p>"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button Label",
+          "default": "Learn More"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "UR Hero Slider",
+      "blocks": [
+        {
+          "type": "hero-slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

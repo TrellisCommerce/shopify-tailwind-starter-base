@@ -629,20 +629,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 12rem;
 }
 
-.xw-40 {
-  width: 10rem;
-}
-
-.xw-20 {
-  width: 5rem;
-}
-
-.xw-24 {
-  width: 6rem;
-}
-
 .xw-28 {
   width: 7rem;
+}
+
+.xw-40 {
+  width: 10rem;
 }
 
 .xmin-w-\[60\%\] {
@@ -1866,11 +1858,6 @@ progress[value]::-moz-progress-bar {
 .hover\:xbg-beige-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(224 215 189 / var(--tw-bg-opacity));
-}
-
-.hover\:xbg-beige-500:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(189 168 112 / var(--tw-bg-opacity));
 }
 
 .hover\:xtext-black:hover {
