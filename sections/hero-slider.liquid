@@ -13,15 +13,15 @@
             >
           {% endif %}
           <div class='hero-slide-content page-width xw-full xh-full xflex xflex-col xjustify-center'>
-            <div class='richtext !xtext-beige-200 beige xmb-40'>
+            <div class='richtext !xtext-beige-200 beige xmb-40 richtext-hero'>
               {{ block.settings.hero_text }}
+              <a
+                href='{{ block.settings.button_link }}'
+                class='button beige xmt-8'
+              >
+                {{- block.settings.button_label -}}
+              </a>
             </div>
-            <a
-              href='{{ block.settings.button_link }}'
-              class='button beige'
-            >
-              {{- block.settings.button_text -}}
-            </a>
           </div>
         </div>
       {% endfor %}

@@ -1870,6 +1870,7 @@ progress[value]::-moz-progress-bar {
   min-height: 450px;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0.8;
 }
 
 .ur-next-hero:after, .ur-prev-hero:after {
@@ -1910,6 +1911,18 @@ progress[value]::-moz-progress-bar {
 
 .hero-slide-content {
   position: absolute;
+}
+
+.richtext-hero {
+  max-width: 450px;
+}
+
+.richtext-fullwidth {
+  max-width: 70%;
+}
+
+.ur-hero-swiper .swiper-slide {
+  background-color: black;
 }
 
 .last-of-type\:xborder-none:last-of-type {
