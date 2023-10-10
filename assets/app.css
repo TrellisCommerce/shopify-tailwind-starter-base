@@ -493,18 +493,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0px;
 }
 
-.xtop-24 {
-  top: 6rem;
-}
-
-.xtop-48 {
-  top: 12rem;
-}
-
-.xtop-60 {
-  top: 15rem;
-}
-
 .xm-auto {
   margin: auto;
 }
@@ -557,16 +545,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 1rem;
 }
 
-.xmt-4 {
-  margin-top: 1rem;
-}
-
-.xmb-16 {
-  margin-bottom: 4rem;
-}
-
 .xmb-40 {
   margin-bottom: 10rem;
+}
+
+.xmt-4 {
+  margin-top: 1rem;
 }
 
 .\!xblock {
@@ -929,10 +913,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xpb-8 {
   padding-bottom: 2rem;
-}
-
-.xpb-16 {
-  padding-bottom: 4rem;
 }
 
 .xtext-center {
@@ -1920,6 +1900,11 @@ progress[value]::-moz-progress-bar {
   .swiper-pagination-custom,
   .swiper-pagination-fraction {
     bottom: 40px !important;
+  }
+
+  .ur-next-hero,
+  .ur-prev-hero {
+    display: none !important;
   }
 }
 

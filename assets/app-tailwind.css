@@ -610,6 +610,11 @@ progress[value]::-moz-progress-bar {
   .swiper-pagination-fraction {
     bottom: 40px !important;
   }
+
+  .ur-next-hero,
+  .ur-prev-hero {
+    display: none !important;
+  }
 }
 
 .hero-slide-content {
