@@ -1,12 +1,12 @@
-<div class='herop-container'>
+<div class='hero-container'>
   <div class='swiper-wrapper'>
     {% for block in section.blocks %}
       <div class='swiper-slide !xflex xjustify-center xitems-center'>
-        {% if product.image != null %}
+        {% if block.settings.hero_image != null %}
           <img
-            height='500'
+            class='hero-image'
+            height='auto'
             width='auto'
-            loading='lazy'
             src='{{ block.settings.hero_image.src | img_url: "x500" }}'
             alt='{{ block.settings.hero_image.src | escape }}'
           >
@@ -17,6 +17,15 @@
   <div class='swiper-pagination'></div>
   <div class='swiper-button-prev'></div>
   <div class='swiper-button-next'></div>
+  <svg
+    id='hero-mountains'
+    data-name='Ebene 1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'
+    viewBox='0 0 1842 180'
+  >
+    <defs><style>.a8364b8b-29d2-46b8-a774-e576b7b9fd4f{fill:url(#b39b1114-3bc5-4f27-9112-bae96cf7d8ac);}</style><linearGradient id="b39b1114-3bc5-4f27-9112-bae96cf7d8ac" x1="921" y1="604.39" x2="921" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f2eee3"/><stop offset="1" stop-color="#f2eee3"/></linearGradient></defs><title>mountains_web2</title><path id="eaea66b3-1228-4d5a-bd68-8ac09bec6ce4" data-name="mountains_4" class="a8364b8b-29d2-46b8-a774-e576b7b9fd4f" d="M0,131C673-41.25,384.16-44.2,886.69,125.46c112.52,31.39,348.24-88.72,441.82-45.53a153.25,153.25,0,0,0,100.27-10.37C1542.65,9.41,1576.92,4.22,1648.09,36L1842,117.2V604.39H0Z"/>
+  </svg>
 </div>
 
 {% schema %}

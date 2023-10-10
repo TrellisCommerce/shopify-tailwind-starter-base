@@ -517,6 +517,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 6rem !important;
 }
 
+.\!xmx-24 {
+  margin-left: 6rem !important;
+  margin-right: 6rem !important;
+}
+
 .xmt-8 {
   margin-top: 2rem;
 }
@@ -547,6 +552,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xmt-4 {
   margin-top: 1rem;
+}
+
+.\!xmb-24 {
+  margin-bottom: 6rem !important;
 }
 
 .\!xblock {
@@ -1851,6 +1860,20 @@ progress[value]::-moz-progress-bar {
   border: 2px solid var(--ur-base);
 }
 
+.hero-container {
+  position: relative;
+}
+
+#hero-mountains {
+  position: absolute;
+  bottom: 0;
+  z-index: 999999;
+}
+
+.hero-image {
+  width: 100%;
+}
+
 .last-of-type\:xborder-none:last-of-type {
   border-style: none;
 }
@@ -1893,6 +1916,10 @@ progress[value]::-moz-progress-bar {
 
   .md\:xmt-32 {
     margin-top: 8rem;
+  }
+
+  .md\:\!xmb-48 {
+    margin-bottom: 12rem !important;
   }
 
   .md\:xblock {

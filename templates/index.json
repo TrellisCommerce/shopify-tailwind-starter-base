@@ -1,5 +1,24 @@
 {
   "sections": {
+    "30fbf7e1-21c6-45a8-834f-aa38c719a695": {
+      "type": "hero-slider",
+      "blocks": {
+        "template--20724493582631__30fbf7e1-21c6-45a8-834f-aa38c719a695-hero-slide-1": {
+          "type": "hero-slide",
+          "settings": {
+            "hero_image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_su_b29c0781-ee5d-4f96-812c-2417e49ed61d.png",
+            "hero_text": "<h1>Your Heading Here<\/h1><p>Your description here.<\/p>",
+            "button_link": "",
+            "button_label": "Learn More"
+          }
+        }
+      },
+      "block_order": [
+        "template--20724493582631__30fbf7e1-21c6-45a8-834f-aa38c719a695-hero-slide-1"
+      ],
+      "settings": {
+      }
+    },
     "d02ba099-4a0b-4f7d-a3b1-1514075d5076": {
       "type": "slideshow",
       "blocks": {
@@ -63,6 +82,7 @@
         "template--20724493582631__d02ba099-4a0b-4f7d-a3b1-1514075d5076-slide-2",
         "508f1faf-6509-4c43-8aee-9b234b5b673e"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
@@ -1002,6 +1022,7 @@
     }
   },
   "order": [
+    "30fbf7e1-21c6-45a8-834f-aa38c719a695",
     "d02ba099-4a0b-4f7d-a3b1-1514075d5076",
     "two-richtext",
     "3ec2a987-b522-4a27-b800-28dc1b68f35f",
