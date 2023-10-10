@@ -346,6 +346,12 @@
         "padding_bottom": 36
       }
     },
+    "19112981-0c98-47ac-a6b0-70a623154a94": {
+      "type": "product-swiper",
+      "settings": {
+        "collection": "nassfutter"
+      }
+    },
     "1694590585319894d8": {
       "type": "apps",
       "blocks": {
@@ -1053,6 +1059,7 @@
     "e6110f6c-1cec-4c14-8440-d44764670054",
     "rich_text",
     "featured_collection",
+    "19112981-0c98-47ac-a6b0-70a623154a94",
     "1694590585319894d8",
     "b4972843-a229-4c6c-be94-30fde72c05ae",
     "02ac5c7a-1520-48d1-8103-39db72c5c2ec",

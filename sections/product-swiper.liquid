@@ -1,29 +1,30 @@
 <div class='swiper-container'>
-  <div class='swiper-wrapper ur-product-swiper contains-card--product'>
+  <div class='swiper-wrapper ur-product-swiper'>
     {%- for product in section.settings.collection.products -%}
       <div class='swiper-slide card-wrapper product-card-wrapper underline-links-hover'>
-        {% render 'card-product', show_vendor: false %}
+        {% render 'card-product', card_product: product %}
       </div>
     {% endfor %}
   </div>
 </div>
 
-{% javascript %}
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const swiperConfig = {
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiperConfigProducts = {
       loop: true,
-      slidesPerView: 4.5,
+      slidesPerView: 4,
       spaceBetween: 10,
-      direction: 'horizontal',
       autoplay: {
         delay: 5000,
       },
     };
 
     //Swiper Init
-    const swiper = new Swiper('.ur-product-swiper', swiperConfig);
+    const swiper = new Swiper('.ur-product-swiper', swiperConfigProducts);
+    console.log('Product Swiper loadad');
+    console.log(swiper);
   });
-{% endjavascript %}
+</script>
 
 {% schema %}
 {
