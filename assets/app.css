@@ -553,6 +553,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
+.xml-8 {
+  margin-left: 2rem;
+}
+
+.xmr-16 {
+  margin-right: 4rem;
+}
+
+.xmr-8 {
+  margin-right: 2rem;
+}
+
+.xmr-32 {
+  margin-right: 8rem;
+}
+
 .\!xblock {
   display: block !important;
 }
@@ -651,6 +667,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xflex-1 {
   flex: 1 1 0%;
+}
+
+.xtranslate-x-8 {
+  --tw-translate-x: 2rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.xtranslate-x-16 {
+  --tw-translate-x: 4rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .xcursor-pointer {
@@ -909,6 +935,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xpb-8 {
   padding-bottom: 2rem;
+}
+
+.xpr-16 {
+  padding-right: 4rem;
 }
 
 .xtext-center {
@@ -1985,6 +2015,10 @@ progress[value]::-moz-progress-bar {
     margin-top: 8rem;
   }
 
+  .md\:xmr-32 {
+    margin-right: 8rem;
+  }
+
   .md\:xblock {
     display: block;
   }
@@ -1999,6 +2033,11 @@ progress[value]::-moz-progress-bar {
 
   .md\:xflex-1 {
     flex: 1 1 0%;
+  }
+
+  .md\:xtranslate-x-16 {
+    --tw-translate-x: 4rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .md\:xgrid-cols-3 {

@@ -1,7 +1,7 @@
-<div class='swiper-container'>
-  <div class='swiper-wrapper ur-product-swiper'>
+<div class='swiper-container  ur-product-swiper xtranslate-x-8 xmr-16 md:xtranslate-x-16 md:xmr-32'>
+  <div class='swiper-wrapper'>
     {%- for product in section.settings.collection.products -%}
-      <div class='swiper-slide card-wrapper product-card-wrapper underline-links-hover'>
+      <div class='swiper-slide card-wrapper product-card-wrapper underline-links-hover {% if forloop.last %}{% endif %}'>
         {% render 'card-product', card_product: product %}
       </div>
     {% endfor %}
@@ -11,18 +11,31 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const swiperConfigProducts = {
-      loop: true,
-      slidesPerView: 4,
+      loop: false,
+      slidesPerView: 1,
       spaceBetween: 10,
       autoplay: {
-        delay: 5000,
+        delay: 3000,
+      },
+      grabCursor: true,
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 10,
+        },
       },
     };
 
     //Swiper Init
     const swiper = new Swiper('.ur-product-swiper', swiperConfigProducts);
-    console.log('Product Swiper loadad');
-    console.log(swiper);
   });
 </script>
 
