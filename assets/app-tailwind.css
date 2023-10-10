@@ -587,6 +587,10 @@ progress[value]::-moz-progress-bar {
   opacity: 0.8;
 }
 
+.hero-image.dark {
+  opacity: 1;
+}
+
 .ur-next-hero:after,
 .ur-prev-hero:after {
   @apply !xtext-beige-300;
@@ -620,6 +624,10 @@ progress[value]::-moz-progress-bar {
 .ur-hero-swiper .swiper-slide {
   background-color: black;
   height: 700px;
+}
+
+.hero-slide-content p {
+  @apply !xfont-semibold;
 }
 
 @media (max-width: 800px) {

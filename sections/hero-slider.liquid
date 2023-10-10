@@ -2,22 +2,27 @@
   <div class='swiper ur-hero-swiper '>
     <div class='swiper-wrapper'>
       {% for block in section.blocks %}
-        <div class='swiper-slide !xflex xjustify-center xitems-center'>
+        <div class='swiper-slide !xflex xjustify-center xitems-center {% if forloop.index != 1 %} xhidden {% endif %}'>
           {% if block.settings.hero_image != null %}
             <img
-              class='hero-image'
+              class='hero-image {% if block.settings.theme_mode == 'dark' %} dark {% else %} light {% endif %}'
               height='auto'
               width='auto'
-              src='{{ block.settings.hero_image.src | img_url: "x1920" }}'
+              {% if forloop.index == 1 %}
+                src='{{ block.settings.hero_image.src | img_url: "x1920" }}'
+              {% else %}
+                src='{{ block.settings.hero_image.src | img_url: "x1920" }}'
+                loading='lazy'
+              {% endif %}
               alt='{{ block.settings.hero_image.src | escape }}'
             >
           {% endif %}
           <div class='hero-slide-content page-width xw-full xh-full xflex xflex-col xjustify-center'>
-            <div class='richtext {% if block.settings.theme_mode == 'dark' %}{% else %}!xtext-beige-200{% endif %}  beige xmb-40 richtext-hero'>
+            <div class='richtext {% if block.settings.theme_mode == 'dark' %}!xtext-gray-900{% else %}!xtext-beige-200 beige{% endif %}   xmb-40 richtext-hero'>
               {{ block.settings.hero_text }}
               <a
                 href='{{ block.settings.button_link }}'
-                class='button  {% if block.settings.theme_mode == 'dark' %}{% else %}beige{% endif %} xmt-8'
+                class='button {% if block.settings.theme_mode == 'dark' %}{% else %}beige{% endif %} xmt-8'
               >
                 {{- block.settings.button_label -}}
               </a>

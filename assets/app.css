@@ -1005,6 +1005,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(242 238 227 / var(--tw-text-opacity)) !important;
 }
 
+.\!xtext-gray-900 {
+  --tw-text-opacity: 1 !important;
+  color: rgb(17 24 39 / var(--tw-text-opacity)) !important;
+}
+
 .xtext-beige-400 {
   --tw-text-opacity: 1;
   color: rgb(206 191 150 / var(--tw-text-opacity));
@@ -1871,6 +1876,10 @@ progress[value]::-moz-progress-bar {
   opacity: 0.8;
 }
 
+.hero-image.dark {
+  opacity: 1;
+}
+
 .ur-next-hero:after, .ur-prev-hero:after {
   --tw-text-opacity: 1 !important;
   color: rgb(224 215 189 / var(--tw-text-opacity)) !important;
@@ -1908,6 +1917,10 @@ progress[value]::-moz-progress-bar {
 .ur-hero-swiper .swiper-slide {
   background-color: black;
   height: 700px;
+}
+
+.hero-slide-content p {
+  font-weight: 600 !important;
 }
 
 @media (max-width: 800px) {
