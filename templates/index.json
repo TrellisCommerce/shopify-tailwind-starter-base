@@ -11,10 +11,20 @@
             "button_link": "",
             "button_label": "Learn More"
           }
+        },
+        "ca9378e3-b3fb-4caf-910c-45c8755a8e86": {
+          "type": "hero-slide",
+          "settings": {
+            "hero_image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_ea_b8bbc685-0a92-43ea-bc69-25c18faef102.png",
+            "hero_text": "<h1>Your Heading Here<\/h1><p>Your description here.<\/p>",
+            "button_link": "",
+            "button_label": "Learn More"
+          }
         }
       },
       "block_order": [
-        "template--20724493582631__30fbf7e1-21c6-45a8-834f-aa38c719a695-hero-slide-1"
+        "template--20724493582631__30fbf7e1-21c6-45a8-834f-aa38c719a695-hero-slide-1",
+        "ca9378e3-b3fb-4caf-910c-45c8755a8e86"
       ],
       "settings": {
       }
@@ -94,13 +104,6 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "two-richtext": {
-      "type": "two-richtext",
-      "settings": {
-        "richtext_left": "<h1>Von der Natur inspiriert, für den Genuss deines Hundes kreiert. <\/h1>",
-        "richtext_right": "<p>Bei Uncle Rusty's steht der Hund im Mittelpunkt. Unsere Überzeugung ist einfach: Wenn es um Ernährung geht, verdient dein Hund nur das Beste. Deshalb kombinieren wir traditionelle Handwerkskunst mit modernster Ernährungswissenschaft. Das Ergebnis? Ein Futter, das so natürlich und ehrlich ist wie die Liebe zu deinem Vierbeiner. Bei uns findest du keine Massenproduktion, sondern handverlesene, regionale Zutaten und eine Produktion, die auf Nachhaltigkeit und Qualität setzt. <\/p>"
-      }
-    },
     "3ec2a987-b522-4a27-b800-28dc1b68f35f": {
       "type": "collection-list",
       "blocks": {
@@ -139,6 +142,13 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "two-richtext": {
+      "type": "two-richtext",
+      "settings": {
+        "richtext_left": "<h1>Von der Natur inspiriert, für den Genuss deines Hundes kreiert. <\/h1>",
+        "richtext_right": "<p>Bei Uncle Rusty's steht der Hund im Mittelpunkt. Unsere Überzeugung ist einfach: Wenn es um Ernährung geht, verdient dein Hund nur das Beste. Deshalb kombinieren wir traditionelle Handwerkskunst mit modernster Ernährungswissenschaft. Das Ergebnis? Ein Futter, das so natürlich und ehrlich ist wie die Liebe zu deinem Vierbeiner. Bei uns findest du keine Massenproduktion, sondern handverlesene, regionale Zutaten und eine Produktion, die auf Nachhaltigkeit und Qualität setzt. <\/p>"
       }
     },
     "c2f0ff7f-b966-4dad-a0a0-d354fa082545": {
@@ -1024,8 +1034,8 @@
   "order": [
     "30fbf7e1-21c6-45a8-834f-aa38c719a695",
     "d02ba099-4a0b-4f7d-a3b1-1514075d5076",
-    "two-richtext",
     "3ec2a987-b522-4a27-b800-28dc1b68f35f",
+    "two-richtext",
     "c2f0ff7f-b966-4dad-a0a0-d354fa082545",
     "e6110f6c-1cec-4c14-8440-d44764670054",
     "rich_text",

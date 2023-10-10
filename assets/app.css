@@ -493,6 +493,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0px;
 }
 
+.xtop-24 {
+  top: 6rem;
+}
+
+.xtop-48 {
+  top: 12rem;
+}
+
+.xtop-60 {
+  top: 15rem;
+}
+
 .xm-auto {
   margin: auto;
 }
@@ -515,11 +527,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .\!xmy-24 {
   margin-top: 6rem !important;
   margin-bottom: 6rem !important;
-}
-
-.\!xmx-24 {
-  margin-left: 6rem !important;
-  margin-right: 6rem !important;
 }
 
 .xmt-8 {
@@ -554,8 +561,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
-.\!xmb-24 {
-  margin-bottom: 6rem !important;
+.xmb-16 {
+  margin-bottom: 4rem;
+}
+
+.xmb-40 {
+  margin-bottom: 10rem;
 }
 
 .\!xblock {
@@ -918,6 +929,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xpb-8 {
   padding-bottom: 2rem;
+}
+
+.xpb-16 {
+  padding-bottom: 4rem;
 }
 
 .xtext-center {
@@ -1872,6 +1887,44 @@ progress[value]::-moz-progress-bar {
 
 .hero-image {
   width: 100%;
+  min-height: 450px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ur-next-hero:after, .ur-prev-hero:after {
+  --tw-text-opacity: 1 !important;
+  color: rgb(224 215 189 / var(--tw-text-opacity)) !important;
+}
+
+.swiper-pagination-bullet {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(224 215 189 / var(--tw-bg-opacity)) !important;
+  opacity: 0.4 !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 60px !important;
+}
+
+@media (max-width: 800px) {
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 40px !important;
+  }
+}
+
+.hero-slide-content {
+  position: absolute;
 }
 
 .last-of-type\:xborder-none:last-of-type {
@@ -1916,10 +1969,6 @@ progress[value]::-moz-progress-bar {
 
   .md\:xmt-32 {
     margin-top: 8rem;
-  }
-
-  .md\:\!xmb-48 {
-    margin-bottom: 12rem !important;
   }
 
   .md\:xblock {
