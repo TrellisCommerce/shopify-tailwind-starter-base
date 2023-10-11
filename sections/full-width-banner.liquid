@@ -23,6 +23,17 @@
       "type": "url",
       "label": "Button Link",
       "id": "button_link"
+    },
+    {
+      "type": "text",
+      "label": "Button2 Text",
+      "id": "button2_text",
+      "default": "Button Text"
+    },
+    {
+      "type": "url",
+      "label": "Button2 Link",
+      "id": "button2_link"
     }
   ],
   "presets": [
@@ -40,15 +51,25 @@
 >
   <div class=''>
     <div class='xflex xitems-start xflex-col xjustify-center container page-width xtext-white xp-8  xmin-h-[400px] '>
-      <div class='richtext xp-8 !xtext-beige-200 beige richtext-fullwidth'>
+      <div class='richtext xp-8 !xtext-beige-200 beige richtext-fullwidth xfont-semibold'>
         {{ section.settings.content }}
       </div>
-      <a
-        href='{{ section.settings.button_link }}'
-        class='button beige'
-      >
-        {{- section.settings.button_text -}}
-      </a>
+      <div class='xflex xgap-8 xflex-wrap xpx-8'>
+        <a
+          href='{{ section.settings.button_link }}'
+          class='button beige'
+        >
+          {{- section.settings.button_text -}}
+        </a>
+        {% if section.settings.button2_text != blank %}
+          <a
+            href='{{ section.settings.button2_link }}'
+            class='button'
+          >
+            {{- section.settings.button2_text -}}
+          </a>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
