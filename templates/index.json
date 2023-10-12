@@ -278,7 +278,8 @@
         "button_text": "Mix & Match: Dein Menü",
         "button_link": "shopify:\/\/pages\/build-a-box",
         "button2_text": "Ernährungsberatung",
-        "button2_link": "shopify:\/\/pages\/questionaire"
+        "button2_link": "shopify:\/\/pages\/questionaire",
+        "newsletter": "light"
       }
     },
     "1694590585319894d8": {
@@ -611,6 +612,18 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "fc15cac7-171e-48c9-a319-f9db2133462e": {
+      "type": "full-width-banner",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_ea_b8bbc685-0a92-43ea-bc69-25c18faef102.png",
+        "content": "<h2>Abonniere jetzt unseren Newsletter, <br\/>um keine Rabattaktion zu verpassen!<\/h2>",
+        "button_text": "",
+        "button_link": "",
+        "button2_text": "",
+        "button2_link": "",
+        "newsletter": "dark"
       }
     },
     "build-a-box": {
@@ -1024,6 +1037,7 @@
     "c2f0ff7f-b966-4dad-a0a0-d354fa082545",
     "02ac5c7a-1520-48d1-8103-39db72c5c2ec",
     "multicolumn",
+    "fc15cac7-171e-48c9-a319-f9db2133462e",
     "build-a-box",
     "two-richtext",
     "b689839d-3ad5-4bc2-b3e0-cc27453d2ce7",
