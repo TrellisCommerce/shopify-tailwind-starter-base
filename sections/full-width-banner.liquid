@@ -85,6 +85,38 @@
             {{- section.settings.button2_text -}}
           </a>
         {% endif %}
+        {% if section.settings.newsletter %}
+          <div class='newsletter-form__field-wrapper'>
+            <div class='field'>
+              <input
+                id='NewsletterForm'
+                type='email'
+                name='contact[email]'
+                class='field__input'
+                value=''
+                aria-required='true'
+                autocorrect='off'
+                autocapitalize='off'
+                autocomplete='off'
+                placeholder='E-Mail'
+                required=''
+                style='width: 335px;'
+              >
+              <label class='field__label' for='NewsletterForm'> E-Mail </label>
+              <button
+                type='button'
+                class='newsletter-form__button field__button'
+                name='commit'
+                id='Subscribe'
+                aria-label='Abonnieren'
+              >
+                <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                  <path d="M11.293 17.293L12.707 18.707L19.414 12L12.707 5.29297L11.293 6.70697L15.586 11H6V13H15.586L11.293 17.293Z" fill="currentColor"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>
