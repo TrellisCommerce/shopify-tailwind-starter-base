@@ -23,30 +23,30 @@
   endif
 -%}
 
-<div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
+<div class='multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}'>
   <div
-    class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    class='page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
     {% endif %}
   >
     {%- unless section.settings.title == blank -%}
-      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
-        <h2 class="title inline-richtext {{ section.settings.heading_size }}">
+      <div class='title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin {% if section.settings.heading_alignment == 'center'%} xtext-center {% endif %}'>
+        <h2 class='title inline-richtext {{ section.settings.heading_size }}'>
           {{ section.settings.title }}
         </h2>
         {%- if section.settings.button_label != blank and show_mobile_slider -%}
-          <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">
+          <a href='{{ section.settings.button_link }}' class='link underlined-link large-up-hide'>
             {{- section.settings.button_label | escape -}}
           </a>
         {%- endif -%}
       </div>
     {%- endunless -%}
-    <slider-component class="slider-mobile-gutter">
+    <slider-component class='slider-mobile-gutter'>
       <ul
-        class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile grid--peek{% endif %}"
-        id="Slider-{{ section.id }}"
-        role="list"
+        class='multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile grid--peek{% endif %}'
+        id='Slider-{{ section.id }}'
+        role='list'
       >
         {%- liquid
           assign highest_ratio = 0
@@ -67,24 +67,24 @@
           {%- endif -%}
 
           <li
-            id="Slide-{{ section.id }}-{{ forloop.index }}"
-            class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            id='Slide-{{ section.id }}-{{ forloop.index }}'
+            class='multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
             {{ block.shopify_attributes }}
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
-              style="--animation-order: {{ forloop.index }};"
+              style='--animation-order: {{ forloop.index }};'
             {% endif %}
           >
-            <div class="multicolumn-card content-container">
+            <div class='multicolumn-card content-container'>
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
                 {% endif %}
-                <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
+                <div class='multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}'>
                   <div
-                    class="media media--transparent media--{{ section.settings.image_ratio }}"
+                    class='media media--transparent media--{{ section.settings.image_ratio }}'
                     {% if section.settings.image_ratio == 'adapt' %}
-                      style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
+                      style='padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;'
                     {% endif %}
                   >
                     {%- liquid
@@ -119,24 +119,24 @@
                   </div>
                 </div>
               {%- endif -%}
-              <div class="multicolumn-card__info">
+              <div class='multicolumn-card__info'>
                 {%- if block.settings.title != blank -%}
-                  <h3 class="inline-richtext">{{ block.settings.title }}</h3>
+                  <h3 class='inline-richtext'>{{ block.settings.title }}</h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
-                  <div class="rte">{{ block.settings.text }}</div>
+                  <div class='rte'>{{ block.settings.text }}</div>
                 {%- endif -%}
                 {%- if block.settings.link_label != blank -%}
                   <a
-                    class="link animate-arrow"
+                    class='link animate-arrow'
                     {% if block.settings.link == blank %}
-                      role="link" aria-disabled="true"
+                      role='link' aria-disabled='true'
                     {% else %}
-                      href="{{ block.settings.link }}"
+                      href='{{ block.settings.link }}'
                     {% endif %}
                   >
                     {{- block.settings.link_label | escape -}}
-                    <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span></a
+                    <span class='icon-wrap'>&nbsp;{% render 'icon-arrow' %}</span></a
                   >
                 {%- endif -%}
               </div>
@@ -146,40 +146,40 @@
       </ul>
 
       {%- if show_mobile_slider -%}
-        <div class="slider-buttons no-js-hidden medium-hide">
+        <div class='slider-buttons no-js-hidden medium-hide'>
           <button
-            type="button"
-            class="slider-button slider-button--prev"
-            name="previous"
-            aria-label="{{ 'general.slider.previous_slide' | t }}"
+            type='button'
+            class='slider-button slider-button--prev'
+            name='previous'
+            aria-label='{{ 'general.slider.previous_slide' | t }}'
           >
             {% render 'icon-caret' %}
           </button>
-          <div class="slider-counter caption">
-            <span class="slider-counter--current">1</span>
-            <span aria-hidden="true"> / </span>
-            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-            <span class="slider-counter--total">{{ section.blocks.size }}</span>
+          <div class='slider-counter caption'>
+            <span class='slider-counter--current'>1</span>
+            <span aria-hidden='true'> / </span>
+            <span class='visually-hidden'>{{ 'general.slider.of' | t }}</span>
+            <span class='slider-counter--total'>{{ section.blocks.size }}</span>
           </div>
           <button
-            type="button"
-            class="slider-button slider-button--next"
-            name="next"
-            aria-label="{{ 'general.slider.next_slide' | t }}"
+            type='button'
+            class='slider-button slider-button--next'
+            name='next'
+            aria-label='{{ 'general.slider.next_slide' | t }}'
           >
             {% render 'icon-caret' %}
           </button>
         </div>
       {%- endif -%}
     </slider-component>
-    <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
+    <div class='center{% if show_mobile_slider %} small-hide medium-hide{% endif %}'>
       {%- if section.settings.button_label != blank -%}
         <a
-          class="button button--primary"
+          class='button button--primary'
           {% if section.settings.button_link == blank %}
-            role="link" aria-disabled="true"
+            role='link' aria-disabled='true'
           {% else %}
-            href="{{ section.settings.button_link }}"
+            href='{{ section.settings.button_link }}'
           {% endif %}
         >
           {{ section.settings.button_label | escape }}
@@ -204,6 +204,22 @@
       "default": "Multicolumn",
       "label": "t:sections.multicolumn.settings.title.label"
     },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Select Theme Mode",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "left"
+    }
     {
       "type": "select",
       "id": "heading_size",

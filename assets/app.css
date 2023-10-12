@@ -553,12 +553,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 4rem;
 }
 
-.xmt-4 {
-  margin-top: 1rem;
-}
-
 .xmb-24 {
   margin-bottom: 6rem;
+}
+
+.xmt-4 {
+  margin-top: 1rem;
 }
 
 .\!xblock {
@@ -896,14 +896,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.5rem;
 }
 
-.xpy-32 {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
-
 .xpx-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.xpy-32 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 
 .xpy-4 {
@@ -1954,6 +1954,10 @@ progress[value]::-moz-progress-bar {
   }
 }
 
+.jdgm-carousel-wrapper {
+  padding-bottom: 0px !important;
+}
+
 .last-of-type\:xborder-none:last-of-type {
   border-style: none;
 }
@@ -2021,10 +2025,6 @@ progress[value]::-moz-progress-bar {
   .md\:xtranslate-x-16 {
     --tw-translate-x: 4rem;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .md\:xgrid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:xgrid-cols-4 {

@@ -647,3 +647,6 @@ progress[value]::-moz-progress-bar {
     height: 500px;
   }
 }
+.jdgm-carousel-wrapper {
+  padding-bottom: 0px !important;
+}
