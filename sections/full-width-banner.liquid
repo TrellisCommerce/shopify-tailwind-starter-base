@@ -22,7 +22,7 @@
             {{- section.settings.button2_text -}}
           </a>
         {% endif %}
-        {% if section.settings.newsletter == true %}
+        {% if section.settings.newsletter == 'yes' %}
           <div class='newsletter-form__field-wrapper'>
             <div class='field'>
               <input
@@ -124,15 +124,15 @@
       "label": "Show Newsletter Subscription Form",
       "options": [
         {
-          "value": true,
+          "value": "yes",
           "label": "Yes"
         },
         {
-          "value": false,
+          "value": "no",
           "label": "No"
         }
       ],
-      "default": false
+      "default": "no"
     }
   ],
   "presets": [
