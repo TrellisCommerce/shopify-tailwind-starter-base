@@ -85,7 +85,7 @@
             {{- section.settings.button2_text -}}
           </a>
         {% endif %}
-        {% if section.settings.newsletter %}
+        {% if section.settings.newsletter == true %}
           <div class='newsletter-form__field-wrapper'>
             <div class='field'>
               <input
@@ -105,7 +105,7 @@
               <label class='field__label' for='NewsletterForm'> E-Mail </label>
               <button
                 type='button'
-                class='newsletter-form__button field__button'
+                class='newsletter-form__button field__button xtext-beige-950 xfill-beige-950'
                 name='commit'
                 id='Subscribe'
                 aria-label='Abonnieren'

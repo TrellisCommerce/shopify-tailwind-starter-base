@@ -864,6 +864,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   fill: #F2EEE3;
 }
 
+.xfill-beige-950 {
+  fill: #211C0F;
+}
+
 .xobject-contain {
   -o-object-fit: contain;
      object-fit: contain;
