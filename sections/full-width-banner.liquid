@@ -1,66 +1,3 @@
-{% schema %}
-{
-  "name": "Fullwidth Banner",
-  "settings": [
-    {
-      "type": "image_picker",
-      "label": "Background Image",
-      "id": "background_image"
-    },
-    {
-      "type": "richtext",
-      "label": "Content",
-      "id": "content",
-      "default": "<p>Test Text</p>"
-    },
-    {
-      "type": "text",
-      "label": "Button Text",
-      "id": "button_text",
-      "default": "Button Text"
-    },
-    {
-      "type": "url",
-      "label": "Button Link",
-      "id": "button_link"
-    },
-    {
-      "type": "text",
-      "label": "Button2 Text",
-      "id": "button2_text",
-      "default": "Button Text"
-    },
-    {
-      "type": "url",
-      "label": "Button2 Link",
-      "id": "button2_link"
-    },
-    {
-      "type": "select",
-      "id": "newsletter",
-      "label": "Show Newsletter Subscription Form",
-      "options": [
-        {
-          "value": "dark",
-          "label": "Dark"
-        },
-        {
-          "value": "light",
-          "label": "Light"
-        }
-      ],
-      "default": "light"
-    }
-  ],
-  "presets": [
-    {
-      "name": "UR Fullwidth Banner",
-      "category": "Custom"
-    }
-  ]
-}
-{% endschema %}
-
 <div
   class='fullwidth-banner xmin-h-[400px]'
   style="background-image: url('{{ section.settings.background_image.src | img_url: "x1920" }}');"
@@ -143,3 +80,66 @@
     /* Add styles for the button */
   }
 </style>
+
+{% schema %}
+{
+  "name": "Fullwidth Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "Background Image",
+      "id": "background_image"
+    },
+    {
+      "type": "richtext",
+      "label": "Content",
+      "id": "content",
+      "default": "<p>Test Text</p>"
+    },
+    {
+      "type": "text",
+      "label": "Button Text",
+      "id": "button_text",
+      "default": "Button Text"
+    },
+    {
+      "type": "url",
+      "label": "Button Link",
+      "id": "button_link"
+    },
+    {
+      "type": "text",
+      "label": "Button2 Text",
+      "id": "button2_text",
+      "default": "Button Text"
+    },
+    {
+      "type": "url",
+      "label": "Button2 Link",
+      "id": "button2_link"
+    },
+    {
+      "type": "select",
+      "id": "newsletter",
+      "label": "Show Newsletter Subscription Form",
+      "options": [
+        {
+          "value": true,
+          "label": "Yes"
+        },
+        {
+          "value": false,
+          "label": "No"
+        }
+      ],
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "UR Fullwidth Banner",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
