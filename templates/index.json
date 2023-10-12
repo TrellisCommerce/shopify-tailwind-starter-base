@@ -623,7 +623,7 @@
         "button_link": "",
         "button2_text": "",
         "button2_link": "",
-        "newsletter": "dark"
+        "newsletter": "yes"
       }
     },
     "build-a-box": {
@@ -636,7 +636,9 @@
         "questionaire_info_text": "<p>Du brauchst Unterstützung bei der Auswahl?<\/p>",
         "questionaire_button_label": "Ernährungsberatung",
         "questionaire_button_link": "shopify:\/\/pages\/questionaire",
-        "below_price_info": "inkl. MwSt., zzgl. Versandkosten"
+        "below_price_info": "inkl. MwSt., zzgl. Versandkosten",
+        "padding_top": 40,
+        "padding_bottom": 0
       }
     },
     "two-richtext": {
