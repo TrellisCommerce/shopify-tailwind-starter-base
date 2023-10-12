@@ -279,7 +279,7 @@
         "button_link": "shopify:\/\/pages\/build-a-box",
         "button2_text": "Ernährungsberatung",
         "button2_link": "shopify:\/\/pages\/questionaire",
-        "newsletter": "light"
+        "newsletter": "false"
       }
     },
     "1694590585319894d8": {
@@ -623,7 +623,7 @@
         "button_link": "",
         "button2_text": "",
         "button2_link": "",
-        "newsletter": "yes"
+        "newsletter": "true"
       }
     },
     "build-a-box": {
