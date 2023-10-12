@@ -167,32 +167,25 @@
             "icon_rich_text": "<h3>Regionale <\/h3><h3>& Natürliche Zutaten<\/h3>"
           }
         },
-        "ae16ad4d-ab1c-4c05-82e8-10f04ef874f5": {
+        "d6647be6-70cd-4342-9b0f-1fed272bd413": {
           "type": "icon-text-block",
           "settings": {
-            "icon_selection": "icon-no-gluten-color",
-            "icon_rich_text": "<h3>Glutenfrei<\/h3>"
+            "icon_selection": "icon-cooking",
+            "icon_rich_text": "<h3>Nährstoffschonend<br\/>Slow-Cooked<\/h3><h3><\/h3>"
+          }
+        },
+        "844cac4c-a44a-4eeb-a880-ee04f0746a3a": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_rich_text": "<h3>Hochwertiges<\/h3><h3>Muskelfleisch<\/h3>"
           }
         },
         "031d7b38-253e-4d90-9a17-f63dc4d3ec24": {
           "type": "icon-text-block",
           "settings": {
-            "icon_selection": "icon-no-sugar-color",
-            "icon_rich_text": "<h3>Ohne Zucker<\/h3>"
-          }
-        },
-        "d3b8f331-a35a-4a2e-ad0b-914723f5e3ca": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-sugar-color",
-            "icon_rich_text": "<h3>Ohne Zucker<\/h3>"
-          }
-        },
-        "dea814d0-8e28-4694-9ddc-7138b9b4c3ef": {
-          "type": "icon-text-block",
-          "settings": {
-            "icon_selection": "icon-no-chemicals-color",
-            "icon_rich_text": "<h3>Keine Zusätze <\/h3><h3>oder Chemie<\/h3>"
+            "icon_selection": "icon-fruit-bag",
+            "icon_rich_text": "<h3>Natürliche <br\/>Vitamine<\/h3>"
           }
         },
         "dd36e573-41ee-4794-a7f5-9538379a3793": {
@@ -202,30 +195,37 @@
             "icon_rich_text": "<h3>Keine <\/h3><h3>Tierversuche<\/h3>"
           }
         },
-        "d6647be6-70cd-4342-9b0f-1fed272bd413": {
+        "d3b8f331-a35a-4a2e-ad0b-914723f5e3ca": {
           "type": "icon-text-block",
           "settings": {
-            "icon_selection": "icon-meat-color",
-            "icon_rich_text": "<h3>Hochwertiges<\/h3><h3>Muskelfleisch<\/h3>"
+            "icon_selection": "icon-no-sugar-color",
+            "icon_rich_text": "<h3>Ohne Zucker<\/h3>"
           }
         },
-        "844cac4c-a44a-4eeb-a880-ee04f0746a3a": {
+        "ae16ad4d-ab1c-4c05-82e8-10f04ef874f5": {
           "type": "icon-text-block",
           "settings": {
-            "icon_selection": "icon-meat-color",
-            "icon_rich_text": "<h3>Hochwertiges<\/h3><h3>Muskelfleisch<\/h3>"
+            "icon_selection": "icon-no-gluten-color",
+            "icon_rich_text": "<h3>Glutenfrei<\/h3>"
+          }
+        },
+        "dea814d0-8e28-4694-9ddc-7138b9b4c3ef": {
+          "type": "icon-text-block",
+          "settings": {
+            "icon_selection": "icon-no-chemicals-color",
+            "icon_rich_text": "<h3>Keine Zusätze <\/h3><h3>oder Chemie<\/h3>"
           }
         }
       },
       "block_order": [
         "f6528b93-b843-4809-aad7-3d5089e1d308",
-        "ae16ad4d-ab1c-4c05-82e8-10f04ef874f5",
-        "031d7b38-253e-4d90-9a17-f63dc4d3ec24",
-        "d3b8f331-a35a-4a2e-ad0b-914723f5e3ca",
-        "dea814d0-8e28-4694-9ddc-7138b9b4c3ef",
-        "dd36e573-41ee-4794-a7f5-9538379a3793",
         "d6647be6-70cd-4342-9b0f-1fed272bd413",
-        "844cac4c-a44a-4eeb-a880-ee04f0746a3a"
+        "844cac4c-a44a-4eeb-a880-ee04f0746a3a",
+        "031d7b38-253e-4d90-9a17-f63dc4d3ec24",
+        "dd36e573-41ee-4794-a7f5-9538379a3793",
+        "d3b8f331-a35a-4a2e-ad0b-914723f5e3ca",
+        "ae16ad4d-ab1c-4c05-82e8-10f04ef874f5",
+        "dea814d0-8e28-4694-9ddc-7138b9b4c3ef"
       ],
       "custom_css": [
 
@@ -260,8 +260,8 @@
         "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 44
+        "padding_top": 64,
+        "padding_bottom": 52
       }
     },
     "19112981-0c98-47ac-a6b0-70a623154a94": {
@@ -274,9 +274,11 @@
       "type": "full-width-banner",
       "settings": {
         "background_image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_ea_0d2b07ee-b9a6-421c-8ef0-6a94b7499025.png",
-        "content": "<h1><strong>Jede Mahlzeit zählt: Der Uncle Rusty's Mix<\/strong><\/h1><p>Stelle das ideale Paket zusammen: 3x helles Fleisch, 3x rotes Fleisch, 1x Fisch. Der Schlüssel für eine rundum gesunde Ernährung deines Hundes. Einfach, effektiv, ernährungsreich!<\/p>",
+        "content": "<h1><strong>Jede Mahlzeit zählt: <br\/>Der Uncle Rusty's Mix<\/strong><\/h1><p><em>Stelle das ideale Paket zusammen: <\/em><br\/>3x helles Fleisch, 3x rotes Fleisch, 1x Fisch.  Der Schlüssel für eine rundum gesunde Ernährung deines Hundes. Einfach, effektiv, ernährungsreich!<\/p>",
         "button_text": "Mix & Match: Dein Menü",
-        "button_link": "shopify:\/\/pages\/build-a-box"
+        "button_link": "shopify:\/\/pages\/build-a-box",
+        "button2_text": "Ernährungsberatung",
+        "button2_link": "shopify:\/\/pages\/questionaire"
       }
     },
     "1694590585319894d8": {
@@ -537,6 +539,7 @@
         "template--20196637933863__02ac5c7a-1520-48d1-8103-39db72c5c2ec-column-3",
         "bdc0af51-c640-49d3-8f13-f8f240c41b27"
       ],
+      "disabled": true,
       "settings": {
         "title": "Das macht uns einzigartig",
         "heading_size": "h1",
@@ -550,93 +553,6 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "357173cd-30c8-440c-bfb8-6e34d14254f8": {
-      "type": "ur-image-with-text",
-      "blocks": {
-        "c7cb0cce-33e7-4e54-870a-5b33c1044e07": {
-          "type": "caption",
-          "settings": {
-            "caption": "Wie alles begann",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Unsere Geschichte",
-            "heading_size": "h1"
-          }
-        },
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Unsere Geschichte ist geprägt von Rusty, unserem geliebten Familienhund. Seine Bedürfnisse inspirierten uns, die Grenzen herkömmlichen Hundefutters zu überschreiten und etwas Einzigartiges zu schaffen.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "0d331331-f64a-4ffd-9edf-45d20f706b77": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-organic-color",
-            "icon_text": "Inspiration - Rusty, der Beginn unserer Reise"
-          }
-        },
-        "04544f39-b233-4153-a50d-ca2cb01b6274": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-gluten-color",
-            "icon_text": "Individualität - Jedes Menü, einzigartig wie dein Hund"
-          }
-        },
-        "007035b8-304e-4acf-ac27-bedfe03d79a5": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-chemicals-color",
-            "icon_text": "Transparenz - Klarheit von Anfang bis Ende"
-          }
-        },
-        "3551eac1-1b96-49ad-ae2e-95c7080d8117": {
-          "type": "icon-text",
-          "settings": {
-            "icon_selection": "icon-no-animals-color",
-            "icon_text": "Tradition - Bewährte Methoden, modern interpretiert"
-          }
-        },
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Über Uns",
-            "button_link": "shopify:\/\/pages\/build-a-box",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "c7cb0cce-33e7-4e54-870a-5b33c1044e07",
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-heading-1",
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-text-1",
-        "0d331331-f64a-4ffd-9edf-45d20f706b77",
-        "04544f39-b233-4153-a50d-ca2cb01b6274",
-        "007035b8-304e-4acf-ac27-bedfe03d79a5",
-        "3551eac1-1b96-49ad-ae2e-95c7080d8117",
-        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/pic1.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -835,6 +751,93 @@
         "padding_bottom": 36
       }
     },
+    "357173cd-30c8-440c-bfb8-6e34d14254f8": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "c7cb0cce-33e7-4e54-870a-5b33c1044e07": {
+          "type": "caption",
+          "settings": {
+            "caption": "Wie alles begann",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unsere Geschichte",
+            "heading_size": "h1"
+          }
+        },
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unsere Geschichte ist geprägt von Rusty, unserem geliebten Familienhund. Seine Bedürfnisse inspirierten uns, die Grenzen herkömmlichen Hundefutters zu überschreiten und etwas Einzigartiges zu schaffen.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "0d331331-f64a-4ffd-9edf-45d20f706b77": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_text": "Inspiration - Rusty, der Beginn unserer Reise"
+          }
+        },
+        "04544f39-b233-4153-a50d-ca2cb01b6274": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-no-gluten-color",
+            "icon_text": "Individualität - Jedes Menü, einzigartig wie dein Hund"
+          }
+        },
+        "007035b8-304e-4acf-ac27-bedfe03d79a5": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-no-chemicals-color",
+            "icon_text": "Transparenz - Klarheit von Anfang bis Ende"
+          }
+        },
+        "3551eac1-1b96-49ad-ae2e-95c7080d8117": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-no-animals-color",
+            "icon_text": "Tradition - Bewährte Methoden, modern interpretiert"
+          }
+        },
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Über Uns",
+            "button_link": "shopify:\/\/pages\/build-a-box",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "c7cb0cce-33e7-4e54-870a-5b33c1044e07",
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-heading-1",
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-text-1",
+        "0d331331-f64a-4ffd-9edf-45d20f706b77",
+        "04544f39-b233-4153-a50d-ca2cb01b6274",
+        "007035b8-304e-4acf-ac27-bedfe03d79a5",
+        "3551eac1-1b96-49ad-ae2e-95c7080d8117",
+        "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/pic1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "5b1bf651-85a1-474d-be11-0a684a5ec1ac": {
       "type": "colored-cards",
       "blocks": {
@@ -1017,11 +1020,11 @@
     "a3587d64-149a-4ee7-a42e-dafa93696b9e",
     "c2f0ff7f-b966-4dad-a0a0-d354fa082545",
     "02ac5c7a-1520-48d1-8103-39db72c5c2ec",
-    "357173cd-30c8-440c-bfb8-6e34d14254f8",
     "multicolumn",
     "build-a-box",
     "two-richtext",
     "b689839d-3ad5-4bc2-b3e0-cc27453d2ce7",
+    "357173cd-30c8-440c-bfb8-6e34d14254f8",
     "5b1bf651-85a1-474d-be11-0a684a5ec1ac",
     "236d8c14-c1eb-4043-ae32-9b1fa09d766b",
     "566dfd4f-bb7b-4e24-b0d2-191a21f8e43b"
