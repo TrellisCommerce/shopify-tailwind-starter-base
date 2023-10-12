@@ -1763,6 +1763,15 @@ summary .icon-caret {
   right: 0rem !important;
 }
 
+@media (max-width: 749px) {
+  .icon-row-section.color-background-2,
+  .ur-image-with-text.color-background-2,
+  .multicolumn.color-accent-2 {
+    background-attachment: unset !important;
+    background-size: 1000px;
+  }
+}
+
 .icon-row-section.color-background-2,
 .ur-image-with-text.color-background-2,
 .multicolumn.color-accent-2 {
@@ -2005,6 +2014,12 @@ progress[value]::-moz-progress-bar {
   .image-with-text__content {
     padding: 4rem 0rem 4rem 0rem !important;
   }
+}
+
+.icon-text-block {
+  -webkit-hyphens: auto !important;
+      -ms-hyphens: auto !important;
+          hyphens: auto !important;
 }
 
 .last-of-type\:xborder-none:last-of-type {
