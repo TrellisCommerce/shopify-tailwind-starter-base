@@ -2115,6 +2115,10 @@ progress[value]::-moz-progress-bar {
     gap: 2rem;
   }
 
+  .md\:xgap-32 {
+    gap: 8rem;
+  }
+
   .md\:xpx-2 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
