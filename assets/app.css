@@ -1201,15 +1201,14 @@ header,
   border-radius: 1.5rem !important;
 }
 
-@media (min-width: 750px) {
+/* @media (min-width: 750px) {
   .banner__box {
-    -webkit-clip-path: url(#ur-clip);
-            clip-path: url(#ur-clip);
+    clip-path: url(#ur-clip);
     aspect-ratio: 1;
     max-width: 35.5rem !important;
     padding-top: 7rem !important;
   }
-}
+} */
 
 .ur-button,
 .button {
@@ -2020,6 +2019,9 @@ progress[value]::-moz-progress-bar {
   -webkit-hyphens: auto !important;
       -ms-hyphens: auto !important;
           hyphens: auto !important;
+}
+
+.image-with-text__media {
 }
 
 .last-of-type\:xborder-none:last-of-type {

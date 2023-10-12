@@ -87,14 +87,14 @@ header,
   @apply !xrounded-3xl;
 }
 
-@media (min-width: 750px) {
+/* @media (min-width: 750px) {
   .banner__box {
     clip-path: url(#ur-clip);
     aspect-ratio: 1;
     max-width: 35.5rem !important;
     padding-top: 7rem !important;
   }
-}
+} */
 .ur-button,
 .button {
   font-family: 'Rooney' !important;
@@ -691,4 +691,7 @@ progress[value]::-moz-progress-bar {
 }
 .icon-text-block {
   hyphens: auto !important;
+}
+
+.image-with-text__media {
 }
