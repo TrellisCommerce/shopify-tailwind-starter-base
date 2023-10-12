@@ -1,3 +1,71 @@
+<div
+  class='fullwidth-banner xmin-h-[400px]'
+  style="background-image: url('{{ section.settings.background_image.src | img_url: "x1920" }}');"
+>
+  <div class='xpt-16'>
+    <div class='xflex xitems-start xflex-col xjustify-center container page-width xtext-white xp-8  xmin-h-[400px] '>
+      <div class='richtext xp-8 !xtext-beige-200 beige richtext-fullwidth xfont-semibold'>
+        {{ section.settings.content }}
+      </div>
+      <div class='xflex xgap-8 xflex-wrap xpx-8 xmb-16'>
+        {% if section.settings.button_text != blank %}
+          <a
+            href='{{ section.settings.button_link }}'
+            class='button beige'
+          >
+            {{- section.settings.button_text -}}
+          </a>
+        {% endif %}
+        {% if section.settings.button2_text != blank %}
+          <a
+            href='{{ section.settings.button2_link }}'
+            class='button'
+          >
+            {{- section.settings.button2_text -}}
+          </a>
+        {% endif %}
+        {% if section.settings.newsletter %}
+          <input
+            id='newsletter-fullwidth-banner'
+            type='email'
+            name='contact[email]'
+            class='field__input'
+            value=''
+            aria-required='true'
+            autocorrect='off'
+            autocapitalize='off'
+            autocomplete='off'
+            placeholder='E-Mail'
+            required=''
+          >
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Custom CSS styles for the Fullwidth Banner section */
+  .fullwidth-banner {
+    /* Add your background styles here */
+    background-size: cover;
+    background-position: center;
+    /* Adjust other styles as needed */
+  }
+
+  .fullwidth-banner-content {
+    /* Add styles for the content container */
+  }
+
+  .richtext {
+    /* Add styles for the rich text content */
+  }
+
+  .fullwidth-banner-button {
+    /* Add styles for the button */
+  }
+</style>
+
 {% schema %}
 {
   "name": "Fullwidth Banner",
@@ -34,6 +102,22 @@
       "type": "url",
       "label": "Button2 Link",
       "id": "button2_link"
+    },
+    {
+      "type": "select",
+      "id": "newsletter",
+      "label": "Show Newsletter Subscription Form",
+      "options": [
+        {
+          "value": true,
+          "label": "Yes"
+        },
+        {
+          "value": false,
+          "label": "No"
+        }
+      ],
+      "default": false
     }
   ],
   "presets": [
@@ -44,54 +128,3 @@
   ]
 }
 {% endschema %}
-
-<div
-  class='fullwidth-banner xmin-h-[400px]'
-  style="background-image: url('{{ section.settings.background_image.src | img_url: "x1920" }}');"
->
-  <div class='xpt-16'>
-    <div class='xflex xitems-start xflex-col xjustify-center container page-width xtext-white xp-8  xmin-h-[400px] '>
-      <div class='richtext xp-8 !xtext-beige-200 beige richtext-fullwidth xfont-semibold'>
-        {{ section.settings.content }}
-      </div>
-      <div class='xflex xgap-8 xflex-wrap xpx-8 xmb-16'>
-        <a
-          href='{{ section.settings.button_link }}'
-          class='button beige'
-        >
-          {{- section.settings.button_text -}}
-        </a>
-        {% if section.settings.button2_text != blank %}
-          <a
-            href='{{ section.settings.button2_link }}'
-            class='button'
-          >
-            {{- section.settings.button2_text -}}
-          </a>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-  /* Custom CSS styles for the Fullwidth Banner section */
-  .fullwidth-banner {
-    /* Add your background styles here */
-    background-size: cover;
-    background-position: center;
-    /* Adjust other styles as needed */
-  }
-
-  .fullwidth-banner-content {
-    /* Add styles for the content container */
-  }
-
-  .richtext {
-    /* Add styles for the rich text content */
-  }
-
-  .fullwidth-banner-button {
-    /* Add styles for the button */
-  }
-</style>
