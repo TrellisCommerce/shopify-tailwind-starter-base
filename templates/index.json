@@ -478,6 +478,7 @@
       ],
       "settings": {
         "title": "Unser Anspruch",
+        "heading_alignment": "left",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -542,6 +543,7 @@
       "disabled": true,
       "settings": {
         "title": "Das macht uns einzigartig",
+        "heading_alignment": "left",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -595,6 +597,7 @@
       ],
       "settings": {
         "title": "Für deinen Hund bedeutet das",
+        "heading_alignment": "center",
         "heading_size": "h1",
         "image_width": "third",
         "image_ratio": "adapt",

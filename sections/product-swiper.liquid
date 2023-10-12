@@ -1,10 +1,12 @@
-<div class='swiper-container  ur-product-swiper xtranslate-x-8 xmr-16 md:xtranslate-x-16 md:xmr-32 xmb-24'>
-  <div class='swiper-wrapper'>
-    {%- for product in section.settings.collection.products -%}
-      <div class='swiper-slide card-wrapper product-card-wrapper underline-links-hover {% if forloop.last %}{% endif %}'>
-        {% render 'card-product', card_product: product %}
-      </div>
-    {% endfor %}
+<div class=' xmax-w-[100vw] xoverflow-clip'>
+  <div class='swiper-container  ur-product-swiper xtranslate-x-8 xmr-16 md:xtranslate-x-16 md:xmr-32 xmb-24'>
+    <div class='swiper-wrapper'>
+      {%- for product in section.settings.collection.products -%}
+        <div class='swiper-slide card-wrapper product-card-wrapper underline-links-hover {% if forloop.last %}{% endif %}'>
+          {% render 'card-product', card_product: product %}
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
 
@@ -12,7 +14,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     const swiperConfigProducts = {
       loop: false,
-      slidesPerView: 1,
+      slidesPerView: 2,
       spaceBetween: 10,
       autoplay: {
         delay: 3000,

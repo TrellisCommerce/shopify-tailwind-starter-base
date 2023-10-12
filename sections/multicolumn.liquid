@@ -31,8 +31,8 @@
     {% endif %}
   >
     {%- unless section.settings.title == blank -%}
-      <div class='title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin {% if section.settings.heading_alignment == 'center'%} xtext-center {% endif %}'>
-        <h2 class='title inline-richtext {{ section.settings.heading_size }}'>
+      <div class='title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin {% if section.settings.heading_alignment == 'center'%} !xjustify-center {% endif %}'>
+        <h2 class='title inline-richtext {{ section.settings.heading_size }} xpb-8 xpx-4 {% if section.settings.heading_alignment == 'center'%} !xtext-center {% endif %}'>
           {{ section.settings.title }}
         </h2>
         {%- if section.settings.button_label != blank and show_mobile_slider -%}

@@ -545,6 +545,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 1rem;
 }
 
+.xmb-16 {
+  margin-bottom: 4rem;
+}
+
 .xmb-40 {
   margin-bottom: 10rem;
 }
@@ -651,6 +655,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xmin-w-\[50\%\] {
   min-width: 50%;
+}
+
+.xmax-w-\[100vw\] {
+  max-width: 100vw;
 }
 
 .xmax-w-3xl {
@@ -920,12 +928,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 1rem;
 }
 
+.xpt-16 {
+  padding-top: 4rem;
+}
+
 .xpb-8 {
   padding-bottom: 2rem;
 }
 
 .xtext-center {
   text-align: center;
+}
+
+.\!xtext-center {
+  text-align: center !important;
 }
 
 .xtext-right {
@@ -1915,6 +1931,11 @@ progress[value]::-moz-progress-bar {
   bottom: 60px !important;
 }
 
+.ur-hero-swiper {
+  max-height: 700px;
+  overflow: clip;
+}
+
 .hero-slide-content {
   position: absolute;
 }
@@ -1924,7 +1945,7 @@ progress[value]::-moz-progress-bar {
 }
 
 .richtext-fullwidth {
-  max-width: 70%;
+  max-width: 50%;
 }
 
 .ur-hero-swiper .swiper-slide {
@@ -1937,6 +1958,16 @@ progress[value]::-moz-progress-bar {
 }
 
 @media (max-width: 800px) {
+  .accordion__title.h4 {
+    font-size: 1.65rem !important;
+    line-height: 2.2rem !important;
+    font-weight: 600 !important;
+  }
+
+  .richtext-fullwidth {
+    max-width: 100%;
+  }
+
   .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal,
   .swiper-pagination-custom,
@@ -1956,6 +1987,24 @@ progress[value]::-moz-progress-bar {
 
 .jdgm-carousel-wrapper {
   padding-bottom: 0px !important;
+}
+
+.image-with-text__grid--reverse .image-with-text__content {
+  padding: 4rem 6rem 4rem 0 !important;
+}
+
+.image-with-text__content {
+  padding: 4rem 0rem 4rem 6rem !important;
+}
+
+@media (max-width: 749px) {
+  .image-with-text__grid--reverse .image-with-text__content {
+    padding: 4rem 0rem 4rem 0 !important;
+  }
+
+  .image-with-text__content {
+    padding: 4rem 0rem 4rem 0rem !important;
+  }
 }
 
 .last-of-type\:xborder-none:last-of-type {
