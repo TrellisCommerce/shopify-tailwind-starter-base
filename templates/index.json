@@ -328,28 +328,36 @@
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-organic-color",
-            "icon_text": "Authentizität - Echtheit in jeder Dose"
+            "icon_text": "Authentizität - Echtheit in jeder Dose",
+            "show_accordion": true,
+            "richtext": "<p>Test Details Accordion <\/p>"
           }
         },
         "43dc0855-04c8-498f-94b0-025b01978538": {
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-no-gluten-color",
-            "icon_text": "Slow-Cooked - Bewahrung von Geschmack & Nährstoffen"
+            "icon_text": "Slow-Cooked - Bewahrung von Geschmack & Nährstoffen",
+            "show_accordion": true,
+            "richtext": "<p>Test Details Accordion <\/p>"
           }
         },
         "f6100df4-5580-4f6b-9421-1d0a9f5a8758": {
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-no-chemicals-color",
-            "icon_text": "Gesundheit - Nährstoffreiche Menüs für Vitalität"
+            "icon_text": "Gesundheit - Nährstoffreiche Menüs für Vitalität",
+            "show_accordion": true,
+            "richtext": "<p>Test Details Accordion <\/p>"
           }
         },
         "73f94850-ec21-4589-8038-d48c405ece3a": {
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-no-animals-color",
-            "icon_text": "Vertrauen - Ehrlichkeit in jedem Schritt"
+            "icon_text": "Vertrauen - Ehrlichkeit in jedem Schritt",
+            "show_accordion": false,
+            "richtext": "<p>Test Details Accordion <\/p>"
           }
         },
         "532b8682-d57d-483c-aca7-0fc749f6f613": {
@@ -798,28 +806,36 @@
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-organic-color",
-            "icon_text": "Inspiration - Rusty, der Beginn unserer Reise"
+            "icon_text": "Inspiration - Rusty, der Beginn unserer Reise",
+            "show_accordion": false,
+            "richtext": "<p>Test Details Accordion <\/p>"
           }
         },
         "04544f39-b233-4153-a50d-ca2cb01b6274": {
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-no-gluten-color",
-            "icon_text": "Individualität - Jedes Menü, einzigartig wie dein Hund"
+            "icon_text": "Individualität - Jedes Menü, einzigartig wie dein Hund",
+            "show_accordion": false,
+            "richtext": "<p>Test Details Accordion <\/p>"
           }
         },
         "007035b8-304e-4acf-ac27-bedfe03d79a5": {
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-no-chemicals-color",
-            "icon_text": "Transparenz - Klarheit von Anfang bis Ende"
+            "icon_text": "Transparenz - Klarheit von Anfang bis Ende",
+            "show_accordion": false,
+            "richtext": "<p>Test Details Accordion <\/p>"
           }
         },
         "3551eac1-1b96-49ad-ae2e-95c7080d8117": {
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-no-animals-color",
-            "icon_text": "Tradition - Bewährte Methoden, modern interpretiert"
+            "icon_text": "Tradition - Bewährte Methoden, modern interpretiert",
+            "show_accordion": false,
+            "richtext": "<p>Test Details Accordion <\/p>"
           }
         },
         "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1": {

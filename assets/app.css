@@ -734,10 +734,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 1rem;
 }
 
-.xgap-32 {
-  gap: 8rem;
-}
-
 .xgap-2 {
   gap: 0.5rem;
 }
@@ -1038,6 +1034,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(242 238 227 / var(--tw-text-opacity)) !important;
 }
 
+.xtext-beige-950 {
+  --tw-text-opacity: 1;
+  color: rgb(33 28 15 / var(--tw-text-opacity));
+}
+
 .\!xtext-gray-900 {
   --tw-text-opacity: 1 !important;
   color: rgb(17 24 39 / var(--tw-text-opacity)) !important;
@@ -1046,11 +1047,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xtext-beige-400 {
   --tw-text-opacity: 1;
   color: rgb(206 191 150 / var(--tw-text-opacity));
-}
-
-.xtext-beige-950 {
-  --tw-text-opacity: 1;
-  color: rgb(33 28 15 / var(--tw-text-opacity));
 }
 
 .xline-through {
@@ -1712,14 +1708,28 @@ details[open] summary ~ * {
 
 /* JudgeMe Reviews End */
 
-.icon-text-container {
+.icon-text-container summary {
   font-family: 'Rooney';
   font-weight: 600;
+}
+
+.icon-text-container .summary-header {
+  display: flex;
+  gap: 1rem;
 }
 
 .icon-text-container .icon-container svg {
   height: 25px;
   width: 25px;
+}
+
+.icon-text-container summary .icon-caret {
+  position: unset !important;
+}
+
+.icon-text-container .icon-text-container__text {
+  margin-top: 1rem;
+  font-size: small;
 }
 
 .blog .slider-counter.caption {

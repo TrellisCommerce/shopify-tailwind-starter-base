@@ -417,14 +417,28 @@ details[open] summary ~ * {
 }
 /* JudgeMe Reviews End */
 
-.icon-text-container {
+.icon-text-container summary {
   font-family: 'Rooney';
   font-weight: 600;
+}
+
+.icon-text-container .summary-header {
+  display: flex;
+  gap: 1rem;
 }
 
 .icon-text-container .icon-container svg {
   height: 25px;
   width: 25px;
+}
+
+.icon-text-container summary .icon-caret {
+  position: unset !important;
+}
+
+.icon-text-container .icon-text-container__text {
+  margin-top: 1rem;
+  font-size: small;
 }
 
 .blog .slider-counter.caption {
