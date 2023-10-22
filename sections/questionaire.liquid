@@ -87,6 +87,7 @@
                   >
                     {{- block.settings.question_text -}}
                   </label>
+                  <p class=''>{{ block.settings.question_descr }}</p>
                   <div>
                     <input
                       type='text'
@@ -360,6 +361,47 @@
                   </div>
                 </form>
               </div>
+            {% when 'cards-question' %}
+              <div class='cards-question' data-key='{{block.settings.data_key}}'>
+                <form class='xflex xflex-col xgap-16'>
+                  <div>
+                    <label
+                      for='{{ block.id }}-text'
+                      class='xfont-semibold xtext-6xl'
+                      style="font-family: 'Rooney';"
+                    >
+                      {{- block.settings.question_text -}}
+                    </label>
+                    <p class='xmt-8'>{{ block.settings.question_descr }}</p>
+                  </div>
+                  <div class='xflex xgap-8'>
+                    <button
+                      data-key='{{block.settings.card1}}'
+                      type='button'
+                      id='card1'
+                      class='xbg-lightbeige xrounded-3xl xp-8 xflex xflex-col xjustify-center xitems-center hover:xbg-beige-300 xtransition-all'
+                    >
+                      <span class='xmt-8 xfont-semibold card1'>{{ block.settings.card1 }}</span>
+                    </button>
+                    <button
+                      data-key='{{block.settings.card2}}'
+                      type='button'
+                      id='card2'
+                      class='xbg-lightbeige xrounded-3xl xp-8 xflex xflex-col xjustify-center xitems-center hover:xbg-beige-300 xtransition-all'
+                    >
+                      <span class='xmt-8 xfont-semibold card2'>{{ block.settings.card2 }}</span>
+                    </button>
+                    <button
+                      data-key='{{block.settings.card3}}'
+                      type='button'
+                      id='card3'
+                      class='xbg-lightbeige xrounded-3xl xp-8 xflex xflex-col xjustify-center xitems-center hover:xbg-beige-300 xtransition-all'
+                    >
+                      <span class='xmt-8 xfont-semibold card1'>{{ block.settings.card3 }}</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
           {% endcase %}
         </div>
       {% endfor %}
@@ -410,6 +452,12 @@
           "label": "Placeholder Text",
           "id": "placeholder_text",
           "default": "Name"
+        },
+        {
+          "type": "text",
+          "label": "Question Description",
+          "id": "question_descr",
+          "default": "Wie dürfen wir deinen vierbeinigen Freund nennen?"
         }
       ]
     },
@@ -542,6 +590,48 @@
           "label": "Data Key",
           "id": "data_key",
           "default": "health_problems"
+        }
+      ]
+    },
+    {
+      "type": "cards-question",
+      "name": "Cards Question",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Question Text",
+          "id": "question_text",
+          "default": "Ist %{name} kastriert/sterilisiert??"
+        },
+        {
+          "type": "text",
+          "label": "Question Description",
+          "id": "question_descr",
+          "default": "Anweisung"
+        },
+        {
+          "type": "text",
+          "label": "Data Key",
+          "id": "data_key",
+          "default": "health_problems"
+        },
+        {
+          "type": "text",
+          "label": "Card 1",
+          "id": "card1",
+          "default": "1"
+        },
+        {
+          "type": "text",
+          "label": "Card 2",
+          "id": "card2",
+          "default": "2"
+        },
+        {
+          "type": "text",
+          "label": "Card 3",
+          "id": "card3",
+          "default": "3"
         }
       ]
     }
