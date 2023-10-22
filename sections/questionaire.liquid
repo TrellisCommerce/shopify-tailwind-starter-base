@@ -379,27 +379,33 @@
                       data-key='{{block.settings.card1}}'
                       type='button'
                       id='card1'
-                      class='xbg-lightbeige xrounded-3xl xp-8 xflex xflex-col xjustify-center xitems-center hover:xbg-beige-300 xtransition-all'
+                      class='card-btn xbg-lightbeige xrounded-3xl xp-8 xflex xflex-col xjustify-center xitems-center hover:xbg-beige-300 xtransition-all'
                     >
-                      {{ block.settings.card1svg }}
+                      <div class='card-svg xh-full  xflex xitems-center xjustify-center'>
+                        {{ block.settings.card1svg }}
+                      </div>
                       <span class='xmt-8 xfont-semibold card1'>{{ block.settings.card1 }}</span>
                     </button>
                     <button
                       data-key='{{block.settings.card2}}'
                       type='button'
                       id='card2'
-                      class='xbg-lightbeige xrounded-3xl xp-8 xflex xflex-col xjustify-center xitems-center hover:xbg-beige-300 xtransition-all'
+                      class='card-btn xbg-lightbeige xrounded-3xl xp-8 xflex xflex-col xjustify-center xitems-center hover:xbg-beige-300 xtransition-all'
                     >
-                      {{ block.settings.card2svg }}
+                      <div class='card-svg xh-full xflex xitems-center xjustify-center'>
+                        {{ block.settings.card2svg }}
+                      </div>
                       <span class='xmt-8 xfont-semibold card2'>{{ block.settings.card2 }}</span>
                     </button>
                     <button
                       data-key='{{block.settings.card3}}'
                       type='button'
                       id='card3'
-                      class='xbg-lightbeige xrounded-3xl xp-8 xflex xflex-col xjustify-center xitems-center hover:xbg-beige-300 xtransition-all'
+                      class='card-btn xbg-lightbeige xrounded-3xl xp-8 xflex xflex-col xjustify-center xitems-center hover:xbg-beige-300 xtransition-all'
                     >
-                      {{ block.settings.card3svg }}
+                      <div class='card-svg xh-full xflex xitems-center xjustify-center'>
+                        {{ block.settings.card3svg }}
+                      </div>
                       <span class='xmt-8 xfont-semibold card1'>{{ block.settings.card3 }}</span>
                     </button>
                   </div>
@@ -632,6 +638,12 @@
         },
         {
           "type": "text",
+          "label": "Card 1 Key",
+          "id": "card1key",
+          "default": "1"
+        },
+        {
+          "type": "text",
           "label": "Card 2",
           "id": "card2",
           "default": "2"
@@ -644,6 +656,12 @@
         },
         {
           "type": "text",
+          "label": "Card 2 Key",
+          "id": "card2key",
+          "default": "2"
+        },
+        {
+          "type": "text",
           "label": "Card 3",
           "id": "card3",
           "default": "3"
@@ -652,6 +670,12 @@
           "type": "textarea",
           "label": "Card 3 SVG",
           "id": "card3svg",
+          "default": "3"
+        },
+        {
+          "type": "text",
+          "label": "Card 3 Key",
+          "id": "card3key",
           "default": "3"
         }
       ]

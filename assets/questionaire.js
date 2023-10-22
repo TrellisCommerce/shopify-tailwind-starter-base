@@ -59,6 +59,16 @@ document.addEventListener('DOMContentLoaded', function () {
       dogData[dataKey] = 'no';
       tryNext();
     }
+
+    if (
+      event.target.classList.contains('card-btn') ||
+      event.target.closest('button').classList.contains('card-btn')
+    ) {
+      event.preventDefault();
+      const dataKey = event.target.closest('.cards-question').getAttribute('data-key');
+      const btn = event.target.closest('button');
+      tryNext();
+    }
   });
 
   function tryNext() {
@@ -94,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
       case 'age-question':
         const month = currentSlide.querySelector('#month-select').value;
         const ageValue = currentSlide.querySelector('input').value;
-        dogData.birth = month + '-' +ageValue;
+        dogData.birth = month + '-' + ageValue;
         break;
       case 'breed-question':
         const breedValue = currentSlide.querySelector('input').value;
