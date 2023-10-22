@@ -1074,6 +1074,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(206 191 150 / var(--tw-placeholder-opacity));
 }
 
+.xopacity-70 {
+  opacity: 0.7;
+}
+
+.xopacity-30 {
+  opacity: 0.3;
+}
+
 .xshadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -2072,6 +2080,10 @@ progress[value]::-moz-progress-bar {
 .hover\:xunderline:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+.hover\:xopacity-60:hover {
+  opacity: 0.6;
 }
 
 .focus\:xtext-black:focus {
