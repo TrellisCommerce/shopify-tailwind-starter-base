@@ -434,6 +434,12 @@ details[open] summary ~ * {
 
 .icon-text-container summary .icon-caret {
   position: unset !important;
+  transition: all 250ms ease-in-out;
+}
+
+details[open].icon-text-container summary .icon-caret {
+  position: unset !important;
+  rotate: 180deg;
 }
 
 .icon-text-container .icon-text-container__text {
