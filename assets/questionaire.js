@@ -65,7 +65,9 @@ document.addEventListener('DOMContentLoaded', function () {
       event.target.closest('button').classList.contains('card-btn')
     ) {
       event.preventDefault();
-      const dataKey = event.target.closest('.cards-question').getAttribute('data-key');
+      const dataKey = event.target
+        .closest('.cards-question')
+        .getAttribute('data-key');
       const btn = event.target.closest('button');
       const value = btn.getAttribute('data-value');
       dogData[dataKey] = value;
@@ -148,11 +150,24 @@ document.addEventListener('DOMContentLoaded', function () {
       );
 
       prevBtn.classList.remove('!xhidden');
-
+      console.log(nextSlide);
       // If there's a next slide, set it to active and show it
       if (nextSlide) {
         nextSlide.setAttribute('data-active', 'true');
         nextSlide.classList.remove('xhidden');
+      } else {
+        // We're at the last slide
+        // Calculate the recommendation
+        document
+          .querySelector('#questionnaire-header')
+          .classList.add('xhidden');
+        document
+          .querySelector('#questionnaire-footer')
+          .classList.add('xhidden');
+        document
+          .querySelector('#questionnaire-spinner')
+          .classList.remove('xhidden');
+        calculateRecommendation();
       }
 
       setTimeout(() => {
@@ -933,5 +948,79 @@ document.addEventListener('DOMContentLoaded', function () {
       breedDropdown.appendChild(breedDiv);
     });
     breedDropdown.scrollTop = 0;
+  }
+
+  function calculateRecommendation() {
+    let daily = dogData.weight * 0.035;
+
+    const birthDate = new Date(dogData.birth);
+
+    //if dog is 5kg or less, use .5% more
+    if (dogData.weight <= 5) {
+      daily = dogData.weight * 0.04;
+    }
+
+    //Check if dog is younger than 6 months old or older than 7 years old
+    const today = new Date();
+    const diffTime = Math.abs(today - birthDate);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    if (diffDays < 180) {
+      daily = dogData.weight * 0.05;
+    }
+    if (diffDays > 2555) {
+      daily = dogData.weight * 0.03;
+      if (dogData.weight <= 5) {
+        daily = dogData.weight * 0.035;
+      }
+    }
+
+    //too_thin: 0,5% zusätzliche Futtermenge pro KG Körpergewicht Optimalgewicht: keine Änderung
+    //too_thick: 0,5% weniger Futtermenge pro KG Körpergewicht
+    //Check if weight preference is too_thin oder too_thick
+    if (dogData.weight_preference === 'too_thin') {
+      daily = daily + daily * 0.005 * dogData.weight;
+    }
+
+    if (dogData.weight_preference === 'too_thick') {
+      daily = daily - daily * 0.005 * dogData.weight;
+    }
+
+    //Bei  active : 1,5% zusätzliche Futtermenge pro Kilogramm Körpergewicht Bei moderat: keine zusätzlich Menge
+    //Bei not_active: keine zusätzliche Menge
+
+    if(dogData.activity === 'active'){
+      daily = daily + daily * 0.015 * dogData.weight;
+    }
+
+    //convert daily to grams and round to full numbers
+    daily = Math.round(daily * 1000);
+    console.log(daily);
+
+    //monthly amount
+    const monthly = daily * 31;
+
+    //monthly 800g cans amount
+    const cans = Math.round(monthly / 800);
+    console.log(cans)
+
+    const results = document.querySelector('#questionnaire-results');
+
+    results.innerHTML = results.innerHTML.replace(
+      /%\{daily\}/g,
+      daily,
+    );
+
+    results.innerHTML = results.innerHTML.replace(
+      /%\{monthlyCans\}/,
+      cans,
+    );
+
+    results.innerHTML = results.innerHTML.replace(
+      /%\{name\}/,
+      dogData.name,
+    );
+    document.querySelector('#questionnaire-spinner').classList.add('xhidden');
+    results.classList.remove('xhidden');
+
   }
 });

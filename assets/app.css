@@ -609,6 +609,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 0.5rem;
 }
 
+.xh-\[50vh\] {
+  height: 50vh;
+}
+
 .xmax-h-\[50vh\] {
   max-height: 50vh;
 }
@@ -1072,10 +1076,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xplaceholder-beige-400::placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(206 191 150 / var(--tw-placeholder-opacity));
-}
-
-.xopacity-70 {
-  opacity: 0.7;
 }
 
 .xopacity-30 {
@@ -1715,6 +1715,62 @@ details[open] summary ~ * {
 }
 
 /* JudgeMe Reviews End */
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block !important;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #3f352a;
+  border-radius: 50%;
+  -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #3f352a transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+
+@-webkit-keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 .icon-text-container summary {
   font-family: 'Rooney';

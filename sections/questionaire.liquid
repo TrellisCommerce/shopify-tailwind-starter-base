@@ -12,7 +12,41 @@
     window.ur_questionaire_slide_count = {{ numberOfBlocks }};
   </script>
 
-  <div class='xabsolute xw-full page-width xflex xmx-auto' style='left: 50%; transform: translateX(-50%);'>
+  <div
+    id='questionnaire-spinner'
+    class='xabsolute xw-full page-width xflex xflex-col xjustify-center xitems-center xmx-auto xhidden xh-[50vh]'
+    style='left: 50%; transform: translateX(-50%);'
+  >
+    <div class='lds-ring'>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <p class='xmt-8'>Wir berechnen deine Empfehlung...</p>
+  </div>
+
+  <div
+    id='questionnaire-results'
+    class='xabsolute xw-full page-width xflex xflex-col xjustify-center xitems-center xmx-auto xgap-4 xhidden xh-[50vh]'
+    style='left: 50%; transform: translateX(-50%);'
+  >
+    <h1>Unsere Empfehlung für %{name}:</h1>
+    <p class='xtext-center xmb-24'>
+      Angegebene Futtermengen sind Richtwerte. Der tatsächliche Bedarf richtet sich nach Alter, Rasse und Aktivität
+      deines Tieres. Bei weiteren Fragen zur Futtermenge zögere nicht uns zu kontaktieren für eine individuelle
+      Beratung.
+    </p>
+
+    <h4>Täglicher Bedarf in Gramm: %{daily}</h4>
+    <h4>Uncle Rustys 800g Dosen monatlich: %{monthlyCans}</h4>
+  </div>
+
+  <div
+    id='questionnaire-header'
+    class='xabsolute xw-full page-width xflex xmx-auto'
+    style='left: 50%; transform: translateX(-50%);'
+  >
     <div class='accordion content-container color-background-2 gradient xflex-1 xmt-8'>
       <details id='info'>
         <summary
@@ -420,7 +454,7 @@
         </div>
       {% endfor %}
     </div>
-    <div class='xw-full xflex xjustify-between'>
+    <div class='xw-full xflex xjustify-between' id='questionnaire-footer'>
       <div class='btn-container'><button class='button qur-prev !xhidden'>Zurück</button></div>
       <div class='btn-container'><button class='button qur-next'>Weiter</button></div>
     </div>
