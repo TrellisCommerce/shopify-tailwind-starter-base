@@ -92,8 +92,9 @@ document.addEventListener('DOMContentLoaded', function () {
         dogData.name = nameValue;
         break;
       case 'age-question':
+        const month = currentSlide.querySelector('#month-select').value;
         const ageValue = currentSlide.querySelector('input').value;
-        dogData.birth = ageValue;
+        dogData.birth = month + '-' +ageValue;
         break;
       case 'breed-question':
         const breedValue = currentSlide.querySelector('input').value;

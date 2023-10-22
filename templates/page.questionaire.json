@@ -11,7 +11,6 @@
     "4839e6f9-7cb2-4f6e-a6fb-6501615d67e7": {
       "type": "questionaire",
       "blocks": {
-
         "020c3437-c274-4dab-9c0c-f90f5babf3be": {
           "type": "name-question",
           "settings": {
@@ -19,28 +18,51 @@
             "placeholder_text": "Name"
           }
         },
-        "859a7f87-7b5f-41bd-9d63-9d474e6c88f8": {
-          "type": "age-question",
-          "settings": {
-            "question_text": "Wann wurde %{name} geboren?",
-            "question_descr": "Hier reicht eine Schätzung, falls du das exakte Alter von %{name} nicht kennst.",
-            "placeholder_text": "2016-04"
-          }
-        },
         "b75941ac-20be-425d-810f-b5f6dbafeada": {
           "type": "breed-question",
           "settings": {
             "question_text": "Welcher Rasse gehört %{name} zu?",
-            "question_descr": "Anweisung",
+            "question_descr": "Dies hilft uns, spezifische Ernährungsbedürfnisse besser zu verstehen.",
             "placeholder_text": "z.B. Eurasier"
+          }
+        },
+        "36f65294-6a2d-4071-96f8-1fb9812d6cd8": {
+          "type": "gender-question",
+          "settings": {
+            "question_text": "Welcher Rasse gehört %{name} zu?",
+            "question_descr": "Einige Ernährungsbedürfnisse können geschlechtsspezifisch sein."
+          }
+        },
+        "859a7f87-7b5f-41bd-9d63-9d474e6c88f8": {
+          "type": "age-question",
+          "settings": {
+            "question_text": "Wann wurde %{name} geboren?",
+            "question_descr": "Das Alter deines Hundes beeinflusst seinen Nährstoffbedarf. Welpen benötigen beispielsweise mehr Kalzium und Energie, während Senioren einen geringeren Protein- und Energiebedarf haben.",
+            "placeholder_text": "2016-04"
           }
         },
         "51b19b37-1fe3-4573-8bf6-9329044d8d19": {
           "type": "weight-question",
           "settings": {
             "question_text": "Wieviel wiegt %{name}?",
-            "question_descr": "Du kannst das Gewicht schätzen wenn du es nicht genau weißt.",
+            "question_descr": "Das Gewicht deines Hundes ist entscheidend, um die richtige Futtermenge zu bestimmen. Die allgemeine Faustregel bei der Fütterung von Nassnahrung für normale ausgewachsene Hunde ist, ca. 3% des Körpergewichts.",
             "placeholder_text": "15"
+          }
+        },
+        "5aaf71d9-45cc-4931-ae22-f18369410980": {
+          "type": "yes-no-question",
+          "settings": {
+            "question_text": "Ist %{name} kastriert\/sterilisiert??",
+            "question_descr": "Kastrierte oder sterilisierte Hunde haben oft einen abweichenden Energiebedarf, da ihr Stoffwechsel sich verändert hat.",
+            "data_key": "castrated"
+          }
+        },
+        "985c2f1d-ae38-466c-94fc-d0f00fb588aa": {
+          "type": "yes-no-question",
+          "settings": {
+            "question_text": "Hat %{name} bekannte Gesundheitliche Probleme?",
+            "question_descr": "Mit \"gesundheitlichen Problemen\" meinen wir jegliche bekanntenErkrankungen, Beschwerden oder gesundheitlichen Herausforderungen, mitdenen dein Hund konfrontiert ist. Dies kann von Hauterkrankungen, Gelenk-oder Knochenproblemen über Nieren- und Pankreasbeschwerden bis hin zuchronischen Erkrankungen wie Diabetes oder Herzproblemen reichen.",
+            "data_key": "health_problems"
           }
         },
         "4b0e0741-e5c7-4009-b006-2f001b4bf6c3": {
@@ -52,11 +74,13 @@
         }
       },
       "block_order": [
-
         "020c3437-c274-4dab-9c0c-f90f5babf3be",
-        "859a7f87-7b5f-41bd-9d63-9d474e6c88f8",
         "b75941ac-20be-425d-810f-b5f6dbafeada",
+        "36f65294-6a2d-4071-96f8-1fb9812d6cd8",
+        "859a7f87-7b5f-41bd-9d63-9d474e6c88f8",
         "51b19b37-1fe3-4573-8bf6-9329044d8d19",
+        "5aaf71d9-45cc-4931-ae22-f18369410980",
+        "985c2f1d-ae38-466c-94fc-d0f00fb588aa",
         "4b0e0741-e5c7-4009-b006-2f001b4bf6c3"
       ],
       "settings": {
