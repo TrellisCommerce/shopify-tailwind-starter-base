@@ -15,7 +15,8 @@
           "type": "name-question",
           "settings": {
             "question_text": "Wie heißt dein Hund?",
-            "placeholder_text": "Name"
+            "placeholder_text": "Name",
+            "question_descr": "Wie dürfen wir deinen vierbeinigen Freund nennen?"
           }
         },
         "b75941ac-20be-425d-810f-b5f6dbafeada": {
@@ -49,6 +50,17 @@
             "placeholder_text": "15"
           }
         },
+        "9586cd4f-56df-48be-bd13-d3a93ba98300": {
+          "type": "cards-question",
+          "settings": {
+            "question_text": "Bist du mit dem Gewicht von  %{name} zufrieden?",
+            "question_descr": "Die Einschätzung des Gewichts Deines Hundes hilft uns, die optimale Fütterungsempfehlung für ihn zu ermitteln. Ein ausgewogenes Gewicht ist entscheidend für die Gesundheit und das Wohlbefinden Deines Vierbeiners.",
+            "data_key": "weight_preference",
+            "card1": "zu dünn",
+            "card2": "ausgewogen",
+            "card3": "zu dick"
+          }
+        },
         "5aaf71d9-45cc-4931-ae22-f18369410980": {
           "type": "yes-no-question",
           "settings": {
@@ -71,6 +83,17 @@
             "question_text": "Hat %{name} Allergien oder Unverträglichkeiten?",
             "question_descr": "Erklärung"
           }
+        },
+        "b18c8c55-6e5c-4cbb-b76a-b8581ea0d2fb": {
+          "type": "cards-question",
+          "settings": {
+            "question_text": "Wie aktive ist %{name}?",
+            "question_descr": "Ein aktiver Hund benötigt mehr Energie und Nährstoffe als ein weniger aktiver Hund.",
+            "data_key": "activity",
+            "card1": "Sehr aktiv (z.B. Arbeitshund, Agility)",
+            "card2": "Moderat aktiv (tägliche Spaziergänge, gelegentliches Spielen)",
+            "card3": "Wenig aktiv (hauptsächlich drinnen, kurze Spaziergänge)"
+          }
         }
       },
       "block_order": [
@@ -79,9 +102,11 @@
         "36f65294-6a2d-4071-96f8-1fb9812d6cd8",
         "859a7f87-7b5f-41bd-9d63-9d474e6c88f8",
         "51b19b37-1fe3-4573-8bf6-9329044d8d19",
+        "9586cd4f-56df-48be-bd13-d3a93ba98300",
         "5aaf71d9-45cc-4931-ae22-f18369410980",
         "985c2f1d-ae38-466c-94fc-d0f00fb588aa",
-        "4b0e0741-e5c7-4009-b006-2f001b4bf6c3"
+        "4b0e0741-e5c7-4009-b006-2f001b4bf6c3",
+        "b18c8c55-6e5c-4cbb-b76a-b8581ea0d2fb"
       ],
       "settings": {
       }
