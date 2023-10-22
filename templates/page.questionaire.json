@@ -86,7 +86,7 @@
         "4b0e0741-e5c7-4009-b006-2f001b4bf6c3": {
           "type": "allergies-question",
           "settings": {
-            "question_text": "Hat %{name} Allergien oder Unverträglichkeiten?",
+            "question_text": "Gibt es bestimmte Fleischsorten, die  %{name} nicht verträgt oder ablehnt?",
             "question_descr": "Erklärung"
           }
         },
