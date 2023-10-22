@@ -381,6 +381,7 @@
                       id='card1'
                       class='xbg-lightbeige xrounded-3xl xp-8 xflex xflex-col xjustify-center xitems-center hover:xbg-beige-300 xtransition-all'
                     >
+                      {{ block.settings.card1svg }}
                       <span class='xmt-8 xfont-semibold card1'>{{ block.settings.card1 }}</span>
                     </button>
                     <button
@@ -389,6 +390,7 @@
                       id='card2'
                       class='xbg-lightbeige xrounded-3xl xp-8 xflex xflex-col xjustify-center xitems-center hover:xbg-beige-300 xtransition-all'
                     >
+                      {{ block.settings.card2svg }}
                       <span class='xmt-8 xfont-semibold card2'>{{ block.settings.card2 }}</span>
                     </button>
                     <button
@@ -397,6 +399,7 @@
                       id='card3'
                       class='xbg-lightbeige xrounded-3xl xp-8 xflex xflex-col xjustify-center xitems-center hover:xbg-beige-300 xtransition-all'
                     >
+                      {{ block.settings.card3svg }}
                       <span class='xmt-8 xfont-semibold card1'>{{ block.settings.card3 }}</span>
                     </button>
                   </div>
@@ -623,14 +626,32 @@
         },
         {
           "type": "text",
+          "label": "Card 1 SVG",
+          "id": "card1svg",
+          "default": "1"
+        },
+        {
+          "type": "text",
           "label": "Card 2",
           "id": "card2",
           "default": "2"
         },
         {
           "type": "text",
+          "label": "Card 2 SVG",
+          "id": "card2svg",
+          "default": "2"
+        },
+        {
+          "type": "text",
           "label": "Card 3",
           "id": "card3",
+          "default": "3"
+        },
+        {
+          "type": "text",
+          "label": "Card 3 SVG",
+          "id": "card3svg",
           "default": "3"
         }
       ]
