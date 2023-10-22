@@ -67,6 +67,8 @@ document.addEventListener('DOMContentLoaded', function () {
       event.preventDefault();
       const dataKey = event.target.closest('.cards-question').getAttribute('data-key');
       const btn = event.target.closest('button');
+      const value = btn.getAttribute('data-value');
+      dogData[dataKey] = value;
       tryNext();
     }
   });
