@@ -354,8 +354,8 @@
         "73f94850-ec21-4589-8038-d48c405ece3a": {
           "type": "icon-text",
           "settings": {
-            "icon_selection": "icon-no-animals-color",
-            "icon_text": "Vertrauen - Ehrlichkeit in jedem Schritt",
+            "icon_selection": "icon-meat-color",
+            "icon_text": "Maximale Nährstoffeffizienz",
             "show_accordion": false,
             "richtext": "<p>Test Details Accordion <\/p>"
           }
