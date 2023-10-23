@@ -345,7 +345,7 @@
         "f6100df4-5580-4f6b-9421-1d0a9f5a8758": {
           "type": "icon-text",
           "settings": {
-            "icon_selection": "icon-no-chemicals-color",
+            "icon_selection": "icon-region-color",
             "icon_text": "Natur pur aus der Region",
             "show_accordion": true,
             "richtext": "<p>Wir setzen auf Fleisch aus Weidehaltung, vorzugsweise aus Oberbayern. Durch kurze Lieferketten und den Verzicht auf Massentierhaltung garantieren wir nicht nur Frische, sondern auch ethische Standards. In unseren Dosen findest du nur sinnvolle Zutaten aus vertrauenswürdigen, regionalen Quellen. <\/p>"
