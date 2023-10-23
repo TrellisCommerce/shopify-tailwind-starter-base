@@ -346,9 +346,9 @@
           "type": "icon-text",
           "settings": {
             "icon_selection": "icon-no-chemicals-color",
-            "icon_text": "Gesundheit - Nährstoffreiche Menüs für Vitalität",
+            "icon_text": "Natur pur aus der Region",
             "show_accordion": true,
-            "richtext": "<p>Test Details Accordion <\/p>"
+            "richtext": "<p>Wir setzen auf Fleisch aus Weidehaltung, vorzugsweise aus Oberbayern. Durch kurze Lieferketten und den Verzicht auf Massentierhaltung garantieren wir nicht nur Frische, sondern auch ethische Standards. In unseren Dosen findest du nur sinnvolle Zutaten aus vertrauenswürdigen, regionalen Quellen. <\/p>"
           }
         },
         "73f94850-ec21-4589-8038-d48c405ece3a": {
