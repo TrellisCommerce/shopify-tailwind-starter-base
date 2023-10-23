@@ -327,7 +327,7 @@
         "491ffb1b-5296-4e92-afc2-95b771151998": {
           "type": "icon-text",
           "settings": {
-            "icon_selection": "icon-search",
+            "icon_selection": "icon-success",
             "icon_text": "Perfekte Grundbasis",
             "show_accordion": true,
             "richtext": "<p>Unsere Menüs setzen auf wenige, aber gezielte Zutaten pro Tag und bieten über die Woche hinweg eine abwechslungsreiche Vielfalt. Dies erleichtert die Akzeptanz durch die Hunde und bietet gleichzeitig eine solide Ernährungsbasis. Weniger ist oft mehr, besonders wenn es um die Verdauung geht. <\/p>"
@@ -336,10 +336,10 @@
         "43dc0855-04c8-498f-94b0-025b01978538": {
           "type": "icon-text",
           "settings": {
-            "icon_selection": "icon-no-gluten-color",
-            "icon_text": "Slow-Cooked - Bewahrung von Geschmack & Nährstoffen",
+            "icon_selection": "icon-search",
+            "icon_text": "Flexibel & beratend",
             "show_accordion": true,
-            "richtext": "<p>Test Details Accordion <\/p>"
+            "richtext": "<p>Jeder Hund ist einzigartig. Unsere Menüs sind so konzipiert, dass sie sich individuell anpassen und ergänzen lassen. Wir bieten die perfekte Grundlage, während du die Freiheit hast, die Ernährung deines Vierbeiners zu personalisieren. Und bei Fragen stehen wir dir immer zur Seite. <\/p>"
           }
         },
         "f6100df4-5580-4f6b-9421-1d0a9f5a8758": {
