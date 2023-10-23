@@ -356,7 +356,7 @@
           "settings": {
             "icon_selection": "icon-meat-color",
             "icon_text": "Maximale Nährstoffeffizienz",
-            "show_accordion": false,
+            "show_accordion": true,
             "richtext": "<p>Bei uns ist kein Platz für unnötige Füllstoffe. Jedes Gramm in unserer Dose ist mit wertvollen Nährstoffen gefüllt. Wir sparen nicht an der falschen Stelle, sondern investieren in das, was deinem Hund wirklich guttut. Wir wissen, dass Qualität nicht durch Quantität ersetzt werden kann. <\/p>"
           }
         },
