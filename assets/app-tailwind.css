@@ -452,6 +452,10 @@ details[open] summary ~ * {
   }
 }
 
+.questionaire-slide label {
+  word-break: break-word;
+}
+
 .icon-text-container summary {
   font-family: 'Rooney';
   font-weight: 600;
