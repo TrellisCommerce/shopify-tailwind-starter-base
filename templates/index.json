@@ -327,37 +327,37 @@
         "491ffb1b-5296-4e92-afc2-95b771151998": {
           "type": "icon-text",
           "settings": {
-            "icon_selection": "icon-organic-color",
-            "icon_text": "Authentizität - Echtheit in jeder Dose",
+            "icon_selection": "icon-success",
+            "icon_text": "Perfekte Grundbasis",
             "show_accordion": true,
-            "richtext": "<p>Test Details Accordion <\/p>"
+            "richtext": "<p>Unsere Menüs setzen auf wenige, aber gezielte Zutaten pro Tag und bieten über die Woche hinweg eine abwechslungsreiche Vielfalt. Dies erleichtert die Akzeptanz durch die Hunde und bietet gleichzeitig eine solide Ernährungsbasis. Weniger ist oft mehr, besonders wenn es um die Verdauung geht. <\/p>"
           }
         },
         "43dc0855-04c8-498f-94b0-025b01978538": {
           "type": "icon-text",
           "settings": {
-            "icon_selection": "icon-no-gluten-color",
-            "icon_text": "Slow-Cooked - Bewahrung von Geschmack & Nährstoffen",
+            "icon_selection": "icon-search",
+            "icon_text": "Flexibel & beratend",
             "show_accordion": true,
-            "richtext": "<p>Test Details Accordion <\/p>"
+            "richtext": "<p>Jeder Hund ist einzigartig. Unsere Menüs sind so konzipiert, dass sie sich individuell anpassen und ergänzen lassen. Wir bieten die perfekte Grundlage, während du die Freiheit hast, die Ernährung deines Vierbeiners zu personalisieren. Und bei Fragen stehen wir dir immer zur Seite. <\/p>"
           }
         },
         "f6100df4-5580-4f6b-9421-1d0a9f5a8758": {
           "type": "icon-text",
           "settings": {
-            "icon_selection": "icon-no-chemicals-color",
-            "icon_text": "Gesundheit - Nährstoffreiche Menüs für Vitalität",
+            "icon_selection": "icon-region-color",
+            "icon_text": "Natur pur aus der Region",
             "show_accordion": true,
-            "richtext": "<p>Test Details Accordion <\/p>"
+            "richtext": "<p>Wir setzen auf Fleisch aus Weidehaltung, vorzugsweise aus Oberbayern. Durch kurze Lieferketten und den Verzicht auf Massentierhaltung garantieren wir nicht nur Frische, sondern auch ethische Standards. In unseren Dosen findest du nur sinnvolle Zutaten aus vertrauenswürdigen, regionalen Quellen. <\/p>"
           }
         },
         "73f94850-ec21-4589-8038-d48c405ece3a": {
           "type": "icon-text",
           "settings": {
-            "icon_selection": "icon-no-animals-color",
-            "icon_text": "Vertrauen - Ehrlichkeit in jedem Schritt",
-            "show_accordion": false,
-            "richtext": "<p>Test Details Accordion <\/p>"
+            "icon_selection": "icon-meat-color",
+            "icon_text": "Maximale Nährstoffeffizienz",
+            "show_accordion": true,
+            "richtext": "<p>Bei uns ist kein Platz für unnötige Füllstoffe. Jedes Gramm in unserer Dose ist mit wertvollen Nährstoffen gefüllt. Wir sparen nicht an der falschen Stelle, sondern investieren in das, was deinem Hund wirklich guttut. Wir wissen, dass Qualität nicht durch Quantität ersetzt werden kann. <\/p>"
           }
         },
         "532b8682-d57d-483c-aca7-0fc749f6f613": {
@@ -858,7 +858,7 @@
         "template--20724493582631__357173cd-30c8-440c-bfb8-6e34d14254f8-button-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/rusty.jpg",
+        "image": "shopify:\/\/shop_images\/Michi_Rusty_Quadrat.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
