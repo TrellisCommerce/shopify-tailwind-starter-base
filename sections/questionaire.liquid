@@ -262,7 +262,7 @@
 
                     <div>
                       <input type='checkbox' id='huhn' name='huhn'>
-                      <label class='!xtext-3xl' for='huhn'>Hunh</label>
+                      <label class='!xtext-3xl' for='huhn'>Huhn</label>
                     </div>
 
                     <div>
@@ -484,6 +484,14 @@
 {% schema %}
 {
   "name": "UR Questionnaire",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "health_problems_notice",
+      "label": "gesundheitliche Probleme Hinweis",
+      "default": "<p> Wir haben festgestellt, dass Dein Hund bekannte gesundheitliche Probleme hat. Während unsere Futterempfehlungen auf den von Dir bereitgestellten Informationen basieren, empfehlen wir dringend, Dich bei spezifischen gesundheitlichen Herausforderungen oder Bedenken direkt an uns zu wenden. Unsere Ernährungsexperten können Dir detaillierte Ratschläge und Empfehlungen geben, die auf die individuellen Bedürfnisse Deines Hundes zugeschnitten sind. Seine Gesundheit und sein Wohlbefinden sind uns sehr wichtig.</p>"
+    }
+  ],
   "blocks": [
     {
       "type": "name-question",
@@ -530,6 +538,30 @@
           "label": "Placeholder Text",
           "id": "placeholder_text",
           "default": "2016-04"
+        },
+        {
+          "type": "number",
+          "label": "Welpe Bis (Monate)",
+          "id": "puppy_until",
+          "default": 6
+        },
+        {
+          "type": "richtext",
+          "label": "Welpe Hinweis",
+          "id": "puppy_note",
+          "default": "<h3>Wichtiger Hinweis für Welpenbesitzer</h3><p>Welpen benötigen eine ausgewogene Ernährung mit erhöhtem Protein-, Fett-, Kalzium- und Phosphorgehalt für ein gesundes Wachstum. Wenn Sie Uncle Rusty's Nassfutter für Ihren Welpen in Erwägung ziehen, empfehlen wir:</p>"
+        },
+        {
+          "type": "number",
+          "label": "Senior ab (Monate)",
+          "id": "senior_from",
+          "default": 96
+        },
+        {
+          "type": "richtext",
+          "label": "Welpe Hinweis",
+          "id": "senior_note",
+          "default": "<h3>Wichtiger Hinweis für Welpenbesitzer</h3><p>Welpen benötigen eine ausgewogene Ernährung mit erhöhtem Protein-, Fett-, Kalzium- und Phosphorgehalt für ein gesundes Wachstum. Wenn Sie Uncle Rusty's Nassfutter für Ihren Welpen in Erwägung ziehen, empfehlen wir:</p>"
         }
       ]
     },
@@ -607,7 +639,7 @@
           "type": "text",
           "label": "Question Text",
           "id": "question_text",
-          "default": "Welcher Rasse gehört %{name} zu?"
+          "default": "Welchem Geschlecht gehört %{name} an?"
         },
         {
           "type": "text",
