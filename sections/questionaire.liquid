@@ -30,7 +30,7 @@
 
   <div
     id='questionnaire-results'
-    class=' xw-full page-width xflex xflex-col xjustify-center xitems-center xmx-auto xgap-4 xhidden'
+    class=' xw-full page-width xflex xflex-col xjustify-center xitems-center xmx-auto xgap-4 '
   >
     <h1 class='xtext-center xmt-24'>Unsere Empfehlung für %{name}:</h1>
 
@@ -83,6 +83,32 @@
           </div>
         </a>
       {% endfor %}
+    </div>
+    <div class='quick-cta xw-full'>
+      <div class='quick-cta__content xw-full'>
+        <div class='xrounded-3xl xflex xflex-col md:xflex-row xgap-4 xp-16  xmy-8 xbg-green'>
+          {% if section.settings.cta_image != blank %}
+            <img
+              src='{{ section.settings.cta_image | img_url: '300x300' }}'
+              alt=''
+              width='150'
+              height='150'
+              class='quick-cta__image xrounded-3xl'
+              loading='lazy'
+            >
+          {% endif %}
+          <div class='xflex xjustify-between xflex-wrap xw-full '>
+            <div class='richtext xp-8 xpy-4 beige'>{{ section.settings.cta_text }}</div>
+            {% if section.settings.cta_button_text != blank %}
+              <div class='xflex xitems-center'>
+                <a id='bab-btn' href='/pages/{{ settings.box_page }}' class='button xtext-beige-200'>
+                  {{- section.settings.cta_button_text -}}
+                </a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -553,6 +579,28 @@
       "type": "collection",
       "id": "collection",
       "label": "Collection"
+    },
+    {
+      "type": "page",
+      "id": "box_page",
+      "label": "Build a Box Page"
+    },
+    {
+      "type": "richtext",
+      "id": "cta_text",
+      "label": "CTA Text",
+      "default": "<h2>Stelle deine Box zusammen!</h2>"
+    },
+    {
+      "type": "image_picker",
+      "id": "cta_image",
+      "label": "CTA Image"
+    },
+    {
+      "type": "text",
+      "id": "cta_button_text",
+      "label": "Button Text",
+      "default": "Empfehlung zur Build-a-Box übernehmen"
     }
   ],
   "blocks": [
@@ -577,11 +625,6 @@
           "label": "Question Description",
           "id": "question_descr",
           "default": "Wie dürfen wir deinen vierbeinigen Freund nennen?"
-        },
-        {
-          "type": "page",
-          "id": "box_page",
-          "label": "Build a Box Page"
         }
       ]
     },
