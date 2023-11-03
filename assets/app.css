@@ -1831,10 +1831,6 @@ details[open].icon-text-container summary .icon-caret {
   width: 26px !important;
 }
 
-.ur-dropdown {
-  position: absolute !important;
-}
-
 .ur-suggestion {
   position: relative !important;
 }
