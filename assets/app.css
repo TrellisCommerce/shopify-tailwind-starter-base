@@ -565,6 +565,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
+.xmb-12 {
+  margin-bottom: 3rem;
+}
+
+.xmt-24 {
+  margin-top: 6rem;
+}
+
 .\!xblock {
   display: block !important;
 }
@@ -2209,6 +2217,10 @@ progress[value]::-moz-progress-bar {
 
   .md\:xflex-row {
     flex-direction: row;
+  }
+
+  .md\:xflex-nowrap {
+    flex-wrap: nowrap;
   }
 
   .md\:xgap-8 {

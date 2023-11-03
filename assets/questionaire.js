@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const slideCount = window.ur_questionaire_slide_count;
 
   const dogData = {};
+  dogData.notices = [];
+
   const nextBtn = document.querySelector('.qur-next');
   const prevBtn = document.querySelector('.qur-prev');
   const progressBar = document.querySelector('#questionaire-progress');
@@ -51,6 +53,10 @@ document.addEventListener('DOMContentLoaded', function () {
       const btn = event.target.closest('#yes-button');
       const dataKey = btn.getAttribute('data-key');
       dogData[dataKey] = 'yes';
+
+      if (dataKey === 'health_problems') {
+        dogData.notices.push(window.ur_health_problems_notice);
+      }
       tryNext();
     }
     if (event.target.classList.contains('no-button')) {
@@ -108,7 +114,43 @@ document.addEventListener('DOMContentLoaded', function () {
       case 'age-question':
         const month = currentSlide.querySelector('#month-select').value;
         const ageValue = currentSlide.querySelector('input').value;
+
+        const puppyUntil = window.ur_puppy_until;
+        const seniorFrom = window.ur_senior_from;
+
         dogData.birth = month + '-' + ageValue;
+
+        function stringToDate(str) {
+          const [month, year] = str.split('-');
+          return new Date(year, month - 1); // JavaScript months are 0-based
+        }
+
+        function monthsBetweenDates(startDate, endDate) {
+          let months;
+          months = (endDate.getFullYear() - startDate.getFullYear()) * 12;
+          months -= startDate.getMonth();
+          months += endDate.getMonth();
+          return months <= 0 ? 0 : months;
+        }
+
+        const inputDate = stringToDate(dogData.birth);
+        const currentDate = new Date();
+
+        const monthsBetween = monthsBetweenDates(inputDate, currentDate);
+
+        console.log(monthsBetween)
+        console.log(puppyUntil)
+        console.log(seniorFrom)
+
+        if (monthsBetween < puppyUntil) {
+          dogData.notices.push(window.ur_puppy_note);
+          dogData.ageCat = 'puppy';
+        }
+        if (monthsBetween > seniorFrom) {
+          dogData.notices.push(window.ur_senior_note);
+          dogData.ageCat = 'senior';
+        }
+
         break;
       case 'breed-question':
         const breedValue = currentSlide.querySelector('input').value;
@@ -172,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       setTimeout(() => {
         currentActiveSlide.classList.add('xhidden');
-      }, 700);
+      }, 250);
 
       setProgress(currentSlideIndex);
     }
@@ -953,21 +995,14 @@ document.addEventListener('DOMContentLoaded', function () {
   function calculateRecommendation() {
     let daily = dogData.weight * 0.035;
 
-    const birthDate = new Date(dogData.birth);
-
     //if dog is 5kg or less, use .5% more
     if (dogData.weight <= 5) {
       daily = dogData.weight * 0.04;
     }
 
-    //Check if dog is younger than 6 months old or older than 7 years old
-    const today = new Date();
-    const diffTime = Math.abs(today - birthDate);
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    if (diffDays < 180) {
+    if (dogData.ageCat === 'puppy') {
       daily = dogData.weight * 0.05;
-    }
-    if (diffDays > 2555) {
+    } else if (dogData.ageCat === 'senior') {
       daily = dogData.weight * 0.03;
       if (dogData.weight <= 5) {
         daily = dogData.weight * 0.035;
@@ -988,7 +1023,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //Bei  active : 1,5% zusätzliche Futtermenge pro Kilogramm Körpergewicht Bei moderat: keine zusätzlich Menge
     //Bei not_active: keine zusätzliche Menge
 
-    if(dogData.activity === 'active'){
+    if (dogData.activity === 'active') {
       daily = daily + daily * 0.015 * dogData.weight;
     }
 
@@ -998,29 +1033,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //monthly amount
     const monthly = daily * 31;
+    let cans = Math.round(monthly / 400);
+    let canSize = '400g';
+    if (daily > 400) {
+      cans = Math.round(monthly / 800);
+      canSize = '800g';
+    }
 
-    //monthly 800g cans amount
-    const cans = Math.round(monthly / 800);
-    console.log(cans)
+    dogData.monthlyGrammsResult = monthly;
+
 
     const results = document.querySelector('#questionnaire-results');
 
-    results.innerHTML = results.innerHTML.replace(
-      /%\{daily\}/g,
-      daily,
-    );
+    results.innerHTML = results.innerHTML.replace(/%\{daily\}/g, daily);
+    results.innerHTML = results.innerHTML.replace(/%\{canSize\}/, canSize);
+    results.innerHTML = results.innerHTML.replace(/%\{monthlyCans\}/, cans);
 
-    results.innerHTML = results.innerHTML.replace(
-      /%\{monthlyCans\}/,
-      cans,
-    );
-
-    results.innerHTML = results.innerHTML.replace(
-      /%\{name\}/,
-      dogData.name,
-    );
+    results.innerHTML = results.innerHTML.replace(/%\{name\}/, dogData.name);
     document.querySelector('#questionnaire-spinner').classList.add('xhidden');
     results.classList.remove('xhidden');
 
+    const noticesContainer = results.querySelector('#notices');
+    const noticeTemplate = noticesContainer.querySelector('.notice');
+    dogData.notices.forEach((notice) => {
+      const noticeClone = noticeTemplate.cloneNode(true);
+      noticeClone.classList.remove('xhidden');
+      noticeClone.innerHTML = noticeClone.innerHTML.replace(
+        /%\{notice\}/,
+        notice,
+      );
+      noticesContainer.appendChild(noticeClone);
+    });
   }
 });

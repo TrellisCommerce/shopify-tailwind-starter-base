@@ -10,6 +10,7 @@
 
   <script>
     window.ur_questionaire_slide_count = {{ numberOfBlocks }};
+    window.ur_health_problems_notice='{{ section.settings.health_problems_notice }}'
   </script>
 
   <div
@@ -28,18 +29,41 @@
 
   <div
     id='questionnaire-results'
-    class='xabsolute xw-full page-width xflex xflex-col xjustify-center xitems-center xmx-auto xgap-4 xhidden xh-[50vh]'
-    style='left: 50%; transform: translateX(-50%);'
+    class=' xw-full page-width xflex xflex-col xjustify-center xitems-center xmx-auto xgap-4 xhidden '
   >
-    <h1 class='xtext-center'>Unsere Empfehlung für %{name}:</h1>
-    <p class='xtext-center xmb-24'>
-      Angegebene Futtermengen sind Richtwerte. Der tatsächliche Bedarf richtet sich nach Alter, Rasse und Aktivität
-      deines Tieres. Bei weiteren Fragen zur Futtermenge zögere nicht uns zu kontaktieren für eine individuelle
-      Beratung.
-    </p>
+    <h1 class='xtext-center xmt-24'>Unsere Empfehlung für %{name}:</h1>
 
-    <h4>Täglicher Bedarf in Gramm: %{daily}</h4>
-    <h4>Uncle Rustys 800g Dosen monatlich: %{monthlyCans}</h4>
+    <div class='xtext-center xmb-12'>{{ section.settings.general_notice }}</div>
+    <h2>Täglicher Bedarf: %{daily}g</h2>
+    <h2>Uncle Rustys %{canSize} Dosen monatlich: %{monthlyCans}x</h2>
+    <div id='notices' class='xflex xflex-wrap xgap-8 xmb-24'>
+      <div class='notice xbg-lightbeige xrounded-3xl xp-8 xhidden '>%{notice}</div>
+    </div>
+
+    <div class='xflex xgap-8'>
+      {% for product in collection.products %}
+        <a href='{{ product.url }}' class='xbg-lightbeige xrounded-3xl xp-8' data-product-id='{{ product.id }}'>
+          {% if product.image != null %}
+            <img
+              height='200'
+              width='auto'
+              loading='lazy'
+              src='{{ product.image.src | img_url: "x500" }}'
+              alt='{{ product.image.alt | escape }}'
+            >
+          {% else %}
+            <img
+              height='200'
+              width='auto'
+              loading='lazy'
+              src='{{ product.featured_image | img_url: "x500" }}'
+              alt='{{ product.title | escape }}'
+            >
+          {% endif %}
+          <h3>{{ product.title }}</h3>
+        </a>
+      {% endfor %}
+    </div>
   </div>
 
   <div
@@ -134,7 +158,15 @@
                 </form>
               </div>
             {% when 'age-question' %}
-              <div class='age-question'>
+              <div
+                class='age-question'
+              >
+                <script>
+                  window.ur_puppy_until={{ block.settings.puppy_until }};
+                  window.ur_senior_from={{ block.settings.senior_from }};
+                  window.ur_puppy_note="{{ block.settings.puppy_note }}";
+                  window.ur_senior_note="{{ block.settings.senior_note }}";
+                </script>
                 <form class='xflex xflex-col xgap-16'>
                   <div>
                     <label
@@ -489,13 +521,18 @@
       "type": "richtext",
       "id": "health_problems_notice",
       "label": "gesundheitliche Probleme Hinweis",
-      "default": "<p> Wir haben festgestellt, dass Dein Hund bekannte gesundheitliche Probleme hat. Während unsere Futterempfehlungen auf den von Dir bereitgestellten Informationen basieren, empfehlen wir dringend, Dich bei spezifischen gesundheitlichen Herausforderungen oder Bedenken direkt an uns zu wenden. Unsere Ernährungsexperten können Dir detaillierte Ratschläge und Empfehlungen geben, die auf die individuellen Bedürfnisse Deines Hundes zugeschnitten sind. Seine Gesundheit und sein Wohlbefinden sind uns sehr wichtig.</p>"
+      "default": "<h3>Gesundheitliche Probleme</h3><p> Wir haben festgestellt, dass Dein Hund bekannte gesundheitliche Probleme hat. Während unsere Futterempfehlungen auf den von Dir bereitgestellten Informationen basieren, empfehlen wir dringend, Dich bei spezifischen gesundheitlichen Herausforderungen oder Bedenken direkt an uns zu wenden. Unsere Ernährungsexperten können Dir detaillierte Ratschläge und Empfehlungen geben, die auf die individuellen Bedürfnisse Deines Hundes zugeschnitten sind. Seine Gesundheit und sein Wohlbefinden sind uns sehr wichtig.</p>"
     },
     {
       "type": "richtext",
       "id": "general_notice",
       "label": "Allgemeiner Hinweis",
       "default": "<p>Angegebene Futtermengen sind Richtwerte. Der tatsächliche Bedarf richtet sich nach Alter, Rasse und Aktivität deines Tieres. Bei weiteren Fragen zur Futtermenge zögere nicht uns zu kontaktieren für eine individuelle Beratung.</p>"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
     }
   ],
   "blocks": [
@@ -788,7 +825,7 @@
   }
   .questionaire-slide[data-active='false'] {
     min-height: 0vh;
-    height: 0;
+    height: 0px !important;
     opacity: 0;
   }
 {% endstylesheet %}
