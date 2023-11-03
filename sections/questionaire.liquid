@@ -7,6 +7,7 @@
 <script src='{{ 'fuse.js' | asset_url }}' defer></script>
 <section id='uncle-rustys-questionnaire'>
   {% assign numberOfBlocks = section.blocks.size %}
+  {% assign collection = collections[section.settings.collection] %}
 
   <script>
     window.ur_questionaire_slide_count = {{ numberOfBlocks }};
@@ -29,38 +30,57 @@
 
   <div
     id='questionnaire-results'
-    class=' xw-full page-width xflex xflex-col xjustify-center xitems-center xmx-auto xgap-4 xhidden '
+    class=' xw-full page-width xflex xflex-col xjustify-center xitems-center xmx-auto xgap-4 xhidden'
   >
     <h1 class='xtext-center xmt-24'>Unsere Empfehlung für %{name}:</h1>
 
-    <div class='xtext-center xmb-12'>{{ section.settings.general_notice }}</div>
+    <div class='xtext-center xmb-12 xmax-w-[80rem]'>{{ section.settings.general_notice }}</div>
     <h2>Täglicher Bedarf: %{daily}g</h2>
     <h2>Uncle Rustys %{canSize} Dosen monatlich: %{monthlyCans}x</h2>
-    <div id='notices' class='xflex xflex-wrap xgap-8 xmb-24'>
+    <div id='notices' class='xflex xflex-wrap xgap-8 xmb-12 xmt-12'>
       <div class='notice xbg-lightbeige xrounded-3xl xp-8 xhidden '>%{notice}</div>
     </div>
-
-    <div class='xflex xgap-8'>
+    <script>
+      window.ur_products = [];
+    </script>
+    <div class='xw-full'>
+      <h3 class='xtext-left'>Wir empfehlen monatlich die folgende Verteilung für %{name}:</h3>
+    </div>
+    <div id='products' class='xgrid  xgrid-cols-1 md:xgrid-cols-2 xw-full xgap-8'>
       {% for product in collection.products %}
-        <a href='{{ product.url }}' class='xbg-lightbeige xrounded-3xl xp-8' data-product-id='{{ product.id }}'>
+        <a
+          href='{{ product.url }}'
+          class='xbg-lightbeige xrounded-3xl xp-8 xflex xitems-center'
+          data-product-id='{{ product.id }}'
+        >
+          <script>
+            window.ur_products[{{ product.id }}] = {
+              id: {{ product.id }},
+              title: '{{ product.title }}',
+              meat_type: '{{ product.metafields.custom.meat_type }}',
+            };
+          </script>
           {% if product.image != null %}
             <img
-              height='200'
-              width='auto'
+              height='auto'
+              width='100'
               loading='lazy'
               src='{{ product.image.src | img_url: "x500" }}'
               alt='{{ product.image.alt | escape }}'
             >
           {% else %}
             <img
-              height='200'
-              width='auto'
+              height='auto'
+              width='100'
               loading='lazy'
               src='{{ product.featured_image | img_url: "x500" }}'
               alt='{{ product.title | escape }}'
             >
           {% endif %}
-          <h3>{{ product.title }}</h3>
+          <div class='xflex xitems-baseline xgap-4'>
+            <h2 class='xtext-green'>%{count}x</h2>
+            <h3>{{ product.title }}</h3>
+          </div>
         </a>
       {% endfor %}
     </div>
@@ -288,37 +308,37 @@
                   </div>
                   <div class='!xtext-xl xgrid xgrid-cols-2 xgap-4 xmax-w-3xl' style="font-family: 'Rooney' !important;">
                     <div>
-                      <input type='checkbox' id='ente' name='ente'>
+                      <input type='checkbox' id='ente' name='Ente'>
                       <label class='!xtext-3xl' for='ente'>Ente</label>
                     </div>
 
                     <div>
-                      <input type='checkbox' id='huhn' name='huhn'>
+                      <input type='checkbox' id='huhn' name='Huhn, Geflügel'>
                       <label class='!xtext-3xl' for='huhn'>Huhn</label>
                     </div>
 
                     <div>
-                      <input type='checkbox' id='lachs' name='lachs'>
+                      <input type='checkbox' id='lachs' name='Lachs'>
                       <label class='!xtext-3xl' for='lachs'>Lachs</label>
                     </div>
 
                     <div>
-                      <input type='checkbox' id='pferd' name='pferd'>
+                      <input type='checkbox' id='pferd' name='Pferd'>
                       <label class='!xtext-3xl' for='pferd'>Pferd</label>
                     </div>
 
                     <div>
-                      <input type='checkbox' id='rind' name='rind'>
+                      <input type='checkbox' id='rind' name='Rind'>
                       <label class='!xtext-3xl' for='rind'>Rind</label>
                     </div>
 
                     <div>
-                      <input type='checkbox' id='wild' name='wild'>
+                      <input type='checkbox' id='wild' name='Wild, Rind'>
                       <label class='!xtext-3xl' for='wild'>Wild</label>
                     </div>
 
                     <div>
-                      <input type='checkbox' id='lamm' name='lamm'>
+                      <input type='checkbox' id='lamm' name='Lamm'>
                       <label class='!xtext-3xl' for='lamm'>Lamm</label>
                     </div>
                   </div>
@@ -557,6 +577,11 @@
           "label": "Question Description",
           "id": "question_descr",
           "default": "Wie dürfen wir deinen vierbeinigen Freund nennen?"
+        },
+        {
+          "type": "page",
+          "id": "box_page",
+          "label": "Build a Box Page"
         }
       ]
     },

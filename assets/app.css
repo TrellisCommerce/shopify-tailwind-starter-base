@@ -573,6 +573,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 6rem;
 }
 
+.xmt-12 {
+  margin-top: 3rem;
+}
+
 .\!xblock {
   display: block !important;
 }
@@ -673,6 +677,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 48rem;
 }
 
+.xmax-w-xl {
+  max-width: 36rem;
+}
+
+.xmax-w-md {
+  max-width: 28rem;
+}
+
+.xmax-w-\[80rem\] {
+  max-width: 80rem;
+}
+
 .xflex-1 {
   flex: 1 1 0%;
 }
@@ -716,6 +732,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xitems-center {
   align-items: center;
+}
+
+.xitems-baseline {
+  align-items: baseline;
 }
 
 .xjustify-center {
@@ -960,6 +980,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1rem;
 }
 
+.xtext-left {
+  text-align: left;
+}
+
 .xtext-center {
   text-align: center;
 }
@@ -1071,6 +1095,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xtext-beige-400 {
   --tw-text-opacity: 1;
   color: rgb(206 191 150 / var(--tw-text-opacity));
+}
+
+.xtext-beige-800 {
+  --tw-text-opacity: 1;
+  color: rgb(90 78 42 / var(--tw-text-opacity));
+}
+
+.xtext-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.xtext-green {
+  --tw-text-opacity: 1;
+  color: rgb(107 143 113 / var(--tw-text-opacity));
 }
 
 .xline-through {

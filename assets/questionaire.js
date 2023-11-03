@@ -138,9 +138,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const monthsBetween = monthsBetweenDates(inputDate, currentDate);
 
-        console.log(monthsBetween)
-        console.log(puppyUntil)
-        console.log(seniorFrom)
+        console.log(monthsBetween);
+        console.log(puppyUntil);
+        console.log(seniorFrom);
 
         if (monthsBetween < puppyUntil) {
           dogData.notices.push(window.ur_puppy_note);
@@ -166,7 +166,8 @@ document.addEventListener('DOMContentLoaded', function () {
         );
         const checkedArray = Array.from(checkboxes)
           .filter((checkbox) => checkbox.checked)
-          .map((checkbox) => checkbox.name);
+          .flatMap((checkbox) => checkbox.name.split(', '));
+
         dogData.allergies = checkedArray;
         break;
     }
@@ -1042,7 +1043,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     dogData.monthlyGrammsResult = monthly;
 
-
     const results = document.querySelector('#questionnaire-results');
 
     results.innerHTML = results.innerHTML.replace(/%\{daily\}/g, daily);
@@ -1050,8 +1050,6 @@ document.addEventListener('DOMContentLoaded', function () {
     results.innerHTML = results.innerHTML.replace(/%\{monthlyCans\}/, cans);
 
     results.innerHTML = results.innerHTML.replace(/%\{name\}/, dogData.name);
-    document.querySelector('#questionnaire-spinner').classList.add('xhidden');
-    results.classList.remove('xhidden');
 
     const noticesContainer = results.querySelector('#notices');
     const noticeTemplate = noticesContainer.querySelector('.notice');
@@ -1064,5 +1062,68 @@ document.addEventListener('DOMContentLoaded', function () {
       );
       noticesContainer.appendChild(noticeClone);
     });
+
+    let totalCount = cans; // Replace with your actual total count
+    let ingredients = dogData.allergies;
+
+    // Set count to 0 for products with a title containing an ingredient
+    for (let id in window.ur_products) {
+      const product = window.ur_products[id];
+      for (let ingredient of ingredients) {
+        if (product.title.includes(ingredient)) {
+          product.count = 0;
+        }
+
+        if(ingredient === 'Rind') {
+          if (product.title.includes('Wild')) {
+            product.count = 0;
+          }
+        }
+      }
+    }
+
+    // Calculate counts based on given ratios
+    let redCount = Math.floor((3 / 7) * totalCount);
+    let lightCount = Math.floor((3 / 7) * totalCount);
+    let fishCount = totalCount - redCount - lightCount; // Using subtraction to avoid rounding errors
+
+    // Distribute counts evenly among products of the same meat_type
+    function distributeCounts(meatType, count) {
+      const products = Object.values(window.ur_products).filter(
+        (p) => p.meat_type === meatType && p.count !== 0,
+      );
+      let baseCount = Math.floor(count / products.length);
+      let remainder = count % products.length;
+
+      for (let product of products) {
+        product.count = baseCount + (remainder > 0 ? 1 : 0);
+        if (remainder > 0) remainder--;
+      }
+    }
+
+    distributeCounts('red', redCount);
+    distributeCounts('light', lightCount);
+    distributeCounts('fish', fishCount);
+
+    // Display results
+
+    for (let id in window.ur_products) {
+      const product = window.ur_products[id];
+      const productElement = results.querySelector(
+        "[data-product-id='" + id + "']",
+      );
+      if (product && product.count !== undefined) {
+        productElement.innerHTML = productElement.innerHTML.replace(
+          /%\{count\}/g,
+          product.count,
+        );
+      }
+    }
+
+    //Wait 2 seconds
+    setTimeout(() => {
+      document.querySelector('#questionnaire-spinner').classList.add('xhidden');
+      results.classList.remove('xhidden');
+    }, 2000);
   }
 });
