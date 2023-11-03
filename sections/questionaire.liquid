@@ -42,7 +42,7 @@
 
     <div class='xflex xgap-8'>
       {% for product in collection.products %}
-        <a href='{{ product.url }}' class='xbg-lightbeige xrounded-3xl xp-8' data-product-id='{{ product.id }}'>
+        <a href='{{ product.url }}' class='xbg-lightbeige xrounded-3xl xp-8' data-product-id='{{ id }}'>
           {% if product.image != null %}
             <img
               height='200'
