@@ -30,7 +30,7 @@
 
   <div
     id='questionnaire-results'
-    class=' xw-full page-width xflex xflex-col xjustify-center xitems-center xmx-auto xgap-4 '
+    class=' xw-full page-width xflex xflex-col xjustify-center xitems-center xmx-auto xgap-4 xhidden'
   >
     <h1 class='xtext-center xmt-24'>Unsere Empfehlung für %{name}:</h1>
 
@@ -101,7 +101,7 @@
             <div class='richtext xp-8 xpy-4 beige'>{{ section.settings.cta_text }}</div>
             {% if section.settings.cta_button_text != blank %}
               <div class='xflex xitems-center'>
-                <a id='bab-btn' href='/pages/{{ settings.box_page }}' class='button xtext-beige-200'>
+                <a id='bab-btn' href='/pages/{{ section.settings.box_page }}' class='button xtext-beige-200'>
                   {{- section.settings.cta_button_text -}}
                 </a>
               </div>

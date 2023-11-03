@@ -1105,7 +1105,8 @@ document.addEventListener('DOMContentLoaded', function () {
     distributeCounts('light', lightCount);
     distributeCounts('fish', fishCount);
 
-    // Display results
+    let queryString = '?canSize=' + canSize + '&recommendation=';
+  
 
     for (let id in window.ur_products) {
       const product = window.ur_products[id];
@@ -1117,8 +1118,12 @@ document.addEventListener('DOMContentLoaded', function () {
           /%\{count\}/g,
           product.count,
         );
+
+        queryString += product.id + '*' + product.count + '-';
       }
     }
+
+    document.querySelector('#bab-btn').href += queryString;
 
     //Wait 2 seconds
     setTimeout(() => {
