@@ -110,6 +110,14 @@
             "card3svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" x=\"0px\" y=\"0px\" width=\"60\" height=\"60\" viewbox=\"0 0 64 64\">\n<path d=\"M37.691 28.319l11.618 1.793 5.54-3.879c1.565-1.189 2.368-3.129 2.101-5.076l-.369-2.694c-.093-.68-.742-1.14-1.415-1.003l-5.1 1.04-1.7-1.151c-.456-.309-1.019-.416-1.556-.296l-5.033 1.12-4.779-1.69c-1.155 3.207 1.581 6.099 1.581 6.099L37.691 28.319zM62 55l-1.256-3.767c-.459-1.378-1.63-2.399-3.058-2.667L51 47.5 49 35l-12.621-3.37C35.474 32.574 29.187 38 14 38c-2.859 0-6.607-.931-8.152-5.61-.347-1.05-1.352-1.66-2.526-1.272h0c0 0-.813 2.323.143 5.218 1.024 3.101 3.868 5.739 5.907 7.195l-1.235 5.344C7.413 52.008 9.793 55 13.009 55H62z\"><\/path>\n<\/svg>",
             "card3key": "not_active"
           }
+        },
+        "8dc4a2c8-1e20-44c7-8a8a-bc692e50338e": {
+          "type": "email-question",
+          "settings": {
+            "question_text": "Wie lautet deine E-Mail Adresse?",
+            "placeholder_text": "me@email.com",
+            "question_descr": "Teile uns deine E-Mail Adresse mit, damit wir dir deine Empfehlung zusenden können."
+          }
         }
       },
       "block_order": [
@@ -122,13 +130,16 @@
         "5aaf71d9-45cc-4931-ae22-f18369410980",
         "985c2f1d-ae38-466c-94fc-d0f00fb588aa",
         "4b0e0741-e5c7-4009-b006-2f001b4bf6c3",
-        "b18c8c55-6e5c-4cbb-b76a-b8581ea0d2fb"
+        "b18c8c55-6e5c-4cbb-b76a-b8581ea0d2fb",
+        "8dc4a2c8-1e20-44c7-8a8a-bc692e50338e"
       ],
       "settings": {
         "health_problems_notice": "<h3>Gesundheitliche Probleme<\/h3><p> Wir haben festgestellt, dass Dein Hund bekannte gesundheitliche Probleme hat. Während unsere Futterempfehlungen auf den von Dir bereitgestellten Informationen basieren, empfehlen wir dringend, Dich bei spezifischen gesundheitlichen Herausforderungen oder Bedenken direkt an uns zu wenden. Unsere Ernährungsexperten können Dir detaillierte Ratschläge und Empfehlungen geben, die auf die individuellen Bedürfnisse Deines Hundes zugeschnitten sind. Seine Gesundheit und sein Wohlbefinden sind uns sehr wichtig.<\/p>",
         "general_notice": "<p>Angegebene Futtermengen sind Richtwerte. Der tatsächliche Bedarf richtet sich nach Alter, Rasse und Aktivität deines Tieres. Bei weiteren Fragen zur Futtermenge zögere nicht uns zu kontaktieren für eine individuelle Beratung.<\/p>",
         "collection": "nassfutter",
-        "box_page": "build-a-box"
+        "box_page": "build-a-box",
+        "cta_text": "<h2>Stelle deine Box zusammen!<\/h2>",
+        "cta_button_text": "Empfehlung zur Build-a-Box übernehmen"
       }
     }
   },
