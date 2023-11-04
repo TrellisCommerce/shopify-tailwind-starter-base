@@ -58,6 +58,7 @@
               id: {{ product.id }},
               title: '{{ product.title }}',
               meat_type: '{{ product.metafields.custom.meat_type }}',
+              url: '{{ product.url }}',
             };
           </script>
           {% if product.image != null %}
@@ -195,6 +196,28 @@
                   <div>
                     <input
                       type='text'
+                      required
+                      id='{{ block.id }}-text'
+                      placeholder='{{ block.settings.placeholder_text }}'
+                      class='!xbg-beige-200 xpy-4 xpx-0 xborder-b-2 xtext-beige-950 xborder-beige-950 xtext-4xl xfont-semibold xplaceholder-beige-400 [&:has(:focus-visible)]:xoutline-none'
+                    >
+                  </div>
+                </form>
+              </div>
+            {% when 'email-question' %}
+              <div class='email-question'>
+                <form class='xflex xflex-col xgap-16'>
+                  <label
+                    for='{{ block.id }}-text'
+                    class='xfont-semibold xtext-6xl'
+                    style="font-family: 'Rooney';"
+                  >
+                    {{- block.settings.question_text -}}
+                  </label>
+                  <p class=''>{{ block.settings.question_descr }}</p>
+                  <div>
+                    <input
+                      type='email'
                       required
                       id='{{ block.id }}-text'
                       placeholder='{{ block.settings.placeholder_text }}'
@@ -359,7 +382,7 @@
                     </div>
 
                     <div>
-                      <input type='checkbox' id='wild' name='Wild, Rind'>
+                      <input type='checkbox' id='wild' name='Wild'>
                       <label class='!xtext-3xl' for='wild'>Wild</label>
                     </div>
 
@@ -738,7 +761,7 @@
           "type": "text",
           "label": "Question Description",
           "id": "question_descr",
-          "default": "Erklärung"
+          "default": "Manche Hunde haben Abneigungen oder Unverträglichkeiten gegenüber bestimmten Fleischsorten. Dies hilft uns, die besten Menüs für deinen Hund auszuwählen."
         }
       ]
     },

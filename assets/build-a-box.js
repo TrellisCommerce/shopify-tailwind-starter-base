@@ -39,42 +39,44 @@ document.addEventListener('DOMContentLoaded', function () {
     const canSize = getParameterByName('canSize');
     const recommendationString = getParameterByName('recommendation');
 
-    for (let i = 0; i < optionButtons.length; i++) {
-      const optionButton = optionButtons[i];
-      const option = optionButton.getAttribute('data-option');
-      if (option === canSize) {
-        optionButton.classList.add('active');
-        window.ur_selected_variant_option = canSize;
-        setVariantOption(canSize);
-      } else {
-        optionButton.classList.remove('active');
-      }
-    }
-
-    if (recommendationString) {
-      //Split recommendation string into array
-      const recommendationArray = recommendationString.split('-');
-      recommendationArray.forEach((recommendation) => {
-        const id = recommendation.split('*')[0];
-        const count = recommendation.split('*')[1];
-
-        const input = document.querySelector(
-          "input[data-product-option-id='" + id + '-' + canSize + "'",
-        );
-        console.log(input);
-        if(input) {
-          console.log(input.value)
-          input.value = Number(count);
-          console.log(input.value)
+    if (canSize) {
+      for (let i = 0; i < optionButtons.length; i++) {
+        const optionButton = optionButtons[i];
+        const option = optionButton.getAttribute('data-option');
+        if (option === canSize) {
+          optionButton.classList.add('active');
+          window.ur_selected_variant_option = canSize;
+          setVariantOption(canSize);
+        } else {
+          optionButton.classList.remove('active');
         }
-      });
+      }
 
-      document.querySelector('#questionnaire-cta').classList.add('xhidden');
+      if (recommendationString) {
+        //Split recommendation string into array
+        const recommendationArray = recommendationString.split('-');
+        recommendationArray.forEach((recommendation) => {
+          const id = recommendation.split('*')[0];
+          const count = recommendation.split('*')[1];
+
+          const input = document.querySelector(
+            "input[data-product-option-id='" + id + '-' + canSize + "'",
+          );
+          console.log(input);
+          if (input) {
+            console.log(input.value);
+            input.value = Number(count);
+            console.log(input.value);
+          }
+        });
+
+        document.querySelector('#questionnaire-cta').classList.add('xhidden');
+        calculateTotal();
+      }
+    } else {
       calculateTotal();
     }
   }
-
-  checkForRecommendation();
 
   function getVariantItems() {
     const variantElements = document.getElementsByClassName('variant');
@@ -187,8 +189,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     unitPriceDisplayElement.innerHTML = unitPriceFormat;
   }
-  //Calculate Total on Start
-  calculateTotal();
+
 
   //Send Cart Form
   document
@@ -391,4 +392,6 @@ document.addEventListener('DOMContentLoaded', function () {
     footer.style.left = position.left + 'px';
     footer.style.position = 'sticky';
   }
+
+  checkForRecommendation();
 });

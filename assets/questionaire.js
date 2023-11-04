@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const POST_URL =
+    'https://script.google.com/macros/s/AKfycbxCG5BjQoTPsz_8R8p6HIrwrkyHbJyY6vLjRrdaIaqyjFz_W7iMIn8sdnivhxWqVL1fsQ/exec';
   const slideCount = window.ur_questionaire_slide_count;
 
   const dogData = {};
@@ -110,6 +112,10 @@ document.addEventListener('DOMContentLoaded', function () {
           slide.innerHTML = slide.innerHTML.replace(/%\{name\}/g, nameValue);
         });
         dogData.name = nameValue;
+        break;
+      case 'email-question':
+        const emailValue = currentSlide.querySelector('input').value;
+        dogData.email = emailValue;
         break;
       case 'age-question':
         const month = currentSlide.querySelector('#month-select').value;
@@ -1032,6 +1038,8 @@ document.addEventListener('DOMContentLoaded', function () {
     daily = Math.round(daily * 1000);
     console.log(daily);
 
+    dogData.dailyGrammsResult = daily;
+
     //monthly amount
     const monthly = daily * 31;
     let cans = Math.round(monthly / 400);
@@ -1074,7 +1082,7 @@ document.addEventListener('DOMContentLoaded', function () {
           product.count = 0;
         }
 
-        if(ingredient === 'Rind') {
+        if (ingredient === 'Rind') {
           if (product.title.includes('Wild')) {
             product.count = 0;
           }
@@ -1106,7 +1114,6 @@ document.addEventListener('DOMContentLoaded', function () {
     distributeCounts('fish', fishCount);
 
     let queryString = '?canSize=' + canSize + '&recommendation=';
-  
 
     for (let id in window.ur_products) {
       const product = window.ur_products[id];
@@ -1123,10 +1130,39 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
+    const recomData = Object.assign({}, window.ur_products); 
+
+    dogData.recommendation = {
+      canSize: canSize,
+      products: JSON.stringify(recomData),
+    };
+
+    console.log(window.ur_products)
+    console.log(dogData.recommendation)
     document.querySelector('#bab-btn').href += queryString;
+
+    for (let key in dogData) {
+      if (typeof dogData[key] === 'object') {
+        dogData[key] = JSON.stringify(dogData[key]);
+      }
+    }
+
+    console.log(dogData)
+
+    fetch(POST_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams(dogData).toString(),
+    })
+      .then((response) => response.json()) // Assuming server responds with json
+      .then((data) => console.log(data))
+      .catch((error) => console.error('Error:', error));
 
     //Wait 2 seconds
     setTimeout(() => {
+      document.querySelector('#slide-wrap').classList.add('xhidden');
       document.querySelector('#questionnaire-spinner').classList.add('xhidden');
       results.classList.remove('xhidden');
     }, 2000);
