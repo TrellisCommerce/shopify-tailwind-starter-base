@@ -960,6 +960,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0px;
 }
 
+.xpx-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .xpt-4 {
   padding-top: 1rem;
 }
