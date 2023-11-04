@@ -493,6 +493,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0px;
 }
 
+.xfloat-right {
+  float: right;
+}
+
 .xm-auto {
   margin: auto;
 }
@@ -577,8 +581,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
+.xmt-2 {
+  margin-top: 0.5rem;
+}
+
 .\!xblock {
   display: block !important;
+}
+
+.xblock {
+  display: block;
 }
 
 .xinline-block {
@@ -1036,6 +1048,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .\!xtext-3xl {
   font-size: 1.875rem !important;
   line-height: 2.25rem !important;
+}
+
+.xtext-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .xfont-black {
