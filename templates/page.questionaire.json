@@ -91,7 +91,7 @@
           "type": "allergies-question",
           "settings": {
             "question_text": "Gibt es bestimmte Fleischsorten, die  %{name} nicht verträgt oder ablehnt?",
-            "question_descr": "Erklärung"
+            "question_descr": "Manche Hunde haben Abneigungen oder Unverträglichkeiten gegenüber bestimmten Fleischsorten. Dies hilft uns, die besten Menüs für deinen Hund auszuwählen."
           }
         },
         "b18c8c55-6e5c-4cbb-b76a-b8581ea0d2fb": {
