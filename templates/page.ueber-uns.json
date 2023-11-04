@@ -1,0 +1,35 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "eac071c2-238f-4670-8009-1d7131150f7d": {
+      "type": "hero-slider",
+      "blocks": {
+        "template--21410078720295__eac071c2-238f-4670-8009-1d7131150f7d-hero-slide-1": {
+          "type": "hero-slide",
+          "settings": {
+            "hero_text": "<h1>Your Heading Here<\/h1><p>Your description here.<\/p>",
+            "button_link": "",
+            "button_label": "Learn More",
+            "theme_mode": "light"
+          }
+        }
+      },
+      "block_order": [
+        "template--21410078720295__eac071c2-238f-4670-8009-1d7131150f7d-hero-slide-1"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "eac071c2-238f-4670-8009-1d7131150f7d"
+  ]
+}
