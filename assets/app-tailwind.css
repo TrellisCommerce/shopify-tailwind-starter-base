@@ -697,6 +697,10 @@ progress[value]::-moz-progress-bar {
   @apply !xfont-semibold;
 }
 
+#bab-button {
+  padding: 1rem 3rem;
+}
+
 @media (max-width: 800px) {
   .accordion__title.h4 {
     font-size: 1.65rem !important;

@@ -533,6 +533,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 4rem;
 }
 
+.xmt-2 {
+  margin-top: 0.5rem;
+}
+
 .xmt-1 {
   margin-top: 0.25rem;
 }
@@ -581,16 +585,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
-.xmt-2 {
-  margin-top: 0.5rem;
-}
-
 .\!xblock {
   display: block !important;
-}
-
-.xblock {
-  display: block;
 }
 
 .xinline-block {
@@ -790,6 +786,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow-x: scroll;
 }
 
+.xbreak-normal {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
 .xrounded-3xl {
   border-radius: 1.5rem;
 }
@@ -940,6 +941,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.5rem;
 }
 
+.xpx-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .xpx-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -958,11 +964,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xpx-0 {
   padding-left: 0px;
   padding-right: 0px;
-}
-
-.xpx-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 .xpt-4 {
@@ -1020,6 +1021,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.25rem;
 }
 
+.xtext-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .xtext-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -1053,11 +1059,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .\!xtext-3xl {
   font-size: 1.875rem !important;
   line-height: 2.25rem !important;
-}
-
-.xtext-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .xfont-black {
@@ -1096,14 +1097,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(242 238 227 / var(--tw-text-opacity)) !important;
 }
 
-.xtext-beige-950 {
-  --tw-text-opacity: 1;
-  color: rgb(33 28 15 / var(--tw-text-opacity));
-}
-
 .\!xtext-gray-900 {
   --tw-text-opacity: 1 !important;
   color: rgb(17 24 39 / var(--tw-text-opacity)) !important;
+}
+
+.xtext-beige-950 {
+  --tw-text-opacity: 1;
+  color: rgb(33 28 15 / var(--tw-text-opacity));
 }
 
 .xtext-beige-400 {
@@ -2115,6 +2116,10 @@ progress[value]::-moz-progress-bar {
 
 .hero-slide-content p {
   font-weight: 600 !important;
+}
+
+#bab-button {
+  padding: 1rem 3rem;
 }
 
 @media (max-width: 800px) {

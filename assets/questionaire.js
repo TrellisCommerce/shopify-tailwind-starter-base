@@ -1149,6 +1149,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     console.log(dogData)
 
+    results.innerHTML = results.innerHTML.replace(/%\{name\}/, dogData.name);
+
+
     fetch(POST_URL, {
       method: 'POST',
       headers: {

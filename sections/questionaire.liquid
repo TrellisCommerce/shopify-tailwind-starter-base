@@ -35,8 +35,8 @@
     <h1 class='xtext-center xmt-24'>Unsere Empfehlung für %{name}:</h1>
 
     <div class='xtext-center xmb-12 xmax-w-[80rem]'>{{ section.settings.general_notice }}</div>
-    <h2>Täglicher Bedarf: %{daily}g</h2>
-    <h2>Uncle Rustys %{canSize} Dosen monatlich: %{monthlyCans}x</h2>
+    <h2 class='xtext-center'>Täglicher Bedarf: %{daily}g</h2>
+    <h2 class='xtext-center'>Uncle Rustys %{canSize} Dosen monatlich: %{monthlyCans}x</h2>
     <div id='notices' class='xflex xflex-wrap xgap-8 xmb-12 xmt-12'>
       <div class='notice xbg-lightbeige xrounded-3xl xp-8 xhidden '>%{notice}</div>
     </div>
@@ -78,8 +78,8 @@
               alt='{{ product.title | escape }}'
             >
           {% endif %}
-          <div class='xflex xitems-baseline xgap-4'>
-            <h2 class='xtext-green'>%{count}x</h2>
+          <div class='xflex xflex-col md:xflex-row xitems-baseline xgap-4'>
+            <h2 class='xtext-green xbreak-normal'>%{count}x</h2>
             <h3>{{ product.title }}</h3>
           </div>
         </a>
