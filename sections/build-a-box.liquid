@@ -54,7 +54,10 @@
         <div class='swiper-button-next'></div>
       </div>
       <div class='xmb-8'>
-        <div class='xmy-16 xbg-lightbeige xrounded-3xl xp-8 xflex xflex-wrap xgap-8 xjustify-between xitems-center'>
+        <div
+          id='questionnaire-cta'
+          class='xmy-16 xbg-lightbeige xrounded-3xl xp-8 xflex xflex-wrap xgap-8 xjustify-between xitems-center'
+        >
           <div class='richtext cta-richtext  xfont-black xtext-2xl ' style="font-family: 'Rooney';">
             {{ section.settings.questionaire_info_text }}
           </div>
@@ -198,6 +201,7 @@
                       name='custom-input-number'
                       value='{{ preselectedValueVariant }}'
                       min='0'
+                      data-product-option-id='{{ product.id }}-{{ variant.option1 }}'
                     >
                     <button
                       type='button'
@@ -261,7 +265,7 @@
         -%}
 
         <div
-          class='product-item ur-product xp-4 {{ custom_classes_product }} xrounded-3xl xoverflow-hidden last-of-type:xborder-none'
+          class='product-item ur-product additive xp-4 {{ custom_classes_product }} xrounded-3xl xoverflow-hidden last-of-type:xborder-none'
           data-product-index='{{ forloop.index }}'
         >
           {% for variant in product.variants %}

@@ -29,6 +29,53 @@ document.addEventListener('DOMContentLoaded', function () {
   let currentPlan = parseInt(window.ur_subscription_plan);
   let quantityBreakTarget = parseInt(window.ur_quantity_break_target);
 
+  function getParameterByName(name, url = window.location.href) {
+    let params = new URL(url).searchParams;
+    return params.get(name);
+  }
+
+  function checkForRecommendation() {
+    //check if GET PARAM canSize is set and get an
+    const canSize = getParameterByName('canSize');
+    const recommendationString = getParameterByName('recommendation');
+
+    for (let i = 0; i < optionButtons.length; i++) {
+      const optionButton = optionButtons[i];
+      const option = optionButton.getAttribute('data-option');
+      if (option === canSize) {
+        optionButton.classList.add('active');
+        window.ur_selected_variant_option = canSize;
+        setVariantOption(canSize);
+      } else {
+        optionButton.classList.remove('active');
+      }
+    }
+
+    if (recommendationString) {
+      //Split recommendation string into array
+      const recommendationArray = recommendationString.split('-');
+      recommendationArray.forEach((recommendation) => {
+        const id = recommendation.split('*')[0];
+        const count = recommendation.split('*')[1];
+
+        const input = document.querySelector(
+          "input[data-product-option-id='" + id + '-' + canSize + "'",
+        );
+        console.log(input);
+        if(input) {
+          console.log(input.value)
+          input.value = Number(count);
+          console.log(input.value)
+        }
+      });
+
+      document.querySelector('#questionnaire-cta').classList.add('xhidden');
+      calculateTotal();
+    }
+  }
+
+  checkForRecommendation();
+
   function getVariantItems() {
     const variantElements = document.getElementsByClassName('variant');
     let itemsToAdd = [];
@@ -47,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
         id: variantId,
         quantity: quantity,
         selling_plan: currentPlan,
-        collection: variantCollection
+        collection: variantCollection,
       });
     }
     return itemsToAdd;
@@ -91,9 +138,8 @@ document.addEventListener('DOMContentLoaded', function () {
       totalPriceOriginal =
         totalPriceOriginal + itemPriceOriginal * item.quantity;
       totalPrice = totalPrice + itemPrice * item.quantity;
-      if(item.collection === 'main') {
+      if (item.collection === 'main') {
         totalQuantity = totalQuantity + parseInt(item.quantity);
-
       }
     }
 
@@ -245,41 +291,43 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const clickedOption = this.getAttribute('data-option');
       window.ur_selected_variant_option = clickedOption;
+      setVariantOption(clickedOption);
+      calculateTotal();
+    });
+  }
 
-      const products = document.getElementsByClassName('ur-product');
+  function setVariantOption(clickedOption) {
+    const products = document.querySelector('.ur-product:not(.additive)');
 
-      for (let k = 0; k < products.length; k++) {
-        const product = products[k];
-        const variants = product.getElementsByClassName('ur-variant');
+    for (let k = 0; k < products.length; k++) {
+      const product = products[k];
+      const variants = product.getElementsByClassName('ur-variant');
 
-        let highestQuantity = 0;
-        for (let l = 0; l < variants.length; l++) {
-          const variant = variants[l];
-          const quantity = variant.querySelector('.variant-quantity').value;
-          if (quantity > highestQuantity) {
-            highestQuantity = quantity;
-          }
-        }
-
-        for (let l = 0; l < variants.length; l++) {
-          const variant = variants[l];
-          const quantityElement = variant.querySelector('.variant-quantity');
-          if (variant.getAttribute('data-option') === clickedOption) {
-            variant.classList.remove('xhidden');
-            if (quantityElement) {
-              quantityElement.value = highestQuantity;
-            }
-          } else {
-            variant.classList.add('xhidden');
-            if (quantityElement) {
-              quantityElement.value = 0;
-            }
-          }
+      let highestQuantity = 0;
+      for (let l = 0; l < variants.length; l++) {
+        const variant = variants[l];
+        const quantity = variant.querySelector('.variant-quantity').value;
+        if (quantity > highestQuantity) {
+          highestQuantity = quantity;
         }
       }
 
-      calculateTotal();
-    });
+      for (let l = 0; l < variants.length; l++) {
+        const variant = variants[l];
+        const quantityElement = variant.querySelector('.variant-quantity');
+        if (variant.getAttribute('data-option') === clickedOption) {
+          variant.classList.remove('xhidden');
+          if (quantityElement) {
+            quantityElement.value = highestQuantity;
+          }
+        } else {
+          variant.classList.add('xhidden');
+          if (quantityElement) {
+            quantityElement.value = 0;
+          }
+        }
+      }
+    }
   }
 
   //Input listener

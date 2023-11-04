@@ -561,20 +561,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 6rem;
 }
 
-.xmt-4 {
-  margin-top: 1rem;
+.xmt-24 {
+  margin-top: 6rem;
 }
 
 .xmb-12 {
   margin-bottom: 3rem;
 }
 
-.xmt-24 {
-  margin-top: 6rem;
-}
-
 .xmt-12 {
   margin-top: 3rem;
+}
+
+.xmt-4 {
+  margin-top: 1rem;
 }
 
 .\!xblock {
@@ -673,20 +673,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 100vw;
 }
 
-.xmax-w-3xl {
-  max-width: 48rem;
-}
-
-.xmax-w-xl {
-  max-width: 36rem;
-}
-
-.xmax-w-md {
-  max-width: 28rem;
-}
-
 .xmax-w-\[80rem\] {
   max-width: 80rem;
+}
+
+.xmax-w-3xl {
+  max-width: 48rem;
 }
 
 .xflex-1 {
@@ -863,6 +855,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(222 139 53 / var(--tw-bg-opacity));
 }
 
+.xbg-green {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 143 113 / var(--tw-bg-opacity));
+}
+
 .\!xbg-beige-200 {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(242 238 227 / var(--tw-bg-opacity)) !important;
@@ -876,11 +873,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xbg-purple {
   --tw-bg-opacity: 1;
   background-color: rgb(135 125 163 / var(--tw-bg-opacity));
-}
-
-.xbg-green {
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 143 113 / var(--tw-bg-opacity));
 }
 
 .xbg-orange {
@@ -1095,16 +1087,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .xtext-beige-400 {
   --tw-text-opacity: 1;
   color: rgb(206 191 150 / var(--tw-text-opacity));
-}
-
-.xtext-beige-800 {
-  --tw-text-opacity: 1;
-  color: rgb(90 78 42 / var(--tw-text-opacity));
-}
-
-.xtext-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 .xtext-green {
@@ -2261,10 +2243,6 @@ progress[value]::-moz-progress-bar {
 
   .md\:xflex-row {
     flex-direction: row;
-  }
-
-  .md\:xflex-nowrap {
-    flex-wrap: nowrap;
   }
 
   .md\:xgap-8 {
