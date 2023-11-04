@@ -14,7 +14,8 @@
         "template--21410078720295__eac071c2-238f-4670-8009-1d7131150f7d-hero-slide-1": {
           "type": "hero-slide",
           "settings": {
-            "hero_text": "<h1>Your Heading Here<\/h1><p>Your description here.<\/p>",
+            "hero_image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_su_b29c0781-ee5d-4f96-812c-2417e49ed61d.png",
+            "hero_text": "<h1>Willkommen <br\/>in der Welt von <br\/>Uncle Rusty’s<\/h1><p>Herzlich willkommen bei Uncle Rusty's – <br\/>Deinem Partner für artgerechte und gesunde<br\/>Hundeernährung.<br\/><\/p>",
             "button_link": "",
             "button_label": "Learn More",
             "theme_mode": "light"
