@@ -1,35 +1,38 @@
-{% assign upsell_product = products[section.settings.upsell_product] %}
+{% assign upsell_product_handle = section.settings.upsell_product %}
 {% assign show_upsell = true %}
 
 {% for item in cart.items %}
-  {% if item.product.id == upsell_product.id %}
+  {% if item.product.handle == upsell_product_handle %}
     {% assign show_upsell = false %}
     {% break %}
   {% endif %}
 {% endfor %}
 
-{% if show_upsell and upsell_product %}
-  <div class='page-width page-width-desktop'>
-    <div class='cart-upsell xmt-8 xflex xflex-wrap xgap-16 xbg-lightbeige xrounded-3xl xp-8 xitems-center xjustify-between'>
-      {% if upsell_product.featured_image %}
-        <img
-          width='200'
-          height='auto'
-          loading='eager'
-          src='{{ upsell_product.featured_image | img_url: '300x' }}'
-          alt='{{ upsell_product.title }}'
-        >
-      {% endif %}
-      <div class='content xflex-1'>
-        {{ section.settings.text }}
-        <a href='{{ collection.url }}' class='cta-button btn button xmt-8'>
-          {{ section.settings.cta_text }}
-        </a>
+{% if show_upsell %}
+  {% assign upsell_product = all_products[upsell_product_handle] %}
+  {% if upsell_product %}
+    <div class='page-width page-width-desktop'>
+      <div class='cart-upsell xmt-8 xflex xflex-wrap xgap-16 xbg-lightbeige xrounded-3xl xp-8 xitems-center xjustify-between'>
+        {% if upsell_product.featured_image %}
+          <img
+            width='auto'
+            height='90'
+            loading='eager'
+            src='{{ upsell_product.featured_image | img_url: '300x' }}'
+            alt='{{ upsell_product.title }}'
+            class='xmax-w-[120px]'
+          >
+        {% endif %}
+        <div class='content xflex-1'>
+          {{ section.settings.text }}
+          <a href='{{ collection.url }}' class='cta-button btn button xmt-8'>
+            {{ section.settings.cta_text }}
+          </a>
+        </div>
       </div>
     </div>
-  </div>
+  {% endif %}
 {% endif %}
-
 {% schema %}
 {
   "name": "Cart Upsell",

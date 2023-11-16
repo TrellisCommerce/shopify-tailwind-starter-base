@@ -677,6 +677,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-width: 50%;
 }
 
+.xmax-w-\[100px\] {
+  max-width: 100px;
+}
+
 .xmax-w-\[100vw\] {
   max-width: 100vw;
 }
@@ -687,6 +691,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .xmax-w-3xl {
   max-width: 48rem;
+}
+
+.xmax-w-\[120px\] {
+  max-width: 120px;
 }
 
 .xflex-1 {

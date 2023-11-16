@@ -3,8 +3,9 @@
     "03eaa699-07cd-4a55-8c1b-b54a1e7074e4": {
       "type": "cart-upsell",
       "settings": {
-        "upsell_collection": "snacks",
-        "cta_text": "Shop Now"
+        "upsell_product": "snack-test",
+        "text": "<h3>Schon unsere handgemachten Kekse probiert?<\/h3><p>Lege jetzt noch das Probierpaket für unsere Snacks in den Warenkorb.<\/p>",
+        "cta_text": "Jetzt hinzufügen"
       }
     },
     "cart-items": {
