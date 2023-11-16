@@ -1,22 +1,32 @@
-{% assign collection = collections[section.settings.upsell_collection] %}
+{% assign upsell_product = products[section.settings.upsell_product] %}
 {% assign show_upsell = true %}
 
 {% for item in cart.items %}
-  {% if item.product.collections contains collection %}
+  {% if item.product.id == upsell_product.id %}
     {% assign show_upsell = false %}
     {% break %}
   {% endif %}
 {% endfor %}
 
-{% if show_upsell and collection %}
-  <div class='cart-upsell'>
-    {% if collection.image %}
-      <img src='{{ collection.image.src | img_url: '300x' }}' alt='{{ collection.title }}'>
-    {% endif %}
-
-    <a href='{{ collection.url }}' class='cta-button'>
-      {{ section.settings.cta_text }}
-    </a>
+{% if show_upsell and upsell_product %}
+  <div class='page-width page-width-desktop'>
+    <div class='cart-upsell xmt-8 xflex xflex-wrap xgap-16 xbg-lightbeige xrounded-3xl xp-8 xitems-center xjustify-between'>
+      {% if upsell_product.featured_image %}
+        <img
+          width='200'
+          height='auto'
+          loading='eager'
+          src='{{ upsell_product.featured_image | img_url: '300x' }}'
+          alt='{{ upsell_product.title }}'
+        >
+      {% endif %}
+      <div class='content xflex-1'>
+        {{ section.settings.text }}
+        <a href='{{ collection.url }}' class='cta-button btn button xmt-8'>
+          {{ section.settings.cta_text }}
+        </a>
+      </div>
+    </div>
   </div>
 {% endif %}
 
@@ -25,15 +35,21 @@
   "name": "Cart Upsell",
   "settings": [
     {
-      "type": "collection",
-      "id": "upsell_collection",
-      "label": "Select a collection"
+      "type": "product",
+      "id": "upsell_product",
+      "label": "Select a product"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<h3>Schon unsere handgemachten Kekse probiert?</h3><p>Lege jetzt noch das Probierpaket für unsere Snacks in den Warenkorb.</p>"
     },
     {
       "type": "text",
       "id": "cta_text",
       "label": "CTA Button Text",
-      "default": "Shop Now"
+      "default": "Jetzt hinzufügen"
     }
   ],
   "presets": [
