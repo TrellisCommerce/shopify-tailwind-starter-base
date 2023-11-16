@@ -22,42 +22,52 @@
             {{- section.settings.button2_text -}}
           </a>
         {% endif %}
+
         {% if section.settings.newsletter == 'true' %}
           <div class='newsletter-form__field-wrapper'>
             <div class='field'>
-              <input
+              <form
                 id='NewsletterForm'
-                type='email'
-                name='contact[email]'
-                class='field__input'
-                value=''
-                aria-required='true'
-                autocorrect='off'
-                autocapitalize='off'
-                autocomplete='off'
-                placeholder='E-Mail'
-                required=''
-                style='width: 335px;'
+                method='post'
+                action='/contact#contact_form'
+                accept-charset='UTF-8'
+                class='contact-form'
               >
-              <label class='field__label' for='NewsletterForm'> E-Mail </label>
-              <button
-                type='button'
-                class='newsletter-form__button field__button xtext-beige-950 xfill-beige-950'
-                name='commit'
-                id='Subscribe'
-                aria-label='Abonnieren'
-              >
-                <svg
-                  width='24'
-                  height='24'
-                  viewBox='0 0 24 24'
-                  fill='currentColor'
-                  xmlns='http://www.w3.org/2000/svg'
-                  class='xfill-beige-950'
+                <input type='hidden' name='form_type' value='customer'>
+                <input type='hidden' name='utf8' value='✓'>
+
+                <input
+                  type='email'
+                  name='contact[email]'
+                  class='field__input'
+                  value=''
+                  aria-required='true'
+                  autocorrect='off'
+                  autocapitalize='off'
+                  autocomplete='off'
+                  placeholder='E-Mail'
+                  required=''
+                  style='width: 335px;'
                 >
-                  <path class='xfill-beige-950' d="M11.293 17.293L12.707 18.707L19.414 12L12.707 5.29297L11.293 6.70697L15.586 11H6V13H15.586L11.293 17.293Z" fill="currentColor"></path>
-                </svg>
-              </button>
+                <label class='field__label' for='NewsletterForm'>E-Mail</label>
+                <button
+                  type='submit'
+                  class='newsletter-form__button field__button xtext-beige-950 xfill-beige-950'
+                  name='commit'
+                  aria-label='Abonnieren'
+                >
+                  <svg
+                    width='24'
+                    height='24'
+                    viewBox='0 0 24 24'
+                    fill='currentColor'
+                    xmlns='http://www.w3.org/2000/svg'
+                    class='xfill-beige-950'
+                  >
+                    <path class='xfill-beige-950' d="M11.293 17.293L12.707 18.707L19.414 12L12.707 5.29297L11.293 6.70697L15.586 11H6V13H15.586L11.293 17.293Z" fill="currentColor"></path>
+                  </svg>
+                </button>
+              </form>
             </div>
           </div>
         {% endif %}
@@ -66,6 +76,32 @@
   </div>
 </div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('NewsletterForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var formData = new FormData(this);
+      formData.append('contact[tags]', 'newsletter');
+
+      fetch('/contact', {
+        method: 'POST',
+        body: formData,
+      })
+        .then((response) => {
+          if (response.ok) {
+            alert('Thank you for subscribing!');
+            this.reset();
+          } else {
+            alert('There was a problem with the subscription.');
+          }
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    });
+  });
+</script>
 {% comment %} TODO: Ajax Newsletter Form {% endcomment %}
 
 <style>
