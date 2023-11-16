@@ -25,14 +25,16 @@
         {% endif %}
         <div class='content xflex-1'>
           {{ section.settings.text }}
-          <a href='{{ collection.url }}' class='cta-button btn button xmt-8'>
-            {{ section.settings.cta_text }}
-          </a>
+          <form action='/cart/add' method='post'>
+            <input type='hidden' name='id' value='{{ upsell_product.variants.first.id }}'>
+            <input type='submit' value='{{ section.settings.cta_text }}' class='cta-button btn button xmt-8'>
+          </form>
         </div>
       </div>
     </div>
   {% endif %}
 {% endif %}
+
 {% schema %}
 {
   "name": "Cart Upsell",
