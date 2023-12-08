@@ -50,7 +50,7 @@
         {% endif %}
 
         {% if text %}
-          <div>{{ text }}</div>
+          <div>{{ product.metafields.custom[text_key] | metafield_tag }}</div>
         {% endif %}
       </div>
     {% endif %}
