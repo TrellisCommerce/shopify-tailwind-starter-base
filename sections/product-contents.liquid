@@ -1,0 +1,61 @@
+{% schema %}
+{
+  "name": "Product Contents",
+  "max_blocks": 0,
+  "settings": [],
+  "presets": [
+    {
+      "category": "Product",
+      "name": "Default Product Contents"
+    }
+  ]
+}
+{% endschema %}
+
+<!-- product_contents.liquid -->
+
+<style>
+  .product-contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .product-content-item {
+    margin: 10px;
+  }
+
+  /* Responsive design for smaller screens */
+  @media (max-width: 600px) {
+    .product-contents {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<div class='product-contents'>
+  {% for i in (1..4) %}
+    {% assign heading_key = 'content' | append: i | append: '_heading' %}
+    {% assign text_key = 'content' | append: i | append: '_text' %}
+    {% assign img_key = 'content' | append: i | append: '_img' %}
+
+    {% assign heading = product.metafields.custom[heading_key] %}
+    {% assign text = product.metafields.custom[text_key] %}
+    {% assign img = product.metafields.custom[img_key] %}
+    {% if heading or text or img %}
+      <div class='product-content-item'>
+        {% if img %}
+          <img src='{{ img | image_url: '300x300' }}' alt='{{ heading }}' width='auto' height='auto' loading='lazy'>
+        {% endif %}
+        {% if heading %}
+          <h2>{{ heading }}</h2>
+        {% endif %}
+
+        {% if text %}
+          <div>{{ text }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
