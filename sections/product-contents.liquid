@@ -17,10 +17,15 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
+    gap: 2rem;
   }
 
   .product-content-item {
     margin: 10px;
+  }
+
+  .product-content-text {
+    max-width: 330px;
   }
 
   /* Responsive design for smaller screens */
@@ -31,28 +36,31 @@
   }
 </style>
 
-<div class='product-contents'>
-  {% for i in (1..4) %}
-    {% assign heading_key = 'content' | append: i | append: '_heading' %}
-    {% assign text_key = 'content' | append: i | append: '_text' %}
-    {% assign img_key = 'content' | append: i | append: '_img' %}
+<div class='page-width'>
+  <div class='product-contents xmy-16'>
+    {% for i in (1..4) %}
+      {% assign heading_key = 'content' | append: i | append: '_heading' %}
+      {% assign text_key = 'content' | append: i | append: '_text' %}
+      {% assign img_key = 'content' | append: i | append: '_img' %}
 
-    {% assign heading = product.metafields.custom[heading_key] %}
-    {% assign text = product.metafields.custom[text_key] %}
-    {% assign img = product.metafields.custom[img_key] %}
-    {% if heading or text or img %}
-      <div class='product-content-item'>
-        {% if img %}
-          <img src='{{ img | image_url: '300x300' }}' alt='{{ heading }}' width='auto' height='auto' loading='lazy'>
-        {% endif %}
-        {% if heading %}
-          <h2>{{ heading }}</h2>
-        {% endif %}
+      {% assign heading = product.metafields.custom[heading_key] %}
+      {% assign text = product.metafields.custom[text_key] %}
+      {% assign img = product.metafields.custom[img_key] %}
+      {% assign img_options = 'class:product-content-image loading:lazy' %}
 
-        {% if text %}
-          <div>{{ product.metafields.custom[text_key] | metafield_tag }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
-  {% endfor %}
+      {% if heading or text or img %}
+        <div class='product-content-item xflex xflex-col xitems-center'>
+          {% if img %}
+            {{ img | media_tag }}
+          {% endif %}
+          {% if heading %}
+            <h2>{{ heading }}</h2>
+          {% endif %}
+          {% if text %}
+            <div class='product-content-text xtext-center'>{{ text | metafield_tag }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>
