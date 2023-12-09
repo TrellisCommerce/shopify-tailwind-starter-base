@@ -40,25 +40,13 @@
         "template--18563436642568__ec3c1abc-7921-4064-877f-85c3a9c1a13b-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        },
-        "template--18563436642568__ec3c1abc-7921-4064-877f-85c3a9c1a13b-button-1": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "<p>Du fütterst deinem Liebling jeden Tag Uncle Rusty's Nassfutter und interessierst dich dafür, wie unser hochwertiges Hundefutter zubereitet wird? Hier erklären wir dir Schritt für Schritt die Herstellung unserer Menüs: von den natürlichen Zutaten bis zum schmackhaften Nassfutter. <\/p>"
           }
         }
       },
       "block_order": [
         "template--18563436642568__ec3c1abc-7921-4064-877f-85c3a9c1a13b-heading-1",
-        "template--18563436642568__ec3c1abc-7921-4064-877f-85c3a9c1a13b-text-1",
-        "template--18563436642568__ec3c1abc-7921-4064-877f-85c3a9c1a13b-button-1"
+        "template--18563436642568__ec3c1abc-7921-4064-877f-85c3a9c1a13b-text-1"
       ],
       "settings": {
         "desktop_content_position": "center",
