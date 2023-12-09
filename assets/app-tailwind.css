@@ -780,12 +780,14 @@ progress[value]::-moz-progress-bar {
   padding: 0 2rem 2rem 2rem;
 }
 
-.product--large:not(.product--no-media) .product__media-wrapper {
-  max-width: 60% !important;
-  width: calc(60% - var(--grid-desktop-horizontal-spacing) / 2) !important;
-}
-.product--large:not(.product--no-media) .product__info-wrapper {
-  padding: 0 0 0 4rem;
-  max-width: 40% !important;
-  width: calc(40% - var(--grid-desktop-horizontal-spacing) / 2) !important;
+@media screen and (min-width: 990px) {
+  .product--large:not(.product--no-media) .product__media-wrapper {
+    max-width: 60% !important;
+    width: calc(60% - var(--grid-desktop-horizontal-spacing) / 2) !important;
+  }
+  .product--large:not(.product--no-media) .product__info-wrapper {
+    padding: 0 0 0 4rem;
+    max-width: 40% !important;
+    width: calc(40% - var(--grid-desktop-horizontal-spacing) / 2) !important;
+  }
 }
