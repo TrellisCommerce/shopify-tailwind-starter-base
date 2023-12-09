@@ -256,6 +256,43 @@
         "padding_bottom": 36
       }
     },
+    "7e9cf544-5f41-43a2-8329-91977611f9bc": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "template--18562873819400__7e9cf544-5f41-43a2-8329-91977611f9bc-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Kürbis",
+            "heading_size": "h1"
+          }
+        },
+        "template--18562873819400__7e9cf544-5f41-43a2-8329-91977611f9bc-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Fördert eine gesunde Verdauung und liefert wichtige Vitamine. <\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--18562873819400__7e9cf544-5f41-43a2-8329-91977611f9bc-heading-1",
+        "template--18562873819400__7e9cf544-5f41-43a2-8329-91977611f9bc-text-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Kuerbis-min.png",
+        "height": "medium",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "right",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "768a63b1-59d6-41f1-abe2-598806ac7d91": {
       "type": "rich-text",
       "blocks": {
@@ -320,6 +357,7 @@
     "46b98696-f663-4732-816d-9b2021134506",
     "0a5428c3-e3ca-4db0-91f9-87bcb1183fd3",
     "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8",
+    "7e9cf544-5f41-43a2-8329-91977611f9bc",
     "768a63b1-59d6-41f1-abe2-598806ac7d91",
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788"
   ]

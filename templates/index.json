@@ -6,7 +6,6 @@
         "template--20724493582631__30fbf7e1-21c6-45a8-834f-aa38c719a695-hero-slide-1": {
           "type": "hero-slide",
           "settings": {
-            "hero_image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_su_b29c0781-ee5d-4f96-812c-2417e49ed61d.png",
             "hero_text": "<h1>Die Natur <br\/>in jeder Mahlzeit<\/h1><p>Echtes Handwerk, echter Geschmack. Spare beim Kauf unseres Slow-Cooked Premium Nassfutters.<\/p>",
             "button_link": "shopify:\/\/collections\/all",
             "button_label": "Jetzt entdecken",
@@ -16,7 +15,6 @@
         "c9a19ac3-ae3f-438f-bc8e-62e83fcddfae": {
           "type": "hero-slide",
           "settings": {
-            "hero_image": "shopify:\/\/shop_images\/top0039_1c90983e-46ee-4f22-9f52-c4b4527b0f76.png",
             "hero_text": "<h1>Mehr als nur<br\/>ein Hundefutter<\/h1><p>Ausgewählte, regionale Zutaten - sorgfältig verarbeitet. Weil Qualität in jedem Bissen zählt.<\/p>",
             "button_link": "shopify:\/\/collections\/all",
             "button_label": "Jetzt entdecken",
@@ -26,7 +24,6 @@
         "ca9378e3-b3fb-4caf-910c-45c8755a8e86": {
           "type": "hero-slide",
           "settings": {
-            "hero_image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_ea_b8bbc685-0a92-43ea-bc69-25c18faef102.png",
             "hero_text": "<h1>Exklusivität, <br\/>die überzeugt<\/h1><p>Entdecke exklusive Angebote nur bei Uncle Rusty's und spüre den Unterschied.<\/p>",
             "button_link": "shopify:\/\/collections\/all",
             "button_label": "Jetzt entdecken",
@@ -48,7 +45,6 @@
         "template--20724493582631__d02ba099-4a0b-4f7d-a3b1-1514075d5076-slide-1": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/m0k13_Photorealistic_image_of_a_happy_dog_in_front_mountains_ea_1928b19a-9d02-4cab-9a67-951cc57a90b7.png",
             "heading": "Die Natur in jeder Mahlzeit",
             "heading_size": "h1",
             "subheading": "Echtes Handwerk, echter Geschmack. Spare beim Kauf unseres Slow-Cooked Premium Nassfutters.",
@@ -66,7 +62,6 @@
         "template--20724493582631__d02ba099-4a0b-4f7d-a3b1-1514075d5076-slide-2": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_su_b29c0781-ee5d-4f96-812c-2417e49ed61d.png",
             "heading": "Mehr als nur ein Hundefutter",
             "heading_size": "h1",
             "subheading": "Ausgewählte, regionale Zutaten - sorgfältig verarbeitet. Weil Qualität in jedem Bissen zählt.",
@@ -84,7 +79,6 @@
         "508f1faf-6509-4c43-8aee-9b234b5b673e": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_ea_b8bbc685-0a92-43ea-bc69-25c18faef102.png",
             "heading": "Exklusivität, die überzeugt",
             "heading_size": "h1",
             "subheading": "Entdecke exklusive Angebote nur bei Uncle Rusty's und spüre den Unterschied.",
@@ -273,13 +267,13 @@
     "2af0e9d7-f2a8-434b-b346-ee8969847698": {
       "type": "full-width-banner",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_ea_0d2b07ee-b9a6-421c-8ef0-6a94b7499025.png",
         "content": "<h1><strong>Jede Mahlzeit zählt: <br\/>Der Uncle Rusty's Mix<\/strong><\/h1><p><em>Stelle das ideale Paket zusammen: <\/em><br\/>3x helles Fleisch, 3x rotes Fleisch, 1x Fisch.  Der Schlüssel für eine rundum gesunde Ernährung deines Hundes. Einfach, effektiv, ernährungsreich!<\/p>",
         "button_text": "Mix & Match: Dein Menü",
         "button_link": "shopify:\/\/pages\/build-a-box",
         "button2_text": "Ernährungsberatung",
         "button2_link": "shopify:\/\/pages\/questionaire",
-        "newsletter": "false"
+        "newsletter": "false",
+        "theme_mode": "light"
       }
     },
     "1694590585319894d8": {
@@ -380,7 +374,6 @@
         "532b8682-d57d-483c-aca7-0fc749f6f613"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/rusty2.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -625,13 +618,13 @@
     "fc15cac7-171e-48c9-a319-f9db2133462e": {
       "type": "full-width-banner",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_ea_b8bbc685-0a92-43ea-bc69-25c18faef102.png",
         "content": "<h2>Abonniere jetzt unseren Newsletter, <br\/>um keine Rabattaktion zu verpassen!<\/h2>",
         "button_text": "",
         "button_link": "",
         "button2_text": "",
         "button2_link": "",
-        "newsletter": "true"
+        "newsletter": "true",
+        "theme_mode": "light"
       }
     },
     "build-a-box": {
@@ -879,7 +872,6 @@
           "type": "content_block",
           "settings": {
             "block_link": "shopify:\/\/collections\/nassfutter",
-            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
             "block_text": "Nassfutter",
             "background_color": "green"
           }
@@ -888,7 +880,6 @@
           "type": "content_block",
           "settings": {
             "block_link": "shopify:\/\/collections\/snacks",
-            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
             "block_text": "Snacks",
             "background_color": "purple"
           }
@@ -897,7 +888,6 @@
           "type": "content_block",
           "settings": {
             "block_link": "shopify:\/\/collections\/ole",
-            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
             "block_text": "Öle",
             "background_color": "orange"
           }
@@ -906,7 +896,6 @@
           "type": "content_block",
           "settings": {
             "block_link": "shopify:\/\/collections\/pakete",
-            "block_image": "shopify:\/\/shop_images\/test_collection.webp",
             "block_text": "Pakete",
             "background_color": "red"
           }
