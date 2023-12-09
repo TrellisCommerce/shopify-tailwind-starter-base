@@ -52,7 +52,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/michi_1_907320fa-6dc2-48f9-a773-6d60ad1eea42.jpg",
-        "height": "adapt",
+        "height": "medium",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",
@@ -89,7 +89,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/rusty.jpg",
-        "height": "adapt",
+        "height": "medium",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "middle",
