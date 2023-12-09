@@ -132,6 +132,7 @@
         "template--18563436642568__e8683e98-70ba-406e-ab8d-96b7dfbd3a42-row-1": {
           "type": "row",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Farm-min.png",
             "caption": "",
             "heading": "<strong>Bauernhof <\/strong>",
             "text": "<p><em>Aus dem Herzen Bayerns <br\/>Die Quelle unserer Zutaten <\/em>Unser Streben nach Qualität beginnt bei der Auswahl der Zutaten. Wir arbeiten eng mit lokalen Landwirten zusammen, die unsere Werte von Tierschutz und nachhaltigem Anbau teilen. Ihre Hingabe ermöglicht es uns, frische und natürliche Zutaten direkt aus unserer bayerischen Heimat zu beziehen. <\/p>",
@@ -142,6 +143,7 @@
         "template--18563436642568__e8683e98-70ba-406e-ab8d-96b7dfbd3a42-row-2": {
           "type": "row",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Traktor-min.png",
             "caption": "",
             "heading": "<strong>Anlieferung <\/strong>",
             "text": "<p><em>Frische auf dem kurzen Weg <br\/><\/em>Die Nähe zu unseren Lieferanten ermöglicht kurze Transportwege, wodurch die Frische der Zutaten erhalten bleibt. Gleichzeitig unterstützen wir die lokale Landwirtschaft und tragen zum Umweltschutz bei. <\/p>",
@@ -152,6 +154,7 @@
         "template--18563436642568__e8683e98-70ba-406e-ab8d-96b7dfbd3a42-row-3": {
           "type": "row",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Mixer-min.png",
             "caption": "",
             "heading": "<strong>Vorbereitung <\/strong>",
             "text": "<p><em>Mit Sorgfalt ausgewählt und vorbereitet <br\/><\/em>Jede Zutat durchläuft eine strenge Qualitätsprüfung, bevor sie in unsere Produktionsstätte gelangt. Nach der Anlieferung werden sie sorgsam für das Slow-Cooking-Verfahren vorbereitet. <\/p>",
@@ -162,6 +165,7 @@
         "669ea293-88f4-4e7d-98a0-b1e67a0959fb": {
           "type": "row",
           "settings": {
+            "image": "shopify:\/\/shop_images\/autoclav-min.png",
             "caption": "",
             "heading": "<strong>Slow-Cooking <\/strong>",
             "text": "<p><em>Liebevolle Zubereitung für den Erhalt von Nährstoffen<br\/><\/em>Die ausgewählten Zutaten werden zunächst gewolft und anschließend k alt abgefüllt. Durch unser einzigartiges Slow-Cooking-Verfahren werden die Zutaten schonend gegart. Dieses behutsame Garen bewahrt die essentiellen Nährstoffe und den natürlichen Geschmack, und stellt sicher, dass dein Hund eine nährstoffreiche und schmackhafte Mahlzeit erhält. <\/p>",
@@ -172,6 +176,7 @@
         "1f17c6ca-710e-4e58-ab60-569c3dd609f0": {
           "type": "row",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Laufband-min.png",
             "caption": "",
             "heading": "<strong>Abfüllung & Kühlung <\/strong>",
             "text": "<p><em>Vom Kessel in die Dose: Frische, die man schmeckt <br\/><\/em>Nach dem Garen lassen wir das Futter in den Dosen natürlich abkühlen. Dieser Prozess stellt sicher, dass die Frische und Qualität des Futters vom ersten bis zum letzten Bissen erhalten bleiben, bevor es für den Versand vorbereitet wird. <\/p>",
