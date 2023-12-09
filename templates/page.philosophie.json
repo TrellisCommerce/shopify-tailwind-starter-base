@@ -127,7 +127,7 @@
         "template--21410078720295__46b98696-f663-4732-816d-9b2021134506-text-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Michi_Rusty_Quadrat.jpg",
+        "image": "shopify:\/\/shop_images\/f30627f9-73d3-4d15-923b-8d7c4eb38f44.jpg",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -397,6 +397,7 @@
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788": {
       "type": "full-width-banner",
       "settings": {
+        "background_image": "shopify:\/\/shop_images\/topview0039.png",
         "content": "<h2>Abonniere jetzt unseren Newsletter,um keine Rabattaktion zu verpassen!<\/h2>",
         "button_text": "",
         "button_link": "",
