@@ -338,7 +338,8 @@
         "34e18e24-d994-4271-ba5f-e8ff1fff20d6"
       ],
       "settings": {
-        "height": "adapt",
+        "image": "shopify:\/\/shop_images\/Food.jpg",
+        "height": "medium",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",
