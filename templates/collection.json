@@ -7,7 +7,6 @@
           "type": "content_block",
           "settings": {
             "block_link": "shopify:\/\/collections\/nassfutter",
-            "block_image": "shopify:\/\/shop_images\/test_collection.webp",
             "block_text": "Nassfutter",
             "background_color": "green"
           }
@@ -16,7 +15,6 @@
           "type": "content_block",
           "settings": {
             "block_link": "shopify:\/\/collections\/snacks",
-            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
             "block_text": "Snacks",
             "background_color": "purple"
           }
@@ -25,7 +23,6 @@
           "type": "content_block",
           "settings": {
             "block_link": "shopify:\/\/collections\/ole",
-            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
             "block_text": "Öle",
             "background_color": "orange"
           }
@@ -34,7 +31,6 @@
           "type": "content_block",
           "settings": {
             "block_link": "shopify:\/\/collections\/pakete",
-            "block_image": "shopify:\/\/shop_images\/test_collection_6d291bc1-b627-451a-8006-c89e6ae0126e.webp",
             "block_text": "Pakete",
             "background_color": "red"
           }
@@ -55,7 +51,7 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
-        "products_per_page": 16,
+        "products_per_page": 20,
         "columns_desktop": 3,
         "image_ratio": "adapt",
         "image_shape": "default",
