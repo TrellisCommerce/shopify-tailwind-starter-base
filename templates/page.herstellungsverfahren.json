@@ -99,7 +99,29 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
-        "padding_bottom": 36
+        "padding_bottom": 0
+      }
+    },
+    "5195c022-bd7d-4f31-bb9f-b7e18e568ba6": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18563436642568__5195c022-bd7d-4f31-bb9f-b7e18e568ba6-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wir nehmen die richtige Portion Fleisch sowie vitalstoffreiche Innereien und kombinieren sie mit wertvollen pflanzlichen Vitalstoffen und gesunden Kohlenhydratquellen, wie z.B. Kartoffeln. Eine besonders schonende Zubereitung gelingt uns mit dem Slow-Cooking-Verfahren. So entstehen im herzlichen Bayern schmackhafte Uncle Rusty's Nassfuttersorten von höchster Qualität. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18563436642568__5195c022-bd7d-4f31-bb9f-b7e18e568ba6-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
       }
     },
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788": {
@@ -120,6 +142,7 @@
     "eac071c2-238f-4670-8009-1d7131150f7d",
     "ec3c1abc-7921-4064-877f-85c3a9c1a13b",
     "6051ba1d-41be-4146-903e-c6b95ae914f7",
+    "5195c022-bd7d-4f31-bb9f-b7e18e568ba6",
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788"
   ]
 }
