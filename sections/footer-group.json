@@ -36,7 +36,7 @@
       "settings": {
         "color_scheme": "background-1",
         "newsletter_enable": true,
-        "newsletter_heading": "Abonniere jetzt unseren Newsletter,um keine Rabattaktion zu verpassen!",
+        "newsletter_heading": "Abonniere jetzt unseren Newsletter,<\/br>um keine Rabattaktion zu verpassen!",
         "enable_follow_on_shop": false,
         "show_social": true,
         "enable_country_selector": false,
