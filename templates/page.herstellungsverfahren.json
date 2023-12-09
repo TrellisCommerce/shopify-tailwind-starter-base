@@ -124,8 +124,119 @@
         "padding_bottom": 52
       }
     },
+    "e8683e98-70ba-406e-ab8d-96b7dfbd3a42": {
+      "type": "multirow",
+      "blocks": {
+        "template--18563436642568__e8683e98-70ba-406e-ab8d-96b7dfbd3a42-row-1": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "<strong>Bauernhof <\/strong>",
+            "text": "<p><em>Aus dem Herzen Bayerns <br\/>Die Quelle unserer Zutaten <\/em>Unser Streben nach Qualität beginnt bei der Auswahl der Zutaten. Wir arbeiten eng mit lokalen Landwirten zusammen, die unsere Werte von Tierschutz und nachhaltigem Anbau teilen. Ihre Hingabe ermöglicht es uns, frische und natürliche Zutaten direkt aus unserer bayerischen Heimat zu beziehen. <\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--18563436642568__e8683e98-70ba-406e-ab8d-96b7dfbd3a42-row-2": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "<strong>Anlieferung <\/strong>",
+            "text": "<p><em>Frische auf dem kurzen Weg <br\/><\/em>Die Nähe zu unseren Lieferanten ermöglicht kurze Transportwege, wodurch die Frische der Zutaten erhalten bleibt. Gleichzeitig unterstützen wir die lokale Landwirtschaft und tragen zum Umweltschutz bei. <\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--18563436642568__e8683e98-70ba-406e-ab8d-96b7dfbd3a42-row-3": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "<strong>Vorbereitung <\/strong>",
+            "text": "<p><em>Mit Sorgfalt ausgewählt und vorbereitet <br\/><\/em>Jede Zutat durchläuft eine strenge Qualitätsprüfung, bevor sie in unsere Produktionsstätte gelangt. Nach der Anlieferung werden sie sorgsam für das Slow-Cooking-Verfahren vorbereitet. <\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "669ea293-88f4-4e7d-98a0-b1e67a0959fb": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "<strong>Slow-Cooking <\/strong>",
+            "text": "<p><em>Liebevolle Zubereitung für den Erhalt von Nährstoffen<br\/><\/em>Die ausgewählten Zutaten werden zunächst gewolft und anschließend k alt abgefüllt. Durch unser einzigartiges Slow-Cooking-Verfahren werden die Zutaten schonend gegart. Dieses behutsame Garen bewahrt die essentiellen Nährstoffe und den natürlichen Geschmack, und stellt sicher, dass dein Hund eine nährstoffreiche und schmackhafte Mahlzeit erhält. <\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "1f17c6ca-710e-4e58-ab60-569c3dd609f0": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "<strong>Abfüllung & Kühlung <\/strong>",
+            "text": "<p><em>Vom Kessel in die Dose: Frische, die man schmeckt <br\/><\/em>Nach dem Garen lassen wir das Futter in den Dosen natürlich abkühlen. Dieser Prozess stellt sicher, dass die Frische und Qualität des Futters vom ersten bis zum letzten Bissen erhalten bleiben, bevor es für den Versand vorbereitet wird. <\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "41d6adcc-2c16-4a7d-a8fa-fd32300e2575": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "<strong>Prüfen & Verpacken <\/strong>",
+            "text": "<p><em>Unser Qualitätsversprechen: Nur das Beste für deinen Hund <\/em>Bevor wir das Futter versenden, durchläuft jede Dose eine letzte Qualitätskontrolle. So stellen wir sicher, dass nur das Beste von Uncle Rusty's deinen Hund erreicht. <\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18563436642568__e8683e98-70ba-406e-ab8d-96b7dfbd3a42-row-1",
+        "template--18563436642568__e8683e98-70ba-406e-ab8d-96b7dfbd3a42-row-2",
+        "template--18563436642568__e8683e98-70ba-406e-ab8d-96b7dfbd3a42-row-3",
+        "669ea293-88f4-4e7d-98a0-b1e67a0959fb",
+        "1f17c6ca-710e-4e58-ab60-569c3dd609f0",
+        "41d6adcc-2c16-4a7d-a8fa-fd32300e2575"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "background-1",
+        "row_color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "5fc7db2e-8174-4297-b6e8-ab5b302b81dd": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18563436642568__5fc7db2e-8174-4297-b6e8-ab5b302b81dd-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18563436642568__5fc7db2e-8174-4297-b6e8-ab5b302b81dd-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788": {
       "type": "full-width-banner",
+      "disabled": true,
       "settings": {
         "content": "<h2>Abonniere jetzt unseren Newsletter,um keine Rabattaktion zu verpassen!<\/h2>",
         "button_text": "",
@@ -143,6 +254,8 @@
     "ec3c1abc-7921-4064-877f-85c3a9c1a13b",
     "6051ba1d-41be-4146-903e-c6b95ae914f7",
     "5195c022-bd7d-4f31-bb9f-b7e18e568ba6",
+    "e8683e98-70ba-406e-ab8d-96b7dfbd3a42",
+    "5fc7db2e-8174-4297-b6e8-ab5b302b81dd",
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788"
   ]
 }
