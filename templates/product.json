@@ -15,16 +15,16 @@
           "settings": {
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
         "caption": {
           "type": "text",
           "settings": {
             "text": "{{ product.metafields.descriptors.subtitle.value }}",
             "text_style": "subtitle"
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
           }
         },
         "price": {
@@ -82,22 +82,16 @@
           "settings": {
             "heading": "Fütterungsempfehlung",
             "icon": "paw_print",
-            "content": "<p>Fütterungsempfehlung pro Tag:<br\/>Bis 5 kg 200g | Bis 15 kg 600g | Bis 25 kg 800g | Bis 35 kg 1000g<\/p><p>Angegebene Futtermengen sind Richtwerte. Der tatsächliche Bedarf richtet sich nach Alter, Rasse und Aktivität deines Tieres. Bitte stelle immer ausreichend Trinkwasser zur Verfügung.<\/p><p><\/p><p><strong>Zubereitung<\/strong><br\/>Der Inhalt der Dose ist servierfertig. Dose öffnen und Inhalt in Napf füllen. Wir empfehlen: Die geöffnete Dose für 5 Minuten bei 100 Grad Umluft im Backofen erwärmen um Duftstoffe besser zu entfalten.<\/p><p><\/p><p><strong>Fütterung & Lagerung:<\/strong><br\/>Bitte immer zimmerwarm servieren, vor allem bei sensiblen Hunden. Kühlund trocken lagern. Nach dem Öffnen imKühlschrank lagern und innerhalb von 2-3 Tagen verbrauchen, da es sich um ein frisches Produkt handelt<\/p>",
+            "content": "<p>Fütterungsempfehlung pro Tag:<br\/>Bis 5 kg 200g | Bis 15 kg 600g | Bis 25 kg 800g | Bis 35 kg 1000g<\/p><p>Angegebene Futtermengen sind Richtwerte. Der tatsächliche Bedarf richtet sich nach Alter, Rasse und Aktivität deines Tieres. Bitte stelle immer ausreichend Trinkwasser zur Verfügung.<\/p><p><\/p><p><strong>Zubereitung<\/strong><br\/>Der Inhalt der Dose ist servierfertig. Dose öffnen und Inhalt in Napf füllen. Wir empfehlen: Die geöffnete Dose für 5 Minuten bei 100 Grad Umluft im Backofen erwärmen um Duftstoffe besser zu entfalten.<\/p><p><\/p><p><strong>Fütterung & Lagerung:<\/strong><br\/>Bitte immer zimmerwarm servieren, vor allem bei sensiblen Hunden. Kühl und trocken lagern. Nach dem Öffnen imKühlschrank lagern und innerhalb von 2-3 Tagen verbrauchen, da es sich um ein frisches Produkt handelt<\/p>",
             "page": ""
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
           }
         }
       },
       "block_order": [
         "vendor",
         "title",
-        "caption",
         "description",
+        "caption",
         "price",
         "variant_picker",
         "quantity_selector",
@@ -105,8 +99,7 @@
         "collapsible-row-1",
         "collapsible-row-0",
         "collapsible-row-2",
-        "collapsible-row-3",
-        "share"
+        "collapsible-row-3"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -131,7 +124,7 @@
     "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
       "type": "full-width-banner",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/comp3_wide.jpg",
+        "background_image": "shopify:\/\/shop_images\/top0039.png",
         "content": "<h1><strong>Jede Mahlzeit zählt:<br\/>Der Uncle Rusty's Mix<\/strong><\/h1><p><em>Stelle das ideale Paket zusammen:<\/em><br\/>3x helles Fleisch, 3x rotes Fleisch, 1x Fisch. Der Schlüssel für eine rundum gesunde Ernährung deines Hundes. Einfach, effektiv, ernährungsreich!<\/p>",
         "button_text": "Mix & Match: Dein Menu",
         "button_link": "shopify:\/\/pages\/build-a-box",
@@ -170,6 +163,87 @@
         "theme_mode": "light"
       }
     },
+    "05f67661-57d3-4393-b235-9279296aa6fd": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--21611313627431__05f67661-57d3-4393-b235-9279296aa6fd-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "none",
+            "row_content": "<p>asdasd<\/p>",
+            "page": ""
+          }
+        },
+        "473c5e68-3957-4ce7-863e-01b3d7b86a62": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "none",
+            "row_content": "<p>asdasd<\/p>",
+            "page": ""
+          }
+        },
+        "7b000bac-58b3-4578-80c5-0bdc3ad6d92d": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "none",
+            "row_content": "<p>asdasd<\/p>",
+            "page": ""
+          }
+        },
+        "4e28315f-9f18-49d0-ba57-23eee28538b4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "none",
+            "row_content": "<p>asdasd<\/p>",
+            "page": ""
+          }
+        },
+        "f9c26f6f-7ef0-43a7-a6c3-91f0e21738bb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "none",
+            "row_content": "<p>asdasd<\/p>",
+            "page": ""
+          }
+        },
+        "77946f61-cf92-4fd5-a566-78efacf39cd6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "none",
+            "row_content": "<p>asdasd<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21611313627431__05f67661-57d3-4393-b235-9279296aa6fd-collapsible_row-1",
+        "473c5e68-3957-4ce7-863e-01b3d7b86a62",
+        "7b000bac-58b3-4578-80c5-0bdc3ad6d92d",
+        "4e28315f-9f18-49d0-ba57-23eee28538b4",
+        "f9c26f6f-7ef0-43a7-a6c3-91f0e21738bb",
+        "77946f61-cf92-4fd5-a566-78efacf39cd6"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Du hast noch Fragen?",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -185,7 +259,7 @@
         "show_rating": false,
         "columns_mobile": "2",
         "padding_top": 36,
-        "padding_bottom": 28
+        "padding_bottom": 56
       }
     }
   },
@@ -195,6 +269,7 @@
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
     "1694596722fbd3b4b2",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
+    "05f67661-57d3-4393-b235-9279296aa6fd",
     "related-products"
   ]
 }
