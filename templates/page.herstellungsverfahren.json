@@ -267,8 +267,8 @@
         "template--18563436642568__7a915060-03af-414a-9a8c-d63e8c5933ee-buttons-1": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
+            "button_label_1": "Produkte entdecken ",
+            "button_link_1": "shopify:\/\/collections\/alle",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
