@@ -27,6 +27,48 @@
       "settings": {
       }
     },
+    "ec3c1abc-7921-4064-877f-85c3a9c1a13b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18563436642568__ec3c1abc-7921-4064-877f-85c3a9c1a13b-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Möchtest du wissen, wie Uncle Rusty's Nassfutter hergestellt wird? ",
+            "heading_size": "h1"
+          }
+        },
+        "template--18563436642568__ec3c1abc-7921-4064-877f-85c3a9c1a13b-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "template--18563436642568__ec3c1abc-7921-4064-877f-85c3a9c1a13b-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18563436642568__ec3c1abc-7921-4064-877f-85c3a9c1a13b-heading-1",
+        "template--18563436642568__ec3c1abc-7921-4064-877f-85c3a9c1a13b-text-1",
+        "template--18563436642568__ec3c1abc-7921-4064-877f-85c3a9c1a13b-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788": {
       "type": "full-width-banner",
       "settings": {
@@ -43,6 +85,7 @@
   "order": [
     "main",
     "eac071c2-238f-4670-8009-1d7131150f7d",
+    "ec3c1abc-7921-4064-877f-85c3a9c1a13b",
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788"
   ]
 }
