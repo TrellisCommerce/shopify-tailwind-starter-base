@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function calculateTotal() {
     const itemsToAdd = getVariantItems();
-    console.log(itemsToAdd);
+
     let totalPrice = 0;
     let totalPriceOriginal = 0;
     let totalQuantity = 0;
@@ -298,12 +298,11 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function setVariantOption(clickedOption) {
-    const products = document.querySelector('.ur-product:not(.additive)');
-
+    const products = document.querySelectorAll('.ur-product:not(.additive)');
     for (let k = 0; k < products.length; k++) {
       const product = products[k];
       const variants = product.getElementsByClassName('ur-variant');
-
+      console.log(product)
       let highestQuantity = 0;
       for (let l = 0; l < variants.length; l++) {
         const variant = variants[l];
@@ -316,6 +315,7 @@ document.addEventListener('DOMContentLoaded', function () {
       for (let l = 0; l < variants.length; l++) {
         const variant = variants[l];
         const quantityElement = variant.querySelector('.variant-quantity');
+        console.log(variant.getAttribute('data-option'));
         if (variant.getAttribute('data-option') === clickedOption) {
           variant.classList.remove('xhidden');
           if (quantityElement) {
