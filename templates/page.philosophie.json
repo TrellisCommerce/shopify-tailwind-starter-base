@@ -81,6 +81,28 @@
         "padding_bottom": 36
       }
     },
+    "1aeb6e76-a0ac-4156-8d2e-1e273bb5722f": {
+      "type": "rich-text",
+      "blocks": {
+        "c51a6d3f-d089-4566-b101-c136cd33ff32": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Diese Prinzipien verankern Uncle Rusty’s im Herzen der malerischen bayerischen Landschaft - wo unsere Menüs entstehen. Doch wie zeichnen sich unsere Menüs aus? <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "c51a6d3f-d089-4566-b101-c136cd33ff32"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
     "46b98696-f663-4732-816d-9b2021134506": {
       "type": "ur-image-with-text",
       "blocks": {
@@ -249,51 +271,6 @@
         "padding_bottom": 36
       }
     },
-    "1aeb6e76-a0ac-4156-8d2e-1e273bb5722f": {
-      "type": "rich-text",
-      "blocks": {
-        "e6276927-a2cd-473e-bcbb-fb9d43bfd5b3": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>Unsere Produkte<\/strong><\/p>"
-          }
-        },
-        "6d8072e7-a7fb-480e-a14c-09637f274cb8": {
-          "type": "heading",
-          "settings": {
-            "heading": "Ein Fest für alle Sinne",
-            "heading_size": "h1"
-          }
-        },
-        "5ee27551-5648-4adb-9c9c-33eb53e6eeb1": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "heading_size": "h2"
-          }
-        },
-        "c51a6d3f-d089-4566-b101-c136cd33ff32": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Entdecke unsere vielfältige Produktlinie, die auf die verschiedenen Bedürfnisse und Vorlieben unserer vierbeinigen Kunden zugeschnitten ist. Jedes Produkt wird in eigener Herstellung mit viel Liebe und Sorgfalt hergestellt, um die hohe Qualität und die gesundheitlichen Vorteile zu gewährleisten, die uns am Herzen liegen.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "e6276927-a2cd-473e-bcbb-fb9d43bfd5b3",
-        "6d8072e7-a7fb-480e-a14c-09637f274cb8",
-        "5ee27551-5648-4adb-9c9c-33eb53e6eeb1",
-        "c51a6d3f-d089-4566-b101-c136cd33ff32"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 36,
-        "padding_bottom": 24
-      }
-    },
     "85e5e5b0-fdb3-4fe7-92e7-8cb8e28cb338": {
       "type": "collection-list",
       "blocks": {
@@ -449,12 +426,12 @@
     "main",
     "eac071c2-238f-4670-8009-1d7131150f7d",
     "78ee7904-acf5-420d-a373-e6df369eabe3",
+    "1aeb6e76-a0ac-4156-8d2e-1e273bb5722f",
     "46b98696-f663-4732-816d-9b2021134506",
     "0a5428c3-e3ca-4db0-91f9-87bcb1183fd3",
     "9ba19f7f-e7dd-41dd-9b92-0aad6a4b2068",
     "cbc6b201-c42a-4b79-a678-f6d11b99ad81",
     "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8",
-    "1aeb6e76-a0ac-4156-8d2e-1e273bb5722f",
     "85e5e5b0-fdb3-4fe7-92e7-8cb8e28cb338",
     "55616719-d47b-4159-b339-d56f13e34bbb",
     "5c82bb21-2774-43a7-90e4-d5a10ab0f79c",
