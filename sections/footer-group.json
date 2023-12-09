@@ -9,7 +9,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Uncle-Rustys_Black.svg",
-            "image_width": 315,
+            "image_width": 220,
             "alignment": "center"
           }
         },
