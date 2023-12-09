@@ -51,7 +51,7 @@
         "template--21410078720295__46b98696-f663-4732-816d-9b2021134506-text-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Michi_Rusty_Quadrat.jpg",
+        "image": "shopify:\/\/shop_images\/daf001c4-25d4-41f0-8cd7-4a8d349fb24f.jpg",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -88,6 +88,7 @@
         "08c049e4-4c25-495b-9ae4-cfb173f2ce96"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/6253bfba-540c-43f7-ac3d-c5fabb542345.jpg",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -104,6 +105,7 @@
     "9ba19f7f-e7dd-41dd-9b92-0aad6a4b2068": {
       "type": "full-width-banner",
       "settings": {
+        "background_image": "shopify:\/\/shop_images\/topview0039.png",
         "content": "<p>Seit 2019 haben wir uns intensiv mit der Hundeernährung auseinandergesetzt. Nach unzähligen Stunden der Forschung und Entwicklung, in Zusammenarbeit mit Ernährungsexperten, wurde Uncle Rusty's geboren - eine Premium-Marke, die traditionelle Werte mit innovativen Konzepten verbindet. Unsere familiäre Herangehensweise, die Liebe zum Detail, die Leidenschaft für Qualitätund die Wertschätzung für das natürliche Gleichgewicht sind die Pfeiler, auf denen Uncle Rusty's aufbaut. Seit Ende 2021 teilen wir unsere liebevoll zubereiteten, gesunden und natürlichen Hundefuttermenüs mit allen Hundeliebhabern.<\/p>",
         "button_text": "",
         "button_link": "shopify:\/\/pages\/questionaire",
