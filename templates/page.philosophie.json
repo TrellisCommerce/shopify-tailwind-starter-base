@@ -163,7 +163,7 @@
         "08c049e4-4c25-495b-9ae4-cfb173f2ce96"
       ],
       "settings": {
-        "height": "large",
+        "height": "medium",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "middle",
@@ -174,25 +174,6 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 64
-      }
-    },
-    "9ba19f7f-e7dd-41dd-9b92-0aad6a4b2068": {
-      "type": "full-width-banner",
-      "settings": {
-        "content": "<p>Seit 2019 haben wir uns intensiv mit der Hundeernährung auseinandergesetzt. Nach unzähligen Stunden der Forschung und Entwicklung, in Zusammenarbeit mit Ernährungsexperten, wurde Uncle Rusty's geboren - eine Premium-Marke, die traditionelle Werte mit innovativen Konzepten verbindet. Unsere familiäre Herangehensweise, die Liebe zum Detail, die Leidenschaft für Qualitätund die Wertschätzung für das natürliche Gleichgewicht sind die Pfeiler, auf denen Uncle Rusty's aufbaut. Seit Ende 2021 teilen wir unsere liebevoll zubereiteten, gesunden und natürlichen Hundefuttermenüs mit allen Hundeliebhabern.<\/p>",
-        "button_text": "",
-        "button_link": "shopify:\/\/pages\/questionaire",
-        "button2_text": "",
-        "button2_link": "",
-        "newsletter": "false",
-        "theme_mode": "dark"
-      }
-    },
-    "cbc6b201-c42a-4b79-a678-f6d11b99ad81": {
-      "type": "two-richtext",
-      "settings": {
-        "richtext_left": "<h2>Qualität, die man schmecken kann...<\/h2>",
-        "richtext_right": "<p>Durch schonendes Garen bleiben die Nährstoffe erhalten, und wir verzichten vollständig auf Geschmacksverstärker, Farb-, Aroma-, und Konservierungsstoffe sowie ungesunde Bindemittel.<\/p>"
       }
     },
     "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8": {
@@ -270,156 +251,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "85e5e5b0-fdb3-4fe7-92e7-8cb8e28cb338": {
-      "type": "collection-list",
-      "blocks": {
-        "template--21410078720295__85e5e5b0-fdb3-4fe7-92e7-8cb8e28cb338-featured_collection-1": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "nassfutter"
-          }
-        },
-        "template--21410078720295__85e5e5b0-fdb3-4fe7-92e7-8cb8e28cb338-featured_collection-2": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "snacks"
-          }
-        },
-        "template--21410078720295__85e5e5b0-fdb3-4fe7-92e7-8cb8e28cb338-featured_collection-3": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "ole"
-          }
-        }
-      },
-      "block_order": [
-        "template--21410078720295__85e5e5b0-fdb3-4fe7-92e7-8cb8e28cb338-featured_collection-1",
-        "template--21410078720295__85e5e5b0-fdb3-4fe7-92e7-8cb8e28cb338-featured_collection-2",
-        "template--21410078720295__85e5e5b0-fdb3-4fe7-92e7-8cb8e28cb338-featured_collection-3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "55616719-d47b-4159-b339-d56f13e34bbb": {
-      "type": "full-width-banner",
-      "settings": {
-        "content": "<h2><strong>Kostenfreie Ernährungsberatung: <br\/>Weil jeder Hund einzigartig ist<br\/><\/strong><\/h2><p>Beginne die Reise zu einer besseren Ernährung für deinen Hund mit unserem Online-Fragebogen und erhalte persönliche Menü-Vorschläge. Brauchst du zusätzliche Unterstützung? Wir stehen dir mit einer kostenlosen Ernährungsberatung zur Seite.<\/p>",
-        "button_text": "Kostenlose Ernährungsberatung",
-        "button_link": "shopify:\/\/pages\/questionaire",
-        "button2_text": "",
-        "button2_link": "",
-        "newsletter": "false",
-        "theme_mode": "light"
-      }
-    },
-    "5c82bb21-2774-43a7-90e4-d5a10ab0f79c": {
-      "type": "rich-text",
-      "blocks": {
-        "cbcd837a-c7fd-42d8-8ce7-ddb00436f009": {
-          "type": "heading",
-          "settings": {
-            "heading": "Eure Geschichten, unsere Inspiration",
-            "heading_size": "h1"
-          }
-        },
-        "192942dc-a714-4be8-b72a-63588b8533e4": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Entdecke, was Hundebesitzer über Uncle Rusty's sagen und wie unsere Menüs das Leben ihrer vierbeinigen Familienmitglieder bereichert haben.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "cbcd837a-c7fd-42d8-8ce7-ddb00436f009",
-        "192942dc-a714-4be8-b72a-63588b8533e4"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 76,
-        "padding_bottom": 0
-      }
-    },
-    "1699088343ebb938cc": {
-      "type": "apps",
-      "blocks": {
-        "49acadb9-68fb-4df6-a059-4810c81f0de8": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/all_reviews_text\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
-        },
-        "fbaa2c77-a5fd-4298-93b1-e1fb3a1d5c31": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/featured_carousel\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "maxwidth": 1080
-          }
-        }
-      },
-      "block_order": [
-        "49acadb9-68fb-4df6-a059-4810c81f0de8",
-        "fbaa2c77-a5fd-4298-93b1-e1fb3a1d5c31"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
-    "cdb9b0f5-9706-4f20-8a89-f3b7786660a7": {
-      "type": "ur-image-with-text",
-      "blocks": {
-        "5888a5c0-732f-47ea-aba0-d5b868f21841": {
-          "type": "heading",
-          "settings": {
-            "heading": "Ein Blick hinter die Kulissen",
-            "heading_size": "h1"
-          }
-        },
-        "eece9124-39a0-4a5b-a745-0712cf87675e": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Tauche ein in die Welt von Uncle Rusty's und erlebe unsere Leidenschaft für Hundeernährung hautnah. Unser Produktionsvideo gibt dir einen persönlichen Einblick in unsere tägliche Arbeit, das Team hinter der Marke und die Sorgfalt, mit der wir jedes Menü zubereiten. Wir laden dich ein, die Herzlichkeit und Professionalität unseres Teams zu entdecken und gemeinsam die positiven Veränderungen zu erleben, die eine natürliche und liebevolle Ernährung im Leben deines Hundes bewirken kann.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "f0e0f35c-14e7-4174-978f-1ebb2a11354e": {
-          "type": "button",
-          "settings": {
-            "button_label": "Video Ansehen",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "5888a5c0-732f-47ea-aba0-d5b868f21841",
-        "eece9124-39a0-4a5b-a745-0712cf87675e",
-        "f0e0f35c-14e7-4174-978f-1ebb2a11354e"
-      ],
-      "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -429,13 +260,6 @@
     "1aeb6e76-a0ac-4156-8d2e-1e273bb5722f",
     "46b98696-f663-4732-816d-9b2021134506",
     "0a5428c3-e3ca-4db0-91f9-87bcb1183fd3",
-    "9ba19f7f-e7dd-41dd-9b92-0aad6a4b2068",
-    "cbc6b201-c42a-4b79-a678-f6d11b99ad81",
-    "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8",
-    "85e5e5b0-fdb3-4fe7-92e7-8cb8e28cb338",
-    "55616719-d47b-4159-b339-d56f13e34bbb",
-    "5c82bb21-2774-43a7-90e4-d5a10ab0f79c",
-    "1699088343ebb938cc",
-    "cdb9b0f5-9706-4f20-8a89-f3b7786660a7"
+    "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8"
   ]
 }
