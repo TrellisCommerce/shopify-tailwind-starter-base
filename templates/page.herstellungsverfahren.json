@@ -246,6 +246,53 @@
         "newsletter": "true",
         "theme_mode": "light"
       }
+    },
+    "7a915060-03af-414a-9a8c-d63e8c5933ee": {
+      "type": "image-banner",
+      "blocks": {
+        "template--18563436642568__7a915060-03af-414a-9a8c-d63e8c5933ee-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Tauche in unsere <\/br>Produktwelt ein ",
+            "heading_size": "h1"
+          }
+        },
+        "template--18563436642568__7a915060-03af-414a-9a8c-d63e8c5933ee-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "Für jeden Hund das richtige Menü. Entdecke unser Sortiment an <\/br>liebevoll zubereiteter und nährstoffreicher Tiernahrung, die <\/br>genauso schmackhaft wie gesund ist. ",
+            "text_style": "body"
+          }
+        },
+        "template--18563436642568__7a915060-03af-414a-9a8c-d63e8c5933ee-buttons-1": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18563436642568__7a915060-03af-414a-9a8c-d63e8c5933ee-heading-1",
+        "template--18563436642568__7a915060-03af-414a-9a8c-d63e8c5933ee-text-1",
+        "template--18563436642568__7a915060-03af-414a-9a8c-d63e8c5933ee-buttons-1"
+      ],
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
     }
   },
   "order": [
@@ -256,6 +303,7 @@
     "5195c022-bd7d-4f31-bb9f-b7e18e568ba6",
     "e8683e98-70ba-406e-ab8d-96b7dfbd3a42",
     "5fc7db2e-8174-4297-b6e8-ab5b302b81dd",
-    "fd6d1a02-4c7f-4d00-a014-df4d73a27788"
+    "fd6d1a02-4c7f-4d00-a014-df4d73a27788",
+    "7a915060-03af-414a-9a8c-d63e8c5933ee"
   ]
 }
