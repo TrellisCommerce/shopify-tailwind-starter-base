@@ -8,7 +8,7 @@
         "ee753c64-fc0e-4e27-9aae-172246812ba3": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Uncle-Rustys_Black.svg",
+            "image": "shopify:\/\/shop_images\/Uncle-Rustys_Black_fad25c96-2bba-4bf3-b565-fc1b9dd2419b.png",
             "image_width": 220,
             "alignment": ""
           }
@@ -36,7 +36,7 @@
       "settings": {
         "color_scheme": "background-1",
         "newsletter_enable": true,
-        "newsletter_heading": "Abonniere jetzt unseren Newsletter,<\/br>um keine Rabattaktion zu verpassen!",
+        "newsletter_heading": "Abonniere jetzt unseren Newsletter,um keine Rabattaktion zu verpassen!",
         "enable_follow_on_shop": false,
         "show_social": true,
         "enable_country_selector": false,
