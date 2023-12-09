@@ -299,31 +299,16 @@
         "padding_bottom": 52
       }
     },
-    "ef0f2e39-c08b-4255-8c98-0c03d7cb8a76": {
-      "type": "newsletter",
-      "blocks": {
-        "template--18562873819400__ef0f2e39-c08b-4255-8c98-0c03d7cb8a76-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Abonniere jetzt unseren Newsletter,um keine Rabattaktion zu verpassen!",
-            "heading_size": "h2"
-          }
-        },
-        "template--18562873819400__ef0f2e39-c08b-4255-8c98-0c03d7cb8a76-email_form-1": {
-          "type": "email_form",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "template--18562873819400__ef0f2e39-c08b-4255-8c98-0c03d7cb8a76-heading-1",
-        "template--18562873819400__ef0f2e39-c08b-4255-8c98-0c03d7cb8a76-email_form-1"
-      ],
+    "fd6d1a02-4c7f-4d00-a014-df4d73a27788": {
+      "type": "full-width-banner",
       "settings": {
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "content": "<h2>Abonniere jetzt unseren Newsletter,um keine Rabattaktion zu verpassen!<\/h2>",
+        "button_text": "",
+        "button_link": "",
+        "button2_text": "",
+        "button2_link": "",
+        "newsletter": "true",
+        "theme_mode": "light"
       }
     }
   },
@@ -336,6 +321,6 @@
     "0a5428c3-e3ca-4db0-91f9-87bcb1183fd3",
     "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8",
     "768a63b1-59d6-41f1-abe2-598806ac7d91",
-    "ef0f2e39-c08b-4255-8c98-0c03d7cb8a76"
+    "fd6d1a02-4c7f-4d00-a014-df4d73a27788"
   ]
 }
