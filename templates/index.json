@@ -658,9 +658,9 @@
         "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Wie stelle ich auf Uncle Rusty's um, wenn ich vorher etwas anderes gefüttert habe?",
+            "heading": "Wie stelle ich auf Uncle Rusty’s um?",
             "icon": "none",
-            "row_content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.<\/p>",
+            "row_content": "<p>Der Umstieg auf Uncle Rusty's ist einfach und kann je nach der aktuellen Ernährung deines Hundes unterschiedlich gestaltet werden.<\/p><p><\/p><p><strong>Rohfleischfütterung zu Uncle Rusty's:<\/strong> Wenn du bereits Rohfleisch fütterst, kannst du nahtlos zu Uncle Rusty's Menüs wechseln, ohne eine Um- oder Eingewöhnungsphase einzulegen.<\/p><p><\/p><p><strong>Nassfutter zu Uncle Rusty's:<\/strong> Wenn dein Hund bereits Nassfutter bekommt, achte darauf, welches Nassfutter zuvor gefüttert wurde. Ein direkter Wechsel von Nassfutter zu Uncle Rusty's ist meist unproblematisch.<\/p><p><\/p><p><strong>Trockenfutter zu Uncle Rusty's:<\/strong> Wenn dein Hund bisher Trockenfutter erhalten hat, empfehlen wir einen schrittweisen Umstieg auf Nassfutter oder Uncle Rusty's Menüs. Beginne mit einem Löffel Nassfutter am ersten Tag und erhöhe die Menge allmählich. Dies hilft deinem Hund, sich an die neue Ernährung zu gewöhnen. Beachte, dass du aufgrund der begrenzten Haltbarkeit von Nassfutter möglicherweise nicht die gesamte Dose an einem Tag verfüttern kannst. Unsere 400-Gramm Dosen eignen sich gut für den Umstieg, da sie eine angemessene Portionsgröße bieten. Geöffnete Menüs sind im Kühlschrank bis zu 3 Tage haltbar.<\/p><p><\/p><p>Der richtige Übergang hängt von den individuellen Vorlieben und Bedürfnissen deines Hundes ab. Beobachte sein Verhalten und passe die Umstellung entsprechend an. Bei Fragen oder Unsicherheiten stehen wir gerne zur Verfügung.<\/p>",
             "page": ""
           }
         },
@@ -760,7 +760,7 @@
       ],
       "settings": {
         "caption": "",
-        "heading": "FAQs",
+        "heading": "Du hast noch Fragen?",
         "heading_size": "h1",
         "heading_alignment": "left",
         "layout": "row",
