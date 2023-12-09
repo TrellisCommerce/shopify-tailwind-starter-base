@@ -2228,6 +2228,11 @@ progress[value]::-moz-progress-bar {
   padding: 1.5rem;
 }
 
+.accordion__content p:empty {
+  display: block;
+  height: 1.5rem;
+}
+
 .last-of-type\:xborder-none:last-of-type {
   border-style: none;
 }

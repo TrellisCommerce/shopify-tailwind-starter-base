@@ -796,3 +796,8 @@ progress[value]::-moz-progress-bar {
   border-radius: 999px;
   padding: 1.5rem;
 }
+
+.accordion__content p:empty {
+  display: block;
+  height: 1.5rem;
+}
