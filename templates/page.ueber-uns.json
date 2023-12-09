@@ -14,7 +14,7 @@
         "template--21410078720295__eac071c2-238f-4670-8009-1d7131150f7d-hero-slide-1": {
           "type": "hero-slide",
           "settings": {
-            "hero_image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_su_b29c0781-ee5d-4f96-812c-2417e49ed61d.png",
+            "hero_image": "shopify:\/\/shop_images\/comp2.jpg",
             "hero_text": "<h1>Willkommen <br\/>in der Welt von <br\/>Uncle Rusty’s<\/h1><p>Herzlich willkommen bei Uncle Rusty's – <br\/>Deinem Partner für artgerechte und gesunde<br\/>Hundeernährung.<br\/><\/p>",
             "button_link": "",
             "button_label": "",
@@ -88,7 +88,6 @@
         "08c049e4-4c25-495b-9ae4-cfb173f2ce96"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/rusty.jpg",
         "height": "large",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -105,7 +104,6 @@
     "9ba19f7f-e7dd-41dd-9b92-0aad6a4b2068": {
       "type": "full-width-banner",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/top0039_1c90983e-46ee-4f22-9f52-c4b4527b0f76.png",
         "content": "<p>Seit 2019 haben wir uns intensiv mit der Hundeernährung auseinandergesetzt. Nach unzähligen Stunden der Forschung und Entwicklung, in Zusammenarbeit mit Ernährungsexperten, wurde Uncle Rusty's geboren - eine Premium-Marke, die traditionelle Werte mit innovativen Konzepten verbindet. Unsere familiäre Herangehensweise, die Liebe zum Detail, die Leidenschaft für Qualitätund die Wertschätzung für das natürliche Gleichgewicht sind die Pfeiler, auf denen Uncle Rusty's aufbaut. Seit Ende 2021 teilen wir unsere liebevoll zubereiteten, gesunden und natürlichen Hundefuttermenüs mit allen Hundeliebhabern.<\/p>",
         "button_text": "",
         "button_link": "shopify:\/\/pages\/questionaire",
@@ -185,7 +183,6 @@
         "34e18e24-d994-4271-ba5f-e8ff1fff20d6"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/rusty2.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -287,7 +284,6 @@
     "55616719-d47b-4159-b339-d56f13e34bbb": {
       "type": "full-width-banner",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_ea_b8bbc685-0a92-43ea-bc69-25c18faef102.png",
         "content": "<h2><strong>Kostenfreie Ernährungsberatung: <br\/>Weil jeder Hund einzigartig ist<br\/><\/strong><\/h2><p>Beginne die Reise zu einer besseren Ernährung für deinen Hund mit unserem Online-Fragebogen und erhalte persönliche Menü-Vorschläge. Brauchst du zusätzliche Unterstützung? Wir stehen dir mit einer kostenlosen Ernährungsberatung zur Seite.<\/p>",
         "button_text": "Kostenlose Ernährungsberatung",
         "button_link": "shopify:\/\/pages\/questionaire",
@@ -382,7 +378,6 @@
         "f0e0f35c-14e7-4174-978f-1ebb2a11354e"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/rusty.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
