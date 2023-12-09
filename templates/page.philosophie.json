@@ -79,7 +79,7 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "1aeb6e76-a0ac-4156-8d2e-1e273bb5722f": {
@@ -100,8 +100,8 @@
         "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
     "46b98696-f663-4732-816d-9b2021134506": {
@@ -127,8 +127,8 @@
         "template--21410078720295__46b98696-f663-4732-816d-9b2021134506-text-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/f30627f9-73d3-4d15-923b-8d7c4eb38f44.jpg",
-        "height": "large",
+        "image": "shopify:\/\/shop_images\/Waage_a57e25b0-d943-4f32-bfaa-399d871f2a06.png",
+        "height": "medium",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",
