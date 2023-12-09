@@ -136,12 +136,6 @@
 
     ],
     "blocks": {
-      "10436698916776057164": {
-        "type": "shopify:\/\/apps\/appstle-subscriptions\/blocks\/appstle-subscription-helper\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "14060646107696862457": {
         "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
