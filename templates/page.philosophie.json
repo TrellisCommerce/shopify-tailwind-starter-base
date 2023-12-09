@@ -27,6 +27,60 @@
       "settings": {
       }
     },
+    "78ee7904-acf5-420d-a373-e6df369eabe3": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18562873819400__78ee7904-acf5-420d-a373-e6df369eabe3-column-1": {
+          "type": "column",
+          "settings": {
+            "title": "Regionale Schätze ",
+            "text": "<p>Lokale, hochwertige Zutaten bilden das Fundament unserer Rezepturen. <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18562873819400__78ee7904-acf5-420d-a373-e6df369eabe3-column-2": {
+          "type": "column",
+          "settings": {
+            "title": "Harmonische Rezepturen ",
+            "text": "<p>Maßgeschneidert für die individuellen Bedürfnisse deines Hundes. <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18562873819400__78ee7904-acf5-420d-a373-e6df369eabe3-column-3": {
+          "type": "column",
+          "settings": {
+            "title": "Slow-Cooking ",
+            "text": "<p>Unsere behutsame Zubereitungsweise bewahrt die natürliche Güte jeder Zutat. <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18562873819400__78ee7904-acf5-420d-a373-e6df369eabe3-column-1",
+        "template--18562873819400__78ee7904-acf5-420d-a373-e6df369eabe3-column-2",
+        "template--18562873819400__78ee7904-acf5-420d-a373-e6df369eabe3-column-3"
+      ],
+      "settings": {
+        "title": "Die drei Eckpfeiler unserer erstklassigen Hundenahrung: ",
+        "heading_alignment": "left",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "46b98696-f663-4732-816d-9b2021134506": {
       "type": "ur-image-with-text",
       "blocks": {
@@ -394,6 +448,7 @@
   "order": [
     "main",
     "eac071c2-238f-4670-8009-1d7131150f7d",
+    "78ee7904-acf5-420d-a373-e6df369eabe3",
     "46b98696-f663-4732-816d-9b2021134506",
     "0a5428c3-e3ca-4db0-91f9-87bcb1183fd3",
     "9ba19f7f-e7dd-41dd-9b92-0aad6a4b2068",
