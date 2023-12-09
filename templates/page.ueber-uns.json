@@ -382,6 +382,7 @@
         "f0e0f35c-14e7-4174-978f-1ebb2a11354e"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/herstellung.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
