@@ -133,7 +133,7 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
-        "color_scheme": "",
+        "color_scheme": "background-2",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 0,
@@ -169,7 +169,7 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
-        "color_scheme": "background-2",
+        "color_scheme": "background-1",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
@@ -182,19 +182,20 @@
         "8ce866ce-9b7c-44f0-96b5-164553484e4d": {
           "type": "heading",
           "settings": {
-            "heading": "Unsere Philosophie",
+            "heading": "Natürlich Nähren ",
             "heading_size": "h1"
           }
         },
         "9811a8c4-e640-4e8c-bb94-f75c7f2fa680": {
           "type": "text",
           "settings": {
-            "text": "<p>Bei Uncle Rusty's glauben wir, dass eine natürliche und artgerechte Ernährung der Schlüssel zu einem gesunden und glücklichen Hundeleben ist. Unsere Kernwerte spiegeln das Herzstück unserer Marke wider:<\/p>",
+            "text": "<p>Die Balance aus Vitaminen, Mineralstoffen, Proteinen, Kohlenhydraten und Fetten ist entscheidend für das Wohl deines Hundes. Du findest eine klare Zutatenliste auf jedem Menü – so weißt du immer, was dein Hund zu sich nimmt.<\/p>",
             "text_style": "body"
           }
         },
         "93620d59-afc3-4f61-9c48-162a6d91bb23": {
           "type": "icon-text",
+          "disabled": true,
           "settings": {
             "icon_selection": "icon-meat-color",
             "icon_text": "Qualität",
@@ -204,6 +205,7 @@
         },
         "ada00b11-beff-4c00-a893-b77a3ff07cf5": {
           "type": "icon-text",
+          "disabled": true,
           "settings": {
             "icon_selection": "icon-organic-color",
             "icon_text": "Natürlichkeit",
@@ -213,6 +215,7 @@
         },
         "5efe8ec8-b721-4f5e-967e-399fbc059f58": {
           "type": "icon-text",
+          "disabled": true,
           "settings": {
             "icon_selection": "icon-region-color",
             "icon_text": "Regionalität",
@@ -222,6 +225,7 @@
         },
         "34e18e24-d994-4271-ba5f-e8ff1fff20d6": {
           "type": "icon-text",
+          "disabled": true,
           "settings": {
             "icon_selection": "icon-organic-color",
             "icon_text": "Nachhaltigkeit",
@@ -243,13 +247,56 @@
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
+        "desktop_content_alignment": "right",
         "content_layout": "no-overlap",
         "color_scheme": "background-2",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "768a63b1-59d6-41f1-abe2-598806ac7d91": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unser Ernährungsversprechen ",
+            "heading_size": "h1"
+          }
+        },
+        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bei Uncle Rusty's engagieren wir uns leidenschaftlich für die Bereitstellung einer natürlichen und artgerechten Ernährung, die speziell auf die Bedürfnisse deines geliebten Vierbeiners abgestimmt ist. Unser Ansatz zielt darauf ab, das Wohlbefinden und die Vitalität deines Hundes durch sorgfältig ausgewählte, nährstoffreiche Zutaten zu fördern <\/p>"
+          }
+        },
+        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-heading-1",
+        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-text-1",
+        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
@@ -260,6 +307,7 @@
     "1aeb6e76-a0ac-4156-8d2e-1e273bb5722f",
     "46b98696-f663-4732-816d-9b2021134506",
     "0a5428c3-e3ca-4db0-91f9-87bcb1183fd3",
-    "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8"
+    "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8",
+    "768a63b1-59d6-41f1-abe2-598806ac7d91"
   ]
 }
