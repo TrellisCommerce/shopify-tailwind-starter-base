@@ -717,33 +717,6 @@
             "row_content": "<p>Hinter Uncle Rusty's stehen wir, eine engagierte Gruppe von Hundeliebhabern und Experten in der Ernährung. Wir sind ein regionales Unternehmen und stolz darauf, kein großer Konzern zu sein. Bei uns ist der persönliche Kontakt zu unseren Kunden und die Nähe zur Gemeinschaft von großer Bedeutung.<\/p><p><strong>Unsere Geschichte:<\/strong> Unsere Geschichte beginnt mit unserem geliebten Familienhund Rusty, der uns inspirierte, eine bessere Nahrungsoption für Hunde zu schaffen. Seitdem haben wir die Werte von Natürlichkeit, Regionalität und Nachhaltigkeit in den Mittelpunkt unserer Marke gestellt.<\/p><p><strong>Familiengeführtes Unternehmen:<\/strong> Wir sind ein Familienunternehmen mit einer tiefen Leidenschaft für Hunde und hochwertige Ernährung. Diese Leidenschaft spiegelt sich in jedem Aspekt unseres Unternehmens wider, von der Auswahl der Zutaten bis zur Produktion.<\/p><p><strong>Regionale Verbundenheit:<\/strong> Unsere enge Verbindung zur Region Bayern zeigt sich in unserer Wahl von Fleisch aus Weidehaltung, vorzugsweise aus Oberbayern. Wir setzen auf kurze Lieferketten und unterstützen ethische Standards, um die besten Zutaten für unsere Produkte zu gewährleisten.<\/p><p><strong>Kundennähe:<\/strong> Wir schätzen die Beziehung zu unseren Kunden und stehen in ständigem Austausch. Deine Fragen und Anliegen sind uns wichtig, und wir sind stets bereit, dir zu helfen und deine Bedürfnisse zu verstehen.<\/p><p>Bei Uncle Rusty's sind wir mehr als nur ein Unternehmen - wir sind eine Familie, die sich um das Wohl deines Hundes kümmert. Wir sind stolz darauf, hochwertige, natürliche und ehrliche Nahrung für Hunde anzubieten und freuen uns, Teil deines Abenteuers mit deinem treuen Begleiter zu sein. Wenn du weitere Fragen hast oder mehr über uns erfahren möchtest, zögere nicht, uns zu kontaktieren. Wir sind immer für dich da.<br\/><\/p>",
             "page": ""
           }
-        },
-        "b2fbd7ea-200b-4741-a774-224cb05ec391": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Wer steht hinter Uncle Rusty's und warum wurde die Firma gegründet?",
-            "icon": "none",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "75b03cd8-3788-4bf3-809e-c5f886466dc3": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Wie stelle ich das ideale Menü für meinen Hund zusammen?",
-            "icon": "none",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "ae161e47-2ba4-43c9-964d-eb5d6feea26e": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Was bedeutet \"Slow-Cooked\" und gibt es künstliche Zusätze oder Füllstoffe in Uncle Rusty's Produkten?",
-            "icon": "none",
-            "row_content": "",
-            "page": ""
-          }
         }
       },
       "block_order": [
@@ -753,10 +726,7 @@
         "template--20724493582631__b689839d-3ad5-4bc2-b3e0-cc27453d2ce7-collapsible_row-4",
         "1bd49921-b85c-4bbd-9440-ef578f8d6ff7",
         "ab619596-6175-4ff4-a7d7-26f221447ceb",
-        "b547ec99-6c0a-4552-aa6c-7c77dc24469f",
-        "b2fbd7ea-200b-4741-a774-224cb05ec391",
-        "75b03cd8-3788-4bf3-809e-c5f886466dc3",
-        "ae161e47-2ba4-43c9-964d-eb5d6feea26e"
+        "b547ec99-6c0a-4552-aa6c-7c77dc24469f"
       ],
       "settings": {
         "caption": "",
