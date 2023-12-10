@@ -2186,7 +2186,7 @@ progress[value]::-moz-progress-bar {
           hyphens: auto !important;
 }
 
-.image-with-text__media img {
+.crop.image-with-text__media img {
   -webkit-mask-position: center;
   mask-position: center;
   -webkit-mask-repeat: no-repeat;
@@ -2263,6 +2263,11 @@ progress[value]::-moz-progress-bar {
     background-blend-mode: lighten;
     filter: blur(2px);
   }
+}
+
+.multirow__inner .image-with-text__media img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .last-of-type\:xborder-none:last-of-type {
