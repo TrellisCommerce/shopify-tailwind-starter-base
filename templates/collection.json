@@ -53,7 +53,7 @@
       "settings": {
         "products_per_page": 20,
         "columns_desktop": 4,
-        "image_ratio": "adapt",
+        "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": false,
         "show_vendor": false,
