@@ -188,6 +188,14 @@
                             {% render 'icon-youtube' %}
                           {% when 'icon-zoom' %}
                             {% render 'icon-zoom' %}
+                          {% when 'icon-lightbulb' %}
+                            {% render 'icon-lightbulb' %}
+                          {% when 'icon-dog' %}
+                            {% render 'icon-dog' %}
+                          {% when 'icon-certificate' %}
+                            {% render 'icon-certificate' %}
+                          {% when 'icon-lederhosen' %}
+                            {% render 'icon-lederhosen' %}
                           {%- else -%}
                             <!-- Default action if no icon matches -->
                             <p>x</p>
@@ -595,6 +603,22 @@
           "id": "icon_selection",
           "label": "Select an Icon",
           "options": [
+            {
+              "value": "icon-lightbulb",
+              "label": "lightbulb"
+            },
+            {
+              "value": "icon-dog",
+              "label": "dog"
+            },
+            {
+              "value": "icon-certificate",
+              "label": "certificate"
+            },
+            {
+              "value": "icon-lederhosen",
+              "label": "lederhosen"
+            },
             {
               "value": "icon-3d-model",
               "label": "3d model"

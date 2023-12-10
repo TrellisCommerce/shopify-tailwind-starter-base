@@ -1,5 +1,5 @@
 <div
-  class='fullwidth-banner xmin-h-[400px] xoverflow-clip {% if section.settings.theme_mode == 'dark' %}dark{% else %}{% endif %} xrelative'
+  class='fullwidth-banner {{ section.settings.desktop_blur }} xmin-h-[400px] xoverflow-clip {% if section.settings.theme_mode == 'dark' %}dark{% else %}{% endif %} xrelative'
 >
   <div
     class='xabsolute xw-full xh-full background !xblock xz-[-1] xbackground-opacity-70'
@@ -197,6 +197,22 @@
         }
       ],
       "default": "light"
+    },
+    {
+      "type": "select",
+      "id": "desktop_blur",
+      "label": "Desktop Blur & Darken",
+      "options": [
+        {
+          "value": "no-desktop-blur",
+          "label": "No Desktop Blur"
+        },
+        {
+          "value": "desktop-blur",
+          "label": "Desktop Blur"
+        }
+      ],
+      "default": "no-desktop-blur"
     }
   ],
   "presets": [
