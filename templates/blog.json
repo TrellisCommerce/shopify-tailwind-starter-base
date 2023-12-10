@@ -15,15 +15,15 @@
     "8d72ff84-26eb-4637-8f80-5b5781e49654": {
       "type": "full-width-banner",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/topview0039_Kopie_446d7183-810c-4ff3-883f-b1d1947b6633.png",
-        "content": "<p>Test Text<\/p>",
-        "button_text": "Button Text",
+        "background_image": "shopify:\/\/shop_images\/comp2.png",
+        "content": "<h2>Abonniere jetzt unseren Newsletter,<br\/>um keine Rabattaktion zu verpassen!<\/h2>",
+        "button_text": "",
         "button_link": "",
         "button2_text": "",
         "button2_link": "",
         "newsletter": "true",
-        "theme_mode": "dark",
-        "desktop_blur": "no-desktop-blur"
+        "theme_mode": "light",
+        "desktop_blur": "desktop-blur"
       }
     }
   },
