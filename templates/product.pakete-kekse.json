@@ -484,14 +484,14 @@
         "template--18569455370504__4a230144-e97f-4d58-b606-160f3c791e36-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Rind mit Kartoffeln und Karotten",
+            "heading": "Hundekekse: Thunfisch-Beißer mit Kokosöl",
             "heading_size": "h2"
           }
         },
         "template--18569455370504__4a230144-e97f-4d58-b606-160f3c791e36-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Mehr Kraft und Ausdauer <\/strong>mit dem Rindermenü mit Kartoffeln und Möhren. Mit frischem Fleisch und naturbelassenen Zutaten. Ein Genuss für jeden Vierbeiner. Eignet sich gut für aktive und kräftige Hunde. Eine gute Grundbasis für Deinen Hund!<\/p>",
+            "text": "<p>Komme in den Genuss und entdecke die gut bekömmlichen und schmackhaften Hundekekse von Uncle Rusty's. In feinster Handarbeit werden die leckeren Happen unter ausschließlicher Verwendung von hochwertigen Zutaten gebacken.<\/p>",
             "text_style": "body"
           }
         },
@@ -501,7 +501,7 @@
             "icon_selection": "icon-meat-color",
             "icon_text": "Zusammensetzung",
             "show_accordion": true,
-            "richtext": "<p>58% Fleisch vom Rind (<em>40% Muskelfleisch, 7% Herz, 7% Lunge, 4% Leber<\/em>), 11% Kartoffeln, 11% Karotten, 0,47% Algenkalk<\/p><p>Das Rindermenü enthält 19,53% Fleischbrühe<\/p>"
+            "richtext": "<p>Dinkelmehl, Reismehl, Thunfisch 30%, Hühnerei, Kokosöl<\/p>"
           }
         },
         "0ee5bbeb-9d75-4f23-813c-4f276004fbd8": {
@@ -510,14 +510,14 @@
             "icon_selection": "icon-organic-color",
             "icon_text": "Vitamine, Mengen- & Spurenelemente",
             "show_accordion": true,
-            "richtext": "<p>10,40% Rohprotein; 4,50% Rohfett; 1,40% Rohasche; 0,50% Rohfaser; 79,20% Feuchtigkeit; 0,21% Calcium; 0,11% Phosphor<br\/><em>Vitamine im natürlichen Anteil<\/em><\/p>"
+            "richtext": "<p>14,8% Rohprotein, 5,1%Rohfett, 1,1% Rohasche, 0,6% Rohfaser<\/p>"
           }
         },
         "template--18569455370504__4a230144-e97f-4d58-b606-160f3c791e36-button-1": {
           "type": "button",
           "settings": {
             "button_label": "Zum Produkt",
-            "button_link": "shopify:\/\/products\/rindermenu-abo",
+            "button_link": "shopify:\/\/products\/hundekekse-thunfisch-beisser-mit-kokosol",
             "button_style_secondary": false
           }
         }
@@ -531,7 +531,7 @@
         "template--18569455370504__4a230144-e97f-4d58-b606-160f3c791e36-button-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/rind_800g.png",
+        "image": "shopify:\/\/shop_images\/thunfisch.png",
         "height": "medium",
         "image_crop": "no-crop",
         "rounded_corners": "not-rounded",
