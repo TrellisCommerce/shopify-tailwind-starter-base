@@ -152,6 +152,7 @@
         "template--21611313627431__80864b8b-4fd6-45db-81ef-d4d3e9be6bf6-heading-1",
         "template--21611313627431__80864b8b-4fd6-45db-81ef-d4d3e9be6bf6-text-1"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -159,6 +160,83 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 0
+      }
+    },
+    "25963718-e156-41f4-ba24-b0f5179def60": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "2e938402-e4c2-4d63-9dc6-2efacc4e1156": {
+          "type": "caption",
+          "settings": {
+            "caption": "Uncle Rusty's",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "template--18569455370504__25963718-e156-41f4-ba24-b0f5179def60-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ente mit Karotte & Hirse",
+            "heading_size": "h2"
+          }
+        },
+        "template--18569455370504__25963718-e156-41f4-ba24-b0f5179def60-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Der <strong>kraftvolle Energieschub <\/strong>mit Ente, Karotten und Bio-Hirse. Mit frischem Fleisch und naturbelassenen Zutaten. Ein Genuss für jeden Vierbeiner. Eignet sich gut für alle Hunde. Der glutenfreie Snack für Deinen Hund!<\/p>",
+            "text_style": "body"
+          }
+        },
+        "2864ba45-e459-4dc1-932b-967b2067493f": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_text": "Zusammensetzung",
+            "show_accordion": true,
+            "richtext": "<p>50% Muskelfleisch von der Ente, 10% Entenhälse, 5% Entenherzen, 10% Karotten, 10% Hirse<\/p><p>Das Entenmenü enthält 15% Fleischbrühe<em> <\/em><\/p>"
+          }
+        },
+        "3b18fb08-460b-4918-af53-09d660f40414": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_text": "Vitamine, Mengen- & Spurenelemente",
+            "show_accordion": true,
+            "richtext": "<p>12,70% Rohprotein; 6,80% Rohfett; 2,60% Rohasche; 0,40% Rohfaser; 69,50% Feuchtigkeit; 0,78% Calcium; 0,54% Phosphor<br\/><em>Vitamine im natürlichen Anteil<\/em><\/p>"
+          }
+        },
+        "template--18569455370504__25963718-e156-41f4-ba24-b0f5179def60-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "2e938402-e4c2-4d63-9dc6-2efacc4e1156",
+        "template--18569455370504__25963718-e156-41f4-ba24-b0f5179def60-heading-1",
+        "template--18569455370504__25963718-e156-41f4-ba24-b0f5179def60-text-1",
+        "2864ba45-e459-4dc1-932b-967b2067493f",
+        "3b18fb08-460b-4918-af53-09d660f40414",
+        "template--18569455370504__25963718-e156-41f4-ba24-b0f5179def60-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/ente_800g.png",
+        "height": "medium",
+        "image_crop": "no-crop",
+        "rounded_corners": "not-rounded",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "2a3817f0-35d4-412a-9480-f252f79f2a2d": {
@@ -321,6 +399,7 @@
   "order": [
     "main",
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6",
+    "25963718-e156-41f4-ba24-b0f5179def60",
     "2a3817f0-35d4-412a-9480-f252f79f2a2d",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
     "1694596722fbd3b4b2",
