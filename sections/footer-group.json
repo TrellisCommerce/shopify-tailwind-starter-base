@@ -26,17 +26,25 @@
             "heading": "Info",
             "menu": "ur-footer-info"
           }
+        },
+        "47fc2968-56e4-4110-833a-9fd111153d10": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
         }
       },
       "block_order": [
         "ee753c64-fc0e-4e27-9aae-172246812ba3",
         "footer-0",
-        "footer-1"
+        "footer-1",
+        "47fc2968-56e4-4110-833a-9fd111153d10"
       ],
       "settings": {
         "color_scheme": "background-1",
         "newsletter_enable": true,
-        "newsletter_heading": "Abonniere jetzt unseren Newsletter, <\/br>um keine Rabattaktion zu verpassen!",
+        "newsletter_heading": "Abonniere jetzt unseren Newsletter, um keine Rabattaktion zu verpassen!",
         "enable_follow_on_shop": false,
         "show_social": true,
         "enable_country_selector": false,

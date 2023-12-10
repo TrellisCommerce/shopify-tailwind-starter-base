@@ -18,7 +18,8 @@
             "hero_text": "<h1>HÄNDLER WERDEN <\/h1><p>Profitiere sofort von Top-Konditionen und Marketing-Unterstützung bei Uncle Rusty's. Verlass Dich auf unsere zuverlässige Marke für erfolgreichen Verkauf. Freu Dich darauf, die Vorteile von Uncle Rusty's kennenzulernen.<br\/><\/p>",
             "button_link": "",
             "button_label": "",
-            "theme_mode": "light"
+            "theme_mode": "light",
+            "blur": "no-blur"
           }
         }
       },
@@ -194,7 +195,8 @@
         "button2_text": "",
         "button2_link": "",
         "newsletter": "false",
-        "theme_mode": "dark"
+        "theme_mode": "dark",
+        "desktop_blur": "no-desktop-blur"
       }
     },
     "f1fa0ac2-0ae1-4024-a33c-3b7738ef0785": {
