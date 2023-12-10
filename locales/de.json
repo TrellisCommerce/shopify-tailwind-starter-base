@@ -293,8 +293,8 @@
         "title": "Hast du ein Konto?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Logge dich ein<\/a>, damit es beim Checkout schneller geht."
       },
-      "estimated_total": "Geschätzte Gesamtkosten",
-      "new_estimated_total": "Neuer geschätzter Gesamtbetrag"
+      "estimated_total": "Zwischensumme",
+      "new_estimated_total": "Neue Zwischensumme"
     },
     "footer": {
       "payment": "Zahlungsmethoden"
