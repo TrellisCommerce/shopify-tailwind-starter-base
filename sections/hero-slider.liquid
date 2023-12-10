@@ -8,7 +8,7 @@
         >
           {% if block.settings.hero_image != null %}
             <img
-              class='hero-image {% if block.settings.theme_mode == 'dark' %} dark {% else %} light {% endif %} {{ block.settings.blur }}'
+              class='hero-image {% if block.settings.theme_mode == 'dark' %} dark {% else %} light {% endif %} {{ block.settings.blur }} {% if block.settings.hero_image_mobile != null %}has-mobile-image{% endif %}'
               height='auto'
               width='auto'
               {% if forloop.index == 1 %}
@@ -17,7 +17,21 @@
                 src='{{ block.settings.hero_image.src | img_url: "x1920" }}'
                 loading='lazy'
               {% endif %}
-              alt='{{ block.settings.hero_image.src | escape }}'
+              alt='{{ block.settings.hero_image_mobile.src | escape }}'
+            >
+          {% endif %}
+          {% if block.settings.hero_image_mobile != null %}
+            <img
+              class='hero-image hero-image-mobile {% if block.settings.theme_mode == 'dark' %} dark {% else %} light {% endif %} {{ block.settings.blur }}'
+              height='auto'
+              width='auto'
+              {% if forloop.index == 1 %}
+                src='{{ block.settings.hero_image_mobile.src | img_url: "x1920" }}'
+              {% else %}
+                src='{{ block.settings.hero_image_mobile.src | img_url: "x1920" }}'
+                loading='lazy'
+              {% endif %}
+              alt='{{ block.settings.hero_image_mobile.src | escape }}'
             >
           {% endif %}
           <div class='hero-slide-content page-width xw-full xh-full xflex xflex-col xjustify-center'>
@@ -82,6 +96,11 @@
           "type": "image_picker",
           "id": "hero_image",
           "label": "Select Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "hero_image_mobile",
+          "label": "Select Image Mobile"
         },
         {
           "type": "richtext",
