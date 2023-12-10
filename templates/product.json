@@ -131,6 +131,104 @@
         "padding_bottom": 12
       }
     },
+    "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "template--18563546677512__ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "template--18563546677512__ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "d5f5d2c9-0acd-470c-b116-554653a901f6": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-lederhosen",
+            "icon_text": "Premium Hundenahrung aus dem Süden von Bayern ",
+            "show_accordion": false,
+            "richtext": ""
+          }
+        },
+        "12606def-b33b-4e93-ae9d-4bdcffdbc21e": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_text": "Frisches Muskelfleisch und nahrhafte Innereien ",
+            "show_accordion": false,
+            "richtext": "<p> <\/p>"
+          }
+        },
+        "53631e27-d0ef-4248-925c-d004a9c0f2bf": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-region-color",
+            "icon_text": "Bestes Obst und Gemüse aus der Region ",
+            "show_accordion": false,
+            "richtext": ""
+          }
+        },
+        "bf6d932a-9b51-4d16-9a8e-75149f41df50": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_text": "Naturrein, vollwertig, ohne Chemie | Natur Pur ",
+            "show_accordion": false,
+            "richtext": ""
+          }
+        },
+        "ef4aaf30-6b17-476f-9115-3d7260b17585": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-dog",
+            "icon_text": "Fütterungsempfehlung ",
+            "show_accordion": true,
+            "richtext": "<p>Fütterungsempfehlung pro Tag: <br\/>Bis 5 kg 200g | Bis 15 kg 600g | Bis 25 kg 800g | Bis 35 kg 1000g<br\/> <br\/>Angegebene Futtermengen sind Richtwerte. Der tatsächliche Bedarf richtet sich nach Alter, Rasse und Aktivität deines Tieres. Bitte stelle immer ausreichend Trinkwasser zur Verfügung. <br\/><br\/><strong>Zubereitung <\/strong>Der Inhalt der Dose ist servierfertig. Dose öffnen und Inhalt in Napf füllen. Wir empfehlen: Die geöffnete Dose für 5 Minuten bei 100 Grad Umluft im Backofen erwärmen um Duftstoffe besser zu entfalten. <br\/><br\/><strong>Fütterung & Lagerung: <\/strong>Bitte immer zimmerwarm servieren, vor allem bei sensiblen Hunden. Kühl und trocken lagern. Nach dem Öffnen im Kühlschrank lagern und innerhalb von 2-3 Tagen verbrauchen, da es sich um ein frisches Produkt handelt. <\/p>"
+          }
+        },
+        "a88c0156-c93d-4ca6-86d1-4430d0d99fb9": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-lightbulb",
+            "icon_text": "Unser Tipp",
+            "show_accordion": true,
+            "richtext": "<p>Wechsle die Sorten von Uncle Rusty’s regelmäßig durch. Damit ist der Bedarf Deines Hundes abgedeckt. Der Wechsel der Sorten ist wichtig, da dem Hund dadurch unter anderem verschiedene Vitamine und Proteinquellen zugeführt werden. (Beispiel: die Zugabe von Jod kann durch die Fütterung – 1 pro Woche das Lachsmenü automatisch gemacht werden). Unabhängig von der Futterart und Marke empfehlen wir die Zugabe (in regelmäßigen Abständen) <br\/><br\/>z.B.: Seealgenmehl (für Fell und Schilddrüsenfunktion)<br\/>Grünlippmuschelpulver (für Herz, Knorpeln, Gelenke) <br\/>Leinöl (für Fell, Haut, Stoffwechsel und Verdauung) <br\/>Dorschlebertran (für Knochenbau, Wachstumsfördernd, Konstitution, Fell) <br\/><br\/>Bitte beachte die richtige Dosierung der Produkte! - Der Gehalt ausgewählter Nährstoffe unseres Tierfutters wird regelmäßig von einem unabhängigen und anerkannten Labor geprüft, um den hohen Qualitätsstandard zu sichern. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18563546677512__ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f-heading-1",
+        "template--18563546677512__ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f-text-1",
+        "d5f5d2c9-0acd-470c-b116-554653a901f6",
+        "12606def-b33b-4e93-ae9d-4bdcffdbc21e",
+        "53631e27-d0ef-4248-925c-d004a9c0f2bf",
+        "bf6d932a-9b51-4d16-9a8e-75149f41df50",
+        "ef4aaf30-6b17-476f-9115-3d7260b17585",
+        "a88c0156-c93d-4ca6-86d1-4430d0d99fb9"
+      ],
+      "settings": {
+        "height": "adapt",
+        "image_crop": "crop",
+        "rounded_corners": "not-rounded",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6": {
       "type": "rich-text",
       "blocks": {
@@ -176,7 +274,8 @@
         "button2_text": "Futterberatung",
         "button2_link": "shopify:\/\/pages\/beratung",
         "newsletter": "false",
-        "theme_mode": "light"
+        "theme_mode": "light",
+        "desktop_blur": "no-desktop-blur"
       }
     },
     "1694596722fbd3b4b2": {
@@ -205,7 +304,8 @@
         "button2_text": "",
         "button2_link": "",
         "newsletter": "true",
-        "theme_mode": "dark"
+        "theme_mode": "dark",
+        "desktop_blur": "no-desktop-blur"
       }
     },
     "05f67661-57d3-4393-b235-9279296aa6fd": {
@@ -320,6 +420,7 @@
   },
   "order": [
     "main",
+    "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f",
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6",
     "2a3817f0-35d4-412a-9480-f252f79f2a2d",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
