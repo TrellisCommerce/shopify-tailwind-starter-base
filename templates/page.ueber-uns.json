@@ -14,7 +14,7 @@
         "template--21410078720295__eac071c2-238f-4670-8009-1d7131150f7d-hero-slide-1": {
           "type": "hero-slide",
           "settings": {
-            "hero_image": "shopify:\/\/shop_images\/comp2_Kopie_28e9353f-6bf5-47bc-a6cb-29f5bd783a15.jpg",
+            "hero_image": "shopify:\/\/shop_images\/Comp_4_v2.jpg",
             "hero_text": "<h1>Willkommen <br\/>in der Welt von <br\/>Uncle Rusty’s<\/h1><p>Herzlich willkommen bei Uncle Rusty's – <br\/>Deinem Partner für artgerechte und gesunde<br\/>Hundeernährung.<br\/><\/p>",
             "button_link": "",
             "button_label": "",
@@ -53,6 +53,8 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/michi_1_be69c882-0f70-4bf4-b443-e01c467b73d9.jpg",
         "height": "medium",
+        "image_crop": "crop",
+        "rounded_corners": "not-rounded",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",
@@ -90,6 +92,8 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/rusty_5013046c-ad46-4d5c-98cd-5a46bc488926.jpg",
         "height": "medium",
+        "image_crop": "crop",
+        "rounded_corners": "not-rounded",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "middle",
@@ -187,6 +191,8 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/rusty1955_70936_a_traditional_bavarian_wood_cabin_in_the_alps_w_8519f280-50fd-4fdc-990d-aae934284694.png",
         "height": "medium",
+        "image_crop": "crop",
+        "rounded_corners": "not-rounded",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",
@@ -262,7 +268,7 @@
         "template--21410078720295__85e5e5b0-fdb3-4fe7-92e7-8cb8e28cb338-featured_collection-3": {
           "type": "featured_collection",
           "settings": {
-            "collection": "ole"
+            "collection": "pakete"
           }
         }
       },
@@ -384,6 +390,8 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/herstellung.jpg",
         "height": "medium",
+        "image_crop": "crop",
+        "rounded_corners": "not-rounded",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "middle",
