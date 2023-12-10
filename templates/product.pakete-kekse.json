@@ -176,14 +176,14 @@
         "template--18569455370504__25963718-e156-41f4-ba24-b0f5179def60-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Ente mit Karotte & Hirse",
+            "heading": "Hundekekse: Huhn mit Chia, Banane & Kokosöl",
             "heading_size": "h2"
           }
         },
         "template--18569455370504__25963718-e156-41f4-ba24-b0f5179def60-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Der <strong>kraftvolle Energieschub <\/strong>mit Ente, Karotten und Bio-Hirse. Mit frischem Fleisch und naturbelassenen Zutaten. Ein Genuss für jeden Vierbeiner. Eignet sich gut für alle Hunde. Der glutenfreie Snack für Deinen Hund!<\/p>",
+            "text": "<p>Komme in den Genuss und entdecke die gut bekömmlichen und schmackhaften Hundekekse von Uncle Rusty's. In feinster Handarbeit werden die leckeren Happen unter ausschließlicher Verwendung von hochwertigen Zutaten gebacken.<\/p>",
             "text_style": "body"
           }
         },
@@ -193,7 +193,7 @@
             "icon_selection": "icon-meat-color",
             "icon_text": "Zusammensetzung",
             "show_accordion": true,
-            "richtext": "<p>50% Muskelfleisch von der Ente, 10% Entenhälse, 5% Entenherzen, 10% Karotten, 10% Hirse<\/p><p>Das Entenmenü enthält 15% Fleischbrühe<em> <\/em><\/p>"
+            "richtext": "<p>Buchweizenmehl 48%, Huhn 20%, Bananae 22%, Wasser 5%, Chia 3%, Kokosöl 2%<\/p>"
           }
         },
         "3b18fb08-460b-4918-af53-09d660f40414": {
@@ -202,14 +202,14 @@
             "icon_selection": "icon-organic-color",
             "icon_text": "Vitamine, Mengen- & Spurenelemente",
             "show_accordion": true,
-            "richtext": "<p>12,70% Rohprotein; 6,80% Rohfett; 2,60% Rohasche; 0,40% Rohfaser; 69,50% Feuchtigkeit; 0,78% Calcium; 0,54% Phosphor<br\/><em>Vitamine im natürlichen Anteil<\/em><\/p>"
+            "richtext": "<p>20%Rohprotein, 9,5% Rohfett, 4,8%Rohasche, 1,2%Rohfaser, 4,1%Feuchtigkeit<\/p>"
           }
         },
         "template--18569455370504__25963718-e156-41f4-ba24-b0f5179def60-button-1": {
           "type": "button",
           "settings": {
             "button_label": "Zum Produkt",
-            "button_link": "shopify:\/\/products\/entenmenu-abo",
+            "button_link": "shopify:\/\/products\/hundekekse-huhn-mit-chia-banane-kokosol-100-gramm",
             "button_style_secondary": false
           }
         }
@@ -223,7 +223,7 @@
         "template--18569455370504__25963718-e156-41f4-ba24-b0f5179def60-button-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/ente_800g.png",
+        "image": "shopify:\/\/shop_images\/huhn.png",
         "height": "medium",
         "image_crop": "no-crop",
         "rounded_corners": "not-rounded",
@@ -470,12 +470,6 @@
         "padding_bottom": 36
       }
     },
-    "2a3817f0-35d4-412a-9480-f252f79f2a2d": {
-      "type": "product-contents",
-      "disabled": true,
-      "settings": {
-      }
-    },
     "4a230144-e97f-4d58-b606-160f3c791e36": {
       "type": "ur-image-with-text",
       "blocks": {
@@ -628,6 +622,12 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "2a3817f0-35d4-412a-9480-f252f79f2a2d": {
+      "type": "product-contents",
+      "disabled": true,
+      "settings": {
       }
     },
     "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
@@ -789,9 +789,9 @@
     "97b93f31-c4fa-46cc-bbae-c27bd4ec3b18",
     "6d0925c9-8ace-4364-ac10-6283f37b258f",
     "dc7e0102-22b3-4daf-bd82-5f03f036768e",
-    "2a3817f0-35d4-412a-9480-f252f79f2a2d",
     "4a230144-e97f-4d58-b606-160f3c791e36",
     "c0a79c54-7298-4646-b08d-529fe4870d25",
+    "2a3817f0-35d4-412a-9480-f252f79f2a2d",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
     "1694596722fbd3b4b2",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
