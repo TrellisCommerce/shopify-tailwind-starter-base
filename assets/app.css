@@ -2293,6 +2293,10 @@ progress[value]::-moz-progress-bar {
   max-width: 48rem !important;
 }
 
+.list-menu--disclosure {
+  width: 23rem;
+}
+
 .last-of-type\:xborder-none:last-of-type {
   border-style: none;
 }

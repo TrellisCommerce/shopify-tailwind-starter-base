@@ -854,3 +854,7 @@ progress[value]::-moz-progress-bar {
 .product-form__buttons {
   max-width: 48rem !important;
 }
+
+.list-menu--disclosure {
+  width: 23rem;
+}
