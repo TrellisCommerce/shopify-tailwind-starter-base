@@ -3,7 +3,7 @@
     <div class='swiper-wrapper'>
       {% for block in section.blocks %}
         <div
-          class='swiper-slide !xflex xjustify-center xitems-center {{ block.settings.blur }}'
+          class='swiper-slide !xflex xjustify-center xitems-center {{ block.settings.blur }}  {% if block.settings.theme_mode == 'dark' %} dark-text {% else %} light-text {% endif %} '
           style=''
         >
           {% if block.settings.hero_image != null %}
@@ -119,7 +119,7 @@
         {
           "type": "select",
           "id": "blur",
-          "label": "Blur",
+          "label": "Mobile Blur",
           "options": [
             {
               "value": "no-blur",
