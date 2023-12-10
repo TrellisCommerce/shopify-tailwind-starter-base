@@ -925,6 +925,7 @@ ul {
 .card__heading {
   word-break: break-word;
   hyphens: auto;
+  text-wrap: balance;
 }
 
 .custom-number-input {
