@@ -142,22 +142,22 @@
         "template--18568253374728__943e2d50-ba87-40d7-a1b4-5b34faa3487c-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Vorteile mit Uncle Rusty's",
             "heading_size": "h1"
           }
         },
         "template--18568253374728__943e2d50-ba87-40d7-a1b4-5b34faa3487c-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Partner mit Uncle Rusty's für Top Nassnahrung und Snacks für Hunde. Wir bieten:<\/p><p>🐾 Innovatives Team, persönlicher Kontakt für Verkaufserfolg.<\/p><p>🐾 Einzigartige Produkte, modernes Design für Dein Geschäft.<\/p><p>🐾 Attraktive Konditionen, exklusive Neukundenaktionen.<\/p><p>🐾 Vielfältige Kooperationsmöglichkeiten.<\/p><p>🐾 Lokale, geostrategische Markenförderung.<\/p>",
             "text_style": "body"
           }
         },
         "template--18568253374728__943e2d50-ba87-40d7-a1b4-5b34faa3487c-button-1": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "Jetzt anfragen",
+            "button_link": "shopify:\/\/pages\/kontakt",
             "button_style_secondary": false
           }
         }
@@ -169,8 +169,8 @@
       ],
       "settings": {
         "height": "adapt",
-        "image_crop": "crop",
-        "rounded_corners": "not-rounded",
+        "image_crop": "no-crop",
+        "rounded_corners": "rounded",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",
@@ -186,16 +186,6 @@
     "2eaafdb5-d26e-4380-9edd-be9a4abea7fb": {
       "type": "multicolumn",
       "blocks": {
-        "template--18568253374728__2eaafdb5-d26e-4380-9edd-be9a4abea7fb-column-1": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/haendler.png",
-            "title": "Die Möglichkeit für einen erfolgreichen Verkauf",
-            "text": "<p>Wir sind bereit mit Dir die extra Meile zu gehen. Gemeinsam können wir ein größeres Bewusstsein für eine gesunde und artgerechte Ernährung für Hunde erschaffen. Das erwartet Dich:<\/p><p>🐾 Fertig gepackte Probierboxen zum Testen für Deine Kunden zum Spezial Preis.<\/p><p>🐾 Abo Option für Deine Kunden vor Ort mit unserem Bestellformular und SEPA Mandat. Lieferung über unsere Logistik oder Abholung in Deinem Geschäft.<\/p><p>🐾 Wir präsentieren Uncle Rusty’s gerne mit einem individuellen Aufsteller und\/oder Point Of Sale Verkaufsstand. Maximale Aufmerksamkeit!<\/p><p>🐾 Digital verkaufen mit eigenem Rabattgutschein, auch für unterwegs<\/p><p>🐾 Wir machen Öffentlichkeitsarbeit für Dich und Deinen Laden im Internet<\/p><p>🐾 Stetig wachsendes Produkt Portfolio bietet Innovation und Wachstum <\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "template--18568253374728__2eaafdb5-d26e-4380-9edd-be9a4abea7fb-column-2": {
           "type": "column",
           "settings": {
@@ -207,7 +197,6 @@
         }
       },
       "block_order": [
-        "template--18568253374728__2eaafdb5-d26e-4380-9edd-be9a4abea7fb-column-1",
         "template--18568253374728__2eaafdb5-d26e-4380-9edd-be9a4abea7fb-column-2"
       ],
       "settings": {
