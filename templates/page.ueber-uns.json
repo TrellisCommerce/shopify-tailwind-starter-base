@@ -441,6 +441,9 @@
         "template--18562674131208__1458de64-4bc4-4f7a-80e0-58bd8d8e49c6-text-1",
         "template--18562674131208__1458de64-4bc4-4f7a-80e0-58bd8d8e49c6-buttons-1"
       ],
+      "custom_css": [
+
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/comp2.png",
         "image_overlay_opacity": 0,
@@ -449,7 +452,7 @@
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "background-1",
-        "image_behavior": "none",
+        "image_behavior": "zoom-in",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
