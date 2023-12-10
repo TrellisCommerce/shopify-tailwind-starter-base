@@ -637,7 +637,7 @@
         "button2_link": "",
         "newsletter": "true",
         "theme_mode": "light",
-        "desktop_blur": "no-desktop-blur"
+        "desktop_blur": "desktop-blur"
       }
     },
     "build-a-box": {
