@@ -16,21 +16,21 @@
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "",
+            "heading": "Informationen",
             "menu": "ur-footer-links"
           }
         },
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "",
+            "heading": "Shopping",
             "menu": "ur-footer-mitte"
           }
         },
         "47fc2968-56e4-4110-833a-9fd111153d10": {
           "type": "link_list",
           "settings": {
-            "heading": "",
+            "heading": "Services",
             "menu": "ur-footer-rechts"
           }
         }
