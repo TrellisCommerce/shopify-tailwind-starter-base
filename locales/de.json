@@ -121,7 +121,7 @@
         "note": "Mengenregeln anzeigen"
       },
       "price": {
-        "from_price_html": "Von {{ price }}",
+        "from_price_html": "Ab {{ price }}",
         "regular_price": "Normaler Preis",
         "sale_price": "Verkaufspreis",
         "unit_price": "Stückpreis"
