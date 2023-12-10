@@ -553,6 +553,83 @@
         "padding_bottom": 36
       }
     },
+    "c0a79c54-7298-4646-b08d-529fe4870d25": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "c45a4ddd-c7a1-427b-96c3-718a5bcd2690": {
+          "type": "caption",
+          "settings": {
+            "caption": "Uncle Rusty's",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "template--18569455370504__c0a79c54-7298-4646-b08d-529fe4870d25-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Wild mit Süßkartoffeln und Zucchini",
+            "heading_size": "h2"
+          }
+        },
+        "template--18569455370504__c0a79c54-7298-4646-b08d-529fe4870d25-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Die Stärkung für <strong>Feinschmecker <\/strong>mit frischem Fleisch und naturbelassenen Zutaten. Ein Genuss für jeden Vierbeiner. Eignet sich gut für aktive Hunde. Der Powersnack für Deinen Hund!<\/p>",
+            "text_style": "body"
+          }
+        },
+        "51630dec-a842-4c8b-b3b0-1fb54698ca76": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_text": "Zusammensetzung",
+            "show_accordion": true,
+            "richtext": "<p>35% Fleisch vom Reh und Hirsch (<em>20% Muskelfleisch, 10% Lunge und Luftröhre, 5% Leber<\/em>), 25% Fleisch vom Rind (<em>15% Muskelfleisch, 5% Herz, 5% Lunge<\/em>), 13% Süßkartoffeln, 10% Zucchini, 0,29% Algenkalk<\/p><p>Das Wildmenü enthält 16,71% Fleischbrühe<\/p>"
+          }
+        },
+        "8bdef9ed-8308-42cf-a69d-ca978cfbadf4": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_text": "Vitamine, Mengen- & Spurenelemente",
+            "show_accordion": true,
+            "richtext": "<p>9,70% Rohprotein; 5,40% Rohfett; 1,20% Rohasche; 1,00% Rohfaser; 80,20% Feuchtigkeit; 0,13% Calcium; 0,10% Phosphor <br\/><em>Vitamine im natürlichen Anteil<\/em><\/p>"
+          }
+        },
+        "template--18569455370504__c0a79c54-7298-4646-b08d-529fe4870d25-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Zum Produkt",
+            "button_link": "shopify:\/\/products\/wildmenu-abo",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "c45a4ddd-c7a1-427b-96c3-718a5bcd2690",
+        "template--18569455370504__c0a79c54-7298-4646-b08d-529fe4870d25-heading-1",
+        "template--18569455370504__c0a79c54-7298-4646-b08d-529fe4870d25-text-1",
+        "51630dec-a842-4c8b-b3b0-1fb54698ca76",
+        "8bdef9ed-8308-42cf-a69d-ca978cfbadf4",
+        "template--18569455370504__c0a79c54-7298-4646-b08d-529fe4870d25-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/wild_800g.png",
+        "height": "medium",
+        "image_crop": "no-crop",
+        "rounded_corners": "not-rounded",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
       "type": "full-width-banner",
       "settings": {
@@ -714,6 +791,7 @@
     "dc7e0102-22b3-4daf-bd82-5f03f036768e",
     "2a3817f0-35d4-412a-9480-f252f79f2a2d",
     "4a230144-e97f-4d58-b606-160f3c791e36",
+    "c0a79c54-7298-4646-b08d-529fe4870d25",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
     "1694596722fbd3b4b2",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
