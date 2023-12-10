@@ -18,7 +18,8 @@
             "hero_text": "<h1>Unser Ernährungs-versprechen <\/h1><p>Uncle Rusty's verpflichtet sich, natürliche und artgerechte Nahrung zu bieten, die im Einklang mit den Bedürfnissen deines Vierbeiners steht. <br\/><\/p>",
             "button_link": "",
             "button_label": "",
-            "theme_mode": "light"
+            "theme_mode": "light",
+            "blur": "no-blur"
           }
         }
       },
@@ -432,7 +433,7 @@
         "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Bei Uncle Rusty's engagieren wir uns leidenschaftlich für die Bereitstellung einer natürlichen und artgerechten Ernährung, die speziell auf die Bedürfnisse deines geliebten Vierbeiners abgestimmt ist. Unser Ansatz zielt darauf ab, das Wohlbefinden und die Vitalität deines Hundes durch sorgfältig ausgewählte, nährstoffreiche Zutaten zu fördern <\/p>"
+            "text": "<p>Bei Uncle Rusty's engagieren wir uns leidenschaftlich für die Bereitstellung einer natürlichen und artgerechten Ernährung, die speziell auf die Bedürfnisse deines geliebten Vierbeiners abgestimmt ist. Unser Ansatz zielt darauf ab, das Wohlbefinden und die Vitalität deines Hundes durch sorgfältig ausgewählte, nährstoffreiche Zutaten zu fördern.<\/p>"
           }
         },
         "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-button-1": {
@@ -472,7 +473,8 @@
         "button2_text": "",
         "button2_link": "",
         "newsletter": "true",
-        "theme_mode": "dark"
+        "theme_mode": "dark",
+        "desktop_blur": "no-desktop-blur"
       }
     }
   },
