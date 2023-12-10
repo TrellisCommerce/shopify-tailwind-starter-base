@@ -379,7 +379,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/rusty1955_70936_a_traditional_bavarian_wood_cabin_in_the_alps_w_8c47e262-cd5b-4fed-bbf3-a6eba737d8d5.png",
-        "height": "adapt",
+        "height": "medium",
         "image_crop": "crop",
         "rounded_corners": "not-rounded",
         "desktop_image_width": "medium",
