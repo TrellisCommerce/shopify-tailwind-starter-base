@@ -843,3 +843,14 @@ progress[value]::-moz-progress-bar {
   border-radius: 25px !important;
   overflow: hidden !important;
 }
+.bsub-widget__plan-pricing {
+  flex-shrink: 0;
+  color: #6b8f71;
+}
+
+.bsub-widget__plan-pricing span {
+  color: #6b8f71;
+}
+.product-form__buttons {
+  max-width: 48rem !important;
+}
