@@ -91,15 +91,6 @@
             "content": "{{ product.metafields.custom.analyse | metafield_tag }}",
             "page": ""
           }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Fütterungsempfehlung",
-            "icon": "paw_print",
-            "content": "<p>Fütterungsempfehlung pro Tag:<br\/>Bis 5 kg 200g | Bis 15 kg 600g | Bis 25 kg 800g | Bis 35 kg 1000g<\/p><p>Angegebene Futtermengen sind Richtwerte. Der tatsächliche Bedarf richtet sich nach Alter, Rasse und Aktivität deines Tieres. Bitte stelle immer ausreichend Trinkwasser zur Verfügung.<\/p><p><\/p><p><strong>Zubereitung<\/strong><br\/>Der Inhalt der Dose ist servierfertig. Dose öffnen und Inhalt in Napf füllen. Wir empfehlen: Die geöffnete Dose für 5 Minuten bei 100 Grad Umluft im Backofen erwärmen um Duftstoffe besser zu entfalten.<\/p><p><\/p><p><strong>Fütterung & Lagerung:<\/strong><br\/>Bitte immer zimmerwarm servieren, vor allem bei sensiblen Hunden. Kühl und trocken lagern. Nach dem Öffnen imKühlschrank lagern und innerhalb von 2-3 Tagen verbrauchen, da es sich um ein frisches Produkt handelt<\/p>",
-            "page": ""
-          }
         }
       },
       "block_order": [
@@ -113,8 +104,7 @@
         "buy_buttons",
         "collapsible-row-1",
         "collapsible-row-0",
-        "collapsible-row-2",
-        "collapsible-row-3"
+        "collapsible-row-2"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -640,7 +630,91 @@
         "button2_text": "Futterberatung",
         "button2_link": "shopify:\/\/pages\/beratung",
         "newsletter": "false",
-        "theme_mode": "light"
+        "theme_mode": "light",
+        "desktop_blur": "no-desktop-blur"
+      }
+    },
+    "1524c9a4-f315-47a6-adbc-31e43082bbc0": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "7ba3d872-2ff8-46b5-b4d3-a1d55a31042a": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-lederhosen",
+            "icon_text": "Premium Hundenahrung aus dem Süden von Bayern ",
+            "show_accordion": false,
+            "richtext": ""
+          }
+        },
+        "3161a9f9-fed0-41aa-a113-fe1d69863c6e": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_text": "Frisches Muskelfleisch und nahrhafte Innereien ",
+            "show_accordion": false,
+            "richtext": ""
+          }
+        },
+        "5d99d129-0d3c-434c-90d5-fbbed7757d32": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-region-color",
+            "icon_text": "Bestes Obst und Gemüse aus der Region ",
+            "show_accordion": false,
+            "richtext": ""
+          }
+        },
+        "681583ee-1809-49c0-b9d6-5ff4ee70e0ef": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_text": "Naturrein, vollwertig, ohne Chemie | Natur Pur ",
+            "show_accordion": false,
+            "richtext": ""
+          }
+        },
+        "e174a946-2653-47a7-966b-4e9bead73647": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-dog",
+            "icon_text": "Fütterungsempfehlung ",
+            "show_accordion": true,
+            "richtext": "<p>Fütterungsempfehlung pro Tag: <br\/>Bis 5 kg 200g | Bis 15 kg 600g | Bis 25 kg 800g | Bis 35 kg 1000g<br\/> <br\/>Angegebene Futtermengen sind Richtwerte. Der tatsächliche Bedarf richtet sich nach Alter, Rasse und Aktivität deines Tieres. Bitte stelle immer ausreichend Trinkwasser zur Verfügung. <br\/><br\/><strong>Zubereitung <\/strong>Der Inhalt der Dose ist servierfertig. Dose öffnen und Inhalt in Napf füllen. Wir empfehlen: Die geöffnete Dose für 5 Minuten bei 100 Grad Umluft im Backofen erwärmen um Duftstoffe besser zu entfalten. <br\/><br\/><strong>Fütterung & Lagerung: <\/strong>Bitte immer zimmerwarm servieren, vor allem bei sensiblen Hunden. Kühl und trocken lagern. Nach dem Öffnen im Kühlschrank lagern und innerhalb von 2-3 Tagen verbrauchen, da es sich um ein frisches Produkt handelt. <\/p>"
+          }
+        },
+        "7998b995-21a6-48bc-9bd3-54195320ca2b": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-lightbulb",
+            "icon_text": "Unser Tipp",
+            "show_accordion": false,
+            "richtext": "<p>Wechsle die Sorten von Uncle Rusty’s regelmäßig durch. Damit ist der Bedarf Deines Hundes abgedeckt. Der Wechsel der Sorten ist wichtig, da dem Hund dadurch unter anderem verschiedene Vitamine und Proteinquellen zugeführt werden. (Beispiel: die Zugabe von Jod kann durch die Fütterung – 1 pro Woche das Lachsmenü automatisch gemacht werden). Unabhängig von der Futterart und Marke empfehlen wir die Zugabe (in regelmäßigen Abständen) <br\/><br\/>z.B.: Seealgenmehl (für Fell und Schilddrüsenfunktion)<br\/>Grünlippmuschelpulver (für Herz, Knorpeln, Gelenke) <br\/>Leinöl (für Fell, Haut, Stoffwechsel und Verdauung) <br\/>Dorschlebertran (für Knochenbau, Wachstumsfördernd, Konstitution, Fell) <br\/><br\/>Bitte beachte die richtige Dosierung der Produkte! - Der Gehalt ausgewählter Nährstoffe unseres Tierfutters wird regelmäßig von einem unabhängigen und anerkannten Labor geprüft, um den hohen Qualitätsstandard zu sichern. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "7ba3d872-2ff8-46b5-b4d3-a1d55a31042a",
+        "3161a9f9-fed0-41aa-a113-fe1d69863c6e",
+        "5d99d129-0d3c-434c-90d5-fbbed7757d32",
+        "681583ee-1809-49c0-b9d6-5ff4ee70e0ef",
+        "e174a946-2653-47a7-966b-4e9bead73647",
+        "7998b995-21a6-48bc-9bd3-54195320ca2b"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/rusty_5013046c-ad46-4d5c-98cd-5a46bc488926.jpg",
+        "height": "medium",
+        "image_crop": "crop",
+        "rounded_corners": "not-rounded",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "1694596722fbd3b4b2": {
@@ -669,7 +743,8 @@
         "button2_text": "",
         "button2_link": "",
         "newsletter": "true",
-        "theme_mode": "dark"
+        "theme_mode": "dark",
+        "desktop_blur": "no-desktop-blur"
       }
     },
     "05f67661-57d3-4393-b235-9279296aa6fd": {
@@ -793,6 +868,7 @@
     "4a230144-e97f-4d58-b606-160f3c791e36",
     "c0a79c54-7298-4646-b08d-529fe4870d25",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
+    "1524c9a4-f315-47a6-adbc-31e43082bbc0",
     "1694596722fbd3b4b2",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
     "05f67661-57d3-4393-b235-9279296aa6fd",
