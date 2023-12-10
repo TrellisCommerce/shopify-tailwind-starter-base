@@ -640,7 +640,8 @@
         "button2_text": "Futterberatung",
         "button2_link": "shopify:\/\/pages\/beratung",
         "newsletter": "false",
-        "theme_mode": "light"
+        "theme_mode": "light",
+        "desktop_blur": "no-desktop-blur"
       }
     },
     "1694596722fbd3b4b2": {
@@ -669,7 +670,8 @@
         "button2_text": "",
         "button2_link": "",
         "newsletter": "true",
-        "theme_mode": "dark"
+        "theme_mode": "dark",
+        "desktop_blur": "no-desktop-blur"
       }
     },
     "05f67661-57d3-4393-b235-9279296aa6fd": {
@@ -760,7 +762,7 @@
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "related-products": {
@@ -780,6 +782,34 @@
         "padding_top": 36,
         "padding_bottom": 56
       }
+    },
+    "481839c4-f3a4-4135-a3e4-3f78e6ec931b": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Das könnte dir auch gefallen...",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "nassfutter",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -796,6 +826,7 @@
     "1694596722fbd3b4b2",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
     "05f67661-57d3-4393-b235-9279296aa6fd",
-    "related-products"
+    "related-products",
+    "481839c4-f3a4-4135-a3e4-3f78e6ec931b"
   ]
 }
