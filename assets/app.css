@@ -2260,7 +2260,19 @@ progress[value]::-moz-progress-bar {
   background-position: center;
 }
 
+.hero-image-mobile {
+  display: none;
+}
+
 @media (max-width: 800px) {
+  .hero-image-mobile {
+    display: block;
+  }
+
+  .hero-image.has-mobile-image {
+    display: none;
+  }
+
   .fullwidth-banner .background {
     background-color: #00000070;
     background-blend-mode: darken;
