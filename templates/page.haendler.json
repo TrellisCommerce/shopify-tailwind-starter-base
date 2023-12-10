@@ -255,6 +255,54 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "0d8e9aaa-e262-4a88-ba3d-5cc98af77eac": {
+      "type": "image-banner",
+      "blocks": {
+        "template--18568253374728__0d8e9aaa-e262-4a88-ba3d-5cc98af77eac-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Tauche in unsere <\/br>Produktwelt ein",
+            "heading_size": "h1"
+          }
+        },
+        "template--18568253374728__0d8e9aaa-e262-4a88-ba3d-5cc98af77eac-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "Für jeden Hund das richtige Menü. Entdecke unser Sortiment anliebevoll zubereiteter und nährstoffreicher Tiernahrung, diegenauso schmackhaft wie gesund ist.",
+            "text_style": "body"
+          }
+        },
+        "template--18568253374728__0d8e9aaa-e262-4a88-ba3d-5cc98af77eac-buttons-1": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Produkte entdecken",
+            "button_link_1": "shopify:\/\/collections",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18568253374728__0d8e9aaa-e262-4a88-ba3d-5cc98af77eac-heading-1",
+        "template--18568253374728__0d8e9aaa-e262-4a88-ba3d-5cc98af77eac-text-1",
+        "template--18568253374728__0d8e9aaa-e262-4a88-ba3d-5cc98af77eac-buttons-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/rusty1955_70936_a_traditional_bavarian_wood_cabin_in_the_alps_w_3e14a558-6b92-491f-a01c-ef7a24ee370b.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "zoom-in",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
     }
   },
   "order": [
@@ -265,6 +313,7 @@
     "27f8bb42-c489-48f0-83ee-bee5fe3dcde4",
     "943e2d50-ba87-40d7-a1b4-5b34faa3487c",
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788",
-    "f1fa0ac2-0ae1-4024-a33c-3b7738ef0785"
+    "f1fa0ac2-0ae1-4024-a33c-3b7738ef0785",
+    "0d8e9aaa-e262-4a88-ba3d-5cc98af77eac"
   ]
 }
