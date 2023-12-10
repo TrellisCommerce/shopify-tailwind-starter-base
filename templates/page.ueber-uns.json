@@ -377,7 +377,7 @@
           "type": "button",
           "settings": {
             "button_label": "Video Ansehen",
-            "button_link": "",
+            "button_link": "https:\/\/www.youtube.com\/watch?v=ddRs-hNdtjE",
             "button_style_secondary": false
           }
         }
