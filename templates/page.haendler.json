@@ -58,19 +58,6 @@
         "padding_bottom": 52
       }
     },
-    "fd6d1a02-4c7f-4d00-a014-df4d73a27788": {
-      "type": "full-width-banner",
-      "settings": {
-        "background_image": "shopify:\/\/shop_images\/topview0039.png",
-        "content": "<h2>Abonniere jetzt unseren Newsletter,um keine Rabattaktion zu verpassen!<\/h2>",
-        "button_text": "",
-        "button_link": "",
-        "button2_text": "",
-        "button2_link": "",
-        "newsletter": "true",
-        "theme_mode": "light"
-      }
-    },
     "2eaafdb5-d26e-4380-9edd-be9a4abea7fb": {
       "type": "multicolumn",
       "blocks": {
@@ -98,7 +85,7 @@
         "template--18568253374728__2eaafdb5-d26e-4380-9edd-be9a4abea7fb-column-2"
       ],
       "settings": {
-        "title": "Multicolumn",
+        "title": "",
         "heading_alignment": "left",
         "heading_size": "h1",
         "image_width": "full",
@@ -106,7 +93,7 @@
         "columns_desktop": 2,
         "column_alignment": "left",
         "background_style": "primary",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "color_scheme": "",
         "columns_mobile": "1",
@@ -114,13 +101,26 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "fd6d1a02-4c7f-4d00-a014-df4d73a27788": {
+      "type": "full-width-banner",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/topview0039.png",
+        "content": "<h2>Premium Nahrung aus der Region, <br\/>Hergestellt im Süden von Bayern, <br\/>Frei von Zusätzen jeglicher Art<\/h2>",
+        "button_text": "",
+        "button_link": "",
+        "button2_text": "",
+        "button2_link": "",
+        "newsletter": "false",
+        "theme_mode": "dark"
+      }
     }
   },
   "order": [
     "main",
     "eac071c2-238f-4670-8009-1d7131150f7d",
     "5641b7ef-318a-42a9-ba73-fcdf52804832",
-    "fd6d1a02-4c7f-4d00-a014-df4d73a27788",
-    "2eaafdb5-d26e-4380-9edd-be9a4abea7fb"
+    "2eaafdb5-d26e-4380-9edd-be9a4abea7fb",
+    "fd6d1a02-4c7f-4d00-a014-df4d73a27788"
   ]
 }
