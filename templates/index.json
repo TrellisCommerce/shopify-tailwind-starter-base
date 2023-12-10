@@ -819,7 +819,7 @@
           "type": "button",
           "settings": {
             "button_label": "Über Uns",
-            "button_link": "shopify:\/\/pages\/build-a-box",
+            "button_link": "shopify:\/\/pages\/uber-uns",
             "button_style_secondary": false
           }
         }
