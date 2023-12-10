@@ -198,6 +198,7 @@
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9": {
       "type": "full-width-banner",
       "settings": {
+        "background_image": "shopify:\/\/shop_images\/f30627f9-73d3-4d15-923b-8d7c4eb38f44_096fee96-933f-4dda-b1b0-0f1ec37db2b0.jpg",
         "content": "<h1><strong>Newsletter Gutschein<\/strong><\/h1><p>Bleibe stets Up to Date wenn es Aktionen gibt<br\/>Newsletter abonnieren und 10 EUR* Gutschein sichern<br\/><em>* Einlösbar ab einem Einkaufswert von € 49,-<\/em><br\/><\/p>",
         "button_text": "",
         "button_link": "",
