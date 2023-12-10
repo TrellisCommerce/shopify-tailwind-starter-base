@@ -15,7 +15,7 @@
           "type": "hero-slide",
           "settings": {
             "hero_image": "shopify:\/\/shop_images\/comp3_wide.jpg",
-            "hero_text": "<h1>Unser Herstellungs-verfahren  <\/h1><p>Entdecke, wie aus sorgfältig ausgewählten, natürlichen Zutaten unser Premium Nassfutter für Hunde entsteht. Das Geheimnis liegt in der perfekten Rezeptur und unserem liebevollen Slow Cooking-Verfahren. <br\/><\/p>",
+            "hero_text": "<h1>Unser Herstellungs-verfahren  <\/h1><p>Entdecke, wie aus sorgfältig ausgewählten, natürlichen Zutaten unser Premium Nassfutter für Hunde entsteht. Das Geheimnis liegt in der perfekten Rezeptur und unserem liebevollen Slow-Cooking-Verfahren. <br\/><\/p>",
             "button_link": "",
             "button_label": "",
             "theme_mode": "light",
