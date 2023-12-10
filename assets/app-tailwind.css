@@ -920,3 +920,7 @@ ul {
   object-position: left;
   object-position: bottom;
 }
+.card__heading {
+  word-break: break-word;
+  hyphens: auto;
+}
