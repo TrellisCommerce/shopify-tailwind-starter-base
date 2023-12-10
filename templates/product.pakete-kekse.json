@@ -253,14 +253,14 @@
         "template--18569455370504__97b93f31-c4fa-46cc-bbae-c27bd4ec3b18-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Geflügel mit Kürbis und Amaranth",
+            "heading": "Hundekekse: Huhn mit Hüttenkäse, Kokos- & Schwarzkümmelöl",
             "heading_size": "h2"
           }
         },
         "template--18569455370504__97b93f31-c4fa-46cc-bbae-c27bd4ec3b18-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Der <strong>gut bekömmliche Leckerbissen <\/strong>mit hohem Geflügelanteil, Kürbis & Amaranth-Flocken. Ein Genuss für jeden Vierbeiner. Eignet sich gut als Schonkost.<\/p>",
+            "text": "<p>Komme in den Genuss und entdecke die gut bekömmlichen und schmackhaften Hundekekse von Uncle Rusty's. In feinster Handarbeit werden die leckeren Happen unter ausschließlicher Verwendung von hochwertigen Zutaten gebacken.<\/p>",
             "text_style": "body"
           }
         },
@@ -270,7 +270,7 @@
             "icon_selection": "icon-meat-color",
             "icon_text": "Zusammensetzung",
             "show_accordion": true,
-            "richtext": "<p>63% Fleisch vom Huhn (<em>38% Muskelfleisch, 10% Herz, 10% Mägen, 5% Leber<\/em>), 10% Kürbis, 7% Bio-Amaranth<\/p><p>Das Geflügelmenü enthält 20% Fleischbrühe<\/p>"
+            "richtext": "<p>Dinkelmehl 1050, Hüttenkäse 20%, Huhn auf Frischfleischbasis 25%, Hühnerei, Kokosöl, Schwarzkümmelöl<\/p>"
           }
         },
         "c31cd03b-4884-4dbe-984b-e6b6a18f6b62": {
@@ -279,14 +279,14 @@
             "icon_selection": "icon-organic-color",
             "icon_text": "Vitamine, Mengen- & Spurenelemente",
             "show_accordion": true,
-            "richtext": "<p>T11,60% Rohprotein; 3,00% Rohfett; 2,80% Rohasche; 1,00% Rohfaser; 75,10% Feuchtigkeit; 0,53% Calcium; 0,39% Phosphor<br\/><em>Vitamine im natürlichen Anteil<\/em><\/p>"
+            "richtext": "<p>21,3% Rohprotein, 22,5% Rohfett, 1,6% Rohasche, 0,7% Rohfaser<\/p>"
           }
         },
         "template--18569455370504__97b93f31-c4fa-46cc-bbae-c27bd4ec3b18-button-1": {
           "type": "button",
           "settings": {
             "button_label": "Zum Produkt",
-            "button_link": "shopify:\/\/products\/geflugelmenu-abo",
+            "button_link": "shopify:\/\/products\/hundekekse-huhn-mit-huttenkase-kokos-schwarzkummelol",
             "button_style_secondary": false
           }
         }
@@ -300,7 +300,7 @@
         "template--18569455370504__97b93f31-c4fa-46cc-bbae-c27bd4ec3b18-button-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/gefluegel_800g.png",
+        "image": "shopify:\/\/shop_images\/huhn_h.png",
         "height": "medium",
         "image_crop": "no-crop",
         "rounded_corners": "not-rounded",
