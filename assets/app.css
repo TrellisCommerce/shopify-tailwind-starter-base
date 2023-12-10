@@ -2170,6 +2170,11 @@ progress[value]::-moz-progress-bar {
   padding: 4rem 0rem 4rem 6rem !important;
 }
 
+.multirow__inner .image-with-text__grid--reverse .image-with-text__content,
+.multirow__inner .image-with-text__content {
+  padding: 6rem !important;
+}
+
 @media (max-width: 749px) {
   .image-with-text__grid--reverse .image-with-text__content {
     padding: 4rem 0rem 4rem 0 !important;
