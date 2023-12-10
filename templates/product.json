@@ -166,6 +166,20 @@
       "settings": {
       }
     },
+    "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
+      "type": "full-width-banner",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/Comp_4_v2.jpg",
+        "content": "<h1><strong>Jede Mahlzeit zählt:<br\/>Der Uncle Rusty's Mix<\/strong><\/h1><p><em>Stelle das ideale Paket zusammen:<\/em><br\/>3x helles Fleisch, 3x rotes Fleisch, 1x Fisch. Der Schlüssel für eine rundum gesunde Ernährung deines Hundes. Einfach, effektiv, ernährungsreich!<\/p>",
+        "button_text": "Mix & Match: Dein Menu",
+        "button_link": "shopify:\/\/pages\/build-a-box",
+        "button2_text": "Futterberatung",
+        "button2_link": "shopify:\/\/pages\/beratung",
+        "newsletter": "false",
+        "theme_mode": "light",
+        "desktop_blur": "no-desktop-blur"
+      }
+    },
     "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f": {
       "type": "ur-image-with-text",
       "blocks": {
@@ -256,20 +270,6 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
-      "type": "full-width-banner",
-      "settings": {
-        "background_image": "shopify:\/\/shop_images\/Comp_4_v2.jpg",
-        "content": "<h1><strong>Jede Mahlzeit zählt:<br\/>Der Uncle Rusty's Mix<\/strong><\/h1><p><em>Stelle das ideale Paket zusammen:<\/em><br\/>3x helles Fleisch, 3x rotes Fleisch, 1x Fisch. Der Schlüssel für eine rundum gesunde Ernährung deines Hundes. Einfach, effektiv, ernährungsreich!<\/p>",
-        "button_text": "Mix & Match: Dein Menu",
-        "button_link": "shopify:\/\/pages\/build-a-box",
-        "button2_text": "Futterberatung",
-        "button2_link": "shopify:\/\/pages\/beratung",
-        "newsletter": "false",
-        "theme_mode": "light",
-        "desktop_blur": "no-desktop-blur"
       }
     },
     "1694596722fbd3b4b2": {
@@ -416,8 +416,8 @@
     "main",
     "80864b8b-4fd6-45db-81ef-d4d3e9be6bf6",
     "2a3817f0-35d4-412a-9480-f252f79f2a2d",
-    "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
+    "ed9067e7-aa03-4c55-852a-1dcd7c4aeb3f",
     "1694596722fbd3b4b2",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
     "05f67661-57d3-4393-b235-9279296aa6fd",
