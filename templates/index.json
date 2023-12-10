@@ -6,7 +6,7 @@
         "template--20724493582631__30fbf7e1-21c6-45a8-834f-aa38c719a695-hero-slide-1": {
           "type": "hero-slide",
           "settings": {
-            "hero_image": "shopify:\/\/shop_images\/comp1.jpg",
+            "hero_image": "shopify:\/\/shop_images\/comp1_wide.jpg",
             "hero_image_mobile": "shopify:\/\/shop_images\/comp_x_mobil_10806f6c-c0bb-4352-8bef-ff6ebaea1ce2.jpg",
             "hero_text": "<h1>Die Natur <br\/>in jeder Mahlzeit<\/h1><p>Echtes Handwerk, echter Geschmack. Spare beim Kauf unseres Slow-Cooked Premium Nassfutters.<\/p>",
             "button_link": "shopify:\/\/collections\/all",
@@ -17,7 +17,6 @@
         },
         "c9a19ac3-ae3f-438f-bc8e-62e83fcddfae": {
           "type": "hero-slide",
-          "disabled": true,
           "settings": {
             "hero_image": "shopify:\/\/shop_images\/comp3_0191_Kopie.jpg",
             "hero_text": "<h1>Mehr als nur<br\/>ein Hundefutter<\/h1><p>Ausgewählte, regionale Zutaten <br\/>- sorgfältig verarbeitet. <br\/>Weil Qualität in jedem Bissen zählt.<\/p>",
@@ -29,7 +28,6 @@
         },
         "ca9378e3-b3fb-4caf-910c-45c8755a8e86": {
           "type": "hero-slide",
-          "disabled": true,
           "settings": {
             "hero_image": "shopify:\/\/shop_images\/comp3_wide.jpg",
             "hero_text": "<h1>Exklusivität, <br\/>die überzeugt<\/h1><p>Entdecke exklusive Angebote nur bei Uncle Rusty's und spüre den Unterschied.<\/p>",
