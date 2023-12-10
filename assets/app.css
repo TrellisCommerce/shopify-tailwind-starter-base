@@ -2361,6 +2361,7 @@ ul {
      object-position: bottom;
 }
 
+.rich-text__heading,
 .card__heading {
   word-break: break-word;
   -webkit-hyphens: auto;
