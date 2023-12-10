@@ -914,7 +914,9 @@ ul {
 }
 
 .collection-list__item img {
-  height: 90px;
+  height: 135px;
+  -o-object-fit: contain;
   object-fit: contain;
   object-position: left;
+  object-position: bottom;
 }
