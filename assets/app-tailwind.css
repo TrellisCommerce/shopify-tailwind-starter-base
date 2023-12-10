@@ -829,3 +829,7 @@ progress[value]::-moz-progress-bar {
     filter: blur(2px);
   }
 }
+
+.multirow__inner .image-with-text__media img {
+  object-fit: contain;
+}

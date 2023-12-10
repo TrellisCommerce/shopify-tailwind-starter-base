@@ -2265,6 +2265,11 @@ progress[value]::-moz-progress-bar {
   }
 }
 
+.multirow__inner .image-with-text__media img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .last-of-type\:xborder-none:last-of-type {
   border-style: none;
 }
