@@ -129,6 +129,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/Waage_a57e25b0-d943-4f32-bfaa-399d871f2a06.png",
         "height": "medium",
+        "image_crop": "crop",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",
@@ -164,8 +165,9 @@
         "08c049e4-4c25-495b-9ae4-cfb173f2ce96"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/dosen.png",
+        "image": "shopify:\/\/shop_images\/dosen_555964da-a362-48e5-ad6b-e0eb50ae678f.png",
         "height": "adapt",
+        "image_crop": "no-crop",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "middle",
@@ -401,6 +403,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/Food.jpg",
         "height": "medium",
+        "image_crop": "crop",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",
