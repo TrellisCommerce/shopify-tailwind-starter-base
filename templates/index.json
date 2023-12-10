@@ -367,7 +367,7 @@
           "type": "button",
           "settings": {
             "button_label": "Unsere Werte",
-            "button_link": "shopify:\/\/pages\/build-a-box",
+            "button_link": "shopify:\/\/pages\/unsere-ernahrungsphilosophie",
             "button_style_secondary": false
           }
         }
