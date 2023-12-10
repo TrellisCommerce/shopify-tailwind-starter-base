@@ -3,6 +3,15 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "bsub-widget": {
+          "type": "shopify:\/\/apps\/bold-subscriptions\/blocks\/bsub-widget-block\/9ceb49f0-5fe5-4b5e-943d-f8af8985167d",
+          "settings": {
+            "primary_color": "#3B63FF",
+            "secondary_color": "#7DBA63",
+            "one_time_text": "One-time Purchase",
+            "recurring_text": "Subscribe and Save"
+          }
+        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -89,6 +98,7 @@
         "price",
         "variant_picker",
         "quantity_selector",
+        "bsub-widget",
         "buy_buttons",
         "collapsible-row-1",
         "collapsible-row-0",

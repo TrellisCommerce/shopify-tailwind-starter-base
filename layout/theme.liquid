@@ -37,7 +37,8 @@
 
     {{ content_for_header }}
 
-    {%- liquid
+    {{ 'bsub.scss.css' | asset_url | stylesheet_tag }}
+{%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
       assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
