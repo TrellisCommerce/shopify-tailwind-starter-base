@@ -2352,11 +2352,13 @@ ul {
 }
 
 .collection-list__item img {
-  height: 90px;
+  height: 135px;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   -o-object-position: left;
      object-position: left;
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 
 .last-of-type\:xborder-none:last-of-type {
