@@ -15,7 +15,7 @@
           "type": "hero-slide",
           "settings": {
             "hero_image": "shopify:\/\/shop_images\/f30627f9-73d3-4d15-923b-8d7c4eb38f44_096fee96-933f-4dda-b1b0-0f1ec37db2b0.jpg",
-            "hero_text": "<h1>Unser Ernährungs-versprechen <\/h1><p>Uncle Rusty's verpflichtet sich, natürliche und artgerechte Nahrung zu bieten, die im Einklang mit den Bedürfnissen deines Vierbeiners steht. <br\/><\/p>",
+            "hero_text": "<h1>HÄNDLER WERDEN <\/h1><p>Profitiere sofort von Top-Konditionen und Marketing-Unterstützung bei Uncle Rusty's. Verlass Dich auf unsere zuverlässige Marke für erfolgreichen Verkauf. Freu Dich darauf, die Vorteile von Uncle Rusty's kennenzulernen.<br\/><\/p>",
             "button_link": "",
             "button_label": "",
             "theme_mode": "light"
@@ -26,6 +26,48 @@
         "template--21410078720295__eac071c2-238f-4670-8009-1d7131150f7d-hero-slide-1"
       ],
       "settings": {
+      }
+    },
+    "5641b7ef-318a-42a9-ba73-fcdf52804832": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18568253374728__5641b7ef-318a-42a9-ba73-fcdf52804832-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "template--18568253374728__5641b7ef-318a-42a9-ba73-fcdf52804832-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "template--18568253374728__5641b7ef-318a-42a9-ba73-fcdf52804832-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18568253374728__5641b7ef-318a-42a9-ba73-fcdf52804832-heading-1",
+        "template--18568253374728__5641b7ef-318a-42a9-ba73-fcdf52804832-text-1",
+        "template--18568253374728__5641b7ef-318a-42a9-ba73-fcdf52804832-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788": {
@@ -45,6 +87,7 @@
   "order": [
     "main",
     "eac071c2-238f-4670-8009-1d7131150f7d",
+    "5641b7ef-318a-42a9-ba73-fcdf52804832",
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788"
   ]
 }
