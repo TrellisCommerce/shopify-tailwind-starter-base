@@ -833,6 +833,20 @@ progress[value]::-moz-progress-bar {
     background-blend-mode: lighten;
     filter: blur(2px);
   }
+
+  .hero-image.blur {
+    filter: blur(2px);
+    scale: 1.1;
+    opacity: 0.8;
+  }
+}
+
+.swiper-slide {
+  overflow: hidden;
+}
+
+.swiper-slide.dark-text {
+  background-color: #f2eee3;
 }
 
 .fullwidth-banner.desktop-blur .background {
