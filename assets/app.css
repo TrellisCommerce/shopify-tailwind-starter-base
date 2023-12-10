@@ -2270,6 +2270,18 @@ progress[value]::-moz-progress-bar {
   }
 }
 
+.fullwidth-banner.desktop-blur .background {
+  background-color: #00000070;
+  background-blend-mode: darken;
+  filter: blur(2px);
+}
+
+.fullwidth-banner.desktop-blur.dark .background {
+  background-color: #ece7d861;
+  background-blend-mode: lighten;
+  filter: blur(2px);
+}
+
 .multirow__inner .image-with-text__media img {
   -o-object-fit: contain;
      object-fit: contain;
