@@ -1,0 +1,491 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "eac071c2-238f-4670-8009-1d7131150f7d": {
+      "type": "hero-slider",
+      "blocks": {
+        "template--21410078720295__eac071c2-238f-4670-8009-1d7131150f7d-hero-slide-1": {
+          "type": "hero-slide",
+          "settings": {
+            "hero_image": "shopify:\/\/shop_images\/f30627f9-73d3-4d15-923b-8d7c4eb38f44_096fee96-933f-4dda-b1b0-0f1ec37db2b0.jpg",
+            "hero_text": "<h1>Unser Ernährungs-versprechen <\/h1><p>Uncle Rusty's verpflichtet sich, natürliche und artgerechte Nahrung zu bieten, die im Einklang mit den Bedürfnissen deines Vierbeiners steht. <br\/><\/p>",
+            "button_link": "",
+            "button_label": "",
+            "theme_mode": "light"
+          }
+        }
+      },
+      "block_order": [
+        "template--21410078720295__eac071c2-238f-4670-8009-1d7131150f7d-hero-slide-1"
+      ],
+      "settings": {
+      }
+    },
+    "78ee7904-acf5-420d-a373-e6df369eabe3": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18562873819400__78ee7904-acf5-420d-a373-e6df369eabe3-column-1": {
+          "type": "column",
+          "settings": {
+            "title": "Regionale Schätze ",
+            "text": "<p>Lokale, hochwertige Zutaten bilden das Fundament unserer Rezepturen. <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18562873819400__78ee7904-acf5-420d-a373-e6df369eabe3-column-2": {
+          "type": "column",
+          "settings": {
+            "title": "Harmonische Rezepturen ",
+            "text": "<p>Maßgeschneidert für die individuellen Bedürfnisse deines Hundes. <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18562873819400__78ee7904-acf5-420d-a373-e6df369eabe3-column-3": {
+          "type": "column",
+          "settings": {
+            "title": "Slow-Cooking ",
+            "text": "<p>Unsere behutsame Zubereitungsweise bewahrt die natürliche Güte jeder Zutat. <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18562873819400__78ee7904-acf5-420d-a373-e6df369eabe3-column-1",
+        "template--18562873819400__78ee7904-acf5-420d-a373-e6df369eabe3-column-2",
+        "template--18562873819400__78ee7904-acf5-420d-a373-e6df369eabe3-column-3"
+      ],
+      "settings": {
+        "title": "Die drei Eckpfeiler unserer erstklassigen Hundenahrung: ",
+        "heading_alignment": "left",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "1aeb6e76-a0ac-4156-8d2e-1e273bb5722f": {
+      "type": "rich-text",
+      "blocks": {
+        "c51a6d3f-d089-4566-b101-c136cd33ff32": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Diese Prinzipien verankern Uncle Rusty’s im Herzen der malerischen bayerischen Landschaft - wo unsere Menüs entstehen. Doch wie zeichnen sich unsere Menüs aus? <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "c51a6d3f-d089-4566-b101-c136cd33ff32"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "46b98696-f663-4732-816d-9b2021134506": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "template--21410078720295__46b98696-f663-4732-816d-9b2021134506-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Die richtige Balance <\/strong>",
+            "heading_size": "h1"
+          }
+        },
+        "template--21410078720295__46b98696-f663-4732-816d-9b2021134506-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wir setzen auf einen hohen Fleischanteil in unseren Menüs, jedoch ist uns ein ausgewogenes Verhältnis von Fleisch zu Kohlenhydraten wichtig. Im Verhältnis von 3:1 ermöglicht dies eine ausgewogene Ernährung, die deinem Hund die nötigen Proteine für eine starke Muskulatur liefert, während die Kohlenhydrate die benötigte Energie für den Tag bereitstellen. So stellen wir sicher, dass dein Hund nicht nur satt, sondern auch gut genährt und energiegeladen ist. <\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--21410078720295__46b98696-f663-4732-816d-9b2021134506-heading-1",
+        "template--21410078720295__46b98696-f663-4732-816d-9b2021134506-text-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Waage_a57e25b0-d943-4f32-bfaa-399d871f2a06.png",
+        "height": "medium",
+        "image_crop": "crop",
+        "rounded_corners": "not-rounded",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 4
+      }
+    },
+    "0a5428c3-e3ca-4db0-91f9-87bcb1183fd3": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "78abf51e-bfee-4d7d-9241-2e01811aabae": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hochwertige Zutaten für Hundegesundheit",
+            "heading_size": "h1"
+          }
+        },
+        "08c049e4-4c25-495b-9ae4-cfb173f2ce96": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In unseren Menüs kombinieren wir hochwertige tierische und pflanzliche Zutaten, die sorgfältig ausgewählt werden, um eine ausgewogene Nährstoffversorgung zu gewährleisten. Mit Zutaten wie Kürbis, Süßkartoffel oder Rote Beete, fördern wir die Verdauung und stärken das Immunsystem deines Hundes, ganz im Einklang mit der Natur. <\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "78abf51e-bfee-4d7d-9241-2e01811aabae",
+        "08c049e4-4c25-495b-9ae4-cfb173f2ce96"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/dosen_3ce9df46-a2a9-46de-8138-49d49a86a13a.png",
+        "height": "medium",
+        "image_crop": "no-crop",
+        "rounded_corners": "not-rounded",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 64
+      }
+    },
+    "cbfe460c-9a7f-4c8b-9a5b-5c3756d8b176": {
+      "type": "multirow",
+      "blocks": {
+        "template--18562873819400__cbfe460c-9a7f-4c8b-9a5b-5c3756d8b176-row-1": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Kuerbis-min.png",
+            "caption": "",
+            "heading": "Kürbis",
+            "text": "<p>Der Kürbis ist reich an Ballaststoffen und regt den Stoffwechsel sowie die Verdauung des Hundes an. Er unterstützt das Immunsystem und schwemmt Giftstoffe aus dem Körper.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--18562873819400__cbfe460c-9a7f-4c8b-9a5b-5c3756d8b176-row-2": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Amaranth-min.png",
+            "caption": "",
+            "heading": "Amaranth",
+            "text": "<p>Bio-Amaranth ist eine Eiweißbombe hochwertigster Proteinqualität und füllt die Energiespeicher deines Hundes mit einem hohen Vitamin E und Vitamin B-Gehalt. #FullPower<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--18562873819400__cbfe460c-9a7f-4c8b-9a5b-5c3756d8b176-row-3": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Karotte-min.png",
+            "caption": "",
+            "heading": "Karotten",
+            "text": "<p>Das in der Karotte enthaltene Carotin und Vitamin E wirkt antioxdantisch gegen krebs- verursachende Zellschäden. Darüberhinaus wird die Mikronährstoffversorgung abgedeckt.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "2c54907c-66e4-41db-9eb0-ab910cd7c85c": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Apfel-min.png",
+            "caption": "",
+            "heading": "Apfel",
+            "text": "<p>Äpfel sind eine hervorragende Quelle für Vitamine A und C sowie Ballaststoffe, die zur Gesundheit des Verdauungssystems von Hunden beitragen. Sie sind kalorienarm, was sie zu einem idealen Snack für Hunde macht. <\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "1fc55ab6-d11f-4882-8b67-9b78e3d34f1c": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Quinoa-min.png",
+            "caption": "",
+            "heading": "Quinoa",
+            "text": "<p>Die kleinen Powerkörner sind für Hunde, die unter Glutenunverträglichkeit leiden, ein vollwertiger Getreideersatz und eignen sich aufgrund ihrer Eigenschaften für Allergiker.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "094253c1-2997-41d3-8a39-f4dda6a3c756": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rote_Beete-min.png",
+            "caption": "",
+            "heading": "Rote Beete",
+            "text": "<p>Rote Beete ist reich an Vitaminen, Mineralien und Antioxidantien, die das Immunsystem unterstützen. Sie enthält Folsäure und Eisen, die zur Blutgesundheit beitragen. Die Ballaststoffe fördern eine gesunde Verdauung. <\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "9000c4aa-9c9e-462b-802f-f7f13dbe154d": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Haferflocken-min.png",
+            "caption": "",
+            "heading": "Haferkleie",
+            "text": "<p>Haferkleie ist nicht nur reich an hochwertiger Energie in Form von Kohlenhydraten, sondern auch an Vitaminen und Spurenelementen, wobei Ballaststoffe hier besonders hervortreten.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "a692a57b-e096-4051-9a61-f9fed994d27e": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Zucchini-min.png",
+            "caption": "",
+            "heading": "Zucchini",
+            "text": "<p>Zucchini ist ein nährstoffreiches Gemüse, das eine gute Quelle für Vitamine, wie Vitamin C und B6, sowie Mineralien wie Kalium und Magnesium ist. Sie enthält viele Ballaststoffe, die die Verdauung von Hunden unterstützen. <\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "58e7899c-63d7-47d4-9268-cea1cbd4cabe": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Suesskartoffel-min.png",
+            "caption": "",
+            "heading": "Süßkartoffel",
+            "text": "<p>Als Einer der wichtigsten Nähr-, Ballaststoff- und Kohlenhydratspender, sorgt die Süßkartoffel für die Vorbeugung vor Herzinfarkten und Arteriosklerose.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "d2d302d1-850a-4bdd-8866-62c049a089a0": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Kartoffeln-min.png",
+            "caption": "",
+            "heading": "Kartoffel",
+            "text": "<p>Die Kartoffel ist sehr reich an Kalium, Magnesium, Eisen, Zink und Phosphor. Sie dient ideal als Kohlenhydratquelle und hat einen hohen Anteil an pflanzlichen Eiweißen.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "424d22f5-f3da-4222-86a0-2012dcfac2a8": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hirse-min.png",
+            "caption": "",
+            "heading": "Bio-Hirse",
+            "text": "<p>Bio-Hirse liefert die benötigten Kohlenhydrate und Ballaststoffe für eine ausgeglichene Ernährung. Kein anderes Getreide enthält so viele lebenswichtige Vitamine und Mineralstoffe.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18562873819400__cbfe460c-9a7f-4c8b-9a5b-5c3756d8b176-row-1",
+        "template--18562873819400__cbfe460c-9a7f-4c8b-9a5b-5c3756d8b176-row-2",
+        "template--18562873819400__cbfe460c-9a7f-4c8b-9a5b-5c3756d8b176-row-3",
+        "2c54907c-66e4-41db-9eb0-ab910cd7c85c",
+        "1fc55ab6-d11f-4882-8b67-9b78e3d34f1c",
+        "094253c1-2997-41d3-8a39-f4dda6a3c756",
+        "9000c4aa-9c9e-462b-802f-f7f13dbe154d",
+        "a692a57b-e096-4051-9a61-f9fed994d27e",
+        "58e7899c-63d7-47d4-9268-cea1cbd4cabe",
+        "d2d302d1-850a-4bdd-8866-62c049a089a0",
+        "424d22f5-f3da-4222-86a0-2012dcfac2a8"
+      ],
+      "settings": {
+        "image_height": "small",
+        "desktop_image_width": "small",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "8ce866ce-9b7c-44f0-96b5-164553484e4d": {
+          "type": "heading",
+          "settings": {
+            "heading": "Natürlich Nähren ",
+            "heading_size": "h1"
+          }
+        },
+        "9811a8c4-e640-4e8c-bb94-f75c7f2fa680": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Die Balance aus Vitaminen, Mineralstoffen, Proteinen, Kohlenhydraten und Fetten ist entscheidend für das Wohl deines Hundes. Du findest eine klare Zutatenliste auf jedem Menü – so weißt du immer, was dein Hund zu sich nimmt.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "93620d59-afc3-4f61-9c48-162a6d91bb23": {
+          "type": "icon-text",
+          "disabled": true,
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_text": "Qualität",
+            "show_accordion": true,
+            "richtext": "<p>Wir setzen auf höchste Qualitätsstandards, um sicherzustellen, dass jedes Produkt, das unser Haus verlässt, den Erwartungen unserer Kunden entspricht.<\/p>"
+          }
+        },
+        "ada00b11-beff-4c00-a893-b77a3ff07cf5": {
+          "type": "icon-text",
+          "disabled": true,
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_text": "Natürlichkeit",
+            "show_accordion": true,
+            "richtext": "<p>Durch den lokalen Bezug unserer Zutaten und eine umweltfreundliche Produktionsweise tragen wir aktiv zum Umweltschutz bei.<\/p>"
+          }
+        },
+        "5efe8ec8-b721-4f5e-967e-399fbc059f58": {
+          "type": "icon-text",
+          "disabled": true,
+          "settings": {
+            "icon_selection": "icon-region-color",
+            "icon_text": "Regionalität",
+            "show_accordion": true,
+            "richtext": "<p>Wir beziehen unsere Zutaten von vertrauenswürdigen lokalen Bauern, um die Nachhaltigkeit zu fördern und die Gemeinschaft zu unterstützen.<\/p>"
+          }
+        },
+        "34e18e24-d994-4271-ba5f-e8ff1fff20d6": {
+          "type": "icon-text",
+          "disabled": true,
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_text": "Nachhaltigkeit",
+            "show_accordion": true,
+            "richtext": "<p>Wir beziehen unsere Zutaten von vertrauenswürdigen lokalen Bauern, um die Nachhaltigkeit zu fördern und die Gemeinschaft zu unterstützen.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "8ce866ce-9b7c-44f0-96b5-164553484e4d",
+        "9811a8c4-e640-4e8c-bb94-f75c7f2fa680",
+        "93620d59-afc3-4f61-9c48-162a6d91bb23",
+        "ada00b11-beff-4c00-a893-b77a3ff07cf5",
+        "5efe8ec8-b721-4f5e-967e-399fbc059f58",
+        "34e18e24-d994-4271-ba5f-e8ff1fff20d6"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Food.jpg",
+        "height": "adapt",
+        "image_crop": "no-crop",
+        "rounded_corners": "rounded",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "right",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "768a63b1-59d6-41f1-abe2-598806ac7d91": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unser Ernährungsversprechen ",
+            "heading_size": "h1"
+          }
+        },
+        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bei Uncle Rusty's engagieren wir uns leidenschaftlich für die Bereitstellung einer natürlichen und artgerechten Ernährung, die speziell auf die Bedürfnisse deines geliebten Vierbeiners abgestimmt ist. Unser Ansatz zielt darauf ab, das Wohlbefinden und die Vitalität deines Hundes durch sorgfältig ausgewählte, nährstoffreiche Zutaten zu fördern <\/p>"
+          }
+        },
+        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-heading-1",
+        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-text-1",
+        "template--18562873819400__768a63b1-59d6-41f1-abe2-598806ac7d91-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "fd6d1a02-4c7f-4d00-a014-df4d73a27788": {
+      "type": "full-width-banner",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/topview0039.png",
+        "content": "<h2>Abonniere jetzt unseren Newsletter,um keine Rabattaktion zu verpassen!<\/h2>",
+        "button_text": "",
+        "button_link": "",
+        "button2_text": "",
+        "button2_link": "",
+        "newsletter": "true",
+        "theme_mode": "light"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "eac071c2-238f-4670-8009-1d7131150f7d",
+    "78ee7904-acf5-420d-a373-e6df369eabe3",
+    "1aeb6e76-a0ac-4156-8d2e-1e273bb5722f",
+    "46b98696-f663-4732-816d-9b2021134506",
+    "0a5428c3-e3ca-4db0-91f9-87bcb1183fd3",
+    "cbfe460c-9a7f-4c8b-9a5b-5c3756d8b176",
+    "1203cbb7-8bb0-4313-97dd-db7a4e77a5e8",
+    "768a63b1-59d6-41f1-abe2-598806ac7d91",
+    "fd6d1a02-4c7f-4d00-a014-df4d73a27788"
+  ]
+}
