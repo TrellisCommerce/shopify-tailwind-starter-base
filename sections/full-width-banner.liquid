@@ -1,7 +1,10 @@
 <div
-  class='fullwidth-banner xmin-h-[400px] {% if section.settings.theme_mode == 'dark' %}dark{% else %}{% endif %}'
-  style="background-image: url('{{ section.settings.background_image.src | img_url: "x1920" }}');"
+  class='fullwidth-banner xmin-h-[400px] xoverflow-clip {% if section.settings.theme_mode == 'dark' %}dark{% else %}{% endif %} xrelative'
 >
+  <div
+    class='xabsolute xw-full xh-full background !xblock xz-[-1] xbackground-opacity-70'
+    style="background-image: url('{{ section.settings.background_image.src | img_url: "x1920" }}');"
+  ></div>
   <div class='xpt-16'>
     <div class='xflex xitems-start xflex-col xjustify-center container page-width xtext-white xp-8  xmin-h-[400px] '>
       <div class='richtext xp-8 xpx-2 md:xpx-0 {% if section.settings.theme_mode == 'dark' %}!xtext-gray-900{% else %}!xtext-beige-200 beige{% endif %} richtext-fullwidth xfont-semibold'>

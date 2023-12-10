@@ -493,6 +493,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0px;
 }
 
+.xz-\[-1\] {
+  z-index: -1;
+}
+
 .xfloat-right {
   float: right;
 }
@@ -2231,6 +2235,34 @@ progress[value]::-moz-progress-bar {
 .accordion__content p:empty {
   display: block;
   height: 1.5rem;
+}
+
+.article-template li {
+  list-style: auto !important;
+}
+
+.article-template ol {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.fullwidth-banner .background {
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 800px) {
+  .fullwidth-banner .background {
+    background-color: #00000070;
+    background-blend-mode: darken;
+    filter: blur(2px);
+  }
+
+  .fullwidth-banner.dark .background {
+    background-color: #ece7d861;
+    background-blend-mode: lighten;
+    filter: blur(2px);
+  }
 }
 
 .last-of-type\:xborder-none:last-of-type {
