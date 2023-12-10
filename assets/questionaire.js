@@ -1098,8 +1098,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Distribute counts evenly among products of the same meat_type
     function distributeCounts(meatType, count) {
       const products = Object.values(window.ur_products).filter(
-        (p) => p.meat_type === meatType && p.count !== 0,
+        (p) => p.meat_type.includes(meatType) && p.count !== 0,
       );
+
       let baseCount = Math.floor(count / products.length);
       let remainder = count % products.length;
 
