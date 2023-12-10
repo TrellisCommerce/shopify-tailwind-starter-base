@@ -476,6 +476,83 @@
       "settings": {
       }
     },
+    "4a230144-e97f-4d58-b606-160f3c791e36": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "be772b27-fe4d-4f40-a069-52bf0f47303d": {
+          "type": "caption",
+          "settings": {
+            "caption": "Uncle Rusty's",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "template--18569455370504__4a230144-e97f-4d58-b606-160f3c791e36-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Rind mit Kartoffeln und Karotten",
+            "heading_size": "h2"
+          }
+        },
+        "template--18569455370504__4a230144-e97f-4d58-b606-160f3c791e36-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Mehr Kraft und Ausdauer<\/strong>mit dem Rindermenü mit Kartoffeln und Möhren. Mit frischem Fleisch und naturbelassenen Zutaten. Ein Genuss für jeden Vierbeiner. Eignet sich gut für aktive und kräftige Hunde. Eine gute Grundbasis für Deinen Hund!<\/p>",
+            "text_style": "body"
+          }
+        },
+        "c532e24a-5201-443e-9982-025043023f5f": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_text": "Zusammensetzung",
+            "show_accordion": true,
+            "richtext": "<p>58% Fleisch vom Rind (<em>40% Muskelfleisch, 7% Herz, 7% Lunge, 4% Leber<\/em>), 11% Kartoffeln, 11% Karotten, 0,47% Algenkalk<\/p><p>Das Rindermenü enthält 19,53% Fleischbrühe<\/p>"
+          }
+        },
+        "0ee5bbeb-9d75-4f23-813c-4f276004fbd8": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_text": "Vitamine, Mengen- & Spurenelemente",
+            "show_accordion": true,
+            "richtext": "<p>10,40% Rohprotein; 4,50% Rohfett; 1,40% Rohasche; 0,50% Rohfaser; 79,20% Feuchtigkeit; 0,21% Calcium; 0,11% Phosphor<br\/><em>Vitamine im natürlichen Anteil<\/em><\/p>"
+          }
+        },
+        "template--18569455370504__4a230144-e97f-4d58-b606-160f3c791e36-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Zum Produkt",
+            "button_link": "shopify:\/\/products\/rindermenu-abo",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "be772b27-fe4d-4f40-a069-52bf0f47303d",
+        "template--18569455370504__4a230144-e97f-4d58-b606-160f3c791e36-heading-1",
+        "template--18569455370504__4a230144-e97f-4d58-b606-160f3c791e36-text-1",
+        "c532e24a-5201-443e-9982-025043023f5f",
+        "0ee5bbeb-9d75-4f23-813c-4f276004fbd8",
+        "template--18569455370504__4a230144-e97f-4d58-b606-160f3c791e36-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/rind_800g.png",
+        "height": "medium",
+        "image_crop": "no-crop",
+        "rounded_corners": "not-rounded",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
       "type": "full-width-banner",
       "settings": {
@@ -636,6 +713,7 @@
     "6d0925c9-8ace-4364-ac10-6283f37b258f",
     "dc7e0102-22b3-4daf-bd82-5f03f036768e",
     "2a3817f0-35d4-412a-9480-f252f79f2a2d",
+    "4a230144-e97f-4d58-b606-160f3c791e36",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
     "1694596722fbd3b4b2",
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9",
