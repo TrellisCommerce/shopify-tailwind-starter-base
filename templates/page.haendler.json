@@ -64,14 +64,14 @@
         "template--18568253374728__308a6786-3920-442d-9f20-6018f70112af-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "<strong>Gemeinsamer Erfolg in der Hundefütterung<\/strong>",
             "heading_size": "h1"
           }
         },
         "template--18568253374728__308a6786-3920-442d-9f20-6018f70112af-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Wir sind bereit, mit Dir die extra Meile zu gehen. Gemeinsam können wir ein größeres Bewusstsein für eine gesunde und artgerechte Ernährung für Hunde erschaffen.<\/p><p>Das erwartet Dich:<\/p><p>🐾 Fertig gepackte Probierboxen zum Testen für Deine Kunden zum Spezial Preis.<\/p><p>🐾 Abo Option für Deine Kunden vor Ort mit unserem Bestellformular und SEPA Mandat. Lieferung über unsere Logistik oder Abholung in Deinem Geschäft.<\/p>",
             "text_style": "body"
           }
         }
@@ -103,14 +103,14 @@
         "template--18568253374728__27f8bb42-c489-48f0-83ee-bee5fe3dcde4-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "<strong>Verkaufsförderung mit Uncle Rusty's<\/strong>",
             "heading_size": "h1"
           }
         },
         "template--18568253374728__27f8bb42-c489-48f0-83ee-bee5fe3dcde4-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>🐾 Wir präsentieren Uncle Rusty’s gerne mit einem individuellen Aufsteller und\/oder Point Of Sale Verkaufsstand. Maximale Aufmerksamkeit!<\/p><p>🐾 Digital verkaufen mit eigenem Rabattgutschein, auch für unterwegs.<\/p><p>🐾 Wir machen Öffentlichkeitsarbeit für Dich und Deinen Laden im Internet.<\/p><p>🐾 Stetig wachsendes Produkt Portfolio bietet Innovation und Wachstum.<\/p>",
             "text_style": "body"
           }
         }
