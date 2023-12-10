@@ -200,10 +200,18 @@
     "f1fa0ac2-0ae1-4024-a33c-3b7738ef0785": {
       "type": "ur-image-with-text",
       "blocks": {
+        "db1707ef-06da-4209-9d45-52f89961e7f3": {
+          "type": "caption",
+          "settings": {
+            "caption": "Fördere Deinen Verkauf mit",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
         "template--18568253374728__f1fa0ac2-0ae1-4024-a33c-3b7738ef0785-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Fördere Deinen verkauf mit unseren innovativen möglichkeiten",
+            "heading": "Unseren innovativen Möglichkeiten",
             "heading_size": "h1"
           }
         },
@@ -224,6 +232,7 @@
         }
       },
       "block_order": [
+        "db1707ef-06da-4209-9d45-52f89961e7f3",
         "template--18568253374728__f1fa0ac2-0ae1-4024-a33c-3b7738ef0785-heading-1",
         "template--18568253374728__f1fa0ac2-0ae1-4024-a33c-3b7738ef0785-text-1",
         "template--18568253374728__f1fa0ac2-0ae1-4024-a33c-3b7738ef0785-button-1"
