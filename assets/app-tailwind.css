@@ -908,3 +908,7 @@ progress[value]::-moz-progress-bar {
 .footer__copyright.caption .copyright__content:first-child {
   display: block;
 }
+
+ul {
+  list-style: disc;
+}

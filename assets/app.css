@@ -2347,6 +2347,10 @@ progress[value]::-moz-progress-bar {
   display: block;
 }
 
+ul {
+  list-style: disc;
+}
+
 .last-of-type\:xborder-none:last-of-type {
   border-style: none;
 }
