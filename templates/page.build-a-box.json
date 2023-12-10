@@ -18,12 +18,28 @@
         "questionaire_info_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<\/p>",
         "questionaire_button_label": "Button label",
         "questionaire_button_link": "",
-        "below_price_info": "inkl. MwSt., zzgl. Versandkosten"
+        "below_price_info": "inkl. MwSt., zzgl. Versandkosten",
+        "padding_top": 20,
+        "padding_bottom": 52
+      }
+    },
+    "802ec653-45c7-4db1-a744-3e8f11792f91": {
+      "type": "full-width-banner",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/topview0039_Kopie_446d7183-810c-4ff3-883f-b1d1947b6633.png",
+        "content": "<h2>Abonniere jetzt unseren Newsletter, <br\/>um keine Rabattaktion zu verpassen!<\/h2>",
+        "button_text": "",
+        "button_link": "",
+        "button2_text": "",
+        "button2_link": "",
+        "newsletter": "true",
+        "theme_mode": "dark"
       }
     }
   },
   "order": [
     "main",
-    "82172ece-4d52-4326-8d4d-6c644a0d4924"
+    "82172ece-4d52-4326-8d4d-6c644a0d4924",
+    "802ec653-45c7-4db1-a744-3e8f11792f91"
   ]
 }
