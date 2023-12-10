@@ -17,14 +17,14 @@
           "type": "link_list",
           "settings": {
             "heading": "",
-            "menu": "ur-footer-quick-links"
+            "menu": "ur-footer-links"
           }
         },
         "footer-1": {
           "type": "link_list",
           "settings": {
             "heading": "",
-            "menu": "ur-footer-info"
+            "menu": "ur-footer-mitte"
           }
         },
         "47fc2968-56e4-4110-833a-9fd111153d10": {
