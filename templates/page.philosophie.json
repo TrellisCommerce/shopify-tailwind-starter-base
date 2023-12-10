@@ -164,7 +164,8 @@
         "08c049e4-4c25-495b-9ae4-cfb173f2ce96"
       ],
       "settings": {
-        "height": "medium",
+        "image": "shopify:\/\/shop_images\/dosen.png",
+        "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "middle",
