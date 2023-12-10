@@ -14,7 +14,7 @@
         "collection": "nassfutter",
         "additives_collection": "ole",
         "questionaire_subscription_plan": 689522049319,
-        "instruction_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<\/p>",
+        "instruction_text": "<p>Mit nur wenigen Klicks zum perfekten Futterpaket für deinen Hund. Wähle aus unseren 6 Sorten und stelle dir ein Menü zusammen, das perfekt zu deinem Hund. passt. Sieh direkt, wie sich der Preis anpasst und sichere dir maximale Rabatte. Genieße die volle Kontrolle der Hundeernährung und profitiere von unschlagbaren Angeboten. Einfacher war Hundefutterkauf noch nie!<\/p>",
         "questionaire_info_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<\/p>",
         "questionaire_button_label": "Button label",
         "questionaire_button_link": "",
@@ -50,7 +50,8 @@
         "button2_text": "",
         "button2_link": "",
         "newsletter": "true",
-        "theme_mode": "dark"
+        "theme_mode": "dark",
+        "desktop_blur": "no-desktop-blur"
       }
     }
   },
