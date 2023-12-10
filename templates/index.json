@@ -6,12 +6,12 @@
         "template--20724493582631__30fbf7e1-21c6-45a8-834f-aa38c719a695-hero-slide-1": {
           "type": "hero-slide",
           "settings": {
-            "hero_image": "shopify:\/\/shop_images\/comp1_Kopie.jpg",
+            "hero_image": "shopify:\/\/shop_images\/comp1.jpg",
             "hero_text": "<h1>Die Natur <br\/>in jeder Mahlzeit<\/h1><p>Echtes Handwerk, echter Geschmack. Spare beim Kauf unseres Slow-Cooked Premium Nassfutters.<\/p>",
             "button_link": "shopify:\/\/collections\/all",
             "button_label": "Jetzt entdecken",
             "theme_mode": "light",
-            "blur": "no-blur"
+            "blur": "blur"
           }
         },
         "c9a19ac3-ae3f-438f-bc8e-62e83fcddfae": {
