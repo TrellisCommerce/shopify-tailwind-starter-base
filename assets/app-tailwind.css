@@ -912,3 +912,9 @@ progress[value]::-moz-progress-bar {
 ul {
   list-style: disc;
 }
+
+.collection-list__item img {
+  height: 90px;
+  object-fit: contain;
+  object-position: left;
+}
