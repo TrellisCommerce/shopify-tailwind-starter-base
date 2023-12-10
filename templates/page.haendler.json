@@ -183,40 +183,6 @@
         "padding_bottom": 36
       }
     },
-    "2eaafdb5-d26e-4380-9edd-be9a4abea7fb": {
-      "type": "multicolumn",
-      "blocks": {
-        "template--18568253374728__2eaafdb5-d26e-4380-9edd-be9a4abea7fb-column-2": {
-          "type": "column",
-          "settings": {
-            "title": "Die Vorteile wenn Du Uncle Rusty's verkaufst",
-            "text": "<p>Mit Uncle Rusty‘s hast Du einen optimalen Partner im Bereich Nassnahrung und Snacks für Hunde. Wir sind jung, ambitioniert und möchten uns zusammen mit Dir etablieren. Das erwartet Dich: <\/p><p>🐾 Innovatives Team und persönlicher Kontakt zur optimalen Verkaufsförderung<\/p><p>🐾 Einzigartige Produkte und modernes, zeitgemäßes Design. Passend zu Deinem Geschäft.<\/p><p>🐾 Gute Konditionen und exklusive Angebote und Aktionen zur Neukundenakquise. Denn Dein Wachstum, ist unser Wachstum.<\/p><p>🐾 Tiefergehende Kooperationsmöglichkeiten. Lass uns sprechen.<\/p><p>🐾 Geostrategische Öffentlichkeitsarbeit unterstützt den Markenaufbau im lokalen Handel<\/p>",
-            "link_label": "Jetzt Anfragen",
-            "link": "shopify:\/\/pages\/kontakt"
-          }
-        }
-      },
-      "block_order": [
-        "template--18568253374728__2eaafdb5-d26e-4380-9edd-be9a4abea7fb-column-2"
-      ],
-      "settings": {
-        "title": "",
-        "heading_alignment": "left",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788": {
       "type": "full-width-banner",
       "settings": {
@@ -286,7 +252,6 @@
     "308a6786-3920-442d-9f20-6018f70112af",
     "27f8bb42-c489-48f0-83ee-bee5fe3dcde4",
     "943e2d50-ba87-40d7-a1b4-5b34faa3487c",
-    "2eaafdb5-d26e-4380-9edd-be9a4abea7fb",
     "fd6d1a02-4c7f-4d00-a014-df4d73a27788",
     "f1fa0ac2-0ae1-4024-a33c-3b7738ef0785"
   ]
