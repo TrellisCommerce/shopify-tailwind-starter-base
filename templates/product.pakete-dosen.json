@@ -208,8 +208,8 @@
         "template--18569455370504__25963718-e156-41f4-ba24-b0f5179def60-button-1": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "Zum Produkt",
+            "button_link": "shopify:\/\/products\/entenmenu-abo",
             "button_style_secondary": false
           }
         }
