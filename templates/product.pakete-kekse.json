@@ -407,14 +407,14 @@
         "template--18569455370504__dc7e0102-22b3-4daf-bd82-5f03f036768e-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Pferd mit Karotte und Quinoa",
+            "heading": "Hundekekse: Quark Crunchies mit Kurkuma, Bierhefe & Rapsöl",
             "heading_size": "h2"
           }
         },
         "template--18569455370504__dc7e0102-22b3-4daf-bd82-5f03f036768e-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Der <strong>sensitive Happen<\/strong> für Allergikermit hohem Fleischanteil, Karotte & Quinoa. Ein Genuss für jeden Vierbeiner. Eignet sich gut als Schonkost.<\/p>",
+            "text": "<p>Komme in den Genuss und entdecke die gut bekömmlichen und schmackhaften Hundekekse von Uncle Rusty's. In feinster Handarbeit werden die leckeren Happen unter ausschließlicher Verwendung von hochwertigen Zutaten gebacken.<\/p>",
             "text_style": "body"
           }
         },
@@ -424,7 +424,7 @@
             "icon_selection": "icon-meat-color",
             "icon_text": "Zusammensetzung",
             "show_accordion": true,
-            "richtext": "<p>57% Fleisch vom Pferd (40<em>% Muskelfleisch, 6% Herz, 6% Lunge, 5% Leber<\/em>), 16% Karotte, 8% Quinoa. 0,37% zur optimalen Calcium-Versorgung.<\/p><p>Das Pferdemenü enthält 18,63% Fleischbrühe.<\/p>"
+            "richtext": "<p>Buchweizenmehl, Magerquark, Kurkuma, Bierhefe, Rapsöl<\/p>"
           }
         },
         "733ffda5-36d4-4bcc-bf77-f237084acf42": {
@@ -433,14 +433,14 @@
             "icon_selection": "icon-organic-color",
             "icon_text": "Vitamine, Mengen- & Spurenelemente",
             "show_accordion": true,
-            "richtext": "<p>12,10% Rohprotein; 2,20% Rohfett; 1,60% Rohasche; 0,80% Rohfaser; 75,90% Feuchtigkeit; 0,17% Calcium; 0,13% Phosphor<br\/><em>Vitamine im natürlichen Anteil<\/em><\/p>"
+            "richtext": "<p>10,1% Rohprotein, 9,8% Rohfett, 1,6% Rohasche, 0,7% Rohfaser<\/p>"
           }
         },
         "template--18569455370504__dc7e0102-22b3-4daf-bd82-5f03f036768e-button-1": {
           "type": "button",
           "settings": {
             "button_label": "Zum Produkt",
-            "button_link": "shopify:\/\/products\/pferd-mit-karotte-und-quinoa",
+            "button_link": "shopify:\/\/products\/hundekekse-quark-crunchies-mit-kurkuma-bierhefe-rapsol",
             "button_style_secondary": false
           }
         }
@@ -454,7 +454,7 @@
         "template--18569455370504__dc7e0102-22b3-4daf-bd82-5f03f036768e-button-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/pferd_800g.png",
+        "image": "shopify:\/\/shop_images\/quark.png",
         "height": "medium",
         "image_crop": "no-crop",
         "rounded_corners": "not-rounded",
