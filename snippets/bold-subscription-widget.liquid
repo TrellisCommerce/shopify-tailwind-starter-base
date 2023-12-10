@@ -1,0 +1,800 @@
+<script>
+    // empty script tag to work around a platform issue where attributes of first script in file are scrubbed
+</script>
+
+<script id="bold-subscriptions-script" type="text/javascript">
+    window.BOLD = window.BOLD || {};
+    window.BOLD.subscriptions = window.BOLD.subscriptions || {};
+    window.BOLD.subscriptions.config = window.BOLD.subscriptions.config || {};
+    window.BOLD.subscriptions.config.legacyAssetsLoaded = true;
+
+    if (!window.BOLD.subscriptions.config.isAppEmbedEnabled) {
+        window.BOLD.subscriptions.classes = window.BOLD.subscriptions.classes || {};
+        window.BOLD.subscriptions.patches = window.BOLD.subscriptions.patches || {};
+        window.BOLD.subscriptions.patches.maxCheckoutRetries = window.BOLD.subscriptions.patches.maxCheckoutRetries || 200;
+        window.BOLD.subscriptions.patches.currentCheckoutRetries = window.BOLD.subscriptions.patches.currentCheckoutRetries || 0;
+        window.BOLD.subscriptions.patches.maxCashierPatchAttempts = window.BOLD.subscriptions.patches.maxCashierPatchAttempts || 200;
+        window.BOLD.subscriptions.patches.currentCashierPatchAttempts = window.BOLD.subscriptions.patches.currentCashierPatchAttempts || 0;
+        window.BOLD.subscriptions.config.platform = 'shopify';
+        window.BOLD.subscriptions.config.shopDomain = 'uncle-rusty-naturreine-hundenahrung.myshopify.com';
+        window.BOLD.subscriptions.config.customDomain = 'unclerustys.de';
+        window.BOLD.subscriptions.config.shopIdentifier = '55834411171';
+                    window.BOLD.subscriptions.config.appUrl = 'https://sub.boldapps.net';
+        window.BOLD.subscriptions.config.currencyCode = 'EUR';
+        window.BOLD.subscriptions.config.checkoutType = 'shopify';
+        window.BOLD.subscriptions.config.currencyFormat = "\u20ac\u0026#123;\u0026#123;amount_with_comma_separator}}";
+        window.BOLD.subscriptions.config.shopCurrencies = [{"id":3389,"currency":"EUR","currency_format":"\u0026euro;\u0026#123;\u0026#123;amount}}","created_at":"2021-09-02 10:55:53","updated_at":"2021-09-02 10:55:53"}];
+        window.BOLD.subscriptions.config.shopSettings = {"allow_msp_cancellation":true,"allow_msp_prepaid_renewal":true,"customer_can_pause_subscription":true,"customer_can_change_next_order_date":true,"customer_can_change_order_frequency":true,"customer_can_create_an_additional_order":true,"customer_can_use_passwordless_login":false,"customer_passwordless_login_redirect":false,"customer_can_add_products_to_existing_subscriptions":true,"show_currency_code":true,"stored_payment_method_policy":"required","customer_portal_path":"pages\/mein-abo"};
+        window.BOLD.subscriptions.config.customerLoginPath = null;
+
+        // TODO: Remove the isset with BS2-4659_improve_large_group_selection
+                    window.BOLD.subscriptions.config.loadSubscriptionGroupFrom = 'default';
+                                window.BOLD.subscriptions.config.loadSubscriptionGroupFromTypes = {"DEFAULT":"default","BSUB_API":"bsub_api"};
+                    window.BOLD.subscriptions.config.cashierPluginOnlyMode = window.BOLD.subscriptions.config.cashierPluginOnlyMode || false;
+        if (window.BOLD.subscriptions.config.waitForCheckoutLoader === undefined) {
+            window.BOLD.subscriptions.config.waitForCheckoutLoader = true;
+        }
+
+        window.BOLD.subscriptions.config.addToCartFormSelectors = window.BOLD.subscriptions.config.addToCartFormSelectors || [];
+        window.BOLD.subscriptions.config.addToCartButtonSelectors = window.BOLD.subscriptions.config.addToCartButtonSelectors || [];
+        window.BOLD.subscriptions.config.widgetInsertBeforeSelectors = window.BOLD.subscriptions.config.widgetInsertBeforeSelectors || [];
+        window.BOLD.subscriptions.config.quickAddToCartButtonSelectors = window.BOLD.subscriptions.config.quickAddToCartButtonSelectors || [];
+        window.BOLD.subscriptions.config.cartElementSelectors = window.BOLD.subscriptions.config.cartElementSelectors || [];
+        window.BOLD.subscriptions.config.cartTotalElementSelectors = window.BOLD.subscriptions.config.cartTotalElementSelectors || [];
+        window.BOLD.subscriptions.config.lineItemSelectors = window.BOLD.subscriptions.config.lineItemSelectors || [];
+        window.BOLD.subscriptions.config.lineItemNameSelectors = window.BOLD.subscriptions.config.lineItemNameSelectors || [];
+        window.BOLD.subscriptions.config.checkoutButtonSelectors = window.BOLD.subscriptions.config.checkoutButtonSelectors || [];
+
+        window.BOLD.subscriptions.config.featureFlags = window.BOLD.subscriptions.config.featureFlags || ["BE-1563-direct-checkout-url","BE-1641-throttle-requests-to-bold-platform","BS2-4293-skip-tx-fee-eq-zero","BE-1614-use-seletedDate-for-offset","BE-1642-bold-checkout-line-item-price","BE-1692-do-not-overwrite-newly-created-addresses"];
+        window.BOLD.subscriptions.config.subscriptionProcessingFrequency = '60';
+        window.BOLD.subscriptions.config.requireMSPInitialLoadingMessage = true;
+        window.BOLD.subscriptions.data = window.BOLD.subscriptions.data || {};
+
+        // Interval text markup template
+        window.BOLD.subscriptions.config.lineItemPropertyListSelectors = window.BOLD.subscriptions.config.lineItemPropertyListSelectors || [];
+        window.BOLD.subscriptions.config.lineItemPropertyListSelectors.push('dl.definitionList');
+        window.BOLD.subscriptions.config.lineItemPropertyListTemplate = window.BOLD.subscriptions.config.lineItemPropertyListTemplate || '<dl class="definitionList"></dl>';
+        window.BOLD.subscriptions.config.lineItemPropertyTemplate = window.BOLD.subscriptions.config.lineItemPropertyTemplate || '<dt class="definitionList-key">\{{key}}:</dt><dd class="definitionList-value">\{{value}}</dd>';
+
+        // Discount text markup template
+        window.BOLD.subscriptions.config.discountItemTemplate = window.BOLD.subscriptions.config.discountItemTemplate || '<div class="bold-subscriptions-discount"><div class="bold-subscriptions-discount__details">\{{details}}</div><div class="bold-subscriptions-discount__total">\{{total}}</div></div>';
+
+
+        // Constants in XMLHttpRequest are not reliable, so we will create our own
+        // reference: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
+        window.BOLD.subscriptions.config.XMLHttpRequest = {
+            UNSENT:0,            // Client has been created. open() not called yet.
+            OPENED: 1,           // open() has been called.
+            HEADERS_RECEIVED: 2, // send() has been called, and headers and status are available.
+            LOADING: 3,          // Downloading; responseText holds partial data.
+            DONE: 4              // The operation is complete.
+        };
+
+        window.BOLD.subscriptions.config.assetBaseUrl = 'https://sub.boldapps.net';
+        if (window.localStorage && window.localStorage.getItem('boldSubscriptionsAssetBaseUrl')) {
+            window.BOLD.subscriptions.config.assetBaseUrl = window.localStorage.getItem('boldSubscriptionsAssetBaseUrl')
+        }
+
+        window.BOLD.subscriptions.data.subscriptionGroups = [];
+        if (localStorage && localStorage.getItem('boldSubscriptionsSubscriptionGroups')) {
+            window.BOLD.subscriptions.data.subscriptionGroups = JSON.parse(localStorage.getItem('boldSubscriptionsSubscriptionGroups'));
+        } else {
+            window.BOLD.subscriptions.data.subscriptionGroups = [{"id":14181,"billing_rules":[{"id":39247,"subscription_group_id":14181,"interval_name":"Dein Monatsabo","billing_rule":"FREQ=MONTHLY;BYMONTHDAY=1","custom_billing_rule":""}],"is_subscription_only":false,"allow_prepaid":false,"is_prepaid_only":false,"should_continue_prepaid":true,"continue_prepaid_type":"as_prepaid","prepaid_durations":[{"id":14136,"subscription_group_id":14181,"total_duration":1,"discount_type":"percentage","discount_value":0}],"selection_options":[{"platform_entity_id":"6660985946275"},{"platform_entity_id":"6662041534627"},{"platform_entity_id":"6662171066531"},{"platform_entity_id":"7157306654883"},{"platform_entity_id":"7232230228131"},{"platform_entity_id":"7232231768227"},{"platform_entity_id":"7232240451747"},{"platform_entity_id":"7232241565859"},{"platform_entity_id":"7232242286755"},{"platform_entity_id":"7533722927267"},{"platform_entity_id":"7605877899427"}],"discount_type":"percentage","percent_discount":10,"fixed_discount":0,"can_add_to_cart":true},{"id":27593,"billing_rules":[{"id":60866,"subscription_group_id":27593,"interval_name":"Deine Monatspaket bei Uncle Rusty\u0027s","billing_rule":"FREQ=MONTHLY","custom_billing_rule":""}],"is_subscription_only":false,"allow_prepaid":false,"is_prepaid_only":false,"should_continue_prepaid":true,"continue_prepaid_type":"as_prepaid","prepaid_durations":[{"id":27528,"subscription_group_id":27593,"total_duration":1,"discount_type":"percentage","discount_value":0}],"selection_options":[{"platform_entity_id":"7605947367587"},{"platform_entity_id":"7967389942024"},{"platform_entity_id":"7967783223560"},{"platform_entity_id":"7967786074376"},{"platform_entity_id":"7967787057416"},{"platform_entity_id":"7967791415560"},{"platform_entity_id":"7967793250568"}],"discount_type":"percentage","percent_discount":5,"fixed_discount":0,"can_add_to_cart":true}];
+        }
+
+        window.BOLD.subscriptions.isFeatureFlagEnabled = function (featureFlag) {
+            for (var i = 0; i < window.BOLD.subscriptions.config.featureFlags.length; i++) {
+                if (window.BOLD.subscriptions.config.featureFlags[i] === featureFlag){
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        window.BOLD.subscriptions.logger = {
+            tag: "bold_subscriptions",
+            // the bold subscriptions log level
+            // 0 - errors (default)
+            // 1 - warnings + errors
+            // 2 - info + warnings + errors
+            // use window.localStorage.setItem('boldSubscriptionsLogLevel', x) to set the log level
+            levels: {
+                ERROR: 0,
+                WARN: 1,
+                INFO: 2,
+            },
+            level: parseInt((window.localStorage && window.localStorage.getItem('boldSubscriptionsLogLevel')) || "0", 10),
+            _log: function(callArgs, level) {
+                if (!window.console) {
+                    return null;
+                }
+
+                if (window.BOLD.subscriptions.logger.level < level) {
+                    return;
+                }
+
+                var params = Array.prototype.slice.call(callArgs);
+                params.unshift(window.BOLD.subscriptions.logger.tag);
+
+                switch (level) {
+                    case window.BOLD.subscriptions.logger.levels.INFO:
+                        console.info.apply(null, params);
+                        return;
+                    case window.BOLD.subscriptions.logger.levels.WARN:
+                        console.warn.apply(null, params);
+                        return;
+                    case window.BOLD.subscriptions.logger.levels.ERROR:
+                        console.error.apply(null, params);
+                        return;
+                    default:
+                        console.log.apply(null, params);
+                        return;
+                }
+            },
+            info: function() {
+                window.BOLD.subscriptions.logger._log(arguments, window.BOLD.subscriptions.logger.levels.INFO);
+            },
+            warn: function() {
+                window.BOLD.subscriptions.logger._log(arguments, window.BOLD.subscriptions.logger.levels.WARN);
+            },
+            error: function() {
+                window.BOLD.subscriptions.logger._log(arguments, window.BOLD.subscriptions.logger.levels.ERROR);
+            }
+        }
+
+        window.BOLD.subscriptions.shouldLoadSubscriptionGroupFromAPI = function() {
+            return window.BOLD.subscriptions.config.loadSubscriptionGroupFrom === window.BOLD.subscriptions.config.loadSubscriptionGroupFromTypes['BSUB_API'];
+        }
+
+        window.BOLD.subscriptions.getSubscriptionGroupFromProductId = function (productId) {
+            var data = window.BOLD.subscriptions.data;
+            var foundGroup = null;
+            for (var i = 0; i < data.subscriptionGroups.length; i += 1) {
+                var subscriptionGroup = data.subscriptionGroups[i];
+                for (var j = 0; j < subscriptionGroup.selection_options.length; j += 1) {
+                    var selectionOption = subscriptionGroup.selection_options[j];
+                    if (selectionOption.platform_entity_id === productId.toString()) {
+                        foundGroup = subscriptionGroup;
+                        break;
+                    }
+                }
+                if (foundGroup) {
+                    break;
+                }
+            }
+            return foundGroup;
+        };
+
+        window.BOLD.subscriptions.getSubscriptionGroupById = function(subGroupId) {
+            var subscriptionGroups = window.BOLD.subscriptions.data.subscriptionGroups;
+
+            for (var i = 0; i < subscriptionGroups.length; i += 1) {
+                var subGroup = subscriptionGroups[i];
+                if (subGroup.id === subGroupId) {
+                    return subGroup;
+                }
+            }
+
+            return null;
+        };
+
+        window.BOLD.subscriptions.addSubscriptionGroup = function (subscriptionGroup) {
+            if(!window.BOLD.subscriptions.getSubscriptionGroupById(subscriptionGroup.id))
+            {
+                window.BOLD.subscriptions.data.subscriptionGroups.push(subscriptionGroup);
+            }
+        }
+
+        window.BOLD.subscriptions.getSubscriptionGroupPrepaidDurationById = function(subscriptionGroupId, prepaidDurationId) {
+            var subscriptionGroup = window.BOLD.subscriptions.getSubscriptionGroupById(subscriptionGroupId);
+
+            if (
+                !subscriptionGroup
+                || !subscriptionGroup.prepaid_durations
+                || !subscriptionGroup.prepaid_durations.length
+            ) {
+                return null;
+            }
+
+            for (var i = 0; i < subscriptionGroup.prepaid_durations.length; i++) {
+                var prepaidDuration = subscriptionGroup.prepaid_durations[i];
+                if (prepaidDuration.id === prepaidDurationId) {
+                    return prepaidDuration;
+                }
+            }
+
+            return null;
+        }
+
+        window.BOLD.subscriptions.getSubscriptionGroupBillingRuleById = function(subGroup, billingRuleId) {
+            for (var i = 0; i < subGroup.billing_rules.length; i += 1) {
+                var billingRule = subGroup.billing_rules[i];
+                if (billingRule.id === billingRuleId) {
+                    return billingRule;
+                }
+            }
+
+            return null;
+        };
+
+        window.BOLD.subscriptions.toggleDisabledAddToCartButtons = function(d) {
+            var addToCartForms = document.querySelectorAll(window.BOLD.subscriptions.config.addToCartFormSelectors.join(','));
+            var disable = !!d;
+            for (var i = 0; i < addToCartForms.length; i++) {
+                var addToCartForm = addToCartForms[i];
+                var productId = window.BOLD.subscriptions.getProductIdFromAddToCartForm(addToCartForm);
+                var subscriptionGroup = window.BOLD.subscriptions.getSubscriptionGroupFromProductId(productId);
+
+                if(window.BOLD.subscriptions.isFeatureFlagEnabled('BS2-4659_improve_large_group_selection') ) {
+                    if (subscriptionGroup || window.BOLD.subscriptions.shouldLoadSubscriptionGroupFromAPI()) {
+                        var addToCartButtons = addToCartForm.querySelectorAll(window.BOLD.subscriptions.config.addToCartButtonSelectors.join(','));
+                        for (var j = 0; j < addToCartButtons.length; j++) {
+                            var addToCartButton = addToCartButtons[j];
+                            var toggleAction = disable ?  addToCartButton.setAttribute : addToCartButton.removeAttribute;
+
+                            addToCartButton.disabled = disable;
+                            toggleAction.call(addToCartButton, 'data-disabled-by-subscriptions', disable);
+                        }
+                    }
+                } else {
+                    if (subscriptionGroup) {
+                        var addToCartButtons = addToCartForm.querySelectorAll(window.BOLD.subscriptions.config.addToCartButtonSelectors.join(','));
+                        for (var j = 0; j < addToCartButtons.length; j++) {
+                            var addToCartButton = addToCartButtons[j];
+                            var toggleAction = disable ?  addToCartButton.setAttribute : addToCartButton.removeAttribute;
+
+                            addToCartButton.disabled = disable;
+                            toggleAction.call(addToCartButton, 'data-disabled-by-subscriptions', disable);
+                        }
+                    }
+                }
+
+            }
+        };
+
+        window.BOLD.subscriptions.disableAddToCartButtons = function () {
+            // only disable the add to cart buttons if the app isn't loaded yet
+            if (!window.BOLD.subscriptions.app) {
+                window.BOLD.subscriptions.toggleDisabledAddToCartButtons(true);
+            } else {
+                window.BOLD.subscriptions.enableAddToCartButtons();
+            }
+        };
+
+        window.BOLD.subscriptions.enableAddToCartButtons = function () {
+            document.removeEventListener('click', window.BOLD.subscriptions.preventSubscriptionAddToCart);
+            window.BOLD.subscriptions.toggleDisabledAddToCartButtons(false);
+        };
+
+        window.BOLD.subscriptions.toggleDisabledCheckoutButtons = function(d) {
+            var checkoutButtons = document.querySelectorAll(window.BOLD.subscriptions.config.checkoutButtonSelectors.join(','));
+            var disable = !!d;
+            for (var i = 0; i < checkoutButtons.length; i++) {
+                var checkoutButton = checkoutButtons[i];
+                var toggleAction = disable ? checkoutButton.setAttribute : checkoutButton.removeAttribute;
+
+                checkoutButton.disabled = disable;
+                toggleAction.call(checkoutButton, 'data-disabled-by-subscriptions', disable);
+            }
+        }
+
+        window.BOLD.subscriptions.disableCheckoutButtons = function() {
+            // only disable the checkout buttons if the app isn't loaded yet
+            if (!window.BOLD.subscriptions.app) {
+                window.BOLD.subscriptions.toggleDisabledCheckoutButtons(true);
+            } else {
+                window.BOLD.subscriptions.enableCheckoutButtons();
+            }
+        }
+
+        window.BOLD.subscriptions.enableCheckoutButtons = function() {
+            document.removeEventListener('click', window.BOLD.subscriptions.preventCheckout);
+            window.BOLD.subscriptions.toggleDisabledCheckoutButtons(false);
+        }
+
+        window.BOLD.subscriptions.hasSuccessfulAddToCarts = function() {
+            if (typeof(Storage) !== "undefined") {
+                var successfulAddToCarts = JSON.parse(
+                    window.localStorage.getItem('boldSubscriptionsSuccessfulAddToCarts') || '[]'
+                );
+                if (successfulAddToCarts.length > 0) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        window.BOLD.subscriptions.hasPendingAddToCarts = function() {
+            if (typeof(Storage) !== "undefined") {
+                var pendingAddToCarts = JSON.parse(
+                    window.localStorage.getItem('boldSubscriptionsPendingAddToCarts') || '[]'
+                );
+                if (pendingAddToCarts.length > 0) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        window.BOLD.subscriptions.addJSAsset = function(src, deferred) {
+            var scriptTag = document.getElementById('bold-subscriptions-script');
+            var jsElement = document.createElement('script');
+            jsElement.type = 'text/javascript';
+            jsElement.src = src;
+            if (deferred) {
+                jsElement.defer = true;
+            }
+            scriptTag.parentNode.insertBefore(jsElement, scriptTag);
+        };
+
+        window.BOLD.subscriptions.addCSSAsset = function(href) {
+            var scriptTag = document.getElementById('bold-subscriptions-script');
+            var cssElement = document.createElement('link');
+            cssElement.href = href;
+            cssElement.rel = 'stylesheet';
+            scriptTag.parentNode.insertBefore(cssElement, scriptTag);
+        };
+
+        window.BOLD.subscriptions.loadStorefrontAssets = function loadStorefrontAssets() {
+            var assets = window.BOLD.subscriptions.config.assets;
+            window.BOLD.subscriptions.addCSSAsset(window.BOLD.subscriptions.config.assetBaseUrl + '/static/' + assets['storefront.css']);
+            window.BOLD.subscriptions.addJSAsset(window.BOLD.subscriptions.config.assetBaseUrl + '/static/' + assets['storefront.js'], false);
+        };
+
+        window.BOLD.subscriptions.loadCustomerPortalAssets = function loadCustomerPortalAssets() {
+            var assets = window.BOLD.subscriptions.config.assets;
+            window.BOLD.subscriptions.addCSSAsset(window.BOLD.subscriptions.config.assetBaseUrl + '/static/' + assets['customer_portal.css']);
+            window.BOLD.subscriptions.addJSAsset(window.BOLD.subscriptions.config.assetBaseUrl + '/static/' + assets['customer_portal.js'], true);
+        };
+
+        window.BOLD.subscriptions.processManifest = function() {
+            if (!window.BOLD.subscriptions.processedManifest) {
+                window.BOLD.subscriptions.processedManifest = true;
+                window.BOLD.subscriptions.config.assets = JSON.parse(this.responseText);
+
+                                window.BOLD.subscriptions.loadCustomerPortalAssets();
+            }
+        };
+
+        window.BOLD.subscriptions.addInitialLoadingMessage = function() {
+            var customerPortalNode = document.getElementById('customer-portal-root');
+            if (customerPortalNode && window.BOLD.subscriptions.config.requireMSPInitialLoadingMessage) {
+                customerPortalNode.innerHTML = '<div class="bold-subscriptions-loader-container"><div class="bold-subscriptions-loader"></div></div>';
+            }
+        }
+
+        window.BOLD.subscriptions.contentLoaded = function() {
+            window.BOLD.subscriptions.data.contentLoadedEventTriggered = true;
+            window.BOLD.subscriptions.addInitialLoadingMessage();
+                    };
+
+        window.BOLD.subscriptions.preventSubscriptionAddToCart = function(e) {
+            if (e.target.matches(window.BOLD.subscriptions.config.addToCartButtonSelectors.join(',')) && e.target.form) {
+                var productId = window.BOLD.subscriptions.getProductIdFromAddToCartForm(e.target.form);
+                var subscriptionGroup = window.BOLD.subscriptions.getSubscriptionGroupFromProductId(productId);
+                if(window.BOLD.subscriptions.isFeatureFlagEnabled('BS2-4659_improve_large_group_selection'))
+                {
+                    if (subscriptionGroup || window.BOLD.subscriptions.shouldLoadSubscriptionGroupFromAPI()) {
+                        // This code prevents products in subscription groups from being added to the cart before the
+                        // Subscriptions app fully loads. Once the subscriptions app loads it will re-enable the
+                        // buttons. Use window.BOLD.subscriptions.enableAddToCartButtons enable them manually.
+                        e.preventDefault();
+                        return false;
+                    }
+                } else {
+                    if (subscriptionGroup) {
+                        // This code prevents products in subscription groups from being added to the cart before the
+                        // Subscriptions app fully loads. Once the subscriptions app loads it will re-enable the
+                        // buttons. Use window.BOLD.subscriptions.enableAddToCartButtons enable them manually.
+                        e.preventDefault();
+                        return false;
+                    }
+                }
+
+            }
+        };
+
+        window.BOLD.subscriptions.preventCheckout = function(e) {
+            if (
+                e.target.matches(window.BOLD.subscriptions.config.checkoutButtonSelectors.join(','))
+                && (window.BOLD.subscriptions.hasSuccessfulAddToCarts() || window.BOLD.subscriptions.hasPendingAddToCarts())
+            ) {
+                // This code prevents checkouts on the shop until the Subscriptions app fully loads.
+                // When the Subscriptions app is ready it will enable the checkout buttons itself.
+                // Use window.BOLD.subscriptions.enableCheckoutButtons to enable them manually.
+                e.preventDefault();
+                return false;
+            }
+        }
+
+                document.addEventListener('DOMContentLoaded', window.BOLD.subscriptions.contentLoaded);
+
+        if (!Element.prototype.matches) {
+            Element.prototype.matches =
+                Element.prototype.matchesSelector ||
+                Element.prototype.mozMatchesSelector ||
+                Element.prototype.msMatchesSelector ||
+                Element.prototype.oMatchesSelector ||
+                Element.prototype.webkitMatchesSelector ||
+                function(s) {
+                    var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+                        i = matches.length;
+                    while (--i >= 0 && matches.item(i) !== this) {}
+                    return i > -1;
+                };
+        }
+
+        if (!Element.prototype.closest) {
+            Element.prototype.closest = function(s) {
+                var el = this;
+
+                do {
+                    if (Element.prototype.matches.call(el, s)) return el;
+                    el = el.parentElement || el.parentNode;
+                } while (el !== null && el.nodeType === 1);
+                return null;
+            };
+        }
+
+        window.BOLD.subscriptions.setVisibilityOfAdditionalCheckoutButtons = function (isVisible) {
+            if (window.BOLD.subscriptions.config.additionalCheckoutSelectors === undefined) {
+                return;
+            }
+
+            var selectors = window.BOLD.subscriptions.config.additionalCheckoutSelectors;
+
+            for (var i = 0; i < selectors.length; i++) {
+                var elements = document.querySelectorAll(selectors[i]);
+
+                for (var j = 0; j < elements.length; j++) {
+                    elements[j].style.display = isVisible ? 'block' : 'none';
+                }
+            }
+        }
+
+        window.BOLD.subscriptions.hideAdditionalCheckoutButtons = function() {
+            window.BOLD.subscriptions.setVisibilityOfAdditionalCheckoutButtons(false);
+        };
+
+        window.BOLD.subscriptions.showAdditionalCheckoutButtons = function() {
+            window.BOLD.subscriptions.setVisibilityOfAdditionalCheckoutButtons(true);
+        };
+
+        window.BOLD.subscriptions.enhanceMspUrls = function(data) {
+            var mspUrl = 'https://sub.boldapps.net/shop/7986/customer_portal';
+            var elements = document.querySelectorAll("a[href='"+mspUrl+"']");
+
+            if(!elements.length || !data.success) {
+                return;
+            }
+
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].href = elements[i].href + "?jwt="+data.value.jwt+"&customerId="+data.value.customerId;
+            }
+        };
+
+        window.addEventListener('load', function () {
+            window.BOLD.subscriptions.getJWT(window.BOLD.subscriptions.enhanceMspUrls);
+        });
+
+        // This will be called immediately
+        // Use this anonymous function to avoid polluting the global namespace
+        (function() {
+            var xhr = new XMLHttpRequest();
+            xhr.addEventListener('load', window.BOLD.subscriptions.processManifest);
+            xhr.open('GET', window.BOLD.subscriptions.config.assetBaseUrl + '/static/manifest.json?t=' + (new Date()).getTime());
+            xhr.send();
+        })()
+
+        window.BOLD.subscriptions.patches.patchCashier = function() {
+            if (window.BOLD && window.BOLD.checkout) {
+                window.BOLD.checkout.disable();
+                window.BOLD.checkout.listenerFn = window.BOLD.subscriptions.patches.cashierListenerFn;
+                window.BOLD.checkout.enable();
+            } else if (window.BOLD.subscriptions.patches.currentCashierPatchAttempts < window.BOLD.subscriptions.patches.maxCashierPatchAttempts) {
+                window.BOLD.subscriptions.patches.currentCashierPatchAttempts++;
+                setTimeout(window.BOLD.subscriptions.patches.patchCashier, 100);
+            }
+        };
+
+        window.BOLD.subscriptions.patches.finishCheckout = function(event, form, cart) {
+            window.BOLD.subscriptions.patches.currentCheckoutRetries++;
+
+            if (!window.BOLD.subscriptions.app
+                && window.BOLD.subscriptions.patches.currentCheckoutRetries < window.BOLD.subscriptions.patches.maxCheckoutRetries
+            ) {
+                setTimeout(function () { window.BOLD.subscriptions.patches.finishCheckout(event, form, cart); }, 100);
+                return;
+            } else if (window.BOLD.subscriptions.app) {
+                window.BOLD.subscriptions.patches.currentCheckoutRetries = 0;
+                window.BOLD.subscriptions.app.addCartParams(form, cart);
+            }
+
+            var noSubscriptions = false;
+            if ((window.BOLD.subscriptions.app && window.BOLD.subscriptions.app.successfulAddToCarts.length === 0)
+                || !window.BOLD.subscriptions.app
+            ) {
+                noSubscriptions = true;
+                event.target.dataset.cashierConfirmedNoPlugins = true;
+
+                if (window.BOLD.subscriptions.setCashierFeatureToken) {
+                    window.BOLD.subscriptions.setCashierFeatureToken(false);
+                }
+            }
+
+            if ((noSubscriptions && window.BOLD.subscriptions.config.cashierPluginOnlyMode)
+                || (typeof BOLD.checkout.isFeatureRequired === 'function' && !BOLD.checkout.isFeatureRequired())
+            ) {
+                // send them to the original checkout when in plugin only mode
+                // and either BSUB is there but there are no subscription products
+                // or BSUB isn't there at all
+                if (form.dataset.old_form_action) {
+                    form.action = form.dataset.old_form_action;
+                }
+                event.target.click();
+            } else {
+                // sends them to Cashier since BSUB got a chance to add it's stuff
+                // and plugin only mode is not enabled
+                form.submit();
+            }
+        };
+    }
+</script>
+
+<script id="bold-subscriptions-platform-script" type="text/javascript">
+    window.BOLD.subscriptions.config.shopPlatformId = '55834411171';
+    window.BOLD.subscriptions.config.appSlug = 'subscriptions';
+
+    window.BOLD = window.BOLD || {};
+    window.BOLD.subscriptions = window.BOLD.subscriptions || {};
+    window.BOLD.subscriptions.data = window.BOLD.subscriptions.data || {};
+    window.BOLD.subscriptions.data.platform = window.BOLD.subscriptions.data.platform || {};
+    window.BOLD.subscriptions.data.platform.customer = { id: '{{ customer.id }}' };
+    window.BOLD.subscriptions.data.platform.product = {{ product | json }};
+    window.BOLD.subscriptions.data.platform.products = [];
+    window.BOLD.subscriptions.data.platform.variantProductMap = {};
+
+    window.BOLD.subscriptions.addCachedProductData = function(products) {
+        // ignore [], null, and undefined
+        if (!products) {
+            return
+        }
+
+        if (!Array.isArray(products)) {
+            window.BOLD.subscriptions.logger.warn('products must be an array')
+            return
+        }
+
+        window.BOLD.subscriptions.data.platform.products.concat(products)
+
+        for (var i = 0; i < products.length; i++) {
+            var product = products[i];
+            for (var j = 0; j < product.variants.length; j++) {
+                var variant = product.variants[j];
+                window.BOLD.subscriptions.data.platform.variantProductMap[variant.id] = product;
+            }
+        }
+    }
+
+    {% if product != nil %}
+    window.BOLD.subscriptions.addCachedProductData([{{ product | json }}]);
+    {% endif %}
+    {% if collection != nil %}
+    window.BOLD.subscriptions.addCachedProductData({{ collection.products | json }});
+    {% endif %}
+    {% if search != nil %}
+    window.BOLD.subscriptions.addCachedProductData({{ search.results | json }});
+    {% endif %}
+
+    window.BOLD.subscriptions.config.addToCartFormSelectors.push(
+        '.product-form.product-form-product-template:not(.bold-subscriptions-no-widget)'
+        ,'.product-form.product-form--payment-button:not(.bold-subscriptions-no-widget)'
+    );
+    window.BOLD.subscriptions.config.addToCartButtonSelectors.push('[type="submit"]');
+    window.BOLD.subscriptions.config.quickAddToCartButtonSelectors.push('a[data-event-type="product-click"]');
+    window.BOLD.subscriptions.config.widgetInsertBeforeSelectors.push('[type="submit"]');
+    window.BOLD.subscriptions.config.cartElementSelectors.push('form[action="/cart"]');
+    window.BOLD.subscriptions.config.cartTotalElementSelectors.push('[data-cart-subtotal]', '.text-right .ajaxcart__subtotal');
+    window.BOLD.subscriptions.config.checkoutButtonSelectors.push(
+        '[name="checkout"]',
+        '[href*="checkout"]:not([href*="tools/checkout"])',
+        '[onclick*="checkout"]:not([onclick*="tools/checkout"])',
+    );
+
+    // Discount text markup template
+    // NOTE: @ on double curly, so blade doesn't interpret, and `raw` liquid tags so liquid doesn't interpret.
+    {% raw %}
+    window.BOLD.subscriptions.config.discountItemTemplate = '<div class="bold-subscriptions-discount"><div class="bold-subscriptions-discount__details">{{details}}</div><div class="bold-subscriptions-discount__total">{{total}}</div></div>';
+    {% endraw %}
+
+    window.BOLD.subscriptions.getProductIdFromAddToCartForm = function(addToCartForm) {
+        var idInput = addToCartForm.querySelector('[name="id"]');
+        if (idInput === null) {
+            window.BOLD.subscriptions.logger.error('could not get variant id input from add to cart form — make sure your form has an input with [name="id"]')
+            return null;
+        }
+
+        var variantId = parseInt(idInput.value, 10);
+        if (isNaN(variantId)) {
+            window.BOLD.subscriptions.logger.error('could not parse variant id from [name="id"] input')
+            return null;
+        }
+
+        var product = window.BOLD.subscriptions.data.platform.variantProductMap[variantId];
+
+        if (product === undefined) {
+            window.BOLD.subscriptions.logger.error('could not map variant id to cached product data — call window.BOLD.subscriptions.addCachedProductData(products) to add the product to the cache')
+            return null;
+        }
+
+        return product.id;
+    };
+
+    window.BOLD.subscriptions.getAddToCartForms = function() {
+        var forms = [];
+        var idInputs = document.querySelectorAll('[name="id"]');
+
+        for (var i = 0; i < idInputs.length; i++) {
+            var idInput = idInputs[i];
+            var form = idInput.closest('form:not(.bold-subscriptions-no-widget)');
+            if (form) {
+                forms.push(form);
+            }
+        }
+
+        return forms;
+    };
+
+    window.BOLD.subscriptions.getJWT = function (callback) {
+        if(window.BOLD.subscriptions.data.platform.customer.id !== '') {
+            var shopPlatformId = '55834411171';
+            var appSlug = 'subscriptions';
+            var customerPlatformId = window.BOLD.subscriptions.data.platform.customer.id;
+            var proxyPath = '/apps/app-proxy/customers/v1/shops/'+shopPlatformId+'/apps/'+appSlug+'/customers/pid/'+customerPlatformId+'/jwt';
+
+            var xmlhttp = new XMLHttpRequest();
+
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState === window.BOLD.subscriptions.config.XMLHttpRequest.DONE) {
+                    if (xmlhttp.status === 200) {
+                        var data = JSON.parse(xmlhttp.responseText);
+                        callback({
+                            success: true,
+                            value: {
+                                jwt: data.bold_platform_jwt,
+                                customerId: window.BOLD.subscriptions.data.platform.customer.id,
+                            },
+                        });
+                    } else if (xmlhttp.status === 404) {
+                        callback({
+                            success: false,
+                            error: 'not_logged_in',
+                        });
+                    } else {
+                        callback({
+                            success: false,
+                            error: 'unknown',
+                        });
+                    }
+                }
+            };
+
+            xmlhttp.open("GET", proxyPath, true);
+            xmlhttp.setRequestHeader('Accept', 'application/liquid');
+            xmlhttp.send();
+        } else {
+            callback({
+                success: false,
+                error: 'not_logged_in',
+            });
+        }
+    };
+
+    window.BOLD.subscriptions.setCashierFeatureToken = function(value) {
+        if (window.BOLD.checkout_features_defaults && window.BOLD.subscriptions.config.cashierApplicationUUID) {
+            window.BOLD.checkout_features_defaults.forEach(function(item) {
+                if (item.id === window.BOLD.subscriptions.config.cashierApplicationUUID) {
+                    item.require = value;
+                }
+            });
+        }
+    };
+
+    // Cashier patches
+    window.BOLD.subscriptions.patches.cashierListenerFn = function(event) {
+        if (window.BOLD.checkout.isCheckoutButton(event.target) && window.BOLD.checkout.isEnabled()) {
+            window.BOLD.subscriptions.patches.pushToCashier(event);
+        } else if(window.BOLD.checkout.isCheckoutButton(event.target) && typeof window.cashier_installed_on_site === 'undefined') {
+            var request = new XMLHttpRequest();
+            request.open('HEAD', '/apps/checkout/isInstalled', false);
+            request.send(null);
+
+            if(request.status >= 200 && request.status < 400) {
+                window.BOLD.subscriptions.patches.pushToCashier(event);
+            } else {
+                window.cashier_installed_on_site = false;
+            }
+        }
+    };
+
+    window.BOLD.subscriptions.localTime = function() {
+        var localDate = new Date();
+        return localDate.getTime();
+    };
+
+
+    window.BOLD.subscriptions.patches.pushToCashier = function(event) {
+        event.preventDefault();
+        var form = window.BOLD.checkout.getForm(event.target);
+        var formData = new FormData(form);
+        var request = new XMLHttpRequest();
+        request.open('POST', '/cart/update.js?tmp=' + Date.now(), true);
+        request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+        request.onload = function() {
+            if (request.status >= 200 && request.status < 400) {
+                // Success!
+                var cart = JSON.parse(request.responseText);
+
+                // If items are empty redirect back to the cart
+                if (cart.items.length === 0) {
+                    return window.location.href = '/cart';
+                }
+
+                cart.items.forEach(function(element) {
+                    delete element.product_description;
+                });
+
+                if (document.getElementById('CartSpecialInstructions')) {
+                    // If the cart note exists, grab its value
+                    cart.note = document.getElementById('CartSpecialInstructions').value;
+                }
+
+                var cartObj = JSON.stringify(cart);
+
+                var form = window.BOLD.checkout.getForm(event.target);
+                form.dataset.old_form_action = form.action;
+                form.action = '/apps/checkout/begin-checkout' + googleAnalyticsGetParamString({});
+                var cartCookie = window.BOLD.checkout.getCookie('cart');
+                var element = document.createElement('INPUT');
+                element.type = 'HIDDEN';
+                element.name = 'cart_id';
+                element.value = cartCookie;
+                form.appendChild(element);
+
+                var dateElement = document.createElement('INPUT');
+                dateElement.type = 'HIDDEN';
+                dateElement.name = 'checkout_local_time';
+                dateElement.value = window.BOLD.subscriptions.localTime();
+                form.appendChild(dateElement);
+
+                var cartElement = document.createElement('INPUT');
+                cartElement.type = 'HIDDEN';
+                cartElement.name = 'cart';
+                cartElement.value = cartObj;
+                form.appendChild(cartElement);
+                form.method = 'POST';
+
+                if(window.BOLD && window.BOLD.checkout && typeof window.BOLD.checkout.languageIsoCode === 'string') {
+                    var langInput = document.createElement('INPUT');
+                    langInput.type = 'HIDDEN';
+                    langInput.name = 'language_iso';
+                    langInput.value = window.BOLD.checkout.languageIsoCode;
+                    form.appendChild(langInput);
+                }
+
+                if (window.BOLD && window.BOLD.common && typeof window.BOLD.common.eventEmitter === 'object' && typeof window.BOLDCURRENCY !== 'undefined') {
+                    window.BOLD.common.eventEmitter.emit('BOLD_CASHIER_checkout', {target: form});
+                }
+
+                window.BOLD.subscriptions.patches.finishCheckout(event, form, cart);
+            }
+        };
+
+        request.send(formData);
+    };
+
+    </script>
+

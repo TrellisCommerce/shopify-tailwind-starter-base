@@ -268,7 +268,8 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-  </head>
+    {%- render 'bold-subscription-widget' -%}
+</head>
 
   <body class='gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}'>
     <a class='skip-to-content-link button visually-hidden' href='#MainContent'>
