@@ -330,14 +330,14 @@
         "template--18569455370504__6d0925c9-8ace-4364-ac10-6283f37b258f-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "Lachs mit Kürbis, Haferkleie und Apfel",
+            "heading": "Hundekekse: Leberwurst Kracker mit Haferflocken, Ei & Rapsöl",
             "heading_size": "h2"
           }
         },
         "template--18569455370504__6d0925c9-8ace-4364-ac10-6283f37b258f-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Unser Lachsmenü ist der <strong>schonende Powerlieferant <\/strong>für Deinen Hund<strong>. <\/strong>Wir verwenden hochwertigen Lachs und kombinieren diesen mit naturbelassenen Zutaten wie Kürbis, Haferkleie und Apfel. Ein Genuss für jeden Vierbeiner. Eignet sich gut für aktive und kräftige Hunde. Eine gute Grundbasis für Deinen Hund!<\/p>",
+            "text": "<p>Komme in den Genuss und entdecke die gut bekömmlichen und schmackhaften Hundekekse von Uncle Rusty's. In feinster Handarbeit werden die leckeren Happen unter ausschließlicher Verwendung von hochwertigen Zutaten gebacken.<\/p>",
             "text_style": "body"
           }
         },
@@ -347,7 +347,7 @@
             "icon_selection": "icon-meat-color",
             "icon_text": "Zusammensetzung",
             "show_accordion": true,
-            "richtext": "<p>50% Muskelfleisch vom Lachs, 15% Kürbis, 12% Haferkleie, 8% Apfel, 0,47% Algenkalk<\/p><p>Das Lachsmenü enthält 14,53% Fleischbrühe<\/p>"
+            "richtext": "<p>Dinkelmehl, Leberwurst, Haferflocken, Hühnerei, Rapsöl<\/p>"
           }
         },
         "c390a3b9-59c7-464f-b6bd-5fff5a4ac3c5": {
@@ -356,14 +356,14 @@
             "icon_selection": "icon-organic-color",
             "icon_text": "Vitamine, Mengen- & Spurenelemente",
             "show_accordion": true,
-            "richtext": "<p>12,10% Rohprotein; 13,50% Rohfett; 1,30% Rohasche; 0,40% Rohfaser; 60,80% Feuchtigkeit; 0,27% Calcium; 0,21% Phosphor <br\/><em>Vitamine im natürlichen Anteil<\/em><\/p>"
+            "richtext": "<p>Rohprotein 21,2%, Rohfett 14,6%, Rohasche 2,0%, Rofaser 0,7%<\/p>"
           }
         },
         "template--18569455370504__6d0925c9-8ace-4364-ac10-6283f37b258f-button-1": {
           "type": "button",
           "settings": {
             "button_label": "Zum Produkt",
-            "button_link": "shopify:\/\/products\/lachsmenu-abo",
+            "button_link": "shopify:\/\/products\/hundekekse-leberwurst-kracker-mit-haferflocken-ei-rapsol",
             "button_style_secondary": false
           }
         }
@@ -377,7 +377,7 @@
         "template--18569455370504__6d0925c9-8ace-4364-ac10-6283f37b258f-button-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/lachs_800g.png",
+        "image": "shopify:\/\/shop_images\/leberwurst.png",
         "height": "medium",
         "image_crop": "no-crop",
         "rounded_corners": "not-rounded",
