@@ -2270,6 +2270,11 @@ progress[value]::-moz-progress-bar {
      object-fit: contain;
 }
 
+.image-with-text__media.rounded {
+  border-radius: 25px !important;
+  overflow: hidden !important;
+}
+
 .last-of-type\:xborder-none:last-of-type {
   border-style: none;
 }
