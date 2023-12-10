@@ -5,13 +5,13 @@
       "blocks": {
         "template--20724493582631__30fbf7e1-21c6-45a8-834f-aa38c719a695-hero-slide-1": {
           "type": "hero-slide",
-          "disabled": true,
           "settings": {
             "hero_image": "shopify:\/\/shop_images\/comp1_Kopie.jpg",
             "hero_text": "<h1>Die Natur <br\/>in jeder Mahlzeit<\/h1><p>Echtes Handwerk, echter Geschmack. Spare beim Kauf unseres Slow-Cooked Premium Nassfutters.<\/p>",
             "button_link": "shopify:\/\/collections\/all",
             "button_label": "Jetzt entdecken",
-            "theme_mode": "light"
+            "theme_mode": "light",
+            "blur": "no-blur"
           }
         },
         "c9a19ac3-ae3f-438f-bc8e-62e83fcddfae": {
@@ -21,18 +21,19 @@
             "hero_text": "<h1>Mehr als nur<br\/>ein Hundefutter<\/h1><p>Ausgewählte, regionale Zutaten <br\/>- sorgfältig verarbeitet. <br\/>Weil Qualität in jedem Bissen zählt.<\/p>",
             "button_link": "shopify:\/\/collections\/all",
             "button_label": "Jetzt entdecken",
-            "theme_mode": "dark"
+            "theme_mode": "dark",
+            "blur": "blur"
           }
         },
         "ca9378e3-b3fb-4caf-910c-45c8755a8e86": {
           "type": "hero-slide",
-          "disabled": true,
           "settings": {
             "hero_image": "shopify:\/\/shop_images\/comp3_wide.jpg",
             "hero_text": "<h1>Exklusivität, <br\/>die überzeugt<\/h1><p>Entdecke exklusive Angebote nur bei Uncle Rusty's und spüre den Unterschied.<\/p>",
             "button_link": "shopify:\/\/collections\/all",
             "button_label": "Jetzt entdecken",
-            "theme_mode": "light"
+            "theme_mode": "light",
+            "blur": "no-blur"
           }
         }
       },
@@ -279,7 +280,8 @@
         "button2_text": "Ernährungsberatung",
         "button2_link": "shopify:\/\/pages\/beratung",
         "newsletter": "false",
-        "theme_mode": "light"
+        "theme_mode": "light",
+        "desktop_blur": "no-desktop-blur"
       }
     },
     "1694590585319894d8": {
@@ -634,7 +636,8 @@
         "button2_text": "",
         "button2_link": "",
         "newsletter": "true",
-        "theme_mode": "light"
+        "theme_mode": "light",
+        "desktop_blur": "no-desktop-blur"
       }
     },
     "build-a-box": {
@@ -778,7 +781,7 @@
         "0d331331-f64a-4ffd-9edf-45d20f706b77": {
           "type": "icon-text",
           "settings": {
-            "icon_selection": "icon-organic-color",
+            "icon_selection": "icon-lightbulb",
             "icon_text": "Inspiration - Rusty, der Beginn unserer Reise",
             "show_accordion": false,
             "richtext": "<p>Test Details Accordion <\/p>"
@@ -787,7 +790,7 @@
         "04544f39-b233-4153-a50d-ca2cb01b6274": {
           "type": "icon-text",
           "settings": {
-            "icon_selection": "icon-no-gluten-color",
+            "icon_selection": "icon-dog",
             "icon_text": "Individualität - Jedes Menü, einzigartig wie dein Hund",
             "show_accordion": false,
             "richtext": "<p>Test Details Accordion <\/p>"
@@ -796,7 +799,7 @@
         "007035b8-304e-4acf-ac27-bedfe03d79a5": {
           "type": "icon-text",
           "settings": {
-            "icon_selection": "icon-no-chemicals-color",
+            "icon_selection": "icon-certificate",
             "icon_text": "Transparenz - Klarheit von Anfang bis Ende",
             "show_accordion": false,
             "richtext": "<p>Test Details Accordion <\/p>"
@@ -805,7 +808,7 @@
         "3551eac1-1b96-49ad-ae2e-95c7080d8117": {
           "type": "icon-text",
           "settings": {
-            "icon_selection": "icon-no-animals-color",
+            "icon_selection": "icon-lederhosen",
             "icon_text": "Tradition - Bewährte Methoden, modern interpretiert",
             "show_accordion": false,
             "richtext": "<p>Test Details Accordion <\/p>"
