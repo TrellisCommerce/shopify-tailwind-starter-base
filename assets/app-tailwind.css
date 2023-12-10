@@ -920,3 +920,12 @@ ul {
   object-position: left;
   object-position: bottom;
 }
+
+.card__heading {
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.custom-number-input {
+  touch-action: manipulation;
+}
