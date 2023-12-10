@@ -241,6 +241,15 @@
             "row_content": "<p>Das Zusammenstellen des idealen Menüs für deinen Hund ist bei Uncle Rusty's ganz einfach und flexibel. Wir möchten sicherstellen, dass du die bestmögliche Auswahl für deinen pelzigen Begleiter triffst.<\/p><p><\/p><p><strong>Nutze unser Build-A-Box Tool:<\/strong> Auf unserer Homepage bieten wir ein praktisches \"Build-A-Box\" Tool an. Hier kannst du ganz bequem ein Paket zusammenstellen, das perfekt zu den Vorlieben und Bedürfnissen deines Hundes passt. Du kannst zwischen Einmalbestellungen und Abonnements wählen. Dies ermöglicht dir nicht nur die besten Paketdeals, sondern auch die Gewissheit, immer die besten Preise zu erhalten.<\/p><p><\/p><p><strong>Empfehlung:<\/strong> Eine bewährte Empfehlung für ein ausgewogenes Menü ist, über die Woche hinweg 3x helles Fleisch (z. B. Geflügel, Ente), 3x rotes Fleisch (z. B. Wild, Rind, Pferd) und 1x Lachs zu füttern. Diese Vielfalt an Proteinen und Omega-3-Fettsäuren bietet eine optimale Ernährung für deinen Hund. Es ist wichtig zu beachten, dass der Wechsel der Sorten deinem Hund verschiedene Vitamine und Proteinquellen liefert.<\/p><p><\/p><p>Wir möchten betonen, dass unser \"Build-A-Box\" Tool eine großartige Möglichkeit ist, das ideale Menü für deinen Hund zusammenzustellen. Es ermöglicht dir Flexibilität und eine breite Auswahl an hochwertigen Menüs. Bei Fragen oder Bedenken stehen wir dir gerne zur Verfügung, um sicherzustellen, dass dein Hund die bestmögliche Ernährung erhält.<\/p>",
             "page": ""
           }
+        },
+        "bc923598-e171-4d50-ba33-3861f3ea7c20": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wer steht hinter Uncle Rusty’s?",
+            "icon": "none",
+            "row_content": "<p>Hinter Uncle Rusty's stehen wir, eine engagierte Gruppe von Hundeliebhabern und Experten in der Ernährung. Wir sind ein regionales Unternehmen und stolz darauf, kein großer Konzern zu sein. Bei uns ist der persönliche Kontakt zu unseren Kunden und die Nähe zur Gemeinschaft von großer Bedeutung.<\/p><p><\/p><p><strong>Unsere Geschichte:<\/strong> Unsere Geschichte beginnt mit unserem geliebten Familienhund Rusty, der uns inspirierte, eine bessere Nahrungsoption für Hunde zu schaffen. Seitdem haben wir die Werte von Natürlichkeit, Regionalität und Nachhaltigkeit in den Mittelpunkt unserer Marke gestellt.<\/p><p><\/p><p><strong>Familiengeführtes Unternehmen:<\/strong> Wir sind ein Familienunternehmen mit einer tiefen Leidenschaft für Hunde und hochwertige Ernährung. Diese Leidenschaft spiegelt sich in jedem Aspekt unseres Unternehmens wider, von der Auswahl der Zutaten bis zur Produktion.<\/p><p><\/p><p><strong>Regionale Verbundenheit:<\/strong> Unsere enge Verbindung zur Region Bayern zeigt sich in unserer Wahl von Fleisch aus Weidehaltung, vorzugsweise aus Oberbayern. Wir setzen auf kurze Lieferketten und unterstützen ethische Standards, um die besten Zutaten für unsere Produkte zu gewährleisten.<\/p><p><\/p><p><strong>Kundennähe:<\/strong> Wir schätzen die Beziehung zu unseren Kunden und stehen in ständigem Austausch. Deine Fragen und Anliegen sind uns wichtig, und wir sind stets bereit, dir zu helfen und deine Bedürfnisse zu verstehen.<\/p><p><\/p><p>Bei Uncle Rusty's sind wir mehr als nur ein Unternehmen - wir sind eine Familie, die sich um das Wohl deines Hundes kümmert. Wir sind stolz darauf, hochwertige, natürliche und ehrliche Nahrung für Hunde anzubieten und freuen uns, Teil deines Abenteuers mit deinem treuen Begleiter zu sein. Wenn du weitere Fragen hast oder mehr über uns erfahren möchtest, zögere nicht, uns zu kontaktieren. Wir sind immer für dich da.<br\/><\/p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -249,7 +258,8 @@
         "7b000bac-58b3-4578-80c5-0bdc3ad6d92d",
         "4e28315f-9f18-49d0-ba57-23eee28538b4",
         "f9c26f6f-7ef0-43a7-a6c3-91f0e21738bb",
-        "77946f61-cf92-4fd5-a566-78efacf39cd6"
+        "77946f61-cf92-4fd5-a566-78efacf39cd6",
+        "bc923598-e171-4d50-ba33-3861f3ea7c20"
       ],
       "settings": {
         "caption": "",
