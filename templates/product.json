@@ -148,7 +148,6 @@
     "6f8d87d4-68f0-4838-ad20-2060fed3a859": {
       "type": "full-width-banner",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/top0039.png",
         "content": "<h1><strong>Jede Mahlzeit zählt:<br\/>Der Uncle Rusty's Mix<\/strong><\/h1><p><em>Stelle das ideale Paket zusammen:<\/em><br\/>3x helles Fleisch, 3x rotes Fleisch, 1x Fisch. Der Schlüssel für eine rundum gesunde Ernährung deines Hundes. Einfach, effektiv, ernährungsreich!<\/p>",
         "button_text": "Mix & Match: Dein Menu",
         "button_link": "shopify:\/\/pages\/build-a-box",
@@ -177,7 +176,6 @@
     "c42971bb-6a9b-42e4-9c6c-d396dd958dc9": {
       "type": "full-width-banner",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/m0k13_photorealistic_image_of_a_happy_dog_in_front_mountains_ea_0d2b07ee-b9a6-421c-8ef0-6a94b7499025.png",
         "content": "<h1><strong>Newsletter Gutschein<\/strong><\/h1><p>Bleibe stets Up to Date wenn es Aktionen gibt<br\/>Newsletter abonnieren und 10 EUR* Gutschein sichern<br\/><em>* Einlösbar ab einem Einkaufswert von € 49,-<\/em><br\/><\/p>",
         "button_text": "",
         "button_link": "",
@@ -193,9 +191,9 @@
         "template--21611313627431__05f67661-57d3-4393-b235-9279296aa6fd-collapsible_row-1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Wie stelle ich auf Uncle Rusty’s um?",
             "icon": "none",
-            "row_content": "<p>asdasd<\/p>",
+            "row_content": "<p><strong>Rohfleischfütterung zu Uncle Rusty's:<\/strong> Wenn du bereits Rohfleisch fütterst, kannst du nahtlos zu Uncle Rusty's Menüs wechseln, ohne eine Um- oder Eingewöhnungsphase einzulegen.<\/p><p><\/p><p><strong>Nassfutter zu Uncle Rusty's:<\/strong> Wenn dein Hund bereits Nassfutter bekommt, achte darauf, welches Nassfutter zuvor gefüttert wurde. Ein direkter Wechsel von Nassfutter zu Uncle Rusty's ist meist unproblematisch.<\/p><p><\/p><p><strong>Trockenfutter zu Uncle Rusty's:<\/strong> Wenn dein Hund bisher Trockenfutter erhalten hat, empfehlen wir einen schrittweisen Umstieg auf Nassfutter oder Uncle Rusty's Menüs. Beginne mit einem Löffel Nassfutter am ersten Tag und erhöhe die Menge allmählich. Dies hilft deinem Hund, sich an die neue Ernährung zu gewöhnen. Beachte, dass du aufgrund der begrenzten Haltbarkeit von Nassfutter möglicherweise nicht die gesamte Dose an einem Tag verfüttern kannst. Unsere 400-Gramm Dosen eignen sich gut für den Umstieg, da sie eine angemessene Portionsgröße bieten. Geöffnete Menüs sind im Kühlschrank bis zu 3 Tage haltbar.<\/p><p><\/p><p>Der richtige Übergang hängt von den individuellen Vorlieben und Bedürfnissen deines Hundes ab. Beobachte sein Verhalten und passe die Umstellung entsprechend an. Bei Fragen oder Unsicherheiten stehen wir gerne zur Verfügung.<\/p>",
             "page": ""
           }
         },
