@@ -757,6 +757,10 @@ progress[value]::-moz-progress-bar {
   hyphens: auto !important;
 }
 
+.image-with-text__media.global-media-settings {
+  background-color: transparent;
+}
+
 .crop.image-with-text__media img {
   -webkit-mask-position: center;
   mask-position: center;
@@ -883,4 +887,12 @@ progress[value]::-moz-progress-bar {
 
 .list-menu--disclosure {
   width: 23rem;
+}
+
+.footer__copyright.caption .copyright__content {
+  display: none;
+}
+
+.footer__copyright.caption .copyright__content:first-child {
+  display: block;
 }
