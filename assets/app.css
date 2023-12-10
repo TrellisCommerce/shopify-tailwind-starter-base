@@ -2191,6 +2191,10 @@ progress[value]::-moz-progress-bar {
           hyphens: auto !important;
 }
 
+.image-with-text__media.global-media-settings {
+  background-color: transparent;
+}
+
 .crop.image-with-text__media img {
   -webkit-mask-position: center;
   mask-position: center;
