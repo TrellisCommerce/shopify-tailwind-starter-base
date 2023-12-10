@@ -246,6 +246,61 @@
             "button_label": "",
             "button_link": ""
           }
+        },
+        "9000c4aa-9c9e-462b-802f-f7f13dbe154d": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Haferflocken-min.png",
+            "caption": "",
+            "heading": "Haferkleie",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "a692a57b-e096-4051-9a61-f9fed994d27e": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Zucchini-min.png",
+            "caption": "",
+            "heading": "Zucchini",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "58e7899c-63d7-47d4-9268-cea1cbd4cabe": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Suesskartoffel-min.png",
+            "caption": "",
+            "heading": "Süßkartoffel",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "d2d302d1-850a-4bdd-8866-62c049a089a0": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Kartoffeln-min.png",
+            "caption": "",
+            "heading": "Kartoffel",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "424d22f5-f3da-4222-86a0-2012dcfac2a8": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hirse-min.png",
+            "caption": "",
+            "heading": "Bio-Hirse",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
@@ -254,7 +309,12 @@
         "template--18562873819400__cbfe460c-9a7f-4c8b-9a5b-5c3756d8b176-row-3",
         "2c54907c-66e4-41db-9eb0-ab910cd7c85c",
         "1fc55ab6-d11f-4882-8b67-9b78e3d34f1c",
-        "094253c1-2997-41d3-8a39-f4dda6a3c756"
+        "094253c1-2997-41d3-8a39-f4dda6a3c756",
+        "9000c4aa-9c9e-462b-802f-f7f13dbe154d",
+        "a692a57b-e096-4051-9a61-f9fed994d27e",
+        "58e7899c-63d7-47d4-9268-cea1cbd4cabe",
+        "d2d302d1-850a-4bdd-8866-62c049a089a0",
+        "424d22f5-f3da-4222-86a0-2012dcfac2a8"
       ],
       "settings": {
         "image_height": "small",
