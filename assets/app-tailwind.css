@@ -888,3 +888,11 @@ progress[value]::-moz-progress-bar {
 .list-menu--disclosure {
   width: 23rem;
 }
+
+.footer__copyright.caption .copyright__content {
+  display: none;
+}
+
+.footer__copyright.caption .copyright__content:first-child {
+  display: block;
+}
