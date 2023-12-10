@@ -260,7 +260,7 @@
         "template--18569455370504__97b93f31-c4fa-46cc-bbae-c27bd4ec3b18-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Der<strong>gut bekömmliche Leckerbissen<\/strong>mit hohem Geflügelanteil, Kürbis & Amaranth-Flocken. Ein Genuss für jeden Vierbeiner. Eignet sich gut als Scho<\/p>",
+            "text": "<p>Der <strong>gut bekömmliche Leckerbissen <\/strong>mit hohem Geflügelanteil, Kürbis & Amaranth-Flocken. Ein Genuss für jeden Vierbeiner. Eignet sich gut als Schonkost.<\/p>",
             "text_style": "body"
           }
         },
@@ -337,7 +337,7 @@
         "template--18569455370504__6d0925c9-8ace-4364-ac10-6283f37b258f-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Unser Lachsmenü ist der<strong>schonende Powerlieferant<\/strong>für Deinen Hund<strong>.<\/strong>Wir verwenden hochwertigen Lachs und kombinieren diesen mit naturbelassenen Zutaten wie Kürbis, Haferkleie und Apfel. Ein Genuss für jeden Vierbeiner. Eignet sich gut für aktive und kräftige Hunde. Eine gute Grun<\/p>",
+            "text": "<p>Unser Lachsmenü ist der <strong>schonende Powerlieferant <\/strong>für Deinen Hund<strong>. <\/strong>Wir verwenden hochwertigen Lachs und kombinieren diesen mit naturbelassenen Zutaten wie Kürbis, Haferkleie und Apfel. Ein Genuss für jeden Vierbeiner. Eignet sich gut für aktive und kräftige Hunde. Eine gute Grundbasis für Deinen Hund!<\/p>",
             "text_style": "body"
           }
         },
@@ -414,7 +414,7 @@
         "template--18569455370504__dc7e0102-22b3-4daf-bd82-5f03f036768e-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Der sensitive Happen für Allergikermit hohem Fleischanteil, Karotte & Quinoa. Ein Genuss für jeden Vierbeiner. Eignet sich gut als Sch<\/p>",
+            "text": "<p>Der <strong>sensitive Happen<\/strong> für Allergikermit hohem Fleischanteil, Karotte & Quinoa. Ein Genuss für jeden Vierbeiner. Eignet sich gut als Schonkost.<\/p>",
             "text_style": "body"
           }
         },
@@ -497,7 +497,7 @@
         "template--18569455370504__4a230144-e97f-4d58-b606-160f3c791e36-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Mehr Kraft und Ausdauer<\/strong>mit dem Rindermenü mit Kartoffeln und Möhren. Mit frischem Fleisch und naturbelassenen Zutaten. Ein Genuss für jeden Vierbeiner. Eignet sich gut für aktive und kräftige Hunde. Eine gute Grundbasis für Deinen Hund!<\/p>",
+            "text": "<p><strong>Mehr Kraft und Ausdauer <\/strong>mit dem Rindermenü mit Kartoffeln und Möhren. Mit frischem Fleisch und naturbelassenen Zutaten. Ein Genuss für jeden Vierbeiner. Eignet sich gut für aktive und kräftige Hunde. Eine gute Grundbasis für Deinen Hund!<\/p>",
             "text_style": "body"
           }
         },
