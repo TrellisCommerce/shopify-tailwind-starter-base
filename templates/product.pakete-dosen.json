@@ -393,8 +393,86 @@
         "padding_bottom": 36
       }
     },
+    "dc7e0102-22b3-4daf-bd82-5f03f036768e": {
+      "type": "ur-image-with-text",
+      "blocks": {
+        "eaa0b747-690e-42f8-8543-ee595756aebb": {
+          "type": "caption",
+          "settings": {
+            "caption": "Uncle Rusty's",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "template--18569455370504__dc7e0102-22b3-4daf-bd82-5f03f036768e-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Pferd mit Karotte und Quinoa",
+            "heading_size": "h2"
+          }
+        },
+        "template--18569455370504__dc7e0102-22b3-4daf-bd82-5f03f036768e-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Der sensitive Happen für Allergikermit hohem Fleischanteil, Karotte & Quinoa. Ein Genuss für jeden Vierbeiner. Eignet sich gut als Sch<\/p>",
+            "text_style": "body"
+          }
+        },
+        "038b846e-efff-4c50-9996-1c067475a446": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-meat-color",
+            "icon_text": "Zusammensetzung",
+            "show_accordion": true,
+            "richtext": "<p>57% Fleisch vom Pferd (40<em>% Muskelfleisch, 6% Herz, 6% Lunge, 5% Leber<\/em>), 16% Karotte, 8% Quinoa. 0,37% zur optimalen Calcium-Versorgung.<\/p><p>Das Pferdemenü enthält 18,63% Fleischbrühe.<\/p>"
+          }
+        },
+        "733ffda5-36d4-4bcc-bf77-f237084acf42": {
+          "type": "icon-text",
+          "settings": {
+            "icon_selection": "icon-organic-color",
+            "icon_text": "Vitamine, Mengen- & Spurenelemente",
+            "show_accordion": true,
+            "richtext": "<p>12,10% Rohprotein; 2,20% Rohfett; 1,60% Rohasche; 0,80% Rohfaser; 75,90% Feuchtigkeit; 0,17% Calcium; 0,13% Phosphor<br\/><em>Vitamine im natürlichen Anteil<\/em><\/p>"
+          }
+        },
+        "template--18569455370504__dc7e0102-22b3-4daf-bd82-5f03f036768e-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Zum Produkt",
+            "button_link": "shopify:\/\/products\/pferd-mit-karotte-und-quinoa",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "eaa0b747-690e-42f8-8543-ee595756aebb",
+        "template--18569455370504__dc7e0102-22b3-4daf-bd82-5f03f036768e-heading-1",
+        "template--18569455370504__dc7e0102-22b3-4daf-bd82-5f03f036768e-text-1",
+        "038b846e-efff-4c50-9996-1c067475a446",
+        "733ffda5-36d4-4bcc-bf77-f237084acf42",
+        "template--18569455370504__dc7e0102-22b3-4daf-bd82-5f03f036768e-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/pferd_800g.png",
+        "height": "medium",
+        "image_crop": "no-crop",
+        "rounded_corners": "not-rounded",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "2a3817f0-35d4-412a-9480-f252f79f2a2d": {
       "type": "product-contents",
+      "disabled": true,
       "settings": {
       }
     },
@@ -556,6 +634,7 @@
     "25963718-e156-41f4-ba24-b0f5179def60",
     "97b93f31-c4fa-46cc-bbae-c27bd4ec3b18",
     "6d0925c9-8ace-4364-ac10-6283f37b258f",
+    "dc7e0102-22b3-4daf-bd82-5f03f036768e",
     "2a3817f0-35d4-412a-9480-f252f79f2a2d",
     "6f8d87d4-68f0-4838-ad20-2060fed3a859",
     "1694596722fbd3b4b2",
