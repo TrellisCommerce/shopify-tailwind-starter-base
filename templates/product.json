@@ -3,15 +3,6 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "bsub-widget": {
-          "type": "shopify:\/\/apps\/bold-subscriptions\/blocks\/bsub-widget-block\/9ceb49f0-5fe5-4b5e-943d-f8af8985167d",
-          "settings": {
-            "primary_color": "#3B63FF",
-            "secondary_color": "#7DBA63",
-            "one_time_text": "One-time Purchase",
-            "recurring_text": "Subscribe and Save"
-          }
-        },
         "vendor": {
           "type": "text",
           "settings": {
@@ -45,6 +36,26 @@
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
+          }
+        },
+        "bsub-widget": {
+          "type": "shopify:\/\/apps\/bold-subscriptions\/blocks\/bsub-widget-block\/9ceb49f0-5fe5-4b5e-943d-f8af8985167d",
+          "settings": {
+            "default_subscribe": false,
+            "primary_color": "#211c0e",
+            "secondary_color": "#6b8f71",
+            "background_color": "#f2eee3",
+            "border_radius": 5,
+            "header_text": "Bestelloptionen",
+            "one_time_text": "Einmalige Lieferung",
+            "recurring_text": "Monatliche Lieferung",
+            "discount_summary_text": "(Spare {discount})",
+            "discount_summary_plural_text": "(Spare bis zu {discount})",
+            "frequency_header": "Alle 4 Wochen",
+            "frequency_text": "Lieferung",
+            "billing_frequency_header": "Rechungsinterval",
+            "billing_frequency_text": "Jede {count} Bestellung",
+            "prepaid_total_text": "Dir werden heute {price} in Rechnung gestellt"
           }
         },
         "buy_buttons": {
