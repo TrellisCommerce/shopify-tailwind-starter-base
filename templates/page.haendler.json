@@ -168,6 +168,7 @@
         "template--18568253374728__943e2d50-ba87-40d7-a1b4-5b34faa3487c-button-1"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/haendler_2.jpg",
         "height": "adapt",
         "image_crop": "no-crop",
         "rounded_corners": "rounded",
