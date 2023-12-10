@@ -165,8 +165,8 @@
         "08c049e4-4c25-495b-9ae4-cfb173f2ce96"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/dosen_555964da-a362-48e5-ad6b-e0eb50ae678f.png",
-        "height": "adapt",
+        "image": "shopify:\/\/shop_images\/dosen_3ce9df46-a2a9-46de-8138-49d49a86a13a.png",
+        "height": "medium",
         "image_crop": "no-crop",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -402,8 +402,8 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Food.jpg",
-        "height": "medium",
-        "image_crop": "crop",
+        "height": "adapt",
+        "image_crop": "no-crop",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "middle",
