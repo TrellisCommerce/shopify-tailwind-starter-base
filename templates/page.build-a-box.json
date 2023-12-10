@@ -13,11 +13,11 @@
       "settings": {
         "collection": "nassfutter",
         "additives_collection": "ole",
-        "questionaire_subscription_plan": 689522049319,
+        "questionaire_subscription_plan": 775585955,
         "instruction_text": "<p>Mit nur wenigen Klicks zum perfekten Futterpaket für deinen Hund. Wähle aus unseren 6 Sorten und stelle dir ein Menü zusammen, das perfekt zu deinem Hund. passt. Sieh direkt, wie sich der Preis anpasst und sichere dir maximale Rabatte. Genieße die volle Kontrolle der Hundeernährung und profitiere von unschlagbaren Angeboten. Einfacher war Hundefutterkauf noch nie!<\/p>",
-        "questionaire_info_text": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<\/p>",
-        "questionaire_button_label": "Button label",
-        "questionaire_button_link": "",
+        "questionaire_info_text": "<p>Du brauchst Unterstützung bei der Auswahl?<\/p>",
+        "questionaire_button_label": "Ernährungsberatung",
+        "questionaire_button_link": "shopify:\/\/pages\/beratung",
         "below_price_info": "inkl. MwSt., zzgl. Versandkosten",
         "padding_top": 20,
         "padding_bottom": 20
