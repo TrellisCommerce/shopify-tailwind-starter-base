@@ -2368,6 +2368,10 @@ ul {
           hyphens: auto;
 }
 
+.custom-number-input {
+  touch-action: manipulation;
+}
+
 .last-of-type\:xborder-none:last-of-type {
   border-style: none;
 }
