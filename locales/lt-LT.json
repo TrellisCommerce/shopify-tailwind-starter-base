@@ -214,7 +214,8 @@
       "clear_filter": "Pašalinti filtrą",
       "filter_selected_accessibility": "{{ type }} (pasirinkta filtrų: {{ count }})",
       "show_more": "Rodyti daugiau",
-      "show_less": "Rodyti mažiau"
+      "show_less": "Rodyti mažiau",
+      "filter_and_operator_subtitle": "Atitikti visas"
     }
   },
   "templates": {
@@ -388,7 +389,10 @@
     "country_label": "Šalis / regionas",
     "language_label": "Kalba",
     "update_language": "Atnaujinti kalbą",
-    "update_country": "Atnaujinti šalį / regioną"
+    "update_country": "Atnaujinti šalį / regioną",
+    "search": "Ieškoti",
+    "popular_countries_regions": "Populiarios valstybės / regionai",
+    "country_results_count": "Rasta valstybių / regionų: {{ count }}"
   },
   "customer": {
     "account": {

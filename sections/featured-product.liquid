@@ -2,10 +2,14 @@
 {{ 'section-featured-product.css' | asset_url | stylesheet_tag }}
 {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
-{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
+{% unless section.settings.product.has_only_default_variant %}
+  {{ 'component-product-variant-picker.css' | asset_url | stylesheet_tag }}
+  {{ 'component-swatch.css' | asset_url | stylesheet_tag }}
+  {{ 'component-swatch-input.css' | asset_url | stylesheet_tag }}
+{% endunless %}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -224,19 +228,7 @@
                   <label class='quantity__label form__label' for='Quantity-{{ section.id }}'>
                     {{ 'products.product.quantity.label' | t }}
                     <span class='quantity__rules-cart no-js-hidden{% if cart_qty == 0 %} hidden{% endif %}'>
-                      <span class='loading-overlay hidden'>
-                        <span class='loading-overlay__spinner'>
-                          <svg
-                            aria-hidden='true'
-                            focusable='false'
-                            class='spinner'
-                            viewBox='0 0 66 66'
-                            xmlns='http://www.w3.org/2000/svg'
-                          >
-                            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                          </svg>
-                        </span>
-                      </span>
+                      {%- render 'loading-spinner' -%}
                       <span
                         >(
                         {{- 'products.product.quantity.in_cart_html' | t: quantity: cart_qty -}}
@@ -685,13 +677,11 @@
     if (!isIE()) return;
     const hiddenInput = document.querySelector('#{{ product_form_id }} input[name="id"]');
     const noScriptInputWrapper = document.createElement('div');
-    const variantSwitcher =
-      document.querySelector('variant-radios[data-section="{{ section.id }}"]') ||
-      document.querySelector('variant-selects[data-section="{{ section.id }}"]');
+    const variantPicker = document.querySelector('variant-selects[data-section="{{ section.id }}"]');
     noScriptInputWrapper.innerHTML = document.querySelector(
       '.product-form__noscript-wrapper-{{ section.id }}',
     ).textContent;
-    variantSwitcher.outerHTML = noScriptInputWrapper.outerHTML;
+    variantPicker.outerHTML = noScriptInputWrapper.outerHTML;
 
     document.querySelector('#Variants-{{ section.id }}').addEventListener('change', function (event) {
       hiddenInput.value = event.currentTarget.value;
@@ -818,20 +808,69 @@
       "limit": 1,
       "settings": [
         {
+          "type": "header",
+          "content": "t:sections.featured-product.blocks.variant_picker.settings.options.header"
+        },
+        {
           "type": "select",
           "id": "picker_type",
           "options": [
             {
               "value": "dropdown",
-              "label": "t:sections.featured-product.blocks.variant_picker.settings.picker_type.options__1.label"
+              "label": "t:sections.featured-product.blocks.variant_picker.settings.options.picker_type.options__1.label"
             },
             {
               "value": "button",
-              "label": "t:sections.featured-product.blocks.variant_picker.settings.picker_type.options__2.label"
+              "label": "t:sections.featured-product.blocks.variant_picker.settings.options.picker_type.options__2.label"
             }
           ],
           "default": "button",
-          "label": "t:sections.featured-product.blocks.variant_picker.settings.picker_type.label"
+          "label": "t:sections.featured-product.blocks.variant_picker.settings.options.picker_type.label"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.featured-product.blocks.variant_picker.settings.options_with_swatches.header",
+          "info": "t:sections.featured-product.blocks.variant_picker.settings.options_with_swatches.info"
+        },
+        {
+          "id": "swatch_picker_type",
+          "type": "select",
+          "label": "t:sections.featured-product.blocks.variant_picker.settings.options_with_swatches.picker_type.label",
+          "options": [
+            {
+              "value": "swatch",
+              "label": "t:sections.featured-product.blocks.variant_picker.settings.options_with_swatches.picker_type.options__1.label"
+            },
+            {
+              "value": "swatch_dropdown",
+              "label": "t:sections.featured-product.blocks.variant_picker.settings.options_with_swatches.picker_type.options__2.label"
+            },
+            {
+              "value": "dropdown",
+              "label": "t:sections.featured-product.blocks.variant_picker.settings.options_with_swatches.picker_type.options__3.label"
+            },
+            {
+              "value": "button",
+              "label": "t:sections.featured-product.blocks.variant_picker.settings.options_with_swatches.picker_type.options__4.label"
+            }
+          ],
+          "default": "swatch"
+        },
+        {
+          "id": "swatch_shape",
+          "label": "t:sections.featured-product.blocks.variant_picker.settings.options_with_swatches.swatch_shape.label",
+          "type": "select",
+          "options": [
+            {
+              "value": "circle",
+              "label": "t:sections.featured-product.blocks.variant_picker.settings.options_with_swatches.swatch_shape.options__1.label"
+            },
+            {
+              "value": "square",
+              "label": "t:sections.featured-product.blocks.variant_picker.settings.options_with_swatches.swatch_shape.options__2.label"
+            }
+          ],
+          "default": "circle"
         }
       ]
     },
@@ -1526,7 +1565,7 @@
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
-      "default": "background-1"
+      "default": "scheme-1"
     },
     {
       "type": "checkbox",

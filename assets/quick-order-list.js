@@ -209,7 +209,7 @@ class QuickOrderList extends HTMLElement {
 
   updateMultipleQty(items) {
     this.querySelector(
-      '.variant-remove-total .loading-overlay',
+      '.variant-remove-total .loading__spinner',
     ).classList.remove('hidden');
 
     const body = JSON.stringify({
@@ -234,7 +234,7 @@ class QuickOrderList extends HTMLElement {
       })
       .finally(() => {
         this.querySelector(
-          '.variant-remove-total .loading-overlay',
+          '.variant-remove-total .loading__spinner',
         ).classList.add('hidden');
       });
   }
@@ -279,9 +279,9 @@ class QuickOrderList extends HTMLElement {
 
         if (parsedState.description || parsedState.errors) {
           const variantItem = document.querySelector(
-            `[id^="Variant-${id}"] .variant-item__totals.small-hide .loading-overlay`,
+            `[id^="Variant-${id}"] .variant-item__totals.small-hide .loading__spinner`,
           );
-          variantItem.classList.add('loading-overlay--error');
+          variantItem.classList.add('loading__spinner--error');
           this.resetQuantityInput(id, quantityElement);
           if (parsedState.errors) {
             this.updateLiveRegions(id, parsedState.errors);
@@ -328,7 +328,7 @@ class QuickOrderList extends HTMLElement {
         }
       })
       .catch((error) => {
-        this.querySelectorAll('.loading-overlay').forEach((overlay) =>
+        this.querySelectorAll('.loading__spinner').forEach((overlay) =>
           overlay.classList.add('hidden'),
         );
         this.resetQuantityInput(id);
@@ -447,7 +447,7 @@ class QuickOrderList extends HTMLElement {
   toggleLoading(id, enable) {
     const quickOrderList = document.getElementById(this.quickOrderListId);
     const quickOrderListItems = this.querySelectorAll(
-      `#Variant-${id} .loading-overlay`,
+      `#Variant-${id} .loading__spinner`,
     );
 
     if (enable) {

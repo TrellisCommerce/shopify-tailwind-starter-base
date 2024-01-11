@@ -214,7 +214,8 @@
       "clear_filter": "Odstrani filter",
       "filter_selected_accessibility": "{{ type }} (št. izbranih filtrov: {{ count }})",
       "show_more": "Prikaži več",
-      "show_less": "Prikaži manj"
+      "show_less": "Prikaži manj",
+      "filter_and_operator_subtitle": "Ustreza vsem"
     }
   },
   "templates": {
@@ -388,7 +389,10 @@
     "country_label": "Država/regija",
     "language_label": "Jezik",
     "update_language": "Posodobi jezik",
-    "update_country": "Posodobi državo/regijo"
+    "update_country": "Posodobi državo/regijo",
+    "search": "Išči",
+    "popular_countries_regions": "Priljubljene države/regije",
+    "country_results_count": "Najdene države/regije: {{ count }}"
   },
   "customer": {
     "account": {

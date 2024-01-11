@@ -210,7 +210,8 @@
       "clear_filter": "Elimină filtrul",
       "filter_selected_accessibility": "{{ type }} ({{ count }} filtre selectate)",
       "show_more": "Afișează mai mult",
-      "show_less": "Afișează mai puțin"
+      "show_less": "Afișează mai puțin",
+      "filter_and_operator_subtitle": "Potrivește-le pe toate"
     }
   },
   "templates": {
@@ -376,7 +377,10 @@
     "country_label": "Țară/Regiune",
     "language_label": "Limbă",
     "update_language": "Actualizați limba",
-    "update_country": "Actualizați țara/regiunea"
+    "update_country": "Actualizați țara/regiunea",
+    "search": "Caută",
+    "popular_countries_regions": "Țări/regiuni populare",
+    "country_results_count": "{{ count }} țări/regiuni găsite"
   },
   "customer": {
     "account": {

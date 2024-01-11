@@ -206,7 +206,8 @@
       "clear_filter": "Poista suodatin",
       "filter_selected_accessibility": "{{ type }} ({{ count }} suodatinta valittu)",
       "show_more": "Näytä enemmän",
-      "show_less": "Näytä vähemmän"
+      "show_less": "Näytä vähemmän",
+      "filter_and_operator_subtitle": "Sovella kaikkia"
     }
   },
   "templates": {
@@ -364,7 +365,10 @@
     "country_label": "Maa/alue",
     "language_label": "Kieli",
     "update_language": "Päivitä kieli",
-    "update_country": "Päivitä maa/alue"
+    "update_country": "Päivitä maa/alue",
+    "search": "Hae",
+    "popular_countries_regions": "Suositut maat/alueet",
+    "country_results_count": "{{ count }} maata/aluetta löytyi"
   },
   "customer": {
     "account": {

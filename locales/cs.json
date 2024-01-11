@@ -214,7 +214,8 @@
       "clear_filter": "Odebrat filtr",
       "filter_selected_accessibility": "{{ type }} (počet vybraných filtrů: {{ count }})",
       "show_more": "Zobrazit více",
-      "show_less": "Zobrazit méně"
+      "show_less": "Zobrazit méně",
+      "filter_and_operator_subtitle": "Shoda se všemi kritérii"
     }
   },
   "templates": {
@@ -388,7 +389,10 @@
     "country_label": "Země/oblast",
     "language_label": "Jazyk",
     "update_language": "Aktualizovat jazyk",
-    "update_country": "Aktualizovat zemi/oblast"
+    "update_country": "Aktualizovat zemi/oblast",
+    "search": "Začněte hledat",
+    "popular_countries_regions": "Oblíbené země/oblasti",
+    "country_results_count": "Byl nalezen tento počet zemí/oblastí: {{ count }}"
   },
   "customer": {
     "account": {
@@ -506,7 +510,7 @@
       "subtext": "Vaše dárková karta",
       "gift_card_code": "Kód dárkové karty",
       "shop_link": "Navštívit online obchod",
-      "add_to_apple_wallet": "Přidat do Apple Wallet",
+      "add_to_apple_wallet": "Přidat do Apple Peněženky",
       "qr_image_alt": "QR kód: po naskenování můžete uplatnit svou dárkovou kartu",
       "copy_code": "Zkopírovat kód dárkové karty",
       "expired": "Platnost vypršela",

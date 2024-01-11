@@ -2,7 +2,7 @@
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
 
-.footer:not(.color-background-1) {
+.footer:not(.color-scheme-1) {
   border-top: none;
 }
 
@@ -67,6 +67,12 @@
     flex-wrap: wrap;
     row-gap: 1.5rem;
     justify-content: center;
+  }
+
+  .footer__content-bottom.scroll-trigger.animate--slide-in {
+    animation: none;
+    opacity: 1;
+    transform: inherit;
   }
 }
 

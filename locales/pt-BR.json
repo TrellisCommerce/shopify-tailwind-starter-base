@@ -210,7 +210,8 @@
       "clear_filter": "Remover filtro",
       "filter_selected_accessibility": "{{ type }} ({{ count }} filtros selecionados)",
       "show_more": "Exibir mais",
-      "show_less": "Exibir menos"
+      "show_less": "Exibir menos",
+      "filter_and_operator_subtitle": "Corresponder todos"
     }
   },
   "templates": {
@@ -376,7 +377,10 @@
     "country_label": "País/Região",
     "language_label": "Idioma",
     "update_language": "Atualizar idioma",
-    "update_country": "Atualizar país/região"
+    "update_country": "Atualizar país/região",
+    "search": "Pesquisar",
+    "popular_countries_regions": "Países/regiões populares",
+    "country_results_count": "{{ count }} países/regiões encontrados"
   },
   "customer": {
     "account": {

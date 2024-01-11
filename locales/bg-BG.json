@@ -206,7 +206,8 @@
       "clear_filter": "Премахване на филтъра",
       "filter_selected_accessibility": "{{ type }} ({{ count }} избрани филтъра)",
       "show_more": "Покажи повече",
-      "show_less": "Покажи по-малко"
+      "show_less": "Покажи по-малко",
+      "filter_and_operator_subtitle": "Изрявняване за всички"
     }
   },
   "templates": {
@@ -364,7 +365,10 @@
     "country_label": "Държава/регион",
     "language_label": "Език",
     "update_language": "Актуализиране на езика",
-    "update_country": "Актуализиране на държава/регион"
+    "update_country": "Актуализиране на държава/регион",
+    "search": "Търсене",
+    "popular_countries_regions": "Популярни страни/региони",
+    "country_results_count": "Открити са {{ count }} страни/региона"
   },
   "customer": {
     "account_fallback": "Профил",

@@ -206,7 +206,8 @@
       "clear_filter": "ลบตัวกรองออก",
       "filter_selected_accessibility": "{{ type }} (เลือกตัวกรองแล้ว {{ count }} รายการ)",
       "show_more": "แสดงมากขึ้น",
-      "show_less": "แสดงน้อยลง"
+      "show_less": "แสดงน้อยลง",
+      "filter_and_operator_subtitle": "ที่ตรงกันทั้งหมด"
     }
   },
   "templates": {
@@ -364,7 +365,10 @@
     "country_label": "ประเทศ/ภูมิภาค",
     "language_label": "ภาษา",
     "update_language": "อัปเดตภาษา",
-    "update_country": "อัปเดตประเทศ/ภูมิภาค"
+    "update_country": "อัปเดตประเทศ/ภูมิภาค",
+    "search": "ค้นหา",
+    "popular_countries_regions": "ประเทศ/ภูมิภาคยอดนิยม",
+    "country_results_count": "พบประเทศ/ภูมิภาค {{ count }} แห่ง"
   },
   "customer": {
     "account": {

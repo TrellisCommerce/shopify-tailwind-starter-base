@@ -206,7 +206,8 @@
       "clear_filter": "Szűrő eltávolítása",
       "filter_selected_accessibility": "{{ type }} ({{ count }} szűrő kiválasztva)",
       "show_more": "Több részlet",
-      "show_less": "Kevesebb részlet"
+      "show_less": "Kevesebb részlet",
+      "filter_and_operator_subtitle": "Az összesnek megfelelő"
     }
   },
   "templates": {
@@ -364,7 +365,10 @@
     "country_label": "Ország/régió",
     "language_label": "Nyelv",
     "update_language": "Nyelv módosítása",
-    "update_country": "Ország/régió frissítése"
+    "update_country": "Ország/régió frissítése",
+    "search": "Keresés",
+    "popular_countries_regions": "Népszerű országok/régiók",
+    "country_results_count": "{{ count }} ország/régió található"
   },
   "customer": {
     "account": {

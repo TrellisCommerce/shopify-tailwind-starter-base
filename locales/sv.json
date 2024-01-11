@@ -206,7 +206,8 @@
       "clear_filter": "Ta bort filter",
       "filter_selected_accessibility": "{{ type }} ({{ count }}) filter valda",
       "show_more": "Visa mer",
-      "show_less": "Visa mindre"
+      "show_less": "Visa mindre",
+      "filter_and_operator_subtitle": "Matcha alla"
     }
   },
   "templates": {
@@ -364,7 +365,10 @@
     "country_label": "Land/Region",
     "language_label": "Språk",
     "update_language": "Uppdatera språk",
-    "update_country": "Uppdatera land/region"
+    "update_country": "Uppdatera land/region",
+    "search": "Sök",
+    "popular_countries_regions": "Populära länder/regioner",
+    "country_results_count": "{{ count }} länder/regioner hittades"
   },
   "customer": {
     "account": {
