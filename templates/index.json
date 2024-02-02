@@ -13,13 +13,12 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "",
+            "text": "Here is some body text",
             "text_style": "subtitle"
           }
         },
         "button": {
           "type": "buttons",
-          "disabled": true,
           "settings": {
             "button_label_1": "Shop all",
             "button_link_1": "shopify:\/\/collections\/all",
@@ -47,9 +46,9 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": true,
-        "twcss_heading": "uppercase twcss-text-9xl twcss-leading-none",
-        "twcss_body": "",
-        "twcss_button": ""
+        "twcss_heading": "lg:twcss-line-through lg:twcss-decoration-black uppercase twcss-text-9xl twcss-leading-none",
+        "twcss_body": "twcss-uppercase",
+        "twcss_button": "twcss-rounded-sm"
       }
     },
     "rich_text": {
@@ -67,11 +66,23 @@
           "settings": {
             "text": "<p>Death Wish Coffee delivers a bold, full-bodied yet smooth and flavorful brew that will awaken your taste buds, with an extra kick of caffeine to ignite your attitude. We use the highest quality Fair Trade and organic arabica and robusta beans and roast them to never-bitter perfection.<\/p>"
           }
+        },
+        "button_9CytVk": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
         }
       },
       "block_order": [
         "heading",
-        "text"
+        "text",
+        "button_9CytVk"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -317,7 +328,6 @@
     },
     "b574d486-e026-4f0a-94a9-bf96ed3a80d0": {
       "type": "slideshow",
-      "disabled": true,
       "blocks": {
         "template--19007942951221__b574d486-e026-4f0a-94a9-bf96ed3a80d0-1686100960b35fe112-0": {
           "type": "slide",
@@ -379,6 +389,7 @@
         "template--19007942951221__b574d486-e026-4f0a-94a9-bf96ed3a80d0-1686100960b35fe112-1",
         "d6d5af43-fb04-4759-8bf9-7cbd69fdff5f"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
