@@ -4,7 +4,7 @@ module.exports = {
   safelist: [
     {
       pattern: /.*/,
-      variants: ['xs', 'sm', 'md', 'lg', 'hover'],
+      variants: ['xs', 'sm', 'md', 'lg', 'hover', 'group-hover'],
     },
   ],
   // !important is added to override core Dawn styles for design
