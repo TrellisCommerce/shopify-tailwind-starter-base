@@ -48,7 +48,7 @@
         "show_text_below": true,
         "twcss_heading": "lg:twcss-line-through lg:twcss-decoration-black uppercase twcss-text-9xl twcss-leading-none",
         "twcss_body": "twcss-uppercase",
-        "twcss_button": "twcss-rounded-sm"
+        "twcss_button": "twcss-rounded-sm twcss-animate-spin"
       }
     },
     "rich_text": {
@@ -94,7 +94,7 @@
         "twcss_heading": "twcss-text-red-600",
         "twcss_body": "twcss-text-4xl",
         "twcss_caption": "",
-        "twcss_button": ""
+        "twcss_button": "twcss-hover-text-red-100"
       }
     },
     "featured_collection": {
@@ -185,7 +185,7 @@
         "twcss_container": "",
         "twcss_heading": "",
         "twcss_column_container": "",
-        "twcss_column_image": "twcss-animate-pulse",
+        "twcss_column_image": "twcss-animate-spin",
         "twcss_column_heading": "twcss-text-6xl",
         "twcss_column_description": "",
         "twcss_column_link": ""
@@ -239,6 +239,7 @@
         "heading": "",
         "heading_size": "h1",
         "enable_video_looping": true,
+        "enable_video_autoplay": false,
         "video_url": "https:\/\/youtu.be\/jdk_31Z5bzA",
         "cover_image": "shopify:\/\/shop_images\/Screen_Shot_2023-06-06_at_7.21.27_PM.png",
         "description": "",
