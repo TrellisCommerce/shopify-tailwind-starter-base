@@ -395,6 +395,12 @@
         "padding_top": "Top padding",
         "padding_bottom": "Bottom padding"
       },
+      "tailwind": {
+        "heading": "Tailwind CSS",
+        "text": "TailwindCSS for Text",
+        "container": "TalwindCSS for Container",
+        "button": "TailwindCSS for Button"
+      },
       "spacing": "Spacing",
       "colors": {
         "label": "Color scheme",
