@@ -42,7 +42,7 @@
   endunless
 -%}
 
-<div class="multirow section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
+<div class="multirow section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }} {{ section.settings.tailwind_container_classes }}">
   <div class="multirow__inner page-width">
     {%- for block in section.blocks -%}
       <div
@@ -75,17 +75,17 @@
           <div class="image-with-text__text-item grid__item">
             <div class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.image_height }} content-container{% unless no_content_background and no_content_styles %} gradient color-{{ section.settings.row_color_scheme }}{% endunless %}">
               {%- if block.settings.caption -%}
-                <p class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium">
+                <p class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium {{ section.settings.tailwind_text_classes }}">
                   {{ block.settings.caption | escape }}
                 </p>
               {%- endif -%}
               {%- if block.settings.heading -%}
-                <h2 class="image-with-text__heading {{ section.settings.heading_size }} rte">
+                <h2 class="image-with-text__heading {{ section.settings.heading_size }} rte {{ section.settings.tailwind_text_classes }}">
                   {{ block.settings.heading }}
                 </h2>
               {%- endif -%}
               {%- if block.settings.text -%}
-                <div class="image-with-text__text rte {{ section.settings.text_style }}">{{ block.settings.text }}</div>
+                <div class="image-with-text__text rte {{ section.settings.text_style }} {{ section.settings.tailwind_text_classes }}">{{ block.settings.text }}</div>
               {%- endif -%}
               {%- if block.settings.button_label != blank -%}
                 <a
@@ -94,7 +94,7 @@
                   {% else %}
                     href="{{ block.settings.button_link }}"
                   {% endif %}
-                  class="button button--{{ section.settings.button_style }}"
+                  class="button button--{{ section.settings.button_style }} {{ section.settings.tailwind_button_classes }}"
                 >
                   {{ block.settings.button_label | escape }}
                 </a>
@@ -381,6 +381,25 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.tailwind.heading"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_container_classes",
+      "label": "t:sections.all.tailwind.container"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_text_classes",
+      "label": "t:sections.all.tailwind.text"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_button_classes",
+      "label": "t:sections.all.tailwind.button"
     }
   ],
   "blocks": [
