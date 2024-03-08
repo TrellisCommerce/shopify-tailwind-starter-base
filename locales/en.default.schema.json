@@ -415,7 +415,8 @@
         "heading": "Tailwind CSS",
         "text": "TailwindCSS for Text",
         "container": "TalwindCSS for Container",
-        "button": "TailwindCSS for Button"
+        "button": "TailwindCSS for Button",
+        "svg": "TailwindCSS for SVG"
       },
       "spacing": "Spacing",
       "colors": {
