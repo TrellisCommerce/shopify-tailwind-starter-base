@@ -26,7 +26,7 @@
 {%- endif -%}
 
 <slideshow-component
-  class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}"
+  class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %} {{ section.settings.tailwind_container_classes }}"
   role="region"
   aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
   aria-label="{{ section.settings.accessibility_info | escape }}"
@@ -155,12 +155,12 @@
         <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
           <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
             {%- if block.settings.heading != blank -%}
-              <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}">
+              <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }} {{ section.settings.tailwind_text_classes }}">
                 {{ block.settings.heading }}
               </h2>
             {%- endif -%}
             {%- if block.settings.subheading != blank -%}
-              <div class="banner__text rte" {{ block.shopify_attributes }}>
+              <div class="banner__text rte {{ section.settings.tailwind_text_classes }}" {{ block.shopify_attributes }}>
                 <p>{{ block.settings.subheading }}</p>
               </div>
             {%- endif -%}
@@ -172,7 +172,7 @@
                   {% else %}
                     role="link" aria-disabled="true"
                   {% endif %}
-                  class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}"
+                  class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %} {{ section.settings.tailwind_button_classes }}"
                 >
                   {{- block.settings.button_label | escape -}}
                 </a>
@@ -387,6 +387,25 @@
       "label": "t:sections.slideshow.settings.accessibility.label",
       "info": "t:sections.slideshow.settings.accessibility.info",
       "default": "Slideshow about our brand"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.tailwind.heading"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_container_classes",
+      "label": "t:sections.all.tailwind.container"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_text_classes",
+      "label": "t:sections.all.tailwind.text"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_button_classes",
+      "label": "t:sections.all.tailwind.button"
     }
   ],
   "blocks": [
