@@ -24,13 +24,13 @@
   endif
 -%}
 
-<div class='color-{{ section.settings.color_scheme }} gradient'>
+<div class='color-{{ section.settings.color_scheme }} gradient {{ section.settings.tailwind_container_classes }}'>
   <div class='collection-list-wrapper page-width isolate{% if show_mobile_slider %} page-width-desktop{% endif %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.show_view_all == false or section.blocks.size > collections.size %} no-mobile-link{% endif %} section-{{ section.id }}-padding'>
     {%- unless section.settings.title == blank -%}
       <div class='title-wrapper-with-link{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin'>
         <h2
           id='SectionHeading-{{ section.id }}'
-          class='collection-list-title inline-richtext {{ section.settings.heading_size }}'
+          class='collection-list-title inline-richtext {{ section.settings.heading_size }} {{ section.settings.tailwind_text_classes }}'
         >
           {{ section.settings.title }}
         </h2>
@@ -40,7 +40,7 @@
             href='{{ routes.collections_url }}'
             id='ViewAll-{{ section.id }}'
             class='link underlined-link large-up-hide'
-            aria-labelledby='ViewAll-{{ section.id }} SectionHeading-{{ section.id }}'
+            aria-labelledby='ViewAll-{{ section.id }} SectionHeading-{{ section.id }} {{ section.settings.tailwind_text_classes }}'
           >
             {{- 'sections.collection_list.view_all' | t -}}
           </a>
@@ -112,7 +112,7 @@
           href='{{ routes.collections_url }}'
           class='button'
           id='ViewAllButton-{{ section.id }}'
-          aria-labelledby='ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }}'
+          aria-labelledby='ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }} {{ section.settings.tailwind_text_classes }}'
         >
           {{- 'sections.collection_list.view_all' | t -}}
         </a>
@@ -271,6 +271,20 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.tailwind.heading"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_container_classes",
+      "label": "t:sections.all.tailwind.container"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_text_classes",
+      "label": "t:sections.all.tailwind.text"
     }
   ],
   "blocks": [
