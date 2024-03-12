@@ -2,13 +2,13 @@ Brought to you and maintained by [Trellis Commerce](https://trellis.co/) - A ful
 
 Latest merged code from [Dawn v12.0.0](https://github.com/Shopify/dawn/releases/tag/v12.0.0)
 
-# Dawn + TailWindCSS + Prettier Shopify Starter Theme
+# Dawn + Tailwind CSS + Prettier Shopify Starter Theme
 
-Shopify Dawn theme with TailWindCSS &amp; Prettier integrations
+Shopify Dawn theme with Tailwind CSS &amp; Prettier integrations
 
 The starter theme includes an integration of:
 
-## [TailwindCSS](https://tailwindcss.com/)
+## [Tailwind CSS](https://tailwindcss.com/)
 
 - [Configured](https://markustripp.medium.com/extend-shopify-dawn-theme-with-a-custom-tailwind-css-carousel-section-e3efe3ecf18e) to use `prefix: twcss-` in order to not clash with Dawn’s existing styles
 
@@ -106,11 +106,11 @@ These secret values are used in the `ci.yml` GitHub workflow:
 3. Pull down changes from the theme editor:
    `shopify theme pull -d`
 
-4. Anytime you add a TailwindCSS class (remember to prefix it with twcss-), run the CLI tool to scan your template files for classes and build your CSS to assets/app.css:
+4. Anytime you add a Tailwind CSS class (remember to prefix it with twcss-), run the CLI tool to scan your template files for classes and build your CSS to assets/app.css:
    `npx tailwindcss -i ./assets/app-tailwind.css -o ./assets/app.css --watch`
 
 - Run this command in a separate terminal, so it will continue to run while you are developing.
-- Note that using a TailwindCSS class without a space afterward when followed by a liquid tag causes compiling issues:
+- Note that using a Tailwind CSS class without a space afterward when followed by a liquid tag causes compiling issues:
 `lg:!twcss-px-[32px]{% endif %}'>`
 But this does work:
 `lg:!twcss-px-[32px] {% endif %}'>`
