@@ -210,7 +210,7 @@
                           <svg
                             aria-hidden='true'
                             focusable='false'
-                            class='spinner'
+                            class='spinner {{ section.settings.tailwind_svg_classes }}'
                             viewBox='0 0 66 66'
                             xmlns='http://www.w3.org/2000/svg'
                           >
@@ -225,8 +225,8 @@
                       >
                     </span>
                   </label>
-                  <quantity-input class='quantity'>
-                    <button class='quantity__button no-js-hidden' name='minus' type='button'>
+                  <quantity-input class='quantity {{ section.settings.tailwind_input_classes }}'>
+                    <button class='quantity__button no-js-hidden {{ section.settings.tailwind_svg_classes }}' name='minus' type='button'>
                       <span class='visually-hidden'>
                         {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
                       </span>
@@ -248,7 +248,7 @@
                       value='{{ product.selected_or_first_available_variant.quantity_rule.min }}'
                       form='{{ product_form_id }}'
                     >
-                    <button class='quantity__button no-js-hidden' name='plus' type='button'>
+                    <button class='quantity__button no-js-hidden {{ section.settings.tailwind_svg_classes }}' name='plus' type='button'>
                       <span class='visually-hidden'>
                         {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
                       </span>
@@ -1504,6 +1504,16 @@
       "type": "text",
       "id": "tailwind_button_classes",
       "label": "t:sections.all.tailwind.button"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_input_classes",
+      "label": "t:sections.all.tailwind.input"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_svg_classes",
+      "label": "t:sections.all.tailwind.svg"
     }
   ],
   "presets": [
