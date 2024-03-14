@@ -46,9 +46,9 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": true,
-        "twcss_heading": "lg:twcss-line-through lg:twcss-decoration-black uppercase twcss-text-9xl twcss-leading-none",
-        "twcss_body": "twcss-uppercase",
-        "twcss_button": "twcss-rounded-sm twcss-animate-spin"
+        "twcss_heading": "",
+        "twcss_body": "",
+        "twcss_button": "twcss-bg-red-500 twcss-text-white"
       }
     },
     "rich_text": {
@@ -185,7 +185,7 @@
         "twcss_container": "",
         "twcss_heading": "",
         "twcss_column_container": "",
-        "twcss_column_image": "twcss-animate-spin",
+        "twcss_column_image": "",
         "twcss_column_heading": "twcss-text-6xl",
         "twcss_column_description": "",
         "twcss_column_link": ""
