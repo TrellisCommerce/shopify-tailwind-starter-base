@@ -39,9 +39,6 @@ module.exports = {
         },
       },
     },
-    color: {
-      black: '#000000',
-    },
   },
   plugins: [],
 };
