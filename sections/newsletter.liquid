@@ -16,24 +16,24 @@
 {%- endstyle -%}
 
 <div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
-  <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
+  <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding {{ section.settings.tailwind_container_classes }}">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
         {%- when '@app' -%}
           {% render block %}
         {%- when 'heading' -%}
-          <h2 class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }}
+          <h2 class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.tailwind_text_classes }}" {{ block.shopify_attributes }}
           data-cascade>
             {{ block.settings.heading }}
           </h2>
         {%- when 'paragraph' -%}
-          <div class="newsletter__subheading rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }} data-cascade>{{ block.settings.text }}</div>
+          <div class="newsletter__subheading rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.tailwind_text_classes }}" {{ block.shopify_attributes }} data-cascade>{{ block.settings.text }}</div>
         {%- when 'email_form' -%}
           <div {{ block.shopify_attributes }}>
             {% form 'customer', class: 'newsletter-form' %}
               <input type="hidden" name="contact[tags]" value="newsletter">
               <div class="newsletter-form__field-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" data-cascade>
-                <div class="field">
+                <div class="field {{ section.settings.tailwind_input_classes }}">
                   <input
                     id="NewsletterForm--{{ section.id }}"
                     type="email"
@@ -54,7 +54,7 @@
                     placeholder="{{ 'newsletter.label' | t }}"
                     required
                   >
-                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                  <label class="field__label {{ section.settings.tailwind_text_classes }}" for="NewsletterForm--{{ section.id }}">
                     {{ 'newsletter.label' | t }}
                   </label>
                   <button
@@ -163,6 +163,25 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 52
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.tailwind.heading"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_container_classes",
+      "label": "t:sections.all.tailwind.container"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_text_classes",
+      "label": "t:sections.all.tailwind.text"
+    },    
+    {
+      "type": "text",
+      "id": "tailwind_input_classes",
+      "label": "t:sections.all.tailwind.input"
     }
   ],
   "blocks": [

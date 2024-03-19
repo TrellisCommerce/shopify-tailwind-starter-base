@@ -31,6 +31,10 @@
   elsif section.settings.media_size == 'small'
     assign media_width = 0.45
   endif
+
+  assign tailwindTextClasses = section.settings.tailwind_text_classes
+
+  assign tailwindButtonClasses = section.settings.tailwind_button_classes
 -%}
 
 {% comment %} TODO: assign `product.selected_or_first_available_variant` to variable and replace usage to reduce verbosity {% endcomment %}
@@ -54,7 +58,7 @@
   >
 {%- endif -%}
 
-<section class='color-{{ section.settings.color_scheme }} {% if section.settings.secondary_background %}background-secondary{% else %}gradient{% endif %}'>
+<section class='color-{{ section.settings.color_scheme }} {% if section.settings.secondary_background %}background-secondary{% else %}gradient{% endif %} {{ section.settings.tailwind_container_classes }}'>
   <div class='page-width section-{{ section.id }}-padding{% if section.settings.secondary_background %} isolate{% endif %}'>
     <div class='featured-product product grid grid--1-col gradient color-{{ section.settings.color_scheme }} product--{{ section.settings.media_position }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}'>
       <div class='grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}'>
@@ -107,7 +111,7 @@
           </div>
           {%- if first_3d_model -%}
             <button
-              class='button button--full-width product__xr-button'
+              class='button button--full-width product__xr-button {{ section.settings.tailwind_button_classes }}'
               type='button'
               aria-label='{{ 'products.product.xr_button_label' | t }}'
               data-shopify-xr
@@ -136,13 +140,13 @@
                 {% render block %}
               {%- when 'text' -%}
                 <p
-                  class='product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}'
+                  class='product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %} {{ section.settings.tailwind_text_classes }}'
                   {{ block.shopify_attributes }}
                 >
                   {{- block.settings.text -}}
                 </p>
               {%- when 'title' -%}
-                <h2 class='product__title {{ block.settings.heading_size }}' {{ block.shopify_attributes }}>
+                <h2 class='product__title {{ block.settings.heading_size }} {{ section.settings.tailwind_text_classes }}' {{ block.shopify_attributes }}>
                   {%- if product.title != blank -%}
                     {{ product.title | escape }}
                   {%- else -%}
@@ -155,11 +159,11 @@
                     product: product,
                     use_variant: true,
                     show_badges: true,
-                    price_class: 'price--large'
+                    price_class: tailwindTextClasses
                   -%}
                 </div>
                 {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
-                  <div class='product__tax caption rte'>
+                  <div class='product__tax caption rte {{ section.settings.tailwind_text_classes }}'>
                     {%- if shop.taxes_included -%}
                       {{ 'products.product.include_taxes' | t }}
                     {%- endif -%}
@@ -178,7 +182,7 @@
                 {%- endif -%}
               {%- when 'sku' -%}
                 <p
-                  class='product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}'
+                  class='product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %} {{ section.settings.tailwind_text_classes }}'
                   id='Sku-{{ section.id }}'
                   role='status'
                   {{ block.shopify_attributes }}
@@ -198,7 +202,7 @@
                     | item_count_for_variant: product.selected_or_first_available_variant.id
                   -%}
                   {% # theme-check-enable %}
-                  <label class='quantity__label form__label' for='Quantity-{{ section.id }}'>
+                  <label class='quantity__label form__label {{ section.settings.tailwind_text_classes }}' for='Quantity-{{ section.id }}'>
                     {{ 'products.product.quantity.label' | t }}
                     <span class='quantity__rules-cart no-js-hidden{% if cart_qty == 0 %} hidden{% endif %}'>
                       <span class='loading-overlay hidden'>
@@ -206,7 +210,7 @@
                           <svg
                             aria-hidden='true'
                             focusable='false'
-                            class='spinner'
+                            class='spinner {{ section.settings.tailwind_svg_classes }}'
                             viewBox='0 0 66 66'
                             xmlns='http://www.w3.org/2000/svg'
                           >
@@ -221,8 +225,8 @@
                       >
                     </span>
                   </label>
-                  <quantity-input class='quantity'>
-                    <button class='quantity__button no-js-hidden' name='minus' type='button'>
+                  <quantity-input class='quantity {{ section.settings.tailwind_input_classes }}'>
+                    <button class='quantity__button no-js-hidden {{ section.settings.tailwind_svg_classes }}' name='minus' type='button'>
                       <span class='visually-hidden'>
                         {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
                       </span>
@@ -244,7 +248,7 @@
                       value='{{ product.selected_or_first_available_variant.quantity_rule.min }}'
                       form='{{ product_form_id }}'
                     >
-                    <button class='quantity__button no-js-hidden' name='plus' type='button'>
+                    <button class='quantity__button no-js-hidden {{ section.settings.tailwind_svg_classes }}' name='plus' type='button'>
                       <span class='visually-hidden'>
                         {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
                       </span>
@@ -293,7 +297,8 @@
                   block: block,
                   product: product,
                   product_form_id: product_form_id,
-                  section_id: section.id
+                  section_id: section.id,
+                  button_classes: tailwindButtonClasses
                 -%}
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
@@ -395,7 +400,7 @@
             </div>
             {%- if first_3d_model -%}
               <button
-                class='button button--full-width product__xr-button'
+                class='button button--full-width product__xr-button {{ tailwindButtonClasses }}'
                 type='button'
                 aria-label='{{ 'products.product.xr_button_label' | t }}'
                 data-shopify-xr
@@ -1480,6 +1485,35 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.tailwind.heading"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_container_classes",
+      "label": "t:sections.all.tailwind.container"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_text_classes",
+      "label": "t:sections.all.tailwind.text"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_button_classes",
+      "label": "t:sections.all.tailwind.button"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_input_classes",
+      "label": "t:sections.all.tailwind.input"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_svg_classes",
+      "label": "t:sections.all.tailwind.svg"
     }
   ],
   "presets": [

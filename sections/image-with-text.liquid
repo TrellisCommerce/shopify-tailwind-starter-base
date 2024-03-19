@@ -14,7 +14,7 @@
   }
 {%- endstyle -%}
 
-<div class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == 'background-1' and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+<div class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == 'background-1' and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.tailwind_container_classes }}">
   <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
     <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
       <div
@@ -56,20 +56,20 @@
           {% case block.type %}
             {%- when 'heading' -%}
               <h2
-                class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
+                class="image-with-text__heading inline-richtext {{ block.settings.heading_size }} {{ section.settings.tailwind_text_classes }}"
                 {{ block.shopify_attributes }}
               >
                 {{ block.settings.heading }}
               </h2>
             {%- when 'caption' -%}
               <p
-                class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
+                class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }} {{ section.settings.tailwind_text_classes }}"
                 {{ block.shopify_attributes }}
               >
                 {{ block.settings.caption | escape }}
               </p>
             {%- when 'text' -%}
-              <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+              <div class="image-with-text__text rte {{ block.settings.text_style }} {{ section.settings.tailwind_text_classes }}" {{ block.shopify_attributes }}>
                 {{ block.settings.text }}
               </div>
             {%- when 'button' -%}
@@ -80,7 +80,7 @@
                   {% else %}
                     href="{{ block.settings.button_link }}"
                   {% endif %}
-                  class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                  class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %} {{ section.settings.tailwind_button_classes }}"
                   {{ block.shopify_attributes }}
                 >
                   {{ block.settings.button_label | escape }}
@@ -319,6 +319,25 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.tailwind.heading"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_container_classes",
+      "label": "t:sections.all.tailwind.container"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_text_classes",
+      "label": "t:sections.all.tailwind.text"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_button_classes",
+      "label": "t:sections.all.tailwind.button"
     }
   ],
   "blocks": [

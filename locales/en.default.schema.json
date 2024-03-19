@@ -411,6 +411,14 @@
         "padding_top": "Top padding",
         "padding_bottom": "Bottom padding"
       },
+      "tailwind": {
+        "heading": "Tailwind CSS",
+        "text": "TailwindCSS for Text",
+        "container": "TalwindCSS for Container",
+        "button": "TailwindCSS for Button",
+        "svg": "TailwindCSS for SVG",
+        "input": "TailwindCSS for Input"
+      },
       "spacing": "Spacing",
       "colors": {
         "accent_1": {

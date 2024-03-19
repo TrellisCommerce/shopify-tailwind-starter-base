@@ -24,11 +24,11 @@
     assign posts_displayed = section.settings.post_limit
   endif
 -%}
-<div class="blog color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %}">
+<div class="blog color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %} {{ section.settings.tailwind_container_classes }}">
   <div class="page-width-desktop isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
     {%- unless section.settings.heading == blank -%}
       <div class="title-wrapper-with-link{% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
-        <h2 id="SectionHeading-{{ section.id }}" class="blog__title inline-richtext {{ section.settings.heading_size }}">
+        <h2 id="SectionHeading-{{ section.id }}" class="blog__title inline-richtext {{ section.settings.heading_size }} {{ section.settings.tailwind_text_classes }}">
           {{ section.settings.heading }}
         </h2>
 
@@ -102,7 +102,7 @@
           <a
             href="{{ section.settings.blog.url }}"
             id="ViewAll-{{ section.id }}"
-            class="blog__button button"
+            class="blog__button button {{ section.settings.tailwind_button_classes }}"
             aria-labelledby="ViewAll-{{ section.id }} SectionHeading-{{ section.id }}"
           >
             {{ 'sections.featured_blog.view_all' | t }}
@@ -115,10 +115,10 @@
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
         </div>
         <div class="blog-placeholder__content">
-          <h2>
+          <h2 class="{{ section.settings.tailwind_text_classes }}">
             {{ 'sections.featured_blog.onboarding_title' | t }}
           </h2>
-          <p class="rte-width">
+          <p class="rte-width {{ section.settings.tailwind_text_classes }}">
             {{ 'sections.featured_blog.onboarding_content' | t }}
           </p>
         </div>
@@ -261,6 +261,25 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.tailwind.heading"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_container_classes",
+      "label": "t:sections.all.tailwind.container"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_button_classes",
+      "label": "t:sections.all.tailwind.button"
+    },
+    {
+      "type": "text",
+      "id": "tailwind_text_classes",
+      "label": "t:sections.all.tailwind.text"
     }
   ],
   "presets": [
