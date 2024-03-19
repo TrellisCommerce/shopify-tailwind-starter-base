@@ -114,24 +114,67 @@
     "colors": {
       "name": "Colors",
       "settings": {
+        "colors_solid_button_labels": {
+          "label": "Solid button label",
+          "info": "Used as foreground color on accent colors."
+        },
         "background": {
           "label": "Background"
+        },
+        "colors_accent_1": {
+          "label": "Accent 1",
+          "info": "Used for solid button background."
         },
         "background_gradient": {
           "label": "Background gradient",
           "info": "Background gradient replaces background where possible."
         },
+        "gradient_accent_1": {
+          "label": "Accent 1 gradient"
+        },
+        "colors_accent_2": {
+          "label": "Accent 2"
+        },
+        "gradient_accent_2": {
+          "label": "Accent 2 gradient"
+        },
+        "header__1": {
+          "content": "Primary colors"
+        },
+        "header__2": {
+          "content": "Secondary colors"
+        },
+        "colors_text": {
+          "label": "Text",
+          "info": "Used as foreground color on background colors."
+        },
+        "colors_outline_button_labels": {
+          "label": "Outline button",
+          "info": "Also used for text links."
+        },
         "text": {
           "label": "Text"
+        },
+        "colors_background_1": {
+          "label": "Background 1"
         },
         "button_background": {
           "label": "Solid button background"
         },
+        "gradient_background_1": {
+          "label": "Background 1 gradient"
+        },
         "button_label": {
           "label": "Solid button label"
         },
+        "colors_background_2": {
+          "label": "Background 2"
+        },
         "secondary_button_label": {
           "label": "Outline button"
+        },
+        "gradient_background_2": {
+          "label": "Background 2 gradient"
         },
         "shadow": {
           "label": "Shadow"
@@ -221,6 +264,20 @@
     },
     "drawers": {
       "name": "Drawers"
+    },
+    "styles": {
+      "name": "Icons",
+      "settings": {
+        "accent_icons": {
+          "options__3": {
+            "label": "Outline button"
+          },
+          "options__4": {
+            "label": "Text"
+          },
+          "label": "Color"
+        }
+      }
     },
     "animations": {
       "name": "Animations",
@@ -405,6 +462,21 @@
       },
       "spacing": "Spacing",
       "colors": {
+        "accent_1": {
+          "label": "Accent 1"
+        },
+        "accent_2": {
+          "label": "Accent 2"
+        },
+        "background_1": {
+          "label": "Background 1"
+        },
+        "background_2": {
+          "label": "Background 2"
+        },
+        "inverse": {
+          "label": "Inverse"
+        },
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       },
