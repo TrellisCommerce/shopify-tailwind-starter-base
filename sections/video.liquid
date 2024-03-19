@@ -46,10 +46,8 @@
       {% endif %}
     >
       {%- unless section.settings.heading == blank -%}
-        <div class='title-wrapper title-wrapper--no-top-margin'>
-          <h2 class='title inline-richtext {{ section.settings.heading_size }} {{ section.settings.twcss_heading }}'>
-            {{ section.settings.heading }}
-          </h2>
+        <div class="title-wrapper title-wrapper--no-top-margin{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+          <h2 class="title inline-richtext {{ section.settings.heading_size }} {{ section.settings.twcss_heading }}">{{ section.settings.heading }}</h2>
         </div>
       {%- endunless -%}
     </div>
@@ -69,14 +67,10 @@
               {{
                 poster
                 | image_url: width: 3840
-                | image_tag:
-                  loading: 'lazy',
-                  sizes: sizes,
-                  widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840',
-                  alt: alt
+                | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
               }}
             {%- else -%}
-              {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+              {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
             {%- endif -%}
           </a>
         {%- else -%}
@@ -88,8 +82,8 @@
       </div>
     </noscript>
     <deferred-media
-      class='video-section__media deferred-media no-js-hidden gradient global-media-settings{% if section.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}'
-      data-media-id='{{ video_id }}' {% if section.settings.enable_video_autoplay %}data-autoplay="true"{% endif %}
+      class="video-section__media deferred-media no-js-hidden gradient global-media-settings{% if section.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+      data-media-id="{{ video_id }}" {% if section.settings.enable_video_autoplay %}data-autoplay="true"{% endif %}
       {% if poster != null %}
         style='--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;'
       {% endif %}
@@ -104,10 +98,10 @@
           {{
             poster
             | image_url: width: 3840
-            | image_tag: loading: 'lazy', sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
+            | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
           }}
         {%- else -%}
-          {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+          {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
         {%- endif -%}
         <span class='deferred-media__poster-button motion-reduce'>
           {%- render 'icon-play' -%}
@@ -269,32 +263,10 @@
       "default": false
     },
     {
-      "type": "select",
+      "type": "color_scheme",
       "id": "color_scheme",
-      "options": [
-        {
-          "value": "accent-1",
-          "label": "t:sections.all.colors.accent_1.label"
-        },
-        {
-          "value": "accent-2",
-          "label": "t:sections.all.colors.accent_2.label"
-        },
-        {
-          "value": "background-1",
-          "label": "t:sections.all.colors.background_1.label"
-        },
-        {
-          "value": "background-2",
-          "label": "t:sections.all.colors.background_2.label"
-        },
-        {
-          "value": "inverse",
-          "label": "t:sections.all.colors.inverse.label"
-        }
-      ],
-      "default": "background-1",
-      "label": "t:sections.all.colors.label"
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
     },
     {
       "type": "header",

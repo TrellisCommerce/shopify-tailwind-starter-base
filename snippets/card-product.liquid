@@ -14,12 +14,14 @@
   - section_id: {String} The ID of the section that contains this card.
   - horizontal_class: {Boolean} Add a card--horizontal class if set to true. Default: false (optional)
   - horizontal_quick_add: {Boolean} Changes the quick add button styles when set to true. Default: false (optional)
+  - placeholder_image: {String} The placeholder image to use when no product exists. Default: 'product-apparel-2' (optional)
 
   Usage:
   {% render 'card-product', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
+{{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
 
 {%- if card_product and card_product != empty -%}
   {%- liquid
@@ -35,9 +37,8 @@
   -%}
   <div class='card-wrapper product-card-wrapper underline-links-hover'>
     <div
-      class='
-        card
-        card--{{ settings.card_style }}
+      class="
+        card card--{{ settings.card_style }}
         {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
         {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
         {% if image_shape and image_shape != 'default' %} card--shape{% endif %}
@@ -206,6 +207,11 @@
               price_class: twcss_product_card_price,
               price_sale: twcss_product_card_price_sale
             %}
+            {%- if card_product.quantity_price_breaks_configured? -%}
+              <div class='card__information-volume-pricing-note'>
+                <span class='caption'>{{ 'products.product.volume_pricing.note' | t }}</span>
+              </div>
+            {%- endif -%}
           </div>
         </div>
         {%- if show_quick_add -%}
@@ -232,17 +238,7 @@
                   {%- if horizontal_quick_add -%}
                     <span class='icon-wrap'>{% render 'icon-arrow' %}</span>
                   {%- endif -%}
-                  <div class='loading-overlay__spinner hidden'>
-                    <svg
-                      aria-hidden='true'
-                      focusable='false'
-                      class='spinner'
-                      viewBox='0 0 66 66'
-                      xmlns='http://www.w3.org/2000/svg'
-                    >
-                      <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                    </svg>
-                  </div>
+                  {%- render 'loading-spinner' -%}
                 </button>
               </modal-opener>
               <quick-add-modal id='QuickAdd-{{ card_product.id }}' class='quick-add-modal'>
@@ -265,7 +261,7 @@
                 </div>
               </quick-add-modal>
             {%- else -%}
-              <product-form>
+              <product-form data-section-id="{{ section.id }}">
                 {%- form 'product',
                   card_product,
                   id: product_form_id,
@@ -274,10 +270,13 @@
                   data-type: 'add-to-cart-form'
                 -%}
                   <input
-                    type='hidden'
-                    name='id'
-                    value='{{ card_product.selected_or_first_available_variant.id }}'
-                    disabled
+                    type="hidden"
+                    name="id"
+                    value="{{ card_product.selected_or_first_available_variant.id }}"
+                    class="product-variant-id"
+                    {% if card_product.selected_or_first_available_variant.available == false %}
+                      disabled
+                    {% endif %}
                   >
                   <button
                     id='{{ product_form_id }}-submit'
@@ -305,17 +304,7 @@
                     {%- if horizontal_quick_add -%}
                       <span class='icon-wrap'>{% render 'icon-plus' %}</span>
                     {%- endif -%}
-                    <div class='loading-overlay__spinner hidden'>
-                      <svg
-                        aria-hidden='true'
-                        focusable='false'
-                        class='spinner'
-                        viewBox='0 0 66 66'
-                        xmlns='http://www.w3.org/2000/svg'
-                      >
-                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                      </svg>
-                    </div>
+                    {%- render 'loading-spinner' -%}
                   </button>
                 {%- endform -%}
               </product-form>
@@ -343,37 +332,43 @@
     </div>
   </div>
 {%- else -%}
-  <div class='product-card-wrapper card-wrapper underline-links-hover'>
+  {%- liquid
+    assign ratio = 1
+    if media_aspect_ratio == 'portrait'
+      assign ratio = 0.8
+    endif
+  -%}
+  <div class="card-wrapper product-card-wrapper underline-links-hover">
     <div
-      class='
-        card
-        card--{{ settings.card_style }}
-        card--text
+      class="
+        card card--{{ settings.card_style }}
         {% if extend_height %} card--extend-height{% endif %}
+        {% if image_shape and image_shape != 'default' %} card--shape{% endif %}
         {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
-        {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}
-        {{ horizontal_class }}
-      '
-      style='--ratio-percent: 100%;'
+      "
+      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
       <div
-        class='card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if settings.card_style == 'standard' %} ratio{% endif %}'
-        style='--ratio-percent: 100%;'
+        class="card__inner{% if settings.card_style == 'standard' %} color-{{ settings.card_color_scheme }} gradient{% endif %} ratio"
       >
-        <div class='card__content'>
-          <div class='card__information'>
-            <h3 class='card__heading'>
-              <a role='link' aria-disabled='true' class='full-unstyled-link {{ twcss_product_card_heading }}'>
-                {{ 'onboarding.product_title' | t }}
-              </a>
-            </h3>
+        <div
+          class="card__media {% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}"
+        >
+          <div
+            class="media media--transparent"
+          >
+            {%- if placeholder_image -%}
+              {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- else -%}
+              {{ 'product-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
           </div>
         </div>
       </div>
-      <div class='card__content'>
-        <div class='card__information'>
-          <h3 class='card__heading{% if settings.card_style == 'standard' %} h5{% endif %}'>
-            <a role='link' aria-disabled='true' class='full-unstyled-link {{ twcss_product_card_heading }}'>
+      <div class="card__content">
+        <div class="card__information">
+          <h3 class="card__heading card__heading--placeholder{% if settings.card_style == 'standard' %} h5{% endif %}">
+            <a role="link" aria-disabled="true" class="full-unstyled-link {{ twcss_product_card_heading }}">
               {{ 'onboarding.product_title' | t }}
             </a>
           </h3>
@@ -382,7 +377,7 @@
               <span class='visually-hidden'>{{ 'accessibility.vendor' | t }}</span>
               <div class='caption-with-letter-spacing light'>{{ 'products.product.vendor' | t }}</div>
             {%- endif -%}
-            {% render 'price', price_class: twcss_product_card_price, price_sale: twcss_product_card_price_sale %}
+            {% render 'price', price_class: twcss_product_card_price, price_sale: twcss_product_card_price_sale % %}
           </div>
         </div>
       </div>

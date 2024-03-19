@@ -1,32 +1,32 @@
 Brought to you and maintained by [Trellis Commerce](https://trellis.co/) - A full-service eCommerce agency based in Boston, MA
 
-Lastest merged code from [Dawn v9.0.0](https://github.com/Shopify/dawn/releases/tag/v9.0.0)
+Latest merged code from [Dawn v12.0.0](https://github.com/Shopify/dawn/releases/tag/v12.0.0)
 
-# Dawn + TailWindCSS + Prettier Shopify Starter Theme
+# Dawn + Tailwind CSS + Prettier Shopify Starter Theme
 
-Shopify Dawn theme with TailWindCSS &amp; Prettier integrations
+Shopify Dawn theme with Tailwind CSS &amp; Prettier integrations
 
 The starter theme includes an integration of:
 
-## [TailwindCSS](https://tailwindcss.com/)
+## [Tailwind CSS](https://tailwindcss.com/)
 
 - [Configured](https://markustripp.medium.com/extend-shopify-dawn-theme-with-a-custom-tailwind-css-carousel-section-e3efe3ecf18e) to use `prefix: twcss-` in order to not clash with Dawn’s existing styles
 
 ## [Trellis' Prettier config](https://www.npmjs.com/package/@trelliscommerce/prettier-config) with Husky pre-commit hooks
 
 - Formats JS & CSS whenever a git commit is made
-- Setup your own VSCode to apply Prettier formatting when a file is saved (optional)
+- Set up your own VSCode to apply Prettier formatting when a file is saved (optional)
 
 ## Other Noted Modifications
 
-- Set the default page width to 1440px and tweaked the desktop page width range to be 1200px to 1600px with a step adjustment of 10px (standard desktop width used at Trellis and allows for more finetuning)
+- Set the default page width to 1440px and tweaked the desktop page width range to be 1200px to 1600px with a step adjustment of 10px (standard desktop width used at Trellis and allows for more fine tuning)
 
 ## Steps to Start Using this Starter Theme
 
 1. Fork this repository & enable actions in the repo's Actions tab.
 
 | :bangbang: | When forking this repo, make sure to change the settings in the forked repo under Settings > Actions > General > Workflow permissions to be `Read and write permissions` and check `Allow GitHub Actions to create and approve pull requests` for the Theme Check & Lighthouse actions to run |
-| :--------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|:----------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 2. Clone the forked repo, navigate to the directory in your terminal, & run `npm install`.
 
@@ -34,25 +34,25 @@ The starter theme includes an integration of:
 
 <img width="500" alt="Add a theme and connect it to your github repo" src="https://user-images.githubusercontent.com/75811975/162517993-31a22954-6600-45f9-ab6e-2b9735c9efba.png">
 
-4. In your terminal, navigate to the cloned repo directory, and use the Shopify CLI to login to your store with `shopify login --store=mystore.myshopify.com` and launch the development server with `shopify theme serve`.
+4. In your terminal, navigate to the cloned repo directory, and use the Shopify CLI to launch the development server to your store with `shopify theme dev --store=mystore.myshopify.com` and upload the theme with `shopify theme share`.
 
 | :bangbang: | If you are working on a development store and are signed in via your partner dashboard, you must add a separate user in that Shopify store with admin rights and sign in with this new user when logging in using the Shopify CLI |
-| :--------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|:----------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 You can add users in the store Settings:
 
 <img width="500" alt="Where to add users in the store settings" src="https://user-images.githubusercontent.com/75811975/162517914-6fe20ef6-7b58-4337-b488-75966694ef92.png">
 
-## Add Github secrets for Lighthouse CI Performance Evaluation Actions
+## Add GitHub secrets for Lighthouse CI Performance Evaluation Actions
 
 | :bangbang: | This repo does not have the following secrets configured, which is why the Lighthouse action is failing. |
-| :--------: | :------------------------------------------------------------------------------------------------------- |
+|:----------:|:---------------------------------------------------------------------------------------------------------|
 
 First, make sure your `Workflow permissions` are set like below in order for the actions to run:
 
 <img width="500" alt="Workflow permissions settings" src="https://user-images.githubusercontent.com/75811975/167029308-3b05be7b-bae0-4cb9-8234-7da07b4f715e.png">
 
-In your github repo, navigate to Settings > Secrets > Actions and add the following repository secrets:
+In your GitHub repo, navigate to Settings > Secrets > Actions and add the following repository secrets:
 
 `SHOP_APP_ID` & `SHOP_APP_PASSWORD`
 
@@ -86,7 +86,7 @@ In your github repo, navigate to Settings > Secrets > Actions and add the follow
 
 - To enable GitHub status checks via the official GitHub app, [install and authorize the app](https://github.com/apps/lighthouse-ci) with the owner of the target repo. If the repo is within an organization, organization approval might be necessary. Copy the app token provided on the authorization confirmation page and add it to your build environment as `LHCI_GITHUB_APP_TOKEN`
 
-These secret values are used in the `ci.yml` github workflow:
+These secret values are used in the `ci.yml` GitHub workflow:
 
 <img width="500" alt="Secrets shown in the workflow file" src="https://user-images.githubusercontent.com/75811975/162518733-c1744910-85b2-44e3-91d0-08acfc018ba1.png">
 
@@ -106,10 +106,14 @@ These secret values are used in the `ci.yml` github workflow:
 3. Pull down changes from the theme editor:
    `shopify theme pull -d`
 
-4. Anytime you add a TailwindCSS class (remember to prefix it with twcss-), run the CLI tool to scan your template files for classes and build your CSS to assets/app.css:
+4. Anytime you add a Tailwind CSS class (remember to prefix it with twcss-), run the CLI tool to scan your template files for classes and build your CSS to assets/app.css:
    `npx tailwindcss -i ./assets/app-tailwind.css -o ./assets/app.css --watch`
 
-- Run this command in a separate terminal so it will continue to run while you are developing.
+- Run this command in a separate terminal, so it will continue to run while you are developing.
+- Note that using a Tailwind CSS class without a space afterward when followed by a liquid tag causes compiling issues:
+`lg:!twcss-px-[32px]{% endif %}'>`
+But this does work:
+`lg:!twcss-px-[32px] {% endif %}'>`
 
 5. Launch the local development server:
-   `shopify theme serve`
+   `shopify theme dev`

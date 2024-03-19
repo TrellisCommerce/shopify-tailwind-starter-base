@@ -52,20 +52,46 @@ class CartItems extends HTMLElement {
       event.target.dataset.index,
       event.target.value,
       document.activeElement.getAttribute('name'),
+      event.target.dataset.quantityVariantId,
     );
   }
 
   onCartUpdate() {
-    fetch(`${routes.cart_url}?section_id=main-cart-items`)
-      .then((response) => response.text())
-      .then((responseText) => {
-        const html = new DOMParser().parseFromString(responseText, 'text/html');
-        const sourceQty = html.querySelector('cart-items');
-        this.innerHTML = sourceQty.innerHTML;
-      })
-      .catch((e) => {
-        console.error(e);
-      });
+    if (this.tagName === 'CART-DRAWER-ITEMS') {
+      fetch(`${routes.cart_url}?section_id=cart-drawer`)
+        .then((response) => response.text())
+        .then((responseText) => {
+          const html = new DOMParser().parseFromString(
+            responseText,
+            'text/html',
+          );
+          const selectors = ['cart-drawer-items', '.cart-drawer__footer'];
+          for (const selector of selectors) {
+            const targetElement = document.querySelector(selector);
+            const sourceElement = html.querySelector(selector);
+            if (targetElement && sourceElement) {
+              targetElement.replaceWith(sourceElement);
+            }
+          }
+        })
+        .catch((e) => {
+          console.error(e);
+        });
+    } else {
+      fetch(`${routes.cart_url}?section_id=main-cart-items`)
+        .then((response) => response.text())
+        .then((responseText) => {
+          const html = new DOMParser().parseFromString(
+            responseText,
+            'text/html',
+          );
+          const sourceQty = html.querySelector('cart-items');
+          this.innerHTML = sourceQty.innerHTML;
+        })
+        .catch((e) => {
+          console.error(e);
+        });
+    }
   }
 
   getSectionsToRender() {
@@ -93,7 +119,7 @@ class CartItems extends HTMLElement {
     ];
   }
 
-  updateQuantity(line, quantity, name) {
+  updateQuantity(line, quantity, name, variantId) {
     this.enableLoading(line);
 
     const body = JSON.stringify({
@@ -183,10 +209,15 @@ class CartItems extends HTMLElement {
             document.querySelector('.cart-item__name'),
           );
         }
-        publish(PUB_SUB_EVENTS.cartUpdate, { source: 'cart-items' });
+
+        publish(PUB_SUB_EVENTS.cartUpdate, {
+          source: 'cart-items',
+          cartData: parsedState,
+          variantId: variantId,
+        });
       })
       .catch(() => {
-        this.querySelectorAll('.loading-overlay').forEach((overlay) =>
+        this.querySelectorAll('.loading__spinner').forEach((overlay) =>
           overlay.classList.add('hidden'),
         );
         const errors =
@@ -231,10 +262,10 @@ class CartItems extends HTMLElement {
     mainCartItems.classList.add('cart__items--disabled');
 
     const cartItemElements = this.querySelectorAll(
-      `#CartItem-${line} .loading-overlay`,
+      `#CartItem-${line} .loading__spinner`,
     );
     const cartDrawerItemElements = this.querySelectorAll(
-      `#CartDrawer-Item-${line} .loading-overlay`,
+      `#CartDrawer-Item-${line} .loading__spinner`,
     );
 
     [...cartItemElements, ...cartDrawerItemElements].forEach((overlay) =>
@@ -252,10 +283,10 @@ class CartItems extends HTMLElement {
     mainCartItems.classList.remove('cart__items--disabled');
 
     const cartItemElements = this.querySelectorAll(
-      `#CartItem-${line} .loading-overlay`,
+      `#CartItem-${line} .loading__spinner`,
     );
     const cartDrawerItemElements = this.querySelectorAll(
-      `#CartDrawer-Item-${line} .loading-overlay`,
+      `#CartDrawer-Item-${line} .loading__spinner`,
     );
 
     cartItemElements.forEach((overlay) => overlay.classList.add('hidden'));
@@ -275,7 +306,7 @@ if (!customElements.get('cart-note')) {
         super();
 
         this.addEventListener(
-          'change',
+          'input',
           debounce((event) => {
             const body = JSON.stringify({ note: event.target.value });
             fetch(`${routes.cart_update_url}`, {

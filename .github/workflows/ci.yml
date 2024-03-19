@@ -1,11 +1,29 @@
 name: CI
 on: [push]
 jobs:
+  tailwindcss-update:
+    name: Generate TailwindCSS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Generate TailwindCSS
+        uses: ZoeyVid/tailwindcss-update@main
+        with:
+          input: assets/app-tailwind.css
+          output: assets/app.css
+          params: ""
+      - name: Commit & Push
+        run: |
+          git config user.name "GitHub"
+          git config user.email "noreply@github.com"
+          git diff-index --quiet HEAD || git commit -m "ci: tailwindcss-update"
+          git push
   lhci:
     name: Lighthouse
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Lighthouse
         uses: shopify/lighthouse-ci-action@v1
         with:
@@ -20,7 +38,7 @@ jobs:
     name: Theme Check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Theme Check
         uses: shopify/theme-check-action@v1
         with:

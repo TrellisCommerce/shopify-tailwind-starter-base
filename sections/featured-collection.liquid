@@ -79,9 +79,12 @@
       >
         {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
           <li
-            id='Slide-{{ section.id }}-{{ forloop.index }}'
-            class='grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
-            data-cascade
+            id="Slide-{{ section.id }}-{{ forloop.index }}"
+            class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
           >
             {% render 'card-product',
               card_product: product,
@@ -102,13 +105,26 @@
             %}
           </li>
         {%- else -%}
-          {%- for i in (1..4) -%}
+          {%- for i in (1..section.settings.columns_desktop) -%}
             <li
-              class='grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
-              data-cascade
+              class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
             >
+              {% liquid
+                assign ridx = forloop.rindex
+                if ridx == 5
+                  assign ridx = 1
+                endif
+              %}
+              {%- assign placeholder_image = 'product-apparel-' | append: ridx -%}
               {% render 'card-product',
                 show_vendor: section.settings.show_vendor,
+                media_aspect_ratio: section.settings.image_ratio,
+                image_shape: section.settings.image_shape,
+                placeholder_image: placeholder_image,
                 twcss_product_card_container: settings.twcss_product_card_container,
                 twcss_product_card_image: settings.twcss_product_card_image,
                 twcss_product_card_heading: settings.twcss_product_card_heading,
@@ -296,33 +312,11 @@
       "default": false
     },
     {
-      "type": "select",
+      "type": "color_scheme",
       "id": "color_scheme",
-      "options": [
-        {
-          "value": "accent-1",
-          "label": "t:sections.all.colors.accent_1.label"
-        },
-        {
-          "value": "accent-2",
-          "label": "t:sections.all.colors.accent_2.label"
-        },
-        {
-          "value": "background-1",
-          "label": "t:sections.all.colors.background_1.label"
-        },
-        {
-          "value": "background-2",
-          "label": "t:sections.all.colors.background_2.label"
-        },
-        {
-          "value": "inverse",
-          "label": "t:sections.all.colors.inverse.label"
-        }
-      ],
-      "default": "background-1",
       "label": "t:sections.all.colors.label",
-      "info": "t:sections.all.colors.has_cards_info"
+      "info": "t:sections.all.colors.has_cards_info",
+      "default": "scheme-1"
     },
     {
       "type": "header",

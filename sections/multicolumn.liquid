@@ -23,10 +23,12 @@
   endif
 -%}
 
-<div class='multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %} {{ section.settings.twcss_container }}'>
+<div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %} {{ section.settings.twcss_container }}">
   <div
-    class='page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
-    data-cascade
+    class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    {% if settings.animations_reveal_on_scroll %}
+      data-cascade
+    {% endif %}
   >
     {%- unless section.settings.title == blank -%}
       <div class='title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin'>
@@ -42,9 +44,9 @@
     {%- endunless -%}
     <slider-component class='slider-mobile-gutter'>
       <ul
-        class='multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile grid--peek{% endif %}'
-        id='Slider-{{ section.id }}'
-        role='list'
+        class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--tablet grid--peek{% endif %}"
+        id="Slider-{{ section.id }}"
+        role="list"
       >
         {%- liquid
           assign highest_ratio = 0
@@ -68,7 +70,10 @@
             id='Slide-{{ section.id }}-{{ forloop.index }}'
             class='multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
             {{ block.shopify_attributes }}
-            data-cascade
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
           >
             <div class='multicolumn-card content-container {{ section.settings.twcss_column_container }}'>
               {%- if block.settings.image != blank -%}
@@ -106,7 +111,6 @@
                       block.settings.image
                       | image_url: width: 3200
                       | image_tag:
-                        loading: 'lazy',
                         widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
                         sizes: sizes,
                         class: 'multicolumn-card__image'
@@ -143,7 +147,7 @@
       </ul>
 
       {%- if show_mobile_slider -%}
-        <div class='slider-buttons no-js-hidden medium-hide'>
+        <div class="slider-buttons no-js-hidden large-up-hide">
           <button
             type='button'
             class='slider-button slider-button--prev'
@@ -318,32 +322,10 @@
       "label": "t:sections.multicolumn.settings.button_link.label"
     },
     {
-      "type": "select",
+      "type": "color_scheme",
       "id": "color_scheme",
-      "options": [
-        {
-          "value": "accent-1",
-          "label": "t:sections.all.colors.accent_1.label"
-        },
-        {
-          "value": "accent-2",
-          "label": "t:sections.all.colors.accent_2.label"
-        },
-        {
-          "value": "background-1",
-          "label": "t:sections.all.colors.background_1.label"
-        },
-        {
-          "value": "background-2",
-          "label": "t:sections.all.colors.background_2.label"
-        },
-        {
-          "value": "inverse",
-          "label": "t:sections.all.colors.inverse.label"
-        }
-      ],
-      "default": "background-1",
-      "label": "t:sections.all.colors.label"
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
     },
     {
       "type": "header",

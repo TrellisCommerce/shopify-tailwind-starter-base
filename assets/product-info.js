@@ -6,7 +6,6 @@ if (!customElements.get('product-info')) {
         super();
         this.input = this.querySelector('.quantity__input');
         this.currentVariant = this.querySelector('.product-variant-id');
-        this.variantSelects = this.querySelector('variant-radios');
         this.submitButton = this.querySelector('[type="submit"]');
       }
 
@@ -70,7 +69,7 @@ if (!customElements.get('product-info')) {
       fetchQuantityRules() {
         if (!this.currentVariant || !this.currentVariant.value) return;
         this.querySelector(
-          '.quantity__rules-cart .loading-overlay',
+          '.quantity__rules-cart .loading__spinner',
         ).classList.remove('hidden');
         fetch(
           `${this.dataset.url}?variant=${this.currentVariant.value}&section_id=${this.dataset.section}`,
@@ -91,7 +90,7 @@ if (!customElements.get('product-info')) {
           })
           .finally(() => {
             this.querySelector(
-              '.quantity__rules-cart .loading-overlay',
+              '.quantity__rules-cart .loading__spinner',
             ).classList.add('hidden');
           });
       }

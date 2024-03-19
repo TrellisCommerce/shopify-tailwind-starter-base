@@ -1,21 +1,23 @@
-Dawn 9.0.0 introduces app blocks in header, video upload with auto-loop, "Click and hover" zoom, new desktop header menu style, a gift card recipient form, and some performance improvements on images.
+Dawn 12.0.0 introduces additional customization options by adding color scheme pickers to new areas, and new ways to visually display product filters. It also introduces some performance improvements related to image loading. 
 
 ### Added
-- You can now incorporate eligible app blocks directly into your header section, to the left of your cart icon.
-- You can upload video files directly to Shopify and showcase them in the Video section. Additionally, you have the option to enable automatic video looping.
-- We introduced a new "Click and hover" zoom option on desktop for product page images to add a more subtle hover effect.
-- We've added a new style option to the desktop header menu, allowing you to collapse it into a hamburger icon with a popout drawer for a more compact and streamlined menu experience.
-- We added a language and currency switcher to the header section for shops selling in multiple currencies or languages.
-- The Slideshow, Image Banner, and Image with Text sections now have a subtle background animation option, which adds depth and dynamism to the overall design.
-- You can allow gift cards to be sent to a recipient with a new form on the gift card product page.
+- Important: If you use a gradient as a main background, the look of your cart drawer and product modal (quick add) will be affected. 
+- You can now select a color scheme for the Image with text section, Collection template (Product grid section), Product information section, Cart drawer, and Cart page.
 
 ### Changed
-- Important: The Richtext section heading type has been changed. This might result in your heading text being set back to the default value "Talk about your brand". This can happen when manually upgrading to this version.
-- We reordered the "Color scheme" setting to improve hierarchy in the header section.
-- The “Follow on Shop” option is enabled by default in the footer.
-- Section headings now provide more formatting options like bold, italic, and links.
+- If you are using the Search & Discovery app, you can now change the logical operator for facet filter values between OR and AND.
+- If you are using the Search & Discovery app, you can now choose to apply a swatch visual style for certain filter types (references to metaobjects).
 
 ### Fixes and improvements
-- We improved the performance of the Multicolumn section by reducing the image sizes being loaded.
-- We fixed the blog post slides to show a preview of the subsequent slide.
-- We optimized the logo width to ensure the image looked crisp on all device sizes.
+- We fixed an issue with facet filters that affected currencies that use comma separators.
+- We fixed a formatting issue with metadata that is used for SEO purposes.
+- We fixed a visual bug that was affecting the collage section.
+- We fixed an issue with the “compare at” price to ensure more predictable behavior.
+- We’ve improved the experience of adding items to cart on slower connections.
+- We fixed a styling issue affecting collections in empty cart drawers.
+- We fixed an issue in the Slideshow section where the next slide flashes before coming into view. 
+- We’ve improved various visual elements on the Quick order list including font consistency, alignment, and spacing. 
+- We fixed an issue affecting Quick order list on iOS, removing the need to double tap the info icon to open it.
+
+### Removed
+- Removed image tag attribute that indicated which images to load first. We will now allow the platform to determine this, which will improve performance.
