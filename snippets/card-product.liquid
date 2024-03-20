@@ -37,7 +37,7 @@
   -%}
   <div class='card-wrapper product-card-wrapper underline-links-hover'>
     <div
-      class="
+      class='
         card card--{{ settings.card_style }}
         {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
         {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
@@ -205,7 +205,8 @@
             {% render 'price',
               product: card_product,
               price_class: twcss_product_card_price,
-              price_sale: twcss_product_card_price_sale
+              price_sale: twcss_product_card_price_sale,
+              show_compare_at_price: true
             %}
             {%- if card_product.quantity_price_breaks_configured? -%}
               <div class='card__information-volume-pricing-note'>
@@ -215,7 +216,7 @@
           </div>
         </div>
         {%- if show_quick_add -%}
-          <div class='quick-add no-js-hidden'>
+          <div class='quick-add'>
             {%- liquid
               assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id
               assign qty_rules = false
@@ -261,7 +262,7 @@
                 </div>
               </quick-add-modal>
             {%- else -%}
-              <product-form data-section-id="{{ section.id }}">
+              <product-form data-section-id='{{ section.id }}'>
                 {%- form 'product',
                   card_product,
                   id: product_form_id,
@@ -270,10 +271,10 @@
                   data-type: 'add-to-cart-form'
                 -%}
                   <input
-                    type="hidden"
-                    name="id"
-                    value="{{ card_product.selected_or_first_available_variant.id }}"
-                    class="product-variant-id"
+                    type='hidden'
+                    name='id'
+                    value='{{ card_product.selected_or_first_available_variant.id }}'
+                    class='product-variant-id'
                     {% if card_product.selected_or_first_available_variant.available == false %}
                       disabled
                     {% endif %}
@@ -338,24 +339,24 @@
       assign ratio = 0.8
     endif
   -%}
-  <div class="card-wrapper product-card-wrapper underline-links-hover">
+  <div class='card-wrapper product-card-wrapper underline-links-hover'>
     <div
-      class="
+      class='
         card card--{{ settings.card_style }}
         {% if extend_height %} card--extend-height{% endif %}
         {% if image_shape and image_shape != 'default' %} card--shape{% endif %}
         {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
-      "
-      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+      '
+      style='--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;'
     >
       <div
-        class="card__inner{% if settings.card_style == 'standard' %} color-{{ settings.card_color_scheme }} gradient{% endif %} ratio"
+        class='card__inner{% if settings.card_style == 'standard' %} color-{{ settings.card_color_scheme }} gradient{% endif %} ratio'
       >
         <div
-          class="card__media {% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}"
+          class='card__media {% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}'
         >
           <div
-            class="media media--transparent"
+            class='media media--transparent'
           >
             {%- if placeholder_image -%}
               {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
@@ -365,10 +366,10 @@
           </div>
         </div>
       </div>
-      <div class="card__content">
-        <div class="card__information">
-          <h3 class="card__heading card__heading--placeholder{% if settings.card_style == 'standard' %} h5{% endif %}">
-            <a role="link" aria-disabled="true" class="full-unstyled-link {{ twcss_product_card_heading }}">
+      <div class='card__content'>
+        <div class='card__information'>
+          <h3 class='card__heading card__heading--placeholder{% if settings.card_style == 'standard' %} h5{% endif %}'>
+            <a role='link' aria-disabled='true' class='full-unstyled-link {{ twcss_product_card_heading }}'>
               {{ 'onboarding.product_title' | t }}
             </a>
           </h3>
@@ -377,7 +378,11 @@
               <span class='visually-hidden'>{{ 'accessibility.vendor' | t }}</span>
               <div class='caption-with-letter-spacing light'>{{ 'products.product.vendor' | t }}</div>
             {%- endif -%}
-            {% render 'price', price_class: twcss_product_card_price, price_sale: twcss_product_card_price_sale % %}
+            {% render 'price',
+              price_class: twcss_product_card_price,
+              price_sale: twcss_product_card_price_sale,
+              show_compare_at_price: true
+            %}
           </div>
         </div>
       </div>
