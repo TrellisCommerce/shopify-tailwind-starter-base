@@ -46,8 +46,10 @@
       {% endif %}
     >
       {%- unless section.settings.heading == blank -%}
-        <div class="title-wrapper title-wrapper--no-top-margin{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-          <h2 class="title inline-richtext {{ section.settings.heading_size }} {{ section.settings.twcss_heading }}">{{ section.settings.heading }}</h2>
+        <div class='title-wrapper title-wrapper--no-top-margin{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'>
+          <h2 class='title inline-richtext {{ section.settings.heading_size }} {{ section.settings.twcss_heading }}'>
+            {{ section.settings.heading }}
+          </h2>
         </div>
       {%- endunless -%}
     </div>
@@ -82,8 +84,11 @@
       </div>
     </noscript>
     <deferred-media
-      class="video-section__media deferred-media no-js-hidden gradient global-media-settings{% if section.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-      data-media-id="{{ video_id }}" {% if section.settings.enable_video_autoplay %}data-autoplay="true"{% endif %}
+      class='video-section__media deferred-media no-js-hidden gradient global-media-settings{% if section.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
+      data-media-id='{{ video_id }}'
+      {% if section.settings.enable_video_autoplay %}
+        data-autoplay='true'
+      {% endif %}
       {% if poster != null %}
         style='--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;'
       {% endif %}
@@ -164,9 +169,7 @@
   </div>
 </div>
 
-<script>
-
-</script>
+<script></script>
 
 {% schema %}
 {
@@ -294,17 +297,17 @@
     },
     {
       "type": "header",
-      "content": "TailwindCSS"
+      "content": "Tailwind CSS"
     },
     {
       "type": "text",
       "id": "twcss_video_button",
-      "label": "TailwindCSS for Video Button"
+      "label": "Tailwind CSS for Video Button"
     },
     {
       "type": "text",
       "id": "twcss_heading",
-      "label": "TailwindCSS for Heading Text"
+      "label": "Tailwind CSS for Heading Text"
     }
   ],
   "presets": [

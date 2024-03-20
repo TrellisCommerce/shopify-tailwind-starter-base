@@ -9,13 +9,13 @@
 
 {{ 'component-loading-spinner.css' | asset_url | stylesheet_tag }}
 
-<div class="{% if class %}{{ class }}{% else %}loading__spinner hidden{% endif %}">
+<div class='{% if class %}{{ class }}{% else %}loading__spinner hidden{% endif %}'>
   <svg
-    aria-hidden="true"
-    focusable="false"
-    class="spinner  {{ section.settings.tailwind_svg_classes }}"
-    viewBox="0 0 66 66"
-    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden='true'
+    focusable='false'
+    class='spinner  {{ section.settings.twcss_svg_classes }}'
+    viewBox='0 0 66 66'
+    xmlns='http://www.w3.org/2000/svg'
   >
     <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
   </svg>

@@ -2,12 +2,12 @@ name: CI
 on: [push]
 jobs:
   tailwindcss-update:
-    name: Generate TailwindCSS
+    name: Generate Tailwind CSS
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Generate TailwindCSS
+      - name: Generate Tailwind CSS
         uses: ZoeyVid/tailwindcss-update@main
         with:
           input: assets/app-tailwind.css

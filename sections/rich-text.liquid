@@ -26,7 +26,7 @@
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
-                  style="--animation-order: {{ forloop.index }};"
+                  style='--animation-order: {{ forloop.index }};'
                 {% endif %}
               >
                 {{ block.settings.heading }}
@@ -37,18 +37,18 @@
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
-                  style="--animation-order: {{ forloop.index }};"
+                  style='--animation-order: {{ forloop.index }};'
                 {% endif %}
               >
                 {{ block.settings.caption | escape }}
               </p>
             {%- when 'text' -%}
               <div
-                class="rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_body }}"
+                class='rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_body }}'
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
-                  style="--animation-order: {{ forloop.index }};"
+                  style='--animation-order: {{ forloop.index }};'
                 {% endif %}
               >
                 {{ block.settings.text }}
@@ -59,7 +59,7 @@
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
-                  style="--animation-order: {{ forloop.index }};"
+                  style='--animation-order: {{ forloop.index }};'
                 {% endif %}
               >
                 {%- if block.settings.button_label != blank -%}
@@ -182,27 +182,27 @@
     },
     {
       "type": "header",
-      "content": "TailwindCSS"
+      "content": "Tailwind CSS"
     },
     {
       "type": "text",
       "id": "twcss_heading",
-      "label": "TailwindCSS for Heading Text"
+      "label": "Tailwind CSS for Heading Text"
     },
     {
       "type": "text",
       "id": "twcss_body",
-      "label": "TailwindCSS for Body Text"
+      "label": "Tailwind CSS for Body Text"
     },
     {
       "type": "text",
       "id": "twcss_caption",
-      "label": "TailwindCSS for Caption"
+      "label": "Tailwind CSS for Caption"
     },
     {
       "type": "text",
       "id": "twcss_button",
-      "label": "TailwindCSS for Button"
+      "label": "Tailwind CSS for Button"
     }
   ],
   "blocks": [

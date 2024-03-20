@@ -44,7 +44,8 @@
   -%}
   {%- if section.blocks.size > 0
     or section.settings.newsletter_enable
-    or section.settings.show_social and has_social_icons == true
+    or section.settings.show_social
+    and has_social_icons == true
     or section.settings.enable_follow_on_shop
   -%}
     {%- unless only_empty_brand -%}
@@ -60,18 +61,18 @@
             endif
           -%}
           <div
-            class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class='footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
             {% endif %}
           >
             {%- for block in section.blocks -%}
               <div
-                class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_column_container }}"
+                class='footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_column_container }}'
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
-                  style="--animation-order: {{ forloop.index }};"
+                  style='--animation-order: {{ forloop.index }};'
                 {% endif %}
               >
                 {%- if block.settings.heading != blank -%}
@@ -109,8 +110,8 @@
                           | divided_by: settings.brand_image.aspect_ratio
                         -%}
                         <div
-                          class="footer-block__image-wrapper"
-                          style="max-width: min(100%, {{ settings.brand_image_width }}px);"
+                          class='footer-block__image-wrapper'
+                          style='max-width: min(100%, {{ settings.brand_image_width }}px);'
                         >
                           {{
                             settings.brand_image
@@ -140,8 +141,8 @@
                       {%- if block.settings.image != blank -%}
                         {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
                         <div
-                          class="footer-block__image-wrapper"
-                          style="max-width: min(100%, {{ block.settings.image_width }}px);"
+                          class='footer-block__image-wrapper'
+                          style='max-width: min(100%, {{ block.settings.image_width }}px);'
                         >
                           <img
                             srcset='{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x'
@@ -163,7 +164,7 @@
         {%- endif -%}
 
         <div
-          class="footer-block--newsletter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class='footer-block--newsletter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
           {% if settings.animations_reveal_on_scroll %}
             data-cascade
           {% endif %}
@@ -253,13 +254,13 @@
   {%- endif -%}
 
   <div
-    class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    class='footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
     {% endif %}
   >
-    <div class="footer__content-bottom-wrapper page-width">
-      <div class="footer__column footer__localization isolate">
+    <div class='footer__content-bottom-wrapper page-width'>
+      <div class='footer__column footer__localization isolate'>
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <noscript>
             {%- form 'localization', id: 'FooterCountryFormNoScript', class: 'localization-form' -%}
@@ -614,37 +615,37 @@
     },
     {
       "type": "header",
-      "content": "TailwindCSS"
+      "content": "Tailwind CSS"
     },
     {
       "type": "text",
       "id": "twcss_container",
-      "label": "TailwindCSS for Container"
+      "label": "Tailwind CSS for Container"
     },
     {
       "type": "text",
       "id": "twcss_column_container",
-      "label": "TailwindCSS for Column Container"
+      "label": "Tailwind CSS for Column Container"
     },
     {
       "type": "text",
       "id": "twcss_column_heading",
-      "label": "TailwindCSS for Column Heading"
+      "label": "Tailwind CSS for Column Heading"
     },
     {
       "type": "text",
       "id": "twcss_column_links",
-      "label": "TailwindCSS for Column Links"
+      "label": "Tailwind CSS for Column Links"
     },
     {
       "type": "text",
       "id": "twcss_column_subtext",
-      "label": "TailwindCSS for Column Subtext"
+      "label": "Tailwind CSS for Column Subtext"
     },
     {
       "type": "text",
       "id": "twcss_email_input",
-      "label": "TailwindCSS for Email Input"
+      "label": "Tailwind CSS for Email Input"
     }
   ],
   "default": {

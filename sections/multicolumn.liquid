@@ -23,9 +23,9 @@
   endif
 -%}
 
-<div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %} {{ section.settings.twcss_container }}">
+<div class='multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %} {{ section.settings.twcss_container }}'>
   <div
-    class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    class='page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
     {% endif %}
@@ -44,9 +44,9 @@
     {%- endunless -%}
     <slider-component class='slider-mobile-gutter'>
       <ul
-        class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--tablet grid--peek{% endif %}"
-        id="Slider-{{ section.id }}"
-        role="list"
+        class='multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--tablet grid--peek{% endif %}'
+        id='Slider-{{ section.id }}'
+        role='list'
       >
         {%- liquid
           assign highest_ratio = 0
@@ -72,7 +72,7 @@
             {{ block.shopify_attributes }}
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
-              style="--animation-order: {{ forloop.index }};"
+              style='--animation-order: {{ forloop.index }};'
             {% endif %}
           >
             <div class='multicolumn-card content-container {{ section.settings.twcss_column_container }}'>
@@ -147,7 +147,7 @@
       </ul>
 
       {%- if show_mobile_slider -%}
-        <div class="slider-buttons no-js-hidden large-up-hide">
+        <div class='slider-buttons no-js-hidden large-up-hide'>
           <button
             type='button'
             class='slider-button slider-button--prev'
@@ -379,42 +379,42 @@
     },
     {
       "type": "header",
-      "content": "TailwindCSS"
+      "content": "Tailwind CSS"
     },
     {
       "type": "text",
       "id": "twcss_container",
-      "label": "TailwindCSS for Container"
+      "label": "Tailwind CSS for Container"
     },
     {
       "type": "text",
       "id": "twcss_heading",
-      "label": "TailwindCSS for Heading Text"
+      "label": "Tailwind CSS for Heading Text"
     },
     {
       "type": "text",
       "id": "twcss_column_container",
-      "label": "TailwindCSS for Column Container"
+      "label": "Tailwind CSS for Column Container"
     },
     {
       "type": "text",
       "id": "twcss_column_image",
-      "label": "TailwindCSS for Column Image"
+      "label": "Tailwind CSS for Column Image"
     },
     {
       "type": "text",
       "id": "twcss_column_heading",
-      "label": "TailwindCSS for Column Heading"
+      "label": "Tailwind CSS for Column Heading"
     },
     {
       "type": "text",
       "id": "twcss_column_description",
-      "label": "TailwindCSS for Column Description"
+      "label": "Tailwind CSS for Column Description"
     },
     {
       "type": "text",
       "id": "twcss_column_link",
-      "label": "TailwindCSS for Column Link"
+      "label": "Tailwind CSS for Column Link"
     }
   ],
   "blocks": [
