@@ -455,7 +455,7 @@
       "tailwind": {
         "heading": "Tailwind CSS",
         "text": "Tailwind CSS for Text",
-        "container": "TalwindCSS for Container",
+        "container": "Tailwind CSS for Container",
         "button": "Tailwind CSS for Button",
         "svg": "Tailwind CSS for SVG",
         "input": "Tailwind CSS for Input"
