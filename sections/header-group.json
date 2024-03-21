@@ -17,7 +17,7 @@
         "e6f742a2-0574-4349-832b-e8d90d72469d"
       ],
       "settings": {
-        "color_scheme": "accent-2",
+        "color_scheme": "scheme-2",
         "show_line_separator": false,
         "show_social": false,
         "auto_rotate": true,
@@ -25,7 +25,7 @@
         "enable_country_selector": false,
         "enable_language_selector": false,
         "twcss_container": "",
-        "twcss_text": ""
+        "twcss_text": "twcss-text-xl"
       }
     },
     "header": {
