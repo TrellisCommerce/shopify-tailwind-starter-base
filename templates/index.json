@@ -48,7 +48,7 @@
         "show_text_below": true,
         "twcss_heading": "md:twcss-text-white md:twcss-text-7xl",
         "twcss_body": "md:twcss-text-white md:twcss-mt-12 md:twcss-mb-8",
-        "twcss_button": "twcss-rounded-full"
+        "twcss_button": ""
       }
     }
   },
