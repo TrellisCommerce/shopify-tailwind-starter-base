@@ -24,7 +24,7 @@
         "change_slides_speed": 5,
         "enable_country_selector": false,
         "enable_language_selector": false,
-        "twcss_container": "",
+        "twcss_container": "twcss-hidden sm:twcss-block",
         "twcss_text": "twcss-text-xl"
       }
     },
