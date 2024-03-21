@@ -8,21 +8,13 @@
         "e6f742a2-0574-4349-832b-e8d90d72469d": {
           "type": "announcement",
           "settings": {
-            "text": "BURY YOURSELF IN SAVINGS",
-            "link": ""
-          }
-        },
-        "announcement-bar-0": {
-          "type": "announcement",
-          "settings": {
-            "text": "DEATH WISH COFFEE CO",
-            "link": ""
+            "text": "Last Call Sale - Save Up To 70%* | Free Shipping",
+            "link": "shopify:\/\/collections\/all"
           }
         }
       },
       "block_order": [
-        "e6f742a2-0574-4349-832b-e8d90d72469d",
-        "announcement-bar-0"
+        "e6f742a2-0574-4349-832b-e8d90d72469d"
       ],
       "settings": {
         "color_scheme": "accent-2",
