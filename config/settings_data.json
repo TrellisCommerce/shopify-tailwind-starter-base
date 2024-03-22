@@ -132,7 +132,7 @@
     "twcss_product_card_container": "",
     "twcss_product_card_image": "twcss-p-8",
     "twcss_collection_card_container": "",
-    "twcss_collection_card_heading": "twcss-flex twcss-items-center lg:twcss-drop-shadow lg:twcss-text-7xl lg:twcss-absolute lg:twcss-inset-0 lg:twcss-justify-center lg:twcss-text-white",
+    "twcss_collection_card_heading": "twcss-flex twcss-justify-center twcss-items-center lg:twcss-drop-shadow lg:twcss-text-7xl lg:twcss-absolute lg:twcss-inset-0 lg:twcss-text-white",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
