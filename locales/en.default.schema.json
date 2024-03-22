@@ -458,7 +458,8 @@
         "container": "Tailwind CSS for Container",
         "button": "Tailwind CSS for Button",
         "svg": "Tailwind CSS for SVG",
-        "input": "Tailwind CSS for Input"
+        "input": "Tailwind CSS for Input",
+        "text_heading": "Tailwind CSS for Heading"
       },
       "spacing": "Spacing",
       "colors": {

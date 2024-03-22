@@ -26,7 +26,7 @@
 {%- endif -%}
 
 <slideshow-component
-  class='slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %} {{ section.settings.twcss_container_classes }}'
+  class='slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %} {{ section.settings.twcss_container }}'
   role='region'
   aria-roledescription='{{ 'sections.slideshow.carousel' | t }}'
   aria-label='{{ section.settings.accessibility_info | escape }}'
@@ -168,12 +168,12 @@
         <div class='slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}'>
           <div class='slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}'>
             {%- if block.settings.heading != blank -%}
-              <h2 class='banner__heading inline-richtext {{ block.settings.heading_size }} {{ section.settings.twcss_text_classes }}'>
+              <h2 class='banner__heading inline-richtext {{ block.settings.heading_size }} {{ section.settings.twcss_text }}'>
                 {{ block.settings.heading }}
               </h2>
             {%- endif -%}
             {%- if block.settings.subheading != blank -%}
-              <div class='banner__text rte {{ section.settings.twcss_text_classes }}' {{ block.shopify_attributes }}>
+              <div class='banner__text rte {{ section.settings.twcss_text }}' {{ block.shopify_attributes }}>
                 <p>{{ block.settings.subheading }}</p>
               </div>
             {%- endif -%}
@@ -185,7 +185,7 @@
                   {% else %}
                     role='link' aria-disabled='true'
                   {% endif %}
-                  class='button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %} {{ section.settings.twcss_button_classes }}'
+                  class='button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %} {{ section.settings.twcss_button }}'
                 >
                   {{- block.settings.button_label | escape -}}
                 </a>
@@ -407,17 +407,17 @@
     },
     {
       "type": "text",
-      "id": "twcss_container_classes",
+      "id": "twcss_container",
       "label": "t:sections.all.tailwind.container"
     },
     {
       "type": "text",
-      "id": "twcss_text_classes",
+      "id": "twcss_text",
       "label": "t:sections.all.tailwind.text"
     },
     {
       "type": "text",
-      "id": "twcss_button_classes",
+      "id": "twcss_button",
       "label": "t:sections.all.tailwind.button"
     }
   ],

@@ -24,13 +24,13 @@
     assign posts_displayed = section.settings.post_limit
   endif
 -%}
-<div class='blog color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %} {{ section.settings.twcss_container_classes }}'>
+<div class='blog color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %} {{ section.settings.twcss_container }}'>
   <div class='page-width-desktop isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding'>
     {%- unless section.settings.heading == blank -%}
       <div class='title-wrapper-with-link{% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin'>
         <h2
           id='SectionHeading-{{ section.id }}'
-          class='blog__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_text_classes }}'
+          class='blog__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_text }}'
           {% if settings.animations_reveal_on_scroll %}
             data-cascade
           {% endif %}
@@ -176,7 +176,7 @@
         <a
           href='{{ section.settings.blog.url }}'
           id='ViewAll-{{ section.id }}'
-          class='blog__button button {{ section.settings.twcss_button_classes }}'
+          class='blog__button button {{ section.settings.twcss_button }}'
           aria-labelledby='ViewAll-{{ section.id }} SectionHeading-{{ section.id }}'
         >
           {{ 'sections.featured_blog.view_all' | t }}
@@ -305,17 +305,17 @@
     },
     {
       "type": "text",
-      "id": "twcss_container_classes",
+      "id": "twcss_container",
       "label": "t:sections.all.tailwind.container"
     },
     {
       "type": "text",
-      "id": "twcss_button_classes",
+      "id": "twcss_button",
       "label": "t:sections.all.tailwind.button"
     },
     {
       "type": "text",
-      "id": "twcss_text_classes",
+      "id": "twcss_text",
       "label": "t:sections.all.tailwind.text"
     }
   ],
