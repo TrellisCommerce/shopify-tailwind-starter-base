@@ -50,9 +50,40 @@
         "twcss_body": "md:twcss-text-white md:twcss-mt-12 md:twcss-mb-8",
         "twcss_button": ""
       }
+    },
+    "featured_collection_JakAg3": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "New Arrivals This Week",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-2",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "twcss_heading": "twcss-text-center",
+        "twcss_description": ""
+      }
     }
   },
   "order": [
-    "image_banner"
+    "image_banner",
+    "featured_collection_JakAg3"
   ]
 }
