@@ -132,7 +132,7 @@
     "twcss_product_card_container": "",
     "twcss_product_card_image": "",
     "twcss_collection_card_container": "",
-    "twcss_collection_card_heading": "twcss-text-6xl twcss-absolute twcss-left-0 twcss-top-1\/2 twcss-w-full twcss-text-white twcss-flex twcss-flex-col twcss-items-center",
+    "twcss_collection_card_heading": "twcss-text-7xl twcss-absolute twcss-left-0 twcss-top-1\/2 twcss-w-full twcss-text-white twcss-flex twcss-flex-col twcss-items-center",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
