@@ -202,7 +202,7 @@
           "text": "#000000",
           "button": "#000000",
           "button_label": "#ffffff",
-          "secondary_button_label": "#ffffff",
+          "secondary_button_label": "#000000",
           "shadow": "#121212"
         }
       }
