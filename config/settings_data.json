@@ -130,7 +130,7 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "twcss_product_card_container": "",
-    "twcss_product_card_image": "",
+    "twcss_product_card_image": "twcss-p-8",
     "twcss_collection_card_container": "",
     "twcss_collection_card_heading": "twcss-drop-shadow twcss-text-7xl twcss-absolute twcss-left-0 twcss-top-1\/2 twcss-w-full twcss-text-white twcss-flex twcss-flex-col twcss-items-center",
     "sections": {
