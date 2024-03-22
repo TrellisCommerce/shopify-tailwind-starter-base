@@ -153,9 +153,9 @@
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#000000",
+          "background": "#ffffff",
           "background_gradient": "",
-          "text": "#ffffff",
+          "text": "#000000",
           "button": "#121212",
           "button_label": "#ffffff",
           "secondary_button_label": "#121212",
