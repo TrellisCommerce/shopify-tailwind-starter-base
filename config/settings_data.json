@@ -56,7 +56,7 @@
     "card_shadow_horizontal_offset": 0,
     "card_shadow_vertical_offset": 4,
     "card_shadow_blur": 5,
-    "collection_card_style": "standard",
+    "collection_card_style": "card",
     "collection_card_image_padding": 0,
     "collection_card_text_alignment": "left",
     "collection_card_color_scheme": "background-2",
@@ -131,6 +131,7 @@
     "cart_drawer_collection": "",
     "twcss_product_card_container": "",
     "twcss_product_card_image": "",
+    "twcss_collection_card_heading": "twcss-absolute twcss-w-full twcss-h-full twcss-top-0 twcss-text-center",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
