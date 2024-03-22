@@ -131,8 +131,8 @@
     "cart_drawer_collection": "",
     "twcss_product_card_container": "",
     "twcss_product_card_image": "",
-    "twcss_collection_card_container": "twcss-flex twcss-justify-center twcss-align-center",
-    "twcss_collection_card_heading": "twcss-absolute twcss-inset-0 twcss-text-white",
+    "twcss_collection_card_container": "",
+    "twcss_collection_card_heading": "twcss-absolute twcss-inset-0 twcss-text-white twcss-flex twcss-items-center",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
