@@ -59,6 +59,8 @@
     <div class='banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}'>
       {%- liquid
         assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
+        assign image_position = section.settings.image_position | prepend: 'object-position:' | append: '%'
+        assign image_position_2 = section.settings.image_position_2 | prepend: 'object-position:' | append: '%'
         if section.settings.image_2 != blank
           assign image_class = 'banner__media-image-half'
         endif
@@ -79,7 +81,8 @@
           class: image_class,
           sizes: sizes,
           widths: widths,
-          fetchpriority: fetch_priority
+          fetchpriority: fetch_priority,
+          style: image_position
       }}
     </div>
   {%- elsif section.settings.image_2 == blank -%}
@@ -111,7 +114,8 @@
           class: image_class_2,
           sizes: sizes,
           widths: widths,
-          fetchpriority: fetch_priority
+          fetchpriority: fetch_priority,
+          style: image_position_2
       }}
     </div>
   {%- endif -%}
@@ -184,9 +188,31 @@
       "label": "t:sections.image-banner.settings.image.label"
     },
     {
+      "type": "range",
+      "id": "image_position",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "label": "t:sections.image-banner.settings.image_position.label",
+      "default": 0,
+      "info": "t:sections.image-banner.settings.image_position.info"
+    },
+    {
       "type": "image_picker",
       "id": "image_2",
       "label": "t:sections.image-banner.settings.image_2.label"
+    },
+    {
+      "type": "range",
+      "id": "image_position_2",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "label": "t:sections.image-banner.settings.image_position_2.label",
+      "default": 0,
+      "info": "t:sections.image-banner.settings.image_position_2.info"
     },
     {
       "type": "range",
