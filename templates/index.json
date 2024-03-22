@@ -369,8 +369,8 @@
         "padding_bottom": 100,
         "twcss_container": "",
         "twcss_heading": "",
-        "twcss_column_container": "twcss--m-10",
-        "twcss_column_image": "twcss--mt-10",
+        "twcss_column_container": "twcss-relative",
+        "twcss_column_image": "twcss-absolute twcss-top-0",
         "twcss_column_heading": "",
         "twcss_column_description": "",
         "twcss_column_link": ""
