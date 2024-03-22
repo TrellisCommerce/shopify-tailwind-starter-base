@@ -24,13 +24,13 @@
   endif
 -%}
 
-<div class='color-{{ section.settings.color_scheme }} gradient {{ section.settings.twcss_container_classes }}'>
+<div class='color-{{ section.settings.color_scheme }} gradient {{ section.settings.twcss_container }}'>
   <div class='collection-list-wrapper page-width isolate{% if show_mobile_slider %} page-width-desktop{% endif %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.show_view_all == false or section.blocks.size > collections.size %} no-mobile-link{% endif %} section-{{ section.id }}-padding'>
     {%- unless section.settings.title == blank -%}
       <div class='title-wrapper-with-link{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin'>
         <h2
           id='SectionHeading-{{ section.id }}'
-          class='collection-list-title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_text_classes }}'
+          class='collection-list-title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_heading }}'
         >
           {{ section.settings.title }}
         </h2>
@@ -39,7 +39,7 @@
           <a
             href='{{ routes.collections_url }}'
             id='ViewAll-{{ section.id }}'
-            class='link underlined-link large-up-hide{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_text_classes }}'
+            class='link underlined-link large-up-hide{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_text }}'
             aria-labelledby='ViewAll-{{ section.id }} SectionHeading-{{ section.id }}'
           >
             {{- 'sections.collection_list.view_all' | t -}}
@@ -124,7 +124,7 @@
           href='{{ routes.collections_url }}'
           class='button'
           id='ViewAllButton-{{ section.id }}'
-          aria-labelledby='ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }} {{ section.settings.twcss_text_classes }}'
+          aria-labelledby='ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }} {{ section.settings.twcss_text }}'
         >
           {{- 'sections.collection_list.view_all' | t -}}
         </a>
@@ -268,12 +268,17 @@
     },
     {
       "type": "text",
-      "id": "twcss_container_classes",
+      "id": "twcss_container",
       "label": "t:sections.all.tailwind.container"
     },
     {
       "type": "text",
-      "id": "twcss_text_classes",
+      "id": "twcss_heading",
+      "label": "t:sections.all.tailwind.text_heading"
+    },
+    {
+      "type": "text",
+      "id": "twcss_text",
       "label": "t:sections.all.tailwind.text"
     }
   ],

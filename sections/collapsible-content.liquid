@@ -15,7 +15,7 @@
   }
 {%- endstyle -%}
 
-<div class='color-{{ section.settings.color_scheme }} gradient {{ section.settings.twcss_container_classes }}'>
+<div class='color-{{ section.settings.color_scheme }} gradient {{ section.settings.twcss_container }}'>
   <div class='collapsible-content collapsible-{{ section.settings.layout }}-layout isolate{% if section.settings.layout == 'section' %} page-width{% elsif section.settings.layout == 'none' %} content-container content-container--full-width{% endif %}'>
     <div class='collapsible-content__wrapper section-{{ section.id }}-padding{% if section.settings.layout == 'section' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}'>
       <div class='{% if section.settings.image == blank %}collapsible-content-wrapper-narrow{% else %}page-width{% endif %}'>
@@ -24,12 +24,12 @@
           style='text-align: {{ section.settings.heading_alignment }};'
         >
           {%- if section.settings.caption != blank -%}
-            <p class='caption-with-letter-spacing {{ section.settings.twcss_text_classes }}'>
+            <p class='caption-with-letter-spacing {{ section.settings.twcss_text }}'>
               {{ section.settings.caption | escape }}
             </p>
           {% endif %}
           {%- if section.settings.heading != blank -%}
-            <h2 class='collapsible-content__heading inline-richtext {{ section.settings.heading_size }} {{ section.settings.twcss_text_classes }}'>
+            <h2 class='collapsible-content__heading inline-richtext {{ section.settings.heading_size }} {{ section.settings.twcss_text }}'>
               {{ section.settings.heading }}
             </h2>
           {%- else -%}
@@ -81,17 +81,14 @@
                   {% endif %}
                 >
                   <summary id='Summary-{{ block.id }}-{{ section.id }}'>
-                    {% render 'icon-accordion',
-                      icon: block.settings.icon,
-                      iconClasses: section.settings.twcss_svg_classes
-                    %}
-                    <h3 class='accordion__title inline-richtext h4 {{ section.settings.twcss_text_classes }}'>
+                    {% render 'icon-accordion', icon: block.settings.icon, iconClasses: section.settings.twcss_svg %}
+                    <h3 class='accordion__title inline-richtext h4 {{ section.settings.twcss_text }}'>
                       {{ block.settings.heading | default: block.settings.page.title }}
                     </h3>
-                    {% render 'icon-caret', iconClasses: section.settings.twcss_svg_classes %}
+                    {% render 'icon-caret', iconClasses: section.settings.twcss_svg %}
                   </summary>
                   <div
-                    class='accordion__content rte {{ section.settings.twcss_text_classes }}'
+                    class='accordion__content rte {{ section.settings.twcss_text }}'
                     id='CollapsibleAccordion-{{ block.id }}-{{ section.id }}'
                     role='region'
                     aria-labelledby='Summary-{{ block.id }}-{{ section.id }}'
@@ -284,17 +281,17 @@
     },
     {
       "type": "text",
-      "id": "twcss_container_classes",
+      "id": "twcss_container",
       "label": "t:sections.all.tailwind.container"
     },
     {
       "type": "text",
-      "id": "twcss_text_classes",
+      "id": "twcss_text",
       "label": "t:sections.all.tailwind.text"
     },
     {
       "type": "text",
-      "id": "twcss_svg_classes",
+      "id": "twcss_svg",
       "label": "t:sections.all.tailwind.svg"
     }
   ],

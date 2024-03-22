@@ -16,14 +16,14 @@
 {%- endstyle -%}
 
 <div class='newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}'>
-  <div class='newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding {{ section.settings.twcss_container_classes }}'>
+  <div class='newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding {{ section.settings.twcss_container }}'>
     {%- for block in section.blocks -%}
       {%- case block.type -%}
         {%- when '@app' -%}
           {% render block %}
         {%- when 'heading' -%}
           <h2
-            class='inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_text_classes }}'
+            class='inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_text }}'
             {{ block.shopify_attributes }}
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
@@ -34,7 +34,7 @@
           </h2>
         {%- when 'paragraph' -%}
           <div
-            class='newsletter__subheading rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_text_classes }}'
+            class='newsletter__subheading rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_text }}'
             {{ block.shopify_attributes }}
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
@@ -76,7 +76,7 @@
                     required
                   >
                   <label
-                    class='field__label {{ section.settings.twcss_text_classes }}'
+                    class='field__label {{ section.settings.twcss_text }}'
                     for='NewsletterForm--{{ section.id }}'
                   >
                     {{ 'newsletter.label' | t }}
@@ -172,17 +172,17 @@
     },
     {
       "type": "text",
-      "id": "twcss_container_classes",
+      "id": "twcss_container",
       "label": "t:sections.all.tailwind.container"
     },
     {
       "type": "text",
-      "id": "twcss_text_classes",
+      "id": "twcss_text",
       "label": "t:sections.all.tailwind.text"
     },
     {
       "type": "text",
-      "id": "twcss_input_classes",
+      "id": "twcss_input",
       "label": "t:sections.all.tailwind.input"
     }
   ],
