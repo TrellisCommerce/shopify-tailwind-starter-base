@@ -279,6 +279,69 @@
         "twcss_caption": "",
         "twcss_button": ""
       }
+    },
+    "multicolumn_LgNtpe": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_y4FwnB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-03-21_at_8.31.41_PM.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_HpMhaw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-03-21_at_8.31.52_PM.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8WxQkG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-03-21_at_8.32.04_PM.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_y4FwnB",
+        "column_HpMhaw",
+        "column_8WxQkG"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 6,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "twcss_container": "",
+        "twcss_heading": "",
+        "twcss_column_container": "twcss-bg-white",
+        "twcss_column_image": "twcss-w-full",
+        "twcss_column_heading": "",
+        "twcss_column_description": "",
+        "twcss_column_link": ""
+      }
     }
   },
   "order": [
@@ -288,6 +351,7 @@
     "collection_list_rAR7ik",
     "collection_list_FRpp7t",
     "image_with_text_VJAq73",
-    "rich_text_NdPmzw"
+    "rich_text_NdPmzw",
+    "multicolumn_LgNtpe"
   ]
 }
