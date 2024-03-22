@@ -375,6 +375,80 @@
         "twcss_column_description": "",
         "twcss_column_link": ""
       }
+    },
+    "multicolumn_Yp4KyA": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_3Cp7xY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-03-21_at_8.52.57_PM.png",
+            "title": "100% Authentic",
+            "text": "<p>We partner with Italy’s best luxury retailers and work together with them to provide you100% authentic pieces, certified twice — by both them and us.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_iixVLP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-03-21_at_8.53.04_PM.png",
+            "title": "Free Shipping",
+            "text": "<p>We offer free express international shipping on every order to ensure your pieces arrive quickly and safely.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_KJHYJD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-03-21_at_8.53.12_PM.png",
+            "title": "Secure Shopping",
+            "text": "<p>Your purchases are protected by encrypted security systems that keep your personal data and payment information safe and secure.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4dDJgY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-03-21_at_8.53.21_PM.png",
+            "title": "24\/7 Customer Support",
+            "text": "<p>Questions, concerns, issues? Visit our FAQ or contact us: customercare@italist.com. We’re always here for you ❤︎<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_3Cp7xY",
+        "column_iixVLP",
+        "column_KJHYJD",
+        "column_4dDJgY"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "twcss_container": "",
+        "twcss_heading": "",
+        "twcss_column_container": "",
+        "twcss_column_image": "",
+        "twcss_column_heading": "twcss-text-xl",
+        "twcss_column_description": "twcss-text-lg",
+        "twcss_column_link": ""
+      }
     }
   },
   "order": [
@@ -385,6 +459,7 @@
     "collection_list_FRpp7t",
     "image_with_text_VJAq73",
     "rich_text_NdPmzw",
-    "multicolumn_LgNtpe"
+    "multicolumn_LgNtpe",
+    "multicolumn_Yp4KyA"
   ]
 }
