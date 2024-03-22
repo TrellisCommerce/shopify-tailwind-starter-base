@@ -81,40 +81,43 @@
         "twcss_description": ""
       }
     },
-    "collage_yJfC6c": {
-      "type": "collage",
+    "collection_list_e78VCk": {
+      "type": "collection-list",
       "blocks": {
-        "image_HPja7K": {
-          "type": "image",
+        "featured_collection_QfBNJL": {
+          "type": "featured_collection",
           "settings": {
+            "collection": "clothing"
           }
         },
-        "image_zU739N": {
-          "type": "image",
+        "featured_collection_JU9kwb": {
+          "type": "featured_collection",
           "settings": {
+            "collection": "bags"
           }
         }
       },
       "block_order": [
-        "image_HPja7K",
-        "image_zU739N"
+        "featured_collection_QfBNJL",
+        "featured_collection_JU9kwb"
       ],
       "settings": {
-        "heading": "",
+        "title": "",
         "heading_size": "h1",
-        "desktop_layout": "left",
-        "mobile_layout": "column",
-        "card_styles": "product-card-wrapper",
+        "image_ratio": "portrait",
+        "columns_desktop": 2,
         "color_scheme": "scheme-2",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 36,
-        "twcss_heading": ""
+        "padding_bottom": 36
       }
     }
   },
   "order": [
     "image_banner",
     "featured_collection_JakAg3",
-    "collage_yJfC6c"
+    "collection_list_e78VCk"
   ]
 }
