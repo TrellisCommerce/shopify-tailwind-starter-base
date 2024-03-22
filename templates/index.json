@@ -116,11 +116,55 @@
         "twcss_heading": "",
         "twcss_text": ""
       }
+    },
+    "collection_list_rAR7ik": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_c7GrLK": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "accessories"
+          }
+        },
+        "featured_collection_9WD7r3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "shoes"
+          }
+        },
+        "featured_collection_kURTAb": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "new-arrivals-ss24"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_c7GrLK",
+        "featured_collection_9WD7r3",
+        "featured_collection_kURTAb"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "color_scheme": "scheme-2",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "twcss_container": "",
+        "twcss_heading": "",
+        "twcss_text": ""
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection_JakAg3",
-    "collection_list_e78VCk"
+    "collection_list_e78VCk",
+    "collection_list_rAR7ik"
   ]
 }
