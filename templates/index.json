@@ -245,6 +245,40 @@
         "twcss_text": "",
         "twcss_button": ""
       }
+    },
+    "rich_text_NdPmzw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_TRAnBJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "\"Bravo! I will definitely be ordering from italist again!\"",
+            "heading_size": "h2"
+          }
+        },
+        "text_7NPMG4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>– Alice M<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_TRAnBJ",
+        "text_7NPMG4"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "twcss_heading": "",
+        "twcss_body": "",
+        "twcss_caption": "",
+        "twcss_button": ""
+      }
     }
   },
   "order": [
@@ -253,6 +287,7 @@
     "collection_list_e78VCk",
     "collection_list_rAR7ik",
     "collection_list_FRpp7t",
-    "image_with_text_VJAq73"
+    "image_with_text_VJAq73",
+    "rich_text_NdPmzw"
   ]
 }
