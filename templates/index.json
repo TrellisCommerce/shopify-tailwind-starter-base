@@ -36,6 +36,8 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/italist-hero.webp",
+        "image_position": 80,
+        "image_position_2": 0,
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "bottom-left",
