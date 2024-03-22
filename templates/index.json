@@ -382,7 +382,7 @@
         "column_3Cp7xY": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2024-03-21_at_8.52.57_PM.png",
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-03-21_at_9.01.32_PM.png",
             "title": "100% Authentic",
             "text": "<p>We partner with Italy’s best luxury retailers and work together with them to provide you100% authentic pieces, certified twice — by both them and us.<\/p>",
             "link_label": "",
@@ -392,7 +392,7 @@
         "column_iixVLP": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2024-03-21_at_8.53.04_PM.png",
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-03-21_at_9.01.40_PM.png",
             "title": "Free Shipping",
             "text": "<p>We offer free express international shipping on every order to ensure your pieces arrive quickly and safely.<\/p>",
             "link_label": "",
@@ -402,7 +402,7 @@
         "column_KJHYJD": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2024-03-21_at_8.53.12_PM.png",
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-03-21_at_9.01.47_PM.png",
             "title": "Secure Shopping",
             "text": "<p>Your purchases are protected by encrypted security systems that keep your personal data and payment information safe and secure.<\/p>",
             "link_label": "",
@@ -412,7 +412,7 @@
         "column_4dDJgY": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Screenshot_2024-03-21_at_8.53.21_PM.png",
+            "image": "shopify:\/\/shop_images\/Screenshot_2024-03-21_at_9.01.54_PM.png",
             "title": "24\/7 Customer Support",
             "text": "<p>Questions, concerns, issues? Visit our FAQ or contact us: customercare@italist.com. We’re always here for you ❤︎<\/p>",
             "link_label": "",
@@ -429,7 +429,7 @@
       "settings": {
         "title": "",
         "heading_size": "h1",
-        "image_width": "third",
+        "image_width": "half",
         "image_ratio": "adapt",
         "columns_desktop": 4,
         "column_alignment": "center",
