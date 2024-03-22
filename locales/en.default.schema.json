@@ -1268,6 +1268,14 @@
         "image_overlay_opacity": {
           "label": "Image overlay opacity"
         },
+        "image_position": {
+          "label": "Mobile image position",
+          "info": "0% pans all the way to the right, 100% pans all the way to the left"
+        },
+        "image_position_2": {
+          "label": "Mobile image position",
+          "info": "0% pans all the way to the right, 100% pans all the way to the left"
+        },
         "image_height": {
           "label": "Banner height",
           "options__1": {
