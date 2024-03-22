@@ -159,12 +159,49 @@
         "twcss_heading": "",
         "twcss_text": ""
       }
+    },
+    "collection_list_FRpp7t": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_LFQ3cF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bottega-veneta"
+          }
+        },
+        "featured_collection_jt4z6W": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gucci"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_LFQ3cF",
+        "featured_collection_jt4z6W"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 2,
+        "color_scheme": "scheme-2",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "twcss_container": "",
+        "twcss_heading": "",
+        "twcss_text": ""
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection_JakAg3",
     "collection_list_e78VCk",
-    "collection_list_rAR7ik"
+    "collection_list_rAR7ik",
+    "collection_list_FRpp7t"
   ]
 }
