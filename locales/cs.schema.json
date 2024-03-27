@@ -56,8 +56,8 @@
       "name": "Sociální sítě",
       "settings": {
         "social_twitter_link": {
-          "label": "Twitter",
-          "info": "https://twitter.com/shopify"
+          "label": "X/Twitter",
+          "info": "https://x.com/shopify"
         },
         "social_facebook_link": {
           "label": "Facebook",
@@ -1511,10 +1511,6 @@
             "label": "2 sloupce"
           }
         },
-        "enable_quick_buy": {
-          "label": "Povolit tlačítko Rychlé přidání",
-          "info": "Je optimální pro košík typu vyskakovací okno nebo výsuvný košík."
-        },
         "filter_type": {
           "label": "Rozvržení filtru v počítači",
           "options__1": {
@@ -1527,6 +1523,15 @@
             "label": "Výsuvný panel"
           },
           "info": "Výchozí mobilní rozvržení představuje výsuvný panel."
+        },
+        "quick_add": {
+          "label": "Rychlé přidání",
+          "info": "Možnost Hromadné je optimalizována pro položky nakoupené ve vyšších množstvích.",
+          "options": {
+            "option_1": "Žádné",
+            "option_2": "Standardní",
+            "option_3": "Hromadné"
+          }
         }
       }
     },
@@ -1639,44 +1644,26 @@
         "variant_picker": {
           "name": "Selektor variant",
           "settings": {
-            "options": {
-              "header": "Varianty jen s textem",
-              "picker_type": {
-                "label": "Styl",
-                "options__1": {
-                  "label": "Rozevírací nabídka"
-                },
-                "options__2": {
-                  "label": "Kulaté přepínače"
-                }
+            "picker_type": {
+              "label": "Styl",
+              "options__1": {
+                "label": "Rozevírací nabídka"
+              },
+              "options__2": {
+                "label": "Kulaté přepínače"
               }
             },
-            "options_with_swatches": {
-              "header": "Varianty se vzorníky",
-              "info": "Zjistit, jak zobrazit [vzorníky](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "Styl",
-                "options__1": {
-                  "label": "Jen vzorník"
-                },
-                "options__2": {
-                  "label": "Rozevírací nabídka"
-                },
-                "options__3": {
-                  "label": "Rozevírací nabídka (bez vzorníku)"
-                },
-                "options__4": {
-                  "label": "Kulaté přepínače (bez vzorníku)"
-                }
+            "swatch_shape": {
+              "label": "Vzorník",
+              "info": "Zapněte [vzorníky](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) u možností produktů.",
+              "options__1": {
+                "label": "Kruh"
               },
-              "swatch_shape": {
-                "label": "Tvar vzorníku",
-                "options__1": {
-                  "label": "Kruh"
-                },
-                "options__2": {
-                  "label": "Čtverec"
-                }
+              "options__2": {
+                "label": "Čtverec"
+              },
+              "options__3": {
+                "label": "Žádný"
               }
             }
           }
@@ -2512,44 +2499,26 @@
         "variant_picker": {
           "name": "Selektor variant",
           "settings": {
-            "options": {
-              "header": "Varianty jen s textem",
-              "picker_type": {
-                "label": "Styl",
-                "options__1": {
-                  "label": "Rozevírací nabídka"
-                },
-                "options__2": {
-                  "label": "Kulaté přepínače"
-                }
+            "picker_type": {
+              "label": "Styl",
+              "options__1": {
+                "label": "Rozevírací nabídka"
+              },
+              "options__2": {
+                "label": "Kulaté přepínače"
               }
             },
-            "options_with_swatches": {
-              "header": "Varianty se vzorníky",
-              "info": "Zjistit, jak zobrazit [vzorníky](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "Styl",
-                "options__1": {
-                  "label": "Jen vzorník"
-                },
-                "options__2": {
-                  "label": "Rozevírací nabídka"
-                },
-                "options__3": {
-                  "label": "Rozevírací nabídka (bez vzorníku)"
-                },
-                "options__4": {
-                  "label": "Kulaté přepínače (bez vzorníku)"
-                }
+            "swatch_shape": {
+              "label": "Vzorník",
+              "info": "Zapněte [vzorníky](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) u možností produktů.",
+              "options__1": {
+                "label": "Kruh"
               },
-              "swatch_shape": {
-                "label": "Tvar vzorníku",
-                "options__1": {
-                  "label": "Kruh"
-                },
-                "options__2": {
-                  "label": "Čtverec"
-                }
+              "options__2": {
+                "label": "Čtverec"
+              },
+              "options__3": {
+                "label": "Žádný"
               }
             }
           }

@@ -56,8 +56,8 @@
       "name": "Social media",
       "settings": {
         "social_twitter_link": {
-          "label": "Twitter",
-          "info": "https://twitter.com/shopify"
+          "label": "X / voorheen Twitter",
+          "info": "https://x.com/shopify"
         },
         "social_facebook_link": {
           "label": "Facebook",
@@ -1511,10 +1511,6 @@
             "label": "2 kolommen"
           }
         },
-        "enable_quick_buy": {
-          "label": "Knop 'Snel toevoegen' inschakelen",
-          "info": "Optimaal met een pop-up of een winkelwagentype."
-        },
         "filter_type": {
           "label": "Opmaak voor desktopfilter",
           "options__1": {
@@ -1527,6 +1523,15 @@
             "label": "Lade"
           },
           "info": "Lade is de standaardopmaak voor mobiele apparaten"
+        },
+        "quick_add": {
+          "label": "Snel toevoegen",
+          "info": "Bulk is geoptimaliseerd voor artikelen waar hogere aantallen van zijn gekocht.",
+          "options": {
+            "option_1": "Geen",
+            "option_2": "Standaard",
+            "option_3": "Bulk"
+          }
         }
       }
     },
@@ -1639,44 +1644,26 @@
         "variant_picker": {
           "name": "Variantkiezer",
           "settings": {
-            "options": {
-              "header": "Varianten met alleen tekst",
-              "picker_type": {
-                "label": "Stijl",
-                "options__1": {
-                  "label": "Vervolgkeuzelijst"
-                },
-                "options__2": {
-                  "label": "Keuzeopties"
-                }
+            "picker_type": {
+              "label": "Stijl",
+              "options__1": {
+                "label": "Vervolgkeuzelijst"
+              },
+              "options__2": {
+                "label": "Pillen"
               }
             },
-            "options_with_swatches": {
-              "header": "Varianten met stalen",
-              "info": "Ontdek hoe je [stalen](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) weergeeft",
-              "picker_type": {
-                "label": "Stijl",
-                "options__1": {
-                  "label": "Alleen staal"
-                },
-                "options__2": {
-                  "label": "Vervolgkeuzelijst"
-                },
-                "options__3": {
-                  "label": "Vervolgkeuzelijst (geen staal)"
-                },
-                "options__4": {
-                  "label": "Keuzeopties (geen staal)"
-                }
+            "swatch_shape": {
+              "label": "Staal",
+              "info": "Schakel [stalen](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) in bij productopties.",
+              "options__1": {
+                "label": "Cirkel"
               },
-              "swatch_shape": {
-                "label": "Vorm van staal",
-                "options__1": {
-                  "label": "Cirkel"
-                },
-                "options__2": {
-                  "label": "Vierkant"
-                }
+              "options__2": {
+                "label": "Vierkant"
+              },
+              "options__3": {
+                "label": "Geen"
               }
             }
           }
@@ -2512,44 +2499,26 @@
         "variant_picker": {
           "name": "Variantkiezer",
           "settings": {
-            "options": {
-              "header": "Varianten met alleen tekst",
-              "picker_type": {
-                "label": "Stijl",
-                "options__1": {
-                  "label": "Vervolgkeuzelijst"
-                },
-                "options__2": {
-                  "label": "Keuzeopties"
-                }
+            "picker_type": {
+              "label": "Stijl",
+              "options__1": {
+                "label": "Vervolgkeuzelijst"
+              },
+              "options__2": {
+                "label": "Keuzeopties"
               }
             },
-            "options_with_swatches": {
-              "header": "Varianten met stalen",
-              "info": "Ontdek hoe je [stalen](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) weergeeft",
-              "picker_type": {
-                "label": "Stijl",
-                "options__1": {
-                  "label": "Alleen staal"
-                },
-                "options__2": {
-                  "label": "Vervolgkeuzelijst"
-                },
-                "options__3": {
-                  "label": "Vervolgkeuzelijst (geen staal)"
-                },
-                "options__4": {
-                  "label": "Keuzeopties (geen staal)"
-                }
+            "swatch_shape": {
+              "label": "Staal",
+              "info": "Schakel [stalen](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) in bij productopties.",
+              "options__1": {
+                "label": "Cirkel"
               },
-              "swatch_shape": {
-                "label": "Vorm van staal",
-                "options__1": {
-                  "label": "Cirkel"
-                },
-                "options__2": {
-                  "label": "Vierkant"
-                }
+              "options__2": {
+                "label": "Vierkant"
+              },
+              "options__3": {
+                "label": "Geen"
               }
             }
           }

@@ -56,8 +56,8 @@
       "name": "Sociala medier",
       "settings": {
         "social_twitter_link": {
-          "label": "Twitter",
-          "info": "https://twitter.com/shopify"
+          "label": "X / Twitter",
+          "info": "https://x.com/shopify"
         },
         "social_facebook_link": {
           "label": "Facebook",
@@ -1496,10 +1496,6 @@
           "label": "Visa produktbetyg",
           "info": "Lägg till en produktbedömningsapp för att visa ett betyg. [Mer information](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
-        "enable_quick_buy": {
-          "label": "Aktivera knapp för snabb tilläggning",
-          "info": "Optimal med varukorg av popup- eller lådtyp."
-        },
         "columns_desktop": {
           "label": "Antalet kolumner på skrivbordet"
         },
@@ -1527,6 +1523,15 @@
             "label": "Låda"
           },
           "info": "Låda är standardlayouten för mobil."
+        },
+        "quick_add": {
+          "label": "Lägg till direkt",
+          "info": "Bulk är optimerat för artiklar som köps i större volymer.",
+          "options": {
+            "option_1": "Ingen",
+            "option_2": "Standard",
+            "option_3": "Bulk"
+          }
         }
       }
     },
@@ -1630,44 +1635,26 @@
         "variant_picker": {
           "name": "Variantväljare",
           "settings": {
-            "options": {
-              "header": "Varianter med bara text",
-              "picker_type": {
-                "label": "Stil",
-                "options__1": {
-                  "label": "Rullgardinsmeny"
-                },
-                "options__2": {
-                  "label": "Kapslar"
-                }
+            "picker_type": {
+              "label": "Stil",
+              "options__1": {
+                "label": "Rullgardinsmeny"
+              },
+              "options__2": {
+                "label": "Kapslar"
               }
             },
-            "options_with_swatches": {
-              "header": "Varianter med prover",
-              "info": "Läs om hur du visar [prover](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "Stil",
-                "options__1": {
-                  "label": "Bara prov"
-                },
-                "options__2": {
-                  "label": "Rullgardinsmeny"
-                },
-                "options__3": {
-                  "label": "Rullgardinsmeny (inget prov)"
-                },
-                "options__4": {
-                  "label": "Kapslar (inget prov)"
-                }
+            "swatch_shape": {
+              "label": "Prov",
+              "info": "Aktivera [swatches](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) på produktalternativ.",
+              "options__1": {
+                "label": "Cirkel"
               },
-              "swatch_shape": {
-                "label": "Provform",
-                "options__1": {
-                  "label": "Cirkel"
-                },
-                "options__2": {
-                  "label": "Fyrkantig"
-                }
+              "options__2": {
+                "label": "Fyrkantig"
+              },
+              "options__3": {
+                "label": "Ingen"
               }
             }
           }
@@ -2512,44 +2499,26 @@
         "variant_picker": {
           "name": "Variantväljare",
           "settings": {
-            "options": {
-              "header": "Varianter med bara text",
-              "picker_type": {
-                "label": "Stil",
-                "options__1": {
-                  "label": "Rullgardinsmeny"
-                },
-                "options__2": {
-                  "label": "Kapslar"
-                }
+            "picker_type": {
+              "label": "Stil",
+              "options__1": {
+                "label": "Rullgardinsmeny"
+              },
+              "options__2": {
+                "label": "Kapslar"
               }
             },
-            "options_with_swatches": {
-              "header": "Varianter med prover",
-              "info": "Läs om hur du visar [prover](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "Stil",
-                "options__1": {
-                  "label": "Bara prov"
-                },
-                "options__2": {
-                  "label": "Rullgardinsmeny"
-                },
-                "options__3": {
-                  "label": "Rullgardinsmeny (inget prov)"
-                },
-                "options__4": {
-                  "label": "Kapslar (inget prov)"
-                }
+            "swatch_shape": {
+              "label": "Prov",
+              "info": "Aktivera [swatches](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) på produktalternativ.",
+              "options__1": {
+                "label": "Cirkel"
               },
-              "swatch_shape": {
-                "label": "Provform",
-                "options__1": {
-                  "label": "Cirkel"
-                },
-                "options__2": {
-                  "label": "Fyrkantig"
-                }
+              "options__2": {
+                "label": "Fyrkantig"
+              },
+              "options__3": {
+                "label": "Ingen"
               }
             }
           }

@@ -56,8 +56,8 @@
       "name": "Sosiaalinen media",
       "settings": {
         "social_twitter_link": {
-          "label": "Twitter",
-          "info": "https://twitter.com/shopify"
+          "label": "X (Twitter)",
+          "info": "https://x.com/shopify"
         },
         "social_facebook_link": {
           "label": "Facebook",
@@ -1511,10 +1511,6 @@
             "label": "2 saraketta"
           }
         },
-        "enable_quick_buy": {
-          "label": "Ota pikalisäyspainike käyttöön",
-          "info": "Ihanteellinen ponnahdusikkuna- tai laatikkotyyppisten ostokorien kanssa."
-        },
         "filter_type": {
           "label": "Suodatinasettelu tietokoneella",
           "options__1": {
@@ -1527,6 +1523,15 @@
             "label": "Laatikko"
           },
           "info": "Laatikko on oletusarvoinen asettelu mobiilissa."
+        },
+        "quick_add": {
+          "label": "Pikalisäys",
+          "info": "Erä on optimoitu tuotteille, joita ostetaan suuria määriä.",
+          "options": {
+            "option_1": "Ei ole",
+            "option_2": "Vakio",
+            "option_3": "Erä"
+          }
         }
       }
     },
@@ -1539,10 +1544,10 @@
         "sort": {
           "label": "Lajittele kokoelmat seuraavasti:",
           "options__1": {
-            "label": "Aakkosjärjestyksessä A–Z"
+            "label": "Aakkosjärjestyksessä A–Ö"
           },
           "options__2": {
-            "label": "Aakkosjärjestyksessä Z–A"
+            "label": "Aakkosjärjestyksessä Ö–A"
           },
           "options__3": {
             "label": "Päivämäärä uusimmasta vanhimpaan"
@@ -1638,44 +1643,26 @@
         "variant_picker": {
           "name": "Versionvalitsin",
           "settings": {
-            "options": {
-              "header": "Vain tekstiä sisältävät versiot",
-              "picker_type": {
-                "label": "Tyyli",
-                "options__1": {
-                  "label": "Pudotusvalikko"
-                },
-                "options__2": {
-                  "label": "Pillerikuvakkeet"
-                }
+            "picker_type": {
+              "label": "Tyyli",
+              "options__1": {
+                "label": "Pudotusvalikko"
+              },
+              "options__2": {
+                "label": "Pillerit"
               }
             },
-            "options_with_swatches": {
-              "header": "Väriruutuja sisältävät versiot",
-              "info": "Lisätietoja siitä, miten näytät [väriruudut](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "Tyyli",
-                "options__1": {
-                  "label": "Vain väriruudut"
-                },
-                "options__2": {
-                  "label": "Pudotusvalikko"
-                },
-                "options__3": {
-                  "label": "Pudotusvalikko (ei väriruutua)"
-                },
-                "options__4": {
-                  "label": "Pillerikuvakkeet (ei väriruutua)"
-                }
+            "swatch_shape": {
+              "label": "Väriruutu",
+              "info": "Ota [väriruudut](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) käyttöön tuotevaihtoehtoihin.",
+              "options__1": {
+                "label": "Ympyrä"
               },
-              "swatch_shape": {
-                "label": "Väriruudun muoto",
-                "options__1": {
-                  "label": "Ympyrä"
-                },
-                "options__2": {
-                  "label": "Neliö"
-                }
+              "options__2": {
+                "label": "Neliö"
+              },
+              "options__3": {
+                "label": "Ei mitään"
               }
             }
           }
@@ -2512,44 +2499,26 @@
         "variant_picker": {
           "name": "Versionvalitsin",
           "settings": {
-            "options": {
-              "header": "Vain tekstiä sisältävät versiot",
-              "picker_type": {
-                "label": "Tyyli",
-                "options__1": {
-                  "label": "Pudotusvalikko"
-                },
-                "options__2": {
-                  "label": "Pillerikuvakkeet"
-                }
+            "picker_type": {
+              "label": "Tyyli",
+              "options__1": {
+                "label": "Pudotusvalikko"
+              },
+              "options__2": {
+                "label": "Kuvakkeet"
               }
             },
-            "options_with_swatches": {
-              "header": "Väriruutuja sisältävät versiot",
-              "info": "Lisätietoja siitä, miten näytät [väriruudut](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "Tyyli",
-                "options__1": {
-                  "label": "Vain väriruudut"
-                },
-                "options__2": {
-                  "label": "Pudotusvalikko"
-                },
-                "options__3": {
-                  "label": "Pudotusvalikko (ei väriruutua)"
-                },
-                "options__4": {
-                  "label": "Pillerikuvakkeet (ei väriruutua)"
-                }
+            "swatch_shape": {
+              "label": "Väriruutu",
+              "info": "Ota [väriruudut](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) käyttöön tuotevaihtoehtoihin.",
+              "options__1": {
+                "label": "Ympyrä"
               },
-              "swatch_shape": {
-                "label": "Väriruudun muoto",
-                "options__1": {
-                  "label": "Ympyrä"
-                },
-                "options__2": {
-                  "label": "Neliö"
-                }
+              "options__2": {
+                "label": "Neliö"
+              },
+              "options__3": {
+                "label": "Ei mitään"
               }
             }
           }

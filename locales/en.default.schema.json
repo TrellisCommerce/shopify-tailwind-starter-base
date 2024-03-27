@@ -250,8 +250,8 @@
           "content": "Social accounts"
         },
         "social_twitter_link": {
-          "label": "Twitter",
-          "info": "https://twitter.com/shopify"
+          "label": "X / Twitter",
+          "info": "https://x.com/shopify"
         },
         "social_facebook_link": {
           "label": "Facebook",
@@ -850,44 +850,26 @@
         "variant_picker": {
           "name": "Variant picker",
           "settings": {
-            "options": {
-              "header": "Text-only variants",
-              "picker_type": {
-                "label": "Style",
-                "options__1": {
-                  "label": "Dropdown"
-                },
-                "options__2": {
-                  "label": "Pills"
-                }
+            "picker_type": {
+              "label": "Style",
+              "options__1": {
+                "label": "Dropdown"
+              },
+              "options__2": {
+                "label": "Pills"
               }
             },
-            "options_with_swatches": {
-              "header": "Variants with swatches",
-              "info": "Learn how to display [swatches](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "Style",
-                "options__1": {
-                  "label": "Swatch only"
-                },
-                "options__2": {
-                  "label": "Dropdown"
-                },
-                "options__3": {
-                  "label": "Dropdown (no swatch)"
-                },
-                "options__4": {
-                  "label": "Pills (no swatch)"
-                }
+            "swatch_shape": {
+              "label": "Swatch",
+              "info": "Enable [swatches](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) on product options.",
+              "options__1": {
+                "label": "Circle"
               },
-              "swatch_shape": {
-                "label": "Swatch shape",
-                "options__1": {
-                  "label": "Circle"
-                },
-                "options__2": {
-                  "label": "Square"
-                }
+              "options__2": {
+                "label": "Square"
+              },
+              "options__3": {
+                "label": "None"
               }
             }
           }
@@ -1846,9 +1828,14 @@
           "label": "Enable filtering",
           "info": "Customize filters with the Search & Discovery app. [Learn more](https://help.shopify.com/manual/online-store/search-and-discovery/filters)"
         },
-        "enable_quick_buy": {
-          "label": "Enable quick add button",
-          "info": "Optimal with popup or drawer cart type."
+        "quick_add": {
+          "label": "Quick add",
+          "info": "Bulk is optimized for items purchased in higher quantities.",
+          "options": {
+            "option_1": "None",
+            "option_2": "Standard",
+            "option_3": "Bulk"
+          }
         },
         "header_mobile": {
           "content": "Mobile Layout"
@@ -2003,44 +1990,26 @@
         "variant_picker": {
           "name": "Variant picker",
           "settings": {
-            "options": {
-              "header": "Text-only variants",
-              "picker_type": {
-                "label": "Style",
-                "options__1": {
-                  "label": "Dropdown"
-                },
-                "options__2": {
-                  "label": "Pills"
-                }
+            "picker_type": {
+              "label": "Style",
+              "options__1": {
+                "label": "Dropdown"
+              },
+              "options__2": {
+                "label": "Pills"
               }
             },
-            "options_with_swatches": {
-              "header": "Variants with swatches",
-              "info": "Learn how to display [swatches](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "Style",
-                "options__1": {
-                  "label": "Swatch only"
-                },
-                "options__2": {
-                  "label": "Dropdown"
-                },
-                "options__3": {
-                  "label": "Dropdown (no swatch)"
-                },
-                "options__4": {
-                  "label": "Pills (no swatch)"
-                }
+            "swatch_shape": {
+              "label": "Swatch",
+              "info": "Enable [swatches](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) on product options.",
+              "options__1": {
+                "label": "Circle"
               },
-              "swatch_shape": {
-                "label": "Swatch shape",
-                "options__1": {
-                  "label": "Circle"
-                },
-                "options__2": {
-                  "label": "Square"
-                }
+              "options__2": {
+                "label": "Square"
+              },
+              "options__3": {
+                "label": "None"
               }
             }
           }

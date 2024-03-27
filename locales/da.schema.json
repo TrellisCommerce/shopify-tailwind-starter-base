@@ -56,8 +56,8 @@
       "name": "Sociale medier",
       "settings": {
         "social_twitter_link": {
-          "label": "X",
-          "info": "https://twitter.com/shopify"
+          "label": "X/Twitter",
+          "info": "https://x.com/shopify"
         },
         "social_facebook_link": {
           "label": "Facebook",
@@ -1496,10 +1496,6 @@
           "label": "Vis produktbedømmelser",
           "info": "Hvis du vil vise bedømmelser, skal du tilføje en app til produktbedømmelse. [Få mere at vide](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
-        "enable_quick_buy": {
-          "label": "Aktivér knap til hurtig tilføjelse",
-          "info": "Optimal med indkøbskurv som pop op-vindue eller skuffe."
-        },
         "columns_desktop": {
           "label": "Antallet af kolonner på computer"
         },
@@ -1527,6 +1523,15 @@
             "label": "Skuffe"
           },
           "info": "Skuffe er standardlayoutet til mobil."
+        },
+        "quick_add": {
+          "label": "Hurtig tilføjelse",
+          "info": "Masse er optimeret til varer, der købes i højere antal.",
+          "options": {
+            "option_1": "Ingen",
+            "option_2": "Standard",
+            "option_3": "Masse"
+          }
         }
       }
     },
@@ -1639,44 +1644,26 @@
         "variant_picker": {
           "name": "Variantvælger",
           "settings": {
-            "options": {
-              "header": "Kun tekst-varianter",
-              "picker_type": {
-                "label": "Stil",
-                "options__1": {
-                  "label": "Rullemenu"
-                },
-                "options__2": {
-                  "label": "Etiketter"
-                }
+            "picker_type": {
+              "label": "Stil",
+              "options__1": {
+                "label": "Rullemenu"
+              },
+              "options__2": {
+                "label": "Etiketter"
               }
             },
-            "options_with_swatches": {
-              "header": "Varianter med prøvevisning",
-              "info": "Se hvordan du viser [prøver](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "Stil",
-                "options__1": {
-                  "label": "Kun prøvevisning"
-                },
-                "options__2": {
-                  "label": "Rullemenu"
-                },
-                "options__3": {
-                  "label": "Rullemenu (ingen prøvevisning)"
-                },
-                "options__4": {
-                  "label": "Etiketter (ingen prøvevisning)"
-                }
+            "swatch_shape": {
+              "label": "Prøve",
+              "info": "Aktivér [prøver](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) for produktmuligheder.",
+              "options__1": {
+                "label": "Cirkel"
               },
-              "swatch_shape": {
-                "label": "Prøvevisning – form",
-                "options__1": {
-                  "label": "Cirkel"
-                },
-                "options__2": {
-                  "label": "Kvadrat"
-                }
+              "options__2": {
+                "label": "Kvadrat"
+              },
+              "options__3": {
+                "label": "Ingen"
               }
             }
           }
@@ -2512,44 +2499,26 @@
         "variant_picker": {
           "name": "Variantvælger",
           "settings": {
-            "options": {
-              "header": "Kun tekst-varianter",
-              "picker_type": {
-                "label": "Stil",
-                "options__1": {
-                  "label": "Rullemenu"
-                },
-                "options__2": {
-                  "label": "Etiketter"
-                }
+            "picker_type": {
+              "label": "Stil",
+              "options__1": {
+                "label": "Rullemenu"
+              },
+              "options__2": {
+                "label": "Etiketter"
               }
             },
-            "options_with_swatches": {
-              "header": "Varianter med prøvevisning",
-              "info": "Se hvordan du viser [prøver](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "Stil",
-                "options__1": {
-                  "label": "Kun prøvevisning"
-                },
-                "options__2": {
-                  "label": "Rullemenu"
-                },
-                "options__3": {
-                  "label": "Rullemenu (ingen prøvevisning)"
-                },
-                "options__4": {
-                  "label": "Etiketter (ingen prøvevisning)"
-                }
+            "swatch_shape": {
+              "label": "Prøve",
+              "info": "Aktivér [prøver](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) for produktmuligheder.",
+              "options__1": {
+                "label": "Cirkel"
               },
-              "swatch_shape": {
-                "label": "Prøvevisning – form",
-                "options__1": {
-                  "label": "Cirkel"
-                },
-                "options__2": {
-                  "label": "Kvadrat"
-                }
+              "options__2": {
+                "label": "Kvadrat"
+              },
+              "options__3": {
+                "label": "Ingen"
               }
             }
           }

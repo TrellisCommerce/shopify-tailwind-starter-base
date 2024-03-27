@@ -56,8 +56,8 @@
       "name": "Redes sociales",
       "settings": {
         "social_twitter_link": {
-          "label": "Twitter",
-          "info": "https://twitter.com/shopify"
+          "label": "X / Twitter",
+          "info": "https://x.com/shopify"
         },
         "social_facebook_link": {
           "label": "Facebook",
@@ -1511,10 +1511,6 @@
             "label": "2 columnas"
           }
         },
-        "enable_quick_buy": {
-          "label": "Activar botón de agregado rápido",
-          "info": "Funciona de manera óptima con ventanas emergentes o carritos laterales."
-        },
         "filter_type": {
           "label": "Filtro de diseño para computadora",
           "options__1": {
@@ -1527,6 +1523,15 @@
             "label": "Cajón"
           },
           "info": "El cajón es el diseño para móviles predeterminado."
+        },
+        "quick_add": {
+          "label": "Agregado rápido",
+          "info": "La opción Masivo es la mejor para los artículos que se adquieren en mayores cantidades.",
+          "options": {
+            "option_1": "Ninguno",
+            "option_2": "Estándar",
+            "option_3": "Masivo"
+          }
         }
       }
     },
@@ -1639,44 +1644,26 @@
         "variant_picker": {
           "name": "Selector de variante",
           "settings": {
-            "options": {
-              "header": "Variantes de solo texto",
-              "picker_type": {
-                "label": "Estilo",
-                "options__1": {
-                  "label": "Menú desplegable"
-                },
-                "options__2": {
-                  "label": "Botones"
-                }
+            "picker_type": {
+              "label": "Estilo",
+              "options__1": {
+                "label": "Desplegable"
+              },
+              "options__2": {
+                "label": "Miniaturas"
               }
             },
-            "options_with_swatches": {
-              "header": "Variantes con muestras",
-              "info": "Obtén información sobre cómo presentar [muestras](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "Estilo",
-                "options__1": {
-                  "label": "Solo muestra"
-                },
-                "options__2": {
-                  "label": "Menú desplegable"
-                },
-                "options__3": {
-                  "label": "Menú desplegable (sin muestra)"
-                },
-                "options__4": {
-                  "label": "Botones (sin muestra)"
-                }
+            "swatch_shape": {
+              "label": "Muestra",
+              "info": "Habilita [muestras](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) en las opciones de producto.",
+              "options__1": {
+                "label": "Círculo"
               },
-              "swatch_shape": {
-                "label": "Forma de la muestra",
-                "options__1": {
-                  "label": "Círculo"
-                },
-                "options__2": {
-                  "label": "Cuadrado"
-                }
+              "options__2": {
+                "label": "Cuadrado"
+              },
+              "options__3": {
+                "label": "Ninguna"
               }
             }
           }
@@ -2512,44 +2499,26 @@
         "variant_picker": {
           "name": "Selector de variante",
           "settings": {
-            "options": {
-              "header": "Variantes de solo texto",
-              "picker_type": {
-                "label": "Estilo",
-                "options__1": {
-                  "label": "Menú desplegable"
-                },
-                "options__2": {
-                  "label": "Botones"
-                }
+            "picker_type": {
+              "label": "Estilo",
+              "options__1": {
+                "label": "Desplegable"
+              },
+              "options__2": {
+                "label": "Botones"
               }
             },
-            "options_with_swatches": {
-              "header": "Variantes con muestras",
-              "info": "Obtén información sobre cómo presentar [muestras](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "Estilo",
-                "options__1": {
-                  "label": "Solo muestra"
-                },
-                "options__2": {
-                  "label": "Menú desplegable"
-                },
-                "options__3": {
-                  "label": "Menú desplegable (sin muestra)"
-                },
-                "options__4": {
-                  "label": "Botones (sin muestra)"
-                }
+            "swatch_shape": {
+              "label": "Muestra",
+              "info": "Habilita [muestras](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) en las opciones de producto.",
+              "options__1": {
+                "label": "Círculo"
               },
-              "swatch_shape": {
-                "label": "Forma de la muestra",
-                "options__1": {
-                  "label": "Círculo"
-                },
-                "options__2": {
-                  "label": "Cuadrado"
-                }
+              "options__2": {
+                "label": "Cuadrado"
+              },
+              "options__3": {
+                "label": "Ninguna"
               }
             }
           }

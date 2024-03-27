@@ -56,8 +56,8 @@
       "name": "SNS",
       "settings": {
         "social_twitter_link": {
-          "label": "Twitter",
-          "info": "https://twitter.com/shopify"
+          "label": "X / Twitter",
+          "info": "https://x.com/shopify"
         },
         "social_facebook_link": {
           "label": "Facebook",
@@ -1496,10 +1496,6 @@
           "label": "商品の評価を表示",
           "info": "評価を表示するには、商品評価アプリを追加します。[詳しくはこちら](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
-        "enable_quick_buy": {
-          "label": "「クイック追加」ボタンを有効にする",
-          "info": "ポップアップやドロワーカートのタイプに最適です。"
-        },
         "columns_desktop": {
           "label": "デスクトップの列数"
         },
@@ -1527,6 +1523,15 @@
             "label": "ドロワー"
           },
           "info": "ドロワーはデフォルトのモバイルレイアウトです。"
+        },
+        "quick_add": {
+          "label": "クイック追加",
+          "info": "一括操作は大量に購入するアイテム向けに最適化されています。",
+          "options": {
+            "option_1": "なし",
+            "option_2": "スタンダード",
+            "option_3": "一括"
+          }
         }
       }
     },
@@ -1630,44 +1635,26 @@
         "variant_picker": {
           "name": "バリエーションピッカー",
           "settings": {
-            "options": {
-              "header": "テキストのみのバリエーション",
-              "picker_type": {
-                "label": "スタイル",
-                "options__1": {
-                  "label": "ドロップダウン"
-                },
-                "options__2": {
-                  "label": "ピル型ボタン"
-                }
+            "picker_type": {
+              "label": "スタイル",
+              "options__1": {
+                "label": "ドロップダウン"
+              },
+              "options__2": {
+                "label": "ピル型ボタン"
               }
             },
-            "options_with_swatches": {
-              "header": "見本付きのバリエーション",
-              "info": "[見本](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) の表示方法はこちら",
-              "picker_type": {
-                "label": "スタイル",
-                "options__1": {
-                  "label": "見本のみ"
-                },
-                "options__2": {
-                  "label": "ドロップダウン"
-                },
-                "options__3": {
-                  "label": "ドロップダウン (見本なし)"
-                },
-                "options__4": {
-                  "label": "ピル型ボタン (見本なし)"
-                }
+            "swatch_shape": {
+              "label": "見本",
+              "info": "商品オプションの[見本](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)を有効にする。",
+              "options__1": {
+                "label": "円形"
               },
-              "swatch_shape": {
-                "label": "見本の形状",
-                "options__1": {
-                  "label": "円形"
-                },
-                "options__2": {
-                  "label": "正方形"
-                }
+              "options__2": {
+                "label": "正方形"
+              },
+              "options__3": {
+                "label": "なし"
               }
             }
           }
@@ -2512,44 +2499,26 @@
         "variant_picker": {
           "name": "バリエーションピッカー",
           "settings": {
-            "options": {
-              "header": "テキストのみのバリエーション",
-              "picker_type": {
-                "label": "スタイル",
-                "options__1": {
-                  "label": "ドロップダウン"
-                },
-                "options__2": {
-                  "label": "ピル型ボタン"
-                }
+            "picker_type": {
+              "label": "スタイル",
+              "options__1": {
+                "label": "ドロップダウン"
+              },
+              "options__2": {
+                "label": "ピル型ボタン"
               }
             },
-            "options_with_swatches": {
-              "header": "見本付きのバリエーション",
-              "info": "[見本](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) の表示方法はこちら",
-              "picker_type": {
-                "label": "スタイル",
-                "options__1": {
-                  "label": "見本のみ"
-                },
-                "options__2": {
-                  "label": "ドロップダウン"
-                },
-                "options__3": {
-                  "label": "ドロップダウン (見本なし)"
-                },
-                "options__4": {
-                  "label": "ピル型ボタン (見本なし)"
-                }
+            "swatch_shape": {
+              "label": "見本",
+              "info": "商品オプションの[見本](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)を有効にする。",
+              "options__1": {
+                "label": "円形"
               },
-              "swatch_shape": {
-                "label": "見本の形状",
-                "options__1": {
-                  "label": "円形"
-                },
-                "options__2": {
-                  "label": "正方形"
-                }
+              "options__2": {
+                "label": "正方形"
+              },
+              "options__3": {
+                "label": "なし"
               }
             }
           }

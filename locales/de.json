@@ -13,11 +13,11 @@
     "social": {
       "alt_text": {
         "share_on_facebook": "Auf Facebook teilen",
-        "share_on_twitter": "Auf Twitter twittern",
+        "share_on_twitter": "Auf X teilen",
         "share_on_pinterest": "Auf Pinterest pinnen"
       },
       "links": {
-        "twitter": "Twitter",
+        "twitter": "X (Twitter)",
         "facebook": "Facebook",
         "pinterest": "Pinterest",
         "instagram": "Instagram",
@@ -102,7 +102,7 @@
   },
   "onboarding": {
     "product_title": "Beispiel für Produkttitel",
-    "collection_title": "Name deiner Kategorie"
+    "collection_title": "Name deiner Kollektion"
   },
   "products": {
     "product": {
@@ -118,7 +118,9 @@
         "maximum_of": "Maximal {{ quantity }}",
         "multiples_of": "In {{ quantity }}er Schritten",
         "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> im Warenkorb",
-        "note": "Mengenregeln anzeigen"
+        "note": "Mengenregeln anzeigen",
+        "min_of": "Mindestens {{ quantity }}",
+        "max_of": "Höchstens {{ quantity }}"
       },
       "price": {
         "from_price_html": "Von {{ price }}",
@@ -307,7 +309,7 @@
     },
     "featured_collection": {
       "view_all": "Alle anzeigen",
-      "view_all_label": "Alle Produkte in der Kategorie {{ collection_name }} anzeigen"
+      "view_all_label": "Alle Produkte in der Kollektion {{ collection_name }} anzeigen"
     },
     "collection_list": {
       "view_all": "Alle anzeigen"
@@ -358,7 +360,11 @@
       "total_items": "Artikel gesamt",
       "remove_all_items_confirmation": "Alle {{ quantity }} Artikel aus deinem Warenkorb entfernen?",
       "remove_all": "Alle entfernen",
-      "cancel": "Abbrechen"
+      "cancel": "Abbrechen",
+      "remove_all_single_item_confirmation": "1 Artikel aus dem Warenkorb entfernen?",
+      "min_error": "Dieser Artikel hat ein Minimum von {{ min }}",
+      "max_error": "Dieser Artikel hat ein Maximum von {{ max }}",
+      "step_error": "Du kannst diesen Artikel nur in Abstufungen von {{ step }} hinzufügen."
     }
   },
   "localization": {

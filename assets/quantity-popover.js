@@ -14,7 +14,6 @@ if (!customElements.get('quantity-popover')) {
         );
         this.popoverInfo = this.querySelector('.quantity-popover__info');
         this.closeButton = this.querySelector('.button-close');
-        this.variantInfo = this.querySelector('.quantity-popover-container');
         this.eventMouseEnterHappened = false;
 
         if (this.closeButton) {
@@ -24,9 +23,13 @@ if (!customElements.get('quantity-popover')) {
           );
         }
 
-        if (this.popoverInfo && this.infoButtonDesktop && this.mql.matches) {
+        if (
+          this.popoverInfo &&
+          this.infoButtonDesktop &&
+          this.mqlTablet.matches
+        ) {
           this.popoverInfo.addEventListener(
-            'mouseenter',
+            'mouseleave',
             this.closePopover.bind(this),
           );
         }
@@ -47,18 +50,14 @@ if (!customElements.get('quantity-popover')) {
             'click',
             this.togglePopover.bind(this),
           );
-          this.infoButtonMobile.addEventListener(
-            'focusout',
-            this.closePopover.bind(this),
-          );
         }
 
         if (this.infoButtonDesktop && this.mqlTablet.matches) {
-          this.variantInfo.addEventListener(
+          this.infoButtonDesktop.addEventListener(
             'mouseenter',
             this.togglePopover.bind(this),
           );
-          this.variantInfo.addEventListener(
+          this.infoButtonDesktop.addEventListener(
             'mouseleave',
             this.closePopover.bind(this),
           );
@@ -79,32 +78,49 @@ if (!customElements.get('quantity-popover')) {
             : this.infoButtonMobile;
         const isExpanded = button.getAttribute('aria-expanded') === 'true';
 
-        button.setAttribute('aria-expanded', !isExpanded);
+        if ((this.mql.matches && !isExpanded) || event.type === 'click') {
+          button.setAttribute('aria-expanded', !isExpanded);
 
-        this.popoverInfo.toggleAttribute('hidden');
+          this.popoverInfo.toggleAttribute('hidden');
+
+          button.classList.toggle('quantity-popover__info-button--open');
+
+          this.infoButtonDesktop.classList.add(
+            'quantity-popover__info-button--icon-only--animation',
+          );
+        }
 
         const isOpen = button.getAttribute('aria-expanded') === 'true';
 
-        button.classList.toggle('quantity-popover__info-button--open');
-
         if (isOpen && event.type !== 'mouseenter') {
           button.focus();
+          button.addEventListener('keyup', (e) => {
+            if (e.key === 'Escape') {
+              this.closePopover(e);
+            }
+          });
         }
       }
 
       closePopover(event) {
         event.preventDefault();
-        const isChild = this.variantInfo.contains(event.relatedTarget);
+        const isButtonChild = this.infoButtonDesktop.contains(
+          event.relatedTarget,
+        );
+        const isPopoverChild = this.popoverInfo.contains(event.relatedTarget);
 
         const button =
           this.infoButtonDesktop && this.mql.matches
             ? this.infoButtonDesktop
             : this.infoButtonMobile;
 
-        if (!event.relatedTarget || !isChild) {
+        if (!isButtonChild && !isPopoverChild) {
           button.setAttribute('aria-expanded', 'false');
           button.classList.remove('quantity-popover__info-button--open');
           this.popoverInfo.setAttribute('hidden', '');
+          this.infoButtonDesktop.classList.remove(
+            'quantity-popover__info-button--icon-only--animation',
+          );
         }
 
         this.eventMouseEnterHappened = false;

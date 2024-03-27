@@ -23,11 +23,7 @@ if (!customElements.get('media-gallery')) {
               .querySelector('button')
               .addEventListener(
                 'click',
-                this.setActiveMedia.bind(
-                  this,
-                  mediaToSwitch.dataset.target,
-                  false,
-                ),
+                this.setActiveMedia.bind(this, mediaToSwitch.dataset.target),
               );
           });
         if (
@@ -44,41 +40,32 @@ if (!customElements.get('media-gallery')) {
         this.setActiveThumbnail(thumbnail);
       }
 
-      setActiveMedia(mediaId, prepend) {
-        const activeMedia = this.elements.viewer.querySelector(
-          `[data-media-id="${mediaId}"]`,
-        );
+      setActiveMedia(mediaId) {
+        const activeMedia =
+          this.elements.viewer.querySelector(`[data-media-id="${mediaId}"]`) ||
+          this.elements.viewer.querySelector('[data-media-id]');
+        if (!activeMedia) {
+          return;
+        }
         this.elements.viewer
           .querySelectorAll('[data-media-id]')
           .forEach((element) => {
             element.classList.remove('is-active');
           });
-        activeMedia.classList.add('is-active');
-
-        if (prepend) {
-          activeMedia.parentElement.prepend(activeMedia);
-          if (this.elements.thumbnails) {
-            const activeThumbnail = this.elements.thumbnails.querySelector(
-              `[data-target="${mediaId}"]`,
-            );
-            activeThumbnail.parentElement.prepend(activeThumbnail);
-          }
-          if (this.elements.viewer.slider) this.elements.viewer.resetPages();
-        }
+        activeMedia?.classList?.add('is-active');
 
         this.preventStickyHeader();
         window.setTimeout(() => {
-          if (this.elements.thumbnails) {
+          if (!this.mql.matches || this.elements.thumbnails) {
             activeMedia.parentElement.scrollTo({
               left: activeMedia.offsetLeft,
             });
           }
-          if (
-            !this.elements.thumbnails ||
-            this.dataset.desktopLayout === 'stacked'
-          ) {
-            activeMedia.scrollIntoView({ behavior: 'smooth' });
-          }
+          const activeMediaRect = activeMedia.getBoundingClientRect();
+          // Don't scroll if the image is already in view
+          if (activeMediaRect.top > -0.5) return;
+          const top = activeMediaRect.top + window.scrollY;
+          window.scrollTo({ top: top, behavior: 'smooth' });
         });
         this.playActiveMedia(activeMedia);
 

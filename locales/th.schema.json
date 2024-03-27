@@ -56,8 +56,8 @@
       "name": "โซเชียลมีเดีย",
       "settings": {
         "social_twitter_link": {
-          "label": "Twitter",
-          "info": "https://twitter.com/shopify"
+          "label": "X/Twitter",
+          "info": "https://x.com/shopify"
         },
         "social_facebook_link": {
           "label": "Facebook",
@@ -1496,10 +1496,6 @@
           "label": "แสดงคะแนนของสินค้า",
           "info": "หากต้องการแสดงคะแนน ให้เพิ่มแอปการให้คะแนนสินค้า [ดูข้อมูลเพิ่มเติม](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
-        "enable_quick_buy": {
-          "label": "เปิดใช้งานปุ่มซื้อด่วน",
-          "info": "ปรับให้มีประสิทธิภาพสูงสุดด้วยประเภทตะกร้าสินค้าแบบป๊อปอัปหรือแบบลิ้นชัก"
-        },
         "columns_desktop": {
           "label": "จำนวนของคอลัมน์บนเดสก์ท็อป"
         },
@@ -1527,6 +1523,15 @@
             "label": "แถบตัวเลือกแบบซ่อนได้"
           },
           "info": "แถบตัวเลือกแบบซ่อนได้เป็นเลย์เอาต์เริ่มต้นสำหรับมือถือ"
+        },
+        "quick_add": {
+          "label": "เพิ่มด่วน",
+          "info": "ตัวเลือกหลายรายการเหมาะสำหรับสินค้าที่ซื้อเป็นจำนวนมาก",
+          "options": {
+            "option_1": "ไม่มี",
+            "option_2": "มาตรฐาน",
+            "option_3": "หลายรายการ"
+          }
         }
       }
     },
@@ -1630,44 +1635,26 @@
         "variant_picker": {
           "name": "รายการตัวเลือกสินค้า",
           "settings": {
-            "options": {
-              "header": "ตัวเลือกสินค้าแบบข้อความเท่านั้น",
-              "picker_type": {
-                "label": "รูปแบบ",
-                "options__1": {
-                  "label": "ดรอปดาวน์"
-                },
-                "options__2": {
-                  "label": "ทรงเม็ดยา"
-                }
+            "picker_type": {
+              "label": "รูปแบบ",
+              "options__1": {
+                "label": "ดรอปดาวน์"
+              },
+              "options__2": {
+                "label": "ทรงเม็ดยา"
               }
             },
-            "options_with_swatches": {
-              "header": "ตัวเลือกสินค้าพร้อมตัวอย่าง",
-              "info": "เรียนรู้เกี่ยวกับวิธีการแสดง [ตัวอย่าง](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "รูปแบบ",
-                "options__1": {
-                  "label": "ตัวอย่างเท่านั้น"
-                },
-                "options__2": {
-                  "label": "ดรอปดาวน์"
-                },
-                "options__3": {
-                  "label": "ดรอปดาวน์ (ไม่มีตัวอย่าง)"
-                },
-                "options__4": {
-                  "label": "ทรงเม็ดยา (ไม่มีตัวอย่าง)"
-                }
+            "swatch_shape": {
+              "label": "ตัวอย่าง",
+              "info": "เปิดใช้งาน [แผงสี](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) ในตัวเลือกสินค้า",
+              "options__1": {
+                "label": "วงกลม"
               },
-              "swatch_shape": {
-                "label": "รูปทรงตัวอย่าง",
-                "options__1": {
-                  "label": "วงกลม"
-                },
-                "options__2": {
-                  "label": "สี่เหลี่ยมจัตุรัส"
-                }
+              "options__2": {
+                "label": "สี่เหลี่ยมจัตุรัส"
+              },
+              "options__3": {
+                "label": "ไม่มี"
               }
             }
           }
@@ -2512,44 +2499,26 @@
         "variant_picker": {
           "name": "รายการตัวเลือกสินค้า",
           "settings": {
-            "options": {
-              "header": "ตัวเลือกสินค้าแบบข้อความเท่านั้น",
-              "picker_type": {
-                "label": "รูปแบบ",
-                "options__1": {
-                  "label": "ดรอปดาวน์"
-                },
-                "options__2": {
-                  "label": "ทรงเม็ดยา"
-                }
+            "picker_type": {
+              "label": "รูปแบบ",
+              "options__1": {
+                "label": "ดรอปดาวน์"
+              },
+              "options__2": {
+                "label": "ทรงเม็ดยา"
               }
             },
-            "options_with_swatches": {
-              "header": "ตัวเลือกสินค้าพร้อมตัวอย่าง",
-              "info": "เรียนรู้เกี่ยวกับวิธีการแสดง [ตัวอย่าง](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "รูปแบบ",
-                "options__1": {
-                  "label": "ตัวอย่างเท่านั้น"
-                },
-                "options__2": {
-                  "label": "ดรอปดาวน์"
-                },
-                "options__3": {
-                  "label": "ดรอปดาวน์ (ไม่มีตัวอย่าง)"
-                },
-                "options__4": {
-                  "label": "ทรงเม็ดยา (ไม่มีตัวอย่าง)"
-                }
+            "swatch_shape": {
+              "label": "ตัวอย่าง",
+              "info": "เปิดใช้งาน [แผงสี](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) ในตัวเลือกสินค้า",
+              "options__1": {
+                "label": "วงกลม"
               },
-              "swatch_shape": {
-                "label": "รูปทรงตัวอย่าง",
-                "options__1": {
-                  "label": "วงกลม"
-                },
-                "options__2": {
-                  "label": "สี่เหลี่ยมจัตุรัส"
-                }
+              "options__2": {
+                "label": "สี่เหลี่ยมจัตุรัส"
+              },
+              "options__3": {
+                "label": "ไม่มี"
               }
             }
           }

@@ -56,8 +56,8 @@
       "name": "Sosiale medier",
       "settings": {
         "social_twitter_link": {
-          "label": "Twitter",
-          "info": "https://twitter.com/shopify"
+          "label": "X / Twitter",
+          "info": "https://x.com/shopify"
         },
         "social_facebook_link": {
           "label": "Facebook",
@@ -1511,10 +1511,6 @@
             "label": "2 kolonner"
           }
         },
-        "enable_quick_buy": {
-          "label": "Aktiver knapp for hurtigtillegging",
-          "info": "Optimal med popup- eller handlekurvskuff-typen."
-        },
         "filter_type": {
           "label": "Filtreringsoppsett på datamaskin",
           "options__1": {
@@ -1527,6 +1523,15 @@
             "label": "Skuff"
           },
           "info": "Skuff er standardoppsett for mobil."
+        },
+        "quick_add": {
+          "label": "Hurtigregistrering",
+          "info": "Bulk er optimalisert for varer som kjøpes i større antall.",
+          "options": {
+            "option_1": "Ingen",
+            "option_2": "Standard",
+            "option_3": "Bulk"
+          }
         }
       }
     },
@@ -1638,44 +1643,26 @@
         "variant_picker": {
           "name": "Variantvelger",
           "settings": {
-            "options": {
-              "header": "Rene tekstvarianter",
-              "picker_type": {
-                "label": "Stil",
-                "options__1": {
-                  "label": "Rullegardin"
-                },
-                "options__2": {
-                  "label": "Knapper"
-                }
+            "picker_type": {
+              "label": "Stil",
+              "options__1": {
+                "label": "Rullegardin"
+              },
+              "options__2": {
+                "label": "Knapper"
               }
             },
-            "options_with_swatches": {
-              "header": "Varianter med fargekart",
-              "info": "Finn ut hvordan du viser [fargekart](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "Stil",
-                "options__1": {
-                  "label": "Kun fargekart"
-                },
-                "options__2": {
-                  "label": "Rullegardin"
-                },
-                "options__3": {
-                  "label": "Rullegardin (ikke fargekart)"
-                },
-                "options__4": {
-                  "label": "Knapper (ikke fargekart)"
-                }
+            "swatch_shape": {
+              "label": "Fargekart",
+              "info": "Aktiver [fargekart](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) på produktalternativer.",
+              "options__1": {
+                "label": "Sirkel"
               },
-              "swatch_shape": {
-                "label": "Form på fargekart",
-                "options__1": {
-                  "label": "Sirkel"
-                },
-                "options__2": {
-                  "label": "Firkant"
-                }
+              "options__2": {
+                "label": "Firkant"
+              },
+              "options__3": {
+                "label": "Ingen"
               }
             }
           }
@@ -2512,44 +2499,26 @@
         "variant_picker": {
           "name": "Variantvelger",
           "settings": {
-            "options": {
-              "header": "Rene tekstvarianter",
-              "picker_type": {
-                "label": "Stil",
-                "options__1": {
-                  "label": "Rullegardin"
-                },
-                "options__2": {
-                  "label": "Knapper"
-                }
+            "picker_type": {
+              "label": "Stil",
+              "options__1": {
+                "label": "Rullegardin"
+              },
+              "options__2": {
+                "label": "Knapper"
               }
             },
-            "options_with_swatches": {
-              "header": "Varianter med fargekart",
-              "info": "Finn ut hvordan du viser [fargekart](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "Stil",
-                "options__1": {
-                  "label": "Kun fargekart"
-                },
-                "options__2": {
-                  "label": "Rullegardin"
-                },
-                "options__3": {
-                  "label": "Rullegardin (ikke fargekart)"
-                },
-                "options__4": {
-                  "label": "Knapper (ikke fargekart)"
-                }
+            "swatch_shape": {
+              "label": "Fargekart",
+              "info": "Aktiver [fargekart](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) på produktalternativer.",
+              "options__1": {
+                "label": "Sirkel"
               },
-              "swatch_shape": {
-                "label": "Form på fargekart",
-                "options__1": {
-                  "label": "Sirkel"
-                },
-                "options__2": {
-                  "label": "Firkant"
-                }
+              "options__2": {
+                "label": "Firkant"
+              },
+              "options__3": {
+                "label": "Ingen"
               }
             }
           }
