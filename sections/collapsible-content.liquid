@@ -83,7 +83,7 @@
                   <summary id='Summary-{{ block.id }}-{{ section.id }}'>
                     {% render 'icon-accordion', icon: block.settings.icon, iconClasses: section.settings.twcss_svg %}
                     <h3 class='accordion__title inline-richtext h4 {{ section.settings.twcss_text }}'>
-                      {{ block.settings.heading | default: block.settings.page.title }}
+                      {{ block.settings.heading | default: block.settings.page.title | escape }}
                     </h3>
                     {% render 'icon-caret', iconClasses: section.settings.twcss_svg %}
                   </summary>

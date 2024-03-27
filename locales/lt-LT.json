@@ -13,11 +13,11 @@
     "social": {
       "alt_text": {
         "share_on_facebook": "Bendrinti „Facebook“",
-        "share_on_twitter": "Skelbti „Twitter“",
+        "share_on_twitter": "Bendrinti X",
         "share_on_pinterest": "Skelbti „Pinterest“"
       },
       "links": {
-        "twitter": "„Twitter“",
+        "twitter": "X („Twitter“)",
         "facebook": "„Facebook“",
         "pinterest": "„Pinterest“",
         "instagram": "„Instagram“",
@@ -128,7 +128,9 @@
         "maximum_of": "Daugiausiai {{ quantity }}",
         "multiples_of": "Kiekis didėja kas {{ quantity }}",
         "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> vnt. krepšelyje",
-        "note": "Peržiūrėti kiekių taisykles"
+        "note": "Peržiūrėti kiekių taisykles",
+        "min_of": "Min. {{ quantity }}",
+        "max_of": "Maks. {{ quantity }}"
       },
       "price": {
         "from_price_html": "Nuo {{ price }}",
@@ -382,7 +384,11 @@
       "total_items": "Prekių iš viso",
       "remove_all_items_confirmation": "Pašalinti visas {{ quantity }} prekes (-ių) iš krepšelio?",
       "remove_all": "Pašalinti viską",
-      "cancel": "Atšaukti"
+      "cancel": "Atšaukti",
+      "remove_all_single_item_confirmation": "Pašalinti 1 prekę iš krepšelio?",
+      "min_error": "Nustatytas mažiausias šios prekės kiekis: {{ min }}",
+      "max_error": "Nustatytas didžiausias šios prekės kiekis: {{ max }}",
+      "step_error": "Galima pridėti tik po {{ step }} vnt. šios prekės"
     }
   },
   "localization": {

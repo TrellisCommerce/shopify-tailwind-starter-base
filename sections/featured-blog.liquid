@@ -139,7 +139,7 @@
         {%- endif -%}
       </ul>
       {%- if posts_exceed_limit -%}
-        <div class='slider-buttons no-js-hidden{% if section.settings.post_limit < 3 %} medium-hide{% endif %}{% if section.settings.post_limit < 2 %} small-hide{% endif %}'>
+        <div class='slider-buttons{% if section.settings.post_limit < 3 %} medium-hide{% endif %}{% if section.settings.post_limit < 2 %} small-hide{% endif %}'>
           <button
             type='button'
             class='slider-button slider-button--prev'

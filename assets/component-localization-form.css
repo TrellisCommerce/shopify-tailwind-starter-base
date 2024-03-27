@@ -40,12 +40,6 @@
   }
 }
 
-@media screen and (max-width: 989px) {
-  noscript .localization-form:only-child {
-    width: 100%;
-  }
-}
-
 .localization-form .button {
   padding: 1rem;
 }
@@ -82,16 +76,6 @@
   background: rgb(var(--color-background));
 }
 
-noscript .localization-form__select {
-  padding-left: 0rem;
-}
-
-@media screen and (min-width: 750px) {
-  noscript .localization-form__select {
-    min-width: 20rem;
-  }
-}
-
 .localization-form__select .icon-caret {
   position: absolute;
   content: '';
@@ -109,11 +93,6 @@ noscript .localization-form__select {
   width: 100%;
   padding-right: 4rem;
   padding-bottom: 1.5rem;
-}
-
-noscript .localization-selector.link {
-  padding-top: 1.5rem;
-  padding-left: 1.5rem;
 }
 
 .disclosure .localization-form__select {
@@ -174,9 +153,12 @@ noscript .localization-selector.link {
 }
 
 .country-selector__list {
-  width: 25.5rem;
   padding-bottom: 0.95rem;
   padding-top: 0;
+}
+
+.country-selector__list--with-multiple-currencies {
+  width: 25.5rem;
 }
 
 .country-selector__close-button {
@@ -260,6 +242,7 @@ noscript .localization-selector.link {
     height: 100%;
     background-color: rgba(var(--color-foreground), 0.5);
     z-index: 3;
+    animation: animateLocalization var(--duration-default) ease;
   }
 
   .disclosure__list-wrapper.country-selector {
@@ -474,8 +457,4 @@ noscript .localization-selector.link {
 
 .menu-drawer__localization + .list-social {
   margin-top: 1rem;
-}
-
-.menu-drawer__localization noscript .localization-form__select {
-  padding: initial;
 }

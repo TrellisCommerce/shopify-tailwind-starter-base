@@ -56,8 +56,8 @@
       "name": "Social media",
       "settings": {
         "social_twitter_link": {
-          "label": "Twitter",
-          "info": "https://twitter.com/shopify"
+          "label": "X / Twitter",
+          "info": "https://x.com/shopify"
         },
         "social_facebook_link": {
           "label": "Facebook",
@@ -1496,10 +1496,6 @@
           "label": "Mostra valutazione del prodotto",
           "info": "Per mostrare una valutazione, aggiungi un'app di valutazione del prodotto. [Maggiori informazioni](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
-        "enable_quick_buy": {
-          "label": "Abilita il pulsante di aggiunta rapida",
-          "info": "L'ideale in caso di pop up o di tipo di carrello a finestra."
-        },
         "columns_desktop": {
           "label": "Numero di colonne su desktop"
         },
@@ -1527,6 +1523,15 @@
             "label": "Finestra"
           },
           "info": "Il layout predefinito per dispositivi mobili prevede la finestra."
+        },
+        "quick_add": {
+          "label": "Aggiunta rapida",
+          "info": "Il blocco è ottimizzato per gli articoli acquistati in grandi quantità.",
+          "options": {
+            "option_1": "Nessuna",
+            "option_2": "Standard",
+            "option_3": "Blocco"
+          }
         }
       }
     },
@@ -1639,44 +1644,26 @@
         "variant_picker": {
           "name": "Selettore di variante",
           "settings": {
-            "options": {
-              "header": "Varianti di testo semplice",
-              "picker_type": {
-                "label": "Stile",
-                "options__1": {
-                  "label": "Menu a discesa"
-                },
-                "options__2": {
-                  "label": "\"A pillole\""
-                }
+            "picker_type": {
+              "label": "Stile",
+              "options__1": {
+                "label": "Menu a discesa"
+              },
+              "options__2": {
+                "label": "\"A pillole\""
               }
             },
-            "options_with_swatches": {
-              "header": "Varianti con campioni di colore",
-              "info": "Scopri come visualizzare [campioni di colore](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "Stile",
-                "options__1": {
-                  "label": "Solo campione di colore"
-                },
-                "options__2": {
-                  "label": "Menu a discesa"
-                },
-                "options__3": {
-                  "label": "Menu a discesa (senza campione di colore)"
-                },
-                "options__4": {
-                  "label": "\"A pillole\" (senza campione di colore)"
-                }
+            "swatch_shape": {
+              "label": "Campione di colore",
+              "info": "Abilita i [campioni di colore](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) nelle opzioni del prodotto.",
+              "options__1": {
+                "label": "Tondo"
               },
-              "swatch_shape": {
-                "label": "Forma campione di colore",
-                "options__1": {
-                  "label": "Tonda"
-                },
-                "options__2": {
-                  "label": "Quadrata"
-                }
+              "options__2": {
+                "label": "Quadrato"
+              },
+              "options__3": {
+                "label": "Nessuno"
               }
             }
           }
@@ -2512,44 +2499,26 @@
         "variant_picker": {
           "name": "Selettore di variante",
           "settings": {
-            "options": {
-              "header": "Varianti di testo semplice",
-              "picker_type": {
-                "label": "Stile",
-                "options__1": {
-                  "label": "Menu a discesa"
-                },
-                "options__2": {
-                  "label": "\"A pillole\""
-                }
+            "picker_type": {
+              "label": "Stile",
+              "options__1": {
+                "label": "Menu a discesa"
+              },
+              "options__2": {
+                "label": "\"A pillole\""
               }
             },
-            "options_with_swatches": {
-              "header": "Varianti con campioni di colore",
-              "info": "Scopri come visualizzare [campioni di colore](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "Stile",
-                "options__1": {
-                  "label": "Solo campione di colore"
-                },
-                "options__2": {
-                  "label": "Menu a discesa"
-                },
-                "options__3": {
-                  "label": "Menu a discesa (senza campione di colore)"
-                },
-                "options__4": {
-                  "label": "\"A pillole\" (senza campione di colore)"
-                }
+            "swatch_shape": {
+              "label": "Campione di colore",
+              "info": "Abilita i [campioni di colore](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) nelle opzioni del prodotto.",
+              "options__1": {
+                "label": "Tondo"
               },
-              "swatch_shape": {
-                "label": "Forma campione di colore",
-                "options__1": {
-                  "label": "Tonda"
-                },
-                "options__2": {
-                  "label": "Quadrata"
-                }
+              "options__2": {
+                "label": "Quadrato"
+              },
+              "options__3": {
+                "label": "Nessuno"
               }
             }
           }

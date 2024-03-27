@@ -56,8 +56,8 @@
       "name": "社群媒體",
       "settings": {
         "social_twitter_link": {
-          "label": "Twitter",
-          "info": "https://twitter.com/shopify"
+          "label": "X / Twitter",
+          "info": "https://x.com/shopify"
         },
         "social_facebook_link": {
           "label": "Facebook",
@@ -1183,7 +1183,7 @@
             "label": "先顯示圖片"
           },
           "options__2": {
-            "label": "圖片秒數"
+            "label": "後顯示圖片"
           },
           "label": "電腦版圖片位置",
           "info": "圖片會先預設為行動版版面配置。"
@@ -1496,10 +1496,6 @@
           "label": "顯示產品評等",
           "info": "新增產品評等應用程式，即可顯示評等。[瞭解詳情](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
-        "enable_quick_buy": {
-          "label": "啟用「快速新增」按鈕",
-          "info": "最適合彈出式視窗或購物車導覽匣類型。"
-        },
         "columns_desktop": {
           "label": "電腦版的欄數"
         },
@@ -1527,6 +1523,15 @@
             "label": "收銀機"
           },
           "info": "收銀機為預設的行動版版面配置。"
+        },
+        "quick_add": {
+          "label": "快速新增",
+          "info": "「大量」針對大量購買的品項進行了最佳化。",
+          "options": {
+            "option_1": "無",
+            "option_2": "標準",
+            "option_3": "大量"
+          }
         }
       }
     },
@@ -1630,44 +1635,26 @@
         "variant_picker": {
           "name": "子類選擇器",
           "settings": {
-            "options": {
-              "header": "純文字子類",
-              "picker_type": {
-                "label": "樣式",
-                "options__1": {
-                  "label": "下拉式選單"
-                },
-                "options__2": {
-                  "label": "圓角按鈕"
-                }
+            "picker_type": {
+              "label": "樣式",
+              "options__1": {
+                "label": "下拉式選單"
+              },
+              "options__2": {
+                "label": "圓角"
               }
             },
-            "options_with_swatches": {
-              "header": "子類搭配色樣",
-              "info": "瞭解如何顯示 [色樣](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "樣式",
-                "options__1": {
-                  "label": "僅色樣"
-                },
-                "options__2": {
-                  "label": "下拉式選單"
-                },
-                "options__3": {
-                  "label": "下拉式選單 (無色樣)"
-                },
-                "options__4": {
-                  "label": "圓角按鈕 (無色樣)"
-                }
+            "swatch_shape": {
+              "label": "色樣",
+              "info": "為商品選項啟用 [色樣](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)。",
+              "options__1": {
+                "label": "圓形"
               },
-              "swatch_shape": {
-                "label": "色樣形狀",
-                "options__1": {
-                  "label": "圓形"
-                },
-                "options__2": {
-                  "label": "正方形"
-                }
+              "options__2": {
+                "label": "正方形"
+              },
+              "options__3": {
+                "label": "無"
               }
             }
           }
@@ -2512,44 +2499,26 @@
         "variant_picker": {
           "name": "子類選擇器",
           "settings": {
-            "options": {
-              "header": "純文字子類",
-              "picker_type": {
-                "label": "樣式",
-                "options__1": {
-                  "label": "下拉式選單"
-                },
-                "options__2": {
-                  "label": "圓角按鈕"
-                }
+            "picker_type": {
+              "label": "樣式",
+              "options__1": {
+                "label": "下拉式選單"
+              },
+              "options__2": {
+                "label": "圓角"
               }
             },
-            "options_with_swatches": {
-              "header": "子類搭配色樣",
-              "info": "瞭解如何顯示 [色樣](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "樣式",
-                "options__1": {
-                  "label": "僅色樣"
-                },
-                "options__2": {
-                  "label": "下拉式選單"
-                },
-                "options__3": {
-                  "label": "下拉式選單 (無色樣)"
-                },
-                "options__4": {
-                  "label": "圓角按鈕 (無色樣)"
-                }
+            "swatch_shape": {
+              "label": "色樣",
+              "info": "為商品選項啟用 [色樣](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)。",
+              "options__1": {
+                "label": "圓形"
               },
-              "swatch_shape": {
-                "label": "色樣形狀",
-                "options__1": {
-                  "label": "圓形"
-                },
-                "options__2": {
-                  "label": "正方形"
-                }
+              "options__2": {
+                "label": "正方形"
+              },
+              "options__3": {
+                "label": "無"
               }
             }
           }
@@ -2983,7 +2952,7 @@
             "label": "先顯示圖片"
           },
           "options__2": {
-            "label": "圖片秒數"
+            "label": "後顯示圖片"
           },
           "info": "行動版上一律先顯示圖片。"
         }

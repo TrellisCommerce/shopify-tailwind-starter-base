@@ -56,8 +56,8 @@
       "name": "Media społecznościowe",
       "settings": {
         "social_twitter_link": {
-          "label": "Twitter",
-          "info": "https://twitter.com/shopify"
+          "label": "X / Twitter",
+          "info": "https://x.com/shopify"
         },
         "social_facebook_link": {
           "label": "Facebook",
@@ -1496,10 +1496,6 @@
           "label": "Pokaż ocenę produktu",
           "info": "Aby wyświetlić ocenę, dodaj aplikację do oceny produktów. [Dowiedz się więcej](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
-        "enable_quick_buy": {
-          "label": "Włącz przycisk szybkiego dodawania",
-          "info": "Optymalny dla wózków w wyskakującym okienku lub wysuwanych."
-        },
         "columns_desktop": {
           "label": "Liczba kolumn na komputerze"
         },
@@ -1527,6 +1523,15 @@
             "label": "Szuflada"
           },
           "info": "Szuflada odpowiada domyślnemu układowi na urządzeniach mobilnych."
+        },
+        "quick_add": {
+          "label": "Szybkie dodawanie",
+          "info": "Opcja Zbiorczo jest optymalna dla produktów kupowanych w większych ilościach.",
+          "options": {
+            "option_1": "Brak",
+            "option_2": "Standard",
+            "option_3": "Zbiorczo"
+          }
         }
       }
     },
@@ -1639,44 +1644,26 @@
         "variant_picker": {
           "name": "Selektor wariantów",
           "settings": {
-            "options": {
-              "header": "Warianty wyłącznie tekstowe",
-              "picker_type": {
-                "label": "Styl",
-                "options__1": {
-                  "label": "Lista rozwijana"
-                },
-                "options__2": {
-                  "label": "Okrągłe przełączniki"
-                }
+            "picker_type": {
+              "label": "Styl",
+              "options__1": {
+                "label": "Lista rozwijana"
+              },
+              "options__2": {
+                "label": "Okrągłe przełączniki"
               }
             },
-            "options_with_swatches": {
-              "header": "Warianty z próbkami",
-              "info": "Dowiedz się, jak wyświetlać [próbki](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "Styl",
-                "options__1": {
-                  "label": "Tylko próbka"
-                },
-                "options__2": {
-                  "label": "Lista rozwijana"
-                },
-                "options__3": {
-                  "label": "Lista rozwijana (bez próbki)"
-                },
-                "options__4": {
-                  "label": "Okrągły przełącznik (bez próbki)"
-                }
+            "swatch_shape": {
+              "label": "Próbka",
+              "info": "Włącz [próbki](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) w opcjach produktu.",
+              "options__1": {
+                "label": "Koło"
               },
-              "swatch_shape": {
-                "label": "Kształt próbki",
-                "options__1": {
-                  "label": "Koło"
-                },
-                "options__2": {
-                  "label": "Kwadrat"
-                }
+              "options__2": {
+                "label": "Kwadrat"
+              },
+              "options__3": {
+                "label": "Brak"
               }
             }
           }
@@ -2512,44 +2499,26 @@
         "variant_picker": {
           "name": "Selektor wariantów",
           "settings": {
-            "options": {
-              "header": "Warianty wyłącznie tekstowe",
-              "picker_type": {
-                "label": "Styl",
-                "options__1": {
-                  "label": "Lista rozwijana"
-                },
-                "options__2": {
-                  "label": "Okrągłe przełączniki"
-                }
+            "picker_type": {
+              "label": "Styl",
+              "options__1": {
+                "label": "Lista rozwijana"
+              },
+              "options__2": {
+                "label": "Okrągłe przełączniki"
               }
             },
-            "options_with_swatches": {
-              "header": "Warianty z próbkami",
-              "info": "Dowiedz się, jak wyświetlać [próbki](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches)",
-              "picker_type": {
-                "label": "Styl",
-                "options__1": {
-                  "label": "Tylko próbka"
-                },
-                "options__2": {
-                  "label": "Lista rozwijana"
-                },
-                "options__3": {
-                  "label": "Lista rozwijana (bez próbki)"
-                },
-                "options__4": {
-                  "label": "Okrągły przełącznik (bez próbki)"
-                }
+            "swatch_shape": {
+              "label": "Próbka",
+              "info": "Włącz [próbki](https://help.shopify.com/en/manual/online-store/themes/theme-structure/theme-settings#options-with-swatches) w opcjach produktu.",
+              "options__1": {
+                "label": "Koło"
               },
-              "swatch_shape": {
-                "label": "Kształt próbki",
-                "options__1": {
-                  "label": "Koło"
-                },
-                "options__2": {
-                  "label": "Kwadrat"
-                }
+              "options__2": {
+                "label": "Kwadrat"
+              },
+              "options__3": {
+                "label": "Brak"
               }
             }
           }

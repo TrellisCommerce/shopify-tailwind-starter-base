@@ -1,6 +1,6 @@
 Brought to you and maintained by [Trellis Commerce](https://trellis.co/) - A full-service eCommerce agency based in Boston, MA
 
-Latest merged code from [Dawn v12.0.0](https://github.com/Shopify/dawn/releases/tag/v12.0.0)
+Latest merged code from [Dawn v13.0.1](https://github.com/Shopify/dawn/releases/tag/v13.0.1)
 
 # Dawn + Tailwind CSS + Prettier Shopify Starter Theme
 
