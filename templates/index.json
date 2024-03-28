@@ -66,7 +66,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Writing custom CSS is hard. We make it easier to adjust your store's design with the power of Tailwind.<\/p>"
+            "text": "<p>Writing custom CSS is hard. We make it easy to adjust your store's design with the power of Tailwind's pre-configured classes.<\/p>"
           }
         }
       },
@@ -81,8 +81,8 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 0,
-        "twcss_heading": "",
-        "twcss_body": "twcss-text-pretty",
+        "twcss_heading": "twcss-bg-clip-text twcss-text-transparent twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90%",
+        "twcss_body": "",
         "twcss_caption": "",
         "twcss_button": ""
       }
@@ -95,9 +95,9 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
+        "collection": "automated-collection",
+        "products_to_show": 6,
+        "columns_desktop": 3,
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
