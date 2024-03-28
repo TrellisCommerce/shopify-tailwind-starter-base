@@ -113,7 +113,7 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
-    "twcss_product_card_container": "twcss-flex-row",
+    "twcss_product_card_container": "twcss-border twcss-rounded-3xl twcss-p-8",
     "twcss_product_card_image": "",
     "sections": {
       "main-password-header": {
