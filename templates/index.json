@@ -92,7 +92,7 @@
         "padding_bottom": 40,
         "twcss_heading": "twcss-bg-clip-text twcss-text-transparent twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90%",
         "twcss_body": "twcss-text-left",
-        "twcss_caption": "twcss-text-4xl",
+        "twcss_caption": "twcss-text-4xl twcss-my-16",
         "twcss_button": ""
       }
     },
