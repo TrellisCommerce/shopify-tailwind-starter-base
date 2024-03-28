@@ -5,16 +5,13 @@
       "blocks": {
         "vendor": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "text": "{{ product.vendor }}",
             "text_style": "uppercase"
           }
         },
         "title": {
-          "type": "title",
-          "settings": {
-          }
+          "type": "title"
         },
         "caption": {
           "type": "text",
@@ -24,9 +21,7 @@
           }
         },
         "price": {
-          "type": "price",
-          "settings": {
-          }
+          "type": "price"
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -35,9 +30,7 @@
           }
         },
         "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {
-          }
+          "type": "quantity_selector"
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -47,9 +40,7 @@
           }
         },
         "description": {
-          "type": "description",
-          "settings": {
-          }
+          "type": "description"
         },
         "collapsible-row-0": {
           "type": "collapsible_tab",
@@ -111,12 +102,9 @@
       ],
       "settings": {
         "enable_sticky_info": true,
+        "gallery_layout": "stacked",
         "media_size": "large",
         "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "gallery_layout": "stacked",
-        "media_position": "left",
-        "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
@@ -130,7 +118,7 @@
         "image-with-text-0": {
           "type": "heading",
           "settings": {
-            "heading": "REAP WHAT YOU SOW",
+            "heading": "Image with text",
             "heading_size": "h1"
           }
         },
@@ -147,9 +135,8 @@
         "image-with-text-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Screen_Shot_2023-06-06_at_8.33.50_PM.png",
-        "height": "medium",
-        "desktop_image_width": "large",
+        "height": "small",
+        "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
@@ -200,27 +187,17 @@
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "padding_top": 36,
-        "padding_bottom": 36,
-        "twcss_container": "",
-        "twcss_heading": "",
-        "twcss_column_container": "",
-        "twcss_column_image": "",
-        "twcss_column_heading": "",
-        "twcss_column_description": "",
-        "twcss_column_link": ""
+        "padding_bottom": 36
       }
     },
     "related-products": {
       "type": "related-products",
-      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
-        "products_to_show": 4,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
         "image_ratio": "square",
-        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
@@ -228,61 +205,12 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
-    },
-    "bba395bf-f1a3-4207-898b-18b60b4e8a9e": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "enable_video_looping": true,
-        "video_url": "https:\/\/youtu.be\/jdk_31Z5bzA",
-        "cover_image": "shopify:\/\/shop_images\/Screen_Shot_2023-06-06_at_7.21.27_PM.png",
-        "description": "",
-        "full_width": true,
-        "color_scheme": "background-1",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "twcss_video_button": "",
-        "twcss_heading": ""
-      }
-    },
-    "2651d9de-30f5-4585-9b75-419c79bbfc52": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "More Killer Coffee",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "death-wish",
-        "products_to_show": 3,
-        "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "twcss_heading": "",
-        "twcss_description": ""
-      }
     }
   },
   "order": [
     "main",
     "image-with-text",
     "multicolumn",
-    "related-products",
-    "bba395bf-f1a3-4207-898b-18b60b4e8a9e",
-    "2651d9de-30f5-4585-9b75-419c79bbfc52"
+    "related-products"
   ]
 }
