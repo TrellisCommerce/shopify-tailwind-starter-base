@@ -63,16 +63,25 @@
             "heading_size": "h1"
           }
         },
-        "text": {
+        "caption_qJtC7W": {
+          "type": "caption",
+          "settings": {
+            "caption": "Writing custom CSS is hard.",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "text_mR43G9": {
           "type": "text",
           "settings": {
-            "text": "<p>Writing custom CSS is hard. We make it easy to adjust your store's design with the power of Tailwind's pre-configured classes.<\/p>"
+            "text": "<p>Easily adjust your store's design with the power of Tailwind's pre-configured classes. Tweak font sizes, colors, spacing, and more for all screen sizes!<\/p>"
           }
         }
       },
       "block_order": [
         "heading",
-        "text"
+        "caption_qJtC7W",
+        "text_mR43G9"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -82,8 +91,8 @@
         "padding_top": 40,
         "padding_bottom": 0,
         "twcss_heading": "twcss-bg-clip-text twcss-text-transparent twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90%",
-        "twcss_body": "",
-        "twcss_caption": "",
+        "twcss_body": "twcss-font-bold lg:twcss-text-left twcss-text-justify",
+        "twcss_caption": "twcss-italic",
         "twcss_button": ""
       }
     },
