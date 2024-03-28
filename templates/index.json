@@ -59,14 +59,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "Use Tailwind within the theme files...or just in the admin...or both! You do you.",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>Writing custom CSS is hard. We make it easier to adjust your store's design with the power of Tailwind.<\/p>"
           }
         }
       },
@@ -82,7 +82,7 @@
         "padding_top": 40,
         "padding_bottom": 0,
         "twcss_heading": "",
-        "twcss_body": "",
+        "twcss_body": "twcss-text-pretty",
         "twcss_caption": "",
         "twcss_button": ""
       }
