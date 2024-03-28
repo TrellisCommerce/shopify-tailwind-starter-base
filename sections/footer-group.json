@@ -2,103 +2,52 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "40a8ddc0-9a68-45c4-8508-4fd80dd0943f": {
-      "type": "newsletter",
-      "blocks": {
-        "sections--19007942820149__40a8ddc0-9a68-45c4-8508-4fd80dd0943f-16860996542fbcb7cf-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "SUBSCRIBE & SAVE",
-            "heading_size": "h1"
-          }
-        },
-        "sections--19007942820149__40a8ddc0-9a68-45c4-8508-4fd80dd0943f-16860996542fbcb7cf-1": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
-          }
-        },
-        "sections--19007942820149__40a8ddc0-9a68-45c4-8508-4fd80dd0943f-16860996542fbcb7cf-2": {
-          "type": "email_form",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "sections--19007942820149__40a8ddc0-9a68-45c4-8508-4fd80dd0943f-16860996542fbcb7cf-0",
-        "sections--19007942820149__40a8ddc0-9a68-45c4-8508-4fd80dd0943f-16860996542fbcb7cf-1",
-        "sections--19007942820149__40a8ddc0-9a68-45c4-8508-4fd80dd0943f-16860996542fbcb7cf-2"
-      ],
-      "settings": {
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "footer": {
       "type": "footer",
       "blocks": {
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "SHOP",
-            "menu": "main-menu"
+            "heading": "Quick links",
+            "menu": "footer"
           }
         },
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "LEARN",
-            "menu": "main-menu"
+            "heading": "Info",
+            "menu": "footer"
           }
         },
         "footer-2": {
           "type": "text",
           "settings": {
-            "heading": "FUELED BY DEATH",
+            "heading": "Our mission",
             "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
-          }
-        },
-        "89b47990-1a65-4bf4-bfa1-0901e205433d": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Frame_-_2023-06-06T180054.139.png",
-            "image_width": 185,
-            "alignment": "center"
           }
         }
       },
       "block_order": [
         "footer-0",
         "footer-1",
-        "footer-2",
-        "89b47990-1a65-4bf4-bfa1-0901e205433d"
+        "footer-2"
       ],
       "settings": {
-        "color_scheme": "background-1",
-        "newsletter_enable": false,
+        "color_scheme": "scheme-1",
+        "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
-        "payment_enable": false,
+        "payment_enable": true,
         "show_policy": false,
         "margin_top": 48,
         "padding_top": 36,
-        "padding_bottom": 36,
-        "twcss_container": "",
-        "twcss_column_container": "",
-        "twcss_column_heading": "",
-        "twcss_column_links": "",
-        "twcss_column_subtext": "",
-        "twcss_email_input": ""
+        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "40a8ddc0-9a68-45c4-8508-4fd80dd0943f",
     "footer"
   ]
 }
