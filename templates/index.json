@@ -89,7 +89,7 @@
         "color_scheme": "scheme-1",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 0,
+        "padding_bottom": 40,
         "twcss_heading": "twcss-bg-clip-text twcss-text-transparent twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90%",
         "twcss_body": "twcss-font-bold lg:twcss-text-left twcss-text-justify",
         "twcss_caption": "twcss-italic",
