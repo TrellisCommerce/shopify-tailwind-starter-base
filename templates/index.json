@@ -6,14 +6,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "Customize Sections More",
             "heading_size": "h0"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "Tailwind CSS classes can be added to specific elements within each default Dawn section. The possibilities are endless!",
             "text_style": "body"
           }
         },
@@ -40,7 +40,7 @@
         "image_position_2": 50,
         "image_overlay_opacity": 30,
         "image_height": "large",
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
@@ -49,7 +49,7 @@
         "stack_images_on_mobile": false,
         "show_text_below": false,
         "twcss_heading": "",
-        "twcss_body": "",
+        "twcss_body": "lg:twcss-px-56",
         "twcss_button": "twcss-uppercase twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90%"
       }
     },
