@@ -35,19 +35,19 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/brittney-strange-4uPkNzC4ATM-unsplash.jpg",
+        "image": "shopify:\/\/shop_images\/nathan-dumlao-xvacAs7KyM4-unsplash_1.jpg",
         "image_position": 50,
         "image_position_2": 50,
-        "image_overlay_opacity": 30,
+        "image_overlay_opacity": 40,
         "image_height": "large",
         "desktop_content_position": "middle-center",
-        "show_text_box": true,
+        "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
-        "show_text_below": true,
+        "show_text_below": false,
         "twcss_heading": "twcss-bg-clip-text twcss-text-transparent twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90%",
         "twcss_body": "lg:twcss-px-56 twcss-text-white",
         "twcss_button": "twcss-uppercase twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90%"
