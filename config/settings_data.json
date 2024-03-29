@@ -115,7 +115,7 @@
     "cart_drawer_collection": "",
     "twcss_product_card_container": "twcss-border twcss-rounded-3xl twcss-p-8 twcss-flex",
     "twcss_product_card_image": "",
-    "twcss_product_card_button": "twcss-text-lg twcss-uppercase twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90% hover:twcss-bg-gradient-to-r hover:twcss-from-indigo-500 hover:twcss-via-purple-500 hover:twcss-to-pink-500 twcss-text-white lg:twcss-text-2xl hover:twcss-shadow-none",
+    "twcss_product_card_button": "twcss-text-base twcss-uppercase twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90% hover:twcss-bg-gradient-to-r hover:twcss-from-indigo-500 hover:twcss-via-purple-500 hover:twcss-to-pink-500 twcss-text-white lg:twcss-text-2xl",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
