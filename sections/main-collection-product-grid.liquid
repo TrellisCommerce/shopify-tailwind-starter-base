@@ -11,15 +11,15 @@
 {%- endunless -%}
 
 {%- if section.settings.quick_add == 'standard' -%}
-  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+  <script src='{{ 'quick-add.js' | asset_url }}' defer='defer'></script>
+  <script src='{{ 'product-form.js' | asset_url }}' defer='defer'></script>
 {%- endif -%}
 
 {%- if section.settings.quick_add == 'bulk' -%}
-  <script src="{{ 'quick-add-bulk.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'quick-order-list.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
+  <script src='{{ 'quick-add-bulk.js' | asset_url }}' defer='defer'></script>
+  <script src='{{ 'quick-order-list.js' | asset_url }}' defer='defer'></script>
+  <script src='{{ 'quantity-popover.js' | asset_url }}' defer='defer'></script>
+  <script src='{{ 'price-per-item.js' | asset_url }}' defer='defer'></script>
 {%- endif -%}
 
 {%- style -%}
@@ -36,16 +36,16 @@
   }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
+<div class='section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}'>
   {%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
     {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
-      <facet-filters-form class="facets facets-vertical-sort page-width small-hide">
-        <form class="facets-vertical-form" id="FacetSortForm">
-          <div class="facet-filters sorting caption">
-            <div class="facet-filters__field">
-              <h2 class="facet-filters__label caption-large text-body">
-                <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
+      <facet-filters-form class='facets facets-vertical-sort page-width small-hide'>
+        <form class='facets-vertical-form' id='FacetSortForm'>
+          <div class='facet-filters sorting caption'>
+            <div class='facet-filters__field'>
+              <h2 class='facet-filters__label caption-large text-body'>
+                <label for='SortBy'>{{ 'products.facets.sort_by_label' | t }}</label>
               </h2>
               <div class='select'>
                 {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
@@ -116,8 +116,8 @@
       {%- endif -%}
 
       <div
-        class="product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-        id="ProductGridContainer"
+        class='product-grid-container{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
+        id='ProductGridContainer'
         {% if settings.animations_reveal_on_scroll %}
           data-cascade
         {% endif %}
@@ -138,13 +138,13 @@
           </div>
         {%- else -%}
           <div
-            class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
-            data-id="{{ section.id }}"
+            class='collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}'
+            data-id='{{ section.id }}'
           >
-            <div class="loading-overlay gradient"></div>
+            <div class='loading-overlay gradient'></div>
             <ul
-              id="product-grid"
-              class="
+              id='product-grid'
+              class='
                 grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
                 grid--{{ section.settings.columns_desktop }}-col-desktop
               '
@@ -155,10 +155,10 @@
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
                 <li
-                  class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  class='grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
                   {% if settings.animations_reveal_on_scroll %}
                     data-cascade
-                    style="--animation-order: {{ forloop.index }};"
+                    style='--animation-order: {{ forloop.index }};'
                   {% endif %}
                 >
                   {% render 'card-product',
