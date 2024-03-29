@@ -1545,6 +1545,11 @@
       },
       {
         "type": "text",
+        "id": "twcss_product_card_button",
+        "label": "Tailwind CSS for Product Card Button"
+      },
+      {
+        "type": "text",
         "id": "twcss_collection_card_container",
         "label": "Tailwind CSS for Collection Card Container"
       },
