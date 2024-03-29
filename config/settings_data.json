@@ -11,7 +11,7 @@
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
-    "buttons_border_thickness": 1,
+    "buttons_border_thickness": 0,
     "buttons_border_opacity": 100,
     "buttons_radius": 0,
     "buttons_shadow_opacity": 0,
@@ -115,7 +115,7 @@
     "cart_drawer_collection": "",
     "twcss_product_card_container": "twcss-border twcss-rounded-3xl twcss-p-8 twcss-flex",
     "twcss_product_card_image": "",
-    "twcss_product_card_button": "twcss-text-lg twcss-uppercase twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90% hover:twcss-bg-gradient-to-r hover:twcss-from-indigo-500 hover:twcss-via-purple-500 hover:twcss-to-pink-500 twcss-text-white lg:twcss-text-2xl twcss-border twcss-border-white",
+    "twcss_product_card_button": "twcss-text-lg twcss-uppercase twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90% hover:twcss-bg-gradient-to-r hover:twcss-from-indigo-500 hover:twcss-via-purple-500 hover:twcss-to-pink-500 twcss-text-white lg:twcss-text-2xl hover:twcss-shadow-none",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
