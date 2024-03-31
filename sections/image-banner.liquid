@@ -132,7 +132,7 @@
             </h2>
           {%- when 'text' -%}
             <div
-              class='banner__text rte {{ block.settings.text_style }} {{ section.settings.twcss_body }}'
+              class='banner__text rte {{ block.settings.text_style }} {{ section.settings.twcss_text }}'
               {{ block.shopify_attributes }}
             >
               <p>{{ block.settings.text }}</p>
@@ -179,10 +179,7 @@
   "tag": "section",
   "class": "section",
   "disabled_on": {
-    "groups": [
-      "header",
-      "footer"
-    ]
+    "groups": ["header", "footer"]
   },
   "settings": [
     {
@@ -394,22 +391,22 @@
     },
     {
       "type": "header",
-      "content": "Tailwind CSS"
+      "content": "t:sections.all.tailwind.heading"
     },
     {
       "type": "text",
       "id": "twcss_heading",
-      "label": "Tailwind CSS for Heading Text"
+      "label": "t:sections.all.tailwind.text_heading"
     },
     {
       "type": "text",
-      "id": "twcss_body",
-      "label": "Tailwind CSS for Body Text"
+      "id": "twcss_text",
+      "label": "t:sections.all.tailwind.text"
     },
     {
       "type": "text",
       "id": "twcss_button",
-      "label": "Tailwind CSS for Button"
+      "label": "t:sections.all.tailwind.button"
     }
   ],
   "blocks": [
