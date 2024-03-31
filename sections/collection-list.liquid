@@ -39,7 +39,7 @@
           <a
             href='{{ routes.collections_url }}'
             id='ViewAll-{{ section.id }}'
-            class='link underlined-link large-up-hide{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_text }}'
+            class='link underlined-link large-up-hide{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
             aria-labelledby='ViewAll-{{ section.id }} SectionHeading-{{ section.id }}'
           >
             {{- 'sections.collection_list.view_all' | t -}}
@@ -124,7 +124,7 @@
           href='{{ routes.collections_url }}'
           class='button'
           id='ViewAllButton-{{ section.id }}'
-          aria-labelledby='ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }} {{ section.settings.twcss_text }}'
+          aria-labelledby='ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }}'
         >
           {{- 'sections.collection_list.view_all' | t -}}
         </a>
@@ -275,11 +275,6 @@
       "type": "text",
       "id": "twcss_heading",
       "label": "t:sections.all.tailwind.text_heading"
-    },
-    {
-      "type": "text",
-      "id": "twcss_text",
-      "label": "t:sections.all.tailwind.text"
     }
   ],
   "blocks": [

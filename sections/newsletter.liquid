@@ -23,7 +23,7 @@
           {% render block %}
         {%- when 'heading' -%}
           <h2
-            class='inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_text }}'
+            class='inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_heading }}'
             {{ block.shopify_attributes }}
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
@@ -59,7 +59,7 @@
                     id='NewsletterForm--{{ section.id }}'
                     type='email'
                     name='contact[email]'
-                    class='field__input'
+                    class='field__input {{ section.settings.twcss_input }}'
                     value='{{ form.email }}'
                     aria-required='true'
                     autocorrect='off'
@@ -76,7 +76,7 @@
                     required
                   >
                   <label
-                    class='field__label {{ section.settings.twcss_text }}'
+                    class='field__label {{ section.settings.twcss_label }}'
                     for='NewsletterForm--{{ section.id }}'
                   >
                     {{ 'newsletter.label' | t }}
@@ -123,9 +123,7 @@
   "tag": "section",
   "class": "section",
   "disabled_on": {
-    "groups": [
-      "header"
-    ]
+    "groups": ["header"]
   },
   "settings": [
     {
@@ -179,6 +177,11 @@
     },
     {
       "type": "text",
+      "id": "twcss_heading",
+      "label": "t:sections.all.tailwind.text_heading"
+    },
+    {
+      "type": "text",
       "id": "twcss_text",
       "label": "t:sections.all.tailwind.text"
     },
@@ -186,6 +189,11 @@
       "type": "text",
       "id": "twcss_input",
       "label": "t:sections.all.tailwind.input"
+    },
+    {
+      "type": "text",
+      "id": "twcss_label",
+      "label": "t:sections.all.tailwind.input_label"
     }
   ],
   "blocks": [

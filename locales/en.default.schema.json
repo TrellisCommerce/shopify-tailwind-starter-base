@@ -459,9 +459,10 @@
         "button": "Tailwind CSS for Button",
         "svg": "Tailwind CSS for SVG",
         "input": "Tailwind CSS for Input",
-        "text_heading": "Tailwind CSS for Heading Text",
-        "text_caption": "Tailwind CSS for Caption Text",
-        "text_description": "Tailwind CSS for Description Text"
+        "input_label": "Tailwind CSS for Input Label",
+        "text_heading": "Tailwind CSS for Heading",
+        "text_caption": "Tailwind CSS for Caption",
+        "text_description": "Tailwind CSS for Description"
       },
       "spacing": "Spacing",
       "colors": {

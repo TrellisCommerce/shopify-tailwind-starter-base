@@ -14,10 +14,10 @@
   }
 {%- endstyle -%}
 
-<div class='color-{{ section.settings.color_scheme }} gradient {{ section.settings.twcss_container }} {{ section.settings.twcss_text }}'>
+<div class='color-{{ section.settings.color_scheme }} gradient {{ section.settings.twcss_container }}'>
   <div class='contact page-width page-width--narrow section-{{ section.id }}-padding'>
     {%- if section.settings.heading != blank -%}
-      <h2 class='title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_text }}'>
+      <h2 class='title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_heading }}'>
         {{ section.settings.heading }}
       </h2>
     {%- else -%}
@@ -61,9 +61,9 @@
         </ul>
       {%- endif -%}
       <div class='contact__fields'>
-        <div class='field {{ section.settings.twcss_input }}'>
+        <div class='field'>
           <input
-            class='field__input'
+            class='field__input {{ section.settings.twcss_input }}'
             autocomplete='name'
             type='text'
             id='ContactForm-name'
@@ -71,16 +71,16 @@
             value='{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}'
             placeholder='{{ 'templates.contact.form.name' | t }}'
           >
-          <label class='field__label {{ section.settings.twcss_text }}' for='ContactForm-name'>
+          <label class='field__label {{ section.settings.twcss_label }}' for='ContactForm-name'>
             {{- 'templates.contact.form.name' | t -}}
           </label>
         </div>
-        <div class='field field--with-error {{ section.settings.twcss_input }}'>
+        <div class='field field--with-error'>
           <input
             autocomplete='email'
             type='email'
             id='ContactForm-email'
-            class='field__input'
+            class='field__input {{ section.settings.twcss_input }}'
             name='contact[email]'
             spellcheck='false'
             autocapitalize='off'
@@ -92,7 +92,7 @@
             {% endif %}
             placeholder='{{ 'templates.contact.form.email' | t }}'
           >
-          <label class='field__label {{ section.settings.twcss_text }}' for='ContactForm-email'>
+          <label class='field__label {{ section.settings.twcss_label }}' for='ContactForm-email'>
             {{- 'templates.contact.form.email' | t }}
             <span aria-hidden='true'>*</span></label
           >
@@ -108,32 +108,32 @@
           {%- endif -%}
         </div>
       </div>
-      <div class='field {{ section.settings.twcss_input }}'>
+      <div class='field'>
         <input
           type='tel'
           id='ContactForm-phone'
-          class='field__input'
+          class='field__input {{ section.settings.twcss_input }}'
           autocomplete='tel'
           name='contact[{{ 'templates.contact.form.phone' | t }}]'
           pattern='[0-9\-]*'
           value='{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}'
           placeholder='{{ 'templates.contact.form.phone' | t }}'
         >
-        <label class='field__label {{ section.settings.twcss_text }}' for='ContactForm-phone'>
+        <label class='field__label {{ section.settings.twcss_label }}' for='ContactForm-phone'>
           {{- 'templates.contact.form.phone' | t -}}
         </label>
       </div>
-      <div class='field {{ section.settings.twcss_input }}'>
+      <div class='field'>
         <textarea
           rows='10'
           id='ContactForm-body'
-          class='text-area field__input'
+          class='text-area field__input {{ section.settings.twcss_input }}'
           name='contact[{{ 'templates.contact.form.comment' | t }}]'
           placeholder='{{ 'templates.contact.form.comment' | t }}'
         >
           {{- form.body -}}
         </textarea>
-        <label class='form__label field__label {{ section.settings.twcss_text }}' for='ContactForm-body'>
+        <label class='form__label field__label {{ section.settings.twcss_label }}' for='ContactForm-body'>
           {{- 'templates.contact.form.comment' | t -}}
         </label>
       </div>
@@ -152,10 +152,7 @@
   "tag": "section",
   "class": "section",
   "disabled_on": {
-    "groups": [
-      "header",
-      "footer"
-    ]
+    "groups": ["header", "footer"]
   },
   "settings": [
     {
@@ -225,13 +222,24 @@
     },
     {
       "type": "text",
+      "id": "twcss_heading",
+      "label": "t:sections.all.tailwind.text_heading"
+    },
+    {
+      "type": "text",
       "id": "twcss_text",
-      "label": "t:sections.all.tailwind.text"
+      "label": "t:sections.all.tailwind.text",
+      "info": "Response message text"
     },
     {
       "type": "text",
       "id": "twcss_input",
       "label": "t:sections.all.tailwind.input"
+    },
+    {
+      "type": "text",
+      "id": "twcss_label",
+      "label": "t:sections.all.tailwind.input_label"
     },
     {
       "type": "text",

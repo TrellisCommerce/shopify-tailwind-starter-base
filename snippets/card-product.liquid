@@ -54,7 +54,7 @@
       style='--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;'
     >
       <div
-        class='card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %} {{ twcss_product_card_image }}'
+        class='card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}'
         style='--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;'
       >
         {%- if card_product.featured_media -%}
@@ -74,7 +74,7 @@
                 src='{{ card_product.featured_media | image_url: width: 533 }}'
                 sizes='(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)'
                 alt='{{ card_product.featured_media.alt | escape }}'
-                class='motion-reduce'
+                class='motion-reduce {{ twcss_product_card_image }}'
                 {% unless lazy_load == false %}
                   loading='lazy'
                 {% endunless %}
@@ -97,7 +97,7 @@
                   src='{{ card_product.media[1] | image_url: width: 533 }}'
                   sizes='(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)'
                   alt=''
-                  class='motion-reduce'
+                  class='motion-reduce {{ twcss_product_card_image }}'
                   loading='lazy'
                   width='{{ card_product.media[1].width }}'
                   height='{{ card_product.media[1].height }}'

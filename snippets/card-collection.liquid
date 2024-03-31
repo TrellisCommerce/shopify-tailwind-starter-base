@@ -45,7 +45,7 @@
     style='--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;'
   >
     <div
-      class='card__inner {% if card_style == 'standard' %}color-{{ card_color_scheme }} gradient{% endif %}{% if card_collection.featured_image or card_style == 'standard' %} ratio{% endif %} {{ twcss_collection_card_image }}'
+      class='card__inner {% if card_style == 'standard' %}color-{{ card_color_scheme }} gradient{% endif %}{% if card_collection.featured_image or card_style == 'standard' %} ratio{% endif %}'
       style='--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;'
     >
       {%- if card_collection.featured_image -%}
@@ -72,7 +72,7 @@
               height='{{ card_collection.featured_image.height }}'
               width='{{ card_collection.featured_image.width }}'
               loading='lazy'
-              class='motion-reduce'
+              class='motion-reduce {{ twcss_collection_card_image }}'
             >
           </div>
         </div>
