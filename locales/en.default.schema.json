@@ -455,11 +455,15 @@
       "tailwind": {
         "heading": "Tailwind CSS",
         "text": "Tailwind CSS for Text",
+        "text_heading": "Tailwind CSS for Heading",
+        "text_caption": "Tailwind CSS for Caption",
+        "text_description": "Tailwind CSS for Description",
         "container": "Tailwind CSS for Container",
         "button": "Tailwind CSS for Button",
         "svg": "Tailwind CSS for SVG",
         "input": "Tailwind CSS for Input",
-        "text_heading": "Tailwind CSS for Heading"
+        "input_label": "Tailwind CSS for Input Label",
+        "image": "Tailwind CSS for Image"
       },
       "spacing": "Spacing",
       "colors": {

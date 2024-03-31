@@ -1567,6 +1567,26 @@
         "type": "text",
         "id": "twcss_collection_card_caption",
         "label": "Tailwind CSS for Collection Card Caption"
+      },
+      {
+        "type": "text",
+        "id": "twcss_article_card_container",
+        "label": "Tailwind CSS for Article Card Container"
+      },
+      {
+        "type": "text",
+        "id": "twcss_article_card_image",
+        "label": "Tailwind CSS for Article Card Image"
+      },
+      {
+        "type": "text",
+        "id": "twcss_article_card_heading",
+        "label": "Tailwind CSS for Article Card Heading"
+      },
+      {
+        "type": "text",
+        "id": "twcss_article_card_caption",
+        "label": "Tailwind CSS for Article Card Caption"
       }
     ]
   }

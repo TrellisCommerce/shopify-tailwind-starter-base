@@ -30,7 +30,7 @@
       <div class='title-wrapper-with-link{% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin'>
         <h2
           id='SectionHeading-{{ section.id }}'
-          class='blog__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_text }}'
+          class='blog__title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} {{ section.settings.twcss_heading }}'
           {% if settings.animations_reveal_on_scroll %}
             data-cascade
           {% endif %}
@@ -75,7 +75,11 @@
                 show_image: section.settings.show_image,
                 show_date: section.settings.show_date,
                 show_author: section.settings.show_author,
-                show_excerpt: true
+                show_excerpt: true,
+                twcss_article_card_container: settings.twcss_article_card_container,
+                twcss_article_card_image: settings.twcss_article_card_image,
+                twcss_article_card_heading: settings.twcss_article_card_heading,
+                twcss_article_card_caption: settings.twcss_article_card_caption
               %}
             </li>
           {%- endfor -%}
@@ -97,6 +101,7 @@
                     card article-card card--{{ settings.blog_card_style }}
                     {% if settings.blog_card_style == 'card' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}
                     {% if section.settings.show_image %} card--media{% else %} card--text{% endif %}
+                    {{ settings.twcss_article_card_container }}
                   '
                   style=' {% if settings.blog_card_style == 'standard' %} --ratio-percent: 100%;{% elsif settings.blog_card_style == 'card' %} --ratio-percent: 0%;{% endif %}'
                 >
@@ -113,10 +118,10 @@
                     {%- endif -%}
                     <div class='card__content'>
                       <div class='card__information'>
-                        <h3 class='card__heading h2'>
+                        <h3 class='card__heading h2 {{ settings.twcss_article_card_heading }}'>
                           {{ 'sections.featured_blog.onboarding_title' | t }}
                         </h3>
-                        <p class='article-card__excerpt rte-width'>
+                        <p class='article-card__excerpt rte-width {{ settings.twcss_article_card_caption }}'>
                           {{ 'sections.featured_blog.onboarding_content' | t }}
                         </p>
                       </div>
@@ -124,10 +129,10 @@
                   </div>
                   <div class='card__content'>
                     <div class='card__information'>
-                      <h3 class='card__heading h2'>
+                      <h3 class='card__heading h2 {{ settings.twcss_article_card_heading }}'>
                         {{ 'sections.featured_blog.onboarding_title' | t }}
                       </h3>
-                      <p class='article-card__excerpt rte-width'>
+                      <p class='article-card__excerpt rte-width {{ settings.twcss_article_card_caption }}'>
                         {{ 'sections.featured_blog.onboarding_content' | t }}
                       </p>
                     </div>
@@ -310,13 +315,14 @@
     },
     {
       "type": "text",
-      "id": "twcss_button",
-      "label": "t:sections.all.tailwind.button"
+      "id": "twcss_heading",
+      "label": "t:sections.all.tailwind.text_heading"
     },
     {
       "type": "text",
-      "id": "twcss_text",
-      "label": "t:sections.all.tailwind.text"
+      "id": "twcss_button",
+      "label": "t:sections.all.tailwind.button",
+      "info": "View all button"
     }
   ],
   "presets": [

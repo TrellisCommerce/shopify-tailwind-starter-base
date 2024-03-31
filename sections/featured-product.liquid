@@ -31,10 +31,6 @@
 
 {%- liquid
   assign product = section.settings.product
-
-  assign tailwindTextClasses = section.settings.twcss_text
-
-  assign tailwindButtonClasses = section.settings.twcss_button
 -%}
 
 {% comment %} TODO: assign `product.selected_or_first_available_variant` to variable and replace usage to reduce verbosity {% endcomment %}
@@ -92,14 +88,14 @@
                 {% render block %}
               {%- when 'text' -%}
                 <p
-                  class='product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %} {{ tailwindTextClasses }}'
+                  class='product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %} {{ section.settings.twcss_vendor }}'
                   {{ block.shopify_attributes }}
                 >
                   {{- block.settings.text -}}
                 </p>
               {%- when 'title' -%}
                 <h2
-                  class='product__title {{ block.settings.heading_size }} {{ tailwindTextClasses }}'
+                  class='product__title {{ block.settings.heading_size }} {{ section.settings.twcss_heading }}'
                   {{ block.shopify_attributes }}
                 >
                   {%- if product.title != blank -%}
@@ -114,7 +110,7 @@
                     product: product,
                     use_variant: true,
                     show_badges: true,
-                    price_class: tailwindTextClasses
+                    price_class: section.settings.twcss_price
                   -%}
                 </div>
                 {%- if product.quantity_price_breaks_configured? -%}
@@ -123,7 +119,7 @@
                   </div>
                 {%- endif -%}
                 {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
-                  <div class='product__tax caption rte {{ tailwindTextClasses }}'>
+                  <div class='product__tax caption rte'>
                     {%- if cart.taxes_included -%}
                       {{ 'products.product.include_taxes' | t }}
                     {%- endif -%}
@@ -142,7 +138,7 @@
                 {%- endif -%}
               {%- when 'sku' -%}
                 <p
-                  class='product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %} {{ tailwindTextClasses }}'
+                  class='product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %} {{ section.settings.twcss_sku }}'
                   id='Sku-{{ section.id }}'
                   role='status'
                   {{ block.shopify_attributes }}
@@ -163,7 +159,7 @@
                   -%}
                   {% # theme-check-enable %}
                   <label
-                    class='quantity__label form__label {{ tailwindTextClasses }}'
+                    class='quantity__label form__label {{ section.settings.twcss_label }}'
                     for='Quantity-{{ section.id }}'
                   >
                     {{ 'products.product.quantity.label' | t }}
@@ -381,7 +377,7 @@
                   product: product,
                   product_form_id: product_form_id,
                   section_id: section.id,
-                  button_classes: tailwindButtonClasses
+                  button_classes: section.settings.twcss_button
                 -%}
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
@@ -1502,13 +1498,37 @@
     },
     {
       "type": "text",
-      "id": "twcss_text",
-      "label": "t:sections.all.tailwind.text"
+      "id": "twcss_heading",
+      "label": "t:sections.all.tailwind.text_heading"
+    },
+    {
+      "type": "text",
+      "id": "twcss_price",
+      "label": "t:sections.all.tailwind.text",
+      "info": "Price text"
+    },
+    {
+      "type": "text",
+      "id": "twcss_vendor",
+      "label": "t:sections.all.tailwind.text",
+      "info": "Vendor text"
+    },
+    {
+      "type": "text",
+      "id": "twcss_sku",
+      "label": "t:sections.all.tailwind.text",
+      "info": "Sku text"
     },
     {
       "type": "text",
       "id": "twcss_button",
       "label": "t:sections.all.tailwind.button"
+    },
+    {
+      "type": "text",
+      "id": "twcss_label",
+      "label": "t:sections.all.tailwind.input_label",
+      "info": "Quantity label"
     },
     {
       "type": "text",
