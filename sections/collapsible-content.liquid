@@ -24,12 +24,12 @@
           style='text-align: {{ section.settings.heading_alignment }};'
         >
           {%- if section.settings.caption != blank -%}
-            <p class='caption-with-letter-spacing {{ section.settings.twcss_text }}'>
+            <p class='caption-with-letter-spacing {{ section.settings.twcss_caption }}'>
               {{ section.settings.caption | escape }}
             </p>
           {% endif %}
           {%- if section.settings.heading != blank -%}
-            <h2 class='collapsible-content__heading inline-richtext {{ section.settings.heading_size }} {{ section.settings.twcss_text }}'>
+            <h2 class='collapsible-content__heading inline-richtext {{ section.settings.heading_size }} {{ section.settings.twcss_heading }}'>
               {{ section.settings.heading }}
             </h2>
           {%- else -%}
@@ -82,7 +82,7 @@
                 >
                   <summary id='Summary-{{ block.id }}-{{ section.id }}'>
                     {% render 'icon-accordion', icon: block.settings.icon, iconClasses: section.settings.twcss_svg %}
-                    <h3 class='accordion__title inline-richtext h4 {{ section.settings.twcss_text }}'>
+                    <h3 class='accordion__title inline-richtext h4 {{ section.settings.twcss_text_row_heading }}'>
                       {{ block.settings.heading | default: block.settings.page.title | escape }}
                     </h3>
                     {% render 'icon-caret', iconClasses: section.settings.twcss_svg %}
@@ -286,8 +286,25 @@
     },
     {
       "type": "text",
+      "id": "twcss_caption",
+      "label": "t:sections.all.tailwind.text_caption"
+    },
+    {
+      "type": "text",
+      "id": "twcss_heading",
+      "label": "t:sections.all.tailwind.text_heading"
+    },
+    {
+      "type": "text",
+      "id": "twcss_text_row_heading",
+      "label": "t:sections.all.tailwind.text",
+      "info": "Collapsible row heading"
+    },
+    {
+      "type": "text",
       "id": "twcss_text",
-      "label": "t:sections.all.tailwind.text"
+      "label": "t:sections.all.tailwind.text",
+      "info": "Collapsible row content"
     },
     {
       "type": "text",

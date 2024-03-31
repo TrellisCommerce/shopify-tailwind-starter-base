@@ -101,6 +101,7 @@
                     card article-card card--{{ settings.blog_card_style }}
                     {% if settings.blog_card_style == 'card' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}
                     {% if section.settings.show_image %} card--media{% else %} card--text{% endif %}
+                    {{ settings.twcss_article_card_container }}
                   '
                   style=' {% if settings.blog_card_style == 'standard' %} --ratio-percent: 100%;{% elsif settings.blog_card_style == 'card' %} --ratio-percent: 0%;{% endif %}'
                 >
@@ -117,10 +118,10 @@
                     {%- endif -%}
                     <div class='card__content'>
                       <div class='card__information'>
-                        <h3 class='card__heading h2'>
+                        <h3 class='card__heading h2 {{ settings.twcss_article_card_heading }}'>
                           {{ 'sections.featured_blog.onboarding_title' | t }}
                         </h3>
-                        <p class='article-card__excerpt rte-width'>
+                        <p class='article-card__excerpt rte-width {{ settings.twcss_article_card_caption }}'>
                           {{ 'sections.featured_blog.onboarding_content' | t }}
                         </p>
                       </div>
@@ -128,10 +129,10 @@
                   </div>
                   <div class='card__content'>
                     <div class='card__information'>
-                      <h3 class='card__heading h2'>
+                      <h3 class='card__heading h2 {{ settings.twcss_article_card_heading }}'>
                         {{ 'sections.featured_blog.onboarding_title' | t }}
                       </h3>
-                      <p class='article-card__excerpt rte-width'>
+                      <p class='article-card__excerpt rte-width {{ settings.twcss_article_card_caption }}'>
                         {{ 'sections.featured_blog.onboarding_content' | t }}
                       </p>
                     </div>
