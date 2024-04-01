@@ -259,6 +259,101 @@
         "twcss_input": "",
         "twcss_svg": ""
       }
+    },
+    "slideshow_8aNFFw": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_y3AtkB": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/nathan-dumlao-xvacAs7KyM4-unsplash_1.jpg",
+            "heading": "Sometimes you want to use uppercase",
+            "heading_size": "h1",
+            "subheading": "Without being forced to use all-caps copy and have that affect SEO",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_nNGqeC": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brittney-strange-4uPkNzC4ATM-unsplash.jpg",
+            "heading": "You can make your copy all uppercase",
+            "heading_size": "h1",
+            "subheading": "With the tailwind class 'twcss-uppercase'",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_y3AtkB",
+        "slide_nNGqeC"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand",
+        "twcss_container": "",
+        "twcss_image": "",
+        "twcss_heading": "twcss-uppercase",
+        "twcss_text": "",
+        "twcss_button": ""
+      }
+    },
+    "collection_list_6eQWCq": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_wfEbPF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "automated-collection"
+          }
+        },
+        "featured_collection_4ywXqg": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "hydrogen"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_wfEbPF",
+        "featured_collection_4ywXqg"
+      ],
+      "settings": {
+        "title": "Centering content over an image",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 2,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "twcss_container": "",
+        "twcss_heading": ""
+      }
     }
   },
   "order": [
@@ -266,6 +361,8 @@
     "rich_text",
     "featured_collection",
     "image_with_text_rNzEU9",
-    "featured_product_TaWKNi"
+    "featured_product_TaWKNi",
+    "slideshow_8aNFFw",
+    "collection_list_6eQWCq"
   ]
 }
