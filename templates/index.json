@@ -267,9 +267,9 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/nathan-dumlao-xvacAs7KyM4-unsplash_1.jpg",
-            "heading": "Sometimes you want to use uppercase",
+            "heading": "Sometimes you want to use uppercase characters",
             "heading_size": "h1",
-            "subheading": "Without being forced to use all-caps copy and have that affect SEO",
+            "subheading": "But don't want the all-caps copy to adversely affect SEO",
             "button_label": "",
             "link": "",
             "button_style_secondary": false,
@@ -285,7 +285,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/brittney-strange-4uPkNzC4ATM-unsplash.jpg",
-            "heading": "You can make your copy all uppercase",
+            "heading": "Easily make your copy uppercase",
             "heading_size": "h1",
             "subheading": "With the tailwind class 'twcss-uppercase'",
             "button_label": "",
@@ -341,8 +341,8 @@
         "featured_collection_4ywXqg"
       ],
       "settings": {
-        "title": "Centering content over an image",
-        "heading_size": "h1",
+        "title": "Center content over an image and darken the image for contrast with the overlaying text",
+        "heading_size": "h2",
         "image_ratio": "square",
         "columns_desktop": 2,
         "color_scheme": "",
