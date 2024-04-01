@@ -48,8 +48,9 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false,
+        "twcss_image": "",
         "twcss_heading": "lg:twcss-px-48",
-        "twcss_body": "lg:twcss-px-56 twcss-text-white",
+        "twcss_text": "",
         "twcss_button": "twcss-uppercase twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90% hover:twcss-bg-gradient-to-r hover:twcss-from-indigo-500 hover:twcss-via-purple-500 hover:twcss-to-pink-500"
       }
     },
@@ -91,7 +92,7 @@
         "padding_top": 40,
         "padding_bottom": 40,
         "twcss_heading": "twcss-bg-clip-text twcss-text-transparent twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90%",
-        "twcss_body": "twcss-text-left",
+        "twcss_text": "",
         "twcss_caption": "twcss-text-4xl twcss-my-16",
         "twcss_button": ""
       }
@@ -125,11 +126,55 @@
         "twcss_heading": "",
         "twcss_description": ""
       }
+    },
+    "image_with_text_rNzEU9": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_9nY8Nr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Building on the Basics",
+            "heading_size": "h1"
+          }
+        },
+        "text_jdGaJj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Shopify sections have tons of options to configure, but what happens when you want to tweak something more yourself without a developer? 🤔<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9nY8Nr",
+        "text_jdGaJj"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/brittney-strange-4uPkNzC4ATM-unsplash.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "twcss_container": "twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90% lg:twcss-p-24",
+        "twcss_heading": "twcss-text-white",
+        "twcss_text": "twcss-text-white",
+        "twcss_caption": "",
+        "twcss_button": ""
+      }
     }
   },
   "order": [
     "image_banner",
     "rich_text",
-    "featured_collection"
+    "featured_collection",
+    "image_with_text_rNzEU9"
   ]
 }
