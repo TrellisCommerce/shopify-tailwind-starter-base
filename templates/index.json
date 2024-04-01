@@ -333,13 +333,20 @@
         "text_yTh76z": {
           "type": "text",
           "settings": {
-            "text": "<p>Center content over an image and darken the image for contrast with the overlaying text<\/p>"
+            "text": "<p>Center content over an image and darken the image for contrast with the overlaying text using this hefty combination of Tailwind classes:<\/p>"
+          }
+        },
+        "text_XFRpC6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>'twcss-backdrop-brightness-50 twcss-flex twcss-justify-center twcss-items-center twcss-drop-shadow twcss-text-5xl twcss-absolute twcss-inset-0 twcss-text-white twcss-text-center'<\/p>"
           }
         }
       },
       "block_order": [
         "heading_cFGqpm",
-        "text_yTh76z"
+        "text_yTh76z",
+        "text_XFRpC6"
       ],
       "settings": {
         "desktop_content_position": "center",
