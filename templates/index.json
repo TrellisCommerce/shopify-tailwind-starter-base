@@ -143,11 +143,20 @@
             "text": "<p>Shopify sections have tons of options to configure, but what happens when you want to tweak something more yourself without a developer? 🤔<\/p>",
             "text_style": "body"
           }
+        },
+        "caption_UDyAqE": {
+          "type": "caption",
+          "settings": {
+            "caption": "Example: We were able to add more padding around the section container to extend the gradient background with the tailwind class 'lg:twcss-p-24'",
+            "text_style": "subtitle",
+            "text_size": "small"
+          }
         }
       },
       "block_order": [
         "heading_9nY8Nr",
-        "text_jdGaJj"
+        "text_jdGaJj",
+        "caption_UDyAqE"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/brittney-strange-4uPkNzC4ATM-unsplash.jpg",
@@ -166,7 +175,7 @@
         "twcss_container": "twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90% lg:twcss-p-24",
         "twcss_heading": "twcss-text-white",
         "twcss_text": "twcss-text-white",
-        "twcss_caption": "",
+        "twcss_caption": "twcss-text-white twcss-italic twcss-leading-normal",
         "twcss_button": ""
       }
     }
