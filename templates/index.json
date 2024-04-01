@@ -147,7 +147,7 @@
         "caption_UDyAqE": {
           "type": "caption",
           "settings": {
-            "caption": "Example: We were able to add more padding around the section container to extend the gradient background with the tailwind class 'lg:twcss-p-24'",
+            "caption": "Example: We were able to add more padding around the section container to extend the gradient background for large screen sizes with the Tailwind class 'lg:twcss-p-24'",
             "text_style": "subtitle",
             "text_size": "small"
           }
