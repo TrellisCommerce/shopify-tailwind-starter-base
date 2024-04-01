@@ -66,6 +66,7 @@
   {%- endif -%}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
+  {% assign priceClasses = section.settings.twcss_price | prepend: 'price--large ' %}
   <div class='page-width'>
     <div class='product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}'>
       <div class='grid__item product__media-wrapper'>
@@ -86,14 +87,14 @@
                 {% render block %}
               {%- when 'text' -%}
                 <p
-                  class='product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}'
+                  class='product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %} {{ section.settings.twcss_text }}'
                   {{ block.shopify_attributes }}
                 >
                   {{- block.settings.text -}}
                 </p>
               {%- when 'title' -%}
                 <div class='product__title' {{ block.shopify_attributes }}>
-                  <h1>{{ product.title | escape }}</h1>
+                  <h1 class='{{ section.settings.twcss_title }}'>{{ product.title | escape }}</h1>
                   <a href='{{ product.url }}' class='product__title'>
                     <h2 class='h1'>
                       {{ product.title | escape }}
@@ -106,7 +107,7 @@
                     product: product,
                     use_variant: true,
                     show_badges: true,
-                    price_class: 'price--large'
+                    price_class: priceClasses
                   -%}
                 </div>
                 {%- if product.quantity_price_breaks_configured? -%}
@@ -192,7 +193,7 @@
                 {%- endif -%}
               {%- when 'sku' -%}
                 <p
-                  class='product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}'
+                  class='product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %} {{ section.settings.twcss_sku }}'
                   id='Sku-{{ section.id }}'
                   role='status'
                   {{ block.shopify_attributes }}
@@ -204,7 +205,7 @@
                 {{ block.settings.custom_liquid }}
               {%- when 'collapsible_tab' -%}
                 <div
-                  class='product__accordion accordion quick-add-hidden {{ section.settings.twcss_container }}'
+                  class='product__accordion accordion quick-add-hidden {{ section.settings.twcss_container_row }}'
                   {{ block.shopify_attributes }}
                 >
                   <details id='Details-{{ block.id }}-{{ section.id }}'>
@@ -212,15 +213,18 @@
                       <div class='summary__title'>
                         {% render 'icon-accordion',
                           icon: block.settings.icon,
-                          iconClasses: section.settings.twcss_svg
+                          iconClasses: section.settings.twcss_svg_row
                         %}
-                        <h2 class='h4 accordion__title inline-richtext {{ section.settings.twcss_text }}'>
+                        <h2 class='h4 accordion__title inline-richtext {{ section.settings.twcss_heading_row }}'>
                           {{ block.settings.heading | default: block.settings.page.title | escape }}
                         </h2>
                       </div>
                       {% render 'icon-caret' %}
                     </summary>
-                    <div class='accordion__content rte' id='ProductAccordion-{{ block.id }}-{{ section.id }}'>
+                    <div
+                      class='accordion__content rte {{ section.settings.twcss_text_row }}'
+                      id='ProductAccordion-{{ block.id }}-{{ section.id }}'
+                    >
                       {{ block.settings.content }}
                       {{ block.settings.page.content }}
                     </div>
@@ -238,7 +242,10 @@
                     | item_count_for_variant: product.selected_or_first_available_variant.id
                   -%}
                   {% # theme-check-enable %}
-                  <label class='quantity__label form__label' for='Quantity-{{ section.id }}'>
+                  <label
+                    class='quantity__label form__label {{ section.settings.twcss_label }}'
+                    for='Quantity-{{ section.id }}'
+                  >
                     {{ 'products.product.quantity.label' | t }}
                     <span class='quantity__rules-cart{% if cart_qty == 0 %} hidden{% endif %}'>
                       {%- render 'loading-spinner' -%}
@@ -250,8 +257,16 @@
                     </span>
                   </label>
                   <div class='price-per-item__container'>
-                    <quantity-input class='quantity' data-url='{{ product.url }}' data-section='{{ section.id }}'>
-                      <button class='quantity__button' name='minus' type='button'>
+                    <quantity-input
+                      class='quantity {{ section.settings.twcss_input }}'
+                      data-url='{{ product.url }}'
+                      data-section='{{ section.id }}'
+                    >
+                      <button
+                        class='quantity__button {{ section.settings.twcss_button_qty }}'
+                        name='minus'
+                        type='button'
+                      >
                         <span class='visually-hidden'>
                           {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
                         </span>
@@ -273,7 +288,11 @@
                         value='{{ product.selected_or_first_available_variant.quantity_rule.min }}'
                         form='{{ product_form_id }}'
                       >
-                      <button class='quantity__button' name='plus' type='button'>
+                      <button
+                        class='quantity__button {{ section.settings.twcss_button_qty }}'
+                        name='plus'
+                        type='button'
+                      >
                         <span class='visually-hidden'>
                           {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
                         </span>
@@ -464,7 +483,8 @@
                   product: product,
                   product_form_id: product_form_id,
                   section_id: section.id,
-                  show_pickup_availability: true
+                  show_pickup_availability: true,
+                  button_classes: section.settings.twcss_button
                 -%}
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
@@ -516,7 +536,7 @@
                       aria-label='{{ 'accessibility.complementary_products' | t }}'
                       {{ block.shopify_attributes -}}
                       {% if block.settings.make_collapsible_row %}
-                        class='product__accordion accordion {{ section.settings.twcss_container }}'
+                        class='product__accordion accordion {{ section.settings.twcss_container_row }}'
                       {% endif %}
                     >
                       <div class='complementary-products__container'>
@@ -528,13 +548,13 @@
                           {%- if block.settings.make_collapsible_row -%}
                             {% render 'icon-accordion',
                               icon: block.settings.icon,
-                              iconClasses: section.settings.twcss_svg
+                              iconClasses: section.settings.twcss_svg_row
                             %}
-                            <h2 class='h4 accordion__title {{ section.settings.twcss_text }}'>
+                            <h2 class='h4 accordion__title'>
                               {{ block.settings.block_heading }}
                             </h2>
                           {%- else -%}
-                            <h2 class='h3 accordion__title {{ section.settings.twcss_text }}'>
+                            <h2 class='h3 accordion__title'>
                               {{ block.settings.block_heading }}
                             </h2>
                           {%- endif -%}
@@ -2300,21 +2320,72 @@
     },
     {
       "type": "text",
-      "id": "twcss_container",
+      "id": "twcss_title",
+      "label": "t:sections.all.tailwind.text_title"
+    },
+    {
+      "type": "text",
+      "id": "twcss_price",
+      "label": "t:sections.all.tailwind.text",
+      "info": "Price text"
+    },
+    {
+      "type": "text",
+      "id": "twcss_text",
+      "label": "t:sections.all.tailwind.text"
+    },
+    {
+      "type": "text",
+      "id": "twcss_sku",
+      "label": "t:sections.all.tailwind.text",
+      "info": "Sku text"
+    },
+    {
+      "type": "text",
+      "id": "twcss_button",
+      "label": "t:sections.all.tailwind.button"
+    },
+    {
+      "type": "text",
+      "id": "twcss_label",
+      "label": "t:sections.all.tailwind.input_label",
+      "info": "Quantity label"
+    },
+    {
+      "type": "text",
+      "id": "twcss_input",
+      "label": "t:sections.all.tailwind.input",
+      "info": "Quantity input"
+    },
+    {
+      "type": "text",
+      "id": "twcss_button_qty",
+      "label": "t:sections.all.tailwind.button",
+      "info": "Quantity minus & plus buttons"
+    },
+    {
+      "type": "text",
+      "id": "twcss_container_row",
       "label": "t:sections.all.tailwind.container",
       "info": "Collapsible row"
     },
     {
       "type": "text",
-      "id": "twcss_svg",
+      "id": "twcss_svg_row",
       "label": "t:sections.all.tailwind.svg",
       "info": "Collapsible row"
     },
     {
       "type": "text",
-      "id": "twcss_text",
+      "id": "twcss_heading_row",
+      "label": "t:sections.all.tailwind.text_heading",
+      "info": "Collapsible row heading"
+    },
+    {
+      "type": "text",
+      "id": "twcss_text_row",
       "label": "t:sections.all.tailwind.text",
-      "info": "Collapsible row"
+      "info": "Collapsible row content"
     }
   ]
 }

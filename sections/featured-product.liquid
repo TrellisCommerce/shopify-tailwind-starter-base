@@ -88,14 +88,14 @@
                 {% render block %}
               {%- when 'text' -%}
                 <p
-                  class='product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %} {{ section.settings.twcss_vendor }}'
+                  class='product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %} {{ section.settings.twcss_text }}'
                   {{ block.shopify_attributes }}
                 >
                   {{- block.settings.text -}}
                 </p>
               {%- when 'title' -%}
                 <h2
-                  class='product__title {{ block.settings.heading_size }} {{ section.settings.twcss_heading }}'
+                  class='product__title {{ block.settings.heading_size }} {{ section.settings.twcss_title }}'
                   {{ block.shopify_attributes }}
                 >
                   {%- if product.title != blank -%}
@@ -174,7 +174,11 @@
                   </label>
                   <div class='price-per-item__container'>
                     <quantity-input class='quantity {{ section.settings.twcss_input }}'>
-                      <button class='quantity__button {{ section.settings.twcss_svg }}' name='minus' type='button'>
+                      <button
+                        class='quantity__button {{ section.settings.twcss_button_qty }}'
+                        name='minus'
+                        type='button'
+                      >
                         <span class='visually-hidden'>
                           {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}
                         </span>
@@ -196,7 +200,11 @@
                         value='{{ product.selected_or_first_available_variant.quantity_rule.min }}'
                         form='{{ product_form_id }}'
                       >
-                      <button class='quantity__button {{ section.settings.twcss_svg }}' name='plus' type='button'>
+                      <button
+                        class='quantity__button {{ section.settings.twcss_button_qty }}'
+                        name='plus'
+                        type='button'
+                      >
                         <span class='visually-hidden'>
                           {{- 'products.product.quantity.increase' | t: product: product.title | escape -}}
                         </span>
@@ -1498,8 +1506,8 @@
     },
     {
       "type": "text",
-      "id": "twcss_heading",
-      "label": "t:sections.all.tailwind.text_heading"
+      "id": "twcss_title",
+      "label": "t:sections.all.tailwind.text_title"
     },
     {
       "type": "text",
@@ -1509,9 +1517,8 @@
     },
     {
       "type": "text",
-      "id": "twcss_vendor",
-      "label": "t:sections.all.tailwind.text",
-      "info": "Vendor text"
+      "id": "twcss_text",
+      "label": "t:sections.all.tailwind.text"
     },
     {
       "type": "text",
@@ -1533,12 +1540,14 @@
     {
       "type": "text",
       "id": "twcss_input",
-      "label": "t:sections.all.tailwind.input"
+      "label": "t:sections.all.tailwind.input",
+      "info": "Quantity input"
     },
     {
       "type": "text",
-      "id": "twcss_svg",
-      "label": "t:sections.all.tailwind.svg"
+      "id": "twcss_button_qty",
+      "label": "t:sections.all.tailwind.button",
+      "info": "Quantity minus & plus buttons"
     }
   ],
   "presets": [
