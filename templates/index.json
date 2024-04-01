@@ -180,86 +180,6 @@
         "twcss_button": ""
       }
     },
-    "featured_product_TaWKNi": {
-      "type": "featured-product",
-      "blocks": {
-        "text_UptqbG": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_6KLhcP": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_xEXCjh": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "variant_picker_yTxPTN": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector_6wUMpq": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
-        "buy_buttons_G9ktrk": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_zTgqCH": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_UptqbG",
-        "title_6KLhcP",
-        "price_xEXCjh",
-        "variant_picker_yTxPTN",
-        "quantity_selector_6wUMpq",
-        "buy_buttons_G9ktrk",
-        "share_zTgqCH"
-      ],
-      "settings": {
-        "product": "the-complete-snowboard",
-        "color_scheme": "",
-        "secondary_background": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "twcss_container": "twcss-bg-slate-100",
-        "twcss_heading": "twcss-bg-clip-text twcss-text-transparent twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90%",
-        "twcss_price": "twcss-text-sky-500 twcss-font-bold",
-        "twcss_vendor": "twcss-text-sky-500",
-        "twcss_sku": "",
-        "twcss_button": "twcss-uppercase twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90% hover:twcss-bg-gradient-to-r hover:twcss-from-indigo-500 hover:twcss-via-purple-500 hover:twcss-to-pink-500 twcss-text-white",
-        "twcss_label": "twcss-text-sky-500",
-        "twcss_input": "",
-        "twcss_svg": ""
-      }
-    },
     "slideshow_8aNFFw": {
       "type": "slideshow",
       "blocks": {
@@ -395,6 +315,94 @@
         "twcss_container": "",
         "twcss_heading": ""
       }
+    },
+    "featured_product_TaWKNi": {
+      "type": "featured-product",
+      "blocks": {
+        "text_mqwJqK": {
+          "type": "text",
+          "settings": {
+            "text": "Want to see some more examples? Head on over to a collection or product page!",
+            "text_style": "body"
+          }
+        },
+        "text_UptqbG": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_6KLhcP": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_xEXCjh": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker_yTxPTN": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_6wUMpq": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons_G9ktrk": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_zTgqCH": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_mqwJqK",
+        "text_UptqbG",
+        "title_6KLhcP",
+        "price_xEXCjh",
+        "variant_picker_yTxPTN",
+        "quantity_selector_6wUMpq",
+        "buy_buttons_G9ktrk",
+        "share_zTgqCH"
+      ],
+      "settings": {
+        "product": "the-complete-snowboard",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "twcss_container": "twcss-bg-slate-100",
+        "twcss_heading": "twcss-bg-clip-text twcss-text-transparent twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90%",
+        "twcss_price": "twcss-text-sky-500 twcss-font-bold",
+        "twcss_vendor": "twcss-text-sky-500",
+        "twcss_sku": "",
+        "twcss_button": "twcss-uppercase twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90% hover:twcss-bg-gradient-to-r hover:twcss-from-indigo-500 hover:twcss-via-purple-500 hover:twcss-to-pink-500 twcss-text-white",
+        "twcss_label": "twcss-text-sky-500",
+        "twcss_input": "",
+        "twcss_svg": ""
+      }
     }
   },
   "order": [
@@ -402,9 +410,9 @@
     "rich_text",
     "featured_collection",
     "image_with_text_rNzEU9",
-    "featured_product_TaWKNi",
     "slideshow_8aNFFw",
     "rich_text_RFp7Vz",
-    "collection_list_6eQWCq"
+    "collection_list_6eQWCq",
+    "featured_product_TaWKNi"
   ]
 }
