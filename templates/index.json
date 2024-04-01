@@ -320,6 +320,40 @@
         "twcss_button": ""
       }
     },
+    "rich_text_RFp7Vz": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cFGqpm": {
+          "type": "heading",
+          "settings": {
+            "heading": "What about centering content over an image? Easy peasy!",
+            "heading_size": "h1"
+          }
+        },
+        "text_yTh76z": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Center content over an image and darken the image for contrast with the overlaying text<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cFGqpm",
+        "text_yTh76z"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "twcss_heading": "",
+        "twcss_text": "",
+        "twcss_caption": "",
+        "twcss_button": ""
+      }
+    },
     "collection_list_6eQWCq": {
       "type": "collection-list",
       "blocks": {
@@ -341,7 +375,7 @@
         "featured_collection_4ywXqg"
       ],
       "settings": {
-        "title": "Center content over an image and darken the image for contrast with the overlaying text",
+        "title": "",
         "heading_size": "h2",
         "image_ratio": "square",
         "columns_desktop": 2,
@@ -363,6 +397,7 @@
     "image_with_text_rNzEU9",
     "featured_product_TaWKNi",
     "slideshow_8aNFFw",
+    "rich_text_RFp7Vz",
     "collection_list_6eQWCq"
   ]
 }
