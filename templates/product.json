@@ -56,7 +56,7 @@
           "settings": {
             "heading": "Materials",
             "icon": "leather",
-            "content": "",
+            "content": "<p>Materials content<\/p>",
             "page": ""
           }
         },
@@ -65,7 +65,7 @@
           "settings": {
             "heading": "Shipping & Returns",
             "icon": "truck",
-            "content": "",
+            "content": "<p>Shipping content<\/p>",
             "page": ""
           }
         },
@@ -74,7 +74,7 @@
           "settings": {
             "heading": "Dimensions",
             "icon": "ruler",
-            "content": "",
+            "content": "<p>Dimensions content<\/p>",
             "page": ""
           }
         },
@@ -83,7 +83,7 @@
           "settings": {
             "heading": "Care Instructions",
             "icon": "heart",
-            "content": "",
+            "content": "<p>Care content<\/p>",
             "page": ""
           }
         },
@@ -134,7 +134,7 @@
         "twcss_container_row": "twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90% twcss-px-4 twcss-text-white",
         "twcss_svg_row": "twcss-fill-white",
         "twcss_heading_row": "twcss-text-white twcss-font-sans",
-        "twcss_text_row": "twcss-text-white"
+        "twcss_text_row": "twcss-text-white twcss-text-lg"
       }
     },
     "image-with-text": {
