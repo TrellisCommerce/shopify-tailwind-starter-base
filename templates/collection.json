@@ -8,6 +8,40 @@
         "color_scheme": "scheme-1"
       }
     },
+    "rich_text_CLTMkD": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ingc87": {
+          "type": "heading",
+          "settings": {
+            "heading": "Customize your product cards",
+            "heading_size": "h2"
+          }
+        },
+        "text_VyKiF7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Move elements around within the product cards on a global level - all product cards will inherit the same Tailwind classes!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ingc87",
+        "text_VyKiF7"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "twcss_heading": "",
+        "twcss_text": "",
+        "twcss_caption": "",
+        "twcss_button": ""
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -31,6 +65,7 @@
   },
   "order": [
     "banner",
+    "rich_text_CLTMkD",
     "product-grid"
   ]
 }
