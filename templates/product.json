@@ -131,10 +131,10 @@
         "twcss_label": "twcss-text-sky-500",
         "twcss_input": "twcss-text-sky-500",
         "twcss_button_qty": "",
-        "twcss_container_row": "",
-        "twcss_svg_row": "",
-        "twcss_heading_row": "",
-        "twcss_text_row": ""
+        "twcss_container_row": "twcss-bg-gradient-to-r twcss-from-indigo-500 twcss-from-10% twcss-via-sky-500 twcss-via-30% twcss-to-emerald-500 twcss-to-90% twcss-px-4 twcss-text-white",
+        "twcss_svg_row": "twcss-fill-white",
+        "twcss_heading_row": "twcss-text-white twcss-font-sans",
+        "twcss_text_row": "twcss-text-white"
       }
     },
     "image-with-text": {
