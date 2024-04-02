@@ -21,7 +21,7 @@
         "text_VyKiF7": {
           "type": "text",
           "settings": {
-            "text": "<p>Move elements around within the product cards on a global level - all product cards will inherit the same Tailwind classes!<\/p>"
+            "text": "<p>Move elements around within the product cards on a global level - all product cards will inherit the same Tailwind classes! We used 'lg:twcss-flex lg:twcss-flex-row' on the product card containers to get the image on the right side of the card for larger screen sizes.<\/p>"
           }
         }
       },
