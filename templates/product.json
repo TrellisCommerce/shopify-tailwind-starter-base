@@ -170,7 +170,7 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36,
-        "twcss_container": "twcss-bg-black",
+        "twcss_container": "twcss-bg-black twcss-mt-16",
         "twcss_heading": "",
         "twcss_column_container": "",
         "twcss_column_image": "",
