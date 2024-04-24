@@ -25,7 +25,7 @@
         "enable_country_selector": false,
         "enable_language_selector": false,
         "twcss_container": "twcss-bg-primary-darkblue",
-        "twcss_text": "twcss-text-bc14, twcss-font-body"
+        "twcss_text": "twcss-text-bc14 twcss-font-headings"
       }
     },
     "header": {
