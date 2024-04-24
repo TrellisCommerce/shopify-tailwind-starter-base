@@ -29,7 +29,7 @@ module.exports = {
     // Futura Regular for Text & Buttons
     // Futura Medium for Navigation
     fontFamily: {
-      'headings': ['gill_sans_nova_n6'],
+      'headings': ['Gill Sans Nova'],
       'body': ['Futura']
     },
     fontSize: {
