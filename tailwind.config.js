@@ -29,8 +29,8 @@ module.exports = {
     // Futura Regular for Text & Buttons
     // Futura Medium for Navigation
     fontFamily: {
-      'sans': ['Gill Sans Nova Semi Bold'],
-      'sans': ['Futura']
+      'headings': ['Gill Sans Nova Semi Bold'],
+      'body': ['Futura']
     },
     fontSize: {
       // BODY COPY SIZES
@@ -145,43 +145,43 @@ module.exports = {
         fontWeight: '400',
       }],
     },
-      colors: {
-        // Default
-        transparent: 'transparent',
-        current: 'currentColor',
-        white: '#ffffff',
-        black: '#000000',
-        // Primary
-        primary: {
-          blue: '#003299',
-          darkblue: '#001D7C',
-        },
-        // Secondary
-        secondary: {
-          tan: '#F3F1E9',
-        },
-        // Greys
-        grey: {
-          lightgrey: '#6D7175',
-          darkgrey: '#202223',
-        },
+    colors: {
+      // Default
+      transparent: 'transparent',
+      current: 'currentColor',
+      white: '#ffffff',
+      black: '#000000',
+      // Primary
+      primary: {
+        blue: '#003299',
+        darkblue: '#001D7C',
       },
-      spacing: {
-        '8': '8px',
-        '16': '16px',
-        // Spacing between components for mobile
-        // Margins for mobile
-        '32': '32px',
-        // Spacing between components for tablet
-        // Margins for tablet
-        '48': '48px',
-        '64': '64px',
-        // Spacing between components for desktop
-        // Margins for desktop
-        '80': '80px',
-        '112': '112px',
-        '144': '144px',
+      // Secondary
+      secondary: {
+        tan: '#F3F1E9',
       },
+      // Greys
+      grey: {
+        lightgrey: '#6D7175',
+        darkgrey: '#202223',
+      },
+    },
+    spacing: {
+      '8': '8px',
+      '16': '16px',
+      // Spacing between components for mobile
+      // Margins for mobile
+      '32': '32px',
+      // Spacing between components for tablet
+      // Margins for tablet
+      '48': '48px',
+      '64': '64px',
+      // Spacing between components for desktop
+      // Margins for desktop
+      '80': '80px',
+      '112': '112px',
+      '144': '144px',
+    },
     extend: {
       fontFamily: {
         heading: 'var(--font-heading-family)',
