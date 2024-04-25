@@ -31,8 +31,8 @@
     "header": {
       "type": "header",
       "settings": {
-        "logo_position": "middle-left",
-        "menu": "main-menu",
+        "logo_position": "top-center",
+        "menu": "main-menu-tech-730-nicole",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
