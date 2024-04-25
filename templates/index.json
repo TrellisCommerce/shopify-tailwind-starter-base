@@ -36,7 +36,7 @@
             "text_alignment": "left",
             "image_overlay_opacity": 0,
             "color_scheme": "",
-            "text_alignment_mobile": "center"
+            "text_alignment_mobile": "left"
           }
         },
         "slide_ccdyeL": {
@@ -54,7 +54,7 @@
             "text_alignment": "right",
             "image_overlay_opacity": 0,
             "color_scheme": "",
-            "text_alignment_mobile": "center"
+            "text_alignment_mobile": "right"
           }
         }
       },
@@ -224,7 +224,7 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36,
-        "twcss_container": "",
+        "twcss_container": "twcss-bg-secondary-tan",
         "twcss_heading": "",
         "twcss_image": "",
         "twcss_text": "",
