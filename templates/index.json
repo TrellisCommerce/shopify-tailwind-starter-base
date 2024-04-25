@@ -36,8 +36,8 @@
         "accessibility_info": "Slideshow about our brand",
         "twcss_container": "",
         "twcss_image": "",
-        "twcss_heading": "",
-        "twcss_text": "",
+        "twcss_heading": "twcss-text-white twcss-text-hxld",
+        "twcss_text": "twcss-text-white",
         "twcss_button": ""
       }
     }
