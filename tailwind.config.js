@@ -99,13 +99,13 @@ module.exports = {
         },
       ],
       // HEADINGS SIZES
-      // Heading 1 -- h1d is larger viewports and h1m is mobile viewports
+      // Heading XL -- hxld is larger viewports and hxlm is mobile viewports -- used on hero slideshow
       hxld: [
         '9.6rem',
         {
           lineHeight: '1.6rem',
           letterSpacing: '0',
-          fontWeight: '400',
+          fontWeight: '700',
         },
       ],
       hxlm: [
@@ -116,6 +116,7 @@ module.exports = {
           fontWeight: '400',
         },
       ],
+      // Heading 1 -- h1d is larger viewports and h1m is mobile viewports
       h1d: [
         '7.5rem',
         {
