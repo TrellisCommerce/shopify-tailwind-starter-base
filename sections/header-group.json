@@ -8,13 +8,21 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
-            "link": ""
+            "text": "Order before 7pm for Next Day Delivery.",
+            "link": "#"
+          }
+        },
+        "announcement_eJQ6tp": {
+          "type": "announcement",
+          "settings": {
+            "text": "Up to 20% off. Shop the sale.",
+            "link": "#"
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announcement_eJQ6tp"
       ],
       "settings": {
         "color_scheme": "",
