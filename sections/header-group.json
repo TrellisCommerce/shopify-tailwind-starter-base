@@ -41,7 +41,7 @@
       "settings": {
         "logo_position": "top-center",
         "menu": "main-menu-tech-730-nicole",
-        "menu_type_desktop": "dropdown",
+        "menu_type_desktop": "mega",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "color_scheme": "scheme-1",
