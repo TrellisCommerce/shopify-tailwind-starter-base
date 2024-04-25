@@ -170,12 +170,74 @@
         "twcss_description": "",
         "twcss_button": ""
       }
+    },
+    "image_with_text_hV8dYL": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption_7TixhU": {
+          "type": "caption",
+          "settings": {
+            "caption": "FOR A BETTER WORLD",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_hQhy4k": {
+          "type": "heading",
+          "settings": {
+            "heading": "AWARD-WINNING EYEWEAR",
+            "heading_size": "h1"
+          }
+        },
+        "text_QnWreB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Reframe your world with eco-friendly eyewear. Made of the finest biodegradable materials. Designed for people & planet, helping you focus on what matters most to you. Sustainable sunglasses that give back to families in need.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_FnLTfJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "LEARN MORE",
+            "button_link": "#",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "caption_7TixhU",
+        "heading_hQhy4k",
+        "text_QnWreB",
+        "button_FnLTfJ"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "twcss_container": "",
+        "twcss_heading": "",
+        "twcss_image": "",
+        "twcss_text": "",
+        "twcss_caption": "",
+        "twcss_button": ""
+      }
     }
   },
   "order": [
     "slideshow_iNJHqh",
     "rich_text_V99rVj",
     "collection_list_3nGLyQ",
-    "featured_collection_FkwybH"
+    "featured_collection_FkwybH",
+    "image_with_text_hV8dYL"
   ]
 }
