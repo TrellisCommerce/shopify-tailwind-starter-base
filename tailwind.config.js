@@ -100,6 +100,22 @@ module.exports = {
       ],
       // HEADINGS SIZES
       // Heading 1 -- h1d is larger viewports and h1m is mobile viewports
+      hxld: [
+        '9.6rem',
+        {
+          lineHeight: '1.6rem',
+          letterSpacing: '0',
+          fontWeight: '400',
+        },
+      ],
+      hxlm: [
+        '3.4rem',
+        {
+          lineHeight: '1.6rem',
+          letterSpacing: '0',
+          fontWeight: '400',
+        },
+      ],
       h1d: [
         '7.5rem',
         {
