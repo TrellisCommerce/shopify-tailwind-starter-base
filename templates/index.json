@@ -74,7 +74,7 @@
         "accessibility_info": "Slideshow about our brand",
         "twcss_container": "",
         "twcss_image": "",
-        "twcss_heading": "sm:twcss-text-hxlm twcss-text-white twcss-text-hxld",
+        "twcss_heading": "sm:twcss-text-hxlm md:twcss-text-hxld twcss-text-white",
         "twcss_text": "twcss-text-white",
         "twcss_button": "twcss-bg-white twcss-text-black twcss-border-0"
       }
