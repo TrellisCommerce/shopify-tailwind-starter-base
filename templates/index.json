@@ -7,61 +7,23 @@
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Award-winning-mens-sustainable-glasses-and-womens-eyewear-2.webp",
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
+            "heading": "REFRAME YOUR WORLD",
+            "heading_size": "h0",
+            "subheading": "With sustainable eyewear",
+            "button_label": "FIND YOUR STYLE",
+            "link": "#",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
             "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_AwERfM": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/C82A0688_v2_Crop.webp",
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_XRBKRe": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/BIRD-Sunglasses-Studio-079-QuickEdit_99f31fb0-3567-412d-8ebc-5e00fd4c05e4.webp",
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
             "text_alignment_mobile": "center"
           }
         }
       },
       "block_order": [
-        "slide_9gdyMV",
-        "slide_AwERfM",
-        "slide_XRBKRe"
+        "slide_9gdyMV"
       ],
       "settings": {
         "layout": "full_bleed",
