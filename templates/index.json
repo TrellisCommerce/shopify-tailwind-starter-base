@@ -38,7 +38,7 @@
         "twcss_image": "",
         "twcss_heading": "twcss-text-white twcss-text-hxld",
         "twcss_text": "twcss-text-white",
-        "twcss_button": ""
+        "twcss_button": "twcss-bg-white twcss-text-black twcss-border-0"
       }
     }
   },
