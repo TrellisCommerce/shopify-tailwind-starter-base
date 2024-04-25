@@ -20,14 +20,52 @@
             "color_scheme": "",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_NLMMLR": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/C82A0688_v2_Crop.webp",
+            "heading": "UNIQUE YOU UNIQUE FRAMES",
+            "heading_size": "h0",
+            "subheading": "Timeless sunglasses for every occasion",
+            "button_label": "SHOP MEN",
+            "link": "#",
+            "button_style_secondary": false,
+            "box_align": "top-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_ccdyeL": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BIRD-Sunglasses-Studio-079-QuickEdit_99f31fb0-3567-412d-8ebc-5e00fd4c05e4.webp",
+            "heading": "SHARE YOUR SUN",
+            "heading_size": "h0",
+            "subheading": "From $75, with prescription lenses",
+            "button_label": "SHOP SUNGLASSES",
+            "link": "#",
+            "button_style_secondary": false,
+            "box_align": "top-right",
+            "show_text_box": false,
+            "text_alignment": "right",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
-        "slide_9gdyMV"
+        "slide_9gdyMV",
+        "slide_NLMMLR",
+        "slide_ccdyeL"
       ],
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "large",
+        "slide_height": "medium",
         "slider_visual": "dots",
         "auto_rotate": false,
         "change_slides_speed": 5,
@@ -40,9 +78,72 @@
         "twcss_text": "twcss-text-white",
         "twcss_button": "twcss-bg-white twcss-text-black twcss-border-0"
       }
+    },
+    "rich_text_V99rVj": {
+      "type": "rich-text",
+      "blocks": {
+        "text_eTCwUG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This is a demonstration of the Symmetry theme for Shopify.<br\/>Sustainable eyewear with a social purpose by <a href=\"https:\/\/wearellison.com\/\" target=\"_blank\" title=\"https:\/\/wearellison.com\/\">Bird Sunglasses<\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_eTCwUG"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "twcss_heading": "",
+        "twcss_text": "",
+        "twcss_caption": "",
+        "twcss_button": ""
+      }
+    },
+    "collection_list_3nGLyQ": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_F6dkB7": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_QejDpf": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_F6dkB7",
+        "featured_collection_QejDpf"
+      ],
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "twcss_container": "",
+        "twcss_heading": ""
+      }
     }
   },
   "order": [
-    "slideshow_iNJHqh"
+    "slideshow_iNJHqh",
+    "rich_text_V99rVj",
+    "collection_list_3nGLyQ"
   ]
 }
