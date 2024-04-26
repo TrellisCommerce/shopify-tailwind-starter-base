@@ -229,7 +229,10 @@
                   </span>
                 </label>
                 <div class="price-per-item__container">
-                  <input type="text" name="properties[_widget_id]" />
+                  <p class="cart-attribute__field">
+  <label for="_widget_id">_widget_id</label>
+  <input id="_widget_id" type="text" name="attributes[_widget_id]" value="{{ cart.attributes["_widget_id"] }}">
+</p>
                   <quantity-input class="quantity" data-url="{{ product.url }}" data-section="{{ section.id }}">
                     <button class="quantity__button no-js-hidden" name="minus" type="button">
                       <span class="visually-hidden">
