@@ -31,7 +31,9 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button"
+            "picker_type": "button",
+            "swatch_picker_type": "swatch",
+            "swatch_shape": "circle"
           }
         },
         "quantity_selector": {
@@ -111,6 +113,7 @@
       ],
       "settings": {
         "enable_sticky_info": true,
+        "color_scheme": "",
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
@@ -147,17 +150,21 @@
         "image-with-text-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Screen_Shot_2023-06-06_at_8.33.50_PM.png",
         "height": "medium",
         "desktop_image_width": "large",
         "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
+        "section_color_scheme": "",
         "color_scheme": "scheme-2",
+        "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "twcss_container": "",
+        "twcss_text": "",
+        "twcss_button": ""
       }
     },
     "multicolumn": {
@@ -196,9 +203,9 @@
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "swipe_on_mobile": false,
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36,
         "twcss_container": "",
@@ -235,8 +242,8 @@
         "heading": "",
         "heading_size": "h1",
         "enable_video_looping": true,
+        "enable_video_autoplay": false,
         "video_url": "https:\/\/youtu.be\/jdk_31Z5bzA",
-        "cover_image": "shopify:\/\/shop_images\/Screen_Shot_2023-06-06_at_7.21.27_PM.png",
         "description": "",
         "full_width": true,
         "color_scheme": "background-1",
@@ -275,6 +282,26 @@
         "twcss_heading": "",
         "twcss_description": ""
       }
+    },
+    "1714140298bbee68cf": {
+      "type": "apps",
+      "blocks": {
+        "rebuy_personalization_engine_rebuy_widget_8aG9NJ": {
+          "type": "shopify:\/\/apps\/rebuy-personalization-engine\/blocks\/rebuy-widget\/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "settings": {
+            "enabled": true,
+            "id": "145930",
+            "product_id_enabled": true,
+            "collection_id_enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "rebuy_personalization_engine_rebuy_widget_8aG9NJ"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -283,6 +310,7 @@
     "multicolumn",
     "related-products",
     "bba395bf-f1a3-4207-898b-18b60b4e8a9e",
-    "2651d9de-30f5-4585-9b75-419c79bbfc52"
+    "2651d9de-30f5-4585-9b75-419c79bbfc52",
+    "1714140298bbee68cf"
   ]
 }
