@@ -119,15 +119,13 @@ if (!customElements.get('quick-order-list')) {
           });
         }
 
+        const pageParams = new URLSearchParams(window.location.search);
+        window.pageNumber = decodeURIComponent(pageParams.get('page') || '');
         form.addEventListener('submit', this.onSubmit.bind(this));
-        const debouncedOnChange = debounce((event) => {
-          this.onChange(event);
-        }, ON_CHANGE_DEBOUNCE_TIMER);
-        this.addEventListener('change', debouncedOnChange.bind(this));
+        this.addMultipleDebounce();
       }
 
       cartUpdateUnsubscriber = undefined;
-      sectionRefreshUnsubscriber = undefined;
 
       onSubmit(event) {
         event.preventDefault();
@@ -143,20 +141,8 @@ if (!customElements.get('quick-order-list')) {
             // If its another section that made the update
             this.refresh().then(() => {
               this.defineInputsAndQuickOrderTable();
+              this.addMultipleDebounce();
             });
-          },
-        );
-        this.sectionRefreshUnsubscriber = subscribe(
-          PUB_SUB_EVENTS.sectionRefreshed,
-          (event) => {
-            const isParentSectionUpdated =
-              this.sectionId &&
-              (event.data?.sectionId ?? '') ===
-                `${this.sectionId.split('__')[0]}__main`;
-
-            if (isParentSectionUpdated) {
-              this.refresh();
-            }
           },
         );
         this.sectionId = this.dataset.id;
@@ -164,7 +150,6 @@ if (!customElements.get('quick-order-list')) {
 
       disconnectedCallback() {
         this.cartUpdateUnsubscriber?.();
-        this.sectionRefreshUnsubscriber?.();
       }
 
       defineInputsAndQuickOrderTable() {
@@ -274,7 +259,7 @@ if (!customElements.get('quick-order-list')) {
 
       refresh() {
         return new Promise((resolve, reject) => {
-          fetch(`${window.location.pathname}?section_id=${this.sectionId}`)
+          fetch(`${this.getSectionsUrl()}?section_id=${this.sectionId}`)
             .then((response) => response.text())
             .then((responseText) => {
               const html = new DOMParser().parseFromString(
@@ -282,7 +267,9 @@ if (!customElements.get('quick-order-list')) {
                 'text/html',
               );
               const sourceQty = html.querySelector(`#${this.quickOrderListId}`);
-              this.innerHTML = sourceQty.innerHTML;
+              if (sourceQty) {
+                this.innerHTML = sourceQty.innerHTML;
+              }
               resolve();
             })
             .catch((e) => {
@@ -320,6 +307,23 @@ if (!customElements.get('quick-order-list')) {
             section: 'cart-drawer',
           },
         ];
+      }
+
+      addMultipleDebounce() {
+        this.querySelectorAll('quantity-input').forEach((qty) => {
+          const debouncedOnChange = debounce((event) => {
+            this.onChange(event);
+          }, ON_CHANGE_DEBOUNCE_TIMER);
+          qty.addEventListener('change', debouncedOnChange.bind(this));
+        });
+      }
+
+      addDebounce(id) {
+        const element = this.querySelector(`#Variant-${id} quantity-input`);
+        const debouncedOnChange = debounce((event) => {
+          this.onChange(event);
+        }, ON_CHANGE_DEBOUNCE_TIMER);
+        element.addEventListener('change', debouncedOnChange.bind(this));
       }
 
       renderSections(parsedState, id) {
@@ -362,6 +366,11 @@ if (!customElements.get('quick-order-list')) {
           }
         });
         this.defineInputsAndQuickOrderTable();
+        if (id) {
+          this.addDebounce(id);
+        } else {
+          this.addMultipleDebounce();
+        }
       }
 
       getTableHead() {
@@ -437,6 +446,7 @@ if (!customElements.get('quick-order-list')) {
               e.target.blur();
               if (this.validateInput(e.target)) {
                 const currentIndex = this.allInputsArray.indexOf(e.target);
+                this.lastKey = e.shiftKey;
                 if (!e.shiftKey) {
                   const nextIndex = currentIndex + 1;
                   const nextVariant =
@@ -447,6 +457,7 @@ if (!customElements.get('quick-order-list')) {
                   const previousVariant =
                     this.allInputsArray[previousIndex] ||
                     this.allInputsArray[this.allInputsArray.length - 1];
+                  this.lastElement = previousVariant.dataset.index;
                   previousVariant.select();
                 }
               }
@@ -474,7 +485,7 @@ if (!customElements.get('quick-order-list')) {
           sections: this.getSectionsToRender().map(
             (section) => section.section,
           ),
-          sections_url: window.location.pathname,
+          sections_url: this.getSectionsUrl(),
         });
 
         this.updateMessage();
@@ -498,6 +509,14 @@ if (!customElements.get('quick-order-list')) {
           });
       }
 
+      getSectionsUrl() {
+        if (window.pageNumber) {
+          return `${window.location.pathname}?page=${window.pageNumber}`;
+        } else {
+          return `${window.location.pathname}`;
+        }
+      }
+
       updateQuantity(id, quantity, name, action) {
         this.toggleLoading(id, true);
         this.cleanErrors();
@@ -509,7 +528,7 @@ if (!customElements.get('quick-order-list')) {
           sections: this.getSectionsToRender().map(
             (section) => section.section,
           ),
-          sections_url: window.location.pathname,
+          sections_url: this.getSectionsUrl(),
         });
         let fetchConfigType;
         if (action === this.actions.add) {
@@ -525,7 +544,7 @@ if (!customElements.get('quick-order-list')) {
             sections: this.getSectionsToRender().map(
               (section) => section.section,
             ),
-            sections_url: window.location.pathname,
+            sections_url: this.getSectionsUrl(),
           });
         }
 
@@ -599,6 +618,9 @@ if (!customElements.get('quick-order-list')) {
           })
           .finally(() => {
             this.toggleLoading(id);
+            if (this.lastKey && this.lastElement === id) {
+              this.querySelector(`#Variant-${id} input`).select();
+            }
           });
       }
 
@@ -724,19 +746,21 @@ if (!customElements.get('quick-order-list')) {
       }
 
       toggleLoading(id, enable) {
-        const quickOrderList = document.getElementById(this.quickOrderListId);
         const quickOrderListItems = this.querySelectorAll(
           `#Variant-${id} .loading__spinner`,
         );
+        const quickOrderListItem = this.querySelector(`#Variant-${id}`);
 
         if (enable) {
-          quickOrderList.classList.add('quick-order-list__container--disabled');
+          quickOrderListItem.classList.add(
+            'quick-order-list__container--disabled',
+          );
           [...quickOrderListItems].forEach((overlay) =>
             overlay.classList.remove('hidden'),
           );
           this.variantItemStatusElement.setAttribute('aria-hidden', false);
         } else {
-          quickOrderList.classList.remove(
+          quickOrderListItem.classList.remove(
             'quick-order-list__container--disabled',
           );
           quickOrderListItems.forEach((overlay) =>

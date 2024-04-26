@@ -4,6 +4,8 @@ if (!customElements.get('quick-add-bulk')) {
     class QuickAddBulk extends HTMLElement {
       constructor() {
         super();
+        this.quantity = this.querySelector('quantity-input');
+
         const debouncedOnChange = debounce((event) => {
           if (parseInt(event.target.dataset.cartQuantity) === 0) {
             this.addToCart(event);
@@ -16,6 +18,8 @@ if (!customElements.get('quick-add-bulk')) {
         this.listenForActiveInput();
         this.listenForKeydown();
         this.lastActiveInputId = null;
+        const pageParams = new URLSearchParams(window.location.search);
+        window.pageNumber = decodeURIComponent(pageParams.get('page') || '');
       }
 
       connectedCallback() {
@@ -85,7 +89,7 @@ if (!customElements.get('quick-add-bulk')) {
       onCartUpdate() {
         return new Promise((resolve, reject) => {
           fetch(
-            `${window.location.pathname}?section_id=${
+            `${this.getSectionsUrl()}?section_id=${
               this.closest('.collection').dataset.id
             }`,
           )
@@ -100,7 +104,9 @@ if (!customElements.get('quick-add-bulk')) {
                   this.closest('.collection').dataset.id
                 }`,
               );
-              this.innerHTML = sourceQty.innerHTML;
+              if (sourceQty) {
+                this.innerHTML = sourceQty.innerHTML;
+              }
               resolve();
             })
             .catch((e) => {
@@ -112,8 +118,7 @@ if (!customElements.get('quick-add-bulk')) {
 
       updateCart(event) {
         this.lastActiveInputId = event.target.getAttribute('data-index');
-        this.quantity = this.querySelector('quantity-input');
-        // this.quantity.classList.add('loading');
+        this.quantity.classList.add('quantity__input-disabled');
         this.selectProgressBar().classList.remove('hidden');
         const body = JSON.stringify({
           quantity: event.target.value,
@@ -121,6 +126,7 @@ if (!customElements.get('quick-add-bulk')) {
           sections: this.getSectionsToRender().map(
             (section) => section.section,
           ),
+          sections_url: this.getSectionsUrl(),
         });
 
         fetch(`${routes.cart_change_url}`, {
@@ -132,7 +138,7 @@ if (!customElements.get('quick-add-bulk')) {
           })
           .then((state) => {
             const parsedState = JSON.parse(state);
-
+            this.quantity.classList.remove('quantity__input-disabled');
             if (parsedState.description || parsedState.errors) {
               event.target.setCustomValidity(parsedState.description);
               event.target.reportValidity();
@@ -156,6 +162,7 @@ if (!customElements.get('quick-add-bulk')) {
       }
 
       addToCart(event) {
+        this.quantity.classList.add('quantity__input-disabled');
         this.selectProgressBar().classList.remove('hidden');
         this.lastActiveInputId = event.target.getAttribute('data-index');
         const body = JSON.stringify({
@@ -179,6 +186,7 @@ if (!customElements.get('quick-add-bulk')) {
           })
           .then((state) => {
             const parsedState = JSON.parse(state);
+            this.quantity.classList.remove('quantity__input-disabled');
             if (parsedState.description || parsedState.errors) {
               event.target.setCustomValidity(parsedState.description);
               event.target.reportValidity();
@@ -206,11 +214,11 @@ if (!customElements.get('quick-add-bulk')) {
         return [
           {
             id: `quick-add-bulk-${this.dataset.id}-${
-              this.closest('.collection').dataset.id
+              this.closest('.collection-quick-add-bulk').dataset.id
             }`,
-            section: this.closest('.collection').dataset.id,
+            section: this.closest('.collection-quick-add-bulk').dataset.id,
             selector: `#quick-add-bulk-${this.dataset.id}-${
-              this.closest('.collection').dataset.id
+              this.closest('.collection-quick-add-bulk').dataset.id
             }`,
           },
           {
@@ -224,6 +232,14 @@ if (!customElements.get('quick-add-bulk')) {
             section: 'cart-drawer',
           },
         ];
+      }
+
+      getSectionsUrl() {
+        if (window.pageNumber) {
+          return `${window.location.pathname}?page=${window.pageNumber}`;
+        } else {
+          return `${window.location.pathname}`;
+        }
       }
 
       getSectionInnerHTML(html, selector) {
