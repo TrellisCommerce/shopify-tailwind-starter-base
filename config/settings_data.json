@@ -150,6 +150,14 @@
     "content_for_index": [
 
     ],
+    "blocks": {
+      "10641372206048101839": {
+        "type": "shopify:\/\/apps\/rebuy-personalization-engine\/blocks\/rebuy-global-embed\/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
