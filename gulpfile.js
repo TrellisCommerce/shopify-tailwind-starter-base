@@ -22,7 +22,6 @@ gulp.task('lockdown', function () {
       'sections/slideshow.liquid',
       'sections/video.liquid',
       'sections/announcement-bar.liquid',
-      'sections/featured-product.liquid',
       'sections/footer.liquid',
       'sections/header.liquid',
     ])
