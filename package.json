@@ -19,6 +19,8 @@
   "homepage": "https://github.com/TrellisCommerce/shopify-dawn-tailwind-starter-base#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.4",
+    "gulp": "^5.0.0",
+    "gulp-replace-task": "^2.0.1",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.3",
     "postcss": "^8.4.12",
