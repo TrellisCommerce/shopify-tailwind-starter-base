@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const replace = require('gulp-replace-task');
 const { series } = require('gulp');
 
-gulp.task('lockdown', function () {
+gulp.task('sections', function () {
   return gulp
     .src([
       'sections/collage.liquid',
@@ -45,4 +45,21 @@ gulp.task('lockdown', function () {
     .pipe(gulp.dest('sections'));
 });
 
-exports.default = series('lockdown');
+gulp.task('config', function () {
+  return gulp
+    .src(['config/settings_schema.json'])
+    .pipe(
+      replace({
+        patterns: [
+          {
+            match: /("type": "text",)\s*("id": "twcss_)/g,
+            replacement: '"type": "checkbox",$2',
+          },
+        ],
+        usePrefix: false,
+      }),
+    )
+    .pipe(gulp.dest('config'));
+});
+
+exports.default = series('sections', 'config');

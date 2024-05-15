@@ -1506,7 +1506,7 @@
     ]
   },
   {
-    "name": "Tailwind CSS",
+    "name": "t:sections.all.tailwind.heading",
     "settings": [
       {
         "type": "text",
