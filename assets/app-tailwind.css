@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  h1 {
-    @apply twcss-text-2xl;
-  }
   p {
     @apply twcss-mb-8;
   }
