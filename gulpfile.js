@@ -32,7 +32,7 @@ gulp.task('sections', function () {
             match:
               /{\s*("type": "header",)\s*("content": "t:sections.all.tailwind.heading")(.*?|\n)[^},]*/,
             replacement:
-              '{"type": "header","content": "t:sections.all.tailwind.heading"},{"type": "paragraph","content": "Tailwind fields are not editable through the admin at this stage. Please contact a Trellis engineer if changes are needed."',
+              '{$1$2},{"type": "paragraph","content": "Tailwind fields are not editable through the admin at this stage. Please contact a Trellis engineer if changes are needed."',
           },
           {
             match: /("type": "text",)\s*("id": "twcss_)/g,
@@ -51,6 +51,12 @@ gulp.task('config', function () {
     .pipe(
       replace({
         patterns: [
+          {
+            match:
+              /("name": "t:sections.all.tailwind.heading",)\s*("settings": \[)/,
+            replacement:
+              '$1$2{"type": "paragraph","content": "Tailwind fields are not editable through the admin at this stage. Please contact a Trellis engineer if changes are needed."},',
+          },
           {
             match: /("type": "text",)\s*("id": "twcss_)/g,
             replacement: '"type": "checkbox",$2',
