@@ -6,4 +6,7 @@
   p {
     @apply twcss-mb-8;
   }
+  ul {
+    @apply twcss-list-disc;
+  }
 }
