@@ -156,6 +156,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "6251270934270006384": {
+        "type": "shopify:\/\/apps\/stape-server-gtm\/blocks\/gtm\/7e13c847-7971-409d-8fe0-29ec14d5f048",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
