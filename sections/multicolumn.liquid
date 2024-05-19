@@ -109,11 +109,11 @@
                     {% endcapture %}
                     {{
                        block.settings.image
-                       | image_url: width: 3200
-                       | image_tag:
-                       widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
-                       sizes: sizes,
-                       class: 'multicolumn-card__image' }}
+                     | image_url: width: 3200
+                     | image_tag:
+                     widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+                     sizes: sizes,
+                     class: 'multicolumn-card__image' }}
                   </div>
                 </div>
               {%- endif -%}
@@ -133,8 +133,8 @@
                     {% else %}
                     href="{{ block.settings.link }}"
                     {% endif %}>
-                    {{- block.settings.link_label | escape -}}
                     <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
+                    {{- block.settings.link_label | escape -}}
                   </a>
                 {%- endif -%}
               </div>

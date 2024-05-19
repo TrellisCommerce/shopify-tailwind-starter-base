@@ -40,6 +40,10 @@
   height: 100%;
 }
 
+.card__inner {
+  background-color: #ffffff;
+}
+
 .card--card,
 .card--standard .card__inner {
   position: relative;

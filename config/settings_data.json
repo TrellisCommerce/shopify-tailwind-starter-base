@@ -8,7 +8,7 @@
     "type_body_font": "catamaran_n4",
     "body_scale": 100,
     "page_width": 1450,
-    "spacing_sections": 60,
+    "spacing_sections": 44,
     "spacing_grid_horizontal": 20,
     "spacing_grid_vertical": 20,
     "animations_reveal_on_scroll": true,
@@ -36,7 +36,7 @@
     "inputs_shadow_blur": 5,
     "card_style": "standard",
     "card_image_padding": 0,
-    "card_text_alignment": "right",
+    "card_text_alignment": "center",
     "card_color_scheme": "scheme-1",
     "card_border_thickness": 0,
     "card_border_opacity": 10,
@@ -117,7 +117,7 @@
     "currency_code_enabled": true,
     "cart_type": "drawer",
     "show_vendor": false,
-    "show_cart_note": false,
+    "show_cart_note": true,
     "cart_drawer_collection": "",
     "sections": {
       "main-password-header": {
@@ -136,6 +136,22 @@
     "content_for_index": [
 
     ],
+    "blocks": {
+      "15683396631634586217": {
+        "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": false,
+        "settings": {
+          "button_color": "#c29e29",
+          "secondary_color": "#FFFFFF",
+          "ternary_color": "#6A6A6A",
+          "button_icon": "chat_bubble",
+          "button_text": "no_text",
+          "button_horizontal_position": "bottom_left",
+          "button_vertical_position": "higher",
+          "greeting_message": ""
+        }
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {

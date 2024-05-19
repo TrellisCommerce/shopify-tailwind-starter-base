@@ -237,11 +237,18 @@
   text-decoration: none;
   font-size: inherit;
   margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .multicolumn-card__info .icon-wrap {
   margin-right: 0.8rem;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  margin-top: 3px;
 }
 
 @media screen and (min-width: 990px) {

@@ -46,10 +46,10 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-3",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 0
+        "padding_bottom": 60
       }
     },
     "multirow_iDt7NV": {
@@ -89,16 +89,6 @@
     "multirow_MXqAmD": {
       "type": "multirow",
       "blocks": {
-        "row_HEdJGq": {
-          "type": "row",
-          "settings": {
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>قم بإقران النص مع الصورة للتركيز على المنتج أو المجموعة أو منشور المدونة الذي اخترته. أضف تفاصيل حول التوفر أو الطراز أو حتى قم بتقديم مراجعة.<\/p>",
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        },
         "row_tiWTit": {
           "type": "row",
           "settings": {
@@ -134,7 +124,6 @@
         }
       },
       "block_order": [
-        "row_HEdJGq",
         "row_tiWTit",
         "row_9dJ37w",
         "row_Wd4axb"

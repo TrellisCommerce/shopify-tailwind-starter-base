@@ -550,7 +550,11 @@ hr {
 .full-unstyled-link {
   text-decoration: none;
   color: currentColor;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 13px;
 }
 
 .placeholder {
@@ -629,12 +633,12 @@ h3 .icon-arrow,
 
 /* arrow animation */
 .animate-arrow .icon-arrow path {
-  transform: translateX(0.25rem);
+  transform: translateX(-0.25rem);
   transition: transform var(--duration-short) ease;
 }
 
 .animate-arrow:hover .icon-arrow path {
-  transform: translateX(0.05rem);
+  transform: translateX(-0.05rem);
 }
 
 /* base-details-summary */
@@ -2084,8 +2088,8 @@ product-info .loading__spinner:not(.hidden) ~ *,
 
 .cart-count-bubble {
   position: absolute;
-  background-color: rgb(var(--color-button));
-  color: rgb(var(--color-button-text));
+  background-color: rgb(255 93 93);
+  color: rgb(255 255 255);
   height: 1.7rem;
   width: 1.7rem;
   border-radius: 100%;
@@ -2768,7 +2772,8 @@ details[open] > .header__submenu {
 
 @media screen and (min-width: 990px) {
   .header__inline-menu {
-    display: block;
+    display: flex;
+    justify-content: center;
   }
 
   .header--top-center .header__inline-menu {
@@ -2878,6 +2883,19 @@ details[open] > .header__menu-item .icon-caret {
   flex-shrink: 0;
   margin-right: 1rem;
   position: static;
+}
+
+@media only screen and (max-width: 749px) {
+  .header {
+    padding: 2px 1rem 2px 1rem !important;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+@media only screen and (max-width: 989px) {
+  .header {
+    border-bottom: 1px solid #ccc;
+  }
 }
 
 header-menu > details,
@@ -3538,4 +3556,8 @@ details-disclosure > details {
     .button:not([disabled]).button--secondary:hover:after {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
+}
+
+section.shopify-pc__banner__dialog {
+  text-align: right;
 }

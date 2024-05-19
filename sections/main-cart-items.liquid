@@ -29,7 +29,7 @@
 
 <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
 
-<cart-items class="gradient color-{{ section.settings.color_scheme }} isolate{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
+<cart-items class="cart-page gradient color-{{ section.settings.color_scheme }} isolate{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
   <div class="page-width">
     <div class="title-wrapper-with-link">
       <h1 class="title twcss-text-center title--primary">{{ 'sections.cart.title' | t }}</h1>
@@ -342,21 +342,21 @@
                               {%- if item.variant.quantity_rule.increment > 1 -%}
                                 <span class="divider">
                                   {{-
-                                    'products.product.quantity.multiples_of'
+                                      'products.product.quantity.multiples_of'
                                     | t: quantity: item.variant.quantity_rule.increment -}}
                                 </span>
                               {%- endif -%}
                               {%- if item.variant.quantity_rule.min > 1 -%}
                                 <span class="divider">
                                   {{-
-                                    'products.product.quantity.min_of'
+                                      'products.product.quantity.min_of'
                                     | t: quantity: item.variant.quantity_rule.min -}}
                                 </span>
                               {%- endif -%}
                               {%- if item.variant.quantity_rule.max != null -%}
                                 <span class="divider">
                                   {{-
-                                    'products.product.quantity.max_of'
+                                      'products.product.quantity.max_of'
                                     | t: quantity: item.variant.quantity_rule.max -}}
                                 </span>
                               {%- endif -%}

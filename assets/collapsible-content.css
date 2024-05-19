@@ -95,10 +95,7 @@
 .collapsible-row-layout .accordion summary,
 .collapsible-row-layout .accordion .accordion__content {
   padding: 1.5rem;
-}
-
-.collapsible-row-layout .accordion .accordion__content {
-  padding-top: 0;
+  padding-bottom: 2rem;
 }
 
 .collapsible-content summary:hover {
