@@ -17,7 +17,7 @@
   z-index: -1;
   margin: 0 auto;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   background: rgba(var(--color-foreground), 0.2);
   height: 100%;
@@ -42,8 +42,8 @@
   --modal-height-offset: 3.2rem;
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   margin: var(--modal-height-offset) auto 0;
   width: 100%;
   background-color: rgb(var(--color-background));
@@ -63,7 +63,7 @@
 
   quick-add-modal .quick-add-modal__toggle {
     top: 2rem;
-    right: 2rem;
+    left: 2rem;
   }
 }
 
@@ -89,7 +89,7 @@
 
 @media screen and (min-width: 750px) {
   .quick-add-modal__content-info--bulk .card__information-volume-pricing-note {
-    padding-left: 1.6rem;
+    padding-right: 1.6rem;
   }
 }
 
@@ -118,7 +118,7 @@
 }
 
 .quick-add-modal__content-info--bulk-details {
-  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 @media screen and (min-width: 990px) {
@@ -160,8 +160,8 @@
   }
 
   .quick-add-modal__content-info--bulk quick-order-list {
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
   }
 
   .quick-add-modal__content-info.quick-add-modal__content-info--bulk {
@@ -187,7 +187,7 @@
 
 .quick-add-modal__content-info {
   --modal-padding: 2.5rem;
-  padding-right: 4.4rem;
+  padding-left: 4.4rem;
   display: flex;
   overflow-y: auto;
   padding: var(--modal-padding);
@@ -203,8 +203,8 @@
 
 @media screen and (max-width: 749px) {
   quick-add-modal .slider .product__media-item.grid__item {
-    margin-left: 1.5rem;
     margin-right: 1.5rem;
+    margin-left: 1.5rem;
   }
 
   .quick-add-modal__content {
@@ -234,7 +234,7 @@
   width: 4rem;
   position: fixed;
   top: 1.5rem;
-  right: 1.5rem;
+  left: 1.5rem;
 }
 
 .quick-add-modal__toggle:hover {
@@ -282,7 +282,7 @@ quick-add-modal .product__column-sticky {
   }
 
   quick-add-modal .product:not(.product--no-media) .product__info-wrapper {
-    padding-left: 4rem;
+    padding-right: 4rem;
     max-width: 54%;
     width: calc(54% - var(--grid-desktop-horizontal-spacing) / 2);
   }

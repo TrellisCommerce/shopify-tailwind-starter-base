@@ -1,0 +1,181 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_WAWfqA": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_gWmNhq": {
+          "type": "heading",
+          "settings": {
+            "heading": "قصة دخون",
+            "heading_size": "h1"
+          }
+        },
+        "text_GzAbQQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>شركة دخون، التابعة لمجموعة الراجحي في المملكة العربية السعودية، تعد من أبرز الشركات المتخصصة في إنتاج العطور العربية العريقة. تأسست الشركة بهدف إحياء تراث العطور الشرقية التقليدية التي تشتهر بها المنطقة، حيث تعتمد في تصنيع منتجاتها على أفضل وأجود أنواع المكونات الطبيعية. تتخصص دخون في إنتاج دهن العود والعنبر والبخور، إضافة إلى العطور الفواحة التي تعكس الأصالة والفخامة.<\/p>"
+          }
+        },
+        "text_bWX6Jz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>تولي شركة دخون اهتمامًا بالغًا لجودة منتجاتها وطرق تصنيعها، إذ تعتمد على خبراء مختصين في مجال العطور لضمان تقديم أفضل ما يمكن لعملائها. يتم اختيار المواد الخام بعناية فائقة، لضمان الحصول على دهن العود والعنبر من مصادرها الأصلية وبأعلى درجات النقاء والجودة. بالإضافة إلى ذلك، تستخدم الشركة تقنيات تقطير حديثة للحفاظ على خصائص العطور التقليدية وتقديمها بشكل يليق بعملائها الفاخرين.<\/p>"
+          }
+        },
+        "text_wV9ewj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>تسعى شركة دخون دائمًا للتميز والابتكار في تقديم منتجاتها، حيث تجمع بين التراث العريق والحداثة في تصميم عبوات العطور وأشكالها. كما تهتم الشركة بالتفاعل مع عملائها وفهم احتياجاتهم ورغباتهم، مما يعزز من ثقة العملاء ويزيد من انتشار العلامة التجارية. بفضل هذه الجهود، أصبحت دخون من الأسماء اللامعة في عالم العطور العربية، ووجهة مفضلة لعشاق العطور الشرقية في المملكة وخارجها.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gWmNhq",
+        "text_GzAbQQ",
+        "text_bWX6Jz",
+        "text_wV9ewj"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "multirow_iDt7NV": {
+      "type": "multirow",
+      "blocks": {
+        "row_VFmNgE": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/434029701_435120945794290_7221430507021106811_n.jpg",
+            "caption": "",
+            "heading": "دخون العلامة التجارية",
+            "text": "<p>العلامة التجارية \"دخون\" تتميز بإنتاج العطور العربية التقليدية الفاخرة، باستخدام دهن العود والعنبر والبخور، وتعكس الأصالة والفخامة بتقديم منتجات عالية الجودة من مجموعة الراجحي في السعودية.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_VFmNgE"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h2",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "scheme-1",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "center",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "multirow_MXqAmD": {
+      "type": "multirow",
+      "blocks": {
+        "row_HEdJGq": {
+          "type": "row",
+          "settings": {
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>قم بإقران النص مع الصورة للتركيز على المنتج أو المجموعة أو منشور المدونة الذي اخترته. أضف تفاصيل حول التوفر أو الطراز أو حتى قم بتقديم مراجعة.<\/p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_tiWTit": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_86e34544-6e8c-464b-bd28-fb02c822a18f.webp",
+            "caption": "",
+            "heading": "العود و <strong>البخور<\/strong>",
+            "text": "<p>قم بإقران النص مع الصورة للتركيز على المنتج أو المجموعة أو منشور المدونة الذي اخترته. أضف تفاصيل حول التوفر أو الطراز أو حتى قم بتقديم مراجعة..<\/p>",
+            "button_label": "استكشف المزيد",
+            "button_link": "shopify:\/\/collections\/العود-والبخور"
+          }
+        },
+        "row_9dJ37w": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_5272679e-cfe3-44ed-90a6-ee0fd9715048.webp",
+            "caption": "",
+            "heading": "دهن العود",
+            "text": "<p>قم بإقران النص مع الصورة للتركيز على المنتج أو المجموعة أو منشور المدونة الذي اخترته. أضف تفاصيل حول التوفر أو الطراز أو حتى قم بتقديم مراجعة.<\/p>",
+            "button_label": "استكشف المزيد",
+            "button_link": "shopify:\/\/collections\/دهن-العود-والخمريات"
+          }
+        },
+        "row_Wd4axb": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dokonbox-12_a855dca6-db86-44cb-87cc-5298c9b73a8b.jpg",
+            "caption": "",
+            "heading": "باقات عطرية",
+            "text": "<p>قم بإقران النص مع الصورة للتركيز على المنتج أو المجموعة أو منشور المدونة الذي اخترته. أضف تفاصيل حول التوفر أو الطراز أو حتى قم بتقديم مراجعة.<\/p>",
+            "button_label": "استكشف المزيد",
+            "button_link": "shopify:\/\/collections\/باقات-دخون"
+          }
+        }
+      },
+      "block_order": [
+        "row_HEdJGq",
+        "row_tiWTit",
+        "row_9dJ37w",
+        "row_Wd4axb"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "scheme-2",
+        "row_color_scheme": "scheme-1",
+        "mobile_content_alignment": "center",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "video_6YM4QM": {
+      "type": "video",
+      "settings": {
+        "heading": "<strong>إلا دخون مالك غنى عنه<\/strong>",
+        "heading_size": "h2",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=m673jerPWyA",
+        "cover_image": "shopify:\/\/shop_images\/Screenshot_2024-05-19_at_7.09.18_AM_2.png",
+        "description": "دخون يكملك",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_WAWfqA",
+    "multirow_iDt7NV",
+    "multirow_MXqAmD",
+    "video_6YM4QM"
+  ]
+}

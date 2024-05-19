@@ -1,10 +1,63 @@
 {
   "sections": {
     "main": {
-      "type": "main-404"
+      "type": "main-404",
+      "custom_css": [
+        ".template-404 p {font-size: 9rem; font-weight: bold; margin-bottom: -3rem; color: #a18546;}"
+      ],
+      "settings": {
+      }
+    },
+    "collection_list_9jDzKa": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_fhH6ex": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_hEXkYq": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "العطور"
+          }
+        },
+        "featured_collection_DwNhzP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "العود-والبخور"
+          }
+        },
+        "featured_collection_rayEXb": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "دهن-العود-والخمريات"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_fhH6ex",
+        "featured_collection_hEXkYq",
+        "featured_collection_DwNhzP",
+        "featured_collection_rayEXb"
+      ],
+      "settings": {
+        "title": "المجموعات",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "collection_list_9jDzKa"
   ]
 }

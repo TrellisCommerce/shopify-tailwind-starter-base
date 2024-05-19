@@ -57,7 +57,7 @@
   width: calc(var(--border-width) * 2 + 100%);
   height: calc(var(--border-width) * 2 + 100%);
   top: calc(var(--border-width) * -1);
-  left: calc(var(--border-width) * -1);
+  right: calc(var(--border-width) * -1);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset)
     var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
@@ -84,8 +84,8 @@
 }
 
 .card--card .card__inner .card__media {
-  border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .card--standard.card--text {
@@ -179,25 +179,25 @@
 .card__information-volume-pricing-note--button
   + .global-settings-popup.quantity-popover__info
   span:first-of-type {
-  padding-right: 0.3rem;
+  padding-left: 0.3rem;
 }
 
 .card__information-volume-pricing-note--button-right
   + .global-settings-popup.quantity-popover__info {
-  right: 0;
-  left: auto;
+  left: 0;
+  right: auto;
 }
 
 .card__information-volume-pricing-note--button-center
   + .global-settings-popup.quantity-popover__info {
-  left: 50%;
-  transform: translate(-50%);
+  right: 50%;
+  transform: translate(50%);
 }
 
 .card__information-volume-pricing-note--button
   + .global-settings-popup.quantity-popover__info
   .quantity__rules {
-  text-align: left;
+  text-align: right;
 }
 
 @media screen and (min-width: 990px) {
@@ -212,8 +212,8 @@
   .grid--6-col-desktop
     .card__information-volume-pricing-note--button
     + .global-settings-popup.quantity-popover__info {
-    left: 50%;
-    transform: translate(-50%);
+    right: 50%;
+    transform: translate(50%);
     width: calc(100% + var(--border-width) + 3.5rem);
   }
 
@@ -238,8 +238,8 @@
     .card--standard
     .card__information-volume-pricing-note--button
     + .global-settings-popup.quantity-popover__info {
-    left: 50%;
-    transform: translate(-50%);
+    right: 50%;
+    transform: translate(50%);
   }
 
   .grid--2-col-tablet-down
@@ -353,17 +353,17 @@
 .card--standard.card--text a::after,
 .card--card .card__heading a::after {
   bottom: calc(var(--border-width) * -1);
-  left: calc(var(--border-width) * -1);
   right: calc(var(--border-width) * -1);
+  left: calc(var(--border-width) * -1);
   top: calc(var(--border-width) * -1);
 }
 
 .card__heading a::after {
   bottom: 0;
   content: '';
-  left: 0;
-  position: absolute;
   right: 0;
+  position: absolute;
+  left: 0;
   top: 0;
   z-index: 1;
 }
@@ -442,8 +442,8 @@
 }
 
 .card--standard > .card__content .card__information {
-  padding-left: 0;
   padding-right: 0;
+  padding-left: 0;
 }
 
 .card--card.card--media .card__inner .card__information,
@@ -473,7 +473,7 @@
 }
 
 .card .icon-wrap {
-  margin-left: 0.8rem;
+  margin-right: 0.8rem;
   white-space: nowrap;
   transition: transform var(--duration-short) ease;
   overflow: hidden;

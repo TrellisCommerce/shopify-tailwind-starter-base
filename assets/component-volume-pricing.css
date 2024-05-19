@@ -59,7 +59,7 @@ volume-pricing show-more-button {
 }
 
 .price-per-item dd {
-  margin-left: 0;
+  margin-right: 0;
 }
 
 .price-per-item__container .variant-item__old-price,

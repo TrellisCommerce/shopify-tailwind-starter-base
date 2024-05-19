@@ -15,16 +15,16 @@
 }
 
 .price--end {
-  text-align: right;
+  text-align: left;
 }
 
 .price .price-item {
   display: inline-block;
-  margin: 0 1rem 0 0;
+  margin: 0 0 0 1rem;
 }
 
 .price__regular .price-item--regular {
-  margin-right: 0;
+  margin-left: 0;
 }
 
 .price:not(.price--show-badge) .price-item--last:last-of-type {
@@ -70,7 +70,7 @@
 }
 
 .volume-pricing--sale-badge .price__badge-sale {
-  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .price--on-sale .price__sale {

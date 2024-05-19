@@ -30,9 +30,9 @@
   bottom: 0;
   content: '';
   height: 100%;
-  left: 0;
-  position: absolute;
   right: 0;
+  position: absolute;
+  left: 0;
   top: 0;
   width: 100%;
   z-index: 1;
@@ -52,8 +52,8 @@
 
 .blog-articles .article-card .card__information,
 .blog__posts .article-card .card__information {
-  padding-left: 2rem;
   padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .article-card__info {
@@ -79,12 +79,12 @@
 }
 
 .article-card__link:not(:only-child) {
-  margin-right: 3rem;
+  margin-left: 3rem;
 }
 
 @media screen and (min-width: 990px) {
   .article-card__link:not(:only-child) {
-    margin-right: 4rem;
+    margin-left: 4rem;
   }
 }
 

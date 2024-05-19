@@ -83,8 +83,8 @@
 
 .article-template__link .icon-wrap {
   display: flex;
-  margin-right: 1rem;
-  transform: rotate(180deg);
+  margin-left: 1rem;
+  transform: rotate(-180deg);
 }
 
 .article-template__content {

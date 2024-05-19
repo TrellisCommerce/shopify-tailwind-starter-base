@@ -47,12 +47,12 @@ variant-selects {
 }
 
 .product-form__input--dropdown .dropdown-swatch + select {
-  padding-left: calc(2.4rem + var(--swatch-input--size));
+  padding-right: calc(2.4rem + var(--swatch-input--size));
 }
 
 .product-form__input--dropdown .dropdown-swatch {
   position: absolute;
-  left: 1.6rem;
+  right: 1.6rem;
   top: calc(50% - var(--swatch-input--size) / 2);
   width: var(--swatch-input--size);
   height: var(--swatch-input--size);
@@ -68,7 +68,7 @@ variant-selects {
   border-radius: var(--variant-pills-radius);
   color: rgb(var(--color-foreground));
   display: inline-block;
-  margin: 0.7rem 0.5rem 0.2rem 0;
+  margin: 0.7rem 0 0.2rem 0.5rem;
   padding: 1rem 2rem;
   font-size: 1.4rem;
   letter-spacing: 0.1rem;
@@ -83,9 +83,9 @@ variant-selects {
   content: '';
   position: absolute;
   top: calc(var(--variant-pills-border-width) * -1);
-  right: calc(var(--variant-pills-border-width) * -1);
-  bottom: calc(var(--variant-pills-border-width) * -1);
   left: calc(var(--variant-pills-border-width) * -1);
+  bottom: calc(var(--variant-pills-border-width) * -1);
+  right: calc(var(--variant-pills-border-width) * -1);
   z-index: -1;
   border-radius: var(--variant-pills-radius);
   box-shadow: var(--variant-pills-shadow-horizontal-offset)
@@ -149,7 +149,7 @@ variant-selects {
 .product-form__input--swatch .swatch-input__input + .swatch-input__label {
   --swatch-input--size: 3.6rem;
 
-  margin: 0.7rem 1.2rem 0.2rem 0;
+  margin: 0.7rem 0 0.2rem 1.2rem;
 }
 
 @media screen and (min-width: 750px) {

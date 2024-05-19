@@ -1,8 +1,8 @@
 {% comment %}
-  Renders cart drawer
+Renders cart drawer
 
-  Usage:
-  {% render 'cart-drawer' %}
+Usage:
+{% render 'cart-drawer' %}
 {% endcomment %}
 
 {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
@@ -25,8 +25,7 @@
       role="dialog"
       aria-modal="true"
       aria-label="{{ 'sections.cart.title' | t }}"
-      tabindex="-1"
-    >
+      tabindex="-1">
       {%- if cart == empty -%}
         <div class="drawer__inner-empty">
           <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
@@ -36,8 +35,7 @@
                 class="drawer__close"
                 type="button"
                 onclick="this.closest('cart-drawer').close()"
-                aria-label="{{ 'accessibility.close' | t }}"
-              >
+                aria-label="{{ 'accessibility.close' | t }}">
                 {% render 'icon-close' %}
               </button>
               <a href="{{ routes.all_products_collection_url }}" class="button">
@@ -65,22 +63,19 @@
           class="drawer__close"
           type="button"
           onclick="this.closest('cart-drawer').close()"
-          aria-label="{{ 'accessibility.close' | t }}"
-        >
+          aria-label="{{ 'accessibility.close' | t }}">
           {% render 'icon-close' %}
         </button>
       </div>
       <cart-drawer-items
         {% if cart == empty %}
-          class=" is-empty"
-        {% endif %}
-      >
+        class=" is-empty"
+        {% endif %}>
         <form
           action="{{ routes.cart_url }}"
           id="CartDrawer-Form"
           class="cart__contents cart-drawer__form"
-          method="post"
-        >
+          method="post">
           <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
             {%- if cart != empty -%}
               <div class="drawer__cart-items-wrapper">
@@ -94,16 +89,14 @@
                         id="CartDrawer-ColumnProduct"
                         class="caption-with-letter-spacing"
                         scope="col"
-                        role="columnheader"
-                      >
+                        role="columnheader">
                         {{ 'sections.cart.headings.product' | t }}
                       </th>
                       <th
                         id="CartDrawer-ColumnTotal"
                         class="right caption-with-letter-spacing"
                         scope="col"
-                        role="columnheader"
-                      >
+                        role="columnheader">
                         {{ 'sections.cart.headings.total' | t }}
                       </th>
                       <th id="CartDrawer-ColumnQuantity" role="columnheader">
@@ -114,23 +107,35 @@
 
                   <tbody role="rowgroup">
                     {%- for item in cart.items -%}
-                      <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row">
-                        <td class="cart-item__media" role="cell" headers="CartDrawer-ColumnProductImage">
+                      <tr
+                        id="CartDrawer-Item-{{ item.index | plus: 1 }}"
+                        class="cart-item"
+                        role="row">
+                        <td
+                          class="cart-item__media"
+                          role="cell"
+                          headers="CartDrawer-ColumnProductImage">
                           {% if item.image %}
                             {% comment %} Leave empty space due to a:empty CSS display: none rule {% endcomment %}
-                            <a href="{{ item.url }}" class="cart-item__link" tabindex="-1" aria-hidden="true"> </a>
+                            <a
+                              href="{{ item.url }}"
+                              class="cart-item__link"
+                              tabindex="-1"
+                              aria-hidden="true"></a>
                             <img
                               class="cart-item__image"
                               src="{{ item.image | image_url: width: 300 }}"
                               alt="{{ item.image.alt | escape }}"
                               loading="lazy"
                               width="150"
-                              height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}"
-                            >
+                              height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}">
                           {% endif %}
                         </td>
 
-                        <td class="cart-item__details" role="cell" headers="CartDrawer-ColumnProduct">
+                        <td
+                          class="cart-item__details"
+                          role="cell"
+                          headers="CartDrawer-ColumnProduct">
                           {%- if settings.show_vendor -%}
                             <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
                           {%- endif -%}
@@ -161,9 +166,9 @@
                           {%- endif -%}
 
                           {%- if item.product.has_only_default_variant == false
-                            or item.properties.size != 0
-                            or item.selling_plan_allocation != null
-                          -%}
+ or item.properties.size != 0
+ or item.selling_plan_allocation != null
+ -%}
                             <dl>
                               {%- if item.product.has_only_default_variant == false -%}
                                 {%- for option in item.options_with_values -%}
@@ -171,7 +176,8 @@
                                     <dt>{{ option.name }}:</dt>
                                     <dd>
                                       {{ option.value -}}
-                                      {%- unless forloop.last %}, {% endunless %}
+                                      {%- unless forloop.last %},
+                                      {% endunless %}
                                     </dd>
                                   </div>
                                 {%- endfor -%}
@@ -188,8 +194,7 @@
                                           href="{{ property.last }}"
                                           class="link"
                                           target="_blank"
-                                          aria-describedby="a11y-new-window-message"
-                                        >
+                                          aria-describedby="a11y-new-window-message">
                                           {{ property.last | split: '/' | last }}
                                         </a>
                                       {%- else -%}
@@ -207,8 +212,7 @@
                           <ul
                             class="discounts list-unstyled"
                             role="list"
-                            aria-label="{{ 'customer.order.discount' | t }}"
-                          >
+                            aria-label="{{ 'customer.order.discount' | t }}">
                             {%- for discount in item.line_level_discount_allocations -%}
                               <li class="discounts__discount">
                                 {%- render 'icon-discount' -%}
@@ -218,7 +222,10 @@
                           </ul>
                         </td>
 
-                        <td class="cart-item__totals right" role="cell" headers="CartDrawer-ColumnTotal">
+                        <td
+                          class="cart-item__totals right"
+                          role="cell"
+                          headers="CartDrawer-ColumnTotal">
                           {%- render 'loading-spinner' -%}
                           <div class="cart-item__price-wrapper">
                             {%- if item.original_line_price != item.final_line_price -%}
@@ -247,9 +254,7 @@
                                 <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
                                 {{ item.unit_price | money }}
                                 <span aria-hidden="true">/</span>
-                                <span class="visually-hidden"
-                                  >&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span
-                                >
+                                <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
                                 {%- if item.unit_price_measurement.reference_value != 1 -%}
                                   {{- item.unit_price_measurement.reference_value -}}
                                 {%- endif -%}
@@ -272,19 +277,20 @@
                         <td
                           class="cart-item__quantity {% if has_qty_rules or has_vol_pricing %} cart-item__quantity--info{% endif %}"
                           role="cell"
-                          headers="CartDrawer-ColumnQuantity"
-                        >
+                          headers="CartDrawer-ColumnQuantity">
                           <quantity-popover>
                             <div class="cart-item__quantity-wrapper quantity-popover-wrapper">
                               <div class="quantity-popover-container{% if has_qty_rules or has_vol_pricing %} quantity-popover-container--hover{% endif %}">
                                 <quantity-input class="quantity cart-quantity">
-                                  <button class="quantity__button" name="minus" type="button">
+                                  <button
+                                    class="quantity__button"
+                                    name="minus"
+                                    type="button">
                                     <span class="visually-hidden">
                                       {{-
-                                        'products.product.quantity.decrease'
+                                          'products.product.quantity.decrease'
                                         | t: product: item.product.title
-                                        | escape
-                                      -}}
+                                        | escape -}}
                                     </span>
                                     {% render 'icon-minus' %}
                                   </button>
@@ -299,36 +305,33 @@
                                     min="0"
                                     data-min="{{ item.variant.quantity_rule.min }}"
                                     {% if item.variant.quantity_rule.max != null %}
-                                      max="{{ item.variant.quantity_rule.max }}"
+                                    max="{{ item.variant.quantity_rule.max }}"
                                     {% endif %}
                                     step="{{ item.variant.quantity_rule.increment }}"
                                     {% # theme-check-enable %}
                                     aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
                                     id="Drawer-quantity-{{ item.index | plus: 1 }}"
-                                    data-index="{{ item.index | plus: 1 }}"
-                                  >
-                                  <button class="quantity__button" name="plus" type="button">
+                                    data-index="{{ item.index | plus: 1 }}">
+                                  <button
+                                    class="quantity__button"
+                                    name="plus"
+                                    type="button">
                                     <span class="visually-hidden">
                                       {{-
-                                        'products.product.quantity.increase'
+                                          'products.product.quantity.increase'
                                         | t: product: item.product.title
-                                        | escape
-                                      -}}
+                                        | escape -}}
                                     </span>
                                     {% render 'icon-plus' %}
                                   </button>
                                 </quantity-input>
                               </div>
-                              <cart-remove-button
-                                id="CartDrawer-Remove-{{ item.index | plus: 1 }}"
-                                data-index="{{ item.index | plus: 1 }}"
-                              >
+                              <cart-remove-button id="CartDrawer-Remove-{{ item.index | plus: 1 }}" data-index="{{ item.index | plus: 1 }}">
                                 <button
                                   type="button"
                                   class="button button--tertiary cart-remove-button"
                                   aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
-                                  data-variant-id="{{ item.variant.id }}"
-                                >
+                                  data-variant-id="{{ item.variant.id }}">
                                   {% render 'icon-remove' %}
                                 </button>
                               </cart-remove-button>
@@ -337,8 +340,7 @@
                               <button
                                 type="button"
                                 class="quantity-popover__info-button quantity-popover__info-button--icon-with-label button button--tertiary"
-                                aria-expanded="false"
-                              >
+                                aria-expanded="false">
                                 {% render 'icon-info' %}
                                 <span>
                                   {%- if has_vol_pricing -%}
@@ -353,8 +355,7 @@
                               <div
                                 class="cart-items__info global-settings-popup quantity-popover__info"
                                 tabindex="-1"
-                                hidden
-                              >
+                                hidden>
                                 {%- if has_qty_rules == false -%}
                                   <span class="volume-pricing-label caption">
                                     {{- 'products.product.volume_pricing.title' | t -}}
@@ -364,33 +365,29 @@
                                   {%- if item.variant.quantity_rule.increment > 1 -%}
                                     <span class="divider">
                                       {{-
-                                        'products.product.quantity.multiples_of'
-                                        | t: quantity: item.variant.quantity_rule.increment
-                                      -}}
+                                          'products.product.quantity.multiples_of'
+                                        | t: quantity: item.variant.quantity_rule.increment -}}
                                     </span>
                                   {%- endif -%}
                                   {%- if item.variant.quantity_rule.min > 1 -%}
                                     <span class="divider">
                                       {{-
-                                        'products.product.quantity.min_of'
-                                        | t: quantity: item.variant.quantity_rule.min
-                                      -}}
+                                          'products.product.quantity.min_of'
+                                        | t: quantity: item.variant.quantity_rule.min -}}
                                     </span>
                                   {%- endif -%}
                                   {%- if item.variant.quantity_rule.max != null -%}
                                     <span class="divider">
                                       {{-
-                                        'products.product.quantity.max_of'
-                                        | t: quantity: item.variant.quantity_rule.max
-                                      -}}
+                                          'products.product.quantity.max_of'
+                                        | t: quantity: item.variant.quantity_rule.max -}}
                                     </span>
                                   {%- endif -%}
                                 </div>
                                 <button
                                   class="button-close button button--tertiary"
                                   type="button"
-                                  aria-label="{{ 'accessibility.close' | t }}"
-                                >
+                                  aria-label="{{ 'accessibility.close' | t }}">
                                   {%- render 'icon-close' -%}
                                 </button>
                                 {%- if item.variant.quantity_price_breaks.size > 0 -%}
@@ -404,8 +401,8 @@
                                         <li>
                                           <span>
                                             {{- price_break.minimum_quantity -}}
-                                            <span aria-hidden="true">+</span></span
-                                          >
+                                            <span aria-hidden="true">+</span>
+                                          </span>
                                           <span>{{ price_break.price | money_with_currency }}/ea</span>
                                         </li>
                                       {%- endfor -%}
@@ -417,19 +414,32 @@
                             <div
                               id="CartDrawer-LineItemError-{{ item.index | plus: 1 }}"
                               class="cart-item__error"
-                              role="alert"
-                            >
+                              role="alert">
                               <small class="cart-item__error-text"></small>
                               <svg
                                 aria-hidden="true"
                                 focusable="false"
                                 class="icon icon-error"
-                                viewBox="0 0 13 13"
-                              >
-                                <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
-                                <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
-                                <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
-                                <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                                viewBox="0 0 13 13">
+                                <circle
+                                  cx="6.5"
+                                  cy="6.50049"
+                                  r="5.5"
+                                  stroke="white"
+                                  stroke-width="2" />
+                                <circle
+                                  cx="6.5"
+                                  cy="6.5"
+                                  r="5.5"
+                                  fill="#EB001B"
+                                  stroke="#EB001B"
+                                  stroke-width="0.7" />
+                                <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white" />
+                                <path
+                                  d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z"
+                                  fill="white"
+                                  stroke="#EB001B"
+                                  stroke-width="0.7">
                               </svg>
                             </div>
                           </quantity-popover>
@@ -440,8 +450,15 @@
                 </table>
               </div>
             {%- endif -%}
-            <p id="CartDrawer-LiveRegionText" class="visually-hidden" role="status"></p>
-            <p id="CartDrawer-LineItemStatus" class="visually-hidden" aria-hidden="true" role="status">
+            <p
+              id="CartDrawer-LiveRegionText"
+              class="visually-hidden"
+              role="status"></p>
+            <p
+              id="CartDrawer-LineItemStatus"
+              class="visually-hidden"
+              aria-hidden="true"
+              role="status">
               {{ 'accessibility.loading' | t }}
             </p>
           </div>
@@ -463,8 +480,7 @@
                 id="CartDrawer-Note"
                 class="text-area text-area--resize-vertical field__input"
                 name="note"
-                placeholder="{{ 'sections.cart.note' | t }}"
-              >{{ cart.note }}</textarea>
+                placeholder="{{ 'sections.cart.note' | t }}">{{ cart.note }}</textarea>
             </cart-note>
           </details>
         {%- endif -%}
@@ -475,7 +491,10 @@
         <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
           <div>
             {%- if cart.cart_level_discount_applications.size > 0 -%}
-              <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+              <ul
+                class="discounts list-unstyled"
+                role="list"
+                aria-label="{{ 'customer.order.discount' | t }}">
                 {%- for discount in cart.cart_level_discount_applications -%}
                   <li class="discounts__discount discounts__discount--end">
                     {%- render 'icon-discount' -%}
@@ -515,9 +534,8 @@
             name="checkout"
             form="CartDrawer-Form"
             {% if cart == empty %}
-              disabled
-            {% endif %}
-          >
+            disabled
+            {% endif %}>
             {{ 'sections.cart.checkout' | t }}
           </button>
         </div>

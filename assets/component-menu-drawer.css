@@ -13,7 +13,7 @@
     var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%))
   );
   top: 100%;
-  left: 0;
+  right: 0;
   background: rgba(var(--color-foreground), 0.5);
   opacity: 0;
   visibility: hidden;
@@ -30,10 +30,10 @@ menu-drawer > details[open] > summary::before {
 
 .menu-drawer {
   position: absolute;
-  transform: translateX(-100%);
+  transform: translateX(100%);
   visibility: hidden;
   z-index: 3;
-  left: 0;
+  right: 0;
   top: 100%;
   width: 100%;
   padding: 0;
@@ -72,7 +72,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 @media screen and (min-width: 750px) {
   .menu-drawer {
     width: 40rem;
-    border-width: 0 var(--drawer-border-width) 0 0;
+    border-width: 0 0 0 var(--drawer-border-width);
     border-style: solid;
     border-color: rgba(var(--color-foreground), var(--drawer-border-opacity));
   }
@@ -112,7 +112,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer summary.menu-drawer__menu-item {
-  padding-right: 5.2rem;
+  padding-left: 5.2rem;
 }
 
 .menu-drawer__menu-item--active,
@@ -134,7 +134,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__menu-item > .icon-arrow {
   position: absolute;
-  right: 3rem;
+  left: 3rem;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -144,10 +144,10 @@ details[open].menu-opening > .menu-drawer__submenu {
   top: 0;
   width: 100%;
   bottom: 0;
-  left: 0;
+  right: 0;
   background-color: rgb(var(--color-background));
   z-index: 1;
-  transform: translateX(100%);
+  transform: translateX(-100%);
   visibility: hidden;
 }
 
@@ -157,7 +157,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__close-button {
   margin-top: 1.5rem;
-  padding: 1.2rem 2.6rem 1.2rem 3rem;
+  padding: 1.2rem 3rem 1.2rem 2.6rem;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -166,12 +166,12 @@ details[open].menu-opening > .menu-drawer__submenu {
   background-color: transparent;
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
-  text-align: left;
+  text-align: right;
 }
 
 .menu-drawer__close-button .icon-arrow {
-  transform: rotate(180deg);
-  margin-right: 1rem;
+  transform: rotate(-180deg);
+  margin-left: 1rem;
 }
 
 .menu-drawer__utility-links {
@@ -216,13 +216,13 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__account .icon-account {
   height: 2rem;
   width: 2rem;
-  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .menu-drawer__account shop-user-avatar {
   --shop-avatar-size: 2.4rem;
-  margin-right: 0.55rem;
-  margin-left: -0.45rem;
+  margin-left: 0.55rem;
+  margin-right: -0.45rem;
 }
 
 .menu-drawer__account:hover .icon-account {
@@ -231,7 +231,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer .list-social {
   justify-content: flex-start;
-  margin-left: -1.25rem;
+  margin-right: -1.25rem;
 }
 
 .menu-drawer .list-social:empty {

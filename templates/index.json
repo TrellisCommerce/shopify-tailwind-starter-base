@@ -67,7 +67,7 @@
         "layout": "full_bleed",
         "slide_height": "adapt_image",
         "slider_visual": "dots",
-        "auto_rotate": false,
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "image_behavior": "none",
         "show_text_below": false,
@@ -117,7 +117,7 @@
         "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -162,7 +162,7 @@
         "button_RAqxbV"
       ],
       "custom_css": [
-        "p {text-align: right;}"
+
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/dokonbox-12_d213cdcc-e291-4a1b-b0f2-8a5553dfb1c6.jpg",
@@ -171,9 +171,9 @@
         "layout": "image_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
-        "content_layout": "overlap",
+        "content_layout": "no-overlap",
         "section_color_scheme": "scheme-1",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "image_behavior": "zoom-in",
         "mobile_content_alignment": "center",
         "padding_top": 0,
@@ -194,8 +194,8 @@
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
-        "enable_desktop_slider": true,
-        "color_scheme": "scheme-2",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -205,7 +205,7 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 60
       }
     },
     "image_banner_tFNcCV": {
@@ -213,12 +213,12 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/1.webp",
         "image_2": "shopify:\/\/shop_images\/3.webp",
-        "image_overlay_opacity": 20,
+        "image_overlay_opacity": 0,
         "image_height": "small",
         "desktop_content_position": "middle-center",
-        "show_text_box": true,
+        "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
@@ -228,17 +228,10 @@
     "featured_product_q9B6hM": {
       "type": "featured-product",
       "blocks": {
-        "text_r4wrgX": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title_3L6dEQ": {
           "type": "title",
           "settings": {
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "price_YjEGLy": {
@@ -262,12 +255,11 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "show_gift_card_recipient": false
           }
         }
       },
       "block_order": [
-        "text_r4wrgX",
         "title_3L6dEQ",
         "price_YjEGLy",
         "variant_picker_myMDhh",
@@ -276,21 +268,22 @@
       ],
       "settings": {
         "product": "bwks-dkhwn-shrm",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "secondary_background": false,
         "media_size": "medium",
-        "constrain_to_viewport": true,
+        "constrain_to_viewport": false,
         "media_fit": "contain",
         "media_position": "left",
-        "image_zoom": "lightbox",
+        "image_zoom": "none",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 48,
-        "padding_bottom": 48
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "video_CkAYCQ": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_size": "h1",
@@ -300,7 +293,7 @@
         "description": "best ever perfuom",
         "full_width": false,
         "color_scheme": "scheme-1",
-        "padding_top": 32,
+        "padding_top": 36,
         "padding_bottom": 32
       }
     }

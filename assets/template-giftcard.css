@@ -313,7 +313,7 @@ h2,
 .form__message .icon {
   flex-shrink: 0;
   height: 1.3rem;
-  margin-right: 0.5rem;
+  margin-left: 0.5rem;
   width: 1.3rem;
 }
 

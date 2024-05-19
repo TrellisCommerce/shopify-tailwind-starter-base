@@ -28,7 +28,7 @@
   color: rgb(var(--color-foreground));
   background: rgb(var(--color-background));
   border-color: rgba(var(--color-foreground), 0.1);
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(50%, -50%) scale(1);
   transition: transform var(--duration-short) ease,
     color var(--duration-short) ease;
 }
@@ -41,5 +41,5 @@
 
 .shopify-model-viewer-ui .shopify-model-viewer-ui__button--poster:hover,
 .shopify-model-viewer-ui .shopify-model-viewer-ui__button--poster:focus {
-  transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(50%, -50%) scale(1.1);
 }

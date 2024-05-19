@@ -17,21 +17,21 @@
 
 @media only screen and (max-width: 749px) {
   .banner--content-align-mobile-right .banner__box {
-    text-align: right;
+    text-align: left;
   }
 
   .banner--content-align-mobile-left .banner__box {
-    text-align: left;
+    text-align: right;
   }
 }
 
 @media only screen and (min-width: 750px) {
   .banner--content-align-right .banner__box {
-    text-align: right;
+    text-align: left;
   }
 
   .banner--content-align-left .banner__box {
-    text-align: left;
+    text-align: right;
   }
 
   .banner--content-align-left.banner--desktop-transparent .banner__box,
@@ -169,7 +169,7 @@
 .banner__media {
   height: 100%;
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   width: 100%;
 }
@@ -179,8 +179,8 @@
 }
 
 .banner__media-half + .banner__media-half {
-  right: 0;
-  left: auto;
+  left: 0;
+  right: auto;
 }
 
 .banner__media-half.animate--fixed:first-child > img,
@@ -190,7 +190,7 @@
 
 .banner__media-half.animate--fixed:nth-child(2) > img,
 .banner__media-half.animate--zoom-in:nth-child(2) > img {
-  left: 50%;
+  right: 50%;
   width: 50%;
 }
 
@@ -202,7 +202,7 @@
 
   .banner--stacked .banner__media-half.animate--fixed:nth-child(2) > img,
   .banner--stacked .banner__media-half.animate--zoom-in:nth-child(2) > img {
-    left: 0;
+    right: 0;
     width: 100%;
   }
 

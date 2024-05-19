@@ -20,21 +20,21 @@
 @media screen and (max-width: 749px) {
   .collection .loading-overlay {
     top: 0;
-    right: 0;
+    left: 0;
   }
 }
 
 @media screen and (min-width: 750px) {
   .collection .loading-overlay {
-    left: 0;
+    right: 0;
   }
 }
 
 .collection .loading-overlay {
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   display: none;
   width: 100%;
   padding: 0 1.5rem;
@@ -43,8 +43,8 @@
 
 @media screen and (min-width: 750px) {
   .collection .loading-overlay {
-    padding-left: 5rem;
     padding-right: 5rem;
+    padding-left: 5rem;
   }
 }
 
@@ -59,7 +59,7 @@
 
 @media screen and (max-width: 989px) {
   .collection .slider--tablet.product-grid {
-    scroll-padding-left: 1.5rem;
+    scroll-padding-right: 1.5rem;
   }
 }
 
