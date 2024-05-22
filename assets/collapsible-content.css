@@ -46,8 +46,8 @@
 
 .collapsible-content-wrapper-narrow {
   margin: 0 auto;
-  padding-right: 1.5rem;
   padding-left: 1.5rem;
+  padding-right: 1.5rem;
   max-width: 73.4rem;
 }
 
@@ -95,10 +95,7 @@
 .collapsible-row-layout .accordion summary,
 .collapsible-row-layout .accordion .accordion__content {
   padding: 1.5rem;
-}
-
-.collapsible-row-layout .accordion .accordion__content {
-  padding-top: 0;
+  padding-bottom: 2rem;
 }
 
 .collapsible-content summary:hover {
@@ -116,8 +113,8 @@
     .collapsible-content__grid:not(.collapsible-content__grid--reverse)
       .grid__item:last-child,
     .collapsible-content__grid--reverse .collapsible-content__grid-item {
-      padding-left: 5rem;
-      padding-right: 0;
+      padding-right: 5rem;
+      padding-left: 0;
     }
   }
 
@@ -125,7 +122,7 @@
     .collapsible-content__grid:not(.collapsible-content__grid--reverse)
       .grid__item:last-child,
     .collapsible-content__grid--reverse .collapsible-content__grid-item {
-      padding-left: 7rem;
+      padding-right: 7rem;
     }
   }
 }

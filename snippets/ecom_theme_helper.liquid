@@ -1,0 +1,326 @@
+<link rel="preconnect" href="https://cdn.ecomposer.app" crossorigin />
+<link rel="dns-prefetch" href="https://cdn.ecomposer.app" />
+<link rel="prefetch" href="https://cdn.ecomposer.app/vendors/css/ecom-base.css" as="style" />
+<link rel="prefetch" href="https://cdn.ecomposer.app/vendors/css/ecom-swiper@11.css" as="style" />
+<link rel="prefetch" href="https://cdn.ecomposer.app/vendors/js/ecom-swiper@11.0.5.js" as="script" />
+<link rel="prefetch" href="https://cdn.ecomposer.app/vendors/js/ecom_modal.js" as="script" />
+{%- assign tmpl = request.page_type  -%}
+{% if app.metafields.ecomposer.global_css %}
+     <!--ECOM-EMBED-->
+        <style id="ecom-global-css">
+            {{ app.metafields.ecomposer.global_css }}
+        </style>
+    <!--/ECOM-EMBED-->
+{% elsif shop.metafields.ecomposer.global_css %}
+    <!--ECOM-EMBED-->
+    <link href="data:text/css;base64,{{-shop.metafields.ecomposer.global_css-}}" rel="stylesheet" id="ecom-global-css"/>
+    <!--/ECOM-EMBED-->
+{% endif %}
+{%- assign ecom_configs = shop.metafields.ecomposer.configs.value -%}
+
+{%- if ecom_configs  -%}
+	{% if ecom_configs.custom_code.custom_css %}
+      <style id="ecom-custom-css">
+        {{ ecom_configs.custom_code.custom_css }}
+      </style>
+	{% endif %}
+
+	{%- if ecom_configs.custom_code.custom_js%}
+    <script id="ecom-custom-js" async="async">
+        {{ ecom_configs.custom_code.custom_js }}
+    </script>
+	{%- endif -%}
+{%- endif -%}
+{%- if tmpl ==  'page' and  page != blank  and page.metafields.ecomposer and page.metafields.ecomposer.featured_image  -%}
+	<meta property="og:image" content="{{page.metafields.ecomposer.featured_image.value}}" />
+	<meta property="og:image:alt" content="{{page_title}}" />
+{%- endif -%}
+<style type="text/css" class="ecom-theme-helper">
+    .ecom-animation{opacity:0}.ecom-animation.animate,.ecom-animation.ecom-animated{opacity:1}.ecom-cart-popup{display:grid;position:fixed;inset:0;z-index:9999999;align-content:center;padding:5px;justify-content:center;align-items:center;justify-items:center}.ecom-cart-popup::before{content:' ';position:absolute;background:#e5e5e5b3;inset:0}.ecom-ajax-loading{cursor:not-allowed;pointer-events:none;opacity:.6}#ecom-toast{visibility:hidden;max-width:50px;height:60px;margin:auto;background-color:#333;color:#fff;text-align:center;border-radius:2px;position:fixed;z-index:1;left:0;right:0;bottom:30px;font-size:17px;display:grid;grid-template-columns:50px auto;align-items:center;justify-content:start;align-content:center;justify-items:start}#ecom-toast.ecom-toast-show{visibility:visible;-webkit-animation:ecomFadein .5s,ecomExpand .5s .5s,ecomStay 3s 1s,ecomShrink .5s 2s,ecomFadeout .5s 2.5s;animation:ecomFadein .5s,ecomExpand .5s .5s,ecomStay 3s 1s,ecomShrink .5s 4s,ecomFadeout .5s 4.5s}#ecom-toast #ecom-toast-icon{width:50px;height:100%;box-sizing:border-box;background-color:#111;color:#fff;padding:5px}#ecom-toast .ecom-toast-icon-svg{width:100%;height:100%;display:block;position:relative;vertical-align:middle;margin:auto;text-align:center}#ecom-toast #ecom-toast-desc{color:#fff;padding:16px;overflow:hidden;white-space:nowrap}@-webkit-keyframes ecomFadein{from{bottom:0;opacity:0}to{bottom:30px;opacity:1}}@keyframes fadein{from{bottom:0;opacity:0}to{bottom:30px;opacity:1}}@-webkit-keyframes ecomExpand{from{min-width:50px}to{min-width:var(--ecom-max-width)}}@keyframes ecomExpand{from{min-width:50px}to{min-width:var(--ecom-max-width)}}@-webkit-keyframes ecomStay{from{min-width:var(--ecom-max-width)}to{min-width:var(--ecom-max-width)}}@keyframes ecomStay{from{min-width:var(--ecom-max-width)}to{min-width:var(--ecom-max-width)}}@-webkit-keyframes ecomShrink{from{min-width:var(--ecom-max-width)}to{min-width:50px}}@keyframes ecomShrink{from{min-width:var(--ecom-max-width)}to{min-width:50px}}@-webkit-keyframes ecomFadeout{from{bottom:30px;opacity:1}to{bottom:60px;opacity:0}}@keyframes ecomFadeout{from{bottom:30px;opacity:1}to{bottom:60px;opacity:0}}
+</style>
+<script type="text/javascript" id="ecom-theme-helpers" async="async">
+    window.EComposer = window.EComposer || {};
+    (function(){
+        if(!this.configs) this.configs = {};
+        {%- if shop.metafields.ecomposer.configs -%}
+            this.configs = {{ shop.metafields.ecomposer.configs.value | json }};
+        {%- endif -%}
+        {% if shop.metafields.ecomposer['ajax-cart'] %}
+            this.configs.ajax_cart =  {{ shop.metafields.ecomposer['ajax-cart'].value | json }};
+        {%- else -%}
+          this.configs.ajax_cart = {
+            enable: false
+          };
+        {% endif %}
+      {% if shop.customer_accounts_enabled and customer %}
+      	this.customer = {
+          id: {{customer.id}},
+          name : "{{customer.name | escape }}"
+      	}
+      {% else %}
+      	this.customer = false;
+      {% endif %}
+        this.routes = {
+            domain: '{{shop.secure_url}}',
+            root_url: '{{ routes.root_url }}',
+            collections_url: '{{ routes.collections_url }}',
+            all_products_collection_url: '{{ routes.all_products_collection_url }}',
+            cart_url:'{{ routes.cart_url }}',
+            cart_add_url:'{{ routes.cart_add_url }}',
+            cart_change_url:'{{ routes.cart_change_url }}',
+            cart_clear_url: '{{ routes.cart_clear_url }}',
+            cart_update_url: '{{ routes.cart_update_url }}',
+            product_recommendations_url: '{{ routes.product_recommendations_url }}'
+        };
+        this.queryParams = {};
+        if (window.location.search.length) {
+            new URLSearchParams(window.location.search).forEach((value,key)=>{
+                this.queryParams[key] = value;
+            })
+        }
+        this.money_format = {{ shop.money_format | json  }},
+        this.money_with_currency_format = {{shop.money_with_currency_format | json }},
+        this.currencyCodeEnabled = {{ settings.currency_code_enabled | json }},
+        {% comment %}
+            this.formatMoney = function(t, e) {
+                const money_format = this.currencyCodeEnabled ? this.money_with_currency_format : this.money_format
+                function n(t, e) {
+                    return void 0 === t ? e : t
+                }
+                function o(t, e, o, i) {
+                    if (e = n(e, 2),
+                    o = n(o, ","),
+                    i = n(i, "."),
+                    isNaN(t) || null == t)
+                        return 0;
+                    var r = (t = (t / 100).toFixed(e)).split(".");
+                    return r[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1" + o) + (r[1] ? i + r[1] : "")
+                }
+                "string" == typeof t && (t = t.replace(".", ""));
+                var i = ""
+                , r = /\{\{\s*(\w+)\s*\}\}/
+                , a = e || money_format;
+                switch (a.match(r)[1]) {
+                case "amount":
+                    i = o(t, 2);
+                    break;
+                case "amount_no_decimals":
+                    i = o(t, 0);
+                    break;
+                case "amount_with_comma_separator":
+                    i = o(t, 2, ".", ",");
+                    break;
+                case "amount_with_space_separator":
+                    i = o(t, 2, " ", ",");
+                    break;
+                case "amount_with_period_and_space_separator":
+                    i = o(t, 2, " ", ".");
+                    break;
+                case "amount_no_decimals_with_comma_separator":
+                    i = o(t, 0, ".", ",");
+                    break;
+                case "amount_no_decimals_with_space_separator":
+                    i = o(t, 0, " ");
+                    break;
+                case "amount_with_apostrophe_separator":
+                    i = o(t, 2, "'", ".")
+                }
+                return a.replace(r, i)
+            }
+            this.resizeImage = function(t, r) {
+                try {
+                    if (!r || "original" == r ||  "full" == r || "master" == r)
+                        return t;
+                    if(t.indexOf('cdn.shopify.com') !== -1 || t.indexOf('/cdn/shop/') !== -1) {
+                        var o = t.match(/\.(jpg|jpeg|gif|png|bmp|bitmap|tiff|tif)((\#[0-9a-z\-]+)?(\?v=.*)?)?$/igm);
+                        if (null == o)
+                            return null;
+                        var i = t.split(o[0])
+                        , x = o[0];
+                        return i[0] + "_" + r + x;
+                    }
+                } catch (o) {
+                    return t
+                }
+                return t;
+            },
+            this.getProduct = function(handle){
+            if(!handle)
+            {
+                return false;
+            }
+            let endpoint = (this.routes.root_url  === '/' ? '' : this.routes.root_url ) + '/products/' + handle + '.js?shop='+ Shopify.shop;
+            if(window.ECOM_LIVE)
+            {
+                endpoint = '/shop/builder/ajax/ecom-proxy/products/' + handle+'?shop='+ Shopify.shop;
+            }
+            return  window.fetch(endpoint,{
+                headers: {
+                'Content-Type' : 'application/json'
+                }
+            })
+            .then(res=> res.json());
+
+            }
+        {%endcomment%}
+        this.formatMoney=function(t,e){const r=this.currencyCodeEnabled?this.money_with_currency_format:this.money_format;function a(t,e){return void 0===t?e:t}function o(t,e,r,o){if(e=a(e,2),r=a(r,","),o=a(o,"."),isNaN(t)||null==t)return 0;var n=(t=(t/100).toFixed(e)).split(".");return n[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g,"$1"+r)+(n[1]?o+n[1]:"")}"string"==typeof t&&(t=t.replace(".",""));var n="",i=/\{\{\s*(\w+)\s*\}\}/,s=e||r;switch(s.match(i)[1]){case"amount":n=o(t,2);break;case"amount_no_decimals":n=o(t,0);break;case"amount_with_comma_separator":n=o(t,2,".",",");break;case"amount_with_space_separator":n=o(t,2," ",",");break;case"amount_with_period_and_space_separator":n=o(t,2," ",".");break;case"amount_no_decimals_with_comma_separator":n=o(t,0,".",",");break;case"amount_no_decimals_with_space_separator":n=o(t,0," ");break;case"amount_with_apostrophe_separator":n=o(t,2,"'",".")}return s.replace(i,n)},this.resizeImage=function(t,e){try{if(!e||"original"==e||"full"==e||"master"==e)return t;if(-1!==t.indexOf("cdn.shopify.com")||-1!==t.indexOf("/cdn/shop/")){var r=t.match(/\.(jpg|jpeg|gif|png|bmp|bitmap|tiff|tif)((\#[0-9a-z\-]+)?(\?v=.*)?)?$/gim);if(null==r)return null;var a=t.split(r[0]),o=r[0];return a[0]+"_"+e+o}}catch(r){return t}return t},this.getProduct=function(t){if(!t)return!1;let e=("/"===this.routes.root_url?"":this.routes.root_url)+"/products/"+t+".js?shop="+Shopify.shop;return window.ECOM_LIVE&&(e="/shop/builder/ajax/ecom-proxy/products/"+t+"?shop="+Shopify.shop),window.fetch(e,{headers:{"Content-Type":"application/json"}}).then(t=>t.json())};
+    }).bind(window.EComposer)();
+</script>
+<script type="text/javascript" id="ecom-theme-quickview" async="async">
+    window.EComposer = window.EComposer || {};
+      (function() {
+        this.initQuickview = function() {
+            var enable_qv = false;
+              {% if shop.metafields.ecomposer['app_quickview'] and shop.metafields.ecomposer['app_quickview'].value == 'intergrated' %}
+                enable_qv = true;
+              {% endif %}
+            const qv_wrapper_script = document.querySelector('#ecom-quickview-template-html');
+            if(!qv_wrapper_script) return;
+            const ecom_quickview = document.createElement('div');
+            ecom_quickview.classList.add('ecom-quickview');
+            ecom_quickview.innerHTML = qv_wrapper_script.innerHTML
+            document.body.prepend(ecom_quickview);
+            const qv_wrapper = ecom_quickview.querySelector('.ecom-quickview__wrapper');
+            {% comment %}
+                const ecomQuickview = function(response) {
+                    const qv_content = qv_wrapper.querySelector('.ecom-quickview__content-data');
+                    if(qv_content) {
+
+                        let scriptEl = document.createRange().createContextualFragment(response);
+                        qv_content.innerHTML = '';
+                        qv_content.append(scriptEl);
+                        qv_wrapper.classList.add('ecom-open');
+                        setTimeout(function() {
+                            qv_wrapper.classList.add('ecom-display');
+                        }, 500)
+                        closeQuickview(qv_content);
+                    }
+                }
+                const closeQuickview = function(qv_content) {
+                    const close_btn = qv_wrapper.querySelector('.ecom-quickview__close-btn');
+                    const close_quickview = qv_wrapper.querySelector('.ecom-quickview__content');
+                    if(close_btn) {
+                        close_btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        document.removeEventListener('click', clickOutSideCloseQuickView);
+                        document.removeEventListener('keydown', escOutSideCloseQuickView);
+                        qv_wrapper.classList.add('ecom-remove');
+                        qv_wrapper.classList.remove('ecom-open', 'ecom-display', 'ecom-remove');
+                        setTimeout(function() {
+                            qv_content.innerHTML = '';
+                        }, 300)
+
+                        })
+                    }
+                    function clickOutSideCloseQuickView(e) {
+                        let element = e.target;
+                        do {
+                            if(element == close_quickview){
+                                return;
+                            }
+                            element = element.parentNode;
+                        }while(element);
+                        if(element != close_quickview) {
+                            qv_wrapper.classList.add('ecom-remove');
+                            qv_wrapper.classList.remove('ecom-open', 'ecom-display', 'ecom-remove');
+                            setTimeout(function() {
+                                qv_content.innerHTML = '';
+                            }, 300)
+                            document.removeEventListener('click', clickOutSideCloseQuickView);
+                            document.removeEventListener('keydown', escOutSideCloseQuickView);
+                        }
+                    }
+                    function escOutSideCloseQuickView(e) {
+                        if (e.isComposing || e.keyCode === 27) {
+                            qv_wrapper.classList.add('ecom-remove');
+                                qv_wrapper.classList.remove('ecom-open', 'ecom-display', 'ecom-remove');
+                                setTimeout(function() {
+                                    qv_content.innerHTML = '';
+                                }, 300)
+                                document.removeEventListener('keydown', escOutSideCloseQuickView);
+                                document.removeEventListener('click', clickOutSideCloseQuickView);
+                        }
+                    }
+                    document.addEventListener('click', clickOutSideCloseQuickView);
+                    document.addEventListener('keydown', escOutSideCloseQuickView);
+                }
+                function quickViewHandler(e){
+                            e && e.preventDefault();
+                            const _this = this;
+                            if(_this.classList)
+                                _this.classList.add('ecom-loading');
+
+                            let url = _this.classList ? _this.getAttribute('href') : window.location.pathname;
+                            if(url) {
+                                if(window.location.search.includes('ecom_template_id'))
+                                {
+                                    let params = new URLSearchParams(location.search);
+                                    url = window.location.pathname + '?section_id='+ params.get('ecom_template_id');
+                                }
+                                else
+                                {
+                                    url += (url.includes('?') ? '&' : '?') + 'section_id=ecom-default-template-quickview';
+                                }
+
+                                fetch(url)
+                                .then(function(response){
+                                    if(response.status == 200){
+                                        return response.text();
+                                    } else {
+                                        if(window.document.querySelector('#admin-bar-iframe'))
+                                        {
+                                            if(response.status == 404) {
+                                                alert('Please create Ecomposer quickview template first!');
+                                            } else {
+                                                alert('Have some problem with quickview!');
+                                            }
+                                            if(_this.classList)
+                                                _this.classList.remove('ecom-loading');
+                                            return false;
+                                        }
+                                        else
+                                        {
+                                            window.open(new URL(url).pathname, '_blank');
+                                        }
+                                    }
+                                })
+                                .then(function(content) {
+                                    if(content) {
+                                        ecomQuickview(content);
+                                        setTimeout(function() {
+                                            if(_this.classList)
+                                                _this.classList.remove('ecom-loading');
+                                        }, 300)
+                                    }
+                                })
+                                .catch(function(error) {
+                                });
+                            }
+
+                }
+            {% endcomment %}
+            const ecomQuickview=function(e){const t=qv_wrapper.querySelector(".ecom-quickview__content-data");if(t){let o=document.createRange().createContextualFragment(e);t.innerHTML="",t.append(o),qv_wrapper.classList.add("ecom-open"),setTimeout((function(){qv_wrapper.classList.add("ecom-display")}),500),closeQuickview(t)}},closeQuickview=function(e){const t=qv_wrapper.querySelector(".ecom-quickview__close-btn"),o=qv_wrapper.querySelector(".ecom-quickview__content");function n(t){let i=t.target;do{if(i==o)return;i=i.parentNode}while(i);i!=o&&(qv_wrapper.classList.add("ecom-remove"),qv_wrapper.classList.remove("ecom-open","ecom-display","ecom-remove"),setTimeout((function(){e.innerHTML=""}),300),document.removeEventListener("click",n),document.removeEventListener("keydown",c))}function c(t){(t.isComposing||27===t.keyCode)&&(qv_wrapper.classList.add("ecom-remove"),qv_wrapper.classList.remove("ecom-open","ecom-display","ecom-remove"),setTimeout((function(){e.innerHTML=""}),300),document.removeEventListener("keydown",c),document.removeEventListener("click",n))}t&&t.addEventListener("click",(function(t){t.preventDefault(),document.removeEventListener("click",n),document.removeEventListener("keydown",c),qv_wrapper.classList.add("ecom-remove"),qv_wrapper.classList.remove("ecom-open","ecom-display","ecom-remove"),setTimeout((function(){e.innerHTML=""}),300)})),document.addEventListener("click",n),document.addEventListener("keydown",c)};function quickViewHandler(e){e&&e.preventDefault();const t=this;t.classList&&t.classList.add("ecom-loading");let o=t.classList?t.getAttribute("href"):window.location.pathname;if(o){if(window.location.search.includes("ecom_template_id")){let e=new URLSearchParams(location.search);o=window.location.pathname+"?section_id="+e.get("ecom_template_id")}else o+=(o.includes("?")?"&":"?")+"section_id=ecom-default-template-quickview";fetch(o).then((function(e){return 200==e.status?e.text():window.document.querySelector("#admin-bar-iframe")?(404==e.status?alert("Please create Ecomposer quickview template first!"):alert("Have some problem with quickview!"),t.classList&&t.classList.remove("ecom-loading"),!1):void window.open(new URL(o).pathname,"_blank")})).then((function(e){e&&(ecomQuickview(e),setTimeout((function(){t.classList&&t.classList.remove("ecom-loading")}),300))})).catch((function(e){}))}}
+            if(window.location.search.includes('ecom_template_id'))
+            {
+                setTimeout(quickViewHandler,1000)
+            }
+            if(enable_qv) {
+              const qv_buttons = document.querySelectorAll('.ecom-product-quickview');
+              if(qv_buttons.length > 0) {
+                qv_buttons.forEach(function(button, index) {
+                    button.addEventListener('click', quickViewHandler)
+                })
+              }
+            }
+        }
+    }).bind(window.EComposer)();
+</script>
+<script type="text/template" id="ecom-quickview-template-html">
+    <div class="ecom-quickview__wrapper ecom-dn"><div class="ecom-quickview__container"><div class="ecom-quickview__content"><div class="ecom-quickview__content-inner"><div class="ecom-quickview__content-data"></div></div><span class="ecom-quickview__close-btn"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32"><g id="icomoon-ignore"></g><path d="M10.722 9.969l-0.754 0.754 5.278 5.278-5.253 5.253 0.754 0.754 5.253-5.253 5.253 5.253 0.754-0.754-5.253-5.253 5.278-5.278-0.754-0.754-5.278 5.278z" fill="#000000"></path></svg></span></div></div></div>
+</script>
+<style type="text/css" class="ecom-theme-quickview">
+.ecom-quickview__wrapper{opacity:0;display:none;pointer-events:none}.ecom-quickview__wrapper.ecom-open{position:fixed;top:0;left:0;right:0;bottom:0;display:block;pointer-events:auto;z-index:100000;outline:0!important;-webkit-backface-visibility:hidden;opacity:1;transition:all .1s}.ecom-quickview__container{text-align:center;position:absolute;width:100%;height:100%;left:0;top:0;padding:0 8px;box-sizing:border-box;opacity:0;background-color:rgba(0,0,0,.8);transition:opacity .1s}.ecom-quickview__container:before{content:"";display:inline-block;height:100%;vertical-align:middle}.ecom-quickview__wrapper.ecom-display .ecom-quickview__content{visibility:visible;opacity:1;transform:none;-webkit-transform:none}.ecom-quickview__content{position:relative;display:inline-block;opacity:0;visibility:hidden;-webkit-transition:opacity .1s,-webkit-transform .1s;transition:transform .1s,opacity .1s,-webkit-transform .1s;-webkit-transform:translateX(-100px);transform:translateX(-100px)}.ecom-quickview__content-inner{position:relative;display:inline-block;vertical-align:middle;margin:0 auto;text-align:left;z-index:999;overflow-y:auto;max-height:80vh}.ecom-quickview__content-data>.shopify-section{margin:0 auto;max-width:980px;overflow:hidden;position:relative;background-color:#fff;opacity:0}.ecom-quickview__wrapper.ecom-display .ecom-quickview__content-data>.shopify-section{opacity:1;-webkit-transform:none;transform:none}.ecom-quickview__wrapper.ecom-display .ecom-quickview__container{opacity:1}.ecom-quickview__wrapper.ecom-remove #shopify-section-ecom-default-template-quickview{opacity:0;-webkit-transform:translateX(100px);transform:translateX(100px)}.ecom-quickview__close-btn{position:fixed!important;top:0;right:0;transform:none;background-color:transparent;color:#000;opacity:0;width:40px;height:40px;-webkit-transition:.25s;transition:.25s;z-index:9999}.ecom-quickview__close-btn{stroke: #fff}.ecom-quickview__wrapper.ecom-display .ecom-quickview__close-btn{opacity:1}.ecom-quickview__close-btn:hover{cursor:pointer}@media screen and (max-width:1024px){.ecom-quickview__content{position:absolute;inset:0;margin:50px 15px;display:flex}.ecom-quickview__close-btn{right:0}}
+</style>
+<script type="text/template" id="ecom-template-html">
+    {% render 'ecom-toast' %}
+</script>

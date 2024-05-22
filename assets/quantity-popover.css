@@ -36,7 +36,7 @@ quantity-popover quick-order-list-remove-button .button {
 .quantity-popover__info-button {
   display: flex;
   align-items: center;
-  margin: 0 0.4rem 0 0;
+  margin: 0 0 0 0.4rem;
   min-width: 1.5rem;
   min-height: 1.5rem;
   --shadow-opacity: 0;
@@ -45,7 +45,7 @@ quantity-popover quick-order-list-remove-button .button {
 
 .quantity-popover__info-button--icon-with-label {
   align-items: flex-start;
-  text-align: left;
+  text-align: right;
 }
 
 .quantity-popover__info-button--icon-with-label svg {
@@ -57,7 +57,7 @@ quantity-popover quick-order-list-remove-button .button {
 }
 
 .quantity-popover__info-button span {
-  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .quantity-popover__info-button--icon-only--animation svg {
@@ -70,12 +70,12 @@ quantity-popover quick-order-list-remove-button .button {
 
 @media screen and (max-width: 989px) {
   .quantity-popover__info.global-settings-popup {
-    left: 0;
+    right: 0;
     top: 100%;
   }
 
   .quantity-popover__info-button {
-    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -86,7 +86,7 @@ quantity-popover quick-order-list-remove-button .button {
 
 .quantity-popover__info .volume-pricing-label {
   display: block;
-  margin-left: 1.2rem;
+  margin-right: 1.2rem;
   margin-top: 1.2rem;
   font-size: 1.2rem;
 }
@@ -96,8 +96,8 @@ quantity-popover quick-order-list-remove-button .button {
   height: 3.2rem;
   position: absolute;
   top: 0.4rem;
-  right: 0;
-  padding: 0 1.2rem 0 0;
+  left: 0;
+  padding: 0 0 0 1.2rem;
   display: flex;
   justify-content: flex-end;
 }
@@ -122,7 +122,7 @@ quantity-popover .quantity__rules span:first-of-type {
 
 .quantity-popover-container {
   display: flex;
-  padding: 0.5rem 0.5rem 0.5rem 0;
+  padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
 .quantity-popover-container:not(.quantity-popover-container--hover) {
@@ -131,7 +131,7 @@ quantity-popover .quantity__rules span:first-of-type {
 
 @media screen and (min-width: 990px) {
   .quantity-popover-container--empty {
-    margin-right: 2.7rem;
+    margin-left: 2.7rem;
   }
 
   .quantity-popover__info.global-settings-popup {
@@ -144,7 +144,7 @@ quantity-popover .quantity__rules span:first-of-type {
   }
 
   .quantity-popover__info.global-settings-popup {
-    transform: translateX(-100%);
+    transform: translateX(100%);
     top: 0.5rem;
   }
 }
@@ -154,7 +154,7 @@ quantity-popover .quantity {
 }
 
 quantity-popover .quantity__rules {
-  margin-left: 0.8rem;
+  margin-right: 0.8rem;
 }
 
 quantity-popover .quantity__rules .divider:nth-child(2)::before {

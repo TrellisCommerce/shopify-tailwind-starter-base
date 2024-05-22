@@ -82,16 +82,16 @@
   height: 6.2rem;
   width: 6.2rem;
   position: absolute;
-  left: 50%;
+  right: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(50%, -50%) scale(1);
   transition: transform var(--duration-short) ease,
     color var(--duration-short) ease;
   z-index: 1;
 }
 
 .deferred-media__poster-button:hover {
-  transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(50%, -50%) scale(1.1);
 }
 
 .deferred-media__poster-button .icon {
@@ -100,5 +100,5 @@
 }
 
 .deferred-media__poster-button .icon-play {
-  margin-left: 0.2rem;
+  margin-right: 0.2rem;
 }

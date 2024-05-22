@@ -1,10 +1,1 @@
-{
-  "sections": {
-    "main": {
-      "type": "main-404"
-    }
-  },
-  "order": [
-    "main"
-  ]
-}
+{"sections":{"main":{"type":"main-404","custom_css":[".template-404 p {font-size: 9rem; font-weight: bold; margin-bottom: -5rem; color: #a18546;}"],"settings":{}},"collection_list_9jDzKa":{"type":"collection-list","blocks":{"featured_collection_hEXkYq":{"type":"featured_collection","settings":{"collection":"x1"}},"featured_collection_DwNhzP":{"type":"featured_collection","settings":{"collection":"l-wd-wlbkhwr"}},"featured_collection_rayEXb":{"type":"featured_collection","settings":{"collection":"dhn-l-wd-wlkhmryt"}}},"block_order":["featured_collection_hEXkYq","featured_collection_DwNhzP","featured_collection_rayEXb"],"settings":{"title":"المجموعات","heading_size":"h1","image_ratio":"square","columns_desktop":3,"color_scheme":"","show_view_all":true,"columns_mobile":"1","swipe_on_mobile":true,"padding_top":0,"padding_bottom":0}}},"order":["main","collection_list_9jDzKa"]}

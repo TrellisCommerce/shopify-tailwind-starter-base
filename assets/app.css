@@ -553,3 +553,137 @@ video {
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
 }
+
+.\!twcss-mx-6 {
+  margin-left: 1.5rem !important;
+  margin-right: 1.5rem !important;
+}
+
+.twcss-mx-6 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.\!twcss-mb-0 {
+  margin-bottom: 0px !important;
+}
+
+.\!twcss-mt-12 {
+  margin-top: 3rem !important;
+}
+
+.\!twcss-mt-20 {
+  margin-top: 5rem !important;
+}
+
+.\!twcss-mt-24 {
+  margin-top: 6rem !important;
+}
+
+.twcss-mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.twcss-me-5 {
+  margin-inline-end: 1.25rem;
+}
+
+.twcss-mt-6 {
+  margin-top: 1.5rem;
+}
+
+.twcss-flex {
+  display: flex;
+}
+
+.twcss-h-12 {
+  height: 3rem;
+}
+
+.\!twcss-w-\[3rem\] {
+  width: 3rem !important;
+}
+
+.twcss-w-12 {
+  width: 3rem;
+}
+
+.twcss-scale-\[0\.6\] {
+  --tw-scale-x: 0.6;
+  --tw-scale-y: 0.6;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.twcss-items-center {
+  align-items: center;
+}
+
+.twcss-gap-4 {
+  gap: 1rem;
+}
+
+.twcss-bg-\[\#a08546\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(160 133 70 / var(--tw-bg-opacity));
+}
+
+.twcss-pb-1 {
+  padding-bottom: 0.25rem;
+}
+
+.twcss-pt-2 {
+  padding-top: 0.5rem;
+}
+
+.twcss-text-center {
+  text-align: center;
+}
+
+.\!twcss-text-\[2\.5rem\] {
+  font-size: 2.5rem !important;
+}
+
+.twcss-leading-10 {
+  line-height: 2.5rem;
+}
+
+.twcss-duration-200 {
+  transition-duration: 200ms;
+}
+
+.twcss-group:hover .group-hover\:twcss-scale-105 {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.twcss-group:hover .group-hover\:twcss-scale-\[0\.65\] {
+  --tw-scale-x: 0.65;
+  --tw-scale-y: 0.65;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 750px) {
+  .md\:\!twcss-my-20 {
+    margin-top: 5rem !important;
+    margin-bottom: 5rem !important;
+  }
+
+  .md\:\!twcss-w-full {
+    width: 100% !important;
+  }
+
+  .md\:\!twcss-text-\[3rem\] {
+    font-size: 3rem !important;
+  }
+}
+
+@media (min-width: 990px) {
+  .lg\:twcss-hidden {
+    display: none;
+  }
+
+  .lg\:\!twcss-text-\[3\.5rem\] {
+    font-size: 3.5rem !important;
+  }
+}

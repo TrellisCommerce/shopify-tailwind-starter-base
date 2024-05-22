@@ -134,7 +134,7 @@
   width: calc(var(--border-width) * 2 + 100%);
   height: calc(var(--border-width) * 2 + 100%);
   top: calc(var(--border-width) * -1);
-  left: calc(var(--border-width) * -1);
+  right: calc(var(--border-width) * -1);
 }
 
 .collage-card.product-card-wrapper {
@@ -178,8 +178,8 @@
   z-index: 1;
   outline-offset: 0.3rem;
   bottom: calc(var(--border-width) * -1);
-  left: calc(var(--border-width) * -1);
   right: calc(var(--border-width) * -1);
+  left: calc(var(--border-width) * -1);
   top: calc(var(--border-width) * -1);
 }
 

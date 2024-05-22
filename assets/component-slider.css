@@ -50,7 +50,7 @@ slider-component.slider-component-full-width {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    scroll-padding-left: 1.5rem;
+    scroll-padding-right: 1.5rem;
     -webkit-overflow-scrolling: touch;
     margin-bottom: 1rem;
   }
@@ -59,7 +59,7 @@ slider-component.slider-component-full-width {
   .slider--mobile:after {
     content: '';
     width: 0;
-    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .slider.slider--mobile .slider__slide {
@@ -88,7 +88,7 @@ slider-component.slider-component-full-width {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    scroll-padding-left: 1rem;
+    scroll-padding-right: 1rem;
     -webkit-overflow-scrolling: touch;
   }
 
@@ -104,7 +104,7 @@ slider-component.slider-component-full-width {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    scroll-padding-left: 1.5rem;
+    scroll-padding-right: 1.5rem;
     -webkit-overflow-scrolling: touch;
     margin-bottom: 1rem;
   }
@@ -113,8 +113,8 @@ slider-component.slider-component-full-width {
   .slider--tablet:after {
     content: '';
     width: 0;
-    padding-left: 1.5rem;
-    margin-left: calc(-1 * var(--grid-desktop-horizontal-spacing));
+    padding-right: 1.5rem;
+    margin-right: calc(-1 * var(--grid-desktop-horizontal-spacing));
   }
 
   .slider.slider--tablet .slider__slide {
@@ -164,15 +164,15 @@ slider-component.slider-component-full-width {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     margin-bottom: 1rem;
-    scroll-padding-left: var(--desktop-margin-left-first-item);
+    scroll-padding-right: var(--desktop-margin-left-first-item);
   }
 
   /* Fix to show some space at the end of our sliders in all browsers */
   .slider--desktop:after {
     content: '';
     width: 0;
-    padding-left: 5rem;
-    margin-left: calc(-1 * var(--grid-desktop-horizontal-spacing));
+    padding-right: 5rem;
+    margin-right: calc(-1 * var(--grid-desktop-horizontal-spacing));
   }
 
   .slider.slider--desktop .slider__slide {
@@ -185,22 +185,22 @@ slider-component.slider-component-full-width {
   }
 
   .slider--desktop .slider__slide:first-child {
-    margin-left: var(--desktop-margin-left-first-item);
-    scroll-margin-left: var(--desktop-margin-left-first-item);
+    margin-right: var(--desktop-margin-left-first-item);
+    scroll-margin-right: var(--desktop-margin-left-first-item);
   }
 
   .slider-component-full-width .slider--desktop {
-    scroll-padding-left: 1.5rem;
+    scroll-padding-right: 1.5rem;
   }
 
   .slider-component-full-width .slider--desktop .slider__slide:first-child {
-    margin-left: 1.5rem;
-    scroll-margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    scroll-margin-right: 1.5rem;
   }
 
   /* Fix to show some space at the end of our sliders in all browsers */
   .slider-component-full-width .slider--desktop:after {
-    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .slider--desktop.grid--5-col-desktop .grid__item {
@@ -400,17 +400,17 @@ slider-component.slider-component-full-width {
 }
 
 .slider-button--next .icon {
-  transform: rotate(-90deg);
-}
-
-.slider-button--prev .icon {
   transform: rotate(90deg);
 }
 
+.slider-button--prev .icon {
+  transform: rotate(-90deg);
+}
+
 .slider-button--next:not([disabled]):hover .icon {
-  transform: rotate(-90deg) scale(1.1);
+  transform: rotate(90deg) scale(1.1);
 }
 
 .slider-button--prev:not([disabled]):hover .icon {
-  transform: rotate(90deg) scale(1.1);
+  transform: rotate(-90deg) scale(1.1);
 }

@@ -18,7 +18,7 @@
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(270deg);
+    transform: rotate(-270deg);
   }
 }
 
@@ -42,11 +42,11 @@
   }
   50% {
     stroke-dashoffset: 75;
-    transform: rotate(135deg);
+    transform: rotate(-135deg);
   }
   100% {
     stroke-dashoffset: 280;
-    transform: rotate(450deg);
+    transform: rotate(-450deg);
   }
 }
 
