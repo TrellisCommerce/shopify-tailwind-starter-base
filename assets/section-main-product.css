@@ -304,6 +304,13 @@ a.product__text {
   font-weight: 600;
 }
 
+.product__description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .product--no-media .product__title,
 .product--no-media .product__text,
 .product--no-media .product__tax,
@@ -1507,6 +1514,21 @@ a.product__text {
 
 .recipient-form .error-message::first-letter {
   text-transform: capitalize;
+}
+
+.product__title h1 {
+  font-weight: bold;
+  font-size: calc(var(--font-heading-scale) * 3rem);
+}
+
+@media screen and (max-width: 500px) {
+  .product__title h1 {
+    font-size: calc(var(--font-heading-scale) * 2rem);
+  }
+}
+
+.price .price-item {
+  color: red;
 }
 
 @media screen and (forced-colors: active) {

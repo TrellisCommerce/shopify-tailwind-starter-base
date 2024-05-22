@@ -78,6 +78,19 @@
   src: url('Almarai-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'Almarai'; /* Replace 'CustomFontName' with your desired font name */
+  src: url('Almarai-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
@@ -268,7 +281,8 @@ h5,
 .h5 {
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
-  font-weight: var(--font-heading-weight);
+  /* font-weight: var(--font-heading-weight); */
+  font-weight: bold;
   letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
   color: rgb(var(--color-foreground));
   line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
@@ -2796,7 +2810,7 @@ details[open] > .header__submenu {
 .header__menu-item {
   padding: 1.2rem;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .header__menu-item:hover {
@@ -3560,4 +3574,8 @@ details-disclosure > details {
 
 section.shopify-pc__banner__dialog {
   text-align: right;
+}
+
+.tpo_total-additional-price-wrapper {
+  display: none !important;
 }

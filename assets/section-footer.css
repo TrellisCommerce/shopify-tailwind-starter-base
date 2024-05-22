@@ -339,7 +339,7 @@
 
 .footer-block__details-content .list-menu__item--link,
 .copyright__content a {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 0.87);
 }
 
 .footer-block__details-content .list-menu__item--active {
@@ -451,7 +451,8 @@
 }
 
 .copyright__content {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
+  color: #fff;
 }
 
 .copyright__content a {

@@ -2,7 +2,7 @@
 {{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
 
 <div class="page-width">
-  <h1 class="title twcss-text-center title--primary inline-richtext{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+  <h1 class="title twcss-text-center title--primary inline-richtext{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %} !twcss-mt-12 md:!twcss-my-20">
     {{ section.settings.title }}
   </h1>
   {%- liquid

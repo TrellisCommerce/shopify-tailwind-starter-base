@@ -1,6 +1,6 @@
 .drawer {
   position: fixed;
-  z-index: 1000;
+  z-index: 9999999999;
   right: 0;
   top: 0;
   width: 100vw;
@@ -338,6 +338,8 @@ cart-drawer-items {
 .cart-drawer .tax-note {
   margin: 1.2rem auto 2rem 0;
   text-align: right;
+  visibility: hidden;
+  height: 0px;
 }
 
 .cart-drawer .product-option dd {
