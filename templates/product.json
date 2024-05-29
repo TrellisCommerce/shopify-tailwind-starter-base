@@ -289,7 +289,7 @@
         "rebuy_personalization_engine_rebuy_widget_8aG9NJ": {
           "type": "shopify:\/\/apps\/rebuy-personalization-engine\/blocks\/rebuy-widget\/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
           "settings": {
-            "enabled": true,
+            "enabled": false,
             "id": "145930",
             "product_id_enabled": true,
             "collection_id_enabled": false
