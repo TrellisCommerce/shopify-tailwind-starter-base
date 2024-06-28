@@ -1,5 +1,5 @@
 name: CI
-on: [push]
+on: push
 jobs:
   tailwindcss-update:
     name: Generate Tailwind CSS
