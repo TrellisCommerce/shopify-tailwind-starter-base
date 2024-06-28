@@ -54,17 +54,6 @@ First, make sure your `Workflow permissions` are set like below in order for the
 
 In your GitHub repo, navigate to Settings > Secrets > Actions and add the following repository secrets:
 
-`SHOP_APP_ID` & `SHOP_APP_PASSWORD`
-
-- Get values by navigating to https://mystore.myshopify.com/admin/apps/development, select the theme kit app, and copy the API key value for `SHOP_APP_ID` & Admin API access token value for `SHOP_APP_PASSWORD` (value starts with shpat)
-- Notes on how to get these values:
-
-1. Navigate to the Apps section in your Shopify admin and click the Develop apps button in the top right
-2. Then Allow custom app development
-3. You should be able to click the Create an app button
-4. In the configuration tab of your app, go ahead and check all the boxes for the Admin and Storefront API permissions
-5. The API key & Admin API access token will be in the API credentials tab
-
 `SHOP_STORE`
 
 - `mystore.myshopify.com` (ex. `trellis-sandbox.myshopify.com`)
