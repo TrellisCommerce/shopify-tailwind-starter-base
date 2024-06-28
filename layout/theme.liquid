@@ -26,6 +26,10 @@
       <meta name='description' content='{{ page_description | escape }}'>
     {% endif %}
 
+    {% if template contains 'noindexnofollow' %}
+      <meta name='robots' content='noindex,nofollow'>
+    {% endif %}
+
     {% render 'meta-tags' %}
 
     <script src='{{ 'constants.js' | asset_url }}' defer='defer'></script>
