@@ -41,7 +41,8 @@ jobs:
         uses: shopify/theme-check-action@v1
         with:
           token: ${{ github.token }}
-  gi-visual-test:
+  gi-test:
+    name: Ghost Inspector Visual Test
     runs-on: ubuntu-latest
     steps:
       - name: execute Ghost Inspector test
