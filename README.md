@@ -54,6 +54,10 @@ First, make sure your `Workflow permissions` are set like below in order for the
 
 In your GitHub repo, navigate to Settings > Secrets > Actions and add the following repository secrets:
 
+`SHOP_ACCESS_TOKEN`
+
+- Settings > Apps and sales channels > Develop Apps > Create an app. Name it something like `Lighthouse` and give the app permissions of `read_products,write_themes`. Install the app and use the token value that will start with `shpat_`.
+
 `SHOP_STORE`
 
 - `mystore.myshopify.com` (ex. `trellis-sandbox.myshopify.com`)
