@@ -27,6 +27,7 @@ jobs:
       - name: Lighthouse
         uses: shopify/lighthouse-ci-action@v1
         with:
+          access_token: ${{ secrets.SHOP_ACCESS_TOKEN }}
           store: ${{ secrets.SHOP_STORE }}
           password: ${{ secrets.SHOP_PASSWORD }}
           lhci_github_app_token: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
@@ -48,6 +49,6 @@ jobs:
       - name: execute Ghost Inspector test
         uses: docker://ghostinspector/cli
         with:
-          args: test execute ${{ secrets.GI_SUITE }} \
+          args: test execute ${{ secrets.GI_TEST }} \
             --apiKey ${{ secrets.GI_API_KEY }} \
             --errorOnFail
