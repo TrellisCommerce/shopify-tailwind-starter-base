@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "banner": {
@@ -21,7 +30,7 @@
         "text_VyKiF7": {
           "type": "text",
           "settings": {
-            "text": "<p>Move elements around within the product cards on a global level - all product cards will inherit the same Tailwind classes! We used 'lg:twcss-flex lg:twcss-flex-row' on the product card containers to get the image on the right side of the card for larger screen sizes.<\/p>"
+            "text": "<p>Move elements around within the product cards on a global level - all product cards will inherit the same Tailwind classes! We used 'lg:twcss-flex lg:twcss-flex-row' on the product card containers to align the image left within the card for larger screen sizes.<\/p>"
           }
         }
       },
