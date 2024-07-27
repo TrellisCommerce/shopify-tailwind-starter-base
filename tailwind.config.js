@@ -55,14 +55,14 @@ important: true,
             primary: {
       red: '#E12727',
         grey: '#898E8E',
-      },
+    },
     // Flavors
     flavor: {
       chocolate: '#AC6E39',
         vanilla: '#ECD798',
           blue: '#079ADA',
             espresso: '#7F5EC7',
-      },
+    },
     // Secondary
     // The secondary palette should be utilized sparingly and for specific situations that call for seasonal and holiday-themed design or association.
     secondary: {
@@ -72,7 +72,7 @@ important: true,
             green: '#00793F',
               purple: '#3D3385',
                 blue: '#284196',
-      },
+    },
     // Greys
     // The grayscale palette should be utilized as a neutral complement to the primary and secondary colors in situations that call for more than a basic black background. They also provide a tool to create visual hierarchy in branded documentation.
     grey: {
@@ -82,26 +82,27 @@ important: true,
             darker: '#201E1D'
     },
   },
-  spacing: {
-    '8': '8px',
-      '16': '16px',
-        // Spacing between components for mobile
-        // Margins for mobile
-        '32': '32px',
-          // Spacing between components for tablet
-          // Margins for tablet
-          '48': '48px',
-            '64': '64px',
-              // Spacing between components for desktop
-              // Margins for desktop
-              '80': '80px',
-                '112': '112px',
-                  '144': '144px',
+},
+spacing: {
+  '8': '8px',
+    '16': '16px',
+      // Spacing between components for mobile
+      // Margins for mobile
+      '32': '32px',
+        // Spacing between components for tablet
+        // Margins for tablet
+        '48': '48px',
+          '64': '64px',
+            // Spacing between components for desktop
+            // Margins for desktop
+            '80': '80px',
+              '112': '112px',
+                '144': '144px',
     },
-  extend: {
-  },
+extend: {
+},
 
-  plugins: [],
+plugins: [],
       };
       
     },
