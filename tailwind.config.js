@@ -88,23 +88,22 @@ module.exports = {
         darker: '#201E1D',
       },
     },
+    spacing: {
+      8: '8px',
+      16: '16px',
+      // Spacing between components for mobile
+      // Margins for mobile
+      32: '32px',
+      // Spacing between components for tablet
+      // Margins for tablet
+      48: '48px',
+      64: '64px',
+      // Spacing between components for desktop
+      // Margins for desktop
+      80: '80px',
+      112: '112px',
+      144: '144px',
+    },
   },
-  spacing: {
-    8: '8px',
-    16: '16px',
-    // Spacing between components for mobile
-    // Margins for mobile
-    32: '32px',
-    // Spacing between components for tablet
-    // Margins for tablet
-    48: '48px',
-    64: '64px',
-    // Spacing between components for desktop
-    // Margins for desktop
-    80: '80px',
-    112: '112px',
-    144: '144px',
-  },
-  extend: {},
   plugins: [],
 };
