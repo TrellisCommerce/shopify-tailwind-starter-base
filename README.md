@@ -1,6 +1,6 @@
 Brought to you and maintained by [Trellis Commerce](https://trellis.co/) - A full-service eCommerce agency based in Boston, MA
 
-Latest merged code from [Dawn v14.0.0](https://github.com/Shopify/dawn/releases/tag/v14.0.0)
+Latest merged code from [Dawn v15.0.1](https://github.com/Shopify/dawn/releases/tag/v15.0.1)
 
 # Dawn + Tailwind CSS + Prettier Shopify Starter Theme
 
@@ -82,7 +82,7 @@ In your GitHub repo, navigate to Settings > Secrets > Actions and add the follow
 
 These secret values are used in the `ci.yml` GitHub workflow:
 
-<img width="500" alt="Secrets shown in the workflow file" src="https://user-images.githubusercontent.com/75811975/162518733-c1744910-85b2-44e3-91d0-08acfc018ba1.png">
+<img width="507" alt="Screenshot 2024-07-30 at 1 44 13 PM" src="https://github.com/user-attachments/assets/0c8f7af0-5a35-4cfe-b5e0-6ebcf7c86a41">
 
 ## Install [Shopify Liquid VSCode extension](https://marketplace.visualstudio.com/items?itemName=Shopify.theme-check-vscode)
 
