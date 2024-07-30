@@ -12,7 +12,9 @@ if (!customElements.get('quick-add-modal')) {
       }
 
       hide(preventFocus = false) {
-        const cartNotification = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+        const cartNotification =
+          document.querySelector('cart-notification') ||
+          document.querySelector('cart-drawer');
         if (cartNotification) cartNotification.setActiveElement(this.openedBy);
         this.modalContent.innerHTML = '';
 
@@ -28,11 +30,17 @@ if (!customElements.get('quick-add-modal')) {
         fetch(opener.getAttribute('data-product-url'))
           .then((response) => response.text())
           .then((responseText) => {
-            const responseHTML = new DOMParser().parseFromString(responseText, 'text/html');
+            const responseHTML = new DOMParser().parseFromString(
+              responseText,
+              'text/html',
+            );
             const productElement = responseHTML.querySelector('product-info');
 
             this.preprocessHTML(productElement);
-            HTMLUpdateUtility.setInnerHTML(this.modalContent, productElement.outerHTML);
+            HTMLUpdateUtility.setInnerHTML(
+              this.modalContent,
+              productElement.outerHTML,
+            );
 
             if (window.Shopify && Shopify.PaymentButton) {
               Shopify.PaymentButton.init();
@@ -65,7 +73,9 @@ if (!customElements.get('quick-add-modal')) {
       }
 
       removeDOMElements(productElement) {
-        const pickupAvailability = productElement.querySelector('pickup-availability');
+        const pickupAvailability = productElement.querySelector(
+          'pickup-availability',
+        );
         if (pickupAvailability) pickupAvailability.remove();
 
         const productModal = productElement.querySelector('product-modal');
@@ -80,10 +90,16 @@ if (!customElements.get('quick-add-modal')) {
 
         const oldId = sectionId;
         const newId = `quickadd-${sectionId}`;
-        productElement.innerHTML = productElement.innerHTML.replaceAll(oldId, newId);
+        productElement.innerHTML = productElement.innerHTML.replaceAll(
+          oldId,
+          newId,
+        );
         Array.from(productElement.attributes).forEach((attribute) => {
           if (attribute.value.includes(oldId)) {
-            productElement.setAttribute(attribute.name, attribute.value.replace(oldId, newId));
+            productElement.setAttribute(
+              attribute.name,
+              attribute.value.replace(oldId, newId),
+            );
           }
         });
 
@@ -91,11 +107,15 @@ if (!customElements.get('quick-add-modal')) {
       }
 
       removeGalleryListSemantic(productElement) {
-        const galleryList = productElement.querySelector('[id^="Slider-Gallery"]');
+        const galleryList = productElement.querySelector(
+          '[id^="Slider-Gallery"]',
+        );
         if (!galleryList) return;
 
         galleryList.setAttribute('role', 'presentation');
-        galleryList.querySelectorAll('[id^="Slide-"]').forEach((li) => li.setAttribute('role', 'presentation'));
+        galleryList
+          .querySelectorAll('[id^="Slide-"]')
+          .forEach((li) => li.setAttribute('role', 'presentation'));
       }
 
       updateImageSizes(productElement) {
@@ -115,8 +135,10 @@ if (!customElements.get('quick-add-modal')) {
           mediaImageSizes = mediaImageSizes.replace('715px', '495px');
         }
 
-        mediaImages.forEach((img) => img.setAttribute('sizes', mediaImageSizes));
+        mediaImages.forEach((img) =>
+          img.setAttribute('sizes', mediaImageSizes),
+        );
       }
-    }
+    },
   );
 }

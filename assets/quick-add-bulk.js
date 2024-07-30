@@ -8,7 +8,10 @@ if (!customElements.get('quick-add-bulk')) {
 
         const debouncedOnChange = debounce((event) => {
           if (parseInt(event.target.value) === 0) {
-            this.startQueue(event.target.dataset.index, parseInt(event.target.value));
+            this.startQueue(
+              event.target.dataset.index,
+              parseInt(event.target.value),
+            );
           } else {
             this.validateQuantity(event);
           }
@@ -23,20 +26,27 @@ if (!customElements.get('quick-add-bulk')) {
       }
 
       connectedCallback() {
-        this.cartUpdateUnsubscriber = subscribe(PUB_SUB_EVENTS.cartUpdate, (event) => {
-          if (
-            event.source === 'quick-add' ||
-            (event.cartData.items && !event.cartData.items.some((item) => item.id === parseInt(this.dataset.index))) ||
-            (event.cartData.variant_id && !(event.cartData.variant_id === parseInt(this.dataset.index)))
-          ) {
-            return;
-          }
-          // If its another section that made the update
-          this.onCartUpdate().then(() => {
-            this.listenForActiveInput();
-            this.listenForKeydown();
-          });
-        });
+        this.cartUpdateUnsubscriber = subscribe(
+          PUB_SUB_EVENTS.cartUpdate,
+          (event) => {
+            if (
+              event.source === 'quick-add' ||
+              (event.cartData.items &&
+                !event.cartData.items.some(
+                  (item) => item.id === parseInt(this.dataset.index),
+                )) ||
+              (event.cartData.variant_id &&
+                !(event.cartData.variant_id === parseInt(this.dataset.index)))
+            ) {
+              return;
+            }
+            // If its another section that made the update
+            this.onCartUpdate().then(() => {
+              this.listenForActiveInput();
+              this.listenForKeydown();
+            });
+          },
+        );
       }
 
       disconnectedCallback() {
@@ -55,7 +65,9 @@ if (!customElements.get('quick-add-bulk')) {
 
       listenForActiveInput() {
         if (!this.classList.contains('hidden')) {
-          this.getInput().addEventListener('focusin', (event) => event.target.select());
+          this.getInput().addEventListener('focusin', (event) =>
+            event.target.select(),
+          );
         }
         this.isEnterPressed = false;
       }
@@ -75,18 +87,27 @@ if (!customElements.get('quick-add-bulk')) {
           () => {
             event.target.setCustomValidity('');
           },
-          { once: true }
+          { once: true },
         );
       }
 
       onCartUpdate() {
         return new Promise((resolve, reject) => {
-          fetch(`${this.getSectionsUrl()}?section_id=${this.closest('.collection').dataset.id}`)
+          fetch(
+            `${this.getSectionsUrl()}?section_id=${
+              this.closest('.collection').dataset.id
+            }`,
+          )
             .then((response) => response.text())
             .then((responseText) => {
-              const html = new DOMParser().parseFromString(responseText, 'text/html');
+              const html = new DOMParser().parseFromString(
+                responseText,
+                'text/html',
+              );
               const sourceQty = html.querySelector(
-                `#quick-add-bulk-${this.dataset.id}-${this.closest('.collection').dataset.id}`
+                `#quick-add-bulk-${this.dataset.id}-${
+                  this.closest('.collection').dataset.id
+                }`,
               );
               if (sourceQty) {
                 this.innerHTML = sourceQty.innerHTML;
@@ -106,7 +127,9 @@ if (!customElements.get('quick-add-bulk')) {
         const ids = Object.keys(items);
         const body = JSON.stringify({
           updates: items,
-          sections: this.getSectionsToRender().map((section) => section.section),
+          sections: this.getSectionsToRender().map(
+            (section) => section.section,
+          ),
           sections_url: this.getSectionsUrl(),
         });
 
@@ -117,7 +140,10 @@ if (!customElements.get('quick-add-bulk')) {
           .then((state) => {
             const parsedState = JSON.parse(state);
             this.renderSections(parsedState, ids);
-            publish(PUB_SUB_EVENTS.cartUpdate, { source: 'quick-add', cartData: parsedState });
+            publish(PUB_SUB_EVENTS.cartUpdate, {
+              source: 'quick-add',
+              cartData: parsedState,
+            });
           })
           .catch(() => {
             // Commented out for now and will be fixed when BE issue is done https://github.com/Shopify/shopify/issues/440605
@@ -137,9 +163,13 @@ if (!customElements.get('quick-add-bulk')) {
       getSectionsToRender() {
         return [
           {
-            id: `quick-add-bulk-${this.dataset.id}-${this.closest('.collection-quick-add-bulk').dataset.id}`,
+            id: `quick-add-bulk-${this.dataset.id}-${
+              this.closest('.collection-quick-add-bulk').dataset.id
+            }`,
             section: this.closest('.collection-quick-add-bulk').dataset.id,
-            selector: `#quick-add-bulk-${this.dataset.id}-${this.closest('.collection-quick-add-bulk').dataset.id}`,
+            selector: `#quick-add-bulk-${this.dataset.id}-${
+              this.closest('.collection-quick-add-bulk').dataset.id
+            }`,
           },
           {
             id: 'cart-icon-bubble',
@@ -155,7 +185,9 @@ if (!customElements.get('quick-add-bulk')) {
       }
 
       renderSections(parsedState, ids) {
-        const intersection = this.queue.filter((element) => ids.includes(element.id));
+        const intersection = this.queue.filter((element) =>
+          ids.includes(element.id),
+        );
         if (intersection.length !== 0) return;
         this.getSectionsToRender().forEach((section) => {
           const sectionElement = document.getElementById(section.id);
@@ -169,7 +201,9 @@ if (!customElements.get('quick-add-bulk')) {
               : sectionElement.parentElement.classList.add('is-empty');
 
             setTimeout(() => {
-              document.querySelector('#CartDrawer-Overlay').addEventListener('click', this.cart.close.bind(this.cart));
+              document
+                .querySelector('#CartDrawer-Overlay')
+                .addEventListener('click', this.cart.close.bind(this.cart));
             });
           }
           const elementToReplace =
@@ -179,7 +213,7 @@ if (!customElements.get('quick-add-bulk')) {
           if (elementToReplace) {
             elementToReplace.innerHTML = this.getSectionInnerHTML(
               parsedState.sections[section.section],
-              section.selector
+              section.selector,
             );
           }
         });
@@ -191,6 +225,6 @@ if (!customElements.get('quick-add-bulk')) {
         this.listenForActiveInput();
         this.listenForKeydown();
       }
-    }
+    },
   );
 }
