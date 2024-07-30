@@ -34,10 +34,7 @@ variant-selects {
   width: 1px;
 }
 
-.product-form__input
-  input[type='radio']:not(.disabled):not(.visually-disabled)
-  + label
-  > .label-unavailable {
+.product-form__input input[type='radio']:not(.disabled):not(.visually-disabled) + label > .label-unavailable {
   display: none;
 }
 
@@ -61,8 +58,7 @@ variant-selects {
 
 /* Custom styles for Pill display type */
 .product-form__input--pill input[type='radio'] + label {
-  border: var(--variant-pills-border-width) solid
-    rgba(var(--color-foreground), var(--variant-pills-border-opacity));
+  border: var(--variant-pills-border-width) solid rgba(var(--color-foreground), var(--variant-pills-border-opacity));
   background-color: rgb(var(--color-background));
   color: rgba(var(--color-foreground));
   border-radius: var(--variant-pills-radius);
@@ -88,10 +84,8 @@ variant-selects {
   left: calc(var(--variant-pills-border-width) * -1);
   z-index: -1;
   border-radius: var(--variant-pills-radius);
-  box-shadow: var(--variant-pills-shadow-horizontal-offset)
-    var(--variant-pills-shadow-vertical-offset)
-    var(--variant-pills-shadow-blur-radius)
-    rgba(var(--color-shadow), var(--variant-pills-shadow-opacity));
+  box-shadow: var(--variant-pills-shadow-horizontal-offset) var(--variant-pills-shadow-vertical-offset)
+    var(--variant-pills-shadow-blur-radius) rgba(var(--color-shadow), var(--variant-pills-shadow-opacity));
 }
 
 .product-form__input--pill input[type='radio'] + label:hover {
@@ -130,14 +124,12 @@ variant-selects {
   color: rgba(var(--color-background), 0.6);
 }
 .product-form__input--pill input[type='radio']:focus-visible + label {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0 0.5rem rgba(var(--color-foreground), 0.55);
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0 0.5rem rgba(var(--color-foreground), 0.55);
 }
 
 /* Fallback */
 .product-form__input--pill input[type='radio'].focused + label {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0 0.5rem rgba(var(--color-foreground), 0.55);
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0 0.5rem rgba(var(--color-foreground), 0.55);
 }
 
 /* Custom styles for Swatch display type */

@@ -4,18 +4,9 @@ class DetailsModal extends HTMLElement {
     this.detailsContainer = this.querySelector('details');
     this.summaryToggle = this.querySelector('summary');
 
-    this.detailsContainer.addEventListener(
-      'keyup',
-      (event) => event.code.toUpperCase() === 'ESCAPE' && this.close(),
-    );
-    this.summaryToggle.addEventListener(
-      'click',
-      this.onSummaryClick.bind(this),
-    );
-    this.querySelector('button[type="button"]').addEventListener(
-      'click',
-      this.close.bind(this),
-    );
+    this.detailsContainer.addEventListener('keyup', (event) => event.code.toUpperCase() === 'ESCAPE' && this.close());
+    this.summaryToggle.addEventListener('click', this.onSummaryClick.bind(this));
+    this.querySelector('button[type="button"]').addEventListener('click', this.close.bind(this));
 
     this.summaryToggle.setAttribute('role', 'button');
   }
@@ -26,29 +17,22 @@ class DetailsModal extends HTMLElement {
 
   onSummaryClick(event) {
     event.preventDefault();
-    event.target.closest('details').hasAttribute('open')
-      ? this.close()
-      : this.open(event);
+    event.target.closest('details').hasAttribute('open') ? this.close() : this.open(event);
   }
 
   onBodyClick(event) {
-    if (
-      !this.contains(event.target) ||
-      event.target.classList.contains('modal-overlay')
-    )
-      this.close(false);
+    if (!this.contains(event.target) || event.target.classList.contains('modal-overlay')) this.close(false);
   }
 
   open(event) {
-    this.onBodyClickEvent =
-      this.onBodyClickEvent || this.onBodyClick.bind(this);
+    this.onBodyClickEvent = this.onBodyClickEvent || this.onBodyClick.bind(this);
     event.target.closest('details').setAttribute('open', true);
     document.body.addEventListener('click', this.onBodyClickEvent);
     document.body.classList.add('overflow-hidden');
 
     trapFocus(
       this.detailsContainer.querySelector('[tabindex="-1"]'),
-      this.detailsContainer.querySelector('input:not([type="hidden"])'),
+      this.detailsContainer.querySelector('input:not([type="hidden"])')
     );
   }
 

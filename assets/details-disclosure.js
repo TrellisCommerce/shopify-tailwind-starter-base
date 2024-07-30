@@ -2,13 +2,9 @@ class DetailsDisclosure extends HTMLElement {
   constructor() {
     super();
     this.mainDetailsToggle = this.querySelector('details');
-    this.content =
-      this.mainDetailsToggle.querySelector('summary').nextElementSibling;
+    this.content = this.mainDetailsToggle.querySelector('summary').nextElementSibling;
 
-    this.mainDetailsToggle.addEventListener(
-      'focusout',
-      this.onFocusOut.bind(this),
-    );
+    this.mainDetailsToggle.addEventListener('focusout', this.onFocusOut.bind(this));
     this.mainDetailsToggle.addEventListener('toggle', this.onToggle.bind(this));
   }
 
@@ -30,9 +26,7 @@ class DetailsDisclosure extends HTMLElement {
 
   close() {
     this.mainDetailsToggle.removeAttribute('open');
-    this.mainDetailsToggle
-      .querySelector('summary')
-      .setAttribute('aria-expanded', false);
+    this.mainDetailsToggle.querySelector('summary').setAttribute('aria-expanded', false);
   }
 }
 
@@ -48,15 +42,10 @@ class HeaderMenu extends DetailsDisclosure {
     if (!this.header) return;
     this.header.preventHide = this.mainDetailsToggle.open;
 
-    if (
-      document.documentElement.style.getPropertyValue(
-        '--header-bottom-position-desktop',
-      ) !== ''
-    )
-      return;
+    if (document.documentElement.style.getPropertyValue('--header-bottom-position-desktop') !== '') return;
     document.documentElement.style.setProperty(
       '--header-bottom-position-desktop',
-      `${Math.floor(this.header.getBoundingClientRect().bottom)}px`,
+      `${Math.floor(this.header.getBoundingClientRect().bottom)}px`
     );
   }
 }

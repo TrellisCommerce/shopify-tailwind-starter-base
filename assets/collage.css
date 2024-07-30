@@ -114,8 +114,7 @@
   height: 100%;
   position: relative;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid
-    rgba(var(--color-foreground), var(--border-opacity));
+  border: var(--border-width) solid rgba(var(--color-foreground), var(--border-opacity));
   padding: var(--image-padding);
 }
 
@@ -129,8 +128,8 @@
   position: absolute;
   z-index: -1;
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset)
-    var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
+  box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius)
+    rgba(var(--color-shadow), var(--shadow-opacity));
   width: calc(var(--border-width) * 2 + 100%);
   height: calc(var(--border-width) * 2 + 100%);
   top: calc(var(--border-width) * -1);
@@ -152,9 +151,7 @@
 .collage-card .media {
   height: 100%;
   overflow: hidden;
-  border-radius: calc(
-    var(--border-radius) - var(--border-width) - var(--image-padding)
-  );
+  border-radius: calc(var(--border-radius) - var(--border-width) - var(--image-padding));
 }
 
 .collage-card .deferred-media {
@@ -184,14 +181,12 @@
 }
 
 .collage-card .deferred-media__poster:focus:after {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
 }
 
 .collage-card .deferred-media__poster:focus-visible:after {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
 }
 

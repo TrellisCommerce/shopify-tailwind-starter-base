@@ -26,18 +26,10 @@ class CustomerAddresses {
       ? {
           container,
           addressContainer: container.querySelector(selectors.addressContainer),
-          toggleButtons: document.querySelectorAll(
-            selectors.toggleAddressButton,
-          ),
-          cancelButtons: container.querySelectorAll(
-            selectors.cancelAddressButton,
-          ),
-          deleteButtons: container.querySelectorAll(
-            selectors.deleteAddressButton,
-          ),
-          countrySelects: container.querySelectorAll(
-            selectors.addressCountrySelect,
-          ),
+          toggleButtons: document.querySelectorAll(selectors.toggleAddressButton),
+          cancelButtons: container.querySelectorAll(selectors.cancelAddressButton),
+          deleteButtons: container.querySelectorAll(selectors.deleteAddressButton),
+          countrySelects: container.querySelectorAll(selectors.addressCountrySelect),
         }
       : {};
   }
@@ -45,23 +37,15 @@ class CustomerAddresses {
   _setupCountries() {
     if (Shopify && Shopify.CountryProvinceSelector) {
       // eslint-disable-next-line no-new
-      new Shopify.CountryProvinceSelector(
-        'AddressCountryNew',
-        'AddressProvinceNew',
-        {
-          hideElement: 'AddressProvinceContainerNew',
-        },
-      );
+      new Shopify.CountryProvinceSelector('AddressCountryNew', 'AddressProvinceNew', {
+        hideElement: 'AddressProvinceContainerNew',
+      });
       this.elements.countrySelects.forEach((select) => {
         const formId = select.dataset.formId;
         // eslint-disable-next-line no-new
-        new Shopify.CountryProvinceSelector(
-          `AddressCountry_${formId}`,
-          `AddressProvince_${formId}`,
-          {
-            hideElement: `AddressProvinceContainer_${formId}`,
-          },
-        );
+        new Shopify.CountryProvinceSelector(`AddressCountry_${formId}`, `AddressProvince_${formId}`, {
+          hideElement: `AddressProvinceContainer_${formId}`,
+        });
       });
     }
   }
@@ -79,10 +63,7 @@ class CustomerAddresses {
   }
 
   _toggleExpanded(target) {
-    target.setAttribute(
-      attributes.expanded,
-      (target.getAttribute(attributes.expanded) === 'false').toString(),
-    );
+    target.setAttribute(attributes.expanded, (target.getAttribute(attributes.expanded) === 'false').toString());
   }
 
   _handleAddEditButtonClick = ({ currentTarget }) => {
@@ -90,11 +71,7 @@ class CustomerAddresses {
   };
 
   _handleCancelButtonClick = ({ currentTarget }) => {
-    this._toggleExpanded(
-      currentTarget
-        .closest(selectors.addressContainer)
-        .querySelector(`[${attributes.expanded}]`),
-    );
+    this._toggleExpanded(currentTarget.closest(selectors.addressContainer).querySelector(`[${attributes.expanded}]`));
   };
 
   _handleDeleteButtonClick = ({ currentTarget }) => {

@@ -8,9 +8,7 @@ function onIntersection(elements, observer) {
   elements.forEach((element, index) => {
     if (element.isIntersecting) {
       const elementTarget = element.target;
-      if (
-        elementTarget.classList.contains(SCROLL_ANIMATION_OFFSCREEN_CLASSNAME)
-      ) {
+      if (elementTarget.classList.contains(SCROLL_ANIMATION_OFFSCREEN_CLASSNAME)) {
         elementTarget.classList.remove(SCROLL_ANIMATION_OFFSCREEN_CLASSNAME);
         if (elementTarget.hasAttribute('data-cascade'))
           elementTarget.setAttribute('style', `--animation-order: ${index};`);
@@ -23,13 +21,8 @@ function onIntersection(elements, observer) {
   });
 }
 
-function initializeScrollAnimationTrigger(
-  rootEl = document,
-  isDesignModeEvent = false,
-) {
-  const animationTriggerElements = Array.from(
-    rootEl.getElementsByClassName(SCROLL_ANIMATION_TRIGGER_CLASSNAME),
-  );
+function initializeScrollAnimationTrigger(rootEl = document, isDesignModeEvent = false) {
+  const animationTriggerElements = Array.from(rootEl.getElementsByClassName(SCROLL_ANIMATION_TRIGGER_CLASSNAME));
   if (animationTriggerElements.length === 0) return;
 
   if (isDesignModeEvent) {
@@ -49,9 +42,7 @@ function initializeScrollAnimationTrigger(
 function initializeScrollZoomAnimationTrigger() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  const animationTriggerElements = Array.from(
-    document.getElementsByClassName(SCROLL_ZOOM_IN_TRIGGER_CLASSNAME),
-  );
+  const animationTriggerElements = Array.from(document.getElementsByClassName(SCROLL_ZOOM_IN_TRIGGER_CLASSNAME));
 
   if (animationTriggerElements.length === 0) return;
 
@@ -66,22 +57,16 @@ function initializeScrollZoomAnimationTrigger() {
     });
     observer.observe(element);
 
-    element.style.setProperty(
-      '--zoom-in-ratio',
-      1 + scaleAmount * percentageSeen(element),
-    );
+    element.style.setProperty('--zoom-in-ratio', 1 + scaleAmount * percentageSeen(element));
 
     window.addEventListener(
       'scroll',
       throttle(() => {
         if (!elementIsVisible) return;
 
-        element.style.setProperty(
-          '--zoom-in-ratio',
-          1 + scaleAmount * percentageSeen(element),
-        );
+        element.style.setProperty('--zoom-in-ratio', 1 + scaleAmount * percentageSeen(element));
       }),
-      { passive: true },
+      { passive: true }
     );
   });
 }
@@ -112,10 +97,6 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 if (Shopify.designMode) {
-  document.addEventListener('shopify:section:load', (event) =>
-    initializeScrollAnimationTrigger(event.target, true),
-  );
-  document.addEventListener('shopify:section:reorder', () =>
-    initializeScrollAnimationTrigger(document, true),
-  );
+  document.addEventListener('shopify:section:load', (event) => initializeScrollAnimationTrigger(event.target, true));
+  document.addEventListener('shopify:section:reorder', () => initializeScrollAnimationTrigger(document, true));
 }

@@ -10,8 +10,7 @@
   z-index: 3;
   border-bottom-right-radius: var(--popup-corner-radius);
   border-bottom-left-radius: var(--popup-corner-radius);
-  box-shadow: var(--popup-shadow-horizontal-offset)
-    var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)
+  box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)
     rgba(var(--color-shadow), var(--popup-shadow-opacity));
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -75,21 +74,17 @@ predictive-search[loading] .predictive-search {
 }
 
 @media screen and (min-width: 750px) {
-  .predictive-search__results-groups-wrapper--no-products
-    .predictive-search__result-group:nth-child(2),
-  .predictive-search__result-group:last-child
-    .predictive-search__pages-wrapper {
+  .predictive-search__results-groups-wrapper--no-products .predictive-search__result-group:nth-child(2),
+  .predictive-search__result-group:last-child .predictive-search__pages-wrapper {
     display: none;
   }
-  .predictive-search__result-group:first-child
-    .predictive-search__pages-wrapper {
+  .predictive-search__result-group:first-child .predictive-search__pages-wrapper {
     display: initial;
   }
   .predictive-search__result-group:first-child {
     flex: 0 0 26.4rem;
   }
-  .predictive-search__results-groups-wrapper--no-products
-    .predictive-search__result-group:first-child,
+  .predictive-search__results-groups-wrapper--no-products .predictive-search__result-group:first-child,
   .predictive-search__result-group:only-child {
     flex-grow: 1;
   }
@@ -123,15 +118,11 @@ predictive-search[loading] .predictive-search__search-for-button {
   display: none;
 }
 
-predictive-search[loading]
-  .predictive-search__results-groups-wrapper
-  ~ .predictive-search__loading-state {
+predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predictive-search__loading-state {
   display: none;
 }
 
-predictive-search[loading]
-  .predictive-search__results-groups-wrapper
-  ~ .predictive-search__search-for-button {
+predictive-search[loading] .predictive-search__results-groups-wrapper ~ .predictive-search__search-for-button {
   display: initial;
 }
 
@@ -143,8 +134,7 @@ predictive-search[loading]
   background-color: rgba(var(--color-foreground), 0.04);
 }
 
-.predictive-search__list-item[aria-selected='true']
-  .predictive-search__item-heading,
+.predictive-search__list-item[aria-selected='true'] .predictive-search__item-heading,
 .predictive-search__list-item:hover .predictive-search__item-heading {
   text-decoration: underline;
   text-underline-offset: 0.3rem;

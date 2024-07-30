@@ -10,12 +10,8 @@ class MainSearch extends SearchForm {
     this.allSearchInputs.forEach((input) => allSearchForms.push(input.form));
     this.input.addEventListener('focus', this.onInputFocus.bind(this));
     if (allSearchForms.length < 2) return;
-    allSearchForms.forEach((form) =>
-      form.addEventListener('reset', this.onFormReset.bind(this)),
-    );
-    this.allSearchInputs.forEach((input) =>
-      input.addEventListener('input', this.onInput.bind(this)),
-    );
+    allSearchForms.forEach((form) => form.addEventListener('reset', this.onFormReset.bind(this)));
+    this.allSearchInputs.forEach((input) => input.addEventListener('input', this.onInput.bind(this)));
   }
 
   onFormReset(event) {

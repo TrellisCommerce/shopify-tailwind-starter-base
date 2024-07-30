@@ -1,8 +1,8 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Dawn",
-    "theme_version": "13.0.0",
+    "theme_name": "Trade",
+    "theme_version": "15.0.1",
     "theme_author": "Shopify",
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
     "theme_support_url": "https://support.shopify.com/"
@@ -154,10 +154,10 @@
       {
         "type": "range",
         "id": "page_width",
-        "min": 1200,
+        "min": 1000,
         "max": 1600,
-        "step": 10,
-        "default": 1440,
+        "step": 100,
+        "default": 1200,
         "unit": "px",
         "label": "t:settings_schema.layout.settings.page_width.label"
       },

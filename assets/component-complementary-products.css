@@ -18,13 +18,9 @@ product-recommendations:not(.is-accordion) .complementary-products__container {
 }
 
 .complementary-slide {
-  --shadow-padding-sides: calc(
-    (var(--shadow-horizontal-offset) + var(--shadow-blur-radius)) *
-      var(--shadow-visible)
-  );
+  --shadow-padding-sides: calc((var(--shadow-horizontal-offset) + var(--shadow-blur-radius)) * var(--shadow-visible));
   --shadow-padding-sides-negative: calc(
-    (var(--shadow-horizontal-offset) * -1 + var(--shadow-blur-radius)) *
-      var(--shadow-visible)
+    (var(--shadow-horizontal-offset) * -1 + var(--shadow-blur-radius)) * var(--shadow-visible)
   );
 }
 
@@ -51,15 +47,9 @@ product-recommendations:not(.is-accordion) .complementary-products__container {
 .complementary-slide.grid__item {
   width: 100%;
   padding-top: max(var(--focus-outline-padding), var(--shadow-padding-top));
-  padding-bottom: max(
-    var(--focus-outline-padding),
-    var(--shadow-padding-bottom)
-  );
+  padding-bottom: max(var(--focus-outline-padding), var(--shadow-padding-bottom));
   padding-right: max(var(--focus-outline-padding), var(--shadow-padding-sides));
-  padding-left: max(
-    var(--focus-outline-padding),
-    var(--shadow-padding-sides-negative)
-  );
+  padding-left: max(var(--focus-outline-padding), var(--shadow-padding-sides-negative));
 }
 
 .complementary-slide .card-wrapper {
@@ -117,9 +107,7 @@ product-recommendations.is-accordion + .accordion {
 }
 
 .complementary-products__container .card--card .card__inner .card__media {
-  border-radius: calc(
-    var(--corner-radius) - var(--border-width) - var(--image-padding)
-  );
+  border-radius: calc(var(--corner-radius) - var(--border-width) - var(--image-padding));
 }
 
 .complementary-products__container .card--horizontal .quick-add {
@@ -144,15 +132,11 @@ product-recommendations.is-accordion + .accordion {
   display: none;
 }
 
-.complementary-products__container
-  .quick-add__submit:not(.animate-arrow)
-  .icon-wrap {
+.complementary-products__container .quick-add__submit:not(.animate-arrow) .icon-wrap {
   transition: transform var(--duration-short) ease;
 }
 
-.complementary-products__container
-  .quick-add__submit:not(.animate-arrow):hover
-  .icon-wrap {
+.complementary-products__container .quick-add__submit:not(.animate-arrow):hover .icon-wrap {
   transform: rotate(90deg);
 }
 

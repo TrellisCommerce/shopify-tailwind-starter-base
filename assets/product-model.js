@@ -21,11 +21,9 @@ if (!customElements.get('product-model')) {
       setupModelViewerUI(errors) {
         if (errors) return;
 
-        this.modelViewerUI = new Shopify.ModelViewerUI(
-          this.querySelector('model-viewer'),
-        );
+        this.modelViewerUI = new Shopify.ModelViewerUI(this.querySelector('model-viewer'));
       }
-    },
+    }
   );
 }
 
@@ -44,9 +42,7 @@ window.ProductModel = {
     if (errors) return;
 
     if (!window.ShopifyXR) {
-      document.addEventListener('shopify_xr_initialized', () =>
-        this.setupShopifyXR(),
-      );
+      document.addEventListener('shopify_xr_initialized', () => this.setupShopifyXR());
       return;
     }
 
