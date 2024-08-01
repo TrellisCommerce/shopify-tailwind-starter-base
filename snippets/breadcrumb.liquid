@@ -1,0 +1,17 @@
+{% comment %}
+  Renders breadcrumbs
+  Usage:
+  {% render 'breadcrumb' %}
+{% endcomment %}
+
+<nav aria-label="breadcrumbs">
+  <ol class="breadcrumbs">
+    {%- for link in section.settings.menu.links -%}
+      {%- if link.links != blank -%}
+        <li class="breadcrumb-item">
+          <a href='{{ link.url }}'>{{ link.title | escape }}</a>
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
+  </ol>
+</nav>
