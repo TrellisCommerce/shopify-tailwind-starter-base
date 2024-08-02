@@ -449,6 +449,14 @@
         </form>
       </cart-drawer-items>
       <div class="drawer__footer">
+        {%- if cart != empty -%}
+          {%- if settings.show_clear_cart -%}
+            <cart-clear-button>
+              <button class="underlined-link twcss-capitalize twcss-block twcss-mb-8 twcss-ml-auto">{{ 'sections.cart.cart_clear' | t }}</button>
+            </cart-clear-button>
+          {%- endif -%}
+        {%- endif -%}
+
         {%- if settings.show_cart_note -%}
           <details id="Details-CartDrawer">
             <summary>
