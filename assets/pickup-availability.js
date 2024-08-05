@@ -40,8 +40,17 @@ if (!customElements.get('pickup-availability')) {
           });
       }
 
-      onClickRefreshList(evt) {
+      onClickRefreshList() {
         this.fetchAvailability(this.dataset.variantId);
+      }
+
+      update(variant) {
+        if (variant?.available) {
+          this.fetchAvailability(variant.id);
+        } else {
+          this.removeAttribute('available');
+          this.innerHTML = '';
+        }
       }
 
       renderError() {

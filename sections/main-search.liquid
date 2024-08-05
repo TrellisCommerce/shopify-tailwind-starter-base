@@ -254,6 +254,7 @@
                 class='grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop'
                 role='list'
               >
+                {%- assign skip_card_product_styles = false -%}
                 {%- for item in search.results -%}
                   {% assign lazy_load = false %}
                   {%- if forloop.index > 2 -%}
@@ -284,8 +285,10 @@
                           twcss_product_card_price_sale: settings.twcss_product_card_price_sale,
                           twcss_product_card_caption: settings.twcss_product_card_caption,
                           twcss_product_card_badge: settings.twcss_product_card_badge,
-                          twcss_product_card_button: settings.twcss_product_card_button
+                          twcss_product_card_button: settings.twcss_product_card_button,
+                          skip_styles: skip_card_product_styles
                         %}
+                        {%- assign skip_card_product_styles = true -%}
                       {%- when 'article' -%}
                         {% render 'article-card',
                           article: item,

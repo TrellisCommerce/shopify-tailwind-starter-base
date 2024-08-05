@@ -26,6 +26,7 @@
       </h2>
     {%- endif -%}
     <div class='collage{% if section.settings.mobile_layout == 'collage' %} collage--mobile{% endif %}'>
+      {% assign skip_card_product_styles = false %}
       {%- for block in section.blocks -%}
         <div
           class='collage__item collage__item--{{ block.type }} collage__item--{{ section.settings.desktop_layout }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}'
@@ -105,8 +106,10 @@
                 twcss_product_card_caption: settings.twcss_product_card_caption,
                 twcss_product_card_badge: settings.twcss_product_card_badge,
                 twcss_product_card_button: settings.twcss_product_card_button,
-                placeholder_image: placeholder_image
+                placeholder_image: placeholder_image,
+                skip_styles: skip_card_product_styles
               %}
+              {% assign skip_card_product_styles = true %}
             {%- when 'collection' -%}
               {%- assign placeholder_image = 'collection-apparel-' | append: placeholder_image_index -%}
               {% render 'card-collection',
@@ -232,7 +235,7 @@
     {
       "type": "inline_richtext",
       "id": "heading",
-      "default": "Multimedia collage",
+      "default": "t:sections.collage.settings.heading.default",
       "label": "t:sections.collage.settings.heading.label"
     },
     {
@@ -250,6 +253,14 @@
         {
           "value": "h0",
           "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__4.label"
+        },
+        {
+          "value": "hxxl",
+          "label": "t:sections.all.heading_size.options__5.label"
         }
       ],
       "default": "h1",
@@ -406,7 +417,7 @@
         {
           "type": "text",
           "id": "description",
-          "default": "Describe the video",
+          "default": "t:sections.collage.blocks.video.settings.description.default",
           "label": "t:sections.collage.blocks.video.settings.description.label",
           "info": "t:sections.collage.blocks.video.settings.description.info"
         }

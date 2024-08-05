@@ -165,7 +165,7 @@
                         {%- for discount in item.line_level_discount_allocations -%}
                           <li class="discounts__discount">
                             {%- render 'icon-discount' -%}
-                            {{ discount.discount_application.title }}
+                            {{ discount.discount_application.title | escape }}
                           </li>
                         {%- endfor -%}
                       </ul>
@@ -235,7 +235,7 @@
                               <button
                                 type="button"
                                 aria-expanded="false"
-                                class="quantity-popover__info-button quantity-popover__info-button--icon-only button button--tertiary small-hide"
+                                class="quantity-popover__info-button quantity-popover__info-button--icon-only button button--tertiary small-hide medium-hide"
                               >
                                 {% render 'icon-info' %}
                               </button>
@@ -281,7 +281,7 @@
                             <a
                               href="{{ item.url_to_remove }}"
                               class="button button--tertiary"
-                              aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
+                              aria-label="{{ 'sections.cart.remove_title' | t: title: item.title | escape }}"
                             >
                               {% render 'icon-remove' %}
                             </a>
@@ -290,7 +290,7 @@
                         {%- if has_qty_rules or has_vol_pricing -%}
                           <button
                             type="button"
-                            class="quantity-popover__info-button quantity-popover__info-button--icon-with-label button button--tertiary medium-hide large-up-hide"
+                            class="quantity-popover__info-button quantity-popover__info-button--icon-with-label button button--tertiary large-up-hide"
                             aria-expanded="false"
                           >
                             {% render 'icon-info' %}
@@ -341,7 +341,7 @@
                               {%- endif -%}
                             </div>
                             <button
-                              class="button-close button button--tertiary medium-hide large-up-hide"
+                              class="button-close button button--tertiary large-up-hide"
                               type="button"
                               aria-label="{{ 'accessibility.close' | t }}"
                             >

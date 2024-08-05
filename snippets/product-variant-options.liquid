@@ -34,7 +34,7 @@
     endif
 
     assign option_disabled = true
-    if value.variant.available
+    if value.available
       assign option_disabled = false
     endif
   -%}
@@ -48,7 +48,6 @@
   {%- endcapture -%}
 
   {%- capture input_dataset -%}
-    data-available="{{ value.variant.available }}"
     data-product-url="{{ value.product_url }}"
     data-option-value-id="{{ value.id }}"
   {%- endcapture -%}
@@ -81,7 +80,7 @@
     <input
       type="radio"
       id="{{ input_id }}"
-      name="{{ input_name }}"
+      name="{{ input_name | escape }}"
       value="{{ value | escape }}"
       form="{{ product_form_id }}"
       {% if value.selected %}
@@ -118,8 +117,4 @@
       {%- endif %}
     </option>
   {%- endif -%}
-
-  <script type="application/json" data-resource="{{ input_id }}">
-    {{ value.variant | json }}
-  </script>
 {%- endfor -%}
