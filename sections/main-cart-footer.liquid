@@ -23,6 +23,14 @@
   data-id="{{ section.id }}"
 >
   <div class="page-width">
+    {%- if cart != empty -%}
+      {%- if settings.show_clear_cart -%}
+        <cart-clear-button>
+          <button class="button twcss-capitalize twcss-block twcss-mb-8">{{ 'sections.cart.cart_clear' | t }}</button>
+        </cart-clear-button>
+      {%- endif -%}
+    {%- endif -%}
+
     <div class="cart__footer isolate section-{{ section.id }}-padding">
       {%- if settings.show_cart_note -%}
         <cart-note class="cart__note field">
