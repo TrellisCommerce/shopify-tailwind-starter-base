@@ -569,3 +569,7 @@ video {
 .twcss-capitalize {
   text-transform: capitalize;
 }
+
+.twcss-underline {
+  text-decoration-line: underline;
+}
