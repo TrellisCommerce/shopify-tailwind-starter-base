@@ -554,6 +554,23 @@ video {
   --tw-contain-style:  ;
 }
 
+.twcss-relative {
+  position: relative;
+}
+
+.twcss-z-0 {
+  z-index: 0;
+}
+
+.twcss-z-10 {
+  z-index: 10;
+}
+
+.twcss-my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .twcss-mb-8 {
   margin-bottom: 2rem;
 }
@@ -564,6 +581,14 @@ video {
 
 .twcss-block {
   display: block;
+}
+
+.twcss-flex {
+  display: flex;
+}
+
+.twcss-gap-3 {
+  gap: 0.75rem;
 }
 
 .twcss-capitalize {
