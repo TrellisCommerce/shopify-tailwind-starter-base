@@ -4,13 +4,27 @@
   {% render 'breadcrumb' %}
 {% endcomment %}
 
-<nav aria-label="breadcrumbs">
-  <ol class="breadcrumbs">
+<nav aria-label="breadcrumbs" class="page-width twcss-my-8">
+  <ol class="breadcrumbs twcss-flex twcss-gap-3">
     {%- for link in section.settings.menu.links -%}
       {%- if link.links != blank -%}
         <li class="breadcrumb-item">
           <a href='{{ link.url }}'>{{ link.title | escape }}</a>
         </li>
+        {%- for childlink in link.links -%}
+          <span aria-hidden="true" focusable="false">/</span>
+          <li class="breadcrumb-item">
+            <a href='{{ childlink.url }}'>{{ childlink.title | escape }}</a>
+          </li>
+          {%- if childlink.links != blank -%}
+            {%- for grandchildlink in childlink.links -%}
+              <span aria-hidden="true" focusable="false">/</span>
+              <li class="breadcrumb-item">
+                <a href='{{ grandchildlink.url }}'>{{ grandchildlink.title | escape }}</a>
+              </li>
+            {%- endfor -%}
+          {%- endif -%}
+        {%- endfor -%}
       {%- endif -%}
     {%- endfor -%}
   </ol>
