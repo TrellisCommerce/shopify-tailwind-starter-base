@@ -452,7 +452,9 @@
   </script>
 {%- endif -%}
 
-{%- render 'breadcrumb' -%}
+{%- unless request.page_type == 'index' -%}
+  {%- render 'breadcrumb' -%}
+{%- endunless -%}
 
 {% schema %}
 {
