@@ -4,27 +4,122 @@
   {% render 'breadcrumb' %}
 {% endcomment %}
 
-<nav aria-label="breadcrumbs" class="page-width twcss-my-8">
+<nav aria-label="breadcrumbs" class="page-width twcss-my-8 twcss-z-0 twcss-relative">
   <ol class="breadcrumbs twcss-flex twcss-gap-3">
     {%- for link in section.settings.menu.links -%}
-      {%- if link.links != blank -%}
-        <li class="breadcrumb-item">
-          <a href='{{ link.url }}'>{{ link.title | escape }}</a>
-        </li>
-        {%- for childlink in link.links -%}
-          <span aria-hidden="true" focusable="false">/</span>
-          <li class="breadcrumb-item">
-            <a href='{{ childlink.url }}'>{{ childlink.title | escape }}</a>
-          </li>
-          {%- if childlink.links != blank -%}
-            {%- for grandchildlink in childlink.links -%}
+      {%- if link.links != blank -%}  
+        {%- if link.current %}
+          {% comment %}
+            First level of navigation menu items
+          {% endcomment %}
+            <li class="breadcrumb-item">
+              <a href='/'>Home</a>
+            </li>
+            <span aria-hidden="true" focusable="false">/</span>
+            <li class="breadcrumb-item">
+              <a href='{{ link.url }}'>{{ link.title | escape }}</a>
+            </li>
+        {%- else -%}
+          {%- for childlink in link.links -%}
+            {%- if childlink.current %}
+              {% comment %}
+                Second level of navigation menu items
+              {% endcomment %}
+              <li class="breadcrumb-item">
+                <a href='/'>Home</a>
+              </li>
               <span aria-hidden="true" focusable="false">/</span>
               <li class="breadcrumb-item">
-                <a href='{{ grandchildlink.url }}'>{{ grandchildlink.title | escape }}</a>
+                <a href='{{ link.url }}'>{{ link.title | escape }}</a>
               </li>
-            {%- endfor -%}
-          {%- endif -%}
-        {%- endfor -%}
+              <span aria-hidden="true" focusable="false">/</span>
+              <li class="breadcrumb-item">
+                <a href='{{ childlink.url }}'>{{ childlink.title | escape }}</a>
+              </li>
+            {%- else -%}
+              {%- for grandchildlink in childlink.links -%}
+                {%- if grandchildlink.current %}
+                  {% comment %}
+                    Third level of navigation menu items
+                  {% endcomment %}
+                  <li class="breadcrumb-item">
+                    <a href='/'>Home</a>
+                  </li>
+                  <span aria-hidden="true" focusable="false">/</span>
+                  <li class="breadcrumb-item">
+                    <a href='{{ link.url }}'>{{ link.title | escape }}</a>
+                  </li>
+                  <span aria-hidden="true" focusable="false">/</span>
+                  <li class="breadcrumb-item">
+                    <a href='{{ childlink.url }}'>{{ childlink.title | escape }}</a>
+                  </li>
+                  <span aria-hidden="true" focusable="false">/</span>
+                  <li class="breadcrumb-item">
+                    <a href='{{ grandchildlink.url }}'>{{ grandchildlink.title | escape }}</a>
+                  </li>
+                {% else %}
+                  {%- for greatgrandchildlink in grandchildlink.links -%}
+                    {%- if greatgrandchildlink.current %}
+                      {% comment %}
+                        Fourth level of navigation menu items
+                      {% endcomment %}
+                      <li class="breadcrumb-item">
+                        <a href='/'>Home</a>
+                      </li>
+                      <span aria-hidden="true" focusable="false">/</span>
+                      <li class="breadcrumb-item">
+                        <a href='{{ link.url }}'>{{ link.title | escape }}</a>
+                      </li>
+                      <span aria-hidden="true" focusable="false">/</span>
+                      <li class="breadcrumb-item">
+                        <a href='{{ childlink.url }}'>{{ childlink.title | escape }}</a>
+                      </li>
+                      <span aria-hidden="true" focusable="false">/</span>
+                      <li class="breadcrumb-item">
+                        <a href='{{ grandchildlink.url }}'>{{ grandchildlink.title | escape }}</a>
+                      </li>
+                      <span aria-hidden="true" focusable="false">/</span>
+                      <li class="breadcrumb-item">
+                        <a href='{{ greatgrandchildlink.url }}'>{{ greatgrandchildlink.title | escape }}</a>
+                      </li>
+                    {%- else -%}
+                      {%- for greatgreatgrandchildlink in greatgrandchildlink.links -%}
+                        {%- if greatgreatgrandchildlink.current %}
+                          {% comment %}
+                            Fifth level of navigation menu items
+                          {% endcomment %}
+                          <li class="breadcrumb-item">
+                            <a href='/'>Home</a>
+                          </li>
+                          <span aria-hidden="true" focusable="false">/</span>
+                          <li class="breadcrumb-item">
+                            <a href='{{ link.url }}'>{{ link.title | escape }}</a>
+                          </li>
+                          <span aria-hidden="true" focusable="false">/</span>
+                          <li class="breadcrumb-item">
+                            <a href='{{ childlink.url }}'>{{ childlink.title | escape }}</a>
+                          </li>
+                          <span aria-hidden="true" focusable="false">/</span>
+                          <li class="breadcrumb-item">
+                            <a href='{{ grandchildlink.url }}'>{{ grandchildlink.title | escape }}</a>
+                          </li>
+                          <span aria-hidden="true" focusable="false">/</span>
+                          <li class="breadcrumb-item">
+                            <a href='{{ greatgrandchildlink.url }}'>{{ greatgrandchildlink.title | escape }}</a>
+                          </li>
+                          <span aria-hidden="true" focusable="false">/</span>
+                          <li class="breadcrumb-item">
+                            <a href='{{ greatgreatgrandchildlink.url }}'>{{ greatgreatgrandchildlink.title | escape }}</a>
+                          </li>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    {% endif %}
+                  {%- endfor -%}
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
       {%- endif -%}
     {%- endfor -%}
   </ol>
