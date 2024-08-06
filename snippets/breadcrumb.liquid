@@ -17,7 +17,7 @@
             </li>
             <span aria-hidden="true" focusable="false">/</span>
             <li class="breadcrumb-item">
-              <a href='{{ link.url }}'>{{ link.title | escape }}</a>
+              <a href='{{ link.url }}' aria-current="page">{{ link.title | escape }}</a>
             </li>
         {%- else -%}
           {%- for childlink in link.links -%}
@@ -34,7 +34,7 @@
               </li>
               <span aria-hidden="true" focusable="false">/</span>
               <li class="breadcrumb-item">
-                <a href='{{ childlink.url }}'>{{ childlink.title | escape }}</a>
+                <a href='{{ childlink.url }}' aria-current="page">{{ childlink.title | escape }}</a>
               </li>
             {%- else -%}
               {%- for grandchildlink in childlink.links -%}
@@ -55,7 +55,7 @@
                   </li>
                   <span aria-hidden="true" focusable="false">/</span>
                   <li class="breadcrumb-item">
-                    <a href='{{ grandchildlink.url }}'>{{ grandchildlink.title | escape }}</a>
+                    <a href='{{ grandchildlink.url }}' aria-current="page">{{ grandchildlink.title | escape }}</a>
                   </li>
                 {% else %}
                   {%- for greatgrandchildlink in grandchildlink.links -%}
@@ -80,7 +80,7 @@
                       </li>
                       <span aria-hidden="true" focusable="false">/</span>
                       <li class="breadcrumb-item">
-                        <a href='{{ greatgrandchildlink.url }}'>{{ greatgrandchildlink.title | escape }}</a>
+                        <a href='{{ greatgrandchildlink.url }}' aria-current="page">{{ greatgrandchildlink.title | escape }}</a>
                       </li>
                     {%- else -%}
                       {%- for greatgreatgrandchildlink in greatgrandchildlink.links -%}
@@ -109,7 +109,7 @@
                           </li>
                           <span aria-hidden="true" focusable="false">/</span>
                           <li class="breadcrumb-item">
-                            <a href='{{ greatgreatgrandchildlink.url }}'>{{ greatgreatgrandchildlink.title | escape }}</a>
+                            <a href='{{ greatgreatgrandchildlink.url }}' aria-current="page">{{ greatgreatgrandchildlink.title | escape }}</a>
                           </li>
                         {%- endif -%}
                       {%- endfor -%}
