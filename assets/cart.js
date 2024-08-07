@@ -1,3 +1,22 @@
+class CartClearButton extends HTMLElement {
+  constructor() {
+    super();
+
+    this.addEventListener('click', (event) => {
+      event.preventDefault();
+      const formData = new FormData();
+      fetch(window.Shopify.routes.root + 'cart/clear.js', {
+        method: 'POST',
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((data) => window.location.reload());
+    });
+  }
+}
+
+customElements.define('cart-clear-button', CartClearButton);
+
 class CartRemoveButton extends HTMLElement {
   constructor() {
     super();
