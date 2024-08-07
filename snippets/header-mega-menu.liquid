@@ -8,6 +8,7 @@
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}
+      {% assign parent_index = forloop.index %}
       <li>
         {%- if link.links != blank -%}
           <header-menu>
@@ -61,9 +62,53 @@
                                 {{ grandchildlink.title | escape }}
                               </a>
                             </li>
+                            {%- if grandchildlink.links != blank -%}
+                              <ul class="list-unstyled" role="list">
+                                {%- for greatgrandchildlink in grandchildlink.links -%}
+                                  <li>
+                                    <a
+                                      id="HeaderMenu-{{ link.handle }}-{{ grandchildlink.handle }}-{{ greatgrandchildlink.handle }}"
+                                      href="{{ greatgrandchildlink.url }}"
+                                      class="mega-menu__link link{% if greatgrandchildlink.current %} mega-menu__link--active{% endif %}"
+                                      {% if greatgrandchildlink.current %}
+                                        aria-current="page"
+                                      {% endif %}
+                                    >
+                                      {{ greatgrandchildlink.title | escape }}
+                                    </a>
+                                  </li>
+                                  {%- if greatgrandchildlink.links != blank -%}
+                                    <ul class="list-unstyled" role="list">
+                                      {%- for greatgreatgrandchildlink in greatgrandchildlink.links -%}
+                                        <li>
+                                          <a
+                                            id="HeaderMenu-{{ link.handle }}-{{ greatgrandchildlink.handle }}-{{ greatgreatgrandchildlink.handle }}"
+                                            href="{{ greatgreatgrandchildlink.url }}"
+                                            class="mega-menu__link link{% if greatgreatgrandchildlink.current %} mega-menu__link--active{% endif %}"
+                                            {% if greatgreatgrandchildlink.current %}
+                                              aria-current="page"
+                                            {% endif %}
+                                          >
+                                            {{ greatgreatgrandchildlink.title | escape }}
+                                          </a>
+                                        </li>
+                                      {%- endfor -%}
+                                    </ul>
+                                    {%- endif -%}
+                                {%- endfor -%}
+                              </ul>
+                            {%- endif -%}
                           {%- endfor -%}
                         </ul>
                       {%- endif -%}
+                      {%- for block in blocks -%}
+                        {% case block.type %}
+                          {%- when 'promotional' -%}
+                            {%- if block.settings.promotional_index == parent_index -%}
+                              {{ block.settings.promotional_headline }}
+                            {%- endif -%}
+                        {% endcase %}
+                      {%- endfor -%}
                     </li>
                   {%- endfor -%}
                 </ul>
