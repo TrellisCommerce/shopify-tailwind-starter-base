@@ -1,6 +1,6 @@
 Brought to you and maintained by [Trellis Commerce](https://trellis.co/) - A full-service eCommerce agency based in Boston, MA
 
-Latest merged code from [Dawn v13.0.1](https://github.com/Shopify/dawn/releases/tag/v13.0.1)
+Latest merged code from [Dawn v15.0.1](https://github.com/Shopify/dawn/releases/tag/v15.0.1)
 
 # Dawn + Tailwind CSS + Prettier Shopify Starter Theme
 
@@ -20,6 +20,7 @@ The starter theme includes an integration of:
 ## Other Noted Modifications
 
 - Set the default page width to 1440px and tweaked the desktop page width range to be 1200px to 1600px with a step adjustment of 10px (standard desktop width used at Trellis and allows for more fine tuning)
+- There is a page template called `noindexnofollow` with the meta tag `noindex, nofollow` for any pages that need to be hidden from search engine site crawlers
 
 ## Steps to Start Using this Starter Theme
 
@@ -54,16 +55,9 @@ First, make sure your `Workflow permissions` are set like below in order for the
 
 In your GitHub repo, navigate to Settings > Secrets > Actions and add the following repository secrets:
 
-`SHOP_APP_ID` & `SHOP_APP_PASSWORD`
+`SHOP_ACCESS_TOKEN`
 
-- Get values by navigating to https://mystore.myshopify.com/admin/apps/development, select the theme kit app, and copy the API key value for `SHOP_APP_ID` & Admin API access token value for `SHOP_APP_PASSWORD` (value starts with shpat)
-- Notes on how to get these values:
-
-1. Navigate to the Apps section in your Shopify admin and click the Develop apps button in the top right
-2. Then Allow custom app development
-3. You should be able to click the Create an app button
-4. In the configuration tab of your app, go ahead and check all the boxes for the Admin and Storefront API permissions
-5. The API key & Admin API access token will be in the API credentials tab
+- Settings > Apps and sales channels > Develop Apps > Create an app. Name it something like `Lighthouse` and give the app permissions of `read_products,write_themes`. Install the app and use the token value that will start with `shpat_`.
 
 `SHOP_STORE`
 
@@ -88,7 +82,7 @@ In your GitHub repo, navigate to Settings > Secrets > Actions and add the follow
 
 These secret values are used in the `ci.yml` GitHub workflow:
 
-<img width="500" alt="Secrets shown in the workflow file" src="https://user-images.githubusercontent.com/75811975/162518733-c1744910-85b2-44e3-91d0-08acfc018ba1.png">
+<img width="507" alt="Screenshot 2024-07-30 at 1 44 13 PM" src="https://github.com/user-attachments/assets/0c8f7af0-5a35-4cfe-b5e0-6ebcf7c86a41">
 
 ## Install [Shopify Liquid VSCode extension](https://marketplace.visualstudio.com/items?itemName=Shopify.theme-check-vscode)
 

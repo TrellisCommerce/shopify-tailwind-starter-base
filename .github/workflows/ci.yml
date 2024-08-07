@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Generate Tailwind CSS
         uses: ZoeyVid/tailwindcss-update@main
         with:
@@ -15,6 +15,7 @@ jobs:
           params: ""
       - name: Commit & Push
         run: |
+          git add --force assets/app.css
           git config user.name "GitHub"
           git config user.email "noreply@github.com"
           git diff-index --quiet HEAD || git commit -m "ci: tailwindcss-update"
@@ -27,8 +28,7 @@ jobs:
       - name: Lighthouse
         uses: shopify/lighthouse-ci-action@v1
         with:
-          app_id: ${{ secrets.SHOP_APP_ID }}
-          app_password: ${{ secrets.SHOP_APP_PASSWORD }}
+          access_token: ${{ secrets.SHOP_ACCESS_TOKEN }}
           store: ${{ secrets.SHOP_STORE }}
           password: ${{ secrets.SHOP_PASSWORD }}
           lhci_github_app_token: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
