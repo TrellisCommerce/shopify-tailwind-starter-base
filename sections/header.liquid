@@ -452,6 +452,10 @@
   </script>
 {%- endif -%}
 
+{%- unless request.page_type == 'index' -%}
+  {%- render 'breadcrumb' -%}
+{%- endunless -%}
+
 {% schema %}
 {
   "name": "t:sections.header.name",

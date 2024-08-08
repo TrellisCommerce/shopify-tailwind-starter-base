@@ -1,0 +1,226 @@
+{% comment %}
+  Renders breadcrumbs
+  Usage:
+  {% render 'breadcrumb' %}
+{% endcomment %}
+
+<nav aria-label="breadcrumbs" class="page-width twcss-my-8 twcss-z-0 twcss-relative">
+  <ol class="breadcrumbs twcss-flex twcss-gap-3" itemscope itemtype="https://schema.org/BreadcrumbList">
+    {%- for link in section.settings.menu.links -%}
+      {%- if link.links != blank -%}  
+        {%- if link.current %}
+          {% comment %}
+            First level of navigation menu items
+          {% endcomment %}
+            <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+              <a href='/' itemscope itemtype="https://schema.org/WebPage"
+              itemprop="item" itemid="/">
+                <span itemprop="name">Home</span>
+              </a>
+              <meta itemprop="position" content="1" />
+            </li>
+            <span aria-hidden="true" focusable="false">/</span>
+            <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+            itemtype="https://schema.org/ListItem">
+              <a href='{{ link.url }}' aria-current="page" itemscope itemtype="https://schema.org/WebPage"
+              itemprop="item" itemid="{{ link.url }}">
+                <span itemprop="name">{{ link.title | escape }}</span>
+              </a>
+              <meta itemprop="position" content="2" />
+            </li>
+        {%- else -%}
+          {%- for childlink in link.links -%}
+            {%- if childlink.current %}
+              {% comment %}
+                Second level of navigation menu items
+              {% endcomment %}
+              <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem">
+                <a href='/' itemscope itemtype="https://schema.org/WebPage"
+                itemprop="item" itemid="/">
+                  <span itemprop="name">Home</span>
+                </a>
+                <meta itemprop="position" content="1" />
+              </li>
+              <span aria-hidden="true" focusable="false">/</span>
+              <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem">
+                <a href='{{ link.url }}' itemscope itemtype="https://schema.org/WebPage"
+                itemprop="item" itemid="{{ link.url }}">
+                  <span itemprop="name">{{ link.title | escape }}</span>
+                </a>
+                <meta itemprop="position" content="2" />
+              </li>
+              <span aria-hidden="true" focusable="false">/</span>
+              <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem">
+                <a href='{{ childlink.url }}' aria-current="page" itemscope itemtype="https://schema.org/WebPage"
+                itemprop="item" itemid="{{ childlink.url }}">
+                  <span itemprop="name">{{ childlink.title | escape }}</span>
+                </a>
+                <meta itemprop="position" content="3" />
+              </li>
+            {%- else -%}
+              {%- for grandchildlink in childlink.links -%}
+                {%- if grandchildlink.current %}
+                  {% comment %}
+                    Third level of navigation menu items
+                  {% endcomment %}
+                  <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+                  itemtype="https://schema.org/ListItem">
+                    <a href='/' itemscope itemtype="https://schema.org/WebPage"
+                    itemprop="item" itemid="/">
+                      <span itemprop="name">Home</span>
+                    </a>
+                    <meta itemprop="position" content="1" />
+                  </li>
+                  <span aria-hidden="true" focusable="false">/</span>
+                  <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+                  itemtype="https://schema.org/ListItem">
+                    <a href='{{ link.url }}' itemscope itemtype="https://schema.org/WebPage"
+                    itemprop="item" itemid="{{ link.url }}">
+                      <span itemprop="name">{{ link.title | escape }}</span>
+                    </a>
+                    <meta itemprop="position" content="2" />
+                  </li>
+                  <span aria-hidden="true" focusable="false">/</span>
+                  <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+                  itemtype="https://schema.org/ListItem">
+                    <a href='{{ childlink.url }}' itemscope itemtype="https://schema.org/WebPage"
+                    itemprop="item" itemid="{{ childlink.url }}">
+                      <span itemprop="name">{{ childlink.title | escape }}</span>
+                    </a>
+                    <meta itemprop="position" content="3" />
+                  </li>
+                  <span aria-hidden="true" focusable="false">/</span>
+                  <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+                  itemtype="https://schema.org/ListItem">
+                    <a href='{{ grandchildlink.url }}' aria-current="page" itemscope itemtype="https://schema.org/WebPage"
+                    itemprop="item" itemid="{{ grandchildlink.url }}">
+                      <span itemprop="name">{{ grandchildlink.title | escape }}</span>
+                    </a>
+                    <meta itemprop="position" content="4" />
+                  </li>
+                {% else %}
+                  {%- for greatgrandchildlink in grandchildlink.links -%}
+                    {%- if greatgrandchildlink.current %}
+                      {% comment %}
+                        Fourth level of navigation menu items
+                      {% endcomment %}
+                      <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+                      itemtype="https://schema.org/ListItem">
+                        <a href='/' itemscope itemtype="https://schema.org/WebPage"
+                        itemprop="item" itemid="/">
+                          <span itemprop="name">Home</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
+                      </li>
+                      <span aria-hidden="true" focusable="false">/</span>
+                      <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+                      itemtype="https://schema.org/ListItem">
+                        <a href='{{ link.url }}' itemscope itemtype="https://schema.org/WebPage"
+                        itemprop="item" itemid="{{ link.url }}">
+                          <span itemprop="name">{{ link.title | escape }}</span>
+                        </a>
+                        <meta itemprop="position" content="2" />
+                      </li>
+                      <span aria-hidden="true" focusable="false">/</span>
+                      <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+                      itemtype="https://schema.org/ListItem">
+                        <a href='{{ childlink.url }}' itemscope itemtype="https://schema.org/WebPage"
+                        itemprop="item" itemid="{{ childlink.url }}">
+                          <span itemprop="name">{{ childlink.title | escape }}</span>
+                        </a>
+                        <meta itemprop="position" content="3" />
+                      </li>
+                      <span aria-hidden="true" focusable="false">/</span>
+                      <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+                      itemtype="https://schema.org/ListItem">
+                        <a href='{{ grandchildlink.url }}' itemscope itemtype="https://schema.org/WebPage"
+                        itemprop="item" itemid="{{ grandchildlink.url }}">
+                          <span itemprop="name">{{ grandchildlink.title | escape }}</span>
+                        </a>
+                        <meta itemprop="position" content="4" />
+                      </li>
+                      <span aria-hidden="true" focusable="false">/</span>
+                      <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+                      itemtype="https://schema.org/ListItem">
+                        <a href='{{ greatgrandchildlink.url }}' aria-current="page" itemscope itemtype="https://schema.org/WebPage"
+                        itemprop="item" itemid="{{ greatgrandchildlink.url }}">
+                          <span itemprop="name">{{ greatgrandchildlink.title | escape }}</span>
+                        </a>
+                        <meta itemprop="position" content="5" />
+                      </li>
+                    {%- else -%}
+                      {%- for greatgreatgrandchildlink in greatgrandchildlink.links -%}
+                        {%- if greatgreatgrandchildlink.current %}
+                          {% comment %}
+                            Fifth level of navigation menu items
+                          {% endcomment %}
+                          <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+                          itemtype="https://schema.org/ListItem">
+                            <a href='/' itemscope itemtype="https://schema.org/WebPage"
+                            itemprop="item" itemid="/">
+                              <span itemprop="name">Home</span>
+                            </a>
+                            <meta itemprop="position" content="1" />
+                          </li>
+                          <span aria-hidden="true" focusable="false">/</span>
+                          <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+                          itemtype="https://schema.org/ListItem">
+                            <a href='{{ link.url }}' itemscope itemtype="https://schema.org/WebPage"
+                            itemprop="item" itemid="{{ link.url }}">
+                              <span itemprop="name">{{ link.title | escape }}</span>
+                            </a>
+                            <meta itemprop="position" content="2" />
+                          </li>
+                          <span aria-hidden="true" focusable="false">/</span>
+                          <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+                          itemtype="https://schema.org/ListItem">
+                            <a href='{{ childlink.url }}' itemscope itemtype="https://schema.org/WebPage"
+                            itemprop="item" itemid="{{ childlink.url }}">
+                              <span itemprop="name">{{ childlink.title | escape }}</span>
+                            </a>
+                            <meta itemprop="position" content="3" />
+                          </li>
+                          <span aria-hidden="true" focusable="false">/</span>
+                          <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+                          itemtype="https://schema.org/ListItem">
+                            <a href='{{ grandchildlink.url }}' itemscope itemtype="https://schema.org/WebPage"
+                            itemprop="item" itemid="{{ grandchildlink.url }}">
+                              <span itemprop="name">{{ grandchildlink.title | escape }}</span>
+                            </a>
+                            <meta itemprop="position" content="4" />
+                          </li>
+                          <span aria-hidden="true" focusable="false">/</span>
+                          <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+                          itemtype="https://schema.org/ListItem">
+                            <a href='{{ greatgrandchildlink.url }}' itemscope itemtype="https://schema.org/WebPage"
+                            itemprop="item" itemid="{{ greatgrandchildlink.url }}">
+                              <span itemprop="name">{{ greatgrandchildlink.title | escape }}</span>
+                            </a>
+                            <meta itemprop="position" content="5" />
+                          </li>
+                          <span aria-hidden="true" focusable="false">/</span>
+                          <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+                          itemtype="https://schema.org/ListItem">
+                            <a href='{{ greatgreatgrandchildlink.url }}' aria-current="page" itemscope itemtype="https://schema.org/WebPage"
+                            itemprop="item" itemid="{{ greatgreatgrandchildlink.url }}">
+                              <span itemprop="name">{{ greatgreatgrandchildlink.title | escape }}</span>
+                            </a>
+                            <meta itemprop="position" content="6" />
+                          </li>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    {% endif %}
+                  {%- endfor -%}
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </ol>
+</nav>
