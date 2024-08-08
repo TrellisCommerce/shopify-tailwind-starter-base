@@ -607,6 +607,10 @@ video {
   flex-direction: column;
 }
 
+.twcss-gap-3 {
+  gap: 0.75rem;
+}
+
 .twcss-gap-4 {
   gap: 1rem;
 }
@@ -614,10 +618,6 @@ video {
 .twcss-text-base {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.twcss-gap-3 {
-  gap: 0.75rem;
 }
 
 .twcss-capitalize {
