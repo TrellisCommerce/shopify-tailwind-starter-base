@@ -566,6 +566,39 @@ video {
   display: block;
 }
 
+.twcss-flex {
+  display: flex;
+}
+
+.twcss-aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.twcss-w-full {
+  width: 100%;
+}
+
+.twcss-max-w-64 {
+  max-width: 16rem;
+}
+
+.twcss-flex-1 {
+  flex: 1 1 0%;
+}
+
+.twcss-flex-col {
+  flex-direction: column;
+}
+
+.twcss-gap-4 {
+  gap: 1rem;
+}
+
+.twcss-text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .twcss-capitalize {
   text-transform: capitalize;
 }
