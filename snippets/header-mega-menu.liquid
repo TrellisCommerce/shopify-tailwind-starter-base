@@ -63,42 +63,6 @@
                                   {{ grandchildlink.title | escape }}
                                 </a>
                               </li>
-                              {%- if grandchildlink.links != blank -%}
-                                <ul class="list-unstyled" role="list">
-                                  {%- for greatgrandchildlink in grandchildlink.links -%}
-                                    <li>
-                                      <a
-                                        id="HeaderMenu-{{ link.handle }}-{{ grandchildlink.handle }}-{{ greatgrandchildlink.handle }}"
-                                        href="{{ greatgrandchildlink.url }}"
-                                        class="mega-menu__link link{% if greatgrandchildlink.current %} mega-menu__link--active{% endif %}"
-                                        {% if greatgrandchildlink.current %}
-                                          aria-current="page"
-                                        {% endif %}
-                                      >
-                                        {{ greatgrandchildlink.title | escape }}
-                                      </a>
-                                    </li>
-                                    {%- if greatgrandchildlink.links != blank -%}
-                                      <ul class="list-unstyled" role="list">
-                                        {%- for greatgreatgrandchildlink in greatgrandchildlink.links -%}
-                                          <li>
-                                            <a
-                                              id="HeaderMenu-{{ link.handle }}-{{ greatgrandchildlink.handle }}-{{ greatgreatgrandchildlink.handle }}"
-                                              href="{{ greatgreatgrandchildlink.url }}"
-                                              class="mega-menu__link link{% if greatgreatgrandchildlink.current %} mega-menu__link--active{% endif %}"
-                                              {% if greatgreatgrandchildlink.current %}
-                                                aria-current="page"
-                                              {% endif %}
-                                            >
-                                              {{ greatgreatgrandchildlink.title | escape }}
-                                            </a>
-                                          </li>
-                                        {%- endfor -%}
-                                      </ul>
-                                      {%- endif -%}
-                                  {%- endfor -%}
-                                </ul>
-                              {%- endif -%}
                             {%- endfor -%}
                           </ul>
                         {%- endif -%}
