@@ -181,7 +181,7 @@
         if section.settings.menu_type_desktop == 'dropdown'
           render 'header-dropdown-menu'
         elsif section.settings.menu_type_desktop != 'drawer'
-          render 'header-mega-menu'
+          render 'header-mega-menu' blocks: section.blocks
         endif
       endif
     %}
@@ -655,7 +655,47 @@
   ],
   "blocks": [
     {
-      "type": "@app"
+      "type": "@app",
+    },
+    {
+      "type": "promotional",
+      "name": "Promotional Items",
+      "settings": [
+        {
+          "type": "number",
+          "id": "promotional_index",
+          "default": 1,
+          "label": "Nav Position"
+        },
+        {
+          "type": "image_picker",
+          "id": "promotional_image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "promotional_headline",
+          "default": "Headline",
+          "label": "Headline"
+        },
+        {
+          "type": "text",
+          "id": "promotional_description",
+          "default": "Description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "promotional_button_text",
+          "default": "Button Text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "promotional_button_url",
+          "label": "Button Url"
+        }
+      ]
     }
   ]
 }

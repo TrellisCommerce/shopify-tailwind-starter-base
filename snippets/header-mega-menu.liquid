@@ -8,6 +8,7 @@
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}
+      {% assign parent_index = forloop.index %}
       <li>
         {%- if link.links != blank -%}
           <header-menu>
@@ -30,43 +31,90 @@
                 class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup twcss-z-10"
                 tabindex="-1"
               >
-                <ul
-                  class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
-                  role="list"
-                >
-                  {%- for childlink in link.links -%}
-                    <li>
-                      <a
-                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                        href="{{ childlink.url }}"
-                        class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
-                        {% if childlink.current %}
-                          aria-current="page"
-                        {% endif %}
-                      >
-                        {{ childlink.title | escape }}
-                      </a>
-                      {%- if childlink.links != blank -%}
-                        <ul class="list-unstyled" role="list">
-                          {%- for grandchildlink in childlink.links -%}
-                            <li>
-                              <a
-                                id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                href="{{ grandchildlink.url }}"
-                                class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                {% if grandchildlink.current %}
-                                  aria-current="page"
-                                {% endif %}
-                              >
-                                {{ grandchildlink.title | escape }}
+                <div class="page-width twcss-flex twcss-gap-5">
+                  <ul
+                    class="mega-menu__list twcss-flex-1 {% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+                    role="list"
+                  >
+                    {%- for childlink in link.links -%}
+                      <li>
+                        <a
+                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                          href="{{ childlink.url }}"
+                          class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                          {% if childlink.current %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          {{ childlink.title | escape }}
+                        </a>
+                        {%- if childlink.links != blank -%}
+                          <ul class="list-unstyled" role="list">
+                            {%- for grandchildlink in childlink.links -%}
+                              <li>
+                                <a
+                                  id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                  href="{{ grandchildlink.url }}"
+                                  class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                  {% if grandchildlink.current %}
+                                    aria-current="page"
+                                  {% endif %}
+                                >
+                                  {{ grandchildlink.title | escape }}
+                                </a>
+                              </li>
+                              {%- if grandchildlink.links != blank -%}
+                                <ul class="list-unstyled" role="list">
+                                  {%- for greatgrandchildlink in grandchildlink.links -%}
+                                    <li>
+                                      <a
+                                        id="HeaderMenu-{{ link.handle }}-{{ grandchildlink.handle }}-{{ greatgrandchildlink.handle }}"
+                                        href="{{ greatgrandchildlink.url }}"
+                                        class="mega-menu__link link{% if greatgrandchildlink.current %} mega-menu__link--active{% endif %}"
+                                        {% if greatgrandchildlink.current %}
+                                          aria-current="page"
+                                        {% endif %}
+                                      >
+                                        {{ greatgrandchildlink.title | escape }}
+                                      </a>
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
+                              {%- endif -%}
+                            {%- endfor -%}
+                          </ul>
+                        {%- endif -%}
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                  {%- for block in blocks -%}
+                    {% case block.type %}
+                      {%- when 'promotional' -%}
+                        {%- if block.settings.promotional_index == parent_index -%}
+                          <div class="twcss-w-full twcss-max-w-64 twcss-flex twcss-flex-col twcss-gap-4">
+                            {%- if block.settings.promotional_headline -%}
+                              <img class="twcss-aspect-square" src="{{ block.settings.promotional_image | image_url }}" alt="{{ block.settings.promotional_image.alt | escape }}">
+                            {%- endif -%}
+                            {%- if block.settings.promotional_headline -%}
+                              <div class="twcss-text-large">
+                                {{ block.settings.promotional_headline }}
+                              </div>
+                            {%- endif -%}
+                            {%- if block.settings.promotional_description -%}
+                              <p class="twcss-text-base">
+                                {{ block.settings.promotional_description }}
+                              </p>
+                            {%- endif -%}
+                            {%- if block.settings.promotional_button_text and block.settings.promotional_button_url -%}
+                              <a href="{{ block.settings.promotional_button_url }}" class="button button--secondary twcss-text-base">
+                                {{ block.settings.promotional_button_text }}
                               </a>
-                            </li>
-                          {%- endfor -%}
-                        </ul>
-                      {%- endif -%}
-                    </li>
+                            {%- endif -%}
+                          </div>
+                        {%- endif -%}
+                    {% endcase %}
                   {%- endfor -%}
-                </ul>
+                </div>
               </div>
             </details>
           </header-menu>
