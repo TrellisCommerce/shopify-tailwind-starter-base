@@ -40,9 +40,11 @@
               >
                 {% render 'icon-close' %}
               </button>
-              <a href="{{ routes.all_products_collection_url }}" class="button">
+              <a href="{{ routes.all_products_collection_url }}" class="button twcss-mb-8">
                 {{ 'general.continue_shopping' | t }}
               </a>
+
+              <a href="/account/orders" class="button twcss-capitalize twcss-mb-8">{{ 'sections.cart.buy_again' | t }}</a>
 
               {%- if shop.customer_accounts_enabled and customer == null -%}
                 <p class="cart__login-title h3">{{ 'sections.cart.login.title' | t }}</p>
@@ -455,6 +457,7 @@
               <button class="underlined-link twcss-underline twcss-capitalize twcss-block twcss-mb-8 twcss-ml-auto">{{ 'sections.cart.cart_clear' | t }}</button>
             </cart-clear-button>
           {%- endif -%}
+          <a href="/account/orders" class="button twcss-capitalize twcss-mb-8">{{ 'sections.cart.buy_again' | t }}</a>
         {%- endif -%}
 
         {%- if settings.show_cart_note -%}
