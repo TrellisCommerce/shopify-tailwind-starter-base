@@ -48,10 +48,22 @@
             "promotional_button_text": "Shop",
             "promotional_button_url": "shopify:\/\/products\/the-collection-snowboard-oxygen"
           }
+        },
+        "promotional_bBzBQr": {
+          "type": "promotional",
+          "settings": {
+            "promotional_index": 1,
+            "promotional_image": "shopify:\/\/shop_images\/sample-normal-wax.png",
+            "promotional_headline": "Sample Wax",
+            "promotional_description": "Available with each snowboard purchase.",
+            "promotional_button_text": "",
+            "promotional_button_url": ""
+          }
         }
       },
       "block_order": [
-        "promotional_kh6iNC"
+        "promotional_kh6iNC",
+        "promotional_bBzBQr"
       ],
       "settings": {
         "logo_position": "middle-left",
