@@ -17,15 +17,15 @@
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "heading": "Company",
+            "menu": "gabby-footer-company"
           }
         },
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
-            "menu": "footer"
+            "heading": "Locations",
+            "menu": "gabby-footer-company"
           }
         },
         "footer-2": {
