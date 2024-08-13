@@ -38,32 +38,20 @@
     "header": {
       "type": "header",
       "blocks": {
-        "promotional_kh6iNC": {
+        "promotional_rMGY4F": {
           "type": "promotional",
           "settings": {
             "promotional_index": 1,
-            "promotional_image": "shopify:\/\/shop_images\/Main_d624f226-0a89-4fe1-b333-0d1548b43c06.jpg",
-            "promotional_headline": "Snowboards on sale!",
-            "promotional_description": "Grab your snowboard while they're on sale! Promotion only valid while inventory lasts.",
-            "promotional_button_text": "Shop",
-            "promotional_button_url": "shopify:\/\/products\/the-collection-snowboard-oxygen"
-          }
-        },
-        "promotional_bBzBQr": {
-          "type": "promotional",
-          "settings": {
-            "promotional_index": 1,
-            "promotional_image": "shopify:\/\/shop_images\/sample-normal-wax.png",
-            "promotional_headline": "Sample Wax",
-            "promotional_description": "Available with each snowboard purchase.",
-            "promotional_button_text": "",
-            "promotional_button_url": ""
+            "promotional_image": "shopify:\/\/shop_images\/Award-winning-mens-sustainable-glasses-and-womens-eyewear-2.webp",
+            "promotional_headline": "Promotion Here",
+            "promotional_description": "This is a really cool thing.",
+            "promotional_button_text": "Shop Now",
+            "promotional_button_url": "shopify:\/\/products\/gift-card"
           }
         }
       },
       "block_order": [
-        "promotional_kh6iNC",
-        "promotional_bBzBQr"
+        "promotional_rMGY4F"
       ],
       "settings": {
         "logo_position": "middle-left",
