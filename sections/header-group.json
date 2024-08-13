@@ -37,22 +37,6 @@
     },
     "header": {
       "type": "header",
-      "blocks": {
-        "promotional_rMGY4F": {
-          "type": "promotional",
-          "settings": {
-            "promotional_index": 1,
-            "promotional_image": "shopify:\/\/shop_images\/Award-winning-mens-sustainable-glasses-and-womens-eyewear-2.webp",
-            "promotional_headline": "Promotion Here",
-            "promotional_description": "This is a really cool thing.",
-            "promotional_button_text": "Shop Now",
-            "promotional_button_url": "shopify:\/\/products\/gift-card"
-          }
-        }
-      },
-      "block_order": [
-        "promotional_rMGY4F"
-      ],
       "settings": {
         "logo_position": "middle-left",
         "menu": "main-menu",
