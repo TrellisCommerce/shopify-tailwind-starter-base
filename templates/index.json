@@ -43,32 +43,25 @@
         "featured_collection_jbXBUP": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "cuba-at-midnight-capsule"
           }
         },
         "featured_collection_kzedAJ": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_dj3jDf": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
+            "collection": "accessories"
           }
         }
       },
       "block_order": [
         "featured_collection_jbXBUP",
-        "featured_collection_kzedAJ",
-        "featured_collection_dj3jDf"
+        "featured_collection_kzedAJ"
       ],
       "settings": {
-        "title": "Collections",
+        "title": "",
         "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 3,
+        "image_ratio": "portrait",
+        "columns_desktop": 2,
         "color_scheme": "",
         "show_view_all": false,
         "columns_mobile": "1",
