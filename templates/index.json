@@ -18,10 +18,22 @@
             "heading": "<a href=\"\/collections\/pre-sale-fumar-limited-edition-sunglasses\" title=\"Pre-sale Fumar Limited Edition Sunglasses\">PRE-ORDER<\/a> \"LIMITED EDITION\" SUNGLASSES BY CHRIS PORT",
             "heading_size": "h1"
           }
+        },
+        "buttons_dXtWzw": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Pre-order",
+            "button_link_1": "shopify:\/\/collections\/pre-sale-fumar-limited-edition-sunglasses",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
         }
       },
       "block_order": [
-        "heading"
+        "heading",
+        "buttons_dXtWzw"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/StillsV1_1.8.1.heic",
