@@ -15,7 +15,7 @@
       "type": "header",
       "settings": {
         "logo_position": "middle-center",
-        "menu": "main-menu",
+        "menu": "new-menu",
         "menu_type_desktop": "drawer",
         "sticky_header_type": "always",
         "show_line_separator": true,
