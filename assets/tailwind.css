@@ -801,6 +801,9 @@ select {
   margin-left: auto !important;
   margin-right: auto !important;
 }
+.\!mt-8 {
+  margin-top: 2rem !important;
+}
 .mb-16 {
   margin-bottom: 4rem;
 }
@@ -830,9 +833,6 @@ select {
 }
 .mt-8 {
   margin-top: 2rem;
-}
-.\!mt-8 {
-  margin-top: 2rem !important;
 }
 .block {
   display: block;
@@ -1002,18 +1002,6 @@ select {
 }
 .\!text-\[28px\] {
   font-size: 28px !important;
-}
-.\!text-\[10rem\] {
-  font-size: 10rem !important;
-}
-.\!text-\[5rem\] {
-  font-size: 5rem !important;
-}
-.\!text-\[2rem\] {
-  font-size: 2rem !important;
-}
-.\!text-\[4rem\] {
-  font-size: 4rem !important;
 }
 .\!text-\[3rem\] {
   font-size: 3rem !important;
