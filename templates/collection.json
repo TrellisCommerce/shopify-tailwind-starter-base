@@ -35,7 +35,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/Attachment-1.heic",
         "height": "medium",
-        "desktop_image_width": "medium",
+        "desktop_image_width": "large",
         "layout": "image_first",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "center",
