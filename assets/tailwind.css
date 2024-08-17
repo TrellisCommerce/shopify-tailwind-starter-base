@@ -801,10 +801,6 @@ select {
   margin-left: auto !important;
   margin-right: auto !important;
 }
-.\!mx-20 {
-  margin-left: 5rem !important;
-  margin-right: 5rem !important;
-}
 .\!mt-8 {
   margin-top: 2rem !important;
 }
@@ -856,12 +852,6 @@ select {
 .hidden {
   display: none;
 }
-.max-h-96 {
-  max-height: 24rem;
-}
-.\!max-h-96 {
-  max-height: 24rem !important;
-}
 .w-16 {
   width: 4rem;
 }
@@ -871,26 +861,11 @@ select {
 .w-32 {
   width: 8rem;
 }
-.\!max-w-20 {
-  max-width: 5rem !important;
+.w-\[50\%\] {
+  width: 50%;
 }
-.\!max-w-96 {
-  max-width: 24rem !important;
-}
-.\!max-w-\[10rem\] {
-  max-width: 10rem !important;
-}
-.\!max-w-\[220rem\] {
-  max-width: 220rem !important;
-}
-.\!max-w-\[20rem\] {
-  max-width: 20rem !important;
-}
-.\!max-w-\[50rem\] {
-  max-width: 50rem !important;
-}
-.\!max-w-\[30rem\] {
-  max-width: 30rem !important;
+.w-\[70\%\] {
+  width: 70%;
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y))
@@ -971,18 +946,6 @@ select {
   -o-object-position: 50% 90%;
   object-position: 50% 90%;
 }
-.px-44 {
-  padding-left: 11rem;
-  padding-right: 11rem;
-}
-.\!px-44 {
-  padding-left: 11rem !important;
-  padding-right: 11rem !important;
-}
-.\!px-20 {
-  padding-left: 5rem !important;
-  padding-right: 5rem !important;
-}
 .\!px-12 {
   padding-left: 3rem !important;
   padding-right: 3rem !important;
@@ -1049,9 +1012,6 @@ select {
 }
 .\!text-\[28px\] {
   font-size: 28px !important;
-}
-.\!text-\[3rem\] {
-  font-size: 3rem !important;
 }
 .uppercase {
   text-transform: uppercase;
@@ -1147,9 +1107,8 @@ body {
     aspect-ratio: 3/4;
   }
 
-  .md\:\!px-44 {
-    padding-left: 11rem !important;
-    padding-right: 11rem !important;
+  .md\:w-\[70\%\] {
+    width: 70%;
   }
 
   .md\:\!px-64 {
