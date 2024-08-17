@@ -11,41 +11,10 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
-      "disabled": true,
       "settings": {
         "show_collection_description": false,
-        "show_collection_image": false,
+        "show_collection_image": true,
         "color_scheme": "scheme-1"
-      }
-    },
-    "image_with_text_YrUPpM": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_83HGNN": {
-          "type": "heading",
-          "settings": {
-            "heading": "Accessories",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_83HGNN"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/Attachment-1.heic",
-        "height": "medium",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "center",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "zoom-in",
-        "mobile_content_alignment": "center",
-        "padding_top": 16,
-        "padding_bottom": 0
       }
     },
     "product-grid": {
@@ -71,7 +40,6 @@
   },
   "order": [
     "banner",
-    "image_with_text_YrUPpM",
     "product-grid"
   ]
 }
