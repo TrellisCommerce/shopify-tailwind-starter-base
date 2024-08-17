@@ -63,18 +63,11 @@
           "settings": {
             "collection": "accessories"
           }
-        },
-        "featured_collection_NAHn4i": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "pre-sale-fumar-limited-edition-sunglasses"
-          }
         }
       },
       "block_order": [
         "featured_collection_jbXBUP",
-        "featured_collection_kzedAJ",
-        "featured_collection_NAHn4i"
+        "featured_collection_kzedAJ"
       ],
       "settings": {
         "title": "",
