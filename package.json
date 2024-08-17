@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build:css": "postcss src/styles/tailwind.css -o assets/tailwind.css",
+    "watch:css": "postcss src/styles/tailwind.css -o assets/tailwind.css --watch"
   },
   "repository": {
     "type": "git",
@@ -18,18 +20,23 @@
   },
   "homepage": "https://github.com/TrellisCommerce/shopify-dawn-tailwind-starter-base#readme",
   "devDependencies": {
-    "autoprefixer": "^10.4.4",
+    "autoprefixer": "^10.4.20",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.3",
-    "postcss": "^8.4.12",
+    "postcss": "^8.4.41",
+    "postcss-cli": "^11.0.0",
     "prettier": "^2.5.1",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.10"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.14",
     "@trelliscommerce/prettier-config": "^1.0.0"
   },
   "prettier": "@trelliscommerce/prettier-config",
   "lint-staged": {
     "*.{js,css}": "prettier --write"
-  }
+  },
+  "keywords": []
 }

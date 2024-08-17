@@ -1097,7 +1097,6 @@ summary::-webkit-details-marker {
 .media model-viewer {
   display: block;
   max-width: 100%;
-  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
@@ -1285,7 +1284,9 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .button:focus:not(:focus-visible):not(.focused),
-.shopify-payment-button__button--unbranded:focus:not(:focus-visible):not(.focused),
+.shopify-payment-button__button--unbranded:focus:not(:focus-visible):not(
+    .focused
+  ),
 .shopify-payment-button
   [role='button']:focus:not(:focus-visible):not(.focused) {
   box-shadow: inherit;

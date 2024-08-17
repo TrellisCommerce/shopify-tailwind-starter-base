@@ -61,7 +61,9 @@
   }
 
   .banner--medium.banner--mobile-bottom:not(.banner--adapt) .banner__media,
-  .banner--medium.banner--stacked:not(.banner--mobile-bottom):not(.banner--adapt)
+  .banner--medium.banner--stacked:not(.banner--mobile-bottom):not(
+      .banner--adapt
+    )
     > .banner__media {
     height: 34rem;
   }
@@ -368,7 +370,7 @@
   }
 
   .banner--desktop-transparent .banner__box {
-    padding: 4rem 0;
+    padding: 0rem 0;
     background: transparent;
     max-width: 89rem;
     border: none;
