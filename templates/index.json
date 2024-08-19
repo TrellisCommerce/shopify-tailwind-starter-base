@@ -36,8 +36,8 @@
         "buttons_dXtWzw"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/StillsV1_1.8.1.heic",
-        "image_overlay_opacity": 40,
+        "image": "shopify:\/\/shop_images\/StillsV1_1.8.1.png",
+        "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "bottom-left",
         "show_text_box": false,
