@@ -19,8 +19,9 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "disabled": true,
       "settings": {
-        "products_per_page": 16,
+        "products_per_page": 8,
         "columns_desktop": 3,
         "color_scheme": "",
         "image_ratio": "portrait",
@@ -36,10 +37,82 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "featured_product_tqFMeb": {
+      "type": "featured-product",
+      "blocks": {
+        "text_bxcMnE": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_dLtWRH": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_cwmwhf": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker_Fdp7AB": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_L87NgW": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons_fEakMY": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_AKFjgK": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_bxcMnE",
+        "title_dLtWRH",
+        "price_cwmwhf",
+        "variant_picker_Fdp7AB",
+        "quantity_selector_L87NgW",
+        "buy_buttons_fEakMY",
+        "share_AKFjgK"
+      ],
+      "settings": {
+        "product": "fumar-sunglasses",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "featured_product_tqFMeb"
   ]
 }
