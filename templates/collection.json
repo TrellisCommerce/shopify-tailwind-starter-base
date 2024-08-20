@@ -96,9 +96,9 @@
       ],
       "settings": {
         "product": "fumar-sunglasses",
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "secondary_background": false,
-        "media_size": "medium",
+        "media_size": "small",
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "media_position": "left",
