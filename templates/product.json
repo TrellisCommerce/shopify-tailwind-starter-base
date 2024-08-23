@@ -78,6 +78,26 @@
         "padding_bottom": 28
       }
     },
+    "1723579109ad62e69d": {
+      "type": "apps",
+      "blocks": {
+        "cylindo_app_app_block_qR6PEE": {
+          "type": "shopify:\/\/apps\/cylindo-app\/blocks\/app-block\/e2db13ef-2082-4aeb-ba05-a6a7daeb155c",
+          "settings": {
+            "customer_id": "6878",
+            "remote_config_id": "47pbiak8",
+            "include_placeholder": false,
+            "include_thumbnail_bar": true
+          }
+        }
+      },
+      "block_order": [
+        "cylindo_app_app_block_qR6PEE"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "rich_text_WhLV8b": {
       "type": "rich-text",
       "blocks": {
@@ -119,32 +139,12 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
-    },
-    "1723579109ad62e69d": {
-      "type": "apps",
-      "blocks": {
-        "cylindo_app_app_block_qR6PEE": {
-          "type": "shopify:\/\/apps\/cylindo-app\/blocks\/app-block\/e2db13ef-2082-4aeb-ba05-a6a7daeb155c",
-          "settings": {
-            "customer_id": "6878",
-            "remote_config_id": "47pbiak8",
-            "include_placeholder": false,
-            "include_thumbnail_bar": true
-          }
-        }
-      },
-      "block_order": [
-        "cylindo_app_app_block_qR6PEE"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
     "main",
     "related-products",
-    "rich_text_WhLV8b",
-    "1723579109ad62e69d"
+    "1723579109ad62e69d",
+    "rich_text_WhLV8b"
   ]
 }
