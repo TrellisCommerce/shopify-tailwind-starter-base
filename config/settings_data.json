@@ -141,6 +141,15 @@
     "content_for_index": [
 
     ],
+    "blocks": {
+      "1092162363469510462": {
+        "type": "shopify:\/\/apps\/cylindo-app\/blocks\/app-embed-block\/e2db13ef-2082-4aeb-ba05-a6a7daeb155c",
+        "disabled": false,
+        "settings": {
+          "include_thumbnail_bar_script": true
+        }
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
