@@ -35,6 +35,12 @@
         "enable_language_selector": false
       }
     },
+    "pre_header_gnXm3V": {
+      "type": "pre-header",
+      "settings": {
+        "color_scheme": ""
+      }
+    },
     "header": {
       "type": "header",
       "settings": {
@@ -57,6 +63,7 @@
   },
   "order": [
     "announcement-bar",
+    "pre_header_gnXm3V",
     "header"
   ]
 }
