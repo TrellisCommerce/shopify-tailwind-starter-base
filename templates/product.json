@@ -12,11 +12,11 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
+        "text_YCAafg": {
           "type": "text",
           "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
+            "text": "{{ product.metafields.custom.range.value }}",
+            "text_style": "body"
           }
         },
         "title": {
@@ -105,7 +105,7 @@
         }
       },
       "block_order": [
-        "vendor",
+        "text_YCAafg",
         "title",
         "caption",
         "price",
