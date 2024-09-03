@@ -4,7 +4,36 @@
 
 {% schema %}
 {
-  "name": "Pre header",
-  "tag": "section"
+  "name": "My Slideshow",
+  "tag": "section",
+  "class": "MY-slideshow",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "MY Slideshow"
+    }
+  ],
+  "presets": [
+    {
+      "name": "My Slideshow",
+      "settings": {
+        "title": "My Slideshow"
+      }
+    }
+  ],
+  "locales": {
+    "en": {
+      "title": "My slideshow"
+    },
+    "fr": {
+      "title": "Diaporama"
+    }
+  },
+  "enabled_on": {
+    "templates": ["*"],
+    "groups": ["footer"]
+  }
 }
 {% endschema %}
