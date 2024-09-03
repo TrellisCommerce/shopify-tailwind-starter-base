@@ -24,6 +24,13 @@
           "settings": {
           }
         },
+        "text_txweDz": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.size.value }}",
+            "text_style": "body"
+          }
+        },
         "caption": {
           "type": "text",
           "settings": {
@@ -107,6 +114,7 @@
       "block_order": [
         "text_YCAafg",
         "title",
+        "text_txweDz",
         "caption",
         "price",
         "variant_picker",
