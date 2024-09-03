@@ -76,6 +76,15 @@
             "page": ""
           }
         },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How to use",
+            "icon": "none",
+            "content": "",
+            "page": ""
+          }
+        },
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
@@ -85,19 +94,10 @@
             "page": ""
           }
         },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Dimensions",
-            "icon": "none",
-            "content": "",
-            "page": ""
-          }
-        },
         "collapsible-row-3": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Care Instructions",
+            "heading": "Reviews",
             "icon": "none",
             "content": "",
             "page": ""
@@ -121,8 +121,8 @@
         "description_4GfMrB",
         "text_YWbJwy",
         "collapsible-row-1",
-        "collapsible-row-0",
         "collapsible-row-2",
+        "collapsible-row-0",
         "collapsible-row-3",
         "share"
       ],
