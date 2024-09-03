@@ -31,6 +31,13 @@
             "text_style": "body"
           }
         },
+        "text_gDhyUq": {
+          "type": "text",
+          "settings": {
+            "text": "Text block{{ product.metafields.reviews.rating | metafield_tag }}",
+            "text_style": "body"
+          }
+        },
         "judge_me_reviews_preview_badge_Xt67KU": {
           "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
@@ -118,6 +125,7 @@
         "text_YCAafg",
         "title",
         "text_txweDz",
+        "text_gDhyUq",
         "judge_me_reviews_preview_badge_Xt67KU",
         "price",
         "variant_picker",
