@@ -70,9 +70,9 @@
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
+            "heading": "Ingredients",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.key_ingredients | metafield_tag: field: 'name' }}",
             "page": ""
           }
         },
@@ -80,7 +80,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Shipping & Returns",
-            "icon": "truck",
+            "icon": "none",
             "content": "",
             "page": ""
           }
@@ -89,7 +89,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Dimensions",
-            "icon": "ruler",
+            "icon": "none",
             "content": "",
             "page": ""
           }
@@ -98,7 +98,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Care Instructions",
-            "icon": "heart",
+            "icon": "none",
             "content": "",
             "page": ""
           }
