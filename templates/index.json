@@ -158,43 +158,46 @@
         "column1": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/Image.png",
+            "title": "",
+            "text": "<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas arcu urna, molestie non felis et, ornare tincidunt tortor. Nunc tortor neque, tincidunt a fermentum ac, mollis eu felis. Ut cursus volutpat.”<\/p><p><strong>Dr. Olivia Falcon<\/strong><\/p>",
+            "link_label": "Read more",
+            "link": "shopify:\/\/pages\/test"
           }
         },
-        "column2": {
+        "column_qGjQKW": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/Image.png",
+            "title": "",
+            "text": "<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas arcu urna, molestie non felis et, ornare tincidunt tortor. Nunc tortor neque, tincidunt a fermentum ac, mollis eu felis. Ut cursus volutpat.”<\/p><p><strong>Dr. Olivia Falcon<\/strong><\/p>",
+            "link_label": "Read more",
+            "link": "shopify:\/\/pages\/test"
           }
         },
-        "column3": {
+        "column_84TrPU": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/Image.png",
+            "title": "",
+            "text": "<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas arcu urna, molestie non felis et, ornare tincidunt tortor. Nunc tortor neque, tincidunt a fermentum ac, mollis eu felis. Ut cursus volutpat.”<\/p><p><strong>Dr. Olivia Falcon<\/strong><\/p>",
+            "link_label": "Read more",
+            "link": "shopify:\/\/pages\/test"
           }
         }
       },
       "block_order": [
         "column1",
-        "column2",
-        "column3"
+        "column_qGjQKW",
+        "column_84TrPU"
       ],
       "settings": {
         "title": "What people are saying",
         "heading_size": "h1",
-        "image_width": "third",
+        "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
-        "column_alignment": "center",
+        "column_alignment": "left",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
