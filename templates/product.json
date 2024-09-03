@@ -67,13 +67,6 @@
             "text_style": "body"
           }
         },
-        "text_UE4zwm": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.custom.key_ingredients | metafield_text: field: 'name' }}",
-            "text_style": "body"
-          }
-        },
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
@@ -127,7 +120,6 @@
         "buy_buttons",
         "description_4GfMrB",
         "text_YWbJwy",
-        "text_UE4zwm",
         "collapsible-row-1",
         "collapsible-row-0",
         "collapsible-row-2",
