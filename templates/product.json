@@ -102,12 +102,6 @@
             "content": "",
             "page": ""
           }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
         }
       },
       "block_order": [
@@ -123,8 +117,7 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-0",
-        "collapsible-row-3",
-        "share"
+        "collapsible-row-3"
       ],
       "settings": {
         "enable_sticky_info": true,
