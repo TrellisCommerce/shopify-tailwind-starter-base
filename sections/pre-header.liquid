@@ -1,0 +1,31 @@
+<!-- sections/pre-header.liquid -->
+<div class='twcss-w-full twcss-text-right twcss-bg-gray-200 twcss-py-2 twcss-px-4'>
+  <div class='twcss-max-w-[1440px] twcss-m-auto'>Contact us | Find a Stockist | Account</div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.pre-header.name",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "textarea",
+      "id": "content",
+      "label": "Content"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Custom"
+    }
+  ],
+  "enabled_on": {
+    "groups": ["header"]
+  }
+}
+{% endschema %}

@@ -121,11 +121,7 @@
     endif
   endfor
 -%}
-<div class="twcss-w-full twcss-text-right twcss-bg-gray-200 twcss-py-2 twcss-px-4">
-  <div class="twcss-max-w-[1440px] twcss-m-auto">
-    Contact us | Find a Stockist | Account
-  </div>
-</div>
+
 <{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
   {%- liquid
     assign social_links = false
