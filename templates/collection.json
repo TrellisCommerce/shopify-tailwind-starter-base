@@ -43,14 +43,14 @@
         "heading_w4rgVR": {
           "type": "heading",
           "settings": {
-            "heading": "Subscribe to our emails",
+            "heading": "Unlock a 10% discount on your first order!",
             "heading_size": "h1"
           }
         },
         "paragraph_ThWJ8E": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque suscipit, massa id fermentum sodales, sem urna laoreet ipsum, ac gravida mauris mauris eu ipsum<\/p>"
           }
         },
         "email_form_DUzXUh": {
