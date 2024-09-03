@@ -55,6 +55,18 @@
             "show_gift_card_recipient": true
           }
         },
+        "description_4GfMrB": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "text_YWbJwy": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
         "text_UE4zwm": {
           "type": "text",
           "settings": {
@@ -62,9 +74,13 @@
             "text_style": "body"
           }
         },
-        "description": {
-          "type": "description",
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
           "settings": {
+            "heading": "Key Information",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.long_description | metafield_tag }}",
+            "page": ""
           }
         },
         "collapsible-row-0": {
@@ -73,15 +89,6 @@
             "heading": "Ingredients",
             "icon": "none",
             "content": "{{ product.metafields.custom.key_ingredients | metafield_tag: field: 'name' }}",
-            "page": ""
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "none",
-            "content": "",
             "page": ""
           }
         },
@@ -118,10 +125,11 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "description_4GfMrB",
+        "text_YWbJwy",
         "text_UE4zwm",
-        "description",
-        "collapsible-row-0",
         "collapsible-row-1",
+        "collapsible-row-0",
         "collapsible-row-2",
         "collapsible-row-3",
         "share"
