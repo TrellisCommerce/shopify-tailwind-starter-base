@@ -65,6 +65,11 @@
           "settings": {
           }
         },
+        "selleasy_lb_upsell_fbt_block_BHQp6b": {
+          "type": "shopify:\/\/apps\/selleasy\/blocks\/lb-upsell-fbt-block\/790c1a03-a71f-4bc1-9869-00dad526d3c2",
+          "settings": {
+          }
+        },
         "text_YWbJwy": {
           "type": "text",
           "settings": {
@@ -119,6 +124,7 @@
         "quantity_selector",
         "buy_buttons",
         "description_4GfMrB",
+        "selleasy_lb_upsell_fbt_block_BHQp6b",
         "text_YWbJwy",
         "collapsible-row-1",
         "collapsible-row-2",
