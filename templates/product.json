@@ -31,13 +31,6 @@
             "text_style": "body"
           }
         },
-        "caption": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -115,7 +108,6 @@
         "text_YCAafg",
         "title",
         "text_txweDz",
-        "caption",
         "price",
         "variant_picker",
         "quantity_selector",
