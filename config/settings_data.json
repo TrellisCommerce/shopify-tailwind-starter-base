@@ -138,6 +138,38 @@
     "content_for_index": [
 
     ],
+    "blocks": {
+      "17288229127477420511": {
+        "type": "shopify:\/\/apps\/amai-promap\/blocks\/stockistform-embed-block\/acff8fd9-34cc-4a4d-98ed-d7fdb5d3605f",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "18020446634262408591": {
+        "type": "shopify:\/\/apps\/amai-promap\/blocks\/storelocator-embed-block\/acff8fd9-34cc-4a4d-98ed-d7fdb5d3605f",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "16934432316630173842": {
+        "type": "shopify:\/\/apps\/amai-promap\/blocks\/wheretobuy-embed-block\/acff8fd9-34cc-4a4d-98ed-d7fdb5d3605f",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "6279071938380501511": {
+        "type": "shopify:\/\/apps\/powerful-form-builder\/blocks\/app-embed\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "8605505498557855500": {
+        "type": "shopify:\/\/apps\/bogos-io-free-gift\/blocks\/app-embed\/0432bba6-720a-4e95-be5a-b868386f7aa6",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
