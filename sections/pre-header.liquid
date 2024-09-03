@@ -4,36 +4,17 @@
 
 {% schema %}
 {
-  "name": "My Slideshow",
+  "name": "Pre Header",
   "tag": "section",
-  "class": "MY-slideshow",
+  "class": "pre-header",
   "limit": 1,
-  "settings": [
-    {
-      "type": "text",
-      "id": "title",
-      "label": "MY Slideshow"
-    }
-  ],
-  "presets": [
-    {
-      "name": "My Slideshow",
-      "settings": {
-        "title": "My Slideshow"
-      }
-    }
-  ],
   "locales": {
     "en": {
-      "title": "My slideshow"
-    },
-    "fr": {
-      "title": "Diaporama"
+      "title": "Pre Header"
     }
   },
   "enabled_on": {
-    "templates": ["*"],
-    "groups": ["footer", "header"]
+    "groups": ["header"]
   }
 }
 {% endschema %}
