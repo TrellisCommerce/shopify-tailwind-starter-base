@@ -8,13 +8,27 @@
   "tag": "section",
   "class": "pre-header",
   "limit": 1,
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-4"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pre Header"
+    }
+  ],
   "locales": {
     "en": {
       "title": "Pre Header"
     }
   },
   "enabled_on": {
-    "groups": ["header"]
+    "groups": ["header"],
+    "templates": ["*"]
   }
 }
 {% endschema %}
