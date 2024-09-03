@@ -117,10 +117,9 @@
     "collage": {
       "type": "collage",
       "blocks": {
-        "collection-0": {
-          "type": "collection",
+        "image_gFMGhK": {
+          "type": "image",
           "settings": {
-            "collection": ""
           }
         },
         "product": {
@@ -138,7 +137,7 @@
         }
       },
       "block_order": [
-        "collection-0",
+        "image_gFMGhK",
         "product",
         "collection-1"
       ],
@@ -148,20 +147,6 @@
         "desktop_layout": "left",
         "mobile_layout": "collage",
         "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
         "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 36
@@ -204,7 +189,7 @@
         "column3"
       ],
       "settings": {
-        "title": "",
+        "title": "What people are saying",
         "heading_size": "h1",
         "image_width": "third",
         "image_ratio": "adapt",
@@ -226,7 +211,6 @@
     "rich_text",
     "featured_collection",
     "collage",
-    "video",
     "multicolumn"
   ]
 }
