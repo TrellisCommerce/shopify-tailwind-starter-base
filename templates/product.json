@@ -55,6 +55,13 @@
             "show_gift_card_recipient": true
           }
         },
+        "text_UE4zwm": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.key_ingredients | metafield_text: field: 'name' }}",
+            "text_style": "body"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -111,6 +118,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "text_UE4zwm",
         "description",
         "collapsible-row-0",
         "collapsible-row-1",
