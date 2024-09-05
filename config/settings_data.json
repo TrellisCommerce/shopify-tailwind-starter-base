@@ -187,6 +187,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "6361996004949321110": {
+        "type": "shopify:\/\/apps\/oneloyalty\/blocks\/widget\/6119b281-36ce-42b5-93ab-6aaf5fb224ce",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
