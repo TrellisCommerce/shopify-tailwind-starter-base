@@ -36,6 +36,12 @@
           "settings": {
           }
         },
+        "oneloyalty_point_calculator_nPXPTB": {
+          "type": "shopify:\/\/apps\/oneloyalty\/blocks\/pointCalculator\/6119b281-36ce-42b5-93ab-6aaf5fb224ce",
+          "settings": {
+            "alignment_component": "left"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -119,6 +125,7 @@
         "title",
         "text_txweDz",
         "rating_Rzyz7i",
+        "oneloyalty_point_calculator_nPXPTB",
         "price",
         "variant_picker",
         "quantity_selector",
