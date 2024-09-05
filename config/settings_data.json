@@ -225,8 +225,8 @@
           "background_gradient": "",
           "text": "#00843d",
           "button": "#00843d",
-          "button_label": "#000000",
-          "secondary_button_label": "#ffffff",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#00843d",
           "shadow": "#121212"
         }
       },
@@ -236,8 +236,8 @@
           "background_gradient": "",
           "text": "#653165",
           "button": "#653165",
-          "button_label": "#121212",
-          "secondary_button_label": "#ffffff",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#653165",
           "shadow": "#121212"
         }
       },
