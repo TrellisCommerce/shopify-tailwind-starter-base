@@ -104,6 +104,7 @@
     "badge_corner_radius": 40,
     "sale_badge_color_scheme": "scheme-5",
     "sold_out_badge_color_scheme": "scheme-3",
+    "brand_image": "{{ shop.brand.logo }}",
     "social_facebook_link": "https:\/\/facebook.com\/cantabria-uk",
     "social_instagram_link": "https:\/\/instagram.com\/cantabria-uk",
     "social_youtube_link": "https:\/\/youtube.com\/cantabria-uk",
@@ -209,7 +210,7 @@
       },
       "scheme-2": {
         "settings": {
-          "background": "#FFFFFF",
+          "background": "#ffffff",
           "background_gradient": "",
           "text": "#f2a900",
           "button": "#f2a900",
