@@ -16,7 +16,7 @@
     "type_body_font": "assistant_n4",
     "body_scale": 100,
     "page_width": 1440,
-    "spacing_sections": 32,
+    "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
     "buttons_border_thickness": 1,
@@ -200,8 +200,8 @@
         "settings": {
           "background": "#ffffff",
           "background_gradient": "",
-          "text": "#231F20",
-          "button": "#165C7D",
+          "text": "#231f20",
+          "button": "#165c7d",
           "button_label": "#ffffff",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
@@ -212,8 +212,8 @@
           "background": "#f3f3f3",
           "background_gradient": "",
           "text": "#121212",
-          "button": "#F2A900",
-          "button_label": "#231F20",
+          "button": "#f2a900",
+          "button_label": "#231f20",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
