@@ -182,15 +182,15 @@
           "storefrontAccessToken": "908feb09f9b7d6e5fa0f9568e3a66eb2"
         }
       },
-      "7584948915495707528": {
-        "type": "shopify:\/\/apps\/joy-loyalty-program\/blocks\/app-embed\/555c55c9-9a3d-4fe0-a7a8-2c256984a371",
+      "6361996004949321110": {
+        "type": "shopify:\/\/apps\/oneloyalty\/blocks\/widget\/6119b281-36ce-42b5-93ab-6aaf5fb224ce",
         "disabled": false,
         "settings": {
         }
       },
-      "6361996004949321110": {
-        "type": "shopify:\/\/apps\/oneloyalty\/blocks\/widget\/6119b281-36ce-42b5-93ab-6aaf5fb224ce",
-        "disabled": false,
+      "7584948915495707528": {
+        "type": "shopify:\/\/apps\/joy-loyalty-program\/blocks\/app-embed\/555c55c9-9a3d-4fe0-a7a8-2c256984a371",
+        "disabled": true,
         "settings": {
         }
       }
