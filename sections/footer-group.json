@@ -24,8 +24,8 @@
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
-            "menu": "footer"
+            "heading": "Cantabria Labs",
+            "menu": "cantabria-labs"
           }
         },
         "footer-2": {
