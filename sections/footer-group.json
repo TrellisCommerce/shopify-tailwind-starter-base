@@ -32,14 +32,14 @@
           "type": "link_list",
           "settings": {
             "heading": "Learn",
-            "menu": "footer"
+            "menu": "learn"
           }
         },
         "link_list_fjMJbC": {
           "type": "link_list",
           "settings": {
             "heading": "Consultation",
-            "menu": "footer"
+            "menu": "consultation"
           }
         },
         "link_list_xaHPmg": {
