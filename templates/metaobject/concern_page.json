@@ -9,8 +9,38 @@
 */
 {
   "sections": {
+    "rich_text_jLMAVc": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fCBkLz": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ metaobject.name.value }}",
+            "heading_size": "h1"
+          }
+        },
+        "text_B76e8e": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ metaobject.description | metafield_tag }}<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fCBkLz",
+        "text_B76e8e"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
   },
   "order": [
-
+    "rich_text_jLMAVc"
   ]
 }
