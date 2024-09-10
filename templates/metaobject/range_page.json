@@ -9,6 +9,42 @@
 */
 {
   "sections": {
+    "image_banner_9qaB4e": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_EG6cQt": {
+          "type": "heading",
+          "settings": {
+            "heading": "The {{ metaobject.name.value }} Range",
+            "heading_size": "h1"
+          }
+        },
+        "text_RggQnc": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_EG6cQt",
+        "text_RggQnc"
+      ],
+      "settings": {
+        "image": "{{ shop.brand.cover_image }}",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "featured_collection_qTTAV4": {
       "type": "featured-collection",
       "settings": {
@@ -39,6 +75,7 @@
     }
   },
   "order": [
+    "image_banner_9qaB4e",
     "featured_collection_qTTAV4"
   ]
 }
