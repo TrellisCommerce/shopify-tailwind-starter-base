@@ -38,14 +38,21 @@
         "link_list_fjMJbC": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Consultation",
             "menu": "footer"
           }
         },
         "link_list_xaHPmg": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Support",
+            "menu": "footer"
+          }
+        },
+        "link_list_J3FjAz": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Policies",
             "menu": "footer"
           }
         }
@@ -55,7 +62,8 @@
         "footer-1",
         "link_list_fQAJnX",
         "link_list_fjMJbC",
-        "link_list_xaHPmg"
+        "link_list_xaHPmg",
+        "link_list_J3FjAz"
       ],
       "settings": {
         "color_scheme": "scheme-b7def379-8dc0-416f-8d07-e1c39d860c82",
