@@ -35,13 +35,6 @@
             "menu": "learn"
           }
         },
-        "link_list_fjMJbC": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Consultation",
-            "menu": "consultation"
-          }
-        },
         "link_list_xaHPmg": {
           "type": "link_list",
           "settings": {
@@ -61,7 +54,6 @@
         "footer-0",
         "footer-1",
         "link_list_fQAJnX",
-        "link_list_fjMJbC",
         "link_list_xaHPmg",
         "link_list_J3FjAz"
       ],
