@@ -32,7 +32,6 @@
         "text_RggQnc"
       ],
       "settings": {
-        "image": "{{ shop.brand.cover_image }}",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
