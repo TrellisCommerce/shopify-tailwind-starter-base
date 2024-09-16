@@ -96,8 +96,8 @@
                               <img
                                 width='160'
                                 height='160'
-                                class='twcss-aspect-square twcss-object-cover'
-                                src='{{ block.settings.promotional_image | image_url }}'
+                                class='twcss-aspect-square twcss-object-cover custom-lazyload'
+                                data-src='{{ block.settings.promotional_image | image_url }}'
                                 alt='{{ block.settings.promotional_image.alt | escape }}'
                               >
                             {%- endif -%}
