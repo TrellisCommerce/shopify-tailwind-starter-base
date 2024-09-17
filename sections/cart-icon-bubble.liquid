@@ -1,4 +1,4 @@
-{%- liquid
+{% comment %} {%- liquid
   if cart == empty
     render 'icon-cart-empty'
   else
@@ -13,4 +13,14 @@
     {%- endif -%}
     <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
   </div>
-{%- endif -%}
+{%- endif -%} {% endcomment %}
+
+
+<span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+        <div class="cart-count-bubble so-cart-count-bubble">
+          {%- if cart.item_count < 100 -%}
+            <span aria-hidden="true" class="mobile-cart twcss-block twcss-md:hidden">{ {{ cart.item_count }} }</span>
+            <span aria-hidden="true" class="desktop-cart twcss-hidden twcss-md:block">Bag ({{ cart.total_price | money  }})</span>
+          {%- endif -%}
+          <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+        </div>

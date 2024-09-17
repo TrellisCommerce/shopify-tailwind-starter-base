@@ -191,9 +191,9 @@
       }
     },
     "related-products": {
-      "type": "related-products",
+      "type": "so-related-products",
       "settings": {
-        "heading": "You may also like",
+        "heading": "HELLO",
         "heading_size": "h2",
         "columns_desktop": 4,
         "color_scheme": "scheme-1",

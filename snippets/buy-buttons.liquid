@@ -82,7 +82,8 @@
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
             name="add"
-            class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+            class="product-form__submit twcss-w-full atc-button-style cancellaresca"
+            {% comment %} class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}" {% endcomment %}
             {% if product.selected_or_first_available_variant.available == false
               or quantity_rule_soldout
               or product.selected_or_first_available_variant == nil
@@ -90,6 +91,10 @@
               disabled
             {% endif %}
           >
+            <div class="lr-borders">
+            </div>
+            <div class="tb-borders">
+            </div>
             <span>
               {%- if product.selected_or_first_available_variant == nil -%}
                 {{ 'products.product.unavailable' | t }}
@@ -129,7 +134,7 @@
       | where: 'pick_up_enabled', true
     -%}
 
-    <pickup-availability
+    {% comment %} <pickup-availability
       class="product__pickup-availabilities quick-add-hidden"
       {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %}
         available
@@ -150,8 +155,46 @@
           </div>
         </pickup-availability-preview>
       </template>
-    </pickup-availability>
+    </pickup-availability> {% endcomment %}
 
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 </div>
+
+
+{% style %}
+  .atc-button-style{
+    background-color: #33260A;
+    color: #F4F3EE;
+    height: 56px;
+    position: relative;
+    font-size: 40px;
+  }
+  .atc-button-style:hover{
+    background-color: rgb(51 38 10 / 75%);
+    color: #F4F3EE;
+    height: 56px;
+    position: relative;
+    font-size: 40px;
+  }
+  .lr-borders{
+    width: calc(100% - 12px);
+    height: 100%;
+    border-left: 1px solid #F4F3EE;
+    border-right: 1px solid #F4F3EE;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 6px;
+  }
+  .tb-borders{
+    height: calc(100% - 12px);
+    width: 100%;
+    border-top: 1px solid #F4F3EE;
+    border-bottom: 1px solid #F4F3EE;
+    background-color: transparent;
+    position: absolute;
+    top: 6px;
+    left: 0px;
+  }
+{% endstyle %}

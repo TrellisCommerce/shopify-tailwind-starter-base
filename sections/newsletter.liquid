@@ -22,6 +22,7 @@
         {%- when '@app' -%}
           {% render block %}
         {%- when 'heading' -%}
+
           <h2
             class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {{ block.shopify_attributes }}

@@ -1058,8 +1058,9 @@ input.mobile-facets__checkbox {
   display: flex;
   z-index: 2;
   margin-top: auto;
-  background-color: rgb(var(--color-background));
-  background: var(--gradient-background);
+  /* background-color: rgb(var(--color-background)); */
+  /* background: var(--gradient-background); */
+  color: #f4f3ee;
 }
 
 .mobile-facets__footer > * + * {

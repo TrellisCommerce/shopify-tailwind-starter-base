@@ -8,6 +8,7 @@
 {%- style -%}
   .footer {
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+    background-color:#F4F3EE
   }
 
   .section-{{ section.id }}-padding {
@@ -15,19 +16,134 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  @media screen and (min-width: 750px) {
+  .footer__content-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 96px;
+  }
+
+  .footer {
+    padding-top: 160px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+  }
+  .footer__content-bottom-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+  }
+  .footer-block--newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .footer-block__newsletter{
+    width: 100%;
+  }
+  .footer-menu{
+    width: 100%;
+  }
+  .footer-menu-columns{
+    width: 100%;
+    column-count: 2;
+    column-gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .newsletter-form__field-wrapper input{
+    background-color: transparent;
+    outline: none;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #262626;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    font-family: texGyre;
+  }
+  .newsletter-form__field-wrapper input:focus{
+   
+    /* border: 1px solid #262626 */
+  }
+
+  .special__input::placeholder{
+    font-family: texGyre;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  .special__input{
+    height: 40px;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    /* margin-bottom: 12px; */
+  }
+  .newsletter-form__button{
+    width: auto;
+    font-family: texGyre !important;
+  }
+  .submit-button{
+  }
+
+  @media screen and (min-width: 768px) {
+    .footer__content-top  .footer-illustration{
+      width: 50%;
+    }
+    .footer__content-top  .footer-block--newsletter{
+      width: 50%;
+      margin-top: 0;
+    }
+    .footer-menu-columns{
+      column-count: 3;
+      column-gap: 64px;
+    }
     .footer {
-      margin-top: {{ section.settings.margin_top }}px;
+      /* margin-top: {{ section.settings.margin_top }}px; */
+      padding-top: 192px;
+      padding-left: 96px;
+      padding-right: 96px;
+      padding-bottom: 40px;
+
     }
 
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+      /* padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px; */
     }
+    .footer__content-top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      column-gap: 96px;
+    }
+
+    .footer__content-bottom-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-direction: row;
+    }
+  }
+
+  .footer__content-top  .footer-illustration img{
+    width: 100%;
+  }
+
+  .copyright__content{
+    font-size: 12px;
+  }
+
+  .footer__content-bottom{
+    border: 0;
   }
 {%- endstyle -%}
 
-<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+<footer class="footer content-black gradient section-{{ section.id }}-padding">
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
@@ -49,7 +165,7 @@
     or section.settings.enable_follow_on_shop
   -%}
     {%- unless only_empty_brand -%}
-      <div class="footer__content-top page-width">
+      <div class="footer__content-top ">
         {%- if section.blocks.size > 0 -%}
           {%- liquid
             if section.blocks.size == 9
@@ -158,7 +274,15 @@
             {%- endfor -%}
           </div>
         {%- endif -%}
-
+        {%- if section.settings.footer_illustration -%}
+          <div class="footer-illustration">
+            <img
+              src="{{ section.settings.footer_illustration | image_url: width: 1600 }}"
+              width="1600"
+            />
+            
+          </div>
+        {% endif %}
         <div
           class="footer-block--newsletter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {% if settings.animations_reveal_on_scroll %}
@@ -168,7 +292,7 @@
           {%- if section.settings.newsletter_enable -%}
             <div class="footer-block__newsletter">
               {%- if section.settings.newsletter_heading != blank -%}
-                <h2 class="footer-block__heading inline-richtext">{{ section.settings.newsletter_heading }}</h2>
+                <h2 class="footer-block__heading inline-richtext goudy">{{ section.settings.newsletter_heading }}</h2>
               {%- endif -%}
               {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                 <input type="hidden" name="contact[tags]" value="newsletter">
@@ -178,7 +302,7 @@
                       id="NewsletterForm--{{ section.id }}"
                       type="email"
                       name="contact[email]"
-                      class="field__input"
+                      class="special__input"
                       value="{{ form.email }}"
                       aria-required="true"
                       autocorrect="off"
@@ -191,10 +315,10 @@
                       {% elsif form.posted_successfully? %}
                         aria-describedby="ContactFooter-success"
                       {% endif %}
-                      placeholder="{{ 'newsletter.label' | t }}"
+                      placeholder="Email Address"
                       required
                     >
-                    <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                    <label class="field__label sr-only" for="NewsletterForm--{{ section.id }}">
                       {{ 'newsletter.label' | t }}
                     </label>
                     <button
@@ -204,7 +328,8 @@
                       id="Subscribe"
                       aria-label="{{ 'newsletter.button_label' | t }}"
                     >
-                      {% render 'icon-arrow' %}
+                      {% comment %} {% render 'icon-arrow' %} {% endcomment %}
+                       ENTER
                     </button>
                   </div>
                   {%- if form.errors -%}
@@ -230,27 +355,37 @@
             </div>
           {%- endif -%}
 
-          {%- if shop.features.follow_on_shop? and section.settings.enable_follow_on_shop -%}
-            <div class="footer__follow-on-shop">
-              {{ shop | login_button: action: 'follow' }}
+          {%- if section.settings.footer_menu.links != blank -%}
+            <div class="footer-menu">
+              <ul class="footer-menu-columns">
+                {%- for link in section.settings.footer_menu.links -%}
+                  <li class="footer-link content-black">
+                    <a href="{{ link.handle }}" class="note texGyre uppercase no-underline content-black">
+                      {{ link.title }}
+                    </a>
+                  </li>
+                {%- endfor -%}
+              </ul>
             </div>
-          {%- endif -%}
+          {%- endif-%}
 
-          {%- if section.settings.show_social and has_social_icons -%}
-            {%- render 'social-icons', class: 'footer__list-social' -%}
-          {%- endif -%}
         </div>
       </div>
     {%- endunless -%}
   {%- endif -%}
 
+  {% comment %} <script>
+    const liquidVariable = "{{ section.settings.footer_menu }}";
+    console.log("Liquid Variable:", liquidVariable);
+</script> {% endcomment %}
+
   <div
-    class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger note texGyre animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
     {% endif %}
   >
-    <div class="footer__content-bottom-wrapper page-width">
+    {% comment %} <div class="footer__content-bottom-wrapper page-width">
       <div class="footer__column footer__localization isolate">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <localization-form>
@@ -290,13 +425,13 @@
           </div>
         {%- endif -%}
       </div>
-    </div>
-    <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
+    </div> {% endcomment %}
+    <div class="footer__content-bottom-wrapper uppercase">
       <div class="footer__copyright caption">
         <small class="copyright__content"
-          >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
+          >&copy;{{ 'now' | date: '%Y' }}, {{ "Laura Lombardi, All Rights Reserved" | link_to: routes.root_url -}}
         </small>
-        <small class="copyright__content">{{ powered_by_link }}</small>
+        {% comment %} <small class="copyright__content">{{ powered_by_link }}</small> {% endcomment %}
         {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}
@@ -310,6 +445,11 @@
             {%- endfor -%}
           </ul>
         {%- endif -%}
+      </div>
+      <div class="terms-credit uppercase">
+        <a href="/">Terms & Privacy</a>
+        /
+        <a href="https://specialoffer.inc">Site Credit</a>
       </div>
     </div>
   </div>
@@ -424,10 +564,14 @@
   ],
   "settings": [
     {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "scheme-1"
+      "type": "image_picker",
+      "label": "Footer Illustration",
+      "id": "footer_illustration"
+    },
+    {
+      "type": "link_list",
+      "label": "Footer Menu",
+      "id": "footer_menu"
     },
     {
       "type": "header",

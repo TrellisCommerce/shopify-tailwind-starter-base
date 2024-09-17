@@ -52,6 +52,27 @@
     %}
 
     {% style %}
+      @font-face {
+        font-family: 'Cancellaresca';
+        src: url("{{ 'CancellarescaScriptStd.woff2' | file_url }}") format('woff2'),
+            url("{{ 'CancellarescaScriptStd.woff' | file_url }}") format('woff');
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'Goudy';
+        src: url("{{ 'GoudyBookletter1911.woff2' | file_url }}") format('woff2'),
+            url("{{ 'GoudyBookletter1911.woff' | file_url }}") format('woff');
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'TexGyre';
+        src: url("{{ 'texgyreheroscn-bold.woff2' | file_url }}") format('woff2'),
+            url("{{ 'texgyreheroscn-bold.woff' | file_url }}") format('woff');
+        font-weight: 400;
+        font-style: normal;
+      }
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
       {{ body_font_italic | font_face: font_display: 'swap' }}
@@ -99,8 +120,8 @@
       {% endfor %}
 
       {{ scheme_classes | prepend: 'body' }} {
-        color: rgba(var(--color-foreground), 0.75);
-        background-color: rgb(var(--color-background));
+        /* color: rgba(var(--color-foreground), 0.75);
+        background-color: rgb(var(--color-background)); */
       }
 
       :root {
@@ -126,7 +147,8 @@
         --media-shadow-blur-radius: {{ settings.media_shadow_blur }}px;
         --media-shadow-visible: {% if settings.media_shadow_opacity > 0 %}1{% else %}0{% endif %};
 
-        --page-width: {{ settings.page_width | divided_by: 10 }}rem;
+        --page-width: 100%;
+        /* --page-width: {{ settings.page_width | divided_by: 10 }}rem; */
         --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
 
         --product-card-image-padding: {{ settings.card_image_padding | divided_by: 10.0 }}rem;
@@ -261,6 +283,8 @@
 
     {{ 'app.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'so-overwrite.css' | asset_url | stylesheet_tag }}
+
     <link rel='stylesheet' href='{{ 'component-cart-items.css' | asset_url }}' media='print' onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}
@@ -303,7 +327,7 @@
     </script>
   </head>
 
-  <body class='gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}'>
+  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %} {% if request.path == "/" %}index {% elsif request.page_type == 'product' %}product{% else %} {{request.path | replace: '/', '-' | slice: 1, request.path.size}} {% endif %}">
     <a class='skip-to-content-link button visually-hidden' href='#MainContent'>
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -314,7 +338,7 @@
 
     {% sections 'header-group' %}
 
-    <main id='MainContent' class='content-for-layout focus-none' role='main' tabindex='-1'>
+    <main id='MainContent' class='content-for-layout focus-none' style="background-color:#F4F3EE" role='main' tabindex='-1'>
       {{ content_for_layout }}
     </main>
 

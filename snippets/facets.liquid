@@ -476,7 +476,7 @@
       </summary>
       <facet-filters-form>
         <form id="FacetFiltersFormMobile" class="mobile-facets">
-          <div class="mobile-facets__inner gradient">
+          <div class="mobile-facets__inner">
             <div class="mobile-facets__header">
               <div class="mobile-facets__header-inner">
                 <h2 class="mobile-facets__heading medium-hide large-up-hide">
@@ -488,12 +488,16 @@
                     {{ 'products.facets.sort_button' | t }}
                   {%- endif -%}
                 </h2>
-                <h2 class="mobile-facets__heading small-hide">
+                <h2 class="mobile-facets__heading small-hide twcss-flex twcss-items-center twcss-justify-start">
                   {%- if enable_filtering -%}
-                    {{ 'products.facets.filter_button' | t }}
+                    <div class="goudy twcss-w-[16px] ">{</div>
+                    <div class=twcss-w-[80px]>{{ 'products.facets.filter_button' | t }}</div>
+                    <div class="goudy twcss-w-[16px] ">}</div>
+                    {% comment %} {{ 'products.facets.filter_button' | t }} {% endcomment %}
+                     
                   {%- endif -%}
                 </h2>
-                <p class="mobile-facets__count">
+                {% comment %} <p class="mobile-facets__count">
                   {%- if results.results_count -%}
                     {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
                   {%- elsif results.products_count == results.all_products_count -%}
@@ -504,7 +508,7 @@
                       | t: product_count: results.products_count, count: results.all_products_count
                     }}
                   {%- endif -%}
-                </p>
+                </p> {% endcomment %}
               </div>
             </div>
             <div

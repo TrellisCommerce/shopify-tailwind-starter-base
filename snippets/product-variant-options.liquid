@@ -1,4 +1,4 @@
-{% comment %}
+{% comment %} {% comment %}
   Renders product variant options
 
   Accepts:
@@ -118,3 +118,132 @@
     </option>
   {%- endif -%}
 {%- endfor -%}
+
+{% style %}
+  label{
+    cursor:pointer;
+  }
+{% endstyle %} {% endcomment %}
+{%- for value in option.values -%}
+  {%- liquid
+    assign swatch_focal_point = null
+    if value.swatch.image
+      assign image_url = value.swatch.image | image_url: width: 50
+      assign swatch_value = 'url(' | append: image_url | append: ')'
+      assign swatch_focal_point = value.swatch.image.presentation.focal_point
+    elsif value.swatch.color
+      assign swatch_value = 'rgb(' | append: value.swatch.color.rgb | append: ')'
+    else
+      assign swatch_value = null
+    endif
+
+    assign option_disabled = true
+    if value.available
+      assign option_disabled = false
+    endif
+  -%}
+
+  {%- capture input_id -%}
+    {{ section.id }}-{{ option.position }}-{{ forloop.index0 -}}
+  {%- endcapture -%}
+
+  {%- capture input_name -%}
+    {{ option.name }}-{{ option.position }}
+  {%- endcapture -%}
+
+  {%- capture input_dataset -%}
+    data-product-url="{{ value.product_url }}"
+    data-option-value-id="{{ value.id }}"
+  {%- endcapture -%}
+
+  {%- capture label_unavailable -%}
+    <span class="visually-hidden label-unavailable">
+      {{- 'products.product.variant_sold_out_or_unavailable' | t -}}
+    </span>
+  {%- endcapture -%}
+
+  {%- if picker_type == 'swatch' -%}
+    {%- capture help_text -%}
+      <span class="visually-hidden">{{ value | escape }}</span>
+      {{ label_unavailable }}
+    {%- endcapture -%}
+    {%
+      render 'swatch-input',
+      id: input_id,
+      name: input_name,
+      value: value | escape,
+      swatch: value.swatch,
+      product_form_id: product_form_id,
+      checked: value.selected,
+      visually_disabled: option_disabled,
+      shape: block.settings.swatch_shape,
+      help_text: help_text,
+      additional_props: input_dataset
+    %}
+  {%- elsif picker_type == 'button' -%}
+    <input
+      type="radio"
+      id="{{ input_id }}"
+      name="{{ input_name | escape }}"
+      value="{{ value | escape }}"
+      form="{{ product_form_id }}"
+      {% if value.selected %}
+        checked
+      {% endif %}
+      {% if option_disabled %}
+        class="disabled"
+      {% endif %}
+      {{ input_dataset }}
+    >
+    <label for="{{ input_id }}">
+      {{ value -}}
+      {{ label_unavailable }}
+
+      <!-- Conditional SVG Image rendering -->
+      {% if value.selected %}
+        <div class="option-svg-container">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="10" viewBox="0 0 26 10" fill="none">
+            <path d="M2.18624 1C7.26158 2.2902 12.543 3.28591 17.9121 3.74396C19.9441 3.91732 21.9696 3.95652 24.0138 3.95652C25.5788 3.95652 25.5553 4.05308 24.1802 4.51691C19.5217 6.08824 13.8745 6.94034 8.67626 6.73913C6.32949 6.64829 -0.640692 6.59339 1.65928 6.25604C2.59197 6.11923 3.70809 6.24573 4.62693 6.33333C7.5101 6.60822 10.3871 7.03282 13.2526 7.38647C16.0663 7.73374 18.9425 8.07159 21.6702 8.68116C22.2289 8.80602 21.9904 8.84483 21.6563 9" stroke="#33260A" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+      {% endif %}
+    </label>
+  {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
+    <option
+      id="{{ input_id }}"
+      value="{{ value | escape }}"
+      {% if value.selected %}
+        selected="selected"
+      {% endif %}
+      {% if swatch_value and picker_type == 'swatch_dropdown' %}
+        data-option-swatch-value="{{ swatch_value }}"
+        {% if swatch_focal_point %}
+          data-option-swatch-focal-point="{{ swatch_focal_point }}"
+        {% endif %}
+      {% endif %}
+      {{ input_dataset }}
+    >
+      {% if option_disabled -%}
+        {{- 'products.product.value_unavailable' | t: option_value: value -}}
+      {%- else -%}
+        {{- value -}}
+    {%- endif %}
+    </option>
+  {%- endif -%}
+{%- endfor -%}
+
+{% style %}
+  label {
+    cursor: pointer;
+    position: relative;
+  }
+
+  .option-svg-container {
+    position: absolute;
+    bottom: -20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 26px; /* Match SVG width */
+    height: 10px; /* Match SVG height */
+  }
+{% endstyle %}

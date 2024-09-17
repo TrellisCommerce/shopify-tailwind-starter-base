@@ -1,0 +1,248 @@
+{%- style -%}
+.so-hero {
+    height: 100vh;
+    position: relative;
+}
+@media screen and (max-width: 767px) {
+    .so-hero.square-on-mobile{
+        height: 100vw;
+    }
+}
+
+
+.so-hero > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Change to 'contain' to maintain aspect ratio */
+}
+
+.so-hero__image {
+
+}
+
+.so-hero__content {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 64px;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    padding-left: 96px;
+    padding-right: 96px;
+    height: 100vh;
+    overflow: scroll;
+    padding-top: 128px;
+    padding-bottom: 128px;
+}
+@media screen and (max-width: 767px) {
+    .so-hero__content {
+        display: none;
+    }
+}
+
+.so-hero__column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.light-text{
+    color:#FFF;
+}
+/* .columns--1{
+    height: 100vh;
+    overflow: scroll;
+    padding-top: 128px;
+    padding-bottom: 128px;
+}
+.columns--2{
+    height: 100vh;
+    overflow: scroll;
+    padding-top: 128px;
+    padding-bottom: 128px;
+}
+.columns--3{
+    height: 100vh;
+    overflow: scroll;
+    padding-top: 128px;
+    padding-bottom: 128px;
+} */
+.orientation-left.columns--1 > .column--1{
+    grid-column-start: 1;
+    text-align: left;
+}
+.orientation-center.columns--1 > .column--1{
+    grid-column-start: 2;
+    text-align: center;
+}
+.orientation-right.columns--1 > .column--1{
+    grid-column-start: 3;
+    text-align: right;
+
+}
+.orientation-right.columns--2 > .column--1{
+    grid-column-start: 2;
+    text-align: center;
+}
+.orientation-right.columns--2 > .column--2{
+    grid-column-start: 3;
+    text-align: right;
+}
+.button-link{
+    text-transform: uppercase;
+    color:black;
+}
+.light-text .button-link{
+    color: white;
+}
+.overlay-container{
+    opacity: {{ section.settings.image_overlay_opacity }}%;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+{%- endstyle -%}
+
+{%- liquid
+    assign full_width = '100vw'
+    assign full_height = '100dvh'
+    if section.index == 1
+      assign fetch_priority = 'high'
+    endif
+  -%}
+
+<div class="so-hero {% if section.settings.light-text %}light-text{% endif %} {% if section.settings.square-on-mobile %}square-on-mobile{% endif %}">
+  {% if section.settings.image %}
+    <img 
+      src="{{ section.settings.image | image_url }}" 
+      alt="Hero Image"
+      width="{{ full_width }}"
+      height="{{ full_height }}"
+      fetchpriority="{{ fetch_priority }}"
+    >
+  {% endif %}
+    {% if section.settings.image_overlay_opacity != 0 %}
+        <div class="overlay-container">
+        </div>
+    {% endif %}
+
+  <div class="so-hero__content columns--{{ section.blocks.size }} orientation-{{ section.settings.column-orientation }}">
+   
+     {% comment %} {{ section.settings.image_overlay_opacity }} {% endcomment %}
+    {% for block in section.blocks %}
+      <div class="so-hero__column column--{{ forloop.index }}">
+
+        <div class="headline cancellaresca">
+            <span>
+                {{ block.settings.column_header }}
+            </span>
+        </div>
+        <div class="subheadline-2" >
+            {{ block.settings.column_content }}
+        </div>
+        <a href="{{ block.settings.button_link }}" class="button-link texGyre no-underline">
+            {{ block.settings.button_text }}
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+    "name": "Hero Banner",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Hero Image"
+        },
+        {
+            "type": "range",
+            "id": "image_overlay_opacity",
+            "min": 0,
+            "max": 100,
+            "step": 5,
+            "unit": "%",
+            "label": "Image Overlay Opacity",
+            "default": 0
+        },
+        {
+            "type": "checkbox",
+            "id": "square-on-mobile",
+            "label": "Square Hero on Mobile?"
+        },
+        {
+            "type": "select",
+            "id": "column-orientation",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              },
+              {
+                "value": "center",
+                "label": "Center"
+              }
+            ],
+            "label": "Column Orientation"
+        },
+        {
+            "type": "checkbox",
+            "id": "light-text",
+            "default": false,
+            "label": "Light Text?"
+          }
+    ],
+    "blocks": [
+        {
+            "name": "Column",
+            "type": "column",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "column_header",
+                    "label": "Column Header"
+                },
+                {
+                    "type": "richtext",
+                    "id": "column_content",
+                    "label": "Column Content"
+                },
+                {
+                    "type": "text",
+                    "id": "button_text",
+                    "label": "Button Text",
+                  },
+                {
+                    "type": "url",
+                    "id": "button_link",
+                    "label": "Button Link"
+                },
+            ],
+            "limit": 3
+        }
+    ],
+    "presets": [
+        {
+            "name": "Hero Banner",
+            "category": "Custom"
+        }
+    ]
+}
+{% endschema %}

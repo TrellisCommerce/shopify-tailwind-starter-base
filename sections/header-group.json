@@ -8,32 +8,60 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
-            "text_alignment": "center",
-            "color_scheme": "scheme-1",
+            "text": "SS24 is here ⟡ Explore New Arrivals",
+            "link": "shopify:\/\/collections\/new-arrivals"
+          }
+        },
+        "announcement_FV63Cj": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free Shipping on Domestic (US) Orders over $100",
             "link": ""
+          }
+        },
+        "announcement_y67weg": {
+          "type": "announcement",
+          "settings": {
+            "text": "⟡ Shop The Archive Sale ⟡",
+            "link": "shopify:\/\/collections\/archive"
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
-      ]
-    },
-    "header": {
-      "type": "header",
+        "announcement-bar-0",
+        "announcement_FV63Cj",
+        "announcement_y67weg"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
-        "logo_position": "middle-left",
-        "menu": "main-menu",
-        "menu_type_desktop": "dropdown",
-        "sticky_header_type": "on-scroll-up",
-        "show_line_separator": true,
-        "enable_country_selector": true,
-        "enable_language_selector": true,
+        "show_line_separator": false,
+        "show_social": false,
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "so-header",
+      "settings": {
+        "logo_position": "middle-center",
+        "shop_menu": "shop-mega-menu",
+        "menu": "mega-main-menu",
+        "left-text": "<p><a href=\"https:\/\/maps.app.goo.gl\/rHvPfmAAmGMfDb8V6\" target=\"_blank\" title=\"https:\/\/maps.app.goo.gl\/rHvPfmAAmGMfDb8V6\">16 CLINTON STREET<\/a><\/p><p><a href=\"https:\/\/maps.app.goo.gl\/rHvPfmAAmGMfDb8V6\" target=\"_blank\" title=\"https:\/\/maps.app.goo.gl\/rHvPfmAAmGMfDb8V6\">NEW YORK CITY<\/a><\/p>",
+        "right-text": "<p><a href=\"\/collections\/rings\" title=\"Rings\">SHOP<\/a><\/p><p><a href=\"\/collections\/rings\" title=\"Rings\">NEW RINGS<\/a><\/p>",
+        "menu_type_desktop": "mega",
+        "light-header": true,
+        "header_illustration": "shopify:\/\/shop_images\/Header-Illustration_4ac754bc-0985-456b-9463-4dd596d36c55.png",
+        "sticky_header_type": "always",
+        "show_line_separator": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "enable_customer_avatar": false,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },

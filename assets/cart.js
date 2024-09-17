@@ -60,10 +60,51 @@ class CartItems extends HTMLElement {
     event.target.select();
   }
 
+  // validateQuantity(event) {
+  //   const inputValue = parseInt(event.target.value);
+  //   const index = event.target.dataset.index;
+  //   let message = '';
+
+  //   if (inputValue < event.target.dataset.min) {
+  //     message = window.quickOrderListStrings.min_error.replace(
+  //       '[min]',
+  //       event.target.dataset.min,
+  //     );
+  //   } else if (inputValue > parseInt(event.target.max)) {
+  //     message = window.quickOrderListStrings.max_error.replace(
+  //       '[max]',
+  //       event.target.max,
+  //     );
+  //   } else if (inputValue % parseInt(event.target.step) !== 0) {
+  //     message = window.quickOrderListStrings.step_error.replace(
+  //       '[step]',
+  //       event.target.step,
+  //     );
+  //   }
+
+  //   if (message) {
+  //     this.setValidity(event, index, message);
+  //   } else {
+  //     event.target.setCustomValidity('');
+  //     event.target.reportValidity();
+  //     this.updateQuantity(
+  //       index,
+  //       inputValue,
+  //       document.activeElement.getAttribute('name'),
+  //       event.target.dataset.quantityVariantId,
+  //     );
+  //   }
+  // }
   validateQuantity(event) {
     const inputValue = parseInt(event.target.value);
     const index = event.target.dataset.index;
     let message = '';
+
+    // If quantity is set to 0, remove the item by calling updateQuantity with 0
+    if (inputValue === 0) {
+      this.updateQuantity(index, 0);
+      return;
+    }
 
     if (inputValue < event.target.dataset.min) {
       message = window.quickOrderListStrings.min_error.replace(
