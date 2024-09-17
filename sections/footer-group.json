@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -5,8 +14,6 @@
     "footer": {
       "type": "footer",
       "settings": {
-        "footer_illustration": "shopify:\/\/shop_images\/footer-graphic.png",
-        "footer_menu": "footer",
         "newsletter_enable": true,
         "newsletter_heading": "Join our list for info on new arrivals, sales, exclusive offers, and for 10% off your first purchase.",
         "enable_follow_on_shop": false,

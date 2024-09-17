@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -11,7 +20,9 @@
           }
         },
         "title": {
-          "type": "title"
+          "type": "title",
+          "settings": {
+          }
         },
         "caption": {
           "type": "text",
@@ -21,7 +32,9 @@
           }
         },
         "price": {
-          "type": "price"
+          "type": "price",
+          "settings": {
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -30,7 +43,9 @@
           }
         },
         "quantity_selector": {
-          "type": "quantity_selector"
+          "type": "quantity_selector",
+          "settings": {
+          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -40,7 +55,9 @@
           }
         },
         "description": {
-          "type": "description"
+          "type": "description",
+          "settings": {
+          }
         },
         "collapsible-row-0": {
           "type": "collapsible_tab",
@@ -102,9 +119,9 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "gallery_layout": "stacked",
         "media_size": "large",
         "constrain_to_viewport": true,
+        "gallery_layout": "stacked",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
@@ -183,9 +200,9 @@
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "swipe_on_mobile": false,
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -196,7 +213,6 @@
         "heading": "HELLO",
         "heading_size": "h2",
         "columns_desktop": 4,
-        "color_scheme": "scheme-1",
         "image_ratio": "square",
         "show_secondary_image": true,
         "show_vendor": false,
