@@ -37,6 +37,46 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "promotional_GthaAt": {
+          "type": "promotional",
+          "settings": {
+            "promotional_index": 1,
+            "promotional_image": "shopify:\/\/shop_images\/cefa51206da34eab8a9fdb248b940b3d.HD-720p-1.6Mbps.gif",
+            "promotional_headline": "Headline",
+            "promotional_description": "Description",
+            "promotional_button_text": "Button Text",
+            "promotional_button_url": ""
+          }
+        },
+        "promotional_J8NgTw": {
+          "type": "promotional",
+          "settings": {
+            "promotional_index": 1,
+            "promotional_image": "shopify:\/\/shop_images\/istockphoto-639999614-612x612.jpg",
+            "promotional_headline": "Headline",
+            "promotional_description": "Description",
+            "promotional_button_text": "Button Text",
+            "promotional_button_url": ""
+          }
+        },
+        "promotional_KmgX3i": {
+          "type": "promotional",
+          "settings": {
+            "promotional_index": 1,
+            "promotional_image": "shopify:\/\/shop_images\/Award-winning-mens-sustainable-glasses-and-womens-eyewear-2.webp",
+            "promotional_headline": "Headline",
+            "promotional_description": "Description",
+            "promotional_button_text": "Button Text",
+            "promotional_button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "promotional_GthaAt",
+        "promotional_J8NgTw",
+        "promotional_KmgX3i"
+      ],
       "settings": {
         "logo_position": "middle-left",
         "menu": "main-menu",
