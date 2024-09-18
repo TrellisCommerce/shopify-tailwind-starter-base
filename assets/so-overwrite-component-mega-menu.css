@@ -80,3 +80,12 @@ details[open] > .header__menu-item {
   color: rgb(var(--color-foreground));
   text-decoration: none;
 }
+
+@media screen and (max-width: 749px) {
+  summary {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+}

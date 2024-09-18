@@ -108,7 +108,7 @@
   /* position: absolute; */
   /* top: 100vh; */
   /* transform: translateY(-100%); */
-  width: calc(100vw - 32px);
+  /* width: calc(100vw - 32px); */
   /* background-color: rgba(255, 255, 255, 0.50); */
 }
 .index .announcement-bar-section .utility-bar {
@@ -406,3 +406,29 @@ sticky-header {
 
 .price {
 }
+
+@media (min-width: 750px) {
+  .related-products-headline{
+    font-size: 80px;
+    line-height:1;
+  }
+  .header{
+    align-items: center;
+  }
+}
+@media (max-width:749px) {
+  .related-products-headline{
+    font-size: 32px;
+    line-height:1;
+  }
+  .header{
+    align-items: flex-start;
+  }
+  .header__heading{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+

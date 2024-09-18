@@ -1,7 +1,13 @@
 .js details[open].menu-opening > .menu-drawer,
 details[open].menu-opening > .menu-drawer__submenu {
   transform: translateX(0);
-  width: 88%;
+  width: 100%;
+  /* width: 88%; */
   height: 100dvh;
   top: 0;
+  position: fixed;
+}
+
+#menu-drawer{
+  width: 88%;
 }

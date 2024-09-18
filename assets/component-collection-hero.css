@@ -84,6 +84,9 @@
   .collection-hero__image-container {
     height: 20rem;
   }
+  .collection-hero__text-wrapper {
+    border: 1px solid #262626;
+  }
 }
 
 @media screen and (min-width: 750px) {
