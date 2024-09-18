@@ -12,7 +12,7 @@
 <div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
   <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     <div class="collection-hero__text-wrapper">
-      <h1 class="collection-hero__title">
+      <h1 class="collection-hero__title twcss-text-center cancellaresca headline medium-up-hide">
         <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
         {{- collection.title | escape -}}
       </h1>
@@ -20,6 +20,21 @@
       {%- if section.settings.show_collection_description -%}
         <div class="collection-hero__description rte">{{ collection.description }}</div>
       {%- endif -%}
+      <div class="medium-up-hide flex-center-center">
+        <div class="twcss-w-1/2 twcss-text-center">
+          <p>
+            16 CLINTON STREET<br/>
+            NEW YORK CITY
+          </p>
+        </div>
+        <div class="twcss-w-1/2 twcss-text-center twcss-uppercase">
+          <p>
+            {{ collection.title }}
+            <br/>
+            Viewing All
+          </p>
+        </div>
+      </div>
     </div>
 
     {%- if section.settings.show_collection_image and collection.image -%}
