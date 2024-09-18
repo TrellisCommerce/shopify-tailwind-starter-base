@@ -1,6 +1,6 @@
 Brought to you and maintained by [Trellis Commerce](https://trellis.co/) - A full-service eCommerce agency based in Boston, MA
 
-Latest merged code from [Dawn v14.0.0](https://github.com/Shopify/dawn/releases/tag/v14.0.0)
+Latest merged code from [Dawn v15.0.1](https://github.com/Shopify/dawn/releases/tag/v15.0.1)
 
 # Dawn + Tailwind CSS + Prettier Shopify Starter Theme
 
@@ -82,7 +82,7 @@ In your GitHub repo, navigate to Settings > Secrets > Actions and add the follow
 
 These secret values are used in the `ci.yml` GitHub workflow:
 
-<img width="500" alt="Secrets shown in the workflow file" src="https://user-images.githubusercontent.com/75811975/162518733-c1744910-85b2-44e3-91d0-08acfc018ba1.png">
+<img width="507" alt="Screenshot 2024-07-30 at 1 44 13 PM" src="https://github.com/user-attachments/assets/0c8f7af0-5a35-4cfe-b5e0-6ebcf7c86a41">
 
 ## Install [Shopify Liquid VSCode extension](https://marketplace.visualstudio.com/items?itemName=Shopify.theme-check-vscode)
 
@@ -111,3 +111,75 @@ But this does work:
 
 5. Launch the local development server:
    `shopify theme dev`
+   
+---
+
+# Other Versions of the Starter Theme
+
+## Tailwind Admin Fields
+
+- [Branch](https://github.com/TrellisCommerce/shopify-tailwind-starter-base/tree/tailwind-admin-fields)
+
+### How Is It Different
+
+Multiple admin fields have been added at the theme level, as well as at the section level, to allow for more granular control over the Dawn theme's settings and elements directly through the admin by inputting Tailwind CSS classes as values.
+
+### How To Use
+
+First, decide if you want to configure the `tailwind.config.js` file to allow for your specific font families, sizes, colors, etc to cut down on the generated Tailwind CSS file from the start, or you can just jump in and take advantage of all the default Tailwind CSS classes.
+
+1. Affect global animation timing & easing from [Easing Functions Cheat Sheet](https://easings.net/) in Theme Settings under Animations:
+
+<img width="500" alt="Animation Tailwind CSS settings" src="https://github.com/user-attachments/assets/48b5c42f-9646-476f-8555-5157ac1afc5d">
+
+2. Affect global elements in the Theme Settings under the Tailwind CSS accordion:
+
+<img width="500" alt="Global element Tailwind CSS theme settings" src="https://github.com/user-attachments/assets/fd4ce8d8-ec53-46f9-af5d-746d0f63b0af">
+
+3. Affect global elements and page-level sections under the Tailwind CSS heading for each Dawn element in the admin:
+
+<img width="500" alt="Header Tailwind CSS settings" src="https://github.com/user-attachments/assets/f8ce39b0-d9a1-4e73-94fb-1efb014869ec">
+
+### If Using in Conjunction with a Development Team
+
+#### Optimizing CSS
+
+In order to make all the Tailwind classes available for the editor in the admin, the following was added to the `tailwind.config.js` file to include ALL classes, as well as breakpoint & hover variants, and to add `!important` to each class to make sure it overrides any existing Dawn styles:
+
+```
+...
+// safelist is added to provide all styles for design to add through the admin
+safelist: [
+   {
+      pattern: /.*/,
+      variants: ['xs', 'sm', 'md', 'lg', 'hover', 'group-hover'],
+   },
+],
+// !important is added to override core Dawn styles for design
+important: true,
+...
+```
+
+If this theme is handed over to a development team who will be editing the code directly, the safelist array will need to be removed (ideal to also remove the `important` key, but that would require adjusting any conflicting Dawn styles) from the config file and the following added to the content array to have Tailwind recognize the classes added through the admin fields: 
+
+```
+content: [
+   ...
+   './**/*.json',
+],
+```
+
+If desired, run the Tailwind compile command to purge any unused styles (this step is optional as making a commit with changes to the tailwind config file will auto-generate a new `app.css` file after the commit is pushed, but this step will allow for a quick check on the proper purging of the classes): `npx tailwindcss -i ./assets/app-tailwind.css -o ./assets/app.css`
+
+#### Lock Down the Admin Fields
+
+To lock down the Tailwind CSS admin fields from being editied through the admin, run `gulp` in your terminal to transform all Tailwind text fields to checkbox fields instead and to add the following paragraph text to all Tailwind sections:
+
+_Tailwind fields are not editable through the admin at this stage. Please contact a Trellis engineer if changes are needed._
+
+| :bangbang: | Note that toggling one of the checkboxes after running `gulp` will remove the contents of the tailwind admin fields. Since removing the fields also removes the entered values, swapping to a different field type preserves the values and does not allow for editing the values. |
+|:----------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+#### Code Review of Classes Inserted Through the Admin
+
+It is recommended to have a separate branch & connected theme version created for the design team to use when adding in classes through the admin fields. This way, when it is time to merge in the changes from that branch to another theme branch, a pull request can be created and all the commits can be reviewed all at once instead of reviewing each individual commit generated by `shopify[bot]`.
