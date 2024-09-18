@@ -46,23 +46,23 @@ class HeaderMenu extends DetailsDisclosure {
   }
 
   onToggle() {
-    // if (this.megaMenu) {
-    //   var parentLinks = document.querySelectorAll('details.mega-menu');
-    //   parentLinks.forEach(function (parentLink) {
-    //     loadImages(parentLink);
-    //   });
-    //   function loadImages(menuItem) {
-    //     var images = menuItem.querySelectorAll('.custom-lazyload');
-    //     if (!images.length) return;
-    //     images.forEach(function (image) {
-    //       if (image.dataset.src) {
-    //         image.src = image.dataset.src;
-    //         image.removeAttribute('data-src');
-    //         image.classList.remove('custom-lazyload');
-    //       }
-    //     });
-    //   }
-    // }
+    if (this.megaMenu) {
+      var parentLinks = document.querySelectorAll('details.mega-menu');
+      parentLinks.forEach(function (parentLink) {
+        loadImages(parentLink);
+      });
+      function loadImages(menuItem) {
+        var images = menuItem.querySelectorAll('.custom-lazyload');
+        if (!images.length) return;
+        images.forEach(function (image) {
+          if (image.dataset.src) {
+            image.src = image.dataset.src;
+            image.removeAttribute('data-src');
+            image.classList.remove('custom-lazyload');
+          }
+        });
+      }
+    }
 
     if (!this.header) return;
     this.header.preventHide = this.mainDetailsToggle.open;
