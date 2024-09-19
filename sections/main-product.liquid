@@ -106,7 +106,7 @@
                   </a>
                 </div>
               {%- when 'price' -%}
-                <div id="price-{{ section.id }}" class="twcss-text-center"  role="status" {{ block.shopify_attributes }}>
+                <div id="price-{{ section.id }}" class="twcss-text-center goudy"  role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
                     product: product,
                     use_variant: true,
@@ -142,7 +142,7 @@
                 </div> {% endcomment %}
                 {%- when 'description' -%}
                   {%- if product.description != blank -%}
-                    <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                    <div class="product__description rte quick-add-hidden goudy" {{ block.shopify_attributes }}>
                       {{ product.description }}
                     </div>
                   {%- endif -%}
@@ -215,7 +215,108 @@
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'collapsible_tab' -%}
-                <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+                  {% assign materials = product.metafields.custom.materials_and_care.value %}
+                  {% assign shipping = product.metafields.custom.shipping_info.value %}
+                  {% assign dimensions = product.metafields.custom.dimensions.value %}
+                
+                  {% if block.settings.heading == 'Materials' or block.settings.heading == 'Materials & Care' %}
+                    {% if materials %}
+                      <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+                        <details id="Details-{{ block.id }}-{{ section.id }}">
+                          <summary>
+                            <div class="summary__title">
+                              {% render 'icon-accordion', icon: block.settings.icon %}
+                              <h2 class="h4 accordion__title uppercase texGyre inline-richtext">
+                                {{ block.settings.heading | default: block.settings.page.title | escape }}
+                              </h2>
+                            </div>
+                            {% comment %} {% render 'icon-caret' %} {% endcomment %}
+                          </summary>
+                          <div class="accordion__content goudy rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                            {% assign parsed_materials = materials | parse_json %}
+                            {% for child in parsed_materials.children %}
+                              {% if child.type == 'paragraph' %}
+                                <p>
+                                  {% for text in child.children %}
+                                    {% if text.type == 'text' %}
+                                      {{ text.value | escape }} 
+                                    {% elsif text.type == 'link' %}
+                                      <a href="{{ text.url }}">{{ text.title }}</a>
+                                    {% endif %}
+                                  {% endfor %}
+                                </p>
+                              {% endif %}
+                            {% endfor %}
+                          </div>
+                        </details>
+                      </div>
+                    {% endif %}
+                  {% elsif block.settings.heading == 'Shipping' or block.settings.heading == 'Shipping & Returns' %}
+                    {% if shipping %}
+                      <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+                        <details id="Details-{{ block.id }}-{{ section.id }}">
+                          <summary>
+                            <div class="summary__title">
+                              {% render 'icon-accordion', icon: block.settings.icon %}
+                              <h2 class="h4 accordion__title uppercase texGyre inline-richtext">
+                                {{ block.settings.heading | default: block.settings.page.title | escape }}
+                              </h2>
+                            </div>
+                            {% comment %} {% render 'icon-caret' %} {% endcomment %}
+                          </summary>
+                          <div class="accordion__content goudy rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                            {% assign parsed_shipping = shipping | parse_json %}
+                            {% for child in parsed_shipping.children %}
+                              {% if child.type == 'paragraph' %}
+                                <p>
+                                  {% for text in child.children %}
+                                    {% if text.type == 'text' %}
+                                      {{ text.value | escape }} 
+                                    {% elsif text.type == 'link' %}
+                                      <a href="{{ text.url }}">{{ text.title }}</a>
+                                    {% endif %}
+                                  {% endfor %}
+                                </p>
+                              {% endif %}
+                            {% endfor %}
+                          </div>
+                        </details>
+                      </div>
+                    {% endif %}
+                  {% elsif block.settings.heading == 'Dimensions' %}
+                    {% if dimensions %}
+                      <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+                        <details id="Details-{{ block.id }}-{{ section.id }}">
+                          <summary>
+                            <div class="summary__title">
+                              {% render 'icon-accordion', icon: block.settings.icon %}
+                              <h2 class="h4 accordion__title uppercase texGyre inline-richtext ">
+                                {{ block.settings.heading | default: block.settings.page.title | escape }}
+                              </h2>
+                            </div>
+                            {% comment %} {% render 'icon-caret' %} {% endcomment %}
+                          </summary>
+                          <div class="accordion__content goudy  rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                            {% assign parsed_dimensions = dimensions | parse_json %}
+                            {% for child in parsed_dimensions.children %}
+                              {% if child.type == 'paragraph' %}
+                                <p>
+                                  {% for text in child.children %}
+                                    {% if text.type == 'text' %}
+                                      {{ text.value | escape }} 
+                                    {% elsif text.type == 'link' %}
+                                      <a href="{{ text.url }}">{{ text.title }}</a>
+                                    {% endif %}
+                                  {% endfor %}
+                                </p>
+                              {% endif %}
+                            {% endfor %}
+                          </div>
+                        </details>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                {% comment %} <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                   <details id="Details-{{ block.id }}-{{ section.id }}">
                     <summary>
                       <div class="summary__title">
@@ -226,12 +327,63 @@
                       </div>
                       {% render 'icon-caret' %}
                     </summary>
+
+
                     <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                      {{ block.settings.content }}
-                      {{ block.settings.page.content }}
+                      {% comment %} {{ block.settings.content }} {% endcomment %}
+                      {% comment %} {{ block.settings.page.content }} {% endcomment %}
+                      {% assign materials = product.metafields.custom.materials_and_care.value %}
+                      {% assign shipping = product.metafields.custom.shipping_info.value %}
+                      {% assign dimensions = product.metafields.custom.dimensions.value %}
+                      {% if block.settings.heading == 'Materials' or block.settings.ehading == "Materials & Care"%}
+                        {% assign parsed_materials = materials | parse_json %}
+                        {% for child in parsed_materials.children %}
+                          {% if child.type == 'paragraph' %}
+                            <p>
+                              {% for text in child.children %}
+                                {% if text.type == 'text' %}
+                                  {{ text.value | escape }} 
+                                {% elsif text.type == 'link' %}
+                                  <a href="{{ text.url }}">{{ text.title }}</a>
+                                {% endif %}
+                              {% endfor %}
+                            </p>
+                          {% endif %}
+                        {% endfor %}
+                      {% elsif block.settings.heading == 'Shipping' or block.settings.heading == 'Shipping & Returns'%}
+                        {% assign parsed_shipping = shipping | parse_json %}
+                        {% for child in parsed_shipping.children %}
+                          {% if child.type == 'paragraph' %}
+                            <p>
+                              {% for text in child.children %}
+                                {% if text.type == 'text' %}
+                                  {{ text.value | escape }} 
+                                {% elsif text.type == 'link' %}
+                                  <a href="{{ text.url }}">{{ text.title }}</a>
+                                {% endif %}
+                              {% endfor %}
+                            </p>
+                          {% endif %}
+                        {% endfor %}
+                      {% elsif block.settings.heading == 'Dimensions' %}
+                        {% assign parsed_dimensions = dimensions | parse_json %}
+                        {% for child in parsed_dimensions.children %}
+                          {% if child.type == 'paragraph' %}
+                            <p>
+                              {% for text in child.children %}
+                                {% if text.type == 'text' %}
+                                  {{ text.value | escape }} 
+                                {% elsif text.type == 'link' %}
+                                  <a href="{{ text.url }}">{{ text.title }}</a>
+                                {% endif %}
+                              {% endfor %}
+                            </p>
+                          {% endif %}
+                        {% endfor %}
+                      {% endif %}
                     </div>
                   </details>
-                </div>
+                </div> {% endcomment %}
               {%- when 'quantity_selector' -%}
                 <div
                   id="Quantity-Form-{{ section.id }}"

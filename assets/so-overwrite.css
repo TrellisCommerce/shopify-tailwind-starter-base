@@ -103,7 +103,9 @@
 }
 
 /* ANNOUNCEMENT BAR */
-
+.index .announcement-bar{
+  background-color: transparent;
+}
 .index .announcement-bar-section {
   /* position: absolute; */
   /* top: 100vh; */
@@ -361,6 +363,11 @@ sticky-header {
   background-color: #f4f3ee;
 }
 
+body{
+  background-color: #f4f3ee;
+
+}
+
 /* .mobile-facets__inner{
 } */
 
@@ -432,3 +439,15 @@ sticky-header {
   }
 }
 
+@media (max-width:749px) {
+  .product-price{
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (min-width:750px) {
+  .product-price{
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
