@@ -15,23 +15,16 @@
 </style>
 
 <div class="">
-  <h1>Naman's custom 404 page template 100 emoji</h1>
-  <img src="{{ section.settings.image_1 }}" width="" height="" alt="404 Left Image">
-  <img src="{{ section.settings.image_2 }}" width="" height="" alt="404 Right Image">
-  <h1>{{ section.settings.title_404 }}</h1>
-  <p>{{ section.settings.body_404 }}</p>
-
-  <div class="flex flex-col md:flex-row relative">
-    <figure class="error-figure">
-      {% comment %} <SanityImage v-if="imageOne" :image="imageOne" /> {% endcomment %}
+  <div class="twcss-flex twcss-flex-col md:twcss-flex-row twcss-relative">
+    <figure class="twcss-error-figure">
+      <img src="{{ section.settings.image_1 }}" width="" height="" alt="404 Left Image">
     </figure>
-    <figure class="error-figure">
-      {% comment %} <SanityImage v-if="imageTwo" :image="imageTwo" /> {% endcomment %}
+    <figure class=" twcss-error-figure">
+      <img src="{{ section.settings.image_2 }}" width="" height="" alt="404 Right Image">
     </figure>
-    <div class="absolute-center-v-h text-ll-new-gray note tex-gyre max-w-[282px] text-center">
-      {% comment %} <p v-text="title" /> {% endcomment %}
-       {% comment %} {% image %} {% endcomment %}
-      {% comment %} <SanityContent :blocks="content" v-if="content" /> {% endcomment %}
+    <div class="twcss-absolute-center-v-h twcss-text-ll-new-gray twcss-note twcss-tex-gyre twcss-max-w-[282px] twcss-text-center">
+      <p>{{ section.settings.title_404 }}</p>
+      <p>{{ section.settings.body_404 }}</p>
     </div>
   </div>
 </div>
