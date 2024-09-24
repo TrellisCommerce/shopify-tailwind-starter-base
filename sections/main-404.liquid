@@ -18,8 +18,8 @@
   <h1>Naman's custom 404 page template 100 emoji</h1>
   <img src="{{ section.settings.image_1 }}" width="" height="" alt="404 Left Image">
   <img src="{{ section.settings.image_2 }}" width="" height="" alt="404 Right Image">
-  <h1>{{ section.settings.404_title }}</h1>
-  <p>{{ section.settings.404_body }}</p>
+  <h1>{{ section.settings.title_404 }}</h1>
+  <p>{{ section.settings.body_404 }}</p>
 
   <div class="flex flex-col md:flex-row relative">
     <figure class="error-figure">
@@ -52,13 +52,13 @@
     },
     {
       "type": "text",
-      "id": "404_title",
+      "id": "title_404",
       "label": "404 Title",
       "default": "404"
     },
     {
       "type": "text",
-      "id": "404_body",
+      "id": "body_404",
       "label": "404 Body Type",
       "default": "The page you are looking for either doesn’t exist or has moved or something else has happened."
     }
