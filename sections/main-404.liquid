@@ -15,6 +15,7 @@
 </style>
 
 <div class="">
+  <h1>Naman's custom 404 page template 100 emoji</h1>
   <div class="flex flex-col md:flex-row relative">
     <figure class="error-figure">
       {% comment %} <SanityImage v-if="imageOne" :image="imageOne" /> {% endcomment %}
@@ -24,7 +25,7 @@
     </figure>
     <div class="absolute-center-v-h text-ll-new-gray note tex-gyre max-w-[282px] text-center">
       {% comment %} <p v-text="title" /> {% endcomment %}
-       {% image %}
+       {% comment %} {% image %} {% endcomment %}
       {% comment %} <SanityContent :blocks="content" v-if="content" /> {% endcomment %}
     </div>
   </div>
