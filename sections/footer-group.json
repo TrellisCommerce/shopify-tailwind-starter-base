@@ -5,8 +5,6 @@
     "footer": {
       "type": "footer",
       "settings": {
-        "footer_illustration": "shopify:\/\/shop_images\/footer-graphic.png",
-        "footer_menu": "footer",
         "newsletter_enable": true,
         "newsletter_heading": "Join our list for info on new arrivals, sales, exclusive offers, and for 10% off your first purchase.",
         "enable_follow_on_shop": false,

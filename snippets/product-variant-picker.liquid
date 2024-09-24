@@ -43,14 +43,20 @@
           %}
         </fieldset>
       {%- elsif picker_type == 'button' -%}
-        <fieldset class="js product-form__input ">
-          <legend class="form__label">{{ option.name }}</legend>
+        <fieldset class="js product-form__input uppercase texGyre " style="display: flex; justify-content:space-between;align-items:center">
+          <div>
+            {
+          </div>
+          {% comment %} <legend class="form__label">{{ option.name }}</legend> {% endcomment %}
           {% render 'product-variant-options',
             product: product,
             option: option,
             block: block,
             picker_type: picker_type
           %}
+          <div>
+            }
+          </div>
         </fieldset>
       {%- else -%}
         <div class="product-form__input product-form__input--dropdown">

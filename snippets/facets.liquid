@@ -455,22 +455,28 @@
   >
     <details class="mobile-facets__disclosure disclosure-has-popup">
       <summary class="mobile-facets__open-wrapper focus-offset">
-        <span class="mobile-facets__open{% if filter_type == 'drawer' and enable_filtering == false %} medium-hide large-up-hide{% endif %}">
-          {% render 'icon-filter' %}
-          <span class="mobile-facets__open-label button-label medium-hide large-up-hide">
-            {%- if enable_filtering and enable_sorting -%}
-              {{ 'products.facets.filter_and_sort' | t }}
-            {%- elsif enable_filtering -%}
+        <span class="twcss-uppercase note texGyre mobile-facets__open{% if filter_type == 'drawer' and enable_filtering == false %} medium-hide large-up-hide{% endif %}">
+          {% comment %} {% render 'icon-filter' %} {% endcomment %}
+           <div class="bracket-surround goudy twcss-w-[16px] twcss-flex twcss-justify-start twcss-items-center">
+            <span>{</span>
+          </div>
+          <span class="mobile-facets__open-label button-label medium-hide large-up-hide twcss-w-full twcss-min-w-[77px] md:twcss-w-[123px] flex-center-center note">
+            {% comment %} {%- if enable_filtering and enable_sorting -%} {% endcomment %}
+              {% comment %} {{ 'products.facets.filter_and_sort' | t }} {% endcomment %}
+            {%- if enable_filtering -%}
               {{ 'products.facets.filter_button' | t }}
-            {%- elsif enable_sorting -%}
-              {{ 'products.facets.sort_button' | t }}
+            {% comment %} {%- elsif enable_sorting -%}
+              {{ 'products.facets.sort_button' | t }} {% endcomment %}
             {%- endif -%}
           </span>
-          <span class="mobile-facets__open-label button-label small-hide">
+          <span class="mobile-facets__open-label button-label small-hide twcss-w-full twcss-min-w-[77px] md:twcss-w-[123px] flex-center-center note">
             {%- if enable_filtering -%}
               {{ 'products.facets.filter_button' | t }}
             {%- endif -%}
           </span>
+          <div class="bracket-surround goudy twcss-w-[16px] twcss-flex twcss-justify-end twcss-items-center">
+            <span>}</span>      
+          </div>
         </span>
         <span tabindex="0" class="mobile-facets__close">{%- render 'icon-close' -%}</span>
       </summary>
@@ -803,8 +809,10 @@
       </facet-filters-form>
     </details>
   </menu-drawer>
-
-  <div class="active-facets active-facets-mobile medium-hide large-up-hide">
+  <div class="small-hide">
+    <h1 class="twcss-text-center cancellaresca headline absolute-center-v-h">{{ results.title }}</h1>
+  </div>
+  <div class="active-facets active-facets-mobile medium-hide large-up-hide !twcss-hidden md:twcss-block">
     {%- for filter in results.filters -%}
       {%- for value in filter.active_values -%}
         <facet-remove>
@@ -842,33 +850,49 @@
   </div>
   {% comment %} Sort, product count and filter pills at the end when filter is type of Drawer for the correct tabbing order {% endcomment %}
   {%- if enable_sorting and filter_type == 'drawer' -%}
-    <facet-filters-form class="facets small-hide">
+    <facet-filters-form class="facets ">
       <form id="FacetSortDrawerForm" class="facets__form">
-        <div class="facet-filters sorting caption small-hide">
-          <div class="facet-filters__field">
+        <div class="facet-filters  sorting caption " style="padding-left: 0;">
+          <div class="facet-filters__field flex-center-center texGyre twcss-uppercase">
             <h2 class="facet-filters__label caption-large text-body">
-              <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
+              <label class="sr-only" for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
+              {% comment %} <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label> {% endcomment %}
             </h2>
+            <div class="bracket-surround goudy twcss-w-[16px] twcss-flex twcss-justify-start twcss-items-center">
+              <span>{</span>
+            </div>
             <div class="select">
               {%- assign sort_by = results.sort_by | default: results.default_sort_by -%}
               <select
                 name="sort_by"
-                class="facet-filters__sort select__select caption-large"
+                class="facet-filters__sort select__select caption-large twcss-w-full twcss-min-w-[77px] md:twcss-w-[123px] uppercase !twcss-pr-0 twcss-text-center texGyre note"
                 id="SortBy"
                 aria-describedby="a11y-refresh-page-message"
               >
                 {%- for option in results.sort_options -%}
                   <option
                     value="{{ option.value | escape }}"
+                    class="uppercase note"
                     {% if option.value == sort_by %}
                       selected="selected"
                     {% endif %}
                   >
-                    {{ option.name | escape }}
+                    {% if option.name == 'Featured' %}  
+                    <span class="uppercase note">
+                      Sort
+                    </span>
+                    {% else %}
+                    <span class="uppercase note">
+                      {{ option.name | escape }}
+                    </span>
+                    {% endif %}
                   </option>
                 {%- endfor -%}
               </select>
-              {% render 'icon-caret' %}
+              {% comment %} {% render 'icon-caret' %} {% endcomment %}
+            </div>
+            <div class="bracket-surround goudy twcss-w-[16px] twcss-flex twcss-justify-end twcss-items-center">
+              <span>}</span>
             </div>
           </div>
         </div>
@@ -884,7 +908,7 @@
       </form>
     </facet-filters-form>
   {%- endif -%}
-  <div
+  {% comment %} <div
     class="product-count light{% if filter_type == 'vertical' or filter_type == 'horizontal' %} medium-hide large-up-hide{% endif %}"
     role="status"
   >
@@ -903,7 +927,7 @@
       </span>
     </h2>
     {%- render 'loading-spinner' -%}
-  </div>
+  </div> {% endcomment %}
   {%- if filter_type == 'drawer' -%}
     <facet-filters-form class="facets facets-pill small-hide">
       <form id="FacetFiltersPillsForm" class="facets__form">

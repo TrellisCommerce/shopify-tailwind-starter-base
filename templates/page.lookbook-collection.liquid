@@ -1,0 +1,15 @@
+
+<div class="lookbook-collection">
+    <h1>{{ page.title }}</h1>
+    
+    <div class="lookbook-gallery">
+        <!-- Example of manually adding lookbook images -->
+        <img src="{{ 'lookbook-image-1.jpg' | asset_url }}" alt="Lookbook Image 1">
+        <img src="{{ 'lookbook-image-2.jpg' | asset_url }}" alt="Lookbook Image 2">
+        <img src="{{ 'lookbook-image-3.jpg' | asset_url }}" alt="Lookbook Image 3">
+        
+        <!-- Optionally, loop through metafields or images here -->
+    </div>
+    
+    <p>{{ page.content }}</p> <!-- For any description added via the page editor -->
+</div>

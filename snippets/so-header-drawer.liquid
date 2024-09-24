@@ -11,7 +11,7 @@
       class="header__icon header__icon--menu header__icon--summary link focus-inset"
       aria-label="{{ 'sections.header.menu' | t }}"
     >
-      <span>
+      <span class="note">
         Menu
         {% comment %} {% render 'icon-hamburger' %} {% endcomment %}
         {% comment %} {% render 'icon-close' %} {% endcomment %}
@@ -20,7 +20,7 @@
     <div id="menu-drawer" class="gradient menu-drawer motion-reduce color-{{ section.settings.menu_color_scheme }}">
       <div class="menu-drawer__inner-container">
         <div class="menu-drawer__navigation-container">
-          <nav class="menu-drawer__navigation">
+          {% comment %} <nav class="menu-drawer__navigation">
             <ul class="menu-drawer__menu has-submenu list-menu" role="list">
               {%- for link in section.settings.menu.links -%}
                 <li>
@@ -123,7 +123,460 @@
                 </li>
               {%- endfor -%}
             </ul>
+          </nav> {% endcomment %}
+          {% comment %} <nav class="menu-drawer__navigation">
+            <ul class="menu-drawer__menu has-submenu list-menu" role="list">
+              <!-- New list item for shop_menu -->
+              <li>
+                {%- if section.settings.shop_menu.links != blank -%}
+                  <details id="Details-menu-drawer-shop-menu">
+                    <summary
+                      id="HeaderDrawer-shop-menu"
+                      class="menu-drawer__menu-item list-menu__item link link--text focus-inset"
+                    >
+                      Shop
+                      {% render 'icon-arrow' %}
+                      {% render 'icon-caret' %}
+                    </summary>
+                    <div
+                      id="link-shop-menu"
+                      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+                      tabindex="-1"
+                    >
+                      <div class="menu-drawer__inner-submenu">
+                        <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                          {% render 'icon-arrow' %}
+                          Shop
+                        </button>
+                        <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                          {%- for childlink in section.settings.shop_menu.links -%}
+                            <li>
+                              {%- if childlink.links == blank -%}
+                                <a
+                                  id="HeaderDrawer-shop-menu-{{ childlink.handle }}"
+                                  href="{{ childlink.url }}"
+                                  class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"
+                                  {% if childlink.current %}
+                                    aria-current="page"
+                                  {% endif %}
+                                >
+                                  {{ childlink.title | escape }}
+                                </a>
+                              {%- else -%}
+                                <details id="Details-menu-drawer-shop-menu-{{ childlink.handle }}">
+                                  <summary
+                                    id="HeaderDrawer-shop-menu-{{ childlink.handle }}"
+                                    class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                                  >
+                                    {{ childlink.title | escape }}
+                                    {% render 'icon-arrow' %}
+                                    {% render 'icon-caret' %}
+                                  </summary>
+                                  <div
+                                    id="childlink-shop-menu-{{ childlink.handle | escape }}"
+                                    class="menu-drawer__submenu has-submenu gradient motion-reduce"
+                                  >
+                                    <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                                      {% render 'icon-arrow' %}
+                                      {{ childlink.title | escape }}
+                                    </button>
+                                    <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                                      {%- for grandchildlink in childlink.links -%}
+                                        <li>
+                                          <a
+                                            id="HeaderDrawer-shop-menu-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                            href="{{ grandchildlink.url }}"
+                                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"
+                                            {% if grandchildlink.current %}
+                                              aria-current="page"
+                                            {% endif %}
+                                          >
+                                            {{ grandchildlink.title | escape }}
+                                          </a>
+                                        </li>
+                                      {%- endfor -%}
+                                    </ul>
+                                  </div>
+                                </details>
+                              {%- endif -%}
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      </div>
+                    </div>
+                  </details>
+                {%- else -%}
+                  <a
+                    id="HeaderDrawer-shop-menu"
+                    href="{{ section.settings.shop_menu.url }}"
+                    class="menu-drawer__menu-item list-menu__item link link--text focus-inset"
+                    {% if section.settings.shop_menu.current %}
+                      aria-current="page"
+                    {% endif %}
+                  >
+                    <span>{{ section.settings.shop_menu.title | escape }}</span>
+                  </a>
+                {%- endif -%}
+              </li>
+          
+              <!-- Existing loop for other menu items -->
+              {%- for link in section.settings.menu.links -%}
+                <li>
+                  {%- if link.links != blank -%}
+                    <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
+                      <summary
+                        id="HeaderDrawer-{{ link.handle }}"
+                        class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}"
+                      >
+                        {{ link.title | escape }}
+                        {% render 'icon-arrow' %}
+                        {% render 'icon-caret' %}
+                      </summary>
+                      <div
+                        id="link-{{ link.handle | escape }}"
+                        class="menu-drawer__submenu has-submenu gradient motion-reduce"
+                        tabindex="-1"
+                      >
+                        <div class="menu-drawer__inner-submenu">
+                          <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                            {% render 'icon-arrow' %}
+                            {{ link.title | escape }}
+                          </button>
+                          <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                            {%- for childlink in link.links -%}
+                              <li>
+                                {%- if childlink.links == blank -%}
+                                  <a
+                                    id="HeaderDrawer-{{ link.handle }}-{{ childlink.handle }}"
+                                    href="{{ childlink.url }}"
+                                    class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"
+                                    {% if childlink.current %}
+                                      aria-current="page"
+                                    {% endif %}
+                                  >
+                                    {{ childlink.title | escape }}
+                                  </a>
+                                {%- else -%}
+                                  <details id="Details-menu-drawer-{{ link.handle }}-{{ childlink.handle }}">
+                                    <summary
+                                      id="HeaderDrawer-{{ link.handle }}-{{ childlink.handle }}"
+                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                                    >
+                                      {{ childlink.title | escape }}
+                                      {% render 'icon-arrow' %}
+                                      {% render 'icon-caret' %}
+                                    </summary>
+                                    <div
+                                      id="childlink-{{ childlink.handle | escape }}"
+                                      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+                                    >
+                                      <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                                        {% render 'icon-arrow' %}
+                                        {{ childlink.title | escape }}
+                                      </button>
+                                      <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                                        {%- for grandchildlink in childlink.links -%}
+                                          <li>
+                                            <a
+                                              id="HeaderDrawer-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                              href="{{ grandchildlink.url }}"
+                                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"
+                                              {% if grandchildlink.current %}
+                                                aria-current="page"
+                                              {% endif %}
+                                            >
+                                              {{ grandchildlink.title | escape }}
+                                            </a>
+                                          </li>
+                                        {%- endfor -%}
+                                      </ul>
+                                    </div>
+                                  </details>
+                                {%- endif -%}
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        </div>
+                      </div>
+                    </details>
+                  {%- else -%}
+                    <a
+                      id="HeaderDrawer-{{ link.handle }}"
+                      href="{{ link.url }}"
+                      class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"
+                      {% if link.current %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      {{ link.title | escape }}
+                    </a>
+                  {%- endif -%}
+                </li>
+              {%- endfor -%}
+            </ul>
+          </nav> {% endcomment %}
+          <nav class="menu-drawer__navigation">
+            <ul class="menu-drawer__menu has-submenu list-menu texGyre" role="list">
+              <!-- New list item for shop_menu -->
+              <li>
+                {%- if section.settings.shop_menu.links != blank -%}
+                  <details id="Details-menu-drawer-shop-menu">
+                    <summary
+                      id="HeaderDrawer-shop-menu"
+                      class="menu-drawer__menu-item list-menu__item link link--text focus-inset"
+                    >
+                      Shop
+                      {% render 'so-right-chev' %}
+                      {% comment %} {% render 'icon-arrow' %} {% endcomment %}
+                      {% render 'icon-caret' %}
+                    </summary>
+                    <div
+                      id="link-shop-menu"
+                      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+                      tabindex="-1"
+                    >
+                      <div class="menu-drawer__inner-submenu">
+                        <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                          {% comment %} {% render 'icon-arrow' %} {% endcomment %}
+                          {% comment %} Shop {% endcomment %}
+                          <svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none">
+                            <path d="M5.00078 10L6.17578 8.825L2.35912 5L6.17578 1.175L5.00078 -1.02722e-07L0.000781973 5L5.00078 10Z" fill="#262626"/>
+                            </svg>
+                           <span class="uppercase twcss-ml-[16px] texGyre" >Back</span>
+                        </button>
+                        <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                          {%- for childlink in section.settings.shop_menu.links -%}
+                            <li>
+                              {%- if childlink.links == blank -%}
+                                <a
+                                  id="HeaderDrawer-shop-menu-{{ childlink.handle }}"
+                                  href="{{ childlink.url }}"
+                                  class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"
+                                  {% if childlink.current %}
+                                    aria-current="page"
+                                  {% endif %}
+                                >
+                                  {{ childlink.title | escape }}
+                                  
+                                </a>
+                              {%- else -%}
+                                <details id="Details-menu-drawer-shop-menu-{{ childlink.handle }}">
+                                  <summary
+                                    id="HeaderDrawer-shop-menu-{{ childlink.handle }}"
+                                    class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                                  >
+                                    {{ childlink.title | escape }}
+                                    {% comment %} {% render 'icon-arrow' %} {% endcomment %}
+                                    {% render 'so-right-chev' %}
+
+                                    {% render 'icon-caret' %}
+                                  </summary>
+                                  <div
+                                    id="childlink-shop-menu-{{ childlink.handle | escape }}"
+                                    class="menu-drawer__submenu has-submenu gradient motion-reduce"
+                                  >
+                                    <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                                      {% comment %} {% render 'icon-arrow' %} {% endcomment %}
+                                      {% comment %} {{ childlink.title | escape }} {% endcomment %}
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none">
+                                        <path d="M5.00078 10L6.17578 8.825L2.35912 5L6.17578 1.175L5.00078 -1.02722e-07L0.000781973 5L5.00078 10Z" fill="#262626"/>
+                                        </svg>
+                                       <span class="uppercase twcss-ml-[16px] texGyre" >Back</span>
+                                    </button>
+                                    <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                                      {%- for grandchildlink in childlink.links -%}
+                                        <li>
+                                          {%- if grandchildlink.links == blank -%}
+                                            <a
+                                              id="HeaderDrawer-shop-menu-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                              href="{{ grandchildlink.url }}"
+                                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"
+                                              {% if grandchildlink.current %}
+                                                aria-current="page"
+                                              {% endif %}
+                                            >
+                                              {{ grandchildlink.title | escape }}
+                                            </a>
+                                          {%- else -%}
+                                            <!-- Deeper level submenu for grandchild links -->
+                                            <details id="Details-menu-drawer-shop-menu-grandchild-{{ grandchildlink.handle }}">
+                                              <summary
+                                                id="HeaderDrawer-shop-menu-grandchild-{{ grandchildlink.handle }}"
+                                                class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                                              >
+                                                {{ grandchildlink.title | escape }}
+                                                {% comment %} {% render 'icon-arrow' %} {% endcomment %}
+                                                {% render 'so-right-chev' %}
+
+                                                {% render 'icon-caret' %}
+                                              </summary>
+                                              <div
+                                                id="grandchildlink-shop-menu-{{ grandchildlink.handle | escape }}"
+                                                class="menu-drawer__submenu has-submenu gradient motion-reduce"
+                                              >
+                                                <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                                                  {% comment %} {% render 'icon-arrow' %}
+                                                  {{ grandchildlink.title | escape }} {% endcomment %}
+                                                  <svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none">
+                                                    <path d="M5.00078 10L6.17578 8.825L2.35912 5L6.17578 1.175L5.00078 -1.02722e-07L0.000781973 5L5.00078 10Z" fill="#262626"/>
+                                                    </svg>
+                                                   <span class="uppercase twcss-ml-[16px] texGyre" >Back</span>
+                                                </button>
+                                                <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                                                  {%- for greatgrandchildlink in grandchildlink.links -%}
+                                                    <li>
+                                                      <a
+                                                        id="HeaderDrawer-shop-menu-{{ childlink.handle }}-{{ grandchildlink.handle }}-{{ greatgrandchildlink.handle }}"
+                                                        href="{{ greatgrandchildlink.url }}"
+                                                        class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if greatgrandchildlink.current %} menu-drawer__menu-item--active{% endif %}"
+                                                        {% if greatgrandchildlink.current %}
+                                                          aria-current="page"
+                                                        {% endif %}
+                                                      >
+                                                        {{ greatgrandchildlink.title | escape }}
+                                                      </a>
+                                                    </li>
+                                                  {%- endfor -%}
+                                                </ul>
+                                              </div>
+                                            </details>
+                                          {%- endif -%}
+                                        </li>
+                                      {%- endfor -%}
+                                    </ul>
+                                  </div>
+                                </details>
+                              {%- endif -%}
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      </div>
+                    </div>
+                  </details>
+                {%- else -%}
+                  <a
+                    id="HeaderDrawer-shop-menu"
+                    href="{{ section.settings.shop_menu.url }}"
+                    class="menu-drawer__menu-item list-menu__item link link--text focus-inset"
+                    {% if section.settings.shop_menu.current %}
+                      aria-current="page"
+                    {% endif %}
+                  >
+                    <span>{{ section.settings.shop_menu.title | escape }}</span>
+                  </a>
+                {%- endif -%}
+              </li>
+          
+              <!-- Existing loop for other menu items -->
+              {%- for link in section.settings.menu.links -%}
+                <li>
+                  {%- if link.links != blank -%}
+                    <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
+                      <summary
+                        id="HeaderDrawer-{{ link.handle }}"
+                        class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}"
+                      >
+                        {{ link.title | escape }}
+                        {% comment %} {% render 'icon-arrow' %} {% endcomment %}
+                        {% render 'so-right-chev' %}
+
+                        {% render 'icon-caret' %}
+                      </summary>
+                      <div
+                        id="link-{{ link.handle | escape }}"
+                        class="menu-drawer__submenu has-submenu gradient motion-reduce"
+                        tabindex="-1"
+                      >
+                        <div class="menu-drawer__inner-submenu">
+                          <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                            {% comment %} {% render 'icon-arrow' %} {% endcomment %}
+                            {% render 'so-left-chev' %}
+
+                            {% comment %} {{ link.title | escape }} {% endcomment %}
+                            <span>
+                              Back
+                            </span>
+                          </button>
+                          <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                            {%- for childlink in link.links -%}
+                              <li>
+                                {%- if childlink.links == blank -%}
+                                  <a
+                                    id="HeaderDrawer-{{ link.handle }}-{{ childlink.handle }}"
+                                    href="{{ childlink.url }}"
+                                    class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"
+                                    {% if childlink.current %}
+                                      aria-current="page"
+                                    {% endif %}
+                                  >
+                                    {{ childlink.title | escape }}
+                                  </a>
+                                {%- else -%}
+                                  <details id="Details-menu-drawer-{{ link.handle }}-{{ childlink.handle }}">
+                                    <summary
+                                      id="HeaderDrawer-{{ link.handle }}-{{ childlink.handle }}"
+                                      class="menu-drawer__menu-item link link--text list-menu__item focus-inset"
+                                    >
+                                      {{ childlink.title | escape }}
+                                      {% comment %} {% render 'icon-arrow' %} {% endcomment %}
+                                      {% render 'so-right-chev' %}
+
+                                      {% render 'icon-caret' %}
+                                    </summary>
+                                    <div
+                                      id="childlink-{{ childlink.handle | escape }}"
+                                      class="menu-drawer__submenu has-submenu gradient motion-reduce"
+                                    >
+                                      <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                                        {% comment %} {% render 'icon-arrow' %} {% endcomment %}
+                                        {% render 'so-left-chev' %}
+
+                                        {% comment %} {{ childlink.title | escape }} {% endcomment %}
+                                        <span>Back</span>
+                                      </button>
+                                      <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                                        {%- for grandchildlink in childlink.links -%}
+                                          <li>
+                                            <a
+                                              id="HeaderDrawer-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                              href="{{ grandchildlink.url }}"
+                                              class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"
+                                              {% if grandchildlink.current %}
+                                                aria-current="page"
+                                              {% endif %}
+                                            >
+                                              {{ grandchildlink.title | escape }}
+                                            </a>
+                                          </li>
+                                        {%- endfor -%}
+                                      </ul>
+                                    </div>
+                                  </details>
+                                {%- endif -%}
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        </div>
+                      </div>
+                    </details>
+                  {%- else -%}
+                    <a
+                      id="HeaderDrawer-{{ link.handle }}"
+                      href="{{ link.url }}"
+                      class="menu-drawer__menu-item list-menu__item link link--text focus-inset"
+                      {% if link.current %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      <span>{{ link.title | escape }}</span>
+                    </a>
+                  {%- endif -%}
+                </li>
+              {%- endfor -%}
+            </ul>
           </nav>
+          
+
           <div class="menu-drawer__utility-links">
             {%- if shop.customer_accounts_enabled -%}
               <a
