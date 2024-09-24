@@ -1,33 +1,50 @@
-<style type="text/scss">
+<style type="text/css">
   .error-figure {
     padding-bottom: 100vw;
     height: 0;
-    
     position: relative;
     width: 100%;
-    img {
-      @apply absolute top-0 left-0 w-full h-full object-cover;
-    }
-    @include at-query ($min, $medium) {
+  }
+
+  .error-figure img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    .error-figure {
       padding-bottom: 40%;
     }
   }
 </style>
 
-<div class="">
+<div class="twcss-container">
   <div class="twcss-flex twcss-flex-col md:twcss-flex-row twcss-relative">
-    <figure class="twcss-error-figure">
-      <img src="{{ section.settings.image_1 }}" width="" height="" alt="404 Left Image">
+    <!-- First image block -->
+    <figure class="error-figure">
+      <img src="{{ section.settings.image_1 | file_img_url: "original" }}" width="{{ section.settings.image_1.width }}" height="{{ section.settings.image_1.height }}" alt="{{ section.settings.image_1.alt }}">
     </figure>
-    <figure class=" twcss-error-figure">
-      <img src="{{ section.settings.image_2 }}" width="" height="" alt="404 Right Image">
+
+    <!-- Second image block -->
+    <figure class="error-figure">
+      <img src="{{ section.settings.image_2 | file_img_url: "original" }}" width="{{ section.settings.image_2.width }}" height="{{ section.settings.image_2.height }}" alt="{{ section.settings.image_2.alt }}">
     </figure>
-    <div class="twcss-absolute-center-v-h twcss-text-ll-new-gray twcss-note twcss-tex-gyre twcss-max-w-[282px] twcss-text-center">
-      <p>{{ section.settings.title_404 }}</p>
-      <p>{{ section.settings.body_404 }}</p>
+
+    <!-- Centered text block -->
+    <div class="twcss-absolute twcss-inset-0 twcss-flex twcss-items-center twcss-justify-center twcss-text-center twcss-text-ll-new-gray twcss-note twcss-tex-gyre twcss-max-w-[282px]">
+      <div>
+        <p>{{ section.settings.title_404 }}</p>
+        <p>{{ section.settings.body_404 }}</p>
+      </div>
     </div>
   </div>
 </div>
+
 
 {% schema %}
 {
