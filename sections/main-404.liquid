@@ -1,23 +1,31 @@
-<style type="text/css">
-  .template-404 .title + * {
-    margin-top: 1rem;
-  }
-
-  @media screen and (min-width: 750px) {
-    .template-404 .title + * {
-      margin-top: 2rem;
+<style type="text/scss">
+  .error-figure {
+    padding-bottom: 100vw;
+    height: 0;
+    
+    position: relative;
+    width: 100%;
+    img {
+      @apply absolute top-0 left-0 w-full h-full object-cover;
+    }
+    @include at-query ($min, $medium) {
+      padding-bottom: 40%;
     }
   }
 </style>
 
-<div class="template-404 page-width page-margin center">
-  <p>
-    {{ 'templates.404.subtext' | t }}
-  </p>
-  <h1 class="title">
-    {{ 'templates.404.title' | t }}
-  </h1>
-  <a href="{{ routes.all_products_collection_url }}" class="button">
-    {{ 'general.continue_shopping' | t }}
-  </a>
+<div class="">
+  <div class="flex flex-col md:flex-row relative">
+    <figure class="error-figure">
+      {% comment %} <SanityImage v-if="imageOne" :image="imageOne" /> {% endcomment %}
+    </figure>
+    <figure class="error-figure">
+      {% comment %} <SanityImage v-if="imageTwo" :image="imageTwo" /> {% endcomment %}
+    </figure>
+    <div class="absolute-center-v-h text-ll-new-gray note tex-gyre max-w-[282px] text-center">
+      {% comment %} <p v-text="title" /> {% endcomment %}
+       {% image %}
+      {% comment %} <SanityContent :blocks="content" v-if="content" /> {% endcomment %}
+    </div>
+  </div>
 </div>
