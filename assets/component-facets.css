@@ -25,7 +25,6 @@
   .facets-container {
     padding-left: 69px;
     padding-right: 69px;
-    /* margin-top: 0; */
   }
   .facets-container > * + * {
     margin-top: 0;
