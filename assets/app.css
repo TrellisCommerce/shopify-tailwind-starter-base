@@ -656,6 +656,10 @@ video {
   height: 100%;
 }
 
+.twcss-h-auto {
+  height: auto;
+}
+
 .twcss-w-1\/2 {
   width: 50%;
 }
