@@ -2,11 +2,33 @@
   "sections": {
     "main": {
       "type": "main-404",
+      "name": "404 Page",
+      "presets": {
+        "name": "404 Settings",
+      },
       "settings": {
+        "image_1": {
+          "type": "image_picker",
+          "label": "Left Image"
+        },
+        "image_2": {
+          "type": "image_picker",
+          "label": "Right Image"
+        },
+        "404_title": {
+          "type": "text",
+          "label": "404 Title",
+          "default": "404"
+        },
+        "404_body": {
+          "type": "text",
+          "label": "404 Body Type",
+          "default": "The page you are looking for either doesn’t exist or has moved or something else has happened."
+        }
       }
     }
   },
   "order": [
     "main"
-  ]
+  ],
 }

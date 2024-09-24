@@ -1,23 +1,96 @@
 <style type="text/css">
-  .template-404 .title + * {
-    margin-top: 1rem;
+  .error-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .error-figure {
+    padding-bottom: 100vw;
+    height: 0;
+    position: relative;
+    width: 100%;
   }
 
-  @media screen and (min-width: 750px) {
-    .template-404 .title + * {
-      margin-top: 2rem;
+  .error-figure img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Responsive adjustments */
+  @media (min-width: 768px) {
+    .error-figure {
+      padding-bottom: 40%;
     }
   }
 </style>
 
-<div class="template-404 page-width page-margin center">
-  <p>
-    {{ 'templates.404.subtext' | t }}
-  </p>
-  <h1 class="title">
-    {{ 'templates.404.title' | t }}
-  </h1>
-  <a href="{{ routes.all_products_collection_url }}" class="button">
-    {{ 'general.continue_shopping' | t }}
-  </a>
+<div class="error-page md:twcss-pt-32 twcss-relative md:twcss-top-0 -!twcss-top-16">
+  <div class="twcss-flex twcss-flex-col md:twcss-flex-row twcss-relative">
+    <figure class="error-figure">
+      <img src="{{ section.settings.image_1 | file_img_url: "original" }}" 
+        width="{{ section.settings.image_1.width }}" 
+        height="{{ section.settings.image_1.height }}" 
+        alt="{{ section.settings.image_1.alt }}"
+        class="twcss-w-full twcss-h-auto"
+      >
+    </figure>
+
+    <figure class="error-figure">
+      <img src="{{ section.settings.image_2 | file_img_url: "original" }}" 
+        width="{{ section.settings.image_2.width }}" 
+        height="{{ section.settings.image_2.height }}" 
+        alt="{{ section.settings.image_2.alt }}"
+        class="twcss-w-full twcss-h-auto">
+    </figure>
+
+    <div class="absolute-center-v-h twcss-inset-0 twcss-flex twcss-items-center twcss-justify-center twcss-text-center twcss-text-ll-new-gray note texGyre twcss-max-w-[282px]">
+      <div>
+        <p>{{ section.settings.title_404 }}</p>
+        <p>{{ section.settings.body_404 }}</p>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+{% schema %}
+{
+  "name": "404 Page",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Left Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Right Image"
+    },
+    {
+      "type": "text",
+      "id": "title_404",
+      "label": "404 Title",
+      "default": "404"
+    },
+    {
+      "type": "text",
+      "id": "body_404",
+      "label": "404 Body Type",
+      "default": "The page you are looking for either doesn’t exist or has moved or something else has happened."
+    }
+  ],
+  "presets": [
+    {
+      "name": "404 Settings",
+      "category": "Pages"
+    }
+  ]
+}
+{% endschema %}
