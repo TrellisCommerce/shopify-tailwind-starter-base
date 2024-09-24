@@ -1,4 +1,11 @@
 <style type="text/css">
+  .error-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
   .error-figure {
     padding-bottom: 100vw;
     height: 0;
@@ -23,7 +30,7 @@
   }
 </style>
 
-<div class="md:twcss-pt-32 twcss-relative md:twcss-top-0 -!twcss-top-16">
+<div class="error-page md:twcss-pt-32 twcss-relative md:twcss-top-0 -!twcss-top-16">
   <div class="twcss-flex twcss-flex-col md:twcss-flex-row twcss-relative">
     <figure class="error-figure">
       <img src="{{ section.settings.image_1 | file_img_url: "original" }}" 
@@ -45,7 +52,7 @@
     <div class="absolute-center-v-h twcss-inset-0 twcss-flex twcss-items-center twcss-justify-center twcss-text-center twcss-text-ll-new-gray note texGyre twcss-max-w-[282px]">
       <div>
         <p>{{ section.settings.title_404 }}</p>
-        <p>{{ section.settinggs.body_404 }}</p>
+        <p>{{ section.settings.body_404 }}</p>
       </div>
     </div>
   </div>
