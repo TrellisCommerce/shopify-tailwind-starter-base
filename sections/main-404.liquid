@@ -25,22 +25,17 @@
 
 <div class="twcss-container">
   <div class="twcss-flex twcss-flex-col md:twcss-flex-row twcss-relative">
-    <!-- First image block -->
     <figure class="error-figure">
       <img src="{{ section.settings.image_1 | file_img_url: "original" }}" width="{{ section.settings.image_1.width }}" height="{{ section.settings.image_1.height }}" alt="{{ section.settings.image_1.alt }}">
     </figure>
 
-    <!-- Second image block -->
     <figure class="error-figure">
       <img src="{{ section.settings.image_2 | file_img_url: "original" }}" width="{{ section.settings.image_2.width }}" height="{{ section.settings.image_2.height }}" alt="{{ section.settings.image_2.alt }}">
     </figure>
 
-    <!-- Centered text block -->
     <div class="twcss-absolute twcss-inset-0 twcss-flex twcss-items-center twcss-justify-center twcss-text-center twcss-text-ll-new-gray twcss-note twcss-tex-gyre twcss-max-w-[282px]">
-      <div>
         <p>{{ section.settings.title_404 }}</p>
         <p>{{ section.settings.body_404 }}</p>
-      </div>
     </div>
   </div>
 </div>
