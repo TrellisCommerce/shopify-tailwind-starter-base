@@ -608,6 +608,10 @@ video {
   top: 36px;
 }
 
+.-twcss-top-16 {
+  top: -4rem;
+}
+
 .twcss-ml-\[16px\] {
   margin-left: 16px;
 }
@@ -741,6 +745,10 @@ video {
     top: 88px !important;
   }
 
+  .md\:twcss-top-0 {
+    top: 0px;
+  }
+
   .md\:\!twcss-z-\[999\] {
     z-index: 999 !important;
   }
@@ -783,5 +791,9 @@ video {
 
   .md\:\!twcss-pl-\[96px\] {
     padding-left: 96px !important;
+  }
+
+  .md\:twcss-pt-32 {
+    padding-top: 8rem;
   }
 }
