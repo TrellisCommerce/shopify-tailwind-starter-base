@@ -1,8 +1,21 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
       "type": "main-404",
       "settings": {
+        "image_1": "shopify://shop_images/36035cb5e6bfe9734849c1935dd32d2d.jpg",
+        "image_2": "shopify://shop_images/2db40cb4af102068d025daa5926bb024.jpg",
+        "title_404": "404",
+        "body_404": "The page you are looking for either doesn’t exist or has moved or something else has happened."
       }
     }
   },
