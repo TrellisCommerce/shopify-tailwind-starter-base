@@ -327,7 +327,7 @@
     </script>
   </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %} {% if request.path == "/" %}index {% elsif request.page_type == 'product' %}product{% elsif request.page_type == 'collection' %}collection{% else %} {{request.path | replace: '/', '-' | slice: 1, request.path.size}} {% endif %}">
+  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %} {% if request.path == "/" %}index {% elsif request.page_type == 'product' %}product{% elsif request.page_type == 'collection' %}collection{% elsif request.page_type == '404' %}page-not-found{% else %} {{request.path | replace: '/', '-' | slice: 1, request.path.size}} {% endif %}">
     <a class='skip-to-content-link button visually-hidden' href='#MainContent'>
       {{ 'accessibility.skip_to_text' | t }}
     </a>

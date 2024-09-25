@@ -458,3 +458,16 @@ body:not(.index) .mega-menu__content {
 body:not(.index) header {
   background-color: #f4f3ee;
 }
+
+body.page-not-found header {
+  background-color: transparent;
+  color: #f4f3ee;
+}
+body.page-not-found header .header__icon--menu {
+  background-color: transparent;
+  color: #f4f3ee;
+}
+body.page-not-found header .so-cart-count-bubble {
+  background-color: transparent;
+  color: #f4f3ee;
+}

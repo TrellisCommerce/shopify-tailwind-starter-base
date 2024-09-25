@@ -1,14 +1,34 @@
 <style type="text/css">
   .error-page {
-    position: absolute;
+    {% comment %} position: absolute; {% endcomment %}
     top: 0;
     left: 0;
     width: 100%;
+    {% comment %} min-height: 100vh; {% endcomment %}
+    {% comment %} height: 100%; {% endcomment %}
+  }
+  @media (max-width: 749px) {
+    .error-page {
+      {% comment %} height: calc(100dvh - 156px); {% endcomment %}
+      height: 100dvh;
+      margin-top: -142px;
+    }
+  }
+  @media (min-width: 750px) {
+    .error-page {
+      {% comment %} height: calc(100dvh - 156px); {% endcomment %}
+      height: 100vh;
+      margin-top: -154px;
+    }
+  }
+  .error-flex{
+    height: 100%;
+
   }
   
   .error-figure {
-    padding-bottom: 100vw;
-    height: 0;
+    {% comment %} padding-bottom: 100vw; {% endcomment %}
+    height: 100%;
     position: relative;
     width: 100%;
   }
@@ -23,26 +43,26 @@
   }
 
   /* Responsive adjustments */
-  @media (min-width: 768px) {
+  {% comment %} @media (min-width: 768px) {
     .error-figure {
-      padding-bottom: 40%;
+      {% comment %} padding-bottom: 40%; {% endcomment %}
     }
-  }
+  } {% endcomment %}
 </style>
-
-<div class="error-page md:twcss-pt-32 twcss-relative md:twcss-top-0 -!twcss-top-16">
-  <div class="twcss-flex twcss-flex-col md:twcss-flex-row twcss-relative">
+<div class="error-page  twcss-relative md:twcss-top-0 -!twcss-top-16">
+  <div class="twcss-flex twcss-flex-col md:twcss-flex-row twcss-relative error-flex">
     <figure class="error-figure">
-      <img src="{{ section.settings.image_1 | file_img_url: "original" }}" 
+      <img src="{{ section.settings.image_1 | image_url }}" 
         width="{{ section.settings.image_1.width }}" 
         height="{{ section.settings.image_1.height }}" 
         alt="{{ section.settings.image_1.alt }}"
         class="twcss-w-full twcss-h-auto"
       >
+        
     </figure>
 
     <figure class="error-figure">
-      <img src="{{ section.settings.image_2 | file_img_url: "original" }}" 
+      <img src="{{ section.settings.image_2 | image_url }}" 
         width="{{ section.settings.image_2.width }}" 
         height="{{ section.settings.image_2.height }}" 
         alt="{{ section.settings.image_2.alt }}"
@@ -94,3 +114,6 @@
   ]
 }
 {% endschema %}
+{% style %}
+
+{% endstyle %}
