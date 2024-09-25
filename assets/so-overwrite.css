@@ -451,3 +451,10 @@ body {
     line-height: 28px;
   }
 }
+
+body:not(.index) .mega-menu__content {
+  background-color: #f4f3ee;
+}
+body:not(.index) header {
+  background-color: #f4f3ee;
+}
