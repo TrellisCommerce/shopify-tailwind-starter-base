@@ -269,15 +269,15 @@
       {%- endif -%}
           <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
             {%- if settings.logo != blank -%}
-              <div class="header__heading-logo-wrapper">
+              <div class="header__heading-logo-wrapper {{ request.page_type }}">
                 {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
                 {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
                 {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
                 {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
                 
-                {%- if section.settings.light-header and request.page_type == 'index'-%} 
+                {%- if section.settings.light-header and request.page_type == 'index' or request.page_type == '404'-%} 
                   {{ settings.light_logo | image_url: width: 600 | image_tag:
-                    class: 'header__heading-logo motion-reduce',
+                    class: 'header__heading-logo motion-reduce ',
                     widths: widths,
                     height: logo_height,
                     width: settings.logo_width,

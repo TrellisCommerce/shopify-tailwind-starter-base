@@ -1,0 +1,19 @@
+
+
+<div class="split-screen">
+    <h1>SPLIT</h1>
+    <div class="lookbook-grid">
+        {% assign lookbook_collections = collections %}
+        {% for collection in lookbook_collections %}
+            {% comment %} {% if collection.title contains 'Lookbook' %} {% endcomment %}
+                <div class="lookbook-item">
+                    <a href="{{ collection.url }}">
+                        {{ collection | json }}
+                        <img src="{{ collection.image | img_url: 'medium' }}" alt="{{ collection.title }}">
+                        <h2>{{ collection.title }}</h2>
+                    </a>
+                </div>
+            {% comment %} {% endif %} {% endcomment %}
+        {% endfor %}
+    </div>
+</div>
