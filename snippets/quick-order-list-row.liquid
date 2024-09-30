@@ -442,6 +442,11 @@
     <span class="price">{{ cart | line_items_for: item | sum: 'original_line_price' | money }}</span>
     {% # theme-check-enable %}
   </td>
+  <td class="variant-item__compare right">
+    <button class="variant-item__compare-button" aria-label="Click to compare multiple products">
+      {{ 'sections.quick_order_list.compare' | t }}
+    </button>
+  </td>
 </tr>
 <tr class="small-hide medium-hide hidden desktop-row-error">
   <td></td>

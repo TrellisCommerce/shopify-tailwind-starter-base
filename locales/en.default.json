@@ -363,6 +363,7 @@
       "each": "{{ money }}\/ea",
       "product": "Product",
       "variant": "Variant",
+      "compare": "Compare",
       "variant_total": "Variant total",
       "items_added": {
         "one": "{{ quantity }} item added",
