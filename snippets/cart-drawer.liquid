@@ -44,7 +44,15 @@
                 {{ 'general.continue_shopping' | t }}
               </a>
 
-              <a href="/account/orders" class="button twcss-capitalize twcss-mb-8">{{ 'sections.cart.buy_again' | t }}</a>
+              {% assign customer_has_orders = false %}
+              {% if customer %}
+                {% for order in customer.orders %}
+                  {% assign customer_has_orders = true %}
+                {% endfor %}
+                {% if customer_has_orders == true %}
+                  <a href="/account/orders" class="button twcss-capitalize twcss-mb-8">{{ 'sections.cart.buy_again' | t }}</a>
+                {% endif %}
+              {% endif %}
 
               {%- if shop.customer_accounts_enabled and customer == null -%}
                 <p class="cart__login-title h3">{{ 'sections.cart.login.title' | t }}</p>
@@ -457,7 +465,15 @@
               <button class="underlined-link twcss-underline twcss-capitalize twcss-block twcss-mb-8 twcss-ml-auto">{{ 'sections.cart.cart_clear' | t }}</button>
             </cart-clear-button>
           {%- endif -%}
-          <a href="/account/orders" class="button twcss-capitalize twcss-mb-8">{{ 'sections.cart.buy_again' | t }}</a>
+          {% assign customer_has_orders = false %}
+          {% if customer %}
+            {% for order in customer.orders %}
+              {% assign customer_has_orders = true %}
+            {% endfor %}
+            {% if customer_has_orders == true %}
+              <a href="/account/orders" class="button twcss-capitalize twcss-mb-8">{{ 'sections.cart.buy_again' | t }}</a>
+            {% endif %}
+          {% endif %}
         {%- endif -%}
 
         {%- if settings.show_cart_note -%}
