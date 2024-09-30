@@ -365,6 +365,7 @@
       "variant": "Variant",
       "compare": "Compare",
       "variant_total": "Variant total",
+      "items": "items",
       "items_added": {
         "one": "{{ quantity }} item added",
         "other": "{{ quantity }} items added"

@@ -639,3 +639,32 @@ quick-order-list .tax-note {
   display: block;
   width: 100%;
 }
+
+.variant-item__compare-button::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+  height: 14px;
+  width: 14px;
+  border: 1px solid rgb(var(--color-foreground));
+}
+
+.variant-item__compare-button.variant-item__compare-button--compare::before {
+  background-image: url("data:image/svg+xml,%3Csvg class='icon icon-checkmark' aria-hidden='true' focusable='false' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 9' fill='none'%0A%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z' fill='%23f4f4f4'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-color: rgb(var(--color-foreground));
+}
+
+.sticky-compare__item {
+  padding: 8px;
+  background-color: var(--gradient-background);
+}
+
+.sticky-compare__item img {
+  aspect-ratio: 1/1;
+  height: 60px;
+  object-fit: contain;
+}

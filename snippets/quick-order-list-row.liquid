@@ -443,9 +443,9 @@
     {% # theme-check-enable %}
   </td>
   <td class="variant-item__compare right">
-    <button class="variant-item__compare-button" aria-label="Click to compare multiple products">
+    <compare-product-button class="variant-item__compare-button h4 twcss-cursor-pointer" aria-label="Click to compare multiple products" data-compare-pdp-image="{{ image | image_url: width: 60 }}">
       {{ 'sections.quick_order_list.compare' | t }}
-    </button>
+    </compare-product-button>
   </td>
 </tr>
 <tr class="small-hide medium-hide hidden desktop-row-error">

@@ -14,6 +14,9 @@
 {% # theme-check-disable %}
 {%- assign items_in_cart = cart | line_items_for: product | sum: 'quantity' -%}
 {% # theme-check-enable %}
+
+<script src="{{ 'compare.js' |  asset_url }}" defer></script>
+
 <div class="quick-order-list-container color-{{ section.settings.color_scheme }}{% unless is_modal %} gradient{% endunless %}">
   <quick-order-list
     class="page-width section-{{ section.id }}-padding"
@@ -103,6 +106,19 @@
           </table>
         </div>
       </div>
+
+      <sticky-compare class="hidden quick-order-list__sticky-compare-bar twcss-fixed twcss-bottom-0 twcss-left-0 twcss-w-full twcss-z-10 twcss-bg-gray-100 twcss-border-gray-200 twcss-border-t-2 twcss-p-8 twcss-flex twcss-text-center">
+        <sticky-compare-product-images class="twcss-flex twcss-gap-6 twcss-self-center"></sticky-compare-product-images>
+        <sticky-compare-button class="twcss-cursor-pointer button button--secondary twcss-flex twcss-gap-2 twcss-ml-auto twcss-self-center">
+          {{ 'sections.quick_order_list.compare' | t }}
+          <sticky-compare-count></sticky-compare-count>
+          {{ 'sections.quick_order_list.items' | t }}
+        </sticky-compare-button>
+      </sticky-compare>
+
+      <compare-modal class="hidden absolute twcss-top-0 twcss-left-0 twcss-right-0 twcss-bottom-0">
+        <compare-modal-items></compare-modal-items>
+      </compare-modal>
 
       <p
         class="visually-hidden"
