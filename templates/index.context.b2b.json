@@ -13,5 +13,67 @@
     "b2b": true
   },
   "sections": {
-  }
+    "rich_text_jrMPt": {
+      "type": "rich-text",
+      "disabled": false,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "header-7e9d106f6760b62cb76bc2ef23eb4167": null,
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "header-bc72847e181560ee4d8f4691a57efcde": null,
+        "twcss_heading": "",
+        "twcss_text": "",
+        "twcss_caption": "",
+        "twcss_button": ""
+      },
+      "blocks": {
+        "heading_EyD39": {
+          "type": "heading",
+          "disabled": false,
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text_Nc9VU": {
+          "type": "text",
+          "disabled": false,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_gDker": {
+          "type": "button",
+          "disabled": false,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_EyD39",
+        "text_Nc9VU",
+        "button_gDker"
+      ]
+    }
+  },
+  "order": [
+    "rich_text_jrMPt",
+    "image_banner",
+    "rich_text",
+    "image_with_text_rNzEU9",
+    "slideshow_8aNFFw",
+    "rich_text_RFp7Vz",
+    "collection_list_6eQWCq",
+    "featured_product_TaWKNi"
+  ]
 }
