@@ -29,6 +29,15 @@
           <button class="button twcss-capitalize twcss-block twcss-mb-8">{{ 'sections.cart.cart_clear' | t }}</button>
         </cart-clear-button>
       {%- endif -%}
+      {% assign customer_has_orders = false %}
+      {% if customer %}
+        {% for order in customer.orders %}
+          {% assign customer_has_orders = true %}
+        {% endfor %}
+        {% if customer_has_orders == true %}
+          <a href="/account/orders" class="button twcss-capitalize twcss-mb-8">{{ 'sections.cart.buy_again' | t }}</a>
+        {% endif %}
+      {% endif %}
     {%- endif -%}
 
     <div class="cart__footer isolate section-{{ section.id }}-padding">
