@@ -77,11 +77,44 @@ class StickyCompareButton extends HTMLElement {
   }
 
   buildCompareModalItem(item) {
+    const itemTitle = item.name;
+    const itemVariantTitle = item.title;
+    const itemPrice = item.price;
+    const itemImage = item.featured_image.src;
+    const itemImageAlt = item.featured_image.alt;
+    const itemSku = item.sku;
 
+    const formatter = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: `${Shopify.currency.active}`,
+      trailingZeroDisplay: 'stripIfInteger'
+    });
+
+    const itemHTML = `<div class="variant-item__item">
+                        <div class="variant-item__image">
+                          <img src="${itemImage}" alt="${itemImageAlt}">
+                        </div>
+                        <div class="variant-item__details">
+                          <div class="variant-item__title">
+                            ${itemTitle}
+                          </div>
+                          <div class="variant-item__variant">
+                            ${itemVariantTitle}
+                          </div>
+                          <div class="variant-item__sku">
+                            ${itemSku}
+                          </div>
+                          <div class=""variant-item__price">
+                            ${(formatter.format(itemPrice / 100))}
+                          </div>
+                        </div>
+                    </div>`;
+
+    this.compareModalItemsContainer.insertAdjacentHTML('beforeend', itemHTML)
   }
 
   openCompareModal() {
-
+    this.compareModal.classList.remove('hidden')
   }
 }
 
