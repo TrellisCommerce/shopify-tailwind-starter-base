@@ -586,9 +586,25 @@ video {
   z-index: 10;
 }
 
+.twcss-z-20 {
+  z-index: 20;
+}
+
+.twcss-z-\[21\] {
+  z-index: 21;
+}
+
+.twcss-m-auto {
+  margin: auto;
+}
+
 .twcss-my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.twcss-mb-4 {
+  margin-bottom: 1rem;
 }
 
 .twcss-mb-8 {
@@ -607,8 +623,32 @@ video {
   display: flex;
 }
 
+.twcss-hidden {
+  display: none;
+}
+
 .twcss-aspect-square {
   aspect-ratio: 1 / 1;
+}
+
+.twcss-h-\[20px\] {
+  height: 20px;
+}
+
+.twcss-h-\[90\%\] {
+  height: 90%;
+}
+
+.twcss-h-full {
+  height: 100%;
+}
+
+.twcss-w-\[20px\] {
+  width: 20px;
+}
+
+.twcss-w-\[90\%\] {
+  width: 90%;
 }
 
 .twcss-w-full {
@@ -617,6 +657,10 @@ video {
 
 .twcss-max-w-64 {
   max-width: 16rem;
+}
+
+.twcss-max-w-\[768px\] {
+  max-width: 768px;
 }
 
 .twcss-flex-1 {
@@ -655,6 +699,10 @@ video {
   align-self: center;
 }
 
+.twcss-border-\[1px\] {
+  border-width: 1px;
+}
+
 .twcss-border-t-2 {
   border-top-width: 2px;
 }
@@ -664,9 +712,23 @@ video {
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
+.twcss-border-b-gray-300 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
+.twcss-bg-black\/\[\.5\] {
+  background-color: rgb(0 0 0 / .5);
+}
+
 .twcss-bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.twcss-bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .twcss-object-cover {
@@ -682,6 +744,11 @@ video {
   text-align: center;
 }
 
+.twcss-text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .twcss-text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -693,4 +760,10 @@ video {
 
 .twcss-underline {
   text-decoration-line: underline;
+}
+
+.twcss-shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
