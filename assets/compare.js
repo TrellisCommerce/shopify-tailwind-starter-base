@@ -44,18 +44,33 @@ customElements.define('compare-product-button', CompareItemButton);
 class StickyCompareButton extends HTMLElement {
   constructor () {
     super();
+    this.compareModalOverlay = document.querySelector('compare-modal-overlay')
     this.compareModal = document.querySelector('compare-modal');
     this.compareModalItemsContainer = document.querySelector('compare-modal-items');
+    this.compareModalCloseButtons = document.querySelectorAll('.compare-modal__close')
     this.itemsToCompareIDs = []
 
     this.addEventListener(('click'), () => {
-      this.grabItemsToCompareIDs();
-      this.populateCompareModal();
-      this.openCompareModal();
+      this.initCompareModal();
     });
   }
 
+  initCompareModal() {
+    this.grabItemsToCompareIDs();
+    this.populateCompareModal();
+    this.openCompareModal();
+    
+    this.compareModalCloseButtons.forEach((modalCloseButton) => {
+      modalCloseButton.addEventListener(('click'), () => {
+        this.closeCompareModal();
+      });
+    })
+  }
+
   grabItemsToCompareIDs() {
+    // Clear out existing id's
+    this.itemsToCompareIDs = [];
+
     const itemsToCompareButtons = document.querySelectorAll('.variant-item__compare-button--compare');
 
     itemsToCompareButtons.forEach((itemsToCompareButton) => {
@@ -65,6 +80,9 @@ class StickyCompareButton extends HTMLElement {
   }
 
   populateCompareModal() {
+    // Clear out modal variants 
+    this.compareModalItemsContainer.innerHTML = '';
+
     const productVariants = productJSON.variants;
 
     // Grab compare item ids that will be used to populate the modal
@@ -84,27 +102,28 @@ class StickyCompareButton extends HTMLElement {
     const itemImageAlt = item.featured_image.alt;
     const itemSku = item.sku;
 
+    // Format the price
     const formatter = new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: `${Shopify.currency.active}`,
       trailingZeroDisplay: 'stripIfInteger'
     });
 
-    const itemHTML = `<div class="variant-item__item">
-                        <div class="variant-item__image">
-                          <img src="${itemImage}" alt="${itemImageAlt}">
+    const itemHTML = `<div class="compare-variant-item__item twcss-flex-1 twcss-basis-1/2">
+                        <div class="compare-variant-item__image twcss-mb-4">
+                          <img class="twcss-aspect-square" src="${itemImage}" alt="${itemImageAlt}">
                         </div>
-                        <div class="variant-item__details">
-                          <div class="variant-item__title">
+                        <div class="compare-variant-item__details twcss-flex twcss-flex-col twcss-gap-2">
+                          <div class="compare-variant-item__title">
                             ${itemTitle}
                           </div>
-                          <div class="variant-item__variant">
+                          <div class="compare-variant-item__variant">
                             ${itemVariantTitle}
                           </div>
-                          <div class="variant-item__sku">
+                          <div class="compare-variant-item__sku">
                             ${itemSku}
                           </div>
-                          <div class=""variant-item__price">
+                          <div class=""compare-variant-item__price">
                             ${(formatter.format(itemPrice / 100))}
                           </div>
                         </div>
@@ -114,7 +133,13 @@ class StickyCompareButton extends HTMLElement {
   }
 
   openCompareModal() {
-    this.compareModal.classList.remove('hidden')
+    this.compareModal.classList.remove('twcss-hidden');
+    this.compareModalOverlay.classList.remove('twcss-hidden');
+  }
+
+  closeCompareModal() {
+    this.compareModal.classList.add('twcss-hidden');
+    this.compareModalOverlay.classList.add('twcss-hidden');
   }
 }
 

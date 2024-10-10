@@ -116,8 +116,14 @@
         </sticky-compare-button>
       </sticky-compare>
 
-      <compare-modal class="hidden absolute twcss-top-0 twcss-left-0 twcss-right-0 twcss-bottom-0">
-        <compare-modal-items></compare-modal-items>
+      <compare-modal-overlay class="twcss-hidden twcss-fixed twcss-top-0 twcss-left-0 twcss-bg-black/[.5] twcss-h-full twcss-w-full twcss-cursor-pointer twcss-z-20 compare-modal__close"></compare-modal-overlay>
+
+      <compare-modal class="twcss-hidden twcss-fixed twcss-top-0 twcss-left-0 twcss-right-0 twcss-bottom-0 twcss-flex twcss-flex-col twcss-h-[90%] twcss-w-[90%] twcss-max-w-[768px] twcss-z-[21] twcss-bg-gray-100 twcss-border-gray-200 twcss-m-auto twcss-shadow-md">
+        <div class="compare-modal__header twcss-bg-white twcss-border-[1px] twcss-border-b-gray-300 twcss-p-8 twcss-mb-4 twcss-flex">
+          <h2 class="twcss-text-5xl">{{ 'products.product.compare_modal.header' | t }}</h2>
+          <button class="compare-modal__close twcss-h-[20px] twcss-w-[20px] twcss-ml-auto">{% render 'icon-close' %}</button>
+        </div>
+        <compare-modal-items class="twcss-flex twcss-gap-4 twcss-p-8"></compare-modal-items>
       </compare-modal>
 
       <p
