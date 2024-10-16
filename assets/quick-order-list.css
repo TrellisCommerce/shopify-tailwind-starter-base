@@ -668,3 +668,15 @@ quick-order-list .tax-note {
   height: 60px;
   object-fit: contain;
 }
+
+.compare-variant-item__item {
+  flex-basis: 50%;
+  min-width: calc(33.33% + 2rem);
+}
+
+@media screen and (min-width: 990px) { 
+  .compare-variant-item__item {
+    flex-basis: 50%;
+    min-width: calc(25% + 2rem);
+  }
+}
