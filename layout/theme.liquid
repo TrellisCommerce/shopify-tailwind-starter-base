@@ -298,7 +298,8 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-  </head>
+  {% include 'store-credit-launcher' %}
+</head>
 
   <body class='gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}'>
     <a class='skip-to-content-link button visually-hidden' href='#MainContent'>
@@ -378,5 +379,6 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src='{{ 'cart-drawer.js' | asset_url }}' defer='defer'></script>
     {%- endif -%}
-  </body>
+  {% include 'store-credit-launcher' %}
+</body>
 </html>

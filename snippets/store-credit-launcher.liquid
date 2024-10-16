@@ -1,0 +1,29 @@
+{% assign store_domain = shop.permanent_domain %}
+<script>
+	window.StoreCreditInit = {
+		shop: '{{ store_domain }}',
+		cashback_widget_status: 0
+	}
+</script>
+
+{% if customer %}
+    {% assign storecredit_customer_id = customer.id %}
+    {% assign storecredit_customer_email = customer.email %}
+    {% assign storecredit_customer_signature = customer.id | append: 'a43cb766aee7b64891bcea9501f06e8f' | md5 %}
+
+	<script>
+		window.StoreCreditInit.customer_id = '{{ storecredit_customer_id }}';
+		window.StoreCreditInit.customer_name = '{{ customer.first_name }} {{ customer.last_name }}';
+		window.StoreCreditInit.customer_email = '{{ storecredit_customer_email }}';
+		window.StoreCreditInit.customer_signature = '{{ storecredit_customer_signature }}';
+		// B2B
+		window.StoreCreditInit.b2b_customer = '{{ customer.b2b? }}';
+		window.StoreCreditInit.customer_company_id = '{{ customer.current_company.id }}';
+        {% for location in customer.current_company.available_locations -%}
+            {% if location.current? %}
+            	window.StoreCreditInit.company_location_id = '{{ location.id }}';            
+            {% endif %}
+        {%- endfor %}
+	</script>
+{% endif %}
+
