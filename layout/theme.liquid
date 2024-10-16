@@ -285,6 +285,7 @@
     </script>
   
   {% render 'shogun-head' %}
+{% include 'store-credit-launcher' %}
 </head>
 
   <body
@@ -358,5 +359,6 @@
     {%- if settings.predictive_search_enabled -%}
       <script src='{{ 'predictive-search.js' | asset_url }}' defer='defer'></script>
     {%- endif -%}
-  </body>
+  {% include 'store-credit-launcher' %}
+</body>
 </html>
