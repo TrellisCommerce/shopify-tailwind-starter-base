@@ -45,6 +45,7 @@ customElements.define('compare-product-button', CompareItemButton);
 class StickyCompareButton extends HTMLElement {
   constructor () {
     super();
+    this.quickOrderListId = document.querySelector('quick-order-list').getAttribute('id');
     this.stickyCompareButtonItemCount = this.querySelector('sticky-compare-count');
     this.stickyCompare = document.querySelector('sticky-compare')
     this.compareModalOverlay = document.querySelector('compare-modal-overlay')
@@ -184,19 +185,100 @@ class StickyCompareButton extends HTMLElement {
           body: JSON.stringify(updates)
         })
         .then(response => {
+          return response.json();
+        }).then((state) => {
+          const parsedState = JSON.parse(JSON.stringify(state));
+          this.renderSections(parsedState, variantID);
+          publish(PUB_SUB_EVENTS.cartUpdate, {
+            source: 'quick-add',
+            cartData: parsedState,
+          });
+
           compareVariantAddToCart.innerHTML = 'Added!';
 
           setTimeout(() => {
             compareVariantAddToCart.innerHTML = 'Add to Cart';
           },5000);
-          
-          return response.json();
-        })
-        .catch((error) => {
+        }).catch((error) => {
           console.error('Error:', error);
         });
       });
     });
+  }
+
+  renderSections(parsedState, ids) {
+    this.getSectionsToRender().forEach((section) => {
+      const sectionElement = document.getElementById(section.id);
+      if (
+        sectionElement &&
+        sectionElement.parentElement &&
+        sectionElement.parentElement.classList.contains('drawer')
+      ) {
+        parsedState.items.length > 0
+          ? sectionElement.parentElement.classList.remove('is-empty')
+          : sectionElement.parentElement.classList.add('is-empty');
+        setTimeout(() => {
+          document
+            .querySelector('#CartDrawer-Overlay')
+            .addEventListener('click', this.cart.close.bind(this.cart));
+        });
+      }
+      const elementToReplace =
+        sectionElement && sectionElement.querySelector(section.selector)
+          ? sectionElement.querySelector(section.selector)
+          : sectionElement;
+      if (elementToReplace) {
+        if (
+          section.selector === `#${this.quickOrderListId} .js-contents`
+        ) {
+            elementToReplace.querySelector(`#Variant-${ids}`).innerHTML =
+              this.getSectionInnerHTML(
+                parsedState.sections[section.section],
+                `#Variant-${i}`,
+              );
+        } else {
+          elementToReplace.innerHTML = this.getSectionInnerHTML(
+            parsedState.sections[section.section],
+            section.selector,
+          );
+        }
+      }
+    }); 
+    this.defineInputsAndQuickOrderTable();
+    this.addMultipleDebounce();
+    this.ids = [];
+  }
+
+  getSectionsToRender() {
+    return [
+      {
+        id: this.quickOrderListId,
+        section: document.getElementById(this.quickOrderListId).dataset
+          .section,
+        selector: `#${this.quickOrderListId} .js-contents`,
+      },
+      {
+        id: 'cart-icon-bubble',
+        section: 'cart-icon-bubble',
+        selector: '.shopify-section',
+      },
+      {
+        id: `quick-order-list-live-region-text-${this.dataset.productId}`,
+        section: 'cart-live-region-text',
+        selector: '.shopify-section',
+      },
+      {
+        id: `quick-order-list-total-${this.dataset.productId}-${this.dataset.section}`,
+        section: document.getElementById(this.quickOrderListId).dataset
+          .section,
+        selector: `#${this.quickOrderListId} .quick-order-list__total`,
+      },
+      {
+        id: 'CartDrawer',
+        selector: '#CartDrawer',
+        section: 'cart-drawer',
+      },
+    ];
   }
 
   compareModalItemRemove() {
