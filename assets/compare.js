@@ -163,7 +163,38 @@ class StickyCompareButton extends HTMLElement {
     const compareVariantsAddToCart = document.querySelectorAll('.compare-variant-item__button');
     compareVariantsAddToCart.forEach((compareVariantAddToCart) => {
       compareVariantAddToCart.addEventListener(('click'), () => {
-        
+        // Grab qty and id
+        const qtyInput = compareVariantAddToCart.closest('.compare-variant-item__details').querySelector('.quantity__input');
+        const qty = parseInt(qtyInput.value);
+        const variantID = parseInt(qtyInput.getAttribute('data-index'));
+
+        const updates = {
+          'items': [{
+           'id': variantID,
+           'quantity': qty
+          }]
+        };
+
+        // Add item to cart
+        fetch(window.Shopify.routes.root + 'cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(updates)
+        })
+        .then(response => {
+          compareVariantAddToCart.innerHTML = 'Added!';
+
+          setTimeout(() => {
+            compareVariantAddToCart.innerHTML = 'Add to Cart';
+          },5000);
+          
+          return response.json();
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
       });
     });
   }
