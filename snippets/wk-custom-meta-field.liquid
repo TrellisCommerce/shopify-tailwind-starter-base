@@ -1,0 +1,19 @@
+{% assign wk_metafields = product.metafields.wk_custom_field %}
+{% unless wk_metafields == empty %}
+    <h1>Extra Information</h1>
+	<table class="responsive-table" style="border:0px">
+        <tbody >
+            {% for wk_metafield in wk_metafields %}
+                <tr>
+                    <td style="border:none">{{wk_metafield[0] |replace: "cus_","" | replace:"_"," " | upcase}}</td>
+          			{% assign wk_check_mf = wk_metafield[1] | split : ':' %}
+                    {% if wk_check_mf[0] == 'https' %}
+                      <td style="border:none"><a>{{wk_metafield[1] }}</a></td>
+                        {% else if%}
+                      <td style="border:none">{{wk_metafield[1] }}</td>
+                  	{% endif %}
+                </tr>
+            {% endfor %}
+        </tbody>
+	</table>
+{% endunless %}
