@@ -656,6 +656,10 @@ video {
   padding-left: 2rem !important;
 }
 
+.twcss-pr-8 {
+  padding-right: 2rem;
+}
+
 .twcss-text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -667,6 +671,118 @@ video {
 
 .twcss-underline {
   text-decoration-line: underline;
+}
+
+.before\:twcss-absolute::before {
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.before\:twcss--top-4::before {
+  content: var(--tw-content);
+  top: -1rem;
+}
+
+.before\:twcss-right-0::before {
+  content: var(--tw-content);
+  right: 0px;
+}
+
+.before\:twcss-h-0::before {
+  content: var(--tw-content);
+  height: 0px;
+}
+
+.before\:twcss-w-0::before {
+  content: var(--tw-content);
+  width: 0px;
+}
+
+.before\:twcss-border-b-\[6px\]::before {
+  content: var(--tw-content);
+  border-bottom-width: 6px;
+}
+
+.before\:twcss-border-l-\[6px\]::before {
+  content: var(--tw-content);
+  border-left-width: 6px;
+}
+
+.before\:twcss-border-r-\[6px\]::before {
+  content: var(--tw-content);
+  border-right-width: 6px;
+}
+
+.before\:twcss-border-b-slate-500::before {
+  content: var(--tw-content);
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(100 116 139 / var(--tw-border-opacity));
+}
+
+.before\:twcss-border-l-transparent::before {
+  content: var(--tw-content);
+  border-left-color: transparent;
+}
+
+.before\:twcss-border-r-transparent::before {
+  content: var(--tw-content);
+  border-right-color: transparent;
+}
+
+.after\:twcss-absolute::after {
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.after\:twcss--bottom-4::after {
+  content: var(--tw-content);
+  bottom: -1rem;
+}
+
+.after\:twcss-right-0::after {
+  content: var(--tw-content);
+  right: 0px;
+}
+
+.after\:twcss-h-0::after {
+  content: var(--tw-content);
+  height: 0px;
+}
+
+.after\:twcss-w-0::after {
+  content: var(--tw-content);
+  width: 0px;
+}
+
+.after\:twcss-border-l-\[6px\]::after {
+  content: var(--tw-content);
+  border-left-width: 6px;
+}
+
+.after\:twcss-border-r-\[6px\]::after {
+  content: var(--tw-content);
+  border-right-width: 6px;
+}
+
+.after\:twcss-border-t-\[6px\]::after {
+  content: var(--tw-content);
+  border-top-width: 6px;
+}
+
+.after\:twcss-border-l-transparent::after {
+  content: var(--tw-content);
+  border-left-color: transparent;
+}
+
+.after\:twcss-border-r-transparent::after {
+  content: var(--tw-content);
+  border-right-color: transparent;
+}
+
+.after\:twcss-border-t-slate-500::after {
+  content: var(--tw-content);
+  --tw-border-opacity: 1;
+  border-top-color: rgb(100 116 139 / var(--tw-border-opacity));
 }
 
 .has-\[\:checked\]\:twcss-bg-slate-100:has(:checked) {
