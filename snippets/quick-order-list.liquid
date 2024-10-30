@@ -36,11 +36,14 @@
             </caption>
             <thead>
               <tr class='twcss-flex twcss-justify-between'>
-                <th class='caption-with-letter-spacing' scope='col'>
+                <th
+                  class='lg:twcss-flex lg:twcss-flex-col lg:twcss-justify-end caption-with-letter-spacing'
+                  scope='col'
+                >
                   {%- if product.has_only_default_variant -%}
                     {{ 'sections.quick_order_list.product' | t }}
                   {%- else -%}
-                    <span class='twcss-flex twcss-mb-8'>
+                    <span class='twcss-flex twcss-mb-12'>
                       <input id='check-all' type='checkbox' name='all' value='all'>
                       <label for='check-all'><span id='selectedCount'>0</span> Variants selected</label><br>
                     </span>
@@ -58,9 +61,13 @@
                   {%- endif -%}
                 </th>
                 <th
-                  class='lg:twcss-flex lg:twcss-items-end lg:twcss-w-[23%] quick-order-list__table-heading--wide small-hide medium-hide caption-with-letter-spacing'
+                  class='lg:twcss-flex lg:twcss-flex-col lg:twcss-w-[23%] quick-order-list__table-heading--wide small-hide medium-hide caption-with-letter-spacing'
                   scope='col'
                 >
+                  {%- if product.has_only_default_variant -%}
+                  {%- else -%}
+                    <div class='twcss-mb-8'>{% render 'quantity-input', variant: variant, min: 0 %}</div>
+                  {%- endif -%}
                   {{ 'products.product.quantity.label' | t }}
                 </th>
                 <th
@@ -96,9 +103,9 @@
               {%- else -%}
                 <p id='variants' class='visually-hidden'>Select all variants to edit</p>
                 {%- for variant in product.variants -%}
-                  <tr class='twcss-relative twcss-flex twcss-justify-evenly'>
+                  <tr class='twcss-relative'>
                     <td class='twcss-w-full'>
-                      <table class='quick-order-list__table'>
+                      <table class='quick-order-list__table has-[:checked]:twcss-bg-slate-100'>
                         <tbody>
                           {%- render 'quick-order-list-row',
                             item: variant,
