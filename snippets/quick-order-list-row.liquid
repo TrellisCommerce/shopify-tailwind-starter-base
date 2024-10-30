@@ -19,12 +19,7 @@
   data-variant-id='{{ variant.id }}'
   data-cart-qty='{{ cart_qty }}'
 >
-  <td class='variant-item__inner twcss-flex{% unless sku and show_sku %} variant-item__inner--no-sku{% endunless %}'>
-    {%- if product.has_only_default_variant -%}
-    {%- else -%}
-      <input id='variant-{{ variant.id }}' type='checkbox' name='variant' value='{{ variant.id }}'>
-      <label for='variant-{{ variant.id }}' class='visually-hidden'>{{ item.title | escape }}</label>
-    {%- endif -%}
+  <td class='lg:twcss-w-[37%] !twcss-pl-8 variant-item__inner{% unless sku and show_sku %} variant-item__inner--no-sku{% endunless %}'>
     {%- if show_image -%}
       <div class='variant-item__media'>
         <div class='variant-item__image-container global-media-settings{% unless is_modal %} gradient{% endunless %}{% unless image %} variant-item__image-container--no-img{% endunless %}'>
@@ -172,7 +167,7 @@
     {% # theme-check-enable %}
   </td>
 
-  <td class='variant-item__quantity'>
+  <td class='lg:twcss-w-[23%] variant-item__quantity'>
     {%- liquid
       assign check_against_inventory = true
       if variant.inventory_management != 'shopify' or variant.inventory_policy == 'continue'
@@ -341,7 +336,7 @@
     </quantity-popover>
   </td>
   {%- assign item_price = item.price | money -%}
-  <td class='variant-item__price small-hide medium-hide'>
+  <td class='lg:twcss-w-[20%] variant-item__price small-hide medium-hide'>
     {%- if item.compare_at_price -%}
       <dl class='variant-item__discounted-prices'>
         <dt class='visually-hidden'>
@@ -440,7 +435,7 @@
       </div>
     {%- endif -%}
   </td>
-  <td class='variant-item__totals right small-hide medium-hide'>
+  <td class='lg:twcss-w-[20%] variant-item__totals right small-hide medium-hide'>
     {%- render 'loading-spinner' -%}
     {% comment %} TODO: enable theme-check once `line_items_for` is accepted as valid filter {% endcomment %}
     {% # theme-check-disable %}

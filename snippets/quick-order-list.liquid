@@ -35,7 +35,7 @@
               {{ 'sections.cart.title' | t }}
             </caption>
             <thead>
-              <tr>
+              <tr class='twcss-flex twcss-justify-between'>
                 <th class='caption-with-letter-spacing' scope='col'>
                   {%- if product.has_only_default_variant -%}
                     {{ 'sections.quick_order_list.product' | t }}
@@ -47,7 +47,10 @@
                     {{ 'sections.quick_order_list.variant' | t }}
                   {%- endif -%}
                 </th>
-                <th class='large-up-hide right caption-with-letter-spacing' scope='col'>
+                <th
+                  class='twcss-flex twcss-items-end twcss-justify-end large-up-hide right caption-with-letter-spacing'
+                  scope='col'
+                >
                   {%- if product.has_only_default_variant -%}
                     {{ 'sections.quick_order_list.product_total' | t }}
                   {%- else -%}
@@ -55,18 +58,21 @@
                   {%- endif -%}
                 </th>
                 <th
-                  class='quick-order-list__table-heading--wide small-hide medium-hide caption-with-letter-spacing'
+                  class='lg:twcss-flex lg:twcss-items-end lg:twcss-w-[23%] quick-order-list__table-heading--wide small-hide medium-hide caption-with-letter-spacing'
                   scope='col'
                 >
                   {{ 'products.product.quantity.label' | t }}
                 </th>
                 <th
-                  class='quick-order-list__table-heading--wide small-hide medium-hide caption-with-letter-spacing'
+                  class='lg:twcss-flex lg:twcss-items-end lg:twcss-justify-end lg:twcss-w-[20%] quick-order-list__table-heading--wide small-hide medium-hide caption-with-letter-spacing'
                   scope='col'
                 >
                   {{ 'sections.cart.headings.price' | t }}
                 </th>
-                <th class='small-hide medium-hide right caption-with-letter-spacing' scope='col'>
+                <th
+                  class='lg:twcss-flex lg:twcss-items-end lg:twcss-justify-end lg:twcss-w-[20%] small-hide medium-hide right caption-with-letter-spacing'
+                  scope='col'
+                >
                   {%- if product.has_only_default_variant -%}
                     {{ 'sections.quick_order_list.product_total' | t }}
                   {%- else -%}
@@ -90,15 +96,36 @@
               {%- else -%}
                 <p id='variants' class='visually-hidden'>Select all variants to edit</p>
                 {%- for variant in product.variants -%}
-                  {%- render 'quick-order-list-row',
-                    item: variant,
-                    image: variant.image,
-                    sku: variant.sku,
-                    variant: variant,
-                    show_image: show_image,
-                    show_sku: show_sku,
-                    is_modal: is_modal
-                  -%}
+                  <tr class='twcss-relative twcss-flex twcss-justify-evenly'>
+                    <td class='twcss-w-full'>
+                      <table class='quick-order-list__table'>
+                        <tbody>
+                          {%- render 'quick-order-list-row',
+                            item: variant,
+                            image: variant.image,
+                            sku: variant.sku,
+                            variant: variant,
+                            show_image: show_image,
+                            show_sku: show_sku,
+                            is_modal: is_modal
+                          -%}
+                          <tr class='twcss-absolute twcss-top-0 twcss-mt-4 lg:twcss-mt-12'>
+                            <td>
+                              <input
+                                id='variant-{{ variant.id }}'
+                                type='checkbox'
+                                name='variant'
+                                value='{{ variant.id }}'
+                              >
+                              <label for='variant-{{ variant.id }}' class='visually-hidden'>
+                                {{- item.title | escape -}}
+                              </label>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
                 {%- endfor -%}
               {%- endif -%}
             </tbody>

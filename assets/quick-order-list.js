@@ -55,6 +55,30 @@ if (!customElements.get('quick-order-list-remove-all-button')) {
             this.toggleConfirmation(true, false);
           }
         });
+
+        const checkAll = document.getElementById('check-all');
+        const variantCheckboxes = document.querySelectorAll(
+          'input[name="variant"]',
+        );
+        checkAll.addEventListener('change', onCheckAllChange);
+        variantCheckboxes.forEach((input) =>
+          input.addEventListener('change', onVariantCheckboxChange),
+        );
+        function onCheckAllChange() {
+          variantCheckboxes.forEach(
+            (input) => (input.checked = checkAll.checked),
+          );
+          document.getElementById('selectedCount').innerHTML =
+            document.querySelectorAll('input[name="variant"]:checked').length;
+        }
+        function onVariantCheckboxChange() {
+          let allChecked = Array.from(variantCheckboxes).every(
+            (input) => input.checked,
+          );
+          checkAll.checked = allChecked;
+          document.getElementById('selectedCount').innerHTML =
+            document.querySelectorAll('input[name="variant"]:checked').length;
+        }
       }
 
       toggleConfirmation(showConfirmation, showInfo) {
@@ -117,30 +141,6 @@ if (!customElements.get('quick-order-list')) {
         window.pageNumber = decodeURIComponent(pageParams.get('page') || '');
         form.addEventListener('submit', this.onSubmit.bind(this));
         this.addMultipleDebounce();
-
-        const checkAll = document.getElementById('check-all');
-        const variantCheckboxes = document.querySelectorAll(
-          'input[name="variant"]',
-        );
-        checkAll.addEventListener('change', onCheckAllChange);
-        variantCheckboxes.forEach((input) =>
-          input.addEventListener('change', onVariantCheckboxChange),
-        );
-        function onCheckAllChange() {
-          variantCheckboxes.forEach(
-            (input) => (input.checked = checkAll.checked),
-          );
-          document.getElementById('selectedCount').innerHTML =
-            document.querySelectorAll('input[name="variant"]:checked').length;
-        }
-        function onVariantCheckboxChange() {
-          let allChecked = Array.from(variantCheckboxes).every(
-            (input) => input.checked,
-          );
-          checkAll.checked = allChecked;
-          document.getElementById('selectedCount').innerHTML =
-            document.querySelectorAll('input[name="variant"]:checked').length;
-        }
       }
 
       cartUpdateUnsubscriber = undefined;
@@ -322,6 +322,7 @@ if (!customElements.get('quick-order-list')) {
               this.ids.length > 0
             ) {
               this.ids.flat().forEach((i) => {
+                console.log(`#Variant-${i}`);
                 elementToReplace.querySelector(`#Variant-${i}`).innerHTML =
                   this.getSectionInnerHTML(
                     parsedState.sections[section.section],
