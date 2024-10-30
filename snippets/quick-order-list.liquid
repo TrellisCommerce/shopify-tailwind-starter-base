@@ -47,7 +47,15 @@
                       <input id='check-all' type='checkbox' name='all' value='all'>
                       <label for='check-all'><span id='selectedCount'>0</span> Variants selected</label><br>
                     </span>
-                    {{ 'sections.quick_order_list.variant' | t }}
+                    <span
+                      class='
+                        twcss-w-full twcss-relative twcss-block
+                        before:twcss-absolute before:twcss-right-0 before:twcss--top-4 before:twcss-border-l-[6px] before:twcss-border-r-[6px] before:twcss-border-b-[6px] before:twcss-border-l-transparent before:twcss-border-r-transparent before:twcss-border-b-slate-500 before:twcss-w-0 before:twcss-h-0
+                        after:twcss-absolute after:twcss-right-0 after:twcss--bottom-4 after:twcss-border-l-[6px] after:twcss-border-r-[6px] after:twcss-border-t-[6px] after:twcss-border-l-transparent after:twcss-border-r-transparent after:twcss-border-t-slate-500 after:twcss-w-0 after:twcss-h-0
+                      '
+                    >
+                      {{ 'sections.quick_order_list.variant' | t }}
+                    </span>
                   {%- endif -%}
                 </th>
                 <th
@@ -57,7 +65,15 @@
                   {%- if product.has_only_default_variant -%}
                     {{ 'sections.quick_order_list.product_total' | t }}
                   {%- else -%}
-                    {{ 'sections.quick_order_list.variant_total' | t }}
+                    <span
+                      class='
+                        twcss-pr-8 twcss-w-full twcss-relative
+                        before:twcss-absolute before:twcss-right-0 before:twcss--top-4 before:twcss-border-l-[6px] before:twcss-border-r-[6px] before:twcss-border-b-[6px] before:twcss-border-l-transparent before:twcss-border-r-transparent before:twcss-border-b-slate-500 before:twcss-w-0 before:twcss-h-0
+                        after:twcss-absolute after:twcss-right-0 after:twcss--bottom-4 after:twcss-border-l-[6px] after:twcss-border-r-[6px] after:twcss-border-t-[6px] after:twcss-border-l-transparent after:twcss-border-r-transparent after:twcss-border-t-slate-500 after:twcss-w-0 after:twcss-h-0
+                      '
+                    >
+                      {{ 'sections.quick_order_list.variant_total' | t }}
+                    </span>
                   {%- endif -%}
                 </th>
                 <th
@@ -67,14 +83,39 @@
                   {%- if product.has_only_default_variant -%}
                   {%- else -%}
                     <div class='twcss-mb-8'>{% render 'quantity-input', variant: variant, min: 0 %}</div>
+                    <span
+                      class='
+                        twcss-w-full twcss-relative
+                        before:twcss-absolute before:twcss-right-0 before:twcss--top-4 before:twcss-border-l-[6px] before:twcss-border-r-[6px] before:twcss-border-b-[6px] before:twcss-border-l-transparent before:twcss-border-r-transparent before:twcss-border-b-slate-500 before:twcss-w-0 before:twcss-h-0
+                        after:twcss-absolute after:twcss-right-0 after:twcss--bottom-4 after:twcss-border-l-[6px] after:twcss-border-r-[6px] after:twcss-border-t-[6px] after:twcss-border-l-transparent after:twcss-border-r-transparent after:twcss-border-t-slate-500 after:twcss-w-0 after:twcss-h-0
+                      '
+                    >
                   {%- endif -%}
                   {{ 'products.product.quantity.label' | t }}
+                  {%- if product.has_only_default_variant -%}
+                  {%- else -%}
+                    </span>
+                  {%- endif -%}
                 </th>
                 <th
                   class='lg:twcss-flex lg:twcss-items-end lg:twcss-justify-end lg:twcss-w-[20%] quick-order-list__table-heading--wide small-hide medium-hide caption-with-letter-spacing'
                   scope='col'
                 >
+                  {%- if product.has_only_default_variant -%}
+                  {%- else -%}
+                    <span
+                      class='
+                        twcss-pr-8 twcss-w-full twcss-relative
+                        before:twcss-absolute before:twcss-right-0 before:twcss--top-4 before:twcss-border-l-[6px] before:twcss-border-r-[6px] before:twcss-border-b-[6px] before:twcss-border-l-transparent before:twcss-border-r-transparent before:twcss-border-b-slate-500 before:twcss-w-0 before:twcss-h-0
+                        after:twcss-absolute after:twcss-right-0 after:twcss--bottom-4 after:twcss-border-l-[6px] after:twcss-border-r-[6px] after:twcss-border-t-[6px] after:twcss-border-l-transparent after:twcss-border-r-transparent after:twcss-border-t-slate-500 after:twcss-w-0 after:twcss-h-0
+                      '
+                    >
+                  {%- endif -%}
                   {{ 'sections.cart.headings.price' | t }}
+                  {%- if product.has_only_default_variant -%}
+                  {%- else -%}
+                    </span>
+                  {%- endif -%}
                 </th>
                 <th
                   class='lg:twcss-flex lg:twcss-items-end lg:twcss-justify-end lg:twcss-w-[20%] small-hide medium-hide right caption-with-letter-spacing'
@@ -83,7 +124,15 @@
                   {%- if product.has_only_default_variant -%}
                     {{ 'sections.quick_order_list.product_total' | t }}
                   {%- else -%}
-                    {{ 'sections.quick_order_list.variant_total' | t }}
+                    <span
+                      class='
+                        twcss-pr-8 twcss-w-full twcss-relative
+                        before:twcss-absolute before:twcss-right-0 before:twcss--top-4 before:twcss-border-l-[6px] before:twcss-border-r-[6px] before:twcss-border-b-[6px] before:twcss-border-l-transparent before:twcss-border-r-transparent before:twcss-border-b-slate-500 before:twcss-w-0 before:twcss-h-0
+                        after:twcss-absolute after:twcss-right-0 after:twcss--bottom-4 after:twcss-border-l-[6px] after:twcss-border-r-[6px] after:twcss-border-t-[6px] after:twcss-border-l-transparent after:twcss-border-r-transparent after:twcss-border-t-slate-500 after:twcss-w-0 after:twcss-h-0
+                      '
+                    >
+                      {{ 'sections.quick_order_list.variant_total' | t }}
+                    </span>
                   {%- endif -%}
                 </th>
               </tr>
