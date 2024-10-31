@@ -30,23 +30,52 @@
     >
       <div class='quick-order-list__container' id='main-variant-items'>
         <div class='js-contents' role='group' aria-labelledby='variants'>
+          {%- if product.has_only_default_variant -%}
+          {%- else -%}
+            <div class='twcss-flex twcss-justify-between twcss-items-center twcss-mb-8 twcss-pb-8 twcss-border-b-2 twcss-border-slate-100'>
+              <div class='twcss-flex'>
+                <input id='check-all' type='checkbox' name='all' value='all'>
+                <label for='check-all'><span id='selectedCount'>0</span> Variants selected</label><br>
+              </div>
+              <div>
+                <quantity-input class='quantity cart-quantity' id='qty-all'>
+                  <button class='quantity__button' name='minus' type='button'>
+                    <span class='visually-hidden'>
+                      {{- 'products.product.quantity.decrease' | t: product: variant.title | escape -}}
+                    </span>
+                    {% render 'icon-minus' %}
+                  </button>
+                  <input
+                    class='quantity__input'
+                    type='number'
+                    value='0'
+                    step='1'
+                    aria-label='{{ 'products.product.quantity.input_label' | t: product: variant.title | escape }}'
+                  >
+                  <button class='quantity__button' name='plus' type='button'>
+                    <span class='visually-hidden'>
+                      {{- 'products.product.quantity.increase' | t: product: variant.title | escape -}}
+                    </span>
+                    {% render 'icon-plus' %}
+                  </button>
+                  {%- render 'progress-bar' -%}
+                </quantity-input>
+              </div>
+            </div>
+          {%- endif -%}
           <table class='quick-order-list__table'>
             <caption class='visually-hidden'>
               {{ 'sections.cart.title' | t }}
             </caption>
             <thead>
-              <tr class='twcss-flex twcss-justify-between'>
+              <tr class='twcss-flex twcss-justify-between !twcss-mb-0'>
                 <th
-                  class='lg:twcss-flex lg:twcss-flex-col lg:twcss-justify-end caption-with-letter-spacing'
+                  class='twcss-w-1/3 lg:twcss-flex lg:twcss-flex-col lg:twcss-justify-end caption-with-letter-spacing'
                   scope='col'
                 >
                   {%- if product.has_only_default_variant -%}
                     {{ 'sections.quick_order_list.product' | t }}
                   {%- else -%}
-                    <span class='twcss-flex twcss-mb-12'>
-                      <input id='check-all' type='checkbox' name='all' value='all'>
-                      <label for='check-all'><span id='selectedCount'>0</span> Variants selected</label><br>
-                    </span>
                     <span
                       class='
                         twcss-w-full twcss-relative twcss-block
@@ -77,12 +106,11 @@
                   {%- endif -%}
                 </th>
                 <th
-                  class='lg:twcss-flex lg:twcss-flex-col lg:twcss-w-[23%] quick-order-list__table-heading--wide small-hide medium-hide caption-with-letter-spacing'
+                  class='lg:twcss-flex lg:twcss-flex-col lg:twcss-justify-end lg:twcss-w-[23%] quick-order-list__table-heading--wide small-hide medium-hide caption-with-letter-spacing'
                   scope='col'
                 >
                   {%- if product.has_only_default_variant -%}
                   {%- else -%}
-                    <div class='twcss-mb-8'>{% render 'quantity-input', variant: variant, min: 0 %}</div>
                     <span
                       class='
                         twcss-w-full twcss-relative
@@ -98,7 +126,7 @@
                   {%- endif -%}
                 </th>
                 <th
-                  class='lg:twcss-flex lg:twcss-items-end lg:twcss-justify-end lg:twcss-w-[20%] quick-order-list__table-heading--wide small-hide medium-hide caption-with-letter-spacing'
+                  class='lg:twcss-flex lg:twcss-items-end lg:twcss-w-[20%] quick-order-list__table-heading--wide small-hide medium-hide caption-with-letter-spacing'
                   scope='col'
                 >
                   {%- if product.has_only_default_variant -%}
@@ -118,7 +146,7 @@
                   {%- endif -%}
                 </th>
                 <th
-                  class='lg:twcss-flex lg:twcss-items-end lg:twcss-justify-end lg:twcss-w-[20%] small-hide medium-hide right caption-with-letter-spacing'
+                  class='lg:twcss-flex lg:twcss-items-end lg:twcss-w-[20%] small-hide medium-hide right caption-with-letter-spacing'
                   scope='col'
                 >
                   {%- if product.has_only_default_variant -%}
@@ -152,9 +180,9 @@
               {%- else -%}
                 <p id='variants' class='visually-hidden'>Select all variants to edit</p>
                 {%- for variant in product.variants -%}
-                  <tr class='twcss-relative'>
-                    <td class='twcss-w-full'>
-                      <table class='quick-order-list__table has-[:checked]:twcss-bg-slate-100'>
+                  <tr class='twcss-relative twcss-w-full twcss-flex'>
+                    <td class='twcss-w-full !twcss-pt-0'>
+                      <table class='quick-order-list__table has-[:checked]:twcss-bg-slate-100 twcss-border-b-2 twcss-border-transparent has-[:checked]:twcss-border-slate-200 twcss-p-4'>
                         <tbody>
                           {%- render 'quick-order-list-row',
                             item: variant,
@@ -165,7 +193,7 @@
                             show_sku: show_sku,
                             is_modal: is_modal
                           -%}
-                          <tr class='twcss-absolute twcss-top-0 twcss-mt-4 lg:twcss-mt-12'>
+                          <tr class='twcss-absolute twcss-top-8 lg:twcss-top-2'>
                             <td>
                               <input
                                 id='variant-{{ variant.id }}'
