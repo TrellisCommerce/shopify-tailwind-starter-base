@@ -19,7 +19,6 @@ if (!customElements.get('quick-order-list-remove-all-button')) {
     class QuickOrderListRemoveAllButton extends HTMLElement {
       constructor() {
         super();
-        console.log(this);
         this.quickOrderList = this.closest('quick-order-list');
         const allVariants = this.quickOrderList.querySelectorAll(
           '[data-quantity-variant-id]',
@@ -152,12 +151,13 @@ if (!customElements.get('quick-order-list')) {
             globalQty();
           });
 
-        function globalQty() {
-          const allVariants = document.querySelectorAll(
-            '[data-quantity-variant-id]',
-          );
-          const items = {};
+        const quickOrderList = this.closest('quick-order-list');
+        const allVariants = quickOrderList.querySelectorAll(
+          '[data-quantity-variant-id]',
+        );
 
+        function globalQty() {
+          const items = {};
           const qtyAll = parseInt(
             document.querySelector('#qty-all input').value,
           );
@@ -165,6 +165,8 @@ if (!customElements.get('quick-order-list')) {
           allVariants.forEach((variant) => {
             items[parseInt(variant.dataset.quantityVariantId)] = qtyAll;
           });
+
+          quickOrderList.updateMultipleQty(items);
         }
       }
 

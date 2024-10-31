@@ -38,11 +38,9 @@
                 <label for='check-all'><span id='selectedCount'>0</span> Variants selected</label><br>
               </div>
               <div>
-                <quantity-input class='quantity cart-quantity' id='qty-all'>
+                <quantity-input-all class='quantity cart-quantity' id='qty-all'>
                   <button class='quantity__button' name='minus' type='button'>
-                    <span class='visually-hidden'>
-                      {{- 'products.product.quantity.decrease' | t: product: variant.title | escape -}}
-                    </span>
+                    <span class='visually-hidden'> Decrease quantity for all selected variants </span>
                     {% render 'icon-minus' %}
                   </button>
                   <input
@@ -50,16 +48,14 @@
                     type='number'
                     value='0'
                     step='1'
-                    aria-label='{{ 'products.product.quantity.input_label' | t: product: variant.title | escape }}'
+                    aria-label='Quantity for all selected variants'
                   >
                   <button class='quantity__button' name='plus' type='button'>
-                    <span class='visually-hidden'>
-                      {{- 'products.product.quantity.increase' | t: product: variant.title | escape -}}
-                    </span>
+                    <span class='visually-hidden'> Increase quantity for all selected variants </span>
                     {% render 'icon-plus' %}
                   </button>
                   {%- render 'progress-bar' -%}
-                </quantity-input>
+                </quantity-input-all>
               </div>
             </div>
           {%- endif -%}
