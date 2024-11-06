@@ -109,7 +109,7 @@
 }
 
 /*
-! tailwindcss v3.4.12 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.14 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -534,6 +534,6 @@ video {
 Ensure the default browser behavior of the `hidden` attribute.
 */
 
-[hidden] {
+[hidden]:where(:not([hidden='until-found'])) {
   display: none;
 }

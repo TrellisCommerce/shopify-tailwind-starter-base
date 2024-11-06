@@ -36,7 +36,7 @@
           tabindex='-1'
           autofocus
         >
-          {% render 'icon-success' %}
+          {{- 'icon-success.svg' | inline_asset_content -}}
           {{ 'templates.contact.form.post_success' | t }}
         </h2>
       {%- elsif form.errors -%}
@@ -47,7 +47,7 @@
             tabindex='-1'
             autofocus
           >
-            {% render 'icon-error' %}
+            {{- 'icon-error.svg' | inline_asset_content -}}
             {{ 'templates.contact.form.error_heading' | t }}
           </h2>
         </div>
@@ -100,7 +100,9 @@
             <small class='contact__field-error' id='ContactForm-email-error'>
               <span class='visually-hidden'>{{ 'accessibility.error' | t }}</span>
               <span class='form__message'>
-                {%- render 'icon-error' -%}
+                <span class='svg-wrapper'>
+                  {{- 'icon-error.svg' | inline_asset_content -}}
+                </span>
                 {{- form.errors.translated_fields.email | capitalize }}
                 {{ form.errors.messages.email -}}
               </span>

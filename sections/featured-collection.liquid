@@ -171,7 +171,9 @@
             aria-label='{{ 'general.slider.previous_slide' | t }}'
             aria-controls='Slider-{{ section.id }}'
           >
-            {% render 'icon-caret' %}
+            <span class="svg-wrapper">
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </span>
           </button>
           <div class='slider-counter caption'>
             <span class='slider-counter--current'>1</span>
@@ -186,7 +188,9 @@
             aria-label='{{ 'general.slider.next_slide' | t }}'
             aria-controls='Slider-{{ section.id }}'
           >
-            {% render 'icon-caret' %}
+            <span class="svg-wrapper">
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </span>
           </button>
         </div>
       {%- endif -%}
@@ -204,7 +208,7 @@
       </div>
     {%- endif -%}
     {% if section.settings.image_shape == 'arch' %}
-      {% render 'mask-arch' %}
+      {{ 'mask-arch.svg' | inline_asset_content }}
     {%- endif -%}
   </div>
 </div>
