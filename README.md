@@ -1,6 +1,6 @@
 Brought to you and maintained by [Trellis Commerce](https://trellis.co/) - A full-service eCommerce agency based in Boston, MA
 
-Latest merged code from [Dawn v15.0.1](https://github.com/Shopify/dawn/releases/tag/v15.0.1)
+Latest merged code from [Dawn v15.2.0](https://github.com/Shopify/dawn/releases/tag/v15.2.0)
 
 # Dawn + Tailwind CSS + Prettier Shopify Starter Theme
 
@@ -11,6 +11,8 @@ The starter theme includes an integration of:
 ## [Tailwind CSS](https://tailwindcss.com/)
 
 - [Configured](https://markustripp.medium.com/extend-shopify-dawn-theme-with-a-custom-tailwind-css-carousel-section-e3efe3ecf18e) to use `prefix: twcss-` in order to not clash with Dawn’s existing styles
+
+- There is the option to switch the order of the `base.css` & `app.css` stylesheets in `theme.liquid` if you want your Tailwind classes to take precedence over the base Dawn styles
 
 ## [Trellis' Prettier config](https://www.npmjs.com/package/@trelliscommerce/prettier-config) with Husky pre-commit hooks
 

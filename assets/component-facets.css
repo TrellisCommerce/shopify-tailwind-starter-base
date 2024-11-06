@@ -95,6 +95,10 @@
   transition: none;
 }
 
+.select .icon-caret {
+  width: 10px;
+}
+
 .facet-filters button {
   margin-left: 2.5rem;
 }
@@ -131,25 +135,29 @@
 .mobile-facets__sort .select__select:focus-visible {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
+    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 .mobile-facets__sort .select__select.focused {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
+    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 .facet-filters__sort:focus-visible {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 1rem;
-  box-shadow: 0 0 0 1rem rgb(var(--color-background)), 0 0 0.2rem 1.2rem rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0 1rem rgb(var(--color-background)),
+    0 0 0.2rem 1.2rem rgba(var(--color-foreground), 0.3);
 }
 
 .facet-filters__sort.focused {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 1rem;
-  box-shadow: 0 0 0 1rem rgb(var(--color-background)), 0 0 0.2rem 1.2rem rgba(var(--color-foreground), 0.3);
+  box-shadow: 0 0 0 1rem rgb(var(--color-background)),
+    0 0 0.2rem 1.2rem rgba(var(--color-foreground), 0.3);
 }
 
 .facets {
@@ -195,6 +203,11 @@
   margin-bottom: 1.5rem;
 }
 
+.facets__summary .svg-wrapper {
+  height: auto;
+  width: auto;
+}
+
 .facets__disclosure fieldset {
   padding: 0;
   margin: 0;
@@ -211,7 +224,7 @@
   animation: animateMenuOpen var(--duration-default) ease;
 }
 
-.facets__summary span {
+.facets__summary span:first-of-type {
   transition: text-decoration var(--duration-short) ease;
 }
 
@@ -260,7 +273,8 @@
   border-style: solid;
   border-color: rgba(var(--color-foreground), var(--popup-border-opacity));
   border-radius: var(--popup-corner-radius);
-  box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)
+  box-shadow: var(--popup-shadow-horizontal-offset)
+    var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)
     rgba(var(--color-shadow), var(--popup-shadow-opacity));
   background-color: rgb(var(--color-background));
   position: absolute;
@@ -384,7 +398,8 @@
 .facets-layout-grid--image .facets__label.active:has(:focus-visible) {
   outline-color: rgb(var(--color-foreground));
   outline-width: 0.1rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0 0.5rem rgba(var(--color-foreground), 0.5),
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
+    0 0 0 0.5rem rgba(var(--color-foreground), 0.5),
     0 0 0.7rem 0.1rem rgba(var(--color-foreground), 0.25);
 }
 
@@ -398,7 +413,9 @@
   outline: 0.1rem solid rgb(var(--color-foreground));
 }
 
-.facets-layout-grid--image .facets__label.disabled .facets__image-wrapper:before {
+.facets-layout-grid--image
+  .facets__label.disabled
+  .facets__image-wrapper:before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -453,7 +470,8 @@
   pointer-events: none;
 }
 
-.facets-layout:not(.facets-layout-list--swatch, .facets-layout-grid--image) .facets__label.disabled {
+.facets-layout:not(.facets-layout-list--swatch, .facets-layout-grid--image)
+  .facets__label.disabled {
   opacity: 0.4;
 }
 
@@ -461,7 +479,9 @@
   opacity: 0.2;
 }
 
-:is(.facets-layout-list--swatch, .facets-layout-grid--image) .facets__label.disabled .facet-checkbox__text {
+:is(.facets-layout-list--swatch, .facets-layout-grid--image)
+  .facets__label.disabled
+  .facet-checkbox__text {
   opacity: 0.4;
 }
 
@@ -498,21 +518,27 @@
   display: flex;
 }
 
-.facet-checkbox > svg {
+.facet-checkbox > svg,
+.facet-checkbox > .svg-wrapper {
   background-color: rgb(var(--color-background));
   margin-right: 1.2rem;
   flex-shrink: 0;
 }
 
-.facet-checkbox .icon-checkmark {
+.facet-checkbox .svg-wrapper {
   visibility: hidden;
   position: absolute;
   left: 0.3rem;
   z-index: 5;
   top: 1.4rem;
+  width: 1.1rem;
+  height: 0.7rem;
 }
 
-.facet-checkbox > input[type='checkbox']:checked ~ .icon-checkmark {
+.facet-checkbox
+  > input[type='checkbox']:checked
+  ~ .svg-wrapper
+  > .icon-checkmark {
   visibility: visible;
 }
 
@@ -522,7 +548,10 @@
     border: 0.1rem solid rgb(var(--color-background));
   }
 
-  .facet-checkbox > input[type='checkbox']:checked ~ .icon-checkmark {
+  .facet-checkbox
+    > input[type='checkbox']:checked
+    ~ .svg-wrapper
+    > .icon-checkmark {
     border: none;
   }
 }
@@ -582,7 +611,7 @@ span.active-facets__button-inner {
   font-size: 1rem;
   min-height: 0;
   min-width: 0;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1.25rem;
   display: flex;
   align-items: center;
 }
@@ -626,8 +655,8 @@ span.active-facets__button-inner:after {
   }
 
   span.active-facets__button-inner {
-    padding-bottom: 0.3rem;
-    padding-top: 0.3rem;
+    padding-bottom: 0.1rem;
+    padding-top: 0.1rem;
   }
 
   .active-facets__button-wrapper {
@@ -665,18 +694,20 @@ a.active-facets__button.focused {
 }
 
 a.active-facets__button:focus-visible .active-facets__button-inner {
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.2), 0 0 0 0.2rem rgb(var(--color-background)),
+  box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.2),
+    0 0 0 0.2rem rgb(var(--color-background)),
     0 0 0 0.4rem rgb(var(--color-foreground));
   outline: none;
 }
 
 a.active-facets__button.focused .active-facets__button-inner {
-  box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.2), 0 0 0 0.2rem rgb(var(--color-background)),
+  box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.2),
+    0 0 0 0.2rem rgb(var(--color-background)),
     0 0 0 0.4rem rgb(var(--color-foreground));
   outline: none;
 }
 
-.active-facets__button svg {
+.active-facets__button .svg-wrapper {
   align-self: center;
   flex-shrink: 0;
   margin-left: 0.6rem;
@@ -686,10 +717,10 @@ a.active-facets__button.focused .active-facets__button-inner {
 }
 
 @media all and (min-width: 990px) {
-  .active-facets__button svg {
+  .active-facets__button .svg-wrapper {
     margin-right: -0.4rem;
     margin-top: 0.1rem;
-    width: 1.4rem;
+    width: 1.2rem;
   }
 }
 
@@ -697,7 +728,10 @@ a.active-facets__button.focused .active-facets__button-inner {
   display: none;
 }
 
-.facets-vertical .active-facets .active-facets-vertical-filter:only-child > facet-remove {
+.facets-vertical
+  .active-facets
+  .active-facets-vertical-filter:only-child
+  > facet-remove {
   display: none;
 }
 
@@ -768,7 +802,8 @@ a.active-facets__button.focused .active-facets__button-inner {
   border-style: solid;
   border-width: 0 0 0 var(--drawer-border-width);
   filter: drop-shadow(
-    var(--drawer-shadow-horizontal-offset) var(--drawer-shadow-vertical-offset) var(--drawer-shadow-blur-radius)
+    var(--drawer-shadow-horizontal-offset) var(--drawer-shadow-vertical-offset)
+      var(--drawer-shadow-blur-radius)
       rgba(var(--color-shadow), var(--drawer-shadow-opacity))
   );
 }
@@ -848,7 +883,7 @@ a.active-facets__button.focused .active-facets__button-inner {
   margin-left: 1rem;
 }
 
-.mobile-facets__open svg {
+.mobile-facets__open .svg-wrapper {
   width: 2rem;
 }
 
@@ -871,7 +906,7 @@ a.active-facets__button.focused .active-facets__button-inner {
   transition: opacity var(--duration-short) ease;
 }
 
-.mobile-facets__close svg {
+.mobile-facets__close .svg-wrapper {
   width: 2.2rem;
 }
 
@@ -880,7 +915,7 @@ details.menu-opening .mobile-facets__close {
   opacity: 1;
 }
 
-details.menu-opening .mobile-facets__close svg {
+details.menu-opening .mobile-facets__close .svg-wrapper {
   margin: 0;
 }
 
@@ -943,7 +978,7 @@ details.menu-opening .mobile-facets__close svg {
   padding: 1.3rem 2.5rem;
 }
 
-.mobile-facets__summary svg {
+.mobile-facets__summary .svg-wrapper {
   margin-left: auto;
 }
 
@@ -966,7 +1001,8 @@ details.menu-opening .mobile-facets__close svg {
 }
 
 .js details[open] > .mobile-facets__submenu {
-  transition: transform 0.4s cubic-bezier(0.29, 0.63, 0.44, 1), visibility 0.4s cubic-bezier(0.29, 0.63, 0.44, 1);
+  transition: transform 0.4s cubic-bezier(0.29, 0.63, 0.44, 1),
+    visibility 0.4s cubic-bezier(0.29, 0.63, 0.44, 1);
 }
 
 .js details[open].menu-opening > .mobile-facets__submenu {
@@ -1020,6 +1056,8 @@ input.mobile-facets__checkbox {
   top: 1.9rem;
   left: 2.8rem;
   visibility: hidden;
+  width: 11px;
+  height: 9px;
 }
 
 .mobile-facets__label > input[type='checkbox']:checked ~ .icon-checkmark {
