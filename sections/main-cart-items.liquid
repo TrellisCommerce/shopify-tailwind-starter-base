@@ -88,7 +88,9 @@
               </thead>
 
               <tbody>
-                {%- for item in cart.items -%}
+                {% assign sort_by = section.settings.sort_items_by %}
+                {%- assign sorted_items = cart.items | sort: sort_by -%}
+                {%- for item in sorted_items -%}
                   <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
                     <td class="cart-item__media">
                       {% if item.image %}
