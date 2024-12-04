@@ -88,7 +88,9 @@
               </thead>
 
               <tbody>
-                {%- for item in cart.items -%}
+                {% assign sort_by = section.settings.sort_items_by %}
+                {%- assign sorted_items = cart.items | sort: sort_by -%}
+                {%- for item in sorted_items -%}
                   <tr class="cart-item" id="CartItem-{{ item.index | plus: 1 }}">
                     <td class="cart-item__media">
                       {% if item.image %}
@@ -494,6 +496,33 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Sort Items"
+    },
+    {
+      "type": "select",
+      "id": "sort_items_by",
+      "label": "Sort Items By",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default"
+        },
+        {
+          "value": "final_line_price",
+          "label": "Price"
+        },
+        {
+          "value": "title",
+          "label": "Title"
+        },
+        {
+          "value": "quantity",
+          "label": "Quantity"
+        }
+      ]
     }
   ]
 }
