@@ -64,9 +64,9 @@
           "type": "promotional",
           "settings": {
             "promotional_index": 1,
-            "promotional_image": "shopify://shop_images/Award-winning-mens-sustainable-glasses-and-womens-eyewear-2.webp",
-            "promotional_headline": "Headline",
-            "promotional_description": "Description",
+            "promotional_image": "shopify://shop_images/C82A0688_v2_Crop.webp",
+            "promotional_headline": "Headline 3",
+            "promotional_description": "Description 3",
             "promotional_button_text": "Button Text",
             "promotional_button_url": ""
           }
