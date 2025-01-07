@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -42,9 +42,9 @@
           "type": "promotional",
           "settings": {
             "promotional_index": 1,
-            "promotional_image": "shopify:\/\/shop_images\/cefa51206da34eab8a9fdb248b940b3d.HD-720p-1.6Mbps.gif",
-            "promotional_headline": "Headline",
-            "promotional_description": "Description",
+            "promotional_image": "shopify://shop_images/cefa51206da34eab8a9fdb248b940b3d.HD-720p-1.6Mbps.gif",
+            "promotional_headline": "Headline 1",
+            "promotional_description": "Description 1",
             "promotional_button_text": "Button Text",
             "promotional_button_url": ""
           }
@@ -53,9 +53,9 @@
           "type": "promotional",
           "settings": {
             "promotional_index": 1,
-            "promotional_image": "shopify:\/\/shop_images\/istockphoto-639999614-612x612.jpg",
-            "promotional_headline": "Headline",
-            "promotional_description": "Description",
+            "promotional_image": "shopify://shop_images/istockphoto-639999614-612x612.jpg",
+            "promotional_headline": "Headline 2",
+            "promotional_description": "Description 2",
             "promotional_button_text": "Button Text",
             "promotional_button_url": ""
           }
@@ -64,7 +64,7 @@
           "type": "promotional",
           "settings": {
             "promotional_index": 1,
-            "promotional_image": "shopify:\/\/shop_images\/Award-winning-mens-sustainable-glasses-and-womens-eyewear-2.webp",
+            "promotional_image": "shopify://shop_images/Award-winning-mens-sustainable-glasses-and-womens-eyewear-2.webp",
             "promotional_headline": "Headline",
             "promotional_description": "Description",
             "promotional_button_text": "Button Text",
