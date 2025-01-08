@@ -42,7 +42,7 @@ class HeaderMenu extends DetailsDisclosure {
   constructor() {
     super();
     this.header = document.querySelector('.header-wrapper');
-    // this.megaMenu = document.querySelector('.mega-menu');
+    this.megaMenu = document.querySelector('.mega-menu');
   }
 
   onToggle() {
