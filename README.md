@@ -118,7 +118,119 @@ But this does work:
 
 # Other Versions of the Starter Theme
 
-## Tailwind Admin Fields
+## Version: Trade
+
+- [Branch](https://github.com/TrellisCommerce/shopify-tailwind-starter-base/tree/trade)
+
+### How Is It Different
+
+This version of the theme uses the configurations already existing in with the [Trade version of Dawn](https://help.shopify.com/en/manual/online-store/themes/themes-by-shopify/trade). Specific B2B-related features have been added to this version of the theme, which so far include:
+
+<details>
+<summary>1. Buy Again</summary>
+
+#### Functionality
+If a customer is logged in and has made a previous purchase, the Buy Again buttons appear within the cart elements.
+
+#### Admin Controls
+N/A
+
+#### Visuals
+Buy Again button in the cart drawer & on the cart page:
+
+<img width="300" alt="Buy Again button in the cart drawer" src="https://github.com/user-attachments/assets/9ed316b7-4022-47f0-b5ca-fe5d6adaff3b">
+<img width="400" alt="Buy Again button on the cart page" src="https://github.com/user-attachments/assets/b50cf468-d00c-400b-b71c-44d02b16119f">
+</details>
+
+<details>
+<summary>2. Bulk Cart Clear</summary>
+
+#### Functionality
+Uses the `POST /{locale}/cart/clear.js` endpoint to set all quantities of all line items in the cart to zero. ([Shopify documentation](https://shopify.dev/docs/api/ajax/reference/cart#post-locale-cart-clear-js))
+
+#### Admin Controls
+Toggle on or off feature under Theme Settings > Cart > Show clear cart button:
+
+<img width="200" alt="Admin controls for bulk cart clear" src="https://github.com/user-attachments/assets/44a29ff5-df0b-499d-a0cb-15b1b73364a1">
+
+#### Visuals
+Clear Cart text button in the cart drawer & on the cart page:
+
+<img width="400" alt="Clear Cart button in the cart drawer" src="https://github.com/user-attachments/assets/b85d3b3f-7407-421a-9315-686d773b4844">
+<img width="400" alt="Clear Cart button on the cart page" src="https://github.com/user-attachments/assets/29dc53eb-a936-40f3-9c7d-19824b5fe28d">
+</details>
+
+<details>
+<summary>3. Bespoke Breadcrumbs for Collecitons & PDPs</summary>
+
+#### Functionality
+The navigation structure of a store dictates the breadcrumb structure of the collections and product pages up to four nested levels, complete with [structured data](https://developers.google.com/search/docs/appearance/structured-data/breadcrumb).
+   
+#### Admin Controls
+Set the navigation structure of a store under Online Store > Navigation > Menus and then set the store to use the configured menu under Header > Menu:
+
+<img width="200" alt="Admin controls for bulk cart clear" src="https://github.com/user-attachments/assets/67cee4d9-dc25-4e63-9f92-63a142680c7c">
+   
+#### Visuals
+
+Breadcrumbs on a product page & collection page:
+
+<img width="400" alt="Breadcrumbs on a product page" src="https://github.com/user-attachments/assets/efab40f7-56f9-47f0-b900-36989c066714">
+<img width="400" alt="Breadcrumbs on a collection page" src="https://github.com/user-attachments/assets/3651668e-3d50-4622-a7b5-f8987fdb170d">
+</details>
+
+<details>
+<summary>4. Cart Sorting</summary>
+
+#### Functionality
+Cart items can be sorted 4 ways:
+1. `Default` - standard way Shopify sorts by order added to cart
+2. `Price` - Numeric ascending by total price
+3. `Title` - Alphabetic by product name
+4. `Quantity` - Numeric ascending by quantity in cart
+
+#### Admin Controls
+Select the way to sort the cart items by navigating to the Items section on the Cart page:
+
+<img width="400" alt="Breadcrumbs on a collection page" src="https://github.com/user-attachments/assets/4b3e1098-df0d-4d1c-badc-af9facec9be9">
+</details>
+
+<details>
+<summary>5. Header Mega Menu Promotional Items</summary>
+
+#### Functionality
+A block for the Header section has been created called Promotional Items, which includes the ability to add one or more promotions to the right side of a desktop mega menu. To keep performance optimal, the images within the mega menu will initially load once a mega menu has been toggled open.
+
+#### Admin Controls
+Add a `Promotional Items` block for each mega menu that will have a promotion under the Header section. The `Nav Postion` value corresponds to the mega menu the promotion will appear in:
+
+<img width="200" alt="Admin controls for a promotion in the header" src="https://github.com/user-attachments/assets/68ae6b2d-524e-45e3-83ee-b472088c6716">
+
+#### Visuals
+Promotion in the header:
+
+<img width="500" alt="Promotion in the header" src="https://github.com/user-attachments/assets/ebbba635-f3f3-4efa-8018-60d1c0206b4d">
+
+</details>
+
+<details>
+<summary>6. Predictive Search Enhancements</summary>
+
+#### Functionality
+Using the [parameters available for Shopify’s predictive search](https://shopify.dev/docs/api/ajax/reference/predictive-search), the following fields have been added to be searched with a search query:
+- title
+- vendor
+- tag
+- variants.sku
+- variants.barcode
+- product_type
+- variants.title
+
+#### Admin Controls
+N/A
+</details>
+
+## Version: Tailwind Admin Fields
 
 - [Branch](https://github.com/TrellisCommerce/shopify-tailwind-starter-base/tree/tailwind-admin-fields)
 
