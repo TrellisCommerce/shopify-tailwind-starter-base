@@ -79,18 +79,7 @@
       <span class="visually-hidden">{{ value | escape }}</span>
       {{ label_unavailable }}
     {%- endcapture -%}
-    {%
-      render 'swatch-input',
-      id: input_id,
-      name: option.name,
-      value: value | escape,
-      swatch: value.swatch,
-      product_form_id: product_form_id,
-      checked: checked,
-      visually_disabled: option_disabled,
-      shape: block.settings.swatch_shape,
-      help_text: help_text
-    %}
+    {% render 'swatch-input', id: input_id, name: option.name, value: value, swatch: value.swatch, product_form_id: product_form_id, checked: checked, visually_disabled: option_disabled, shape: block.settings.swatch_shape, help_text: help_text %}
   {%- elsif picker_type == 'button' -%}
     <input
       type="radio"
@@ -130,3 +119,27 @@
     </option>
   {%- endif -%}
 {%- endfor -%}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {%
+          render 'swatch-input',
+          id: input_id,
+          name: option.name,
+          value: value | escape,
+          swatch: value.swatch,
+          product_form_id: product_form_id,
+          checked: checked,
+          visually_disabled: option_disabled,
+          shape: block.settings.swatch_shape,
+          help_text: help_text
+        %}
+  to: "{% render 'swatch-input', id: input_id, name: option.name, value: value, swatch:
+    value.swatch, product_form_id: product_form_id, checked: checked, visually_disabled:
+    option_disabled, shape: block.settings.swatch_shape, help_text: help_text %}"
+  position: 2766..3008
+{% endcomment %}
