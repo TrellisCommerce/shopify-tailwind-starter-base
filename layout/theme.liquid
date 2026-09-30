@@ -2,6 +2,8 @@
 <!doctype html>
 <html class='js' lang='{{ request.locale.iso_code }}'>
   <head>
+  {% comment %}Loads Shogun Analytics. Removing this will disrupt analytics data collection.{% endcomment %}
+  <script type="text/javascript" async src="https://na.shgcdn3.com/pixel-collector.js"></script>
 	{% render 'pandectes-rules' %}
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
